@@ -44,19 +44,26 @@ const ui = {
 async function init() {
     console.log("[SYSTEM] Starting StarWatch Clean Engine...");
 
-    // 1. Auth Listener
-    window.auth.onAuthStateChanged(user => {
-        state.currentUser = user;
-        if (user) {
-            ui.btnLoginMain.innerHTML = '<i class="ri-user-smile-line"></i> PROFILO';
-            loadUserLists(user.uid);
-            ui.modalLogin.style.display = 'none';
-        } else {
-            ui.btnLoginMain.innerHTML = '<i class="ri-user-line"></i> ACCEDI';
-            state.userLists = { watched: [], towatch: [] };
-            render();
-        }
-    });
+    // 1. Auth Listener (SAFE MODE check)
+    if (window.auth) {
+        window.auth.onAuthStateChanged(user => {
+            state.currentUser = user;
+            if (user) {
+                ui.btnLoginMain.innerHTML = '<i class="ri-user-smile-line"></i> PROFILO';
+                loadUserLists(user.uid);
+                ui.modalLogin.style.display = 'none';
+            } else {
+                ui.btnLoginMain.innerHTML = '<i class="ri-user-line"></i> ACCEDI';
+                state.userLists = { watched: [], towatch: [] };
+                render();
+            }
+        });
+    } else {
+        console.warn("[SYSTEM] Firebase Auth not available. Running in OFFLINE/SAFE MODE.");
+        ui.btnLoginMain.innerHTML = '<i class="ri-error-warning-line"></i> OFFLINE';
+        ui.btnLoginMain.disabled = true;
+        ui.btnLoginMain.title = "Login non disponibile (Server Offline)";
+    }
 
     // 2. Load Data
     // 2. Load Data (Hybrid System: Remote -> Local Fallback)
