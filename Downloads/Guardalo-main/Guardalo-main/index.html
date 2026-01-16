@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUARDALO</title>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Outfit:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <!-- Left: Search -->
+        <div class="nav-left">
+            <div class="search-container">
+                <i class="ri-search-line"></i>
+                <input type="text" id="main-search" placeholder="Cerca...">
+            </div>
+        </div>
+
+        <!-- Center: BRAND -->
+        <div class="nav-center">
+            <div class="logo">GUARDALO</div>
+        </div>
+
+        <!-- Right: Auth -->
+        <div class="nav-right">
+            <button class="btn-primary" id="bg-login-btn">
+                <i class="ri-user-line"></i> <span>ACCEDI</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-container">
+
+        <!-- TOOLBAR -->
+        <div class="toolbar">
+
+            <!-- Genres -->
+            <div style="flex: 1; min-width: 280px;">
+                <span class="toolbar-label">GENERI</span>
+                <div class="filter-chips" id="filter-wrapper">
+                    <!-- Javascript will populate this -->
+                    <button class="filter-chip active">CARICAMENTO...</button>
+                </div>
+            </div>
+
+            <!-- Controls (Status / Order) -->
+            <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+
+                <div>
+                    <span class="toolbar-label">STATO</span>
+                    <div class="btn-group">
+                        <button class="active" data-status="Tutti">TUTTI</button>
+                        <button data-status="watched">VISTI</button>
+                        <button data-status="towatch">DA VEDERE</button>
+                    </div>
+                </div>
+
+                <div>
+                    <span class="toolbar-label">ORDINA</span>
+                    <select id="sort-order" class="tech-select">
+                        <option value="popolarita">Popolarità</option>
+                        <option value="titolo">Nome (A-Z)</option>
+                        <option value="anno">Anno (Recenti)</option>
+                    </select>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- GRID -->
+        <div id="grid-content" class="cards-grid">
+            <!-- Cards go here -->
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>StarWatch Cinematic UI &copy; 2026</p>
+    </footer>
+
+    <!-- MODAL OVERLAY -->
+    <div id="app-modal" class="modal-overlay">
+        <div class="modal-box">
+            <button class="modal-close" id="close-modal-btn"><i class="ri-close-line"></i></button>
+
+            <img class="modal-poster" id="m-poster" src="" alt="">
+
+            <div class="modal-info">
+                <div class="modal-header">
+                    <h2 id="m-title">Title</h2>
+                    <div class="modal-meta">
+                        <span id="m-year">2000</span> &bull;
+                        <span id="m-studio">Studio</span> &bull;
+                        <span id="m-status" style="color:var(--accent)">Finito</span>
+                    </div>
+                </div>
+
+                <div class="modal-actions">
+                    <button class="modal-btn primary" id="act-watched">
+                        <i class="ri-check-line"></i> VISTO
+                    </button>
+                    <button class="modal-btn secondary" id="act-towatch">
+                        <i class="ri-time-line"></i> DA VEDERE
+                    </button>
+                </div>
+
+                <p id="m-desc" class="modal-desc">Description goes here...</p>
+
+                <div id="m-tags" style="display:flex; gap:5px; margin-bottom:20px;"></div>
+
+                <div class="streaming-links">
+                    <div style="margin-bottom:5px; font-weight:700; font-size:0.8rem;">LINKS:</div>
+                    <div id="m-links"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AUTH MODAL -->
+    <div id="login-modal" class="modal-overlay">
+        <div class="modal-box" style="width: 400px; height: auto; flex-direction:column; padding:30px;">
+            <button class="modal-close" id="close-login-btn"><i class="ri-close-line"></i></button>
+            <h2 style="color:white; margin-bottom:20px;">Accedi</h2>
+            <form id="login-form" style="display:flex; flex-direction:column; gap:10px;">
+                <input type="email" id="u-email" placeholder="Email" class="tech-select" style="background:#222;">
+                <input type="password" id="u-pass" placeholder="Password" class="tech-select" style="background:#222;">
+                <button type="submit" class="btn-primary" style="justify-content:center;">ENTRA</button>
+            </form>
+            <div style="margin-top:20px; text-align:center;">
+                <button class="btn-primary" id="btn-google"
+                    style="background:white; color:black; width:100%; justify-content:center;">
+                    <i class="ri-google-fill"></i> Google
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FIREBASE & SCRIPT -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
