@@ -59,13 +59,33 @@ async function init() {
     });
 
     // 2. Load Data
+    // 2. Load Data (Hybrid System: Remote -> Local Fallback)
     try {
+        console.log("[DATA] Connecting to Firestore...");
         const snapshot = await window.db.collection('animes').get();
-        state.animeList = snapshot.docs.map(doc => doc.data());
-        console.log(`[DATA] Loaded ${state.animeList.length} items`);
+
+        if (!snapshot.empty) {
+            state.animeList = snapshot.docs.map(doc => doc.data());
+            console.log(`[DATA] Loaded ${state.animeList.length} items from Firestore.`);
+        } else {
+            throw new Error("Firestore is empty");
+        }
     } catch (e) {
-        console.error("DB Error:", e);
-        ui.grid.innerHTML = '<div style="color:white; padding:20px;">Errore caricamento Database. Controlla connessione.</div>';
+        console.warn(`[DATA] Remote load failed (${e.message}). Switching to LOCAL MASTER.`);
+
+        if (typeof animeData !== 'undefined') {
+            state.animeList = [...animeData]; // Use local copy
+            console.log(`[DATA] Loaded ${state.animeList.length} items from Local File.`);
+
+            // Auto-Heal: Seed DB in background if it was empty/unreachable
+            if (e.message === "Firestore is empty" && typeof seedDatabase === 'function') {
+                console.log("[SYSTEM] Starting Auto-Seeding to repair remote DB...");
+                seedDatabase();
+            }
+        } else {
+            console.error("[CRITICAL] No local data found. System empty.");
+            ui.grid.innerHTML = '<div style="color:red; padding:20px;">ERRORE CRITICO: Nessun dato disponibile (Né Online, Né Locale).</div>';
+        }
     }
 
     // 3. Init UI

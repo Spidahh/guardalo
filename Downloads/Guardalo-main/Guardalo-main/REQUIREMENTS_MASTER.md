@@ -7,11 +7,13 @@ Questo file è la VERITÀ ASSOLUTA del progetto. Nessuna modifica futura deve vi
 - **Logo**: Testo "GUARDALO", font: Anton, Size: Large, Colore: Accent (Rosso/Neon).
 - **Posizione**: CENTRALE nella navbar.
 
-## 2. Dati (Content)
-- **Descrizioni**: Devono essere di alta qualità, "premium", senza spoiler, mature e dettagliate.
-- **Stagioni/Episodi**: La scheda (modale) DEVE mostrare la struttura dettagliata (es. "S1 (12) • S2 (12)"). NON sommari generici.
-- **Aggiornamento**: Dati aggiornati a Gennaio 2026.
-- **Script Seeding**: `seed_db.js` deve usare `merge: true` per aggiornare senza cancellare.
+## 2. Dati & Database (CRITICO)
+- **Source of Truth**: Il file `js/initial_data.js` è il DATABASE MASTER LOCALE. Deve sempre esistere e contenere tutti i dati.
+- **Salvataggio**: I dati devono essere salvati nella cartella del progetto, accessibili e leggibili.
+- **Struttura Dati**: Vedi `DATABASE_LOG.md` per lo schema obbligatorio (Titolo, Generi, Sinossi, Struttura Stagioni, Link).
+- **Seeding**: Lo script `seed_db.js` deve sincronizzare `initial_data.js` con Firebase (merge: true).
+- **Descrizioni**: "Premium", senza spoiler, mature.
+- **Stagioni**: Visualizzazione dettagliata ("S1 (12)").
 
 ## 3. UI/UX - Navbar
 - **Layout**: 3 Blocchi distinti.
@@ -22,16 +24,16 @@ Questo file è la VERITÀ ASSOLUTA del progetto. Nessuna modifica futura deve vi
 
 ## 4. UI/UX - Toolbar & Filtri
 - **Generi**:
-    - **Multi-selezione**: OBBLIGATORIA. L'utente può selezionare più chip contemporaneamente.
+    - **Multi-selezione**: OBBLIGATORIA. Funzionamento cumulativo (OR/AND).
     - **Aspetto**: Chip ben distanziati.
-    - **Stato Attivo**: Colore ROSSO VIVO (accent) quando selezionato.
-- **Allineamento**: Tutto deve essere allineato rigorosamente.
+    - **Stato Attivo**: Colore ROSSO VIVO (accent).
+- **Allineamento**: Rigoroso.
 
 ## 5. UI/UX - Modale
 - **Stile**: "Cinematic", simile a Netflix/Prime.
-- **Layout**: Poster a sinistra, info a destra (desktop).
+- **Layout**: Poster a sinistra, info a destra.
 - **Links**: Bottoni distinti per Legali e Illegali (stile diverso).
 
 ## 6. Processo di Lavoro
 - PRIMA di ogni modifica, consultare questo file.
-- MAI rimuovere feature approvate (es. multi-selezione genere).
+- Documentare ogni cambiamento strutturale in `DATABASE_LOG.md`.
