@@ -222,8 +222,8 @@ body {
 /* Anime Grid */
 .anime-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.2rem;
 }
 
 /* Anime Card */
@@ -244,7 +244,7 @@ body {
 .anime-poster {
     position: relative;
     width: 100%;
-    height: 280px;
+    height: 240px;
     overflow: hidden;
 }
 
@@ -755,8 +755,8 @@ body {
 /* Anime Grid */
 .anime-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.2rem;
 }
 
 /* Anime Card */
