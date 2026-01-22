@@ -6,7 +6,7 @@ const animeData = [
         top: true,
         genres: ["Action", "Drama", "Fantasy"],
         year: 2013,
-        img: "https://cdn.myanimelist.net/images/anime/10/47347.jpg",
+        img: "images/anime/attack-on-titan.jpg",
         studio: "Wit/MAPPA",
         status: "Finito",
         episodes: 94,
@@ -1200,7 +1200,7 @@ const animeData = [
         studio: "Studio Ghibli",
         status: "Finito",
         episodes: 8,
-        synopsis: "In un futuro distopico dove i pensieri criminali possono essere misurati, l'ispettore Akane Tsunemori deve catturare criminali prima che commettano reati. Affronta un misterioso criminale con un coefficiente criminale incommensurabile che metterà in discussione il sistema stesso.",
+        synopsis: "Un detective indaga su omicidi di robot avanzati.",
         structure: [{ name: "Serie", episodes: "8" }],
         links: {
             legal: [],
@@ -1268,7 +1268,7 @@ const animeData = [
         studio: "White Fox",
         status: "In corso",
         episodes: 50,
-        synopsis: "Subaru Natsuki viene misteriosamente trasportato in un mondo fantasy dove scopre di poter tornare indietro nel tempo dopo ogni morte. Usando questa potente ma dolorosa abilità chiamata Return by Death, cercherà disperatamente di proteggere quelli che ama e svelare i segreti di questo mondo crudele.",
+        synopsis: "Subaru torna indietro nel tempo dopo ogni morte.",
         structure: [{ name: "S1+S2+S3", episodes: "50+" }],
         links: {
             legal: [{ name: "Crunchyroll", url: "https://crunchyroll.com" }],

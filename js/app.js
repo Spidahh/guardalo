@@ -260,7 +260,7 @@ class GuardaloApp {
         
         card.innerHTML = `
             <div class="anime-poster">
-                <img src="${anime.img}" alt="${anime.title}" loading="lazy">
+                <img src="${anime.img}" alt="${anime.title}" loading="lazy" referrerpolicy="no-referrer" crossorigin="anonymous">
                 ${statusBadge ? `<div class="status-badge ${statusBadge}">${statusBadge === 'watched' ? 'Visto' : 'Da vedere'}</div>` : ''}
             </div>
             <div class="anime-info">
