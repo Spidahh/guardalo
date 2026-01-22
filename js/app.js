@@ -47,56 +47,55 @@ class GuardaloApp {
 
     bindEvents() {
         // Search
-        document.getElementById('searchInput').addEventListener('input', (e) => {
+        document.getElementById('search-input').addEventListener('input', (e) => {
             this.filters.search = e.target.value.toLowerCase();
             this.applyFilters();
         });
 
         // Sort
-        document.getElementById('sortSelect').addEventListener('change', (e) => {
+        document.getElementById('sort-select').addEventListener('change', (e) => {
             this.sortBy = e.target.value;
             this.applyFilters();
         });
 
         // Status filters
-        document.querySelectorAll('.status-btn').forEach(btn => {
+        document.querySelectorAll('.btn-group button').forEach(btn => {
             btn.addEventListener('click', () => {
-                document.querySelectorAll('.status-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.btn-group button').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 this.filters.status = btn.dataset.status;
                 this.applyFilters();
             });
         });
 
-        // TOP filter
-        document.getElementById('topFilter').addEventListener('change', (e) => {
-            this.filters.top = e.target.value;
-            this.applyFilters();
-        });
+        // TOP filter - da rimuovere perché non esiste nell'HTML
+        // document.getElementById('topFilter').addEventListener('change', (e) => {
+        //     this.filters.top = e.target.value;
+        //     this.applyFilters();
+        // });
 
         // Modal close
         document.querySelectorAll('.modal-close').forEach(btn => {
-            btn.addEventListener('click', () => this.closeModal(btn.closest('.modal')));
+            btn.addEventListener('click', () => this.closeModal(btn.closest('.modal-overlay')));
         });
 
         // Login button
-        document.getElementById('loginBtn').addEventListener('click', () => {
-            if (this.auth) {
-                this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
-            } else {
-                alert('Firebase non configurato. Configura le credenziali in firebase-config.js');
-            }
-        });
-
-        // Logout button
-        document.getElementById('logoutBtn').addEventListener('click', () => {
-            if (this.auth) {
-                this.auth.signOut();
-            }
-        });
+        // Gestito in updateUI()
+        
+        // Google login button in modal
+        const googleLoginBtn = document.getElementById('google-login');
+        if (googleLoginBtn) {
+            googleLoginBtn.addEventListener('click', () => {
+                if (this.auth) {
+                    this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+                } else {
+                    alert('Firebase non configurato. Configura le credenziali in firebase-config.js');
+                }
+            });
+        }
 
         // Close modal on backdrop click
-        document.querySelectorAll('.modal').forEach(modal => {
+        document.querySelectorAll('.modal-overlay').forEach(modal => {
             modal.addEventListener('click', (e) => {
                 if (e.target === modal) {
                     this.closeModal(modal);
@@ -107,7 +106,7 @@ class GuardaloApp {
 
     setupGenreChips() {
         const genres = [...new Set(animeData.flatMap(a => a.genres))].sort();
-        const container = document.getElementById('genreChips');
+        const container = document.getElementById('genre-chips');
         
         genres.forEach(genre => {
             const chip = document.createElement('button');
@@ -180,7 +179,7 @@ class GuardaloApp {
     }
 
     renderAnime() {
-        const grid = document.getElementById('animeGrid');
+        const grid = document.getElementById('anime-grid');
         grid.innerHTML = '';
 
         this.filteredAnime.forEach(anime => {
@@ -235,24 +234,21 @@ class GuardaloApp {
     }
 
     showAnimeDetails(anime) {
-        const modal = document.getElementById('animeModal');
+        const modal = document.getElementById('detail-modal');
         const userStatus = this.userAnime[anime.title];
         
-        document.getElementById('modalTitle').textContent = anime.title;
-        document.getElementById('modalImage').src = anime.img;
-        document.getElementById('modalYear').textContent = anime.year;
-        document.getElementById('modalStudio').textContent = anime.studio;
-        document.getElementById('modalStatus').textContent = anime.status;
-        document.getElementById('modalEpisodes').textContent = anime.episodes;
-        document.getElementById('modalRating').innerHTML = `${anime.rating}/10 ${this.renderStars(anime.rating)}`;
-        document.getElementById('modalSynopsis').textContent = anime.synopsis;
-        document.getElementById('modalGenres').textContent = anime.genres.join(', ');
+        document.getElementById('modal-title').textContent = anime.title;
+        document.getElementById('modal-poster').src = anime.img;
+        document.getElementById('modal-meta').innerHTML = `<span>${anime.year} • ${anime.studio} • ${anime.status} • ${anime.episodes} episodi</span>`;
+        document.getElementById('modal-rating').innerHTML = `${anime.rating}/10 ${this.renderStars(anime.rating)}`;
+        document.getElementById('modal-synopsis').textContent = anime.synopsis;
+        document.getElementById('modal-tags').innerHTML = anime.genres.map(g => `<span class="tag">${g}</span>`).join('');
         
         // Struttura
         const structureHtml = anime.structure.map(s => 
             `<div class="structure-item"><strong>${s.name}:</strong> ${s.episodes} episodi</div>`
         ).join('');
-        document.getElementById('modalStructure').innerHTML = structureHtml;
+        document.getElementById('modal-structure').innerHTML = structureHtml;
         
         // Link streaming
         const legalLinks = anime.links.legal.map(l => 
@@ -263,12 +259,12 @@ class GuardaloApp {
             `<a href="${l.url}" target="_blank" class="streaming-link illegal">${l.name}</a>`
         ).join('');
         
-        document.getElementById('modalLegal').innerHTML = legalLinks || '<span class="no-link">Non disponibile</span>';
-        document.getElementById('modalIllegal').innerHTML = illegalLinks;
+        document.getElementById('modal-legal-links').innerHTML = legalLinks || '<span class="no-link">Non disponibile</span>';
+        document.getElementById('modal-illegal-links').innerHTML = illegalLinks;
         
         // Pulsanti stato
-        const watchedBtn = document.getElementById('watchedBtn');
-        const toWatchBtn = document.getElementById('toWatchBtn');
+        const watchedBtn = document.getElementById('btn-watched');
+        const toWatchBtn = document.getElementById('btn-towatch');
         
         watchedBtn.classList.toggle('active', userStatus?.watched || false);
         toWatchBtn.classList.toggle('active', userStatus?.toWatch || false);
@@ -282,7 +278,7 @@ class GuardaloApp {
 
     toggleAnimeStatus(title, status) {
         if (!this.currentUser) {
-            document.getElementById('loginModal').classList.add('active');
+            document.getElementById('login-modal').classList.add('active');
             return;
         }
 
@@ -333,19 +329,20 @@ class GuardaloApp {
     }
 
     updateUI() {
-        const loginBtn = document.getElementById('loginBtn');
-        const logoutBtn = document.getElementById('logoutBtn');
-        const userInfo = document.getElementById('userInfo');
+        const loginBtn = document.getElementById('auth-btn');
         
         if (this.currentUser) {
-            loginBtn.style.display = 'none';
-            logoutBtn.style.display = 'block';
-            userInfo.style.display = 'block';
-            userInfo.textContent = this.currentUser.displayName;
+            loginBtn.innerHTML = '<i class="ri-user-line"></i> ' + this.currentUser.displayName;
+            loginBtn.onclick = () => this.auth.signOut();
         } else {
-            loginBtn.style.display = 'block';
-            logoutBtn.style.display = 'none';
-            userInfo.style.display = 'none';
+            loginBtn.innerHTML = '<i class="ri-user-line"></i> <span>ACCEDI</span>';
+            loginBtn.onclick = () => {
+                if (this.auth) {
+                    this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+                } else {
+                    alert('Firebase non configurato. Configura le credenziali in firebase-config.js');
+                }
+            };
         }
     }
 
