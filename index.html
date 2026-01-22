@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUARDALO - Anime Consigliati</title>
+    <meta name="description" content="I migliori anime consigliati personalmente. Trova cosa guardare stasera!">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="search-container">
+                <i class="ri-search-line"></i>
+                <input type="text" id="search-input" placeholder="Cerca anime...">
+            </div>
+        </div>
+
+        <div class="nav-center">
+            <div class="logo">GUARDALO</div>
+        </div>
+
+        <div class="nav-right">
+            <button class="btn-primary" id="auth-btn">
+                <i class="ri-user-line"></i> <span>ACCEDI</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-container">
+        <!-- TOOLBAR -->
+        <div class="toolbar">
+            <!-- Genres -->
+            <div class="genres-section">
+                <span class="toolbar-label">GENERI</span>
+                <div class="filter-chips" id="genre-chips">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="toolbar-controls">
+                <!-- Status -->
+                <div class="control-group">
+                    <span class="toolbar-label">STATO</span>
+                    <div class="btn-group" id="status-btns">
+                        <button class="active" data-status="all">TUTTI</button>
+                        <button data-status="watched"><i class="ri-check-double-line"></i> VISTI</button>
+                        <button data-status="towatch"><i class="ri-time-line"></i> DA VEDERE</button>
+                        <button data-status="top"><i class="ri-star-fill"></i> TOP</button>
+                    </div>
+                </div>
+
+                <!-- Sort -->
+                <div class="control-group">
+                    <span class="toolbar-label">ORDINA</span>
+                    <select id="sort-select" class="tech-select">
+                        <option value="rating">Voto</option>
+                        <option value="title">Nome (A-Z)</option>
+                        <option value="year">Anno</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- GRID -->
+        <div id="anime-grid" class="cards-grid">
+            <!-- Populated by JS -->
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>GUARDALO © 2026 - I miei anime preferiti</p>
+    </footer>
+
+    <!-- ANIME DETAIL MODAL -->
+    <div id="detail-modal" class="modal-overlay">
+        <div class="modal-box">
+            <button class="modal-close" id="close-modal"><i class="ri-close-line"></i></button>
+            
+            <div class="modal-content">
+                <div class="modal-poster-container">
+                    <img class="modal-poster" id="modal-poster" src="" alt="">
+                    <div class="modal-rating" id="modal-rating">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+                
+                <div class="modal-info">
+                    <div class="modal-header">
+                        <h2 id="modal-title">Titolo</h2>
+                        <div class="modal-meta" id="modal-meta">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+
+                    <div class="modal-actions">
+                        <button class="modal-btn primary" id="btn-watched">
+                            <i class="ri-check-line"></i> VISTO
+                        </button>
+                        <button class="modal-btn secondary" id="btn-towatch">
+                            <i class="ri-time-line"></i> DA VEDERE
+                        </button>
+                    </div>
+
+                    <div class="modal-section">
+                        <h3>Trama</h3>
+                        <p id="modal-synopsis" class="modal-desc">Descrizione...</p>
+                    </div>
+
+                    <div class="modal-section">
+                        <h3>Generi</h3>
+                        <div id="modal-tags" class="modal-tags"></div>
+                    </div>
+
+                    <div class="modal-section">
+                        <h3>Struttura</h3>
+                        <div id="modal-structure" class="modal-structure"></div>
+                    </div>
+
+                    <div class="modal-section streaming-section">
+                        <h3>DOVE GUARDARLO</h3>
+                        <div class="streaming-links">
+                            <div class="link-group">
+                                <span class="link-label">LEGALE:</span>
+                                <div id="modal-legal-links"></div>
+                            </div>
+                            <div class="link-group">
+                                <span class="link-label">STREAMING:</span>
+                                <div id="modal-illegal-links"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LOGIN MODAL -->
+    <div id="login-modal" class="modal-overlay">
+        <div class="modal-box login-box">
+            <button class="modal-close" id="close-login"><i class="ri-close-line"></i></button>
+            <h2>Accedi</h2>
+            <p>Salva i tuoi anime preferiti e tieni traccia di cosa hai visto</p>
+            
+            <button class="btn-google" id="google-login">
+                <i class="ri-google-fill"></i> Continua con Google
+            </button>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    
+    <!-- App Scripts -->
+    <script src="js/firebase-config.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
