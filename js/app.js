@@ -79,8 +79,14 @@ class GuardaloApp {
             btn.addEventListener('click', () => this.closeModal(btn.closest('.modal-overlay')));
         });
 
-        // Login button
-        // Gestito in updateUI()
+        // Close modal buttons
+        document.getElementById('close-modal').addEventListener('click', () => {
+            document.getElementById('detail-modal').classList.remove('active');
+        });
+        
+        document.getElementById('close-login').addEventListener('click', () => {
+            document.getElementById('login-modal').classList.remove('active');
+        });
         
         // Google login button in modal
         const googleLoginBtn = document.getElementById('google-login');
@@ -212,8 +218,7 @@ class GuardaloApp {
                     <span class="anime-episodes">${anime.episodes} episodi</span>
                 </div>
                 <div class="anime-rating">
-                    <span class="rating-value">${anime.rating}</span>
-                    <div class="rating-stars">${this.renderStars(anime.rating)}</div>
+                    <span class="rating-value">⭐ ${anime.rating}/10</span>
                 </div>
                 <div class="anime-genres">
                     ${anime.genres.slice(0, 3).map(g => `<span class="genre-tag">${g}</span>`).join('')}
@@ -240,7 +245,7 @@ class GuardaloApp {
         document.getElementById('modal-title').textContent = anime.title;
         document.getElementById('modal-poster').src = anime.img;
         document.getElementById('modal-meta').innerHTML = `<span>${anime.year} • ${anime.studio} • ${anime.status} • ${anime.episodes} episodi</span>`;
-        document.getElementById('modal-rating').innerHTML = `${anime.rating}/10 ${this.renderStars(anime.rating)}`;
+        document.getElementById('modal-rating').innerHTML = `⭐ ${anime.rating}/10`;
         document.getElementById('modal-synopsis').textContent = anime.synopsis;
         document.getElementById('modal-tags').innerHTML = anime.genres.map(g => `<span class="tag">${g}</span>`).join('');
         

@@ -23,7 +23,7 @@ const animeData = [
         top: true,
         genres: ["Action", "Drama", "Fantasy"],
         year: 2013,
-        img: "https://wsrv.nl/?url=https://cdn.myanimelist.net/images/anime/10/47347.jpg&w=300&h=450&fit=cover",
+        img: "https://images.weserv.nl/?url=https://cdn.myanimelist.net/images/anime/10/47347.jpg&w=300&h=450&fit=cover",
         studio: "Wit/MAPPA",
         status: "Finito",
         episodes: 94,
