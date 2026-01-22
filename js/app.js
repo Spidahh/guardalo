@@ -332,6 +332,13 @@ class GuardaloApp {
         ).join('');
         
         modal.classList.add('active');
+        
+        // Add backdrop click to close
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                this.closeModal(modal);
+            }
+        });
     }
 
     toggleAnimeStatus(animeTitle, status) {
@@ -363,6 +370,11 @@ class GuardaloApp {
 
     showLoginModal() {
         document.getElementById('login-modal').classList.add('active');
+        document.getElementById('login-modal').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('login-modal')) {
+                this.closeModal(document.getElementById('login-modal'));
+            }
+        });
     }
 
     loadUserData() {
