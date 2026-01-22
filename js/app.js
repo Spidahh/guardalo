@@ -260,21 +260,27 @@ class GuardaloApp {
         
         card.innerHTML = `
             <div class="anime-poster">
-                <img src="${anime.img}" alt="${anime.title}" loading="lazy" onerror="this.style.display='none'">
+                <img src="${anime.img}" alt="${anime.title}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=placeholder-img><i class=ri-image-line></i></div>'">
                 ${statusBadge ? `<div class="status-badge ${statusBadge}">${statusBadge === 'watched' ? 'VISTO' : 'DA VEDERE'}</div>` : ''}
             </div>
             <div class="anime-info">
                 <h3 class="anime-title">${anime.title}</h3>
-                <div class="anime-meta">
-                    <span>${anime.year}</span>
-                    <span class="separator"></span>
-                    <span>${anime.episodes} ep</span>
-                </div>
-                <div class="anime-rating">
-                    <i class="ri-star-fill"></i> ${anime.rating}
+                <div class="anime-details">
+                    <div class="detail-row">
+                        <i class="ri-star-fill"></i>
+                        <span class="detail-value">${anime.rating}/10</span>
+                    </div>
+                    <div class="detail-row">
+                        <i class="ri-calendar-line"></i>
+                        <span class="detail-value">${anime.year}</span>
+                    </div>
+                    <div class="detail-row">
+                        <i class="ri-play-circle-line"></i>
+                        <span class="detail-value">${anime.episodes} episodi</span>
+                    </div>
                 </div>
                 <div class="anime-genres">
-                    ${anime.genres.slice(0, 2).map(g => `<span class="genre-tag">${g}</span>`).join('')}
+                    ${anime.genres.slice(0, 3).map(g => `<span class="genre-tag">${g}</span>`).join('')}
                 </div>
             </div>
         `;
