@@ -260,21 +260,22 @@ class GuardaloApp {
         
         card.innerHTML = `
             <div class="anime-poster">
-                <img src="${anime.img}" alt="${anime.title}" loading="lazy" referrerpolicy="no-referrer" crossorigin="anonymous">
+                <img src="${anime.img}" alt="${anime.title}" loading="lazy" onerror="this.src='images/anime/placeholder.svg'">
                 ${statusBadge ? `<div class="status-badge ${statusBadge}">${statusBadge === 'watched' ? 'Visto' : 'Da vedere'}</div>` : ''}
             </div>
             <div class="anime-info">
                 <h3 class="anime-title">${anime.title}</h3>
                 <div class="anime-meta">
-                    <span class="anime-year">${anime.year}</span>
-                    <span class="anime-episodes">${anime.episodes} episodi</span>
+                    <span><i class="ri-calendar-line"></i> ${anime.year}</span>
+                    <span class="separator"></span>
+                    <span><i class="ri-play-circle-line"></i> ${anime.episodes} ep</span>
                 </div>
                 <div class="anime-rating">
                     <i class="ri-star-fill"></i>
-                    <span>${anime.rating}</span>
+                    <span>${anime.rating}/10</span>
                 </div>
                 <div class="anime-genres">
-                    ${anime.genres.map(g => `<span class="genre-tag">${g}</span>`).join('')}
+                    ${anime.genres.slice(0, 3).map(g => `<span class="genre-tag">${g}</span>`).join('')}
                 </div>
             </div>
         `;
