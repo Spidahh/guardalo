@@ -419,16 +419,27 @@ class GuardaloApp {
             loginBtn.style.display = 'block';
             logoutBtn.style.display = 'none';
             userInfo.textContent = '';
-            };
         }
     }
 
-    closeModal(modal) {
-        modal.classList.remove('active');
+    clearAllFilters() {
+        this.filters = {
+            search: '',
+            genres: [],
+            status: 'all'
+        };
+        
+        document.getElementById('searchInput').value = '';
+        document.getElementById('statusFilter').value = 'all';
+        document.querySelectorAll('.chip.active').forEach(chip => {
+            chip.classList.remove('active');
+        });
+        
+        this.applyFilters();
     }
 }
 
-// Inizializza l'app quando il DOM è pronto
+// Initialize app when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-    new GuardaloApp();
+    window.guardaloApp = new GuardaloApp();
 });
