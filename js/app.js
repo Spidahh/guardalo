@@ -1,8 +1,7 @@
-// App principale GUARDALO
+// App principale// GUARDALO - App principale
 class GuardaloApp {
     constructor() {
-        this.currentUser = null;
-        this.userAnime = {};
+        this.animeData = [];
         this.filteredAnime = [];
         this.filters = {
             search: '',
@@ -10,68 +9,114 @@ class GuardaloApp {
             status: 'all'
         };
         this.sortBy = 'rating';
+        this.currentUser = null;
+        this.userAnime = {};
+        this.auth = null;
+        this.db = null;
         
         this.init();
     }
 
     async init() {
-        await this.initFirebase();
-        this.bindEvents();
-        this.setupGenreChips();
-        this.renderAnime();
-        this.checkAuthState();
+        try {
+            // Initialize Firebase
+            this.initFirebase();
+            
+            // Load data
+            this.loadData();
+            
+            // Setup UI
+            this.setupUI();
+            
+            // Bind events
+            this.bindEvents();
+            
+            // Initial render
+            this.applyFilters();
+            
+            console.log('Guardalo App initialized successfully');
+        } catch (error) {
+            console.error('Error initializing app:', error);
+        }
     }
 
-    async initFirebase() {
+    initFirebase() {
         try {
-            // Inizializza Firebase se le credenziali sono configurate
-            if (typeof firebase !== 'undefined' && firebaseConfig.apiKey) {
-                firebase.initializeApp(firebaseConfig);
-                this.auth = firebase.auth();
-                this.db = firebase.firestore();
-                
-                // Listener per auth state
-                this.auth.onAuthStateChanged(user => {
-                    this.currentUser = user;
-                    this.updateUI();
-                    if (user) {
-                        this.loadUserData();
-                    }
-                });
+            // Check if firebase-config.js loaded properly
+            if (typeof firebaseConfig === 'undefined') {
+                console.warn('Firebase config not found, using localStorage only');
+                return;
             }
+
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            this.auth = firebase.auth();
+            this.db = firebase.firestore();
+
+            // Auth state observer
+            this.auth.onAuthStateChanged(user => {
+                this.currentUser = user;
+                if (user) {
+                    this.loadUserData();
+                } else {
+                    this.loadLocalData();
+                }
+                this.updateAuthUI();
+            });
         } catch (error) {
-            console.warn('Firebase non configurato, procedo senza login');
+            console.warn('Firebase initialization failed:', error);
+        }
+    }
+
+    loadData() {
+        this.animeData = [...animeData];
+        this.filteredAnime = [...this.animeData];
+    }
+
+    setupUI() {
+        // Setup genre chips
+        this.setupGenreChips();
+        
+        // Setup sort dropdown
+        const sortSelect = document.getElementById('sortSelect');
+        if (sortSelect) {
+            sortSelect.value = this.sortBy;
+        }
+        
+        // Setup status filter
+        const statusFilter = document.getElementById('statusFilter');
+        if (statusFilter) {
+            statusFilter.value = this.filters.status;
         }
     }
 
     bindEvents() {
         // Search
-        document.getElementById('search-input').addEventListener('input', (e) => {
-            this.filters.search = e.target.value.toLowerCase();
-            this.applyFilters();
-        });
-
-        // Sort
-        document.getElementById('sort-select').addEventListener('change', (e) => {
-            this.sortBy = e.target.value;
-            this.applyFilters();
-        });
-
-        // Status filters
-        document.querySelectorAll('.btn-group button').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('.btn-group button').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                this.filters.status = btn.dataset.status;
+        const searchInput = document.getElementById('searchInput');
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                this.filters.search = e.target.value.toLowerCase();
                 this.applyFilters();
             });
-        });
+        }
 
-        // TOP filter - da rimuovere perché non esiste nell'HTML
-        // document.getElementById('topFilter').addEventListener('change', (e) => {
-        //     this.filters.top = e.target.value;
-        //     this.applyFilters();
-        // });
+        // Sort
+        const sortSelect = document.getElementById('sortSelect');
+        if (sortSelect) {
+            sortSelect.addEventListener('change', (e) => {
+                this.sortBy = e.target.value;
+                this.applyFilters();
+            });
+        }
+
+        // Status filter
+        const statusFilter = document.getElementById('statusFilter');
+        if (statusFilter) {
+            statusFilter.addEventListener('change', (e) => {
+                this.filters.status = e.target.value;
+                this.applyFilters();
+            });
+        }
 
         // Modal close
         document.querySelectorAll('.modal-close').forEach(btn => {
@@ -86,7 +131,15 @@ class GuardaloApp {
         document.getElementById('close-login').addEventListener('click', () => {
             document.getElementById('login-modal').classList.remove('active');
         });
-        
+
+        // Login button
+        const loginBtn = document.getElementById('loginBtn');
+        if (loginBtn) {
+            loginBtn.addEventListener('click', () => {
+                this.showLoginModal();
+            });
+        }
+
         // Google login button in modal
         const googleLoginBtn = document.getElementById('google-login');
         if (googleLoginBtn) {
@@ -99,19 +152,27 @@ class GuardaloApp {
             });
         }
 
-        // Close modal on backdrop click
-        document.querySelectorAll('.modal-overlay').forEach(modal => {
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    this.closeModal(modal);
+        // Logout button
+        const logoutBtn = document.getElementById('logoutBtn');
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', () => {
+                if (this.auth) {
+                    this.auth.signOut();
+                } else {
+                    this.clearLocalData();
                 }
             });
+        }
+
+        // Filter buttons
+        document.getElementById('clearFilters').addEventListener('click', () => {
+            this.clearAllFilters();
         });
     }
 
     setupGenreChips() {
         const genres = [...new Set(animeData.flatMap(a => a.genres))].sort();
-        const container = document.getElementById('genre-chips');
+        const container = document.getElementById('genreChips');
         
         genres.forEach(genre => {
             const chip = document.createElement('button');
@@ -132,19 +193,20 @@ class GuardaloApp {
 
     applyFilters() {
         this.filteredAnime = animeData.filter(anime => {
-            // Search
+            // Search filter
             if (this.filters.search && !anime.title.toLowerCase().includes(this.filters.search)) {
                 return false;
             }
 
-            // Genres
+            // Genre filter - MULTI-SELECT SUPPORT
             if (this.filters.genres.length > 0) {
-                if (!this.filters.genres.some(g => anime.genres.includes(g))) {
+                // Must match ALL selected genres
+                if (!this.filters.genres.every(g => anime.genres.includes(g))) {
                     return false;
                 }
             }
 
-            // Status
+            // Status filter
             if (this.filters.status !== 'all') {
                 const userStatus = this.userAnime[anime.title];
                 if (this.filters.status === 'watched' && !userStatus?.watched) return false;
@@ -175,31 +237,31 @@ class GuardaloApp {
     }
 
     renderAnime() {
-        const grid = document.getElementById('anime-grid');
-        grid.innerHTML = '';
+        const container = document.getElementById('animeGrid');
+        container.innerHTML = '';
+
+        if (this.filteredAnime.length === 0) {
+            container.innerHTML = '<div class="no-results">Nessun anime trovato</div>';
+            return;
+        }
 
         this.filteredAnime.forEach(anime => {
             const card = this.createAnimeCard(anime);
-            grid.appendChild(card);
+            container.appendChild(card);
         });
-
-        if (this.filteredAnime.length === 0) {
-            grid.innerHTML = '<div class="no-results">Nessun anime trovato</div>';
-        }
     }
 
     createAnimeCard(anime) {
         const card = document.createElement('div');
         card.className = 'anime-card';
         
-        const userStatus = this.userAnime[anime.title];
-        const statusClass = userStatus?.watched ? 'watched' : userStatus?.toWatch ? 'to-watch' : '';
+        const userStatus = this.userAnime[anime.title] || {};
+        const statusBadge = userStatus.watched ? 'watched' : userStatus.toWatch ? 'to-watch' : '';
         
         card.innerHTML = `
             <div class="anime-poster">
                 <img src="${anime.img}" alt="${anime.title}" loading="lazy">
-                ${anime.top ? '<div class="top-badge">TOP</div>' : ''}
-                ${statusClass ? `<div class="status-badge ${statusClass}">${statusClass === 'watched' ? '✓ Visto' : 'Da vedere'}</div>` : ''}
+                ${statusBadge ? `<div class="status-badge ${statusBadge}">${statusBadge === 'watched' ? 'Visto' : 'Da vedere'}</div>` : ''}
             </div>
             <div class="anime-info">
                 <h3 class="anime-title">${anime.title}</h3>
@@ -208,135 +270,155 @@ class GuardaloApp {
                     <span class="anime-episodes">${anime.episodes} episodi</span>
                 </div>
                 <div class="anime-rating">
-                    <span class="rating-value">⭐ ${anime.rating}/10</span>
+                    <i class="ri-star-fill"></i>
+                    <span>${anime.rating}</span>
                 </div>
                 <div class="anime-genres">
-                    ${anime.genres.slice(0, 3).map(g => `<span class="genre-tag">${g}</span>`).join('')}
+                    ${anime.genres.map(g => `<span class="genre-tag">${g}</span>`).join('')}
                 </div>
             </div>
         `;
 
-        card.addEventListener('click', () => this.showAnimeDetails(anime));
+        card.addEventListener('click', () => this.showAnimeDetail(anime));
         return card;
     }
 
-    renderStars(rating) {
-        const fullStars = Math.floor(rating / 2);
-        const halfStar = rating % 2 >= 1;
-        const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
-        
-        return '★'.repeat(fullStars) + (halfStar ? '☆' : '') + '☆'.repeat(emptyStars);
-    }
-
-    showAnimeDetails(anime) {
+    showAnimeDetail(anime) {
         const modal = document.getElementById('detail-modal');
-        const userStatus = this.userAnime[anime.title];
+        const userStatus = this.userAnime[anime.title] || {};
         
-        document.getElementById('modal-title').textContent = anime.title;
-        document.getElementById('modal-poster').src = anime.img;
-        document.getElementById('modal-meta').innerHTML = `<span>${anime.year} • ${anime.studio} • ${anime.status} • ${anime.episodes} episodi</span>`;
-        document.getElementById('modal-rating').innerHTML = `⭐ ${anime.rating}/10`;
-        document.getElementById('modal-synopsis').textContent = anime.synopsis;
-        document.getElementById('modal-tags').innerHTML = anime.genres.map(g => `<span class="tag">${g}</span>`).join('');
+        modal.querySelector('.modal-title').textContent = anime.title;
+        modal.querySelector('.modal-poster img').src = anime.img;
+        modal.querySelector('.modal-rating').innerHTML = `<i class="ri-star-fill"></i> ${anime.rating}`;
+        modal.querySelector('.modal-year').textContent = anime.year;
+        modal.querySelector('.modal-episodes').textContent = `${anime.episodes} episodi`;
+        modal.querySelector('.modal-studio').textContent = anime.studio;
+        modal.querySelector('.modal-status').textContent = anime.status;
+        modal.querySelector('.modal-synopsis').textContent = anime.synopsis;
         
-        // Struttura
-        const structureHtml = anime.structure.map(s => 
-            `<div class="structure-item"><strong>${s.name}:</strong> ${s.episodes} episodi</div>`
-        ).join('');
-        document.getElementById('modal-structure').innerHTML = structureHtml;
+        // Status buttons
+        const watchedBtn = modal.querySelector('#btn-watched');
+        const toWatchBtn = modal.querySelector('#btn-towatch');
         
-        // Link streaming
-        const legalLinks = anime.links.legal.map(l => 
-            `<a href="${l.url}" target="_blank" class="streaming-link legal">${l.name}</a>`
-        ).join('');
+        watchedBtn.classList.toggle('active', userStatus.watched);
+        toWatchBtn.classList.toggle('active', userStatus.toWatch);
         
-        const illegalLinks = anime.links.illegal.map(l => 
-            `<a href="${l.url}" target="_blank" class="streaming-link illegal">${l.name}</a>`
-        ).join('');
-        
-        document.getElementById('modal-legal-links').innerHTML = legalLinks || '<span class="no-link">Non disponibile</span>';
-        document.getElementById('modal-illegal-links').innerHTML = illegalLinks;
-        
-        // Pulsanti stato
-        const watchedBtn = document.getElementById('btn-watched');
-        const toWatchBtn = document.getElementById('btn-towatch');
-        
-        watchedBtn.classList.toggle('active', userStatus?.watched || false);
-        toWatchBtn.classList.toggle('active', userStatus?.toWatch || false);
-        
-        // Eventi pulsanti
         watchedBtn.onclick = () => this.toggleAnimeStatus(anime.title, 'watched');
         toWatchBtn.onclick = () => this.toggleAnimeStatus(anime.title, 'toWatch');
+        
+        // Genres
+        const genresContainer = modal.querySelector('.modal-tags');
+        genresContainer.innerHTML = anime.genres.map(g => `<span class="genre-tag">${g}</span>`).join('');
+        
+        // Structure
+        const structureContainer = modal.querySelector('.modal-structure');
+        structureContainer.innerHTML = anime.structure.map(s => 
+            `<div class="structure-item">
+                <span class="structure-name">${s.name}</span>
+                <span class="structure-episodes">${s.episodes}</span>
+            </div>`
+        ).join('');
+        
+        // Links
+        const legalLinks = modal.querySelector('.legal-links');
+        const illegalLinks = modal.querySelector('.illegal-links');
+        
+        legalLinks.innerHTML = anime.links.legal.map(l => 
+            `<a href="${l.url}" target="_blank" class="link-button">${l.name}</a>`
+        ).join('');
+        
+        illegalLinks.innerHTML = anime.links.illegal.map(l => 
+            `<a href="${l.url}" target="_blank" class="link-button">${l.name}</a>`
+        ).join('');
         
         modal.classList.add('active');
     }
 
-    toggleAnimeStatus(title, status) {
-        if (!this.currentUser) {
-            document.getElementById('login-modal').classList.add('active');
-            return;
+    toggleAnimeStatus(animeTitle, status) {
+        if (!this.userAnime[animeTitle]) {
+            this.userAnime[animeTitle] = {};
         }
-
-        const anime = this.userAnime[title] || {};
         
-        if (status === 'watched') {
-            anime.watched = !anime.watched;
-            anime.toWatch = false;
-        } else if (status === 'toWatch') {
-            anime.toWatch = !anime.toWatch;
-            anime.watched = false;
+        // Toggle status
+        this.userAnime[animeTitle][status] = !this.userAnime[animeTitle][status];
+        
+        // If setting watched, remove toWatch and vice versa
+        if (status === 'watched' && this.userAnime[animeTitle].watched) {
+            this.userAnime[animeTitle].toWatch = false;
+        } else if (status === 'toWatch' && this.userAnime[animeTitle].toWatch) {
+            this.userAnime[animeTitle].watched = false;
         }
-
-        this.userAnime[title] = anime;
+        
+        // Save data
         this.saveUserData();
+        
+        // Update UI
         this.applyFilters();
-        this.showAnimeDetails(animeData.find(a => a.title === title));
+        this.showAnimeDetail(this.animeData.find(a => a.title === animeTitle));
     }
 
-    async saveUserData() {
-        if (this.currentUser && this.db) {
-            try {
-                await this.db.collection('users').doc(this.currentUser.uid).set({
-                    anime: this.userAnime
-                });
-            } catch (error) {
-                console.error('Errore salvataggio dati:', error);
-            }
-        }
+    closeModal(modal) {
+        modal.classList.remove('active');
     }
 
-    async loadUserData() {
-        if (this.currentUser && this.db) {
-            try {
-                const doc = await this.db.collection('users').doc(this.currentUser.uid).get();
+    showLoginModal() {
+        document.getElementById('login-modal').classList.add('active');
+    }
+
+    loadUserData() {
+        if (!this.currentUser || !this.db) return;
+        
+        this.db.collection('users').doc(this.currentUser.uid).get()
+            .then(doc => {
                 if (doc.exists) {
                     this.userAnime = doc.data().anime || {};
                     this.applyFilters();
                 }
-            } catch (error) {
-                console.error('Errore caricamento dati:', error);
-            }
+            })
+            .catch(error => {
+                console.error('Error loading user data:', error);
+            });
+    }
+
+    loadLocalData() {
+        const data = localStorage.getItem('guardalo_anime');
+        if (data) {
+            this.userAnime = JSON.parse(data);
+            this.applyFilters();
         }
     }
 
-    checkAuthState() {
-        this.updateUI();
+    saveUserData() {
+        if (this.currentUser && this.db) {
+            // Save to Firestore
+            this.db.collection('users').doc(this.currentUser.uid).set({
+                anime: this.userAnime
+            }, { merge: true });
+        } else {
+            // Save to localStorage
+            localStorage.setItem('guardalo_anime', JSON.stringify(this.userAnime));
+        }
     }
 
-    updateUI() {
-        const loginBtn = document.getElementById('auth-btn');
+    clearLocalData() {
+        this.userAnime = {};
+        localStorage.removeItem('guardalo_anime');
+        this.applyFilters();
+    }
+
+    updateAuthUI() {
+        const loginBtn = document.getElementById('loginBtn');
+        const logoutBtn = document.getElementById('logoutBtn');
+        const userInfo = document.getElementById('userInfo');
         
         if (this.currentUser) {
-            loginBtn.innerHTML = '<i class="ri-user-line"></i> ' + this.currentUser.displayName;
-            loginBtn.onclick = () => this.auth.signOut();
+            loginBtn.style.display = 'none';
+            logoutBtn.style.display = 'block';
+            userInfo.textContent = this.currentUser.displayName || this.currentUser.email;
         } else {
-            loginBtn.innerHTML = '<i class="ri-user-line"></i> <span>ACCEDI</span>';
-            loginBtn.onclick = () => {
-                if (this.auth) {
-                    this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
-                } else {
-                    alert('Firebase non configurato. Configura le credenziali in firebase-config.js');
-                }
+            loginBtn.style.display = 'block';
+            logoutBtn.style.display = 'none';
+            userInfo.textContent = '';
             };
         }
     }
