@@ -22,7 +22,7 @@
         <div class="nav-left">
             <div class="search-container">
                 <i class="ri-search-line"></i>
-                <input type="text" id="search-input" placeholder="Cerca anime...">
+                <input type="text" id="searchInput" placeholder="Cerca anime...">
             </div>
         </div>
 
@@ -31,9 +31,13 @@
         </div>
 
         <div class="nav-right">
-            <button class="btn-primary" id="auth-btn">
+            <button class="btn-primary" id="loginBtn">
                 <i class="ri-user-line"></i> <span>ACCEDI</span>
             </button>
+            <button class="btn-secondary" id="logoutBtn" style="display: none;">
+                <i class="ri-logout-box-line"></i> <span>ESCI</span>
+            </button>
+            <span id="userInfo"></span>
         </div>
     </nav>
 
@@ -44,7 +48,7 @@
             <!-- Genres -->
             <div class="genres-section">
                 <span class="toolbar-label">GENERI</span>
-                <div class="filter-chips" id="genre-chips">
+                <div class="filter-chips" id="genreChips">
                     <!-- Populated by JS -->
                 </div>
             </div>
@@ -54,28 +58,35 @@
                 <!-- Status -->
                 <div class="control-group">
                     <span class="toolbar-label">STATO</span>
-                    <div class="btn-group" id="status-btns">
-                        <button class="active" data-status="all">TUTTI</button>
-                        <button data-status="watched"><i class="ri-check-double-line"></i> VISTI</button>
-                        <button data-status="towatch"><i class="ri-time-line"></i> DA VEDERE</button>
-                        <button data-status="top"><i class="ri-star-fill"></i> TOP</button>
-                    </div>
+                    <select id="statusFilter" class="tech-select">
+                        <option value="all">Tutti</option>
+                        <option value="watched">Visti</option>
+                        <option value="towatch">Da vedere</option>
+                        <option value="top">Top</option>
+                    </select>
                 </div>
 
                 <!-- Sort -->
                 <div class="control-group">
                     <span class="toolbar-label">ORDINA</span>
-                    <select id="sort-select" class="tech-select">
+                    <select id="sortSelect" class="tech-select">
                         <option value="rating">Voto</option>
                         <option value="title">Nome (A-Z)</option>
                         <option value="year">Anno</option>
                     </select>
                 </div>
+                
+                <!-- Clear -->
+                <div class="control-group">
+                    <button id="clearFilters" class="btn">
+                        <i class="ri-refresh-line"></i> PULISCI
+                    </button>
+                </div>
             </div>
         </div>
 
         <!-- GRID -->
-        <div id="anime-grid" class="cards-grid">
+        <div id="animeGrid" class="cards-grid">
             <!-- Populated by JS -->
         </div>
     </main>
