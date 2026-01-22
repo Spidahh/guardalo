@@ -443,7 +443,7 @@ const animeData = [
         }
     },
     {
-        title: "code geass",
+        title: "Code Geass",
         rating: 8,
         top: false,
         genres: ["Mecha", "Action", "Thriller"],
@@ -460,7 +460,7 @@ const animeData = [
         }
     },
     {
-        title: "cowboy bebop",
+        title: "Cowboy Bebop",
         rating: 9,
         top: false,
         genres: ["Sci-Fi", "Action", "Space Western"],
@@ -528,7 +528,7 @@ const animeData = [
         }
     },
     {
-        title: "death parade",
+        title: "Death Parade",
         rating: 7,
         top: false,
         genres: ["Psychological", "Thriller", "Drama"],
@@ -613,7 +613,7 @@ const animeData = [
         }
     },
     {
-        title: "dragon ball",
+        title: "Dragon Ball",
         rating: 9,
         top: false,
         genres: ["Action", "Adventure", "Martial Arts"],
@@ -647,7 +647,7 @@ const animeData = [
         }
     },
     {
-        title: "eighty six",
+        title: "86 EIGHTY-SIX",
         rating: 8,
         top: false,
         genres: ["Mecha", "Action", "Drama"],
@@ -851,7 +851,7 @@ const animeData = [
         }
     },
     {
-        title: "golden kamuy",
+        title: "Golden Kamuy",
         rating: 8,
         top: false,
         genres: ["Adventure", "Historical", "Action"],
@@ -1191,13 +1191,13 @@ const animeData = [
         }
     },
     {
-        title: "pluto",
+        title: "PLUTO",
         rating: 8,
         top: false,
         genres: ["Mystery", "Sci-Fi", "Psychological"],
         year: 2023,
         img: "images/anime/pluto.jpg",
-        studio: "Studio Ghibli",
+        studio: "Studio M2",
         status: "Finito",
         episodes: 8,
         synopsis: "Un detective indaga su omicidi di robot avanzati.",
@@ -1293,7 +1293,7 @@ const animeData = [
         }
     },
     {
-        title: "saint seya",
+        title: "Saint Seiya",
         rating: 8,
         top: false,
         genres: ["Action", "Fantasy", "Adventure"],
@@ -1310,7 +1310,7 @@ const animeData = [
         }
     },
     {
-        title: "samurai champloo",
+        title: "Samurai Champloo",
         rating: 9,
         top: false,
         genres: ["Action", "Historical", "Hip Hop"],
@@ -1599,7 +1599,7 @@ const animeData = [
         }
     },
     {
-        title: "wolf's rain",
+        title: "Wolf's Rain",
         rating: 8,
         top: false,
         genres: ["Fantasy", "Adventure", "Drama"],
