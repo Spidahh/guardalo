@@ -7,10 +7,9 @@ class GuardaloApp {
         this.filters = {
             search: '',
             genres: [],
-            status: 'all',
-            top: 'all'
+            status: 'all'
         };
-        this.sortBy = 'rating-desc';
+        this.sortBy = 'rating';
         
         this.init();
     }
@@ -116,7 +115,7 @@ class GuardaloApp {
         
         genres.forEach(genre => {
             const chip = document.createElement('button');
-            chip.className = 'genre-chip';
+            chip.className = 'chip';
             chip.textContent = genre;
             chip.addEventListener('click', () => {
                 chip.classList.toggle('active');
@@ -150,11 +149,8 @@ class GuardaloApp {
                 const userStatus = this.userAnime[anime.title];
                 if (this.filters.status === 'watched' && !userStatus?.watched) return false;
                 if (this.filters.status === 'towatch' && !userStatus?.toWatch) return false;
+                if (this.filters.status === 'top' && !anime.top) return false;
             }
-
-            // TOP
-            if (this.filters.top === 'top' && !anime.top) return false;
-            if (this.filters.top === 'normal' && anime.top) return false;
 
             return true;
         });
@@ -166,20 +162,14 @@ class GuardaloApp {
     sortAnime() {
         this.filteredAnime.sort((a, b) => {
             switch (this.sortBy) {
-                case 'rating-desc':
+                case 'rating':
                     return b.rating - a.rating;
-                case 'rating-asc':
-                    return a.rating - b.rating;
-                case 'year-desc':
-                    return b.year - a.year;
-                case 'year-asc':
-                    return a.year - b.year;
-                case 'title-asc':
+                case 'title':
                     return a.title.localeCompare(b.title);
-                case 'title-desc':
-                    return b.title.localeCompare(a.title);
+                case 'year':
+                    return b.year - a.year;
                 default:
-                    return 0;
+                    return b.rating - a.rating;
             }
         });
     }
