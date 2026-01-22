@@ -19,141 +19,127 @@
 <body>
     <!-- NAVBAR -->
     <nav class="navbar">
-        <div class="nav-left">
-            <div class="search-container">
-                <i class="ri-search-line"></i>
-                <input type="text" id="searchInput" placeholder="Cerca anime...">
+        <div class="navbar-content">
+            <a href="#" class="navbar-brand">
+                <i class="ri-play-circle-fill"></i>
+                GUARDALO
+            </a>
+            
+            <div class="navbar-actions">
+                <button id="loginBtn" class="btn">
+                    <i class="ri-user-line"></i>
+                    Accedi
+                </button>
+                <button id="logoutBtn" class="btn" style="display: none;">
+                    <i class="ri-logout-box-line"></i>
+                    Esci
+                </button>
+                <span id="userInfo"></span>
             </div>
-        </div>
-
-        <div class="nav-center">
-            <div class="logo">GUARDALO</div>
-        </div>
-
-        <div class="nav-right">
-            <button class="btn-primary" id="loginBtn">
-                <i class="ri-user-line"></i> <span>ACCEDI</span>
-            </button>
-            <button class="btn-secondary" id="logoutBtn" style="display: none;">
-                <i class="ri-logout-box-line"></i> <span>ESCI</span>
-            </button>
-            <span id="userInfo"></span>
         </div>
     </nav>
 
     <!-- MAIN CONTENT -->
-    <main class="main-container">
+    <div class="main-content">
+        <!-- SEARCH -->
+        <div class="search-container">
+            <input type="text" id="searchInput" class="search-input" placeholder="Cerca anime...">
+        </div>
+
         <!-- TOOLBAR -->
         <div class="toolbar">
-            <!-- Genres -->
-            <div class="genres-section">
-                <span class="toolbar-label">GENERI</span>
-                <div class="filter-chips" id="genreChips">
-                    <!-- Populated by JS -->
-                </div>
+            <div class="toolbar-left">
+                <div id="genreChips"></div>
             </div>
-
-            <!-- Controls -->
-            <div class="toolbar-controls">
-                <!-- Status -->
-                <div class="control-group">
-                    <span class="toolbar-label">STATO</span>
-                    <select id="statusFilter" class="tech-select">
-                        <option value="all">Tutti</option>
-                        <option value="watched">Visti</option>
-                        <option value="towatch">Da vedere</option>
-                        <option value="top">Top</option>
-                    </select>
-                </div>
-
-                <!-- Sort -->
-                <div class="control-group">
-                    <span class="toolbar-label">ORDINA</span>
-                    <select id="sortSelect" class="tech-select">
-                        <option value="rating">Voto</option>
-                        <option value="title">Nome (A-Z)</option>
-                        <option value="year">Anno</option>
-                    </select>
-                </div>
+            
+            <div class="toolbar-right">
+                <select id="statusFilter" class="dropdown-select">
+                    <option value="all">Tutti</option>
+                    <option value="watched">Visti</option>
+                    <option value="towatch">Da vedere</option>
+                    <option value="top">Top</option>
+                </select>
                 
-                <!-- Clear -->
-                <div class="control-group">
-                    <button id="clearFilters" class="btn">
-                        <i class="ri-refresh-line"></i> PULISCI
-                    </button>
-                </div>
+                <select id="sortSelect" class="dropdown-select">
+                    <option value="rating">Voto</option>
+                    <option value="title">Nome</option>
+                    <option value="year">Anno</option>
+                </select>
+                
+                <button id="clearFilters" class="btn">
+                    <i class="ri-refresh-line"></i>
+                    Pulisci
+                </button>
             </div>
         </div>
 
-        <!-- GRID -->
-        <div id="animeGrid" class="cards-grid">
+        <!-- ANIME GRID -->
+        <div id="animeGrid" class="anime-grid">
             <!-- Populated by JS -->
         </div>
-    </main>
+    </div>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>GUARDALO © 2026 - I miei anime preferiti</p>
-    </footer>
-
-    <!-- ANIME DETAIL MODAL -->
+    <!-- DETAIL MODAL -->
     <div id="detail-modal" class="modal-overlay">
-        <div class="modal-box">
-            <button class="modal-close" id="close-modal"><i class="ri-close-line"></i></button>
+        <div class="modal">
+            <div class="modal-header">
+                <div class="modal-poster">
+                    <img src="" alt="">
+                </div>
+                <button class="modal-close" id="close-modal">
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
             
-            <div class="modal-content">
-                <div class="modal-poster-container">
-                    <img class="modal-poster" id="modal-poster" src="" alt="">
-                    <div class="modal-rating" id="modal-rating">
-                        <!-- Populated by JS -->
+            <div class="modal-body">
+                <h2 class="modal-title"></h2>
+                
+                <div class="modal-info">
+                    <div class="modal-info-item">
+                        <span class="modal-info-label">Voto</span>
+                        <span class="modal-info-value modal-rating"></span>
+                    </div>
+                    <div class="modal-info-item">
+                        <span class="modal-info-label">Anno</span>
+                        <span class="modal-info-value modal-year"></span>
+                    </div>
+                    <div class="modal-info-item">
+                        <span class="modal-info-label">Episodi</span>
+                        <span class="modal-info-value modal-episodes"></span>
+                    </div>
+                    <div class="modal-info-item">
+                        <span class="modal-info-label">Studio</span>
+                        <span class="modal-info-value modal-studio"></span>
+                    </div>
+                    <div class="modal-info-item">
+                        <span class="modal-info-label">Stato</span>
+                        <span class="modal-info-value modal-status"></span>
                     </div>
                 </div>
                 
-                <div class="modal-info">
-                    <div class="modal-header">
-                        <h2 id="modal-title">Titolo</h2>
-                        <div class="modal-meta" id="modal-meta">
-                            <!-- Populated by JS -->
-                        </div>
+                <p class="modal-synopsis"></p>
+                
+                <div class="modal-tags"></div>
+                <div class="modal-structure"></div>
+                
+                <div class="modal-links">
+                    <div class="links-section">
+                        <span class="links-title">Dove guardarlo</span>
+                        <div class="legal-links"></div>
                     </div>
-
-                    <div class="modal-actions">
-                        <button class="modal-btn primary" id="btn-watched">
-                            <i class="ri-check-line"></i> VISTO
-                        </button>
-                        <button class="modal-btn secondary" id="btn-towatch">
-                            <i class="ri-time-line"></i> DA VEDERE
-                        </button>
+                    <div class="links-section">
+                        <span class="links-title">Streaming</span>
+                        <div class="illegal-links"></div>
                     </div>
-
-                    <div class="modal-section">
-                        <h3>Trama</h3>
-                        <p id="modal-synopsis" class="modal-desc">Descrizione...</p>
-                    </div>
-
-                    <div class="modal-section">
-                        <h3>Generi</h3>
-                        <div id="modal-tags" class="modal-tags"></div>
-                    </div>
-
-                    <div class="modal-section">
-                        <h3>Struttura</h3>
-                        <div id="modal-structure" class="modal-structure"></div>
-                    </div>
-
-                    <div class="modal-section streaming-section">
-                        <h3>DOVE GUARDARLO</h3>
-                        <div class="streaming-links">
-                            <div class="link-group">
-                                <span class="link-label">LEGALE:</span>
-                                <div id="modal-legal-links"></div>
-                            </div>
-                            <div class="link-group">
-                                <span class="link-label">STREAMING:</span>
-                                <div id="modal-illegal-links"></div>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+                
+                <div class="modal-actions">
+                    <button id="btn-watched" class="action-btn">
+                        <i class="ri-check-line"></i> Visto
+                    </button>
+                    <button id="btn-towatch" class="action-btn">
+                        <i class="ri-time-line"></i> Da vedere
+                    </button>
                 </div>
             </div>
         </div>
@@ -161,14 +147,18 @@
 
     <!-- LOGIN MODAL -->
     <div id="login-modal" class="modal-overlay">
-        <div class="modal-box login-box">
-            <button class="modal-close" id="close-login"><i class="ri-close-line"></i></button>
-            <h2>Accedi</h2>
-            <p>Salva i tuoi anime preferiti e tieni traccia di cosa hai visto</p>
-            
-            <button class="btn-google" id="google-login">
-                <i class="ri-google-fill"></i> Continua con Google
-            </button>
+        <div class="modal">
+            <div class="login-content">
+                <button class="modal-close" id="close-login">
+                    <i class="ri-close-line"></i>
+                </button>
+                <h2 class="login-title">Accedi a GUARDALO</h2>
+                <p class="login-description">Salva i tuoi anime preferiti e tieni traccia di cosa hai visto</p>
+                <button id="google-login" class="google-login-btn">
+                    <i class="ri-google-fill"></i>
+                    Continua con Google
+                </button>
+            </div>
         </div>
     </div>
 
