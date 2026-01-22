@@ -222,30 +222,32 @@ body {
 /* ==================== ANIME GRID ==================== */
 .anime-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
 }
 
 /* ==================== ANIME CARD ==================== */
 .anime-card {
-    background: #1e1e1e;
-    border-radius: 12px;
+    background: linear-gradient(145deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: 16px;
     overflow: hidden;
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.05);
 }
 
 .anime-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+    border-color: rgba(255,71,87,0.3);
 }
 
 /* POSTER */
 .anime-poster {
     position: relative;
     width: 100%;
-    height: 260px;
-    background: #2a2a2a;
+    height: 300px;
+    background: linear-gradient(180deg, #0f0f1a 0%, #1a1a2e 100%);
 }
 
 .anime-poster img {
@@ -257,37 +259,39 @@ body {
 
 .status-badge {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    padding: 5px 12px;
-    border-radius: 6px;
+    top: 12px;
+    left: 12px;
+    padding: 6px 14px;
+    border-radius: 8px;
     font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
+    backdrop-filter: blur(10px);
 }
 
 .status-badge.watched {
-    background: #22c55e;
-    color: #000;
+    background: rgba(34, 197, 94, 0.9);
+    color: #fff;
 }
 
 .status-badge.to-watch {
-    background: #3b82f6;
+    background: rgba(59, 130, 246, 0.9);
     color: #fff;
 }
 
 /* INFO BOX */
 .anime-info {
-    padding: 16px;
+    padding: 20px;
 }
 
 .anime-title {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 700;
     color: #fff;
-    margin: 0 0 10px 0;
-    line-height: 1.3;
-    height: 40px;
+    margin: 0 0 12px 0;
+    line-height: 1.4;
+    height: 45px;
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -297,46 +301,47 @@ body {
 .anime-meta {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     font-size: 13px;
-    color: #999;
-    margin-bottom: 10px;
+    color: #8892b0;
+    margin-bottom: 12px;
 }
 
 .anime-meta .separator {
     width: 4px;
     height: 4px;
-    background: #666;
+    background: #4a5568;
     border-radius: 50%;
 }
 
 .anime-rating {
     display: flex;
     align-items: center;
-    gap: 6px;
-    font-size: 14px;
+    gap: 8px;
+    font-size: 15px;
     font-weight: 700;
     color: #fbbf24;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
 
 .anime-rating i {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .anime-genres {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
+    gap: 8px;
 }
 
 .genre-tag {
-    padding: 4px 10px;
-    background: #333;
-    border-radius: 6px;
+    padding: 6px 12px;
+    background: rgba(255, 71, 87, 0.15);
+    border-radius: 20px;
     font-size: 11px;
-    color: #ccc;
-    font-weight: 500;
+    color: #ff4757;
+    font-weight: 600;
+    border: 1px solid rgba(255, 71, 87, 0.2);
 }
 
 /* Modal */
