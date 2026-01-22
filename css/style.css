@@ -255,8 +255,6 @@ body {
     object-fit: cover;
     object-position: center top;
     transition: var(--transition);
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
 }
 
 .anime-card:hover .anime-poster img {
