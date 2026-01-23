@@ -10,8 +10,13 @@ const animeData = [
         studio: "Wit/MAPPA",
         status: "Finito",
         episodes: 94,
-        synopsis: "L'umanità combatte per sopravvivere contro i Titani che mangiano gli esseri umani.",
-        structure: [{ name: "Totale", episodes: "94" }],
+        synopsis: "In un mondo dove l'umanità vive rinchiusa dietro enormi mura per proteggersi dai Titani, giganti divoratori di uomini, il giovane Eren Jaeger assiste impotente alla distruzione della sua città e alla morte di sua madre. Giura vendetta e si arruola nel Corpo di Ricerca per sterminare tutti i Titani. Insieme ai suoi amici Mikasa e Armin, scoprirà sconvolgenti verità sulle origini dei Titani e sul mondo oltre le mura. Una delle serie più iconiche degli anni 2010, con colpi di scena memorabili e un finale epico.",
+        structure: [
+            { name: "Stagione 1", episodes: "25 episodi" },
+            { name: "Stagione 2", episodes: "12 episodi" },
+            { name: "Stagione 3", episodes: "22 episodi" },
+            { name: "Stagione 4 (The Final Season)", episodes: "35 episodi" }
+        ],
         links: {
             legal: [{ name: "Crunchyroll", url: "https://crunchyroll.com" }],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=attack+on+titan+streaming" }]
@@ -27,8 +32,12 @@ const animeData = [
         studio: "OLM",
         status: "Finito",
         episodes: 25,
-        synopsis: "Gatsu, il Guerriero Nero, cerca vendetta contro Griffith e i God Hand.",
-        structure: [{ name: "Serie", episodes: "25" }],
+        synopsis: "Gatsu è un mercenario solitario con una spada enorme che vaga per un mondo medievale oscuro e brutale. Dopo essersi unito alla Banda del Falco guidata dal carismatico Griffith, trova per la prima volta amicizia e uno scopo. Ma il destino ha in serbo per lui una tragedia inimmaginabile che lo trasformerà nel Guerriero Nero, condannato a combattere demoni e a cercare vendetta. Basato sul manga di Kentaro Miura, è considerato un capolavoro del dark fantasy.",
+        structure: [
+            { name: "Serie TV 1997", episodes: "25 episodi" },
+            { name: "Film Golden Age (2012-13)", episodes: "3 film" },
+            { name: "Serie 2016-17", episodes: "24 episodi" }
+        ],
         links: {
             legal: [],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=berserk+1997+streaming" }]
@@ -43,9 +52,14 @@ const animeData = [
         img: "images/anime/bleach.jpg",
         studio: "Pierrot",
         status: "Finito",
-        episodes: 366,
-        synopsis: "Ichigo Kurosaki diventa uno Shinigami per proteggere gli umani.",
-        structure: [{ name: "Serie", episodes: "366" }],
+        episodes: 380,
+        synopsis: "Ichigo Kurosaki è un liceale che può vedere i fantasmi. Quando la Shinigami Rukia Kuchiki gli trasferisce i suoi poteri per salvare la sua famiglia, Ichigo diventa un Sostituto Shinigami. Da quel momento si ritrova a combattere Hollow, spiriti maligni che minacciano i vivi e i morti. L'avventura lo porterà nella Soul Society, Hueco Mundo e oltre, affrontando nemici sempre più potenti. Include l'arco finale Thousand-Year Blood War (2022-2025).",
+        structure: [
+            { name: "Serie Originale", episodes: "366 episodi (2004-2012)" },
+            { name: "Thousand-Year Blood War Pt.1", episodes: "13 episodi" },
+            { name: "Thousand-Year Blood War Pt.2", episodes: "13 episodi" },
+            { name: "Thousand-Year Blood War Pt.3", episodes: "14 episodi (2024-2025)" }
+        ],
         links: {
             legal: [{ name: "Crunchyroll", url: "https://crunchyroll.com" }],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=bleach+streaming" }]
@@ -61,8 +75,10 @@ const animeData = [
         studio: "Studio Trigger",
         status: "Finito",
         episodes: 10,
-        synopsis: "Un ragazzo di strada diventa un edgerunner per sopravvivere a Night City.",
-        structure: [{ name: "Serie", episodes: "10" }],
+        synopsis: "David Martinez è un giovane di Night City che vive con la madre in povertà, sognando un futuro migliore. Dopo una tragedia, si ritrova con un impianto cybernetico militare che gli dona velocità sovrumana ma rischia di farlo impazzire. Si unisce a una crew di mercenari cyberpunk guidati da Maine, trovando in Lucy un amore impossibile. Ambientato nell'universo di Cyberpunk 2077, è un capolavoro visivo di Studio Trigger con una colonna sonora indimenticabile e un finale devastante.",
+        structure: [
+            { name: "Serie Completa", episodes: "10 episodi" }
+        ],
         links: {
             legal: [{ name: "Netflix", url: "https://netflix.com" }],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=cyberpunk+edgerunners+streaming" }]
@@ -78,8 +94,11 @@ const animeData = [
         studio: "Madhouse",
         status: "Finito",
         episodes: 37,
-        synopsis: "Light Yagami trova un quaderno che uccide chiunque il cui nome venga scritto.",
-        structure: [{ name: "Serie", episodes: "37" }],
+        synopsis: "Light Yagami, studente modello e genio assoluto, trova un quaderno soprannaturale caduto dal mondo degli Shinigami: il Death Note. Chiunque il cui nome venga scritto sul quaderno muore. Light decide di usarlo per creare un mondo senza criminali, diventando 'Kira'. Ma il misterioso detective L inizia a dargli la caccia in un duello psicologico mozzafiato. Chi è la vera giustizia? Un thriller cerebrale che ha definito un'era degli anime.",
+        structure: [
+            { name: "Arco L", episodes: "Episodi 1-25" },
+            { name: "Arco Near & Mello", episodes: "Episodi 26-37" }
+        ],
         links: {
             legal: [],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=death+note+streaming" }]
@@ -95,8 +114,11 @@ const animeData = [
         studio: "Bones",
         status: "Finito",
         episodes: 64,
-        synopsis: "I fratelli Elric cercano la Pietra Filosofale per riparare i loro corpi.",
-        structure: [{ name: "Serie", episodes: "64" }],
+        synopsis: "Edward e Alphonse Elric hanno commesso il tabù supremo dell'alchimia: tentare di riportare in vita la madre. Ed ha perso un braccio e una gamba, Al ha perso tutto il corpo e la sua anima è legata a un'armatura. Ora cercano la Pietra Filosofale per recuperare ciò che hanno perso. Ma dietro questa pietra si nasconde una cospirazione che minaccia l'intera nazione di Amestris. Considerato uno dei migliori anime di sempre per storia, personaggi e world-building.",
+        structure: [
+            { name: "Serie Completa", episodes: "64 episodi" },
+            { name: "Film: Sacred Star of Milos", episodes: "1 film" }
+        ],
         links: {
             legal: [],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=fullmetal+alchemist+brotherhood+streaming" }]
@@ -112,8 +134,12 @@ const animeData = [
         studio: "Gainax",
         status: "Finito",
         episodes: 27,
-        synopsis: "Simon e Kamina combattono contro i Beastmen con il loro robot meccanico.",
-        structure: [{ name: "Serie", episodes: "27" }],
+        synopsis: "Simon è un timido scavatore che vive sottoterra insieme al suo 'fratello maggiore' Kamina, un ragazzo temerario che sogna di raggiungere la superficie. Quando trovano un antico robot chiamato Lagann, inizia un'epica battaglia contro i Beastmen e il loro tirannico re. 'Chi diavolo credi che io sia?!' - una serie che parte come avventura mecha e diventa un'opera cosmica sulla forza di volontà umana. Iconica, esagerata, commovente.",
+        structure: [
+            { name: "Prima Parte (Underground)", episodes: "Episodi 1-8" },
+            { name: "Seconda Parte (Superficie)", episodes: "Episodi 9-15" },
+            { name: "Terza Parte (Finale)", episodes: "Episodi 16-27" }
+        ],
         links: {
             legal: [],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=gurren+lagann+streaming" }]
@@ -129,8 +155,15 @@ const animeData = [
         studio: "Madhouse",
         status: "In pausa",
         episodes: 148,
-        synopsis: "Gon cerca di diventare Hunter per trovare suo padre.",
-        structure: [{ name: "Serie", episodes: "148" }],
+        synopsis: "Gon Freecss scopre che suo padre Ging, che credeva morto, è in realtà uno dei più grandi Hunter del mondo. Decide di diventare Hunter anche lui per trovarlo. Insieme al suo migliore amico Killua, un ex-assassino, affronta sfide mortali, incontra nemici terrificanti e scopre il sistema di poteri del Nen. L'arco delle Formichimere è considerato uno dei migliori archi narrativi della storia degli anime. Il manga continua sporadicamente.",
+        structure: [
+            { name: "Esame Hunter", episodes: "Episodi 1-21" },
+            { name: "Famiglia Zoldyck", episodes: "Episodi 22-26" },
+            { name: "Heaven's Arena", episodes: "Episodi 27-36" },
+            { name: "Isola di Greed", episodes: "Episodi 59-75" },
+            { name: "Formichimere", episodes: "Episodi 76-136" },
+            { name: "Elezione", episodes: "Episodi 137-148" }
+        ],
         links: {
             legal: [],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=hunter+x+hunter+2011+streaming" }]
@@ -146,8 +179,15 @@ const animeData = [
         studio: "David Production",
         status: "In corso",
         episodes: 190,
-        synopsis: "Le avventure della famiglia Joestar attraverso le generazioni.",
-        structure: [{ name: "Totale", episodes: "190" }],
+        synopsis: "La saga multigenerazionale della famiglia Joestar e della loro lotta contro il male attraverso i secoli. Ogni parte segue un diverso JoJo con poteri e stile unici: dall'Hamon del 1800 agli Stand moderni. Combattimenti creativi, pose iconiche, meme leggendari e un'estetica inconfondibile. 'Yare yare daze' - un'esperienza anime unica che ha influenzato l'intera cultura pop.",
+        structure: [
+            { name: "Parte 1: Phantom Blood", episodes: "9 episodi" },
+            { name: "Parte 2: Battle Tendency", episodes: "17 episodi" },
+            { name: "Parte 3: Stardust Crusaders", episodes: "48 episodi" },
+            { name: "Parte 4: Diamond is Unbreakable", episodes: "39 episodi" },
+            { name: "Parte 5: Golden Wind", episodes: "39 episodi" },
+            { name: "Parte 6: Stone Ocean", episodes: "38 episodi" }
+        ],
         links: {
             legal: [{ name: "Crunchyroll", url: "https://crunchyroll.com" }],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=jojo+bizarre+adventure+streaming" }]
@@ -163,8 +203,13 @@ const animeData = [
         studio: "Pierrot",
         status: "Finito",
         episodes: 720,
-        synopsis: "Naruto Uzumaki sogna di diventare Hokage, il leader del suo villaggio.",
-        structure: [{ name: "Naruto + Shippuden", episodes: "720" }],
+        synopsis: "Naruto Uzumaki è un ninja orfano emarginato dal villaggio perché porta dentro di sé la Volpe a Nove Code, un demone che quasi distrusse Konoha. Nonostante tutto, sogna di diventare Hokage per guadagnarsi il rispetto di tutti. Insieme al Team 7 (Sasuke, Sakura e Kakashi-sensei), affronta missioni sempre più pericolose, organizzazioni criminali come l'Akatsuki, e il peso del destino. Una delle serie più influenti di sempre, con temi di amicizia, perseveranza e redenzione.",
+        structure: [
+            { name: "Naruto Classico", episodes: "220 episodi (2002-2007)" },
+            { name: "Naruto Shippuden", episodes: "500 episodi (2007-2017)" },
+            { name: "Film", episodes: "11 film" },
+            { name: "Boruto (sequel)", episodes: "293 episodi" }
+        ],
         links: {
             legal: [{ name: "Crunchyroll", url: "https://crunchyroll.com" }],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=naruto+streaming" }]
@@ -180,8 +225,12 @@ const animeData = [
         studio: "Gainax",
         status: "Finito",
         episodes: 26,
-        synopsis: "Shinji Ikari pilota un Eva per combattere contro gli Angeli.",
-        structure: [{ name: "Serie", episodes: "26" }],
+        synopsis: "Nel 2015, quindici anni dopo il Second Impact che ha devastato la Terra, misteriose creature chiamate Angeli attaccano Tokyo-3. L'unica difesa sono gli Evangelion, robot giganti che possono essere pilotati solo da adolescenti selezionati. Shinji Ikari, ragazzo introverso e traumatizzato, viene convocato dal padre che lo aveva abbandonato per pilotare l'Eva-01. Più di un semplice mecha anime: è un'esplorazione della psiche umana, della depressione, e del significato dell'esistenza.",
+        structure: [
+            { name: "Serie TV", episodes: "26 episodi" },
+            { name: "The End of Evangelion", episodes: "1 film (finale alternativo)" },
+            { name: "Rebuild of Evangelion", episodes: "4 film (2007-2021)" }
+        ],
         links: {
             legal: [{ name: "Netflix", url: "https://netflix.com" }],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=neon+genesis+evangelion+streaming" }]
@@ -196,9 +245,16 @@ const animeData = [
         img: "images/anime/one-piece.jpg",
         studio: "Toei",
         status: "In corso",
-        episodes: 1000,
-        synopsis: "Monkey D. Rufy e i suoi pirati cercano il tesoro One Piece.",
-        structure: [{ name: "Saga", episodes: "1000+" }],
+        episodes: 1122,
+        synopsis: "Monkey D. Rufy ha mangiato il Frutto Gom Gom e il suo corpo è diventato di gomma. Il suo sogno? Diventare il Re dei Pirati trovando il leggendario tesoro One Piece. Con la sua ciurma di Cappello di Paglia (Zoro, Nami, Usopp, Sanji, Chopper, Robin, Franky, Brook, Jinbe), naviga per la Rotta Maggiore affrontando la Marina, i Sette Flotte, i Quattro Imperatori. La serie più lunga e venduta della storia dei manga, ancora in corso dopo 25+ anni.",
+        structure: [
+            { name: "East Blue Saga", episodes: "Ep. 1-61" },
+            { name: "Alabasta Saga", episodes: "Ep. 62-135" },
+            { name: "Sky Island Saga", episodes: "Ep. 136-206" },
+            { name: "Water 7/Enies Lobby", episodes: "Ep. 207-325" },
+            { name: "Thriller Bark + Marineford", episodes: "Ep. 326-516" },
+            { name: "New World (Dressrosa, Whole Cake, Wano)", episodes: "Ep. 517-1122+" }
+        ],
         links: {
             legal: [{ name: "Crunchyroll", url: "https://crunchyroll.com" }],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=one+piece+streaming" }]
@@ -214,8 +270,12 @@ const animeData = [
         studio: "White Fox",
         status: "Finito",
         episodes: 24,
-        synopsis: "Okabe scopre di poter inviare messaggi nel passato e cambia la storia.",
-        structure: [{ name: "Serie", episodes: "24" }],
+        synopsis: "Rintaro Okabe è uno scienziato pazzo autoproclamato che scopre per caso che il suo microonde può inviare messaggi nel passato. Quello che inizia come un esperimento divertente diventa un incubo quando le sue modifiche alla timeline causano conseguenze tragiche. Per salvare chi ama, Okabe dovrà affrontare infinite ripetizioni temporali. Basato sulla visual novel, è considerato il miglior anime sui viaggi nel tempo. El Psy Kongroo.",
+        structure: [
+            { name: "Steins;Gate", episodes: "24 episodi + OVA" },
+            { name: "Steins;Gate 0", episodes: "23 episodi (sequel/midquel)" },
+            { name: "Film: Load Region of Déjà Vu", episodes: "1 film" }
+        ],
         links: {
             legal: [],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=steins+gate+streaming" }]
@@ -231,8 +291,10 @@ const animeData = [
         studio: "OLM",
         status: "Finito",
         episodes: 25,
-        synopsis: "Shinpei torna al suo villaggio natale per il funerale della sua amica d'infanzia.",
-        structure: [{ name: "Serie", episodes: "25" }],
+        synopsis: "Shinpei Ajiro torna sull'isola di Hitogashima per il funerale di Ushio, la ragazza che amava come una sorella. Ma qualcosa non torna: Ushio non è annegata, è stata uccisa. E sull'isola ci sono 'Ombre' - copie oscure che sostituiscono le persone. Quando Shinpei muore, scopre di poter tornare indietro nel tempo. Un thriller mozzafiato con loop temporali, horror e mistero, considerato uno dei migliori anime del 2022.",
+        structure: [
+            { name: "Serie Completa", episodes: "25 episodi" }
+        ],
         links: {
             legal: [{ name: "Disney+", url: "https://disneyplus.com" }],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=summer+time+rendering+streaming" }]
@@ -316,8 +378,10 @@ const animeData = [
         studio: "TMS",
         status: "Film",
         episodes: 1,
-        synopsis: "Kaneda cerca di salvare il suo amico Tetsuo che ha sviluppato poteri psichici a Neo-Tokyo.",
-        structure: [{ name: "Film", episodes: "1" }],
+        synopsis: "Neo-Tokyo, 2019. Trent'anni dopo che una misteriosa esplosione ha distrutto Tokyo, la città è ricostruita ma corrotta. Kaneda è il leader di una gang di motociclisti. Il suo amico Tetsuo, sempre sottomesso, sviluppa improvvisamente poteri psichici incontrollabili dopo un incidente. Il governo vuole usarlo, ma Tetsuo sta perdendo il controllo. Un film che ha definito l'animazione giapponese in Occidente, con animazione rivoluzionaria ancora oggi impressionante.",
+        structure: [
+            { name: "Film", episodes: "1 film (124 minuti)" }
+        ],
         links: {
             legal: [],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=akira+film+streaming" }]
@@ -350,8 +414,11 @@ const animeData = [
         studio: "Fortiche",
         status: "Finito",
         episodes: 18,
-        synopsis: "Due sorelle, Vi e Jinx, si trovano su fronti opposti in una guerra tra Piltover e Zaun.",
-        structure: [{ name: "Totale", episodes: "18" }],
+        synopsis: "Nella città di Piltover, il progresso tecnologico crea un divario sempre più profondo con Zaun, la città sotterranea. Vi e Powder sono due sorelle orfane di Zaun che crescono in mezzo alla criminalità. Un esperimento andato storto le separa e trasforma Powder in Jinx, una criminale instabile. Anni dopo, le loro strade si incrociano di nuovo mentre una guerra sta per esplodere. Animazione rivoluzionaria, narrativa matura, personaggi indimenticabili.",
+        structure: [
+            { name: "Stagione 1", episodes: "9 episodi (2021)" },
+            { name: "Stagione 2", episodes: "9 episodi (Novembre 2024)" }
+        ],
         links: {
             legal: [{ name: "Netflix", url: "https://netflix.com" }],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=arcane+streaming" }]
@@ -418,8 +485,12 @@ const animeData = [
         studio: "MAPPA",
         status: "In corso",
         episodes: 12,
-        synopsis: "Denji si fonde con il diavolo motosega Pochita per diventare Chainsaw Man.",
-        structure: [{ name: "S1", episodes: "12" }],
+        synopsis: "Denji è un ragazzo miserabile che lavora come Devil Hunter per ripagare i debiti del padre defunto. Il suo unico amico è Pochita, un piccolo diavolo motosega. Quando viene ucciso dalla mafia dei diavoli, Pochita si fonde con lui trasformandolo in Chainsaw Man. Reclutato dalla misteriosa Makima nella Divisione Speciale 4, Denji cerca solo tre cose: cibo, un tetto, e una ragazza. Ma il mondo dei diavoli ha altri piani per lui.",
+        structure: [
+            { name: "Stagione 1", episodes: "12 episodi" },
+            { name: "Film: Reze Arc (annunciato)", episodes: "2025" },
+            { name: "Stagione 2 (annunciata)", episodes: "TBA" }
+        ],
         links: {
             legal: [{ name: "Crunchyroll", url: "https://crunchyroll.com" }],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=chainsaw+man+streaming" }]
@@ -452,8 +523,12 @@ const animeData = [
         studio: "Sunrise",
         status: "Finito",
         episodes: 50,
-        synopsis: "Lelouch ottiene il potere del Geass e guida una ribellione contro l'impero Britannia.",
-        structure: [{ name: "R1+R2", episodes: "50" }],
+        synopsis: "In un mondo alternativo, il Sacro Impero di Britannia ha conquistato il Giappone, ribattezzandolo Area 11. Lelouch vi Britannia, principe esiliato, ottiene il potere del Geass: può comandare chiunque guardi negli occhi. Sotto la maschera di Zero, guida i ribelli giapponesi contro il proprio impero. Strategie geniali, colpi di scena continui, e uno dei finali più discussi e celebrati della storia degli anime. 'All Hail Lelouch!'",
+        structure: [
+            { name: "Stagione 1 (Lelouch of the Rebellion)", episodes: "25 episodi" },
+            { name: "Stagione 2 (R2)", episodes: "25 episodi" },
+            { name: "Film: Lelouch of the Re;surrection", episodes: "1 film (2019)" }
+        ],
         links: {
             legal: [],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=code+geass+streaming" }]
@@ -469,8 +544,11 @@ const animeData = [
         studio: "Sunrise",
         status: "Finito",
         episodes: 26,
-        synopsis: "Spike Spiegel e la sua ciurma di cacciatori di taglie viaggiano nello spazio.",
-        structure: [{ name: "Serie", episodes: "26" }],
+        synopsis: "Anno 2071. Spike Spiegel è un cacciatore di taglie con un passato oscuro nella mafia marziana. Insieme al suo partner Jet Black, ex-poliziotto, viaggia per il sistema solare sulla nave Bebop cercando criminali per guadagnarsi da vivere. A loro si uniscono Faye Valentine, giocatrice d'azzardo con amnesia, Ed, hacker prodigio, e Ein, un corgi superintelligente. Episodi autoconclusivi con un arco narrativo sottostante sulla fuga di Spike dal suo passato. Colonna sonora jazz leggendaria di Yoko Kanno.",
+        structure: [
+            { name: "Serie Completa", episodes: "26 episodi" },
+            { name: "Film: Knockin' on Heaven's Door", episodes: "1 film (2001)" }
+        ],
         links: {
             legal: [{ name: "Netflix", url: "https://netflix.com" }],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=cowboy+bebop+streaming" }]
@@ -486,8 +564,11 @@ const animeData = [
         studio: "Science SARU",
         status: "In corso",
         episodes: 12,
-        synopsis: "Momo e Okarun combattono fantasmi e alieni in un'avventura esilarante.",
-        structure: [{ name: "S1", episodes: "12" }],
+        synopsis: "Momo Ayase crede nei fantasmi ma non negli alieni. Ken Takakura (Okarun) crede negli alieni ma non nei fantasmi. Per scommessa, vanno a verificare le rispettive teorie... e scoprono che ENTRAMBI esistono! Momo viene quasi rapita da alieni, Okarun viene maledetto dalla Nonna Turbo. Ora devono combattere insieme contro yokai, UFO e recuperare le 'palle' di Okarun (letteralmente). Azione folle, romanticismo dolce, animazione spettacolare di Science SARU.",
+        structure: [
+            { name: "Stagione 1", episodes: "12 episodi (Ottobre 2024)" },
+            { name: "Stagione 2 (annunciata)", episodes: "Luglio 2025" }
+        ],
         links: {
             legal: [{ name: "Crunchyroll", url: "https://crunchyroll.com" }],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=dandadan+streaming" }]
@@ -570,9 +651,16 @@ const animeData = [
         img: "images/anime/demon-slayer.jpg",
         studio: "Ufotable",
         status: "In corso",
-        episodes: 63,
-        synopsis: "Tanjiro combatte i demoni per salvare sua sorella Nezuko e trovare una cura.",
-        structure: [{ name: "Totale", episodes: "63" }],
+        episodes: 68,
+        synopsis: "Tanjiro Kamado torna a casa e trova la sua famiglia massacrata dai demoni. L'unica sopravvissuta è sua sorella Nezuko, trasformata in demone ma ancora capace di riconoscerlo. Tanjiro si unisce al Corpo degli Ammazzademoni per trovare una cura per Nezuko e vendicare la sua famiglia, imparando la Respirazione dell'Acqua e affrontando le Lune Demoniache di Muzan Kibutsuji. Animazione spettacolare di Ufotable, combattimenti mozzafiato.",
+        structure: [
+            { name: "Stagione 1", episodes: "26 episodi" },
+            { name: "Mugen Train Arc", episodes: "7 episodi + film" },
+            { name: "Stagione 2 (Entertainment District)", episodes: "11 episodi" },
+            { name: "Stagione 3 (Swordsmith Village)", episodes: "11 episodi" },
+            { name: "Stagione 4 (Hashira Training)", episodes: "8 episodi (2024)" },
+            { name: "Infinity Castle (annunciato)", episodes: "Film trilogy 2025" }
+        ],
         links: {
             legal: [{ name: "Crunchyroll", url: "https://crunchyroll.com" }],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=demon+slayer+streaming" }]
@@ -605,8 +693,10 @@ const animeData = [
         studio: "Science SARU",
         status: "Finito",
         episodes: 10,
-        synopsis: "Akira Fudo si fonde con il demone Amon per combattere altri demoni.",
-        structure: [{ name: "Serie", episodes: "10" }],
+        synopsis: "Akira Fudo è un ragazzo sensibile che piange per gli altri. Il suo amico d'infanzia Ryo lo convince a partecipare a un rave satanico dove i demoni possiedono gli umani. Akira si fonde con il potente demone Amon ma mantiene il suo cuore umano, diventando Devilman. Deve combattere i demoni mentre l'umanità sprofonda nella paranoia e nella violenza. Remake moderno del classico di Go Nagai, con un finale devastante che non risparmia nessuno.",
+        structure: [
+            { name: "Serie Completa", episodes: "10 episodi" }
+        ],
         links: {
             legal: [{ name: "Netflix", url: "https://netflix.com" }],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=devilman+crybaby+streaming" }]
@@ -733,7 +823,7 @@ const animeData = [
     },
     {
         title: "Frieren",
-        rating: 7,
+        rating: 9,
         top: false,
         genres: ["Adventure", "Fantasy", "Drama"],
         year: 2023,
@@ -741,8 +831,11 @@ const animeData = [
         studio: "Madhouse",
         status: "In corso",
         episodes: 28,
-        synopsis: "Un'elfa immortale riflette sulla vita dopo la sconfitta del Re Demone.",
-        structure: [{ name: "S1", episodes: "28" }],
+        synopsis: "Frieren è una maga elfa che ha viaggiato per 10 anni con il gruppo dell'eroe Himmel per sconfiggere il Re Demone. Dopo la vittoria, si separano promettendo di rivedersi. Ma per un'elfa che vive millenni, 50 anni sono un battito di ciglia. Quando Himmel muore di vecchiaia, Frieren realizza di non averlo mai veramente conosciuto. Inizia un viaggio per comprendere gli umani e onorare i suoi compagni. Un capolavoro contemplativo sulla mortalità, la memoria e i legami.",
+        structure: [
+            { name: "Stagione 1", episodes: "28 episodi (2023-2024)" },
+            { name: "Stagione 2 (annunciata)", episodes: "2025" }
+        ],
         links: {
             legal: [{ name: "Crunchyroll", url: "https://crunchyroll.com" }],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=frieren+streaming" }]
@@ -843,8 +936,12 @@ const animeData = [
         studio: "Production I.G",
         status: "Film",
         episodes: 1,
-        synopsis: "La Maggiore Kusanagi caccia un hacker misterioso nel cyberspazio.",
-        structure: [{ name: "Film", episodes: "1" }],
+        synopsis: "In un futuro dove umani e macchine si fondono, la Maggiore Motoko Kusanagi è un cyborg quasi completamente artificiale che guida la Sezione 9, un'unità anti-terrorismo. Mentre caccia il misterioso hacker Puppet Master, inizia a interrogarsi sulla propria identità: cos'è che rende umani quando il corpo è artificiale? Un capolavoro filosofico che ha ispirato Matrix e definito il genere cyberpunk.",
+        structure: [
+            { name: "Film Originale (1995)", episodes: "1 film" },
+            { name: "Ghost in the Shell 2: Innocence", episodes: "1 film (2004)" },
+            { name: "Stand Alone Complex (Serie TV)", episodes: "52 episodi" }
+        ],
         links: {
             legal: [{ name: "Netflix", url: "https://netflix.com" }],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=ghost+in+the+shell+streaming" }]
@@ -945,8 +1042,10 @@ const animeData = [
         studio: "Madhouse",
         status: "Finito",
         episodes: 10,
-        synopsis: "Alucard, il vampiro originale, combatte per l'organizzazione Hellsing.",
-        structure: [{ name: "OVA", episodes: "10" }],
+        synopsis: "L'organizzazione Hellsing protegge l'Inghilterra dalle minacce soprannaturali, con la sua arma segreta: Alucard, il vampiro più potente mai esistito, servo della famiglia Hellsing. Quando un'organizzazione nazista di vampiri artificiali attacca Londra, Alucard può finalmente scatenarsi. Violenza estrema, animazione spettacolare, e un protagonista overpowered che si diverte a massacrare i nemici. La serie OVA fedele al manga di Kouta Hirano.",
+        structure: [
+            { name: "OVA Completa", episodes: "10 episodi (45-60 min ciascuno)" }
+        ],
         links: {
             legal: [],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=hellsing+ultimate+streaming" }]
@@ -961,9 +1060,14 @@ const animeData = [
         img: "images/anime/jujutsu-kaisen.jpg",
         studio: "MAPPA",
         status: "In corso",
-        episodes: 47,
-        synopsis: "Yuji Itadori diventa il contenitore del Re delle Maledizioni Sukuna.",
-        structure: [{ name: "Totale", episodes: "47" }],
+        episodes: 48,
+        synopsis: "Yuji Itadori è un liceale con forza sovrumana che, per salvare i suoi amici, ingoia un dito maledetto di Ryomen Sukuna, il Re delle Maledizioni. Ora condivide il corpo con questa entità malvagia ed è condannato a morte dalla Scuola di Stregoneria. Per guadagnare tempo, deve trovare e consumare tutte le 20 dita di Sukuna. Insieme a Megumi e Nobara, affronta maledizioni sempre più potenti. Combattimenti brutali, personaggi carismatici, trama dark.",
+        structure: [
+            { name: "Stagione 1", episodes: "24 episodi" },
+            { name: "Film: Jujutsu Kaisen 0", episodes: "1 film (prequel)" },
+            { name: "Stagione 2 (Hidden Inventory + Shibuya)", episodes: "23 episodi" },
+            { name: "Stagione 3 (annunciata)", episodes: "2025" }
+        ],
         links: {
             legal: [{ name: "Crunchyroll", url: "https://crunchyroll.com" }],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=jujutsu+kaisen+streaming" }]
@@ -1064,8 +1168,12 @@ const animeData = [
         studio: "Kinema Citrus",
         status: "In corso",
         episodes: 25,
-        synopsis: "Riko e Reg scendono nell'Abisso, un misterioso e pericoloso pozzo.",
-        structure: [{ name: "Totale", episodes: "25" }],
+        synopsis: "L'Abisso è un enorme pozzo misterioso pieno di reliquie e creature mortali. I Cave Raiders lo esplorano, ma chi scende troppo in profondità non può più tornare senza subire la 'Maledizione dell'Abisso'. Riko, figlia di una leggendaria Cave Raider scomparsa, riceve un messaggio dalla madre e decide di scendere nell'Abisso insieme a Reg, un misterioso robot. Un'avventura che nasconde orrori indicibili dietro un'estetica adorabile.",
+        structure: [
+            { name: "Stagione 1", episodes: "13 episodi" },
+            { name: "Film 3: Dawn of the Deep Soul", episodes: "1 film (2020)" },
+            { name: "Stagione 2: The Golden City", episodes: "12 episodi (2022)" }
+        ],
         links: {
             legal: [{ name: "Amazon", url: "https://primevideo.com" }],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=made+in+abyss+streaming" }]
@@ -1081,8 +1189,12 @@ const animeData = [
         studio: "Bones",
         status: "Finito",
         episodes: 37,
-        synopsis: "Shigeo Kageyama, detto Mob, ha poteri psichici incredibili.",
-        structure: [{ name: "Totale", episodes: "37" }],
+        synopsis: "Shigeo 'Mob' Kageyama è un ragazzo delle medie con poteri psichici devastanti, ma tutto ciò che vuole è essere normale e conquistare la ragazza che gli piace. Lavora part-time per Reigen Arataka, un 'esorcista' truffatore che in realtà non ha poteri. Quando le emozioni di Mob raggiungono il 100%, esplode in modi imprevedibili. Dello stesso autore di One Punch Man, combina azione spettacolare, umorismo e crescita personale.",
+        structure: [
+            { name: "Stagione 1", episodes: "12 episodi" },
+            { name: "Stagione 2", episodes: "13 episodi" },
+            { name: "Stagione 3", episodes: "12 episodi" }
+        ],
         links: {
             legal: [{ name: "Crunchyroll", url: "https://crunchyroll.com" }],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=mob+psycho+streaming" }]
@@ -1113,10 +1225,18 @@ const animeData = [
         year: 2016,
         img: "images/anime/my-hero-academia.jpg",
         studio: "Bones",
-        status: "In corso",
-        episodes: 150,
-        synopsis: "Izuku Midoriya eredita il superpotere più forte e si iscrive all'accademia per eroi.",
-        structure: [{ name: "Totale", episodes: "150" }],
+        status: "Finito",
+        episodes: 163,
+        synopsis: "In un mondo dove l'80% della popolazione ha superpoteri (Quirk), Izuku Midoriya è nato senza. Nonostante ciò, sogna di diventare un eroe come il suo idolo All Might. Quando incontra All Might in persona, questi gli passa il suo Quirk 'One For All', permettendogli di entrare alla U.A., la più prestigiosa accademia per eroi. Ma dovrà affrontare villain sempre più pericolosi e scoprire i segreti oscuri dietro il suo nuovo potere. Serie conclusa nel 2024.",
+        structure: [
+            { name: "Stagione 1", episodes: "13 episodi" },
+            { name: "Stagione 2", episodes: "25 episodi" },
+            { name: "Stagione 3", episodes: "25 episodi" },
+            { name: "Stagione 4", episodes: "25 episodi" },
+            { name: "Stagione 5", episodes: "25 episodi" },
+            { name: "Stagione 6", episodes: "25 episodi" },
+            { name: "Stagione 7 (Finale)", episodes: "25 episodi (2024)" }
+        ],
         links: {
             legal: [{ name: "Crunchyroll", url: "https://crunchyroll.com" }],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=my+hero+academia+streaming" }]
@@ -1369,9 +1489,12 @@ const animeData = [
         img: "images/anime/solo-leveling.jpg",
         studio: "A-1 Pictures",
         status: "In corso",
-        episodes: 12,
-        synopsis: "Il cacciatore più debole diventa il più forte dopo aver ottenuto poteri unici.",
-        structure: [{ name: "S1", episodes: "12" }],
+        episodes: 25,
+        synopsis: "In un mondo dove portali dimensionali hanno portato mostri sulla Terra, esistono i Cacciatori con poteri speciali. Sung Jinwoo è il 'Cacciatore più debole dell'umanità', rank E, che rischia la vita per pochi soldi. Dopo essere quasi morto in un dungeon segreto, riceve il Sistema, un potere unico che gli permette di 'livellare' come in un videogioco. Da zero a eroe, Jinwoo diventerà il più forte. Basato sul manhwa coreano fenomeno mondiale.",
+        structure: [
+            { name: "Stagione 1", episodes: "12 episodi (Inverno 2024)" },
+            { name: "Stagione 2: Arise from the Shadow", episodes: "13 episodi (Gennaio 2025)" }
+        ],
         links: {
             legal: [{ name: "Crunchyroll", url: "https://crunchyroll.com" }],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=solo+leveling+streaming" }]
@@ -1571,11 +1694,14 @@ const animeData = [
         genres: ["Action", "Historical", "Drama"],
         year: 2019,
         img: "images/anime/vinland-saga.jpg",
-        studio: "Wit Studio",
+        studio: "Wit/MAPPA",
         status: "Finito",
         episodes: 48,
-        synopsis: "Thorfinn cerca vendetta per la morte del padre in un'epopea vichinga.",
-        structure: [{ name: "Totale", episodes: "48" }],
+        synopsis: "Thorfinn è figlio di un grande guerriero vichingo che ha abbandonato la vita di violenza. Quando suo padre viene ucciso dal mercenario Askeladd, Thorfinn giura vendetta e paradossalmente si unisce alla banda del suo nemico per avere l'opportunità di sfidarlo a duello. Un'epopea vichinga brutale e filosofica che esplora temi di vendetta, redenzione e il vero significato di essere un guerriero. Basato sul manga premiato di Makoto Yukimura.",
+        structure: [
+            { name: "Stagione 1 (War Arc)", episodes: "24 episodi - Wit Studio" },
+            { name: "Stagione 2 (Slave Arc)", episodes: "24 episodi - MAPPA" }
+        ],
         links: {
             legal: [{ name: "Crunchyroll", url: "https://crunchyroll.com" }],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=vinland+saga+streaming" }]
