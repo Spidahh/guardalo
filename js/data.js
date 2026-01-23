@@ -790,23 +790,30 @@ const animeData = [
         }
     },
     {
-        title: "Fate/Zero",
-        rating: 7,
+        title: "Fate (Franchise Completo)",
+        rating: 9,
         top: false,
         genres: ["Action", "Fantasy", "Supernatural"],
-        year: 2011,
+        year: 2006,
         img: "images/anime/fate-zero.jpg",
-        studio: "ufotable",
-        status: "Finito",
-        episodes: 25,
-        synopsis: "La Quarta Guerra del Santo Graal. Sette maghi evocano Spiriti Eroici della storia per combattere fino alla morte e ottenere il Graal. Kiritsugu Emiya, il 'Mago Killer', viene assunto dalla famiglia Einzbern per vincere, ma il suo metodo spietato si scontra con l'ideale cavalleresco del suo Servant, Saber. Prequel di Fate/Stay Night, considerato il miglior punto di ingresso nel franchise Fate.",
+        studio: "ufotable / Studio DEEN",
+        status: "In corso",
+        episodes: 200,
+        synopsis: "Il franchise Fate ruota attorno alla Guerra del Santo Graal, un torneo mortale dove 7 Maghi evocano Spiriti Eroici (Servant) della storia e della leggenda per combattere e ottenere il Graal, che esaudisce qualsiasi desiderio. Fate/Stay Night segue Shirou Emiya, Fate/Zero è il prequel con suo padre Kiritsugu. Animazione spettacolare di ufotable per le produzioni più recenti.",
         structure: [
-            { name: "Stagione 1", episodes: "13 episodi" },
-            { name: "Stagione 2", episodes: "12 episodi" }
+            { name: "Fate/Stay Night (DEEN 2006)", episodes: "24 episodi" },
+            { name: "Fate/Zero", episodes: "25 episodi (2011-2012)" },
+            { name: "Fate/Stay Night: Unlimited Blade Works", episodes: "26 episodi (2014-2015)" },
+            { name: "Fate/Stay Night: Heaven's Feel", episodes: "3 film (2017-2020)" },
+            { name: "Fate/Apocrypha", episodes: "25 episodi (2017)" },
+            { name: "Fate/Extra Last Encore", episodes: "13 episodi (2018)" },
+            { name: "Fate/Grand Order: Babylonia", episodes: "21 episodi (2019-2020)" },
+            { name: "Fate/Grand Order: Camelot", episodes: "2 film (2020-2021)" },
+            { name: "Fate/strange Fake", episodes: "In corso (2023+)" }
         ],
         links: {
-            legal: [{ name: "Crunchyroll", url: "https://crunchyroll.com" }],
-            illegal: [{ name: "Cerca", url: "https://google.com/search?q=fate+zero+streaming" }]
+            legal: [{ name: "Crunchyroll", url: "https://crunchyroll.com" }, { name: "Netflix", url: "https://netflix.com" }],
+            illegal: [{ name: "Cerca", url: "https://google.com/search?q=fate+serie+ordine+streaming" }]
         }
     },
     {
