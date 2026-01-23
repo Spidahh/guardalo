@@ -790,28 +790,23 @@ const animeData = [
         }
     },
     {
-        title: "Fate (Franchise Completo)",
-        rating: 9,
+        title: "Fate/Zero",
+        rating: 7,
         top: false,
         genres: ["Action", "Fantasy", "Supernatural"],
-        year: 2006,
+        year: 2011,
         img: "images/anime/fate-zero.jpg",
-        studio: "ufotable/Studio DEEN",
-        status: "In corso",
-        episodes: 200,
-        synopsis: "Il franchise Fate ruota attorno alla Guerra del Santo Graal, un torneo mortale dove 7 Maghi evocano Spiriti Eroici (Servant) della storia e della leggenda per combattere e ottenere il Graal, che esaudisce qualsiasi desiderio. Fate/Stay Night segue Shirou Emiya, Fate/Zero è il prequel con suo padre Kiritsugu. Il franchise include decine di serie, film e spin-off ambientati nello stesso universo (Nasuverse). Animazione spettacolare di ufotable per le produzioni più recenti.",
+        studio: "ufotable",
+        status: "Finito",
+        episodes: 25,
+        synopsis: "La Quarta Guerra del Santo Graal. Sette maghi evocano Spiriti Eroici della storia per combattere fino alla morte e ottenere il Graal. Kiritsugu Emiya, il 'Mago Killer', viene assunto dalla famiglia Einzbern per vincere, ma il suo metodo spietato si scontra con l'ideale cavalleresco del suo Servant, Saber. Prequel di Fate/Stay Night, considerato il miglior punto di ingresso nel franchise Fate.",
         structure: [
-            { name: "Fate/Stay Night (DEEN 2006)", episodes: "24 episodi" },
-            { name: "Fate/Zero", episodes: "25 episodi (2011-2012)" },
-            { name: "Fate/Stay Night: UBW", episodes: "26 episodi (2014-2015)" },
-            { name: "Fate/Stay Night: Heaven's Feel", episodes: "3 film (2017-2020)" },
-            { name: "Fate/Apocrypha", episodes: "25 episodi (2017)" },
-            { name: "Fate/Grand Order", episodes: "Film + Serie (2016-2023)" },
-            { name: "Fate/strange Fake (in corso)", episodes: "2023+" }
+            { name: "Stagione 1", episodes: "13 episodi" },
+            { name: "Stagione 2", episodes: "12 episodi" }
         ],
         links: {
             legal: [{ name: "Crunchyroll", url: "https://crunchyroll.com" }],
-            illegal: [{ name: "Cerca", url: "https://google.com/search?q=fate+serie+ordine+streaming" }]
+            illegal: [{ name: "Cerca", url: "https://google.com/search?q=fate+zero+streaming" }]
         }
     },
     {
@@ -1467,7 +1462,24 @@ const animeData = [
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=samurai+champloo+streaming" }]
         }
     },
-        {
+    {
+        title: "Sentence to be hero",
+        rating: 8,
+        top: false,
+        genres: ["Comedy", "Parody", "Superhero"],
+        year: 2022,
+        img: "images/anime/to-be-hero.jpg",
+        studio: "Haoliners",
+        status: "Finito",
+        episodes: 12,
+        synopsis: "Parodia dei supereroi con umorismo assurdo e combattimenti esagerati.",
+        structure: [{ name: "Serie", episodes: "12" }],
+        links: {
+            legal: [],
+            illegal: [{ name: "Cerca", url: "https://google.com/search?q=sentence+to+be+hero+streaming" }]
+        }
+    },
+    {
         title: "Shangri-La Frontier",
         rating: 9,
         top: false,
@@ -1623,7 +1635,24 @@ const animeData = [
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=worlds+finest+assassin+streaming" }]
         }
     },
-        {
+    {
+        title: "To Be Hero X",
+        rating: 7,
+        top: false,
+        genres: ["Comedy", "Superhero", "Sci-Fi"],
+        year: 2023,
+        img: "images/anime/to-be-hero.jpg",
+        studio: "Haoliners",
+        status: "Finito",
+        episodes: 10,
+        synopsis: "Un uomo diventa un eroe ridicolo per salvare il mondo. Sequel/spin-off di Sentence to be hero.",
+        structure: [{ name: "Serie", episodes: "10" }],
+        links: {
+            legal: [],
+            illegal: [{ name: "Cerca", url: "https://google.com/search?q=to+be+hero+x+streaming" }]
+        }
+    },
+    {
         title: "Tokyo Revengers",
         rating: 7,
         top: false,
