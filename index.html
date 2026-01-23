@@ -23,7 +23,7 @@
             <a href="#" class="navbar-brand">
                 <i class="ri-play-circle-fill"></i>
                 GUARDALO
-                <span style="font-size:10px;color:#ff4757;margin-left:8px;">v4.0</span>
+                <span style="font-size:10px;color:#ff4757;margin-left:8px;">v5.0</span>
             </a>
             
             <div class="navbar-actions">
@@ -83,64 +83,80 @@
     <!-- DETAIL MODAL -->
     <div id="detail-modal" class="modal-overlay">
         <div class="modal">
-            <div class="modal-header">
+            <button class="modal-close" id="close-modal">
+                <i class="ri-close-line"></i>
+            </button>
+            
+            <div class="modal-layout">
+                <!-- COLONNA SINISTRA: POSTER -->
                 <div class="modal-poster">
                     <img src="" alt="" referrerpolicy="no-referrer" crossorigin="anonymous">
                 </div>
-                <button class="modal-close" id="close-modal">
-                    <i class="ri-close-line"></i>
-                </button>
-            </div>
-            
-            <div class="modal-body">
-                <h2 class="modal-title"></h2>
                 
-                <div class="modal-info">
-                    <div class="modal-info-item">
-                        <span class="modal-info-label">Voto</span>
-                        <span class="modal-info-value modal-rating"></span>
+                <!-- COLONNA DESTRA: INFO -->
+                <div class="modal-content">
+                    <h2 class="modal-title"></h2>
+                    
+                    <!-- RATING GRANDE -->
+                    <div class="modal-rating-box">
+                        <i class="ri-star-fill"></i>
+                        <span class="modal-rating"></span>
+                        <span class="rating-max">/10</span>
                     </div>
-                    <div class="modal-info-item">
-                        <span class="modal-info-label">Anno</span>
-                        <span class="modal-info-value modal-year"></span>
+                    
+                    <!-- INFO PRINCIPALI -->
+                    <div class="modal-meta">
+                        <div class="meta-item">
+                            <i class="ri-calendar-line"></i>
+                            <span class="modal-year"></span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="ri-play-circle-line"></i>
+                            <span class="modal-episodes"></span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="ri-building-line"></i>
+                            <span class="modal-studio"></span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="ri-checkbox-circle-line"></i>
+                            <span class="modal-status"></span>
+                        </div>
                     </div>
-                    <div class="modal-info-item">
-                        <span class="modal-info-label">Episodi</span>
-                        <span class="modal-info-value modal-episodes"></span>
+                    
+                    <!-- GENERI -->
+                    <div class="modal-tags"></div>
+                    
+                    <!-- TRAMA -->
+                    <div class="modal-section">
+                        <h4>Trama</h4>
+                        <p class="modal-synopsis"></p>
                     </div>
-                    <div class="modal-info-item">
-                        <span class="modal-info-label">Studio</span>
-                        <span class="modal-info-value modal-studio"></span>
+                    
+                    <!-- STRUTTURA -->
+                    <div class="modal-section">
+                        <h4>Struttura</h4>
+                        <div class="modal-structure"></div>
                     </div>
-                    <div class="modal-info-item">
-                        <span class="modal-info-label">Stato</span>
-                        <span class="modal-info-value modal-status"></span>
+                    
+                    <!-- LINK STREAMING -->
+                    <div class="modal-section">
+                        <h4>Dove Guardarlo</h4>
+                        <div class="modal-links">
+                            <div class="legal-links"></div>
+                            <div class="illegal-links"></div>
+                        </div>
                     </div>
-                </div>
-                
-                <p class="modal-synopsis"></p>
-                
-                <div class="modal-tags"></div>
-                <div class="modal-structure"></div>
-                
-                <div class="modal-links">
-                    <div class="links-section">
-                        <span class="links-title">Dove guardarlo</span>
-                        <div class="legal-links"></div>
+                    
+                    <!-- AZIONI -->
+                    <div class="modal-actions">
+                        <button id="btn-watched" class="action-btn btn-watched">
+                            <i class="ri-check-line"></i> Visto
+                        </button>
+                        <button id="btn-towatch" class="action-btn btn-towatch">
+                            <i class="ri-bookmark-line"></i> Da vedere
+                        </button>
                     </div>
-                    <div class="links-section">
-                        <span class="links-title">Streaming</span>
-                        <div class="illegal-links"></div>
-                    </div>
-                </div>
-                
-                <div class="modal-actions">
-                    <button id="btn-watched" class="action-btn">
-                        <i class="ri-check-line"></i> Visto
-                    </button>
-                    <button id="btn-towatch" class="action-btn">
-                        <i class="ri-time-line"></i> Da vedere
-                    </button>
                 </div>
             </div>
         </div>

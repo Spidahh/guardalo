@@ -295,7 +295,7 @@ class GuardaloApp {
         
         modal.querySelector('.modal-title').textContent = anime.title;
         modal.querySelector('.modal-poster img').src = anime.img;
-        modal.querySelector('.modal-rating').innerHTML = `<i class="ri-star-fill"></i> ${anime.rating}`;
+        modal.querySelector('.modal-rating').textContent = anime.rating;
         modal.querySelector('.modal-year').textContent = anime.year;
         modal.querySelector('.modal-episodes').textContent = `${anime.episodes} episodi`;
         modal.querySelector('.modal-studio').textContent = anime.studio;
