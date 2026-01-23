@@ -1267,7 +1267,7 @@ const animeData = [
         top: false,
         genres: ["Action", "Superhero", "Crime"],
         year: 2025,
-        img: "images/anime/my-hero-academia.jpg",
+        img: "images/anime/my-hero-academia-vigi.jpg",
         studio: "Bones",
         status: "Annunciato",
         episodes: 12,
