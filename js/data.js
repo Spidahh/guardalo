@@ -828,7 +828,7 @@ const animeData = [
     },
     {
         title: "Frieren",
-        rating: 9,
+        rating: 7,
         top: false,
         genres: ["Adventure", "Fantasy", "Drama"],
         year: 2023,
@@ -1326,7 +1326,7 @@ const animeData = [
     },
     {
         title: "PLUTO",
-        rating: 9,
+        rating: 8,
         top: false,
         genres: ["Mystery", "Sci-Fi", "Psychological"],
         year: 2023,
