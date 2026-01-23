@@ -771,37 +771,47 @@ const animeData = [
         }
     },
     {
-        title: "Failure Frame",
+        title: "Failure Frame: I Became the Strongest",
         rating: 8,
         top: false,
-        genres: ["Fantasy", "Isekai", "Action"],
+        genres: ["Fantasy", "Isekai", "Dark Fantasy"],
         year: 2024,
         img: "images/anime/failure-frame.jpg",
         studio: "Seven Arcs",
-        status: "In corso",
+        status: "Finito",
         episodes: 12,
-        synopsis: "Un ragazzo tradito diventa overpowered in un altro mondo.",
-        structure: [{ name: "S1", episodes: "12" }],
+        synopsis: "Touka Mimori viene evocato in un altro mondo insieme alla sua classe, ma la dea Vicius lo considera un 'fallimento' e lo getta nell'abisso per morire. Sopravvive grazie alle sue abilità considerate inutili - 'Paralisi', 'Veleno' e 'Putrefazione' - che in realtà sono devastanti. Giura vendetta contro la dea e i compagni che lo hanno abbandonato. Un isekai dark revenge con protagonista spietato.",
+        structure: [
+            { name: "Stagione 1", episodes: "12 episodi (Estate 2024)" }
+        ],
         links: {
             legal: [],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=failure+frame+streaming" }]
         }
     },
     {
-        title: "Fate/Zero",
-        rating: 7,
+        title: "Fate (Franchise Completo)",
+        rating: 9,
         top: false,
         genres: ["Action", "Fantasy", "Supernatural"],
-        year: 2011,
+        year: 2006,
         img: "images/anime/fate-zero.jpg",
-        studio: "ufotable",
-        status: "Finito",
-        episodes: 25,
-        synopsis: "Maghi e servi storici combattono per il Santo Graal.",
-        structure: [{ name: "S1+S2", episodes: "25" }],
+        studio: "ufotable/Studio DEEN",
+        status: "In corso",
+        episodes: 200,
+        synopsis: "Il franchise Fate ruota attorno alla Guerra del Santo Graal, un torneo mortale dove 7 Maghi evocano Spiriti Eroici (Servant) della storia e della leggenda per combattere e ottenere il Graal, che esaudisce qualsiasi desiderio. Fate/Stay Night segue Shirou Emiya, Fate/Zero è il prequel con suo padre Kiritsugu. Il franchise include decine di serie, film e spin-off ambientati nello stesso universo (Nasuverse). Animazione spettacolare di ufotable per le produzioni più recenti.",
+        structure: [
+            { name: "Fate/Stay Night (DEEN 2006)", episodes: "24 episodi" },
+            { name: "Fate/Zero", episodes: "25 episodi (2011-2012)" },
+            { name: "Fate/Stay Night: UBW", episodes: "26 episodi (2014-2015)" },
+            { name: "Fate/Stay Night: Heaven's Feel", episodes: "3 film (2017-2020)" },
+            { name: "Fate/Apocrypha", episodes: "25 episodi (2017)" },
+            { name: "Fate/Grand Order", episodes: "Film + Serie (2016-2023)" },
+            { name: "Fate/strange Fake (in corso)", episodes: "2023+" }
+        ],
         links: {
-            legal: [],
-            illegal: [{ name: "Cerca", url: "https://google.com/search?q=fate+zero+streaming" }]
+            legal: [{ name: "Crunchyroll", url: "https://crunchyroll.com" }],
+            illegal: [{ name: "Cerca", url: "https://google.com/search?q=fate+serie+ordine+streaming" }]
         }
     },
     {
@@ -863,13 +873,15 @@ const animeData = [
         rating: 8,
         top: false,
         genres: ["Action", "Fantasy", "Supernatural"],
-        year: 2024,
+        year: 2025,
         img: "images/anime/gachiakuta.jpg",
-        studio: "Satelight",
-        status: "In corso",
+        studio: "Bones",
+        status: "Annunciato",
         episodes: 12,
-        synopsis: "In un mondo dove i rifiuti diventano mostri, un ragazzo cerca vendetta.",
-        structure: [{ name: "S1", episodes: "12" }],
+        synopsis: "Rudo vive nella 'Zona Slum' dove i rifiuti della città superiore piovono dall'alto. Accusato ingiustamente di omicidio, viene gettato nell'Abisso dove i rifiuti prendono vita come mostri. Con il potere di trasformare la spazzatura in armi, Rudo giura vendetta contro chi lo ha incastrato. Manga di successo paragonato a Chainsaw Man per il suo protagonista rabbioso e il design unico. Anime annunciato per 2025.",
+        structure: [
+            { name: "Stagione 1", episodes: "2025" }
+        ],
         links: {
             legal: [],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=gachiakuta+streaming" }]
@@ -1006,10 +1018,13 @@ const animeData = [
         year: 2023,
         img: "images/anime/heavenly-delusion.jpg",
         studio: "Production I.G",
-        status: "Finito",
+        status: "In corso",
         episodes: 13,
-        synopsis: "In un Giappone post-apocalittico, persone cercano il paradiso.",
-        structure: [{ name: "Serie", episodes: "13" }],
+        synopsis: "Tengoku Daimakyo (Heavenly Delusion) alterna due storie parallele. In una struttura isolata, bambini con poteri speciali vivono ignari del mondo esterno. Nel Giappone post-apocalittico devastato, Maru e Kiruko cercano il 'Paradiso' - un luogo sicuro. Le due trame sono collegate da misteri, mostri mutanti e segreti oscuri. Prodotto da Production I.G con un'atmosfera unica tra Promised Neverland e Nausicaa. Stagione 2 annunciata.",
+        structure: [
+            { name: "Stagione 1", episodes: "13 episodi" },
+            { name: "Stagione 2 (annunciata)", episodes: "TBA" }
+        ],
         links: {
             legal: [],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=heavenly+delusion+streaming" }]
@@ -1146,16 +1161,18 @@ const animeData = [
         rating: 8,
         top: false,
         genres: ["Sci-Fi", "Action", "Thriller"],
-        year: 2024,
-        img: "images/anime/lazarus.jpg",
+        year: 2025,
+        img: "images/anime/cowboy-bebop.jpg",
         studio: "MAPPA",
-        status: "In corso",
-        episodes: 12,
-        synopsis: "Un team di scienziati combatte un virus creato da un Nobel.",
-        structure: [{ name: "S1", episodes: "12" }],
+        status: "Annunciato",
+        episodes: 13,
+        synopsis: "Dal creatore di Cowboy Bebop, Shinichiro Watanabe. Ambientato nel 2052, tre anni dopo che un farmaco miracoloso ha causato dipendenza di massa e morte. Un agente deve fermare la diffusione della droga mentre affronta i fantasmi del suo passato. Annunciato come serie originale Adult Swim/MAPPA per il 2025. Stile action/noir con influenze cyberpunk.",
+        structure: [
+            { name: "Stagione 1", episodes: "13 episodi (2025)" }
+        ],
         links: {
-            legal: [],
-            illegal: [{ name: "Cerca", url: "https://google.com/search?q=lazarus+anime+streaming" }]
+            legal: [{ name: "Adult Swim", url: "https://adultswim.com" }],
+            illegal: [{ name: "Cerca", url: "https://google.com/search?q=lazarus+anime+2025" }]
         }
     },
     {
@@ -1247,16 +1264,18 @@ const animeData = [
         rating: 7,
         top: false,
         genres: ["Action", "Superhero", "Crime"],
-        year: 2023,
+        year: 2025,
         img: "images/anime/my-hero-academia.jpg",
         studio: "Bones",
-        status: "Finito",
+        status: "Annunciato",
         episodes: 12,
-        synopsis: "Vigilantes combattono il crimine al di fuori del sistema hero.",
-        structure: [{ name: "Serie", episodes: "12" }],
+        synopsis: "Spin-off di My Hero Academia ambientato anni prima della serie principale. Koichi Haimawari è un ragazzo con un Quirk debole che ammira gli eroi ma non può diventarlo. Come 'The Crawler', agisce come vigilante illegale insieme a Pop Step e Knuckleduster, affrontando criminali nelle strade. Approfondisce il passato di Eraserhead e introduce villain importanti. Anime annunciato per Aprile 2025.",
+        structure: [
+            { name: "Stagione 1", episodes: "Aprile 2025" }
+        ],
         links: {
             legal: [],
-            illegal: [{ name: "Cerca", url: "https://google.com/search?q=my+hero+academia+vigilantes+streaming" }]
+            illegal: [{ name: "Cerca", url: "https://google.com/search?q=my+hero+academia+vigilantes+anime+2025" }]
         }
     },
     {
@@ -1312,19 +1331,21 @@ const animeData = [
     },
     {
         title: "PLUTO",
-        rating: 8,
+        rating: 9,
         top: false,
         genres: ["Mystery", "Sci-Fi", "Psychological"],
         year: 2023,
-        img: "images/anime/pluto.jpg",
-        studio: "Studio M2",
+        img: "images/anime/ghost-in-the-shell.jpg",
+        studio: "Studio M2/Genco",
         status: "Finito",
         episodes: 8,
-        synopsis: "Un detective indaga su omicidi di robot avanzati.",
-        structure: [{ name: "Serie", episodes: "8" }],
+        synopsis: "Adattamento del manga di Naoki Urasawa (Monster, 20th Century Boys) ispirato ad Astro Boy di Osamu Tezuka. Il detective robot Gesicht indaga su una serie di omicidi che colpiscono i robot più avanzati del mondo e gli umani che li hanno creati. Qualcuno sta uccidendo sistematicamente i 7 robot più potenti della Terra, incluso Atom (Astro Boy). Un thriller filosofico sulla natura dell'umanità e dell'odio.",
+        structure: [
+            { name: "Serie Completa", episodes: "8 episodi (65 min ciascuno)" }
+        ],
         links: {
-            legal: [],
-            illegal: [{ name: "Cerca", url: "https://google.com/search?q=pluto+anime+streaming" }]
+            legal: [{ name: "Netflix", url: "https://netflix.com" }],
+            illegal: [{ name: "Cerca", url: "https://google.com/search?q=pluto+anime+netflix" }]
         }
     },
     {
@@ -1446,24 +1467,7 @@ const animeData = [
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=samurai+champloo+streaming" }]
         }
     },
-    {
-        title: "To Be Hero",
-        rating: 8,
-        top: false,
-        genres: ["Comedy", "Parody", "Superhero"],
-        year: 2022,
-        img: "images/anime/to-be-hero.jpg",
-        studio: "Haoliners",
-        status: "Finito",
-        episodes: 12,
-        synopsis: "Parodia dei supereroi con umorismo assurdo.",
-        structure: [{ name: "Serie", episodes: "12" }],
-        links: {
-            legal: [],
-            illegal: [{ name: "Cerca", url: "https://google.com/search?q=sentence+to+be+hero+streaming" }]
-        }
-    },
-    {
+        {
         title: "Shangri-La Frontier",
         rating: 9,
         top: false,
@@ -1619,24 +1623,7 @@ const animeData = [
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=worlds+finest+assassin+streaming" }]
         }
     },
-    {
-        title: "To Be Hero X",
-        rating: 7,
-        top: false,
-        genres: ["Comedy", "Superhero", "Sci-Fi"],
-        year: 2023,
-        img: "images/anime/to-be-hero.jpg",
-        studio: "Haoliners",
-        status: "Finito",
-        episodes: 10,
-        synopsis: "Un uomo diventa un eroe ridicolo per salvare il mondo.",
-        structure: [{ name: "Serie", episodes: "10" }],
-        links: {
-            legal: [],
-            illegal: [{ name: "Cerca", url: "https://google.com/search?q=to+be+hero+x+streaming" }]
-        }
-    },
-    {
+        {
         title: "Tokyo Revengers",
         rating: 7,
         top: false,
@@ -1713,12 +1700,15 @@ const animeData = [
         top: false,
         genres: ["Fantasy", "Adventure", "Magic"],
         year: 2024,
-        img: "images/anime/wistoria.jpg",
-        studio: "Actas",
-        status: "In corso",
+        img: "images/anime/frieren.jpg",
+        studio: "Bandai Namco/Actas",
+        status: "Finito",
         episodes: 12,
-        synopsis: "Un ragazzo senza magia cerca di diventare mago in un'accademia.",
-        structure: [{ name: "S1", episodes: "12" }],
+        synopsis: "Will Serfort è uno studente dell'Accademia di Magia Regarden, ma ha un problema: non può usare la magia. In un mondo dove i maghi dominano, lui compensa con abilità di combattimento straordinarie. Per mantenere una promessa fatta da bambino, deve raggiungere la cima della Magia Tower. Dal creatore di DanMachi (Fujino Omori) con disegni di Ookuma. Stagione 2 annunciata per 2025.",
+        structure: [
+            { name: "Stagione 1", episodes: "12 episodi (Estate 2024)" },
+            { name: "Stagione 2 (annunciata)", episodes: "2025" }
+        ],
         links: {
             legal: [],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=wistoria+wand+and+sword+streaming" }]
