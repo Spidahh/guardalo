@@ -791,7 +791,7 @@ const animeData = [
     },
     {
         title: "Fate (Franchise Completo)",
-        rating: 9,
+        rating: 7,
         top: false,
         genres: ["Action", "Fantasy", "Supernatural"],
         year: 2006,
@@ -1474,13 +1474,13 @@ const animeData = [
         rating: 8,
         top: false,
         genres: ["Comedy", "Parody", "Superhero"],
-        year: 2022,
+        year: 2026,
         img: "images/anime/to-be-hero.jpg",
         studio: "Haoliners",
-        status: "Finito",
+        status: "Annunciato",
         episodes: 12,
-        synopsis: "Parodia dei supereroi con umorismo assurdo e combattimenti esagerati.",
-        structure: [{ name: "Serie", episodes: "12" }],
+        synopsis: "Sequel di To Be Hero X. Serie comica sui supereroi con umorismo assurdo e azione esagerata. Annunciato per il 2026.",
+        structure: [{ name: "Serie", episodes: "TBA 2026" }],
         links: {
             legal: [],
             illegal: [{ name: "Cerca", url: "https://google.com/search?q=sentence+to+be+hero+streaming" }]
@@ -1652,7 +1652,7 @@ const animeData = [
         studio: "Haoliners",
         status: "Finito",
         episodes: 10,
-        synopsis: "Un uomo diventa un eroe ridicolo per salvare il mondo. Sequel/spin-off di Sentence to be hero.",
+        synopsis: "Un uomo diventa un eroe ridicolo per salvare il mondo. Serie comica sui supereroi con umorismo assurdo.",
         structure: [{ name: "Serie", episodes: "10" }],
         links: {
             legal: [],
