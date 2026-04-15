@@ -3,159 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GUARDALO - Anime Consigliati</title>
-    <meta name="description" content="I migliori anime consigliati personalmente. Trova cosa guardare stasera!">
-    
-    <!-- Fonts -->
+    <title>GUARDALO - La mia lista anime</title>
+    <meta name="description" content="Anime consigliati personalmente con voti, trame e dove guardarli.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    
-    <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+
     <!-- NAVBAR -->
     <nav class="navbar">
-        <div class="navbar-content">
-            <a href="#" class="navbar-brand">
-                <i class="ri-play-circle-fill"></i>
-                GUARDALO
-                <span style="font-size:10px;color:#ff4757;margin-left:8px;">v6.7</span>
-            </a>
-            
-            <div class="navbar-actions">
-                <button id="loginBtn" class="btn">
-                    <i class="ri-user-line"></i>
-                    Accedi
-                </button>
-                <button id="logoutBtn" class="btn" style="display: none;">
-                    <i class="ri-logout-box-line"></i>
-                    Esci
-                </button>
+        <div class="navbar-inner">
+            <span class="brand"><i class="ri-play-circle-fill"></i> GUARDALO</span>
+            <div class="nav-right">
                 <span id="userInfo"></span>
+                <button id="loginBtn" class="btn-nav"><i class="ri-user-line"></i> Accedi</button>
+                <button id="logoutBtn" class="btn-nav" style="display:none"><i class="ri-logout-box-line"></i> Esci</button>
             </div>
         </div>
     </nav>
 
-    <!-- MAIN CONTENT -->
-    <div class="main-content">
-        <!-- SEARCH -->
-        <div class="search-container">
-            <input type="text" id="searchInput" class="search-input" placeholder="Cerca anime...">
-        </div>
+    <div class="page">
 
         <!-- TOOLBAR -->
         <div class="toolbar">
-            <div class="toolbar-left">
-                <div id="genreChips"></div>
+            <div class="search-box">
+                <i class="ri-search-line"></i>
+                <input id="searchInput" type="text" placeholder="Cerca anime...">
+                <button id="clearSearch" class="clear-btn" title="Cancella"><i class="ri-close-line"></i></button>
             </div>
-            
             <div class="toolbar-right">
-                <select id="statusFilter" class="dropdown-select">
+                <select id="statusFilter" class="sel">
                     <option value="all">Tutti</option>
                     <option value="watched">Visti</option>
                     <option value="towatch">Da vedere</option>
-                    <option value="top">Top</option>
+                    <option value="top">Solo Top</option>
                 </select>
-                
-                <select id="sortSelect" class="dropdown-select">
-                    <option value="rating">Voto</option>
-                    <option value="title">Nome</option>
-                    <option value="year">Anno</option>
+                <select id="sortSelect" class="sel">
+                    <option value="rating">Voto ↓</option>
+                    <option value="title">A → Z</option>
+                    <option value="year">Anno ↓</option>
                 </select>
-                
-                <button id="clearFilters" class="btn">
+                <button id="clearFilters" class="btn-reset" title="Azzera filtri">
                     <i class="ri-refresh-line"></i>
-                    Pulisci
                 </button>
             </div>
         </div>
 
-        <!-- ANIME GRID -->
-        <div id="animeGrid" class="anime-grid">
-            <!-- Populated by JS -->
+        <!-- FILTRO GENERI -->
+        <div class="genres-row">
+            <div id="genreChips" class="genres-wrap"></div>
         </div>
+
+        <!-- CONTATORE -->
+        <div class="count-row">
+            <span id="results-count"></span>
+        </div>
+
+        <!-- GRIGLIA -->
+        <div id="animeGrid" class="grid"></div>
     </div>
 
-    <!-- DETAIL MODAL -->
-    <div id="detail-modal" class="modal-overlay">
+    <!-- MODAL DETTAGLIO -->
+    <div id="detail-modal" class="overlay">
         <div class="modal">
-            <button class="modal-close" id="close-modal">
-                <i class="ri-close-line"></i>
-            </button>
-            
-            <div class="modal-layout">
-                <!-- COLONNA SINISTRA: POSTER -->
-                <div class="modal-poster">
-                    <img src="" alt="" referrerpolicy="no-referrer" crossorigin="anonymous">
+            <button class="modal-x" id="close-modal"><i class="ri-close-line"></i></button>
+            <div class="modal-inner">
+
+                <!-- POSTER -->
+                <div class="modal-left">
+                    <img class="modal-img" src="" alt="">
+                    <div class="modal-actions">
+                        <button id="btn-watched" class="act-btn act-watch">
+                            <i class="ri-check-double-line"></i> Visto
+                        </button>
+                        <button id="btn-towatch" class="act-btn act-later">
+                            <i class="ri-bookmark-line"></i> Da vedere
+                        </button>
+                    </div>
                 </div>
-                
-                <!-- COLONNA DESTRA: INFO -->
-                <div class="modal-content">
+
+                <!-- INFO -->
+                <div class="modal-right">
                     <h2 class="modal-title"></h2>
-                    
-                    <!-- RATING GRANDE -->
-                    <div class="modal-rating-box">
-                        <i class="ri-star-fill"></i>
-                        <span class="modal-rating"></span>
-                        <span class="rating-max">/10</span>
+
+                    <div class="modal-score">
+                        <span class="score-num modal-rating"></span>
+                        <span class="score-max">/10</span>
+                        <div class="score-bar"><div class="score-fill" id="score-fill"></div></div>
                     </div>
-                    
-                    <!-- INFO PRINCIPALI -->
-                    <div class="modal-meta">
-                        <div class="meta-item">
-                            <i class="ri-calendar-line"></i>
-                            <span class="modal-year"></span>
-                        </div>
-                        <div class="meta-item">
-                            <i class="ri-play-circle-line"></i>
-                            <span class="modal-episodes"></span>
-                        </div>
-                        <div class="meta-item">
-                            <i class="ri-building-line"></i>
-                            <span class="modal-studio"></span>
-                        </div>
-                        <div class="meta-item">
-                            <i class="ri-checkbox-circle-line"></i>
-                            <span class="modal-status"></span>
-                        </div>
+
+                    <div class="modal-chips modal-tags"></div>
+
+                    <div class="info-grid">
+                        <div class="info-item"><span class="info-label">Anno</span><span class="modal-year info-val"></span></div>
+                        <div class="info-item"><span class="info-label">Episodi</span><span class="modal-episodes info-val"></span></div>
+                        <div class="info-item"><span class="info-label">Studio</span><span class="modal-studio info-val"></span></div>
+                        <div class="info-item"><span class="info-label">Stato</span><span class="modal-status info-val"></span></div>
                     </div>
-                    
-                    <!-- GENERI -->
-                    <div class="modal-tags"></div>
-                    
-                    <!-- TRAMA -->
+
                     <div class="modal-section">
-                        <h4>Trama</h4>
+                        <div class="section-title">Trama</div>
                         <p class="modal-synopsis"></p>
                     </div>
-                    
-                    <!-- STRUTTURA -->
+
                     <div class="modal-section">
-                        <h4>Struttura</h4>
+                        <div class="section-title">Struttura</div>
                         <div class="modal-structure"></div>
                     </div>
-                    
-                    <!-- LINK STREAMING -->
+
                     <div class="modal-section">
-                        <h4>Dove Guardarlo</h4>
-                        <div class="modal-links">
+                        <div class="section-title">Dove guardarlo</div>
+                        <div class="links-row">
                             <div class="legal-links"></div>
                             <div class="illegal-links"></div>
                         </div>
-                    </div>
-                    
-                    <!-- AZIONI -->
-                    <div class="modal-actions">
-                        <button id="btn-watched" class="action-btn btn-watched">
-                            <i class="ri-check-line"></i> Visto
-                        </button>
-                        <button id="btn-towatch" class="action-btn btn-towatch">
-                            <i class="ri-bookmark-line"></i> Da vedere
-                        </button>
                     </div>
                 </div>
             </div>
@@ -163,28 +125,26 @@
     </div>
 
     <!-- LOGIN MODAL -->
-    <div id="login-modal" class="modal-overlay">
-        <div class="modal">
-            <div class="login-content">
-                <button class="modal-close" id="close-login">
-                    <i class="ri-close-line"></i>
-                </button>
-                <h2 class="login-title">Accedi a GUARDALO</h2>
-                <p class="login-description">Salva i tuoi anime preferiti e tieni traccia di cosa hai visto</p>
-                <button id="google-login" class="google-login-btn">
-                    <i class="ri-google-fill"></i>
-                    Continua con Google
+    <div id="login-modal" class="overlay">
+        <div class="modal modal-sm">
+            <button class="modal-x" id="close-login"><i class="ri-close-line"></i></button>
+            <div class="login-body">
+                <i class="ri-play-circle-fill login-icon"></i>
+                <h2>Accedi a GUARDALO</h2>
+                <p>Sincronizza la tua lista su tutti i dispositivi</p>
+                <button id="google-login" class="google-btn">
+                    <i class="ri-google-fill"></i> Continua con Google
                 </button>
             </div>
         </div>
     </div>
 
-    <!-- Firebase SDK -->
+    <!-- TOAST -->
+    <div id="toast-container"></div>
+
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
-    
-    <!-- App Scripts -->
     <script src="js/firebase-config.js"></script>
     <script src="js/data.js"></script>
     <script src="js/app.js"></script>
