@@ -1,0 +1,10 @@
+# Chiave API TMDB — NON committare
+tools/tmdb.key
+
+# Node
+node_modules/
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,6 +1,4 @@
-// ⚠️  FILE GENERATO AUTOMATICAMENTE da tools/guardalo.mjs — NON modificare a mano.
-// Fonte dei dati: data.json  ·  Per aggiungere titoli:  node tools/guardalo.mjs add "Titolo"
-const animeData = [
+[
   {
     "id": "attack-on-titan",
     "title": "Attack on Titan",
@@ -3877,4 +3875,4 @@ const animeData = [
       ]
     }
   }
-];
+]

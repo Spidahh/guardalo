@@ -2,20 +2,56 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GUARDALO - La mia lista anime</title>
-    <meta name="description" content="Anime consigliati personalmente con voti, trame e dove guardarli.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>GUARDALO — Cose da vedere</title>
+    <meta name="description" content="La mia lista personale di anime e serie consigliati, con voti, trame e dove guardarli.">
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#0b0b0f">
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icon.svg">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="GUARDALO">
+
+    <!-- Social / Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="GUARDALO — Cose da vedere">
+    <meta property="og:description" content="Anime e serie consigliati personalmente: voti, trame e dove guardarli.">
+    <meta property="og:image" content="icon.svg">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <!-- Applica il tema salvato prima del render (niente flash) -->
+    <script>
+        try {
+            document.body.dataset.theme = localStorage.getItem('guardalo_theme') || 'dark';
+        } catch (e) { document.body.dataset.theme = 'dark'; }
+    </script>
+
     <!-- NAVBAR -->
     <nav class="navbar">
         <div class="navbar-inner">
-            <span class="brand"><i class="ri-play-circle-fill"></i> GUARDALO</span>
+            <span class="brand"><i class="ri-play-circle-fill"></i> GUARDALO <span class="brand-dot"></span></span>
+            <div class="nav-search">
+                <div class="search-box">
+                    <i class="ri-search-line"></i>
+                    <input id="searchInput" type="text" placeholder="Cerca un titolo...">
+                    <button id="clearSearch" class="clear-btn" title="Cancella"><i class="ri-close-line"></i></button>
+                </div>
+            </div>
             <div class="nav-right">
+                <button id="themeToggle" class="btn-nav btn-icon" title="Cambia tema" aria-label="Cambia tema">
+                    <i class="ri-moon-line"></i>
+                </button>
                 <span id="userInfo"></span>
                 <button id="loginBtn" class="btn-nav"><i class="ri-user-line"></i> Accedi</button>
                 <button id="logoutBtn" class="btn-nav" style="display:none"><i class="ri-logout-box-line"></i> Esci</button>
@@ -25,19 +61,41 @@
 
     <div class="page">
 
-        <!-- TOOLBAR -->
-        <div class="toolbar">
-            <div class="search-box">
-                <i class="ri-search-line"></i>
-                <input id="searchInput" type="text" placeholder="Cerca anime...">
-                <button id="clearSearch" class="clear-btn" title="Cancella"><i class="ri-close-line"></i></button>
+        <!-- TAB CATEGORIA -->
+        <div class="cat-tabs" id="catTabs">
+            <button class="cat-tab active" data-cat="animazione">
+                <i class="ri-film-fill"></i> Animazione
+                <span class="cat-count" id="count-animazione"></span>
+            </button>
+            <button class="cat-tab" data-cat="live">
+                <i class="ri-tv-2-fill"></i> Serie TV
+                <span class="cat-count" id="count-live"></span>
+            </button>
+        </div>
+
+        <!-- GENERI (griglia sempre visibile, multi-selezione) -->
+        <div class="genres-section">
+            <div class="genres-head">
+                <span class="genres-title"><i class="ri-grid-fill"></i> Sfoglia per genere</span>
+                <button id="genreClear" class="genres-clear">Mostra tutti</button>
             </div>
-            <div class="toolbar-right">
+            <div id="genreChips" class="genre-grid"></div>
+        </div>
+
+        <!-- HEADER DI SEZIONE + FILTRI -->
+        <div class="results-head">
+            <div class="results-left">
+                <h2 class="results-title" id="results-title">I miei consigli</h2>
+                <div class="count-row"><span id="results-count"></span></div>
+            </div>
+            <div class="results-controls">
+                <button id="viewToggle" class="btn-reset" title="Vista elenco" aria-label="Cambia vista" aria-pressed="false">
+                    <i class="ri-list-unordered"></i>
+                </button>
                 <select id="statusFilter" class="sel">
                     <option value="all">Tutti</option>
                     <option value="watched">Visti</option>
                     <option value="towatch">Da vedere</option>
-                    <option value="top">Solo Top</option>
                 </select>
                 <select id="sortSelect" class="sel">
                     <option value="rating">Voto ↓</option>
@@ -48,16 +106,6 @@
                     <i class="ri-refresh-line"></i>
                 </button>
             </div>
-        </div>
-
-        <!-- FILTRO GENERI -->
-        <div class="genres-row">
-            <div id="genreChips" class="genres-wrap"></div>
-        </div>
-
-        <!-- CONTATORE -->
-        <div class="count-row">
-            <span id="results-count"></span>
         </div>
 
         <!-- GRIGLIA -->
@@ -148,5 +196,15 @@
     <script src="js/firebase-config.js"></script>
     <script src="js/data.js"></script>
     <script src="js/app.js"></script>
+
+    <!-- In sviluppo: assicura che il vecchio service worker in cache si disattivi
+         e che si veda sempre l'ultima versione (la PWA tornerà prima del lancio). -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(regs => {
+                if (regs.length) navigator.serviceWorker.register('sw.js').catch(() => {});
+            });
+        }
+    </script>
 </body>
 </html>

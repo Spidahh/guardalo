@@ -1,0 +1,14 @@
+{
+  "name": "guardalo",
+  "version": "9.0.0",
+  "description": "GUARDALO — lista personale di anime/serie consigliati, con pipeline automatica per aggiungere titoli da AniList.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "add": "node tools/guardalo.mjs add",
+    "add-tv": "node tools/guardalo.mjs add-tv",
+    "build": "node tools/guardalo.mjs build",
+    "validate": "node tools/guardalo.mjs validate",
+    "migrate": "node tools/guardalo.mjs migrate"
+  }
+}
