@@ -2,16 +2,16 @@
 // Generi principali (in italiano) con accorpamento dei generi grezzi rari.
 // Un titolo appartiene al gruppo se ha almeno uno dei generi "raw".
 const GENRE_GROUPS = [
-    { name: 'Azione',         icon: 'ri-sword-line',        raw: ['Action', 'Martial Arts', 'Military', 'Western'] },
-    { name: 'Avventura',      icon: 'ri-compass-3-line',    raw: ['Adventure'] },
-    { name: 'Fantasy',        icon: 'ri-magic-line',        raw: ['Fantasy'] },
-    { name: 'Fantascienza',   icon: 'ri-rocket-line',       raw: ['Sci-Fi', 'Cyberpunk', 'Post-apocalyptic', 'Time Travel', 'Game'] },
-    { name: 'Drammatico',     icon: 'ri-emotion-sad-line',  raw: ['Drama'] },
+    { name: 'Azione',         icon: 'ri-sword-line',        raw: ['Action', 'Martial Arts', 'Military', 'Western', 'Action & Adventure', 'War & Politics', 'Guerra'] },
+    { name: 'Avventura',      icon: 'ri-compass-3-line',    raw: ['Adventure', 'Action & Adventure', 'Avventura'] },
+    { name: 'Fantasy',        icon: 'ri-magic-line',        raw: ['Fantasy', 'Sci-Fi & Fantasy', 'Fantascienza'] },
+    { name: 'Fantascienza',   icon: 'ri-rocket-line',       raw: ['Sci-Fi', 'Cyberpunk', 'Post-apocalyptic', 'Time Travel', 'Game', 'Sci-Fi & Fantasy', 'Fantascienza'] },
+    { name: 'Drammatico',     icon: 'ri-emotion-sad-line',  raw: ['Drama', 'Dramma'] },
     { name: 'Soprannaturale', icon: 'ri-ghost-line',        raw: ['Supernatural', 'Vampire'] },
-    { name: 'Commedia',       icon: 'ri-emotion-laugh-line',raw: ['Comedy', 'Parody'] },
+    { name: 'Commedia',       icon: 'ri-emotion-laugh-line',raw: ['Comedy', 'Parody', 'Commedia'] },
     { name: 'Horror',         icon: 'ri-skull-2-line',      raw: ['Horror'] },
-    { name: 'Thriller',       icon: 'ri-search-eye-line',   raw: ['Thriller', 'Mystery', 'Crime', 'Psychological'] },
-    { name: 'Storico',        icon: 'ri-ancient-gate-line', raw: ['Historical'] },
+    { name: 'Thriller',       icon: 'ri-search-eye-line',   raw: ['Thriller', 'Mystery', 'Crime', 'Psychological', 'Mistero'] },
+    { name: 'Storico',        icon: 'ri-ancient-gate-line', raw: ['Historical', 'Storia'] },
     { name: 'Isekai',         icon: 'ri-door-open-line',    raw: ['Isekai'] },
     { name: 'Supereroi',      icon: 'ri-shield-star-line',  raw: ['Superhero'] },
     { name: 'Mecha',          icon: 'ri-robot-line',        raw: ['Mecha'] },
@@ -26,6 +26,8 @@ class GuardaloApp {
         this.viewMode = 'grid';
         this.currentUser = null;
         this.userAnime = {};
+        this.isAdmin = false;
+        this.overrides = {};
         this.init();
     }
 
@@ -40,6 +42,28 @@ class GuardaloApp {
         this.bindEvents();
         this.applyFilters();
         this.initFirebase();
+        this.loadOverrides();
+    }
+
+    // ── OVERRIDE ADMIN (voti/dati modificati dal proprietario) ────────
+    // Documento pubblico in lettura: applicato sopra ai dati statici, così
+    // le modifiche del proprietario le vedono tutti senza ricommittare.
+    loadOverrides() {
+        if (typeof db === 'undefined') return;
+        db.collection('meta').doc('overrides').get()
+            .then(doc => {
+                this.overrides = (doc.exists && doc.data().data) || {};
+                this.applyOverrides();
+                this.applyFilters();
+            })
+            .catch(() => {});
+    }
+
+    applyOverrides() {
+        animeData.forEach(a => {
+            const ov = this.overrides[a.id];
+            if (ov) Object.assign(a, ov);
+        });
     }
 
     // Titoli appartenenti alla categoria attiva
@@ -79,7 +103,10 @@ class GuardaloApp {
             if (typeof auth === 'undefined') return;
             auth.onAuthStateChanged(user => {
                 this.currentUser = user;
+                const adminEmail = (typeof ADMIN_EMAIL !== 'undefined' ? ADMIN_EMAIL : '').toLowerCase();
+                this.isAdmin = !!(user && user.email && user.email.toLowerCase() === adminEmail);
                 this.updateNavUI();
+                this.updateAdminUI();
                 if (user) this.loadFromCloud();
                 else this.loadFromLocal();
             });
@@ -150,6 +177,28 @@ class GuardaloApp {
             logoutBtn.style.display = 'none';
             userInfo.textContent = '';
         }
+    }
+
+    // Mostra un piccolo distintivo "Admin" e segna lo stato sul body
+    updateAdminUI() {
+        document.body.classList.toggle('is-admin', this.isAdmin);
+        const badge = document.getElementById('adminBadge');
+        if (badge) badge.style.display = this.isAdmin ? 'inline-flex' : 'none';
+    }
+
+    // Salva una modifica admin sul documento pubblico (solo l'admin può scrivere
+    // grazie alle regole Firestore) e la applica subito in locale.
+    saveOverride(id, patch) {
+        const entry = this.animeData.find(a => a.id === id) || animeData.find(a => a.id === id);
+        if (entry) Object.assign(entry, patch);
+        this.overrides[id] = { ...(this.overrides[id] || {}), ...patch };
+        if (typeof db !== 'undefined') {
+            db.collection('meta').doc('overrides')
+                .set({ data: { [id]: this.overrides[id] } }, { merge: true })
+                .then(() => this.toast('✓ Modifica salvata', 'toast-watched'))
+                .catch(e => this.toast('Errore salvataggio: ' + e.code, 'toast-removed'));
+        }
+        this.applyFilters();
     }
 
     // ── TEMA CHIARO/SCURO ─────────────────────────────────────
@@ -461,7 +510,7 @@ class GuardaloApp {
                 <span class="list-title">${anime.top ? '<i class="ri-vip-crown-fill list-crown"></i>' : ''}${anime.title}</span>
                 <span class="list-sub">${sub}</span>
             </div>
-            <span class="list-score"><i class="ri-star-fill"></i>${anime.rating}</span>
+            <span class="list-score ${anime.rating ? '' : 'list-score-none'}">${anime.rating ? `<i class="ri-star-fill"></i>${anime.rating}` : '<i class="ri-star-line"></i>'}</span>
             ${this.quickActionsHTML(us)}`;
 
         row.addEventListener('click', () => this.openDetail(anime));
@@ -483,6 +532,10 @@ class GuardaloApp {
         const scoreClass = anime.rating >= 9 ? 'score-gold'
                          : anime.rating >= 7 ? 'score-green'
                          : 'score-blue';
+        // rating 0/assente = "da valutare" (i voti li mette l'utente)
+        const scoreChip = anime.rating
+            ? `<span class="card-score ${scoreClass}"><i class="ri-star-fill"></i>${anime.rating}</span>`
+            : `<span class="card-score card-score-none" title="Da valutare"><i class="ri-star-line"></i></span>`;
 
         const topBadge = anime.top
             ? `<span class="card-badge-top">TOP</span>`
@@ -493,7 +546,7 @@ class GuardaloApp {
                 <img class="card-poster" src="${anime.img}" alt="${anime.title}" loading="lazy" style="aspect-ratio:2/3"
                      onerror="this.outerHTML='<div class=card-poster-placeholder><i class=ri-image-line></i></div>'">
                 ${topBadge}
-                <span class="card-score ${scoreClass}"><i class="ri-star-fill"></i>${anime.rating}</span>
+                ${scoreChip}
                 ${this.quickActionsHTML(us)}
             </div>
             <div class="card-info">
@@ -520,14 +573,24 @@ class GuardaloApp {
         modal.querySelector('.modal-title').textContent = anime.title;
         modal.querySelector('.modal-img').src  = anime.img;
         modal.querySelector('.modal-img').alt  = anime.title;
-        modal.querySelector('.modal-rating').textContent   = anime.rating;
+        const ratingEl = modal.querySelector('.modal-rating');
+        const maxEl    = modal.querySelector('.score-max');
+        if (anime.rating) {
+            ratingEl.textContent = anime.rating;
+            ratingEl.classList.remove('rating-none');
+            if (maxEl) maxEl.style.display = '';
+        } else {
+            ratingEl.textContent = 'Da valutare';
+            ratingEl.classList.add('rating-none');
+            if (maxEl) maxEl.style.display = 'none';
+        }
         modal.querySelector('.modal-year').textContent     = anime.year;
         modal.querySelector('.modal-episodes').textContent = `${anime.episodes} ep.`;
         modal.querySelector('.modal-studio').textContent   = anime.studio;
         modal.querySelector('.modal-status').textContent   = anime.status;
         modal.querySelector('.modal-synopsis').textContent = anime.synopsis;
 
-        document.getElementById('score-fill').style.width = `${anime.rating * 10}%`;
+        document.getElementById('score-fill').style.width = `${(anime.rating || 0) * 10}%`;
 
         modal.querySelector('.modal-tags').innerHTML =
             anime.genres.map(g => `<span class="chip-tag">${g}</span>`).join('');
@@ -560,6 +623,27 @@ class GuardaloApp {
 
         watchBtn.onclick = () => this.toggleStatus(anime.id, 'watched');
         laterBtn.onclick = () => this.toggleStatus(anime.id, 'toWatch');
+
+        // ── Pannello admin (solo proprietario) ──
+        const panel = document.getElementById('adminPanel');
+        if (this.isAdmin) {
+            panel.style.display = '';
+            const rIn = document.getElementById('admin-rating');
+            const tIn = document.getElementById('admin-top');
+            const sIn = document.getElementById('admin-status');
+            rIn.value = anime.rating || '';
+            tIn.checked = !!anime.top;
+            sIn.value = anime.status || '';
+            document.getElementById('admin-save').onclick = () => {
+                let r = parseInt(rIn.value, 10);
+                if (isNaN(r) || r < 0) r = 0;
+                if (r > 10) r = 10;
+                this.saveOverride(anime.id, { rating: r, top: tIn.checked, status: sIn.value.trim() || anime.status });
+                this.openDetail(anime); // ricarica con i valori aggiornati
+            };
+        } else {
+            panel.style.display = 'none';
+        }
 
         modal.querySelector('.modal-right').scrollTop = 0;
         modal.classList.add('open');

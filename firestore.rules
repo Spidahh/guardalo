@@ -1,0 +1,18 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Lista personale di ogni utente (visto / da vedere): ognuno solo la propria
+    match /users/{uid} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+    }
+
+    // Override pubblici (voti / dati modificati dal proprietario):
+    // tutti possono LEGGERE, solo l'admin può SCRIVERE.
+    match /meta/overrides {
+      allow read: if true;
+      allow write: if request.auth != null
+                   && request.auth.token.email == "INSERISCI_LA_TUA_EMAIL@gmail.com";
+    }
+  }
+}

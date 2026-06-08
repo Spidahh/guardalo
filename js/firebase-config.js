@@ -24,8 +24,15 @@ const db = firebase.firestore();
 // Google Auth Provider
 const googleProvider = new firebase.auth.GoogleAuthProvider();
 
+// ── ADMIN ──────────────────────────────────────────────────────────
+// Email Google del proprietario: solo questo account vede il pannello di
+// modifica e può salvare voti/dati. La sicurezza VERA è nelle regole
+// Firestore (vedi firestore.rules) — qui è solo per mostrare la UI.
+const ADMIN_EMAIL = "INSERISCI_LA_TUA_EMAIL@gmail.com";
+
 // Export for use in other files
 window.firebase = firebase;
 window.auth = auth;
 window.db = db;
 window.googleProvider = googleProvider;
+window.ADMIN_EMAIL = ADMIN_EMAIL;

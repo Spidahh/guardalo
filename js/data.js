@@ -3727,7 +3727,7 @@ const animeData = [
     "title": "Daemons of the Shadow Realm",
     "category": "animazione",
     "type": "Serie",
-    "rating": 8,
+    "rating": 0,
     "top": false,
     "genres": [
       "Action",
@@ -3762,7 +3762,7 @@ const animeData = [
     "title": "Release that Witch",
     "category": "animazione",
     "type": "ONA",
-    "rating": 8,
+    "rating": 0,
     "top": false,
     "genres": [
       "Action",
@@ -3802,7 +3802,7 @@ const animeData = [
     "title": "Petals of Reincarnation",
     "category": "animazione",
     "type": "Serie",
-    "rating": 6,
+    "rating": 0,
     "top": false,
     "genres": [
       "Action",
@@ -3835,7 +3835,7 @@ const animeData = [
     "title": "Invincible",
     "category": "animazione",
     "type": "Serie animata",
-    "rating": 9,
+    "rating": 0,
     "top": false,
     "genres": [
       "Action",
@@ -3873,6 +3873,1322 @@ const animeData = [
         {
           "name": "Cerca",
           "url": "https://google.com/search?q=Invincible%20serie%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "breaking-bad",
+    "title": "Breaking Bad",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Dramma",
+      "Crime"
+    ],
+    "year": 2008,
+    "img": "images/serie/breaking-bad.jpg",
+    "studio": "AMC",
+    "status": "Finito",
+    "episodes": 62,
+    "synopsis": "Un insegnante di chimica con un cancro allo stadio terminale comincia a produrre e spacciare metanfetamina con un suo ex studente per assicurare un futuro alla famiglia.",
+    "structure": [
+      {
+        "name": "5 stagioni",
+        "episodes": "62 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=Breaking%20Bad%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "hanno-ucciso-l-uomo-ragno-la-leggendaria-storia-degli-883",
+    "title": "Hanno ucciso l'Uomo Ragno - La leggendaria storia degli 883",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Commedia"
+    ],
+    "year": 2024,
+    "img": "images/serie/hanno-ucciso-l-uomo-ragno-la-leggendaria-storia-degli-883.jpg",
+    "studio": "Sky Serie",
+    "status": "In corso",
+    "episodes": 8,
+    "synopsis": "Una storia di musica e di grande amicizia sullo sfondo dei mitici anni ’90. Una storia di provincia, di illusioni, di coraggio. La storia di un successo travolgente, imprevisto e imprevedibile: quello di due ragazzi di Pavia, due underdog, che in pochi anni diedero vita a una delle band più amate e iconiche della storia della musica italiana. La storia di un’intera generazione.  Era il 1992 quando usciva il primo album degli 883 \"Hanno ucciso l'uomo ragno\". L'inizio di un successo inaspettato, con canzoni che, 32 anni più tardi, ancora sono conosciute a cantate.  La storia di Max Pezzali e Mauro Repetto, due adolescenti come tanti che si incontrano sui banchi di scuola, tra bocciature, amori, fumetti e tanta passione per la musica. Otto puntate che raccontano la nascita del mito degli 883.",
+    "structure": [
+      {
+        "name": "2 stagioni",
+        "episodes": "8 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=Hanno%20ucciso%20l'Uomo%20Ragno%20-%20La%20leggendaria%20storia%20degli%20883%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "house-of-the-dragon",
+    "title": "House of the Dragon",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Sci-Fi & Fantasy",
+      "Dramma",
+      "Action & Adventure"
+    ],
+    "year": 2022,
+    "img": "images/serie/house-of-the-dragon.jpg",
+    "studio": "HBO",
+    "status": "In corso",
+    "episodes": 26,
+    "synopsis": "La serie prequel vede la dinastia Targaryen all'apice assoluto del suo potere, con più di 15 draghi sotto il loro giogo. La maggior parte degli imperi, che siano reali o immaginari, crollano quando raggiungono tali poteri e tali altezze. Nel caso dei Targaryen, la loro lenta caduta inizia quasi 193 anni prima degli eventi de Il Trono di Spade, quando re Viserys Targaryen rompe un secolo di tradizione nominando sua figlia Rhaenyra erede al Trono di Spade. La corte rimane scioccata quando Rhaenyra mantiene il suo status di erede nonostante Viserys in seguito avrà un figlio maschio, legittimo erede. Inizia così ad attecchire il seme della divisione e forti attriti in tutto il regno.",
+    "structure": [
+      {
+        "name": "3 stagioni",
+        "episodes": "26 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=House%20of%20the%20Dragon%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "from",
+    "title": "FROM",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Mistero",
+      "Dramma",
+      "Sci-Fi & Fantasy"
+    ],
+    "year": 2022,
+    "img": "images/serie/from.jpg",
+    "studio": "Epix",
+    "status": "In corso",
+    "episodes": 40,
+    "synopsis": "In una città da incubo nel centro dell’America che intrappola tutti coloro che entrano, i residenti riluttanti combattono per rimanere in vita e cercano una via d’uscita. Ma sono afflitti dalle minacce della foresta circostante, comprese le terrificanti creature notturne.",
+    "structure": [
+      {
+        "name": "4 stagioni",
+        "episodes": "40 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=FROM%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "alice-in-borderland",
+    "title": "Alice in Borderland",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Mistero",
+      "Dramma",
+      "Action & Adventure"
+    ],
+    "year": 2020,
+    "img": "images/serie/alice-in-borderland.jpg",
+    "studio": "Netflix",
+    "status": "Finito",
+    "episodes": 22,
+    "synopsis": "Un appassionato di videogiochi e i suoi due amici si ritrovano in una Tokyo parallela, dove per sopravvivere sono costretti a partecipare a una serie di giochi sadici.",
+    "structure": [
+      {
+        "name": "3 stagioni",
+        "episodes": "22 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=Alice%20in%20Borderland%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "dexter",
+    "title": "Dexter",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Crime",
+      "Dramma",
+      "Mistero"
+    ],
+    "year": 2006,
+    "img": "images/serie/dexter.jpg",
+    "studio": "Showtime",
+    "status": "Finito",
+    "episodes": 96,
+    "synopsis": "Dexter Morgan, all'apparenza un tranquillo e metodico tecnico della polizia scientifica di Miami, è in realtà un feroce e spietato serial killer, che però agisce seguendo un proprio rigoroso codice: uccidere soltanto criminali che sono sfuggiti alla giustizia.",
+    "structure": [
+      {
+        "name": "8 stagioni",
+        "episodes": "96 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=Dexter%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "il-trono-di-spade",
+    "title": "Il Trono di Spade",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Sci-Fi & Fantasy",
+      "Dramma",
+      "Action & Adventure"
+    ],
+    "year": 2011,
+    "img": "images/serie/il-trono-di-spade.jpg",
+    "studio": "HBO",
+    "status": "Finito",
+    "episodes": 73,
+    "synopsis": "Nell'immaginario mondo di Westeros, in un tempo dal sapore medievale, s'intrecciano le vicende di alcune casate che lottano per la supremazia: i Baratheon, i Lannister, gli Stark, i Targaryen sono solo alcune delle famiglie che, tra guerre manifeste e intrighi clandestini, in un interminabile rovescio di fortune e alleanze, cercano di trionfare sugli avversari e prendere possesso del Trono di Spade, simbolo del potere e del comando. Tratto dal ciclo di romanzi Cronache del ghiaccio e del fuoco di George R. R. Martin.",
+    "structure": [
+      {
+        "name": "8 stagioni",
+        "episodes": "73 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=Il%20Trono%20di%20Spade%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "true-detective",
+    "title": "True Detective",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Dramma",
+      "Mistero"
+    ],
+    "year": 2014,
+    "img": "images/serie/true-detective.jpg",
+    "studio": "HBO",
+    "status": "In corso",
+    "episodes": 30,
+    "synopsis": "Le storie di alcuni detective della polizia e della loro lotta per la cattura dei criminali attraverso metodi non convenzionali. Mentre lavorano ai casi più complicati, gli agenti cercano di affrontare i propri demoni personali. (Consigliata soprattutto la prima stagione.)",
+    "structure": [
+      {
+        "name": "Stagione 1 (la più consigliata)",
+        "episodes": "8 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=True%20Detective%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "the-walking-dead",
+    "title": "The Walking Dead",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Action & Adventure",
+      "Dramma",
+      "Sci-Fi & Fantasy"
+    ],
+    "year": 2010,
+    "img": "images/serie/the-walking-dead.jpg",
+    "studio": "AMC",
+    "status": "Finito",
+    "episodes": 177,
+    "synopsis": "In un futuro post apocalittico, il mondo è popolato di zombie assassini in cerca di vittime. Un gruppo di sopravvissuti è in viaggio per trovare un posto sicuro dove vivere.",
+    "structure": [
+      {
+        "name": "11 stagioni",
+        "episodes": "177 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=The%20Walking%20Dead%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "il-signore-degli-anelli-gli-anelli-del-potere",
+    "title": "Il Signore degli Anelli: Gli Anelli del Potere",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Action & Adventure",
+      "Sci-Fi & Fantasy",
+      "Dramma"
+    ],
+    "year": 2022,
+    "img": "images/serie/il-signore-degli-anelli-gli-anelli-del-potere.jpg",
+    "studio": "Prime Video",
+    "status": "In corso",
+    "episodes": 17,
+    "synopsis": "Migliaia di anni prima degli eventi raccontati ne Lo Hobbit e Il Signore degli Anelli, durante un periodo di relativa pace, nel corso della Seconda Era della Terra di Mezzo, si assiste alla forgiatura degli Anelli del Potere, all'ascesa dell'Oscuro Signore Sauron, alla caduta del regno insulare di Númenor e all'ultima alleanza tra Elfi e Uomini.",
+    "structure": [
+      {
+        "name": "3 stagioni",
+        "episodes": "17 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=Il%20Signore%20degli%20Anelli%3A%20Gli%20Anelli%20del%20Potere%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fargo",
+    "title": "Fargo",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Crime",
+      "Dramma"
+    ],
+    "year": 2014,
+    "img": "images/serie/fargo.jpg",
+    "studio": "FX",
+    "status": "In corso",
+    "episodes": 51,
+    "synopsis": "Una serie antologica, ispirata all'omonimo film del 1996. In ogni stagione, nuovi personaggi vengono coinvolti nelle indagini per omicidio in diverse città del Midwest, con crimini apparentemente non correlati tra loro.",
+    "structure": [
+      {
+        "name": "5 stagioni",
+        "episodes": "51 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=Fargo%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "supernatural",
+    "title": "Supernatural",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Dramma",
+      "Mistero",
+      "Sci-Fi & Fantasy"
+    ],
+    "year": 2005,
+    "img": "images/serie/supernatural.jpg",
+    "studio": "The WB",
+    "status": "Finito",
+    "episodes": 327,
+    "synopsis": "I fratelli Sam e Dean Winchester viaggiano attraverso l'America in una Chevy Impala nera del 1967 indagando e combattendo eventi paranormali e altri eventi inspiegabili, molti dei quali basati su leggende metropolitane americane e folklore, nonché su creature soprannaturali classiche come vampiri, lupi mannari e fantasmi.",
+    "structure": [
+      {
+        "name": "15 stagioni",
+        "episodes": "327 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=Supernatural%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "the-big-bang-theory",
+    "title": "The Big Bang Theory",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Commedia"
+    ],
+    "year": 2007,
+    "img": "images/serie/the-big-bang-theory.jpg",
+    "studio": "CBS",
+    "status": "Finito",
+    "episodes": 279,
+    "synopsis": "Pasadena, California. Quattro giovani scienziati di diversi campi – il fisico sperimentale Leonard Hofstadter, il fisico teorico Sheldon Cooper, l'astrofisico Rajesh Koothrappali e l'ingegnere aerospaziale Howard Wolowitz – lavorano insieme al California Institute of Technology. Questi fanno amicizia con Penny, una bella ragazza di provincia col sogno di diventare attrice, venuta a vivere nell'appartamento di fronte a quello condiviso da Leonard e Sheldon.",
+    "structure": [
+      {
+        "name": "12 stagioni",
+        "episodes": "279 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=The%20Big%20Bang%20Theory%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "westworld-dove-tutto-e-concesso",
+    "title": "Westworld - Dove tutto è concesso",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Sci-Fi & Fantasy",
+      "Western"
+    ],
+    "year": 2016,
+    "img": "images/serie/westworld-dove-tutto-e-concesso.jpg",
+    "studio": "HBO",
+    "status": "Cancellato",
+    "episodes": 36,
+    "synopsis": "Westworld è un’oscura odissea incentrata sull’alba della consapevolezza artificiale e sull’evoluzione del peccato.  Ambientata nel punto di intersezione tra il futuro e il passato reimmaginato, la serie esplora un mondo in cui ogni appetito umano, sia nobile che depravato, può essere assecondato. Nessuna regola, nessuna legge, nessun giudizio. Vivere senza limiti.",
+    "structure": [
+      {
+        "name": "4 stagioni",
+        "episodes": "36 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=Westworld%20-%20Dove%20tutto%20%C3%A8%20concesso%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "scissione",
+    "title": "Scissione",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Dramma",
+      "Mistero",
+      "Sci-Fi & Fantasy"
+    ],
+    "year": 2022,
+    "img": "images/serie/scissione.jpg",
+    "studio": "Apple TV",
+    "status": "In corso",
+    "episodes": 19,
+    "synopsis": "Mark guida un team di impiegati la cui memoria è stata chirurgicamente scissa per dividere i ricordi della vita lavorativa da quelli della vita privata. Quando un misterioso collega compare fuori dalla Lumon Corporation, inizia un viaggio alla scoperta della verità riguardo al loro lavoro.",
+    "structure": [
+      {
+        "name": "3 stagioni",
+        "episodes": "19 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=Scissione%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "stranger-things",
+    "title": "Stranger Things",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Action & Adventure",
+      "Mistero",
+      "Sci-Fi & Fantasy"
+    ],
+    "year": 2016,
+    "img": "images/serie/stranger-things.jpg",
+    "studio": "Netflix",
+    "status": "Finito",
+    "episodes": 42,
+    "synopsis": "La scomparsa di un ragazzino in una cittadina porta alla luce un mistero in cui si mescolano esperimenti segreti, spaventose forze soprannaturali e una strana bambina.",
+    "structure": [
+      {
+        "name": "5 stagioni",
+        "episodes": "42 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=Stranger%20Things%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fringe",
+    "title": "Fringe",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Sci-Fi & Fantasy",
+      "Dramma",
+      "Mistero"
+    ],
+    "year": 2008,
+    "img": "images/serie/fringe.jpg",
+    "studio": "FOX",
+    "status": "Finito",
+    "episodes": 100,
+    "synopsis": "La Divisione Fringe si occupa di indagare su una serie di eventi inspiegabili, noti come Eventi Fringe, che si stanno verificando in varie parti del mondo. Ne fanno parte lo scienziato Walter Bishop, suo figlio Peter e l'agente dell'FBI Olivia Dunham.",
+    "structure": [
+      {
+        "name": "5 stagioni",
+        "episodes": "100 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=Fringe%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "x-files",
+    "title": "X-Files",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Mistero",
+      "Sci-Fi & Fantasy",
+      "Crime"
+    ],
+    "year": 1993,
+    "img": "images/serie/x-files.jpg",
+    "studio": "FOX",
+    "status": "Finito",
+    "episodes": 218,
+    "synopsis": "X-Files è una serie fantascientifica americana che descrive la riapertura dei casi irrisolti e dimenticati in archivio perchè collegati a fenomeni paranormali da parte dei due investigatori del FBI  Fox Mulder e Dana Scully.\n\nScully è la scettica, meticolosa e scientifica agente assegnata per controbilanciare (e smontare) il lavoro dell'agente Molder e le sue scoperte spesso scomode, così da poterlo riassegnare ai casi \"normali\".",
+    "structure": [
+      {
+        "name": "11 stagioni",
+        "episodes": "218 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=X-Files%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "i-segreti-di-twin-peaks",
+    "title": "I segreti di Twin Peaks",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Dramma",
+      "Mistero"
+    ],
+    "year": 1990,
+    "img": "images/serie/i-segreti-di-twin-peaks.jpg",
+    "studio": "ABC",
+    "status": "Finito",
+    "episodes": 48,
+    "synopsis": "La serie è ambientata nella fittizia cittadina montana di Twin Peaks situata nello Stato di Washington, a cinque miglia dal confine tra Stati Uniti e Canada. L'apparente tranquillità di questo frammento di America viene turbata dal ritrovamento del cadavere di Laura Palmer, figlia unica dell'avvocato Leland, nonché una delle ragazze più popolari della città. Le indagini affidate all'agente speciale Dale Cooper permettono di far affiorare il lato oscuro e nascosto del luogo e dei suoi abitanti.",
+    "structure": [
+      {
+        "name": "3 stagioni",
+        "episodes": "48 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=I%20segreti%20di%20Twin%20Peaks%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "lost",
+    "title": "Lost",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Mistero",
+      "Action & Adventure",
+      "Dramma"
+    ],
+    "year": 2004,
+    "img": "images/serie/lost.jpg",
+    "studio": "ABC",
+    "status": "Finito",
+    "episodes": 118,
+    "synopsis": "48 persone sopravvivono ad un tremendo disastro aereo e si ritrovano dispersi su un'isola dell'Oceano Pacifico che sembra completamente disabitata. Ognuno di loro ha una sua storia, ognuno di loro nasconde dei segreti. Ma tutti quanti sono consapevoli che, se vogliono continuare a vivere, debbono collaborare, superare le avversità e le divisioni personali e sperare in un soccorso che potrebbe anche non arrivare mai. Il gruppo, mentre affronta l'inclemenza del tempo e l'ambiente ostile, scopre, con il passare del tempo, che anche l'isola nasconde dei segreti.",
+    "structure": [
+      {
+        "name": "6 stagioni",
+        "episodes": "118 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=Lost%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "spartacus",
+    "title": "Spartacus",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Dramma"
+    ],
+    "year": 2010,
+    "img": "images/serie/spartacus.jpg",
+    "studio": "STARZ",
+    "status": "Finito",
+    "episodes": 33,
+    "synopsis": "Tradito dai Romani; obbligato alla schiavitù; rinato come Gladiatore. Strappato dalla sua patria e dall'amore della sua vita, Spartaco è condannato a morire nel mondo brutale dell'arena, dove sangue e morte sono intrattenimento di prima categoria.",
+    "structure": [
+      {
+        "name": "3 stagioni",
+        "episodes": "33 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=Spartacus%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "mr-robot",
+    "title": "Mr. Robot",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Crime",
+      "Dramma"
+    ],
+    "year": 2015,
+    "img": "images/serie/mr-robot.jpg",
+    "studio": "USA Network",
+    "status": "Finito",
+    "episodes": 45,
+    "synopsis": "Mr. Robot è un thriller tecnologico che segue le vicende di Elliot, un giovane programmatore che di giorno lavora come ingegnere in una ditta di sicurezza informatica, e di notte è un hacker giustiziere. Elliot si trova a un bivio quando il misterioso leader di un gruppo di hacker attivisti lo recluta per distruggere l'azienda che viene pagato per proteggere.",
+    "structure": [
+      {
+        "name": "4 stagioni",
+        "episodes": "45 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=Mr.%20Robot%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fallout",
+    "title": "Fallout",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Action & Adventure",
+      "Sci-Fi & Fantasy",
+      "Dramma"
+    ],
+    "year": 2024,
+    "img": "images/serie/fallout.jpg",
+    "studio": "Prime Video",
+    "status": "In corso",
+    "episodes": 16,
+    "synopsis": "Basato su una delle serie di videogiochi più grandi di sempre, Fallout è la storia di chi ha e chi non ha, in un mondo in cui non è rimasto quasi più nulla da possedere. 200 anni dopo l'apocalisse, gli abitanti dei lussuosi rifugi antiatomici sono costretti a tornare nell'irradiato paesaggio infernale che i loro antenati si sono lasciati alle spalle, rimanendo sconvolti dalla scoperta di un universo incredibilmente complesso, gioiosamente bizzarro e altamente violento che li attende.",
+    "structure": [
+      {
+        "name": "2 stagioni",
+        "episodes": "16 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=Fallout%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "black-mirror",
+    "title": "Black Mirror",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Sci-Fi & Fantasy",
+      "Dramma",
+      "Mistero"
+    ],
+    "year": 2011,
+    "img": "images/serie/black-mirror.jpg",
+    "studio": "Channel 4",
+    "status": "In corso",
+    "episodes": 33,
+    "synopsis": "Una serie antologica di racconti angosciosi e spiazzanti che rivelano i tratti umani più oscuri, le innovazioni più sensazionali e tanto altro ancora.",
+    "structure": [
+      {
+        "name": "7 stagioni",
+        "episodes": "33 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=Black%20Mirror%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "the-boys",
+    "title": "The Boys",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Sci-Fi & Fantasy",
+      "Action & Adventure"
+    ],
+    "year": 2019,
+    "img": "images/serie/the-boys.jpg",
+    "studio": "Prime Video",
+    "status": "Finito",
+    "episodes": 40,
+    "synopsis": "Uno sguardo irriverente a ciò che succede quando i supereroi, che sono popolari come le celebrità, influenti come i politici e venerati come dei, abusano dei loro superpoteri invece di utilizzarli a fin di bene. Quando i The Boys si lanciano in una missione eroica per svelare la verità riguardo ai \"Sette\" sostenuti dalla Vought, inizia una lotta tra senza poteri e superpotenti.",
+    "structure": [
+      {
+        "name": "5 stagioni",
+        "episodes": "40 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=The%20Boys%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "misfits",
+    "title": "Misfits",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Sci-Fi & Fantasy",
+      "Dramma",
+      "Commedia"
+    ],
+    "year": 2009,
+    "img": "images/serie/misfits.jpg",
+    "studio": "E4",
+    "status": "Finito",
+    "episodes": 37,
+    "synopsis": "La storia di 5 teenagers 'difficili' alle prese con un programma di lavori socialmente utili, durante il quale dopo una strana tempesta si ritrovano con dei poteri speciali.",
+    "structure": [
+      {
+        "name": "5 stagioni",
+        "episodes": "37 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=Misfits%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "come-vendere-droga-online-in-fretta",
+    "title": "Come vendere droga online (in fretta)",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Dramma",
+      "Commedia",
+      "Crime"
+    ],
+    "year": 2019,
+    "img": "images/serie/come-vendere-droga-online-in-fretta.jpg",
+    "studio": "Netflix",
+    "status": "Finito",
+    "episodes": 24,
+    "synopsis": "Per riconquistare la ex, un giovane secchione incomincia a vendere ecstasy online dalla sua cameretta, diventando uno dei più grandi spacciatori in Europa.",
+    "structure": [
+      {
+        "name": "4 stagioni",
+        "episodes": "24 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=Come%20vendere%20droga%20online%20(in%20fretta)%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "wayward-pines",
+    "title": "Wayward Pines",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Dramma",
+      "Mistero",
+      "Sci-Fi & Fantasy"
+    ],
+    "year": 2015,
+    "img": "images/serie/wayward-pines.jpg",
+    "studio": "FOX",
+    "status": "Cancellato",
+    "episodes": 20,
+    "synopsis": "Ethan Burke è un agente dello United States Secret Service che, durante la ricerca di due agenti federali scomparsi, fa un incidente in macchina e perde i sensi. Si risveglia in ospedale e qui conosce l'infermiera Pamela Pilcher, quest'ultima gli dice che si trova ricoverato a Wayward Pines, una piccola cittadina dell'Idaho. Ethan si dirige verso la stazione della polizia con l'intenzione di recuperare i propri oggetti personali persi durante l'incidente, ma quando vi arriva lo sceriffo afferma di non possederli e lo invita ad andarsene. Colpito dal poco aiuto ricevuto dai servizi e non capendo ancora bene il motivo per cui si trovi lì, Ethan inizia ad esplorare il paese facendo conoscenza dei cittadini ed aumentando ancora di più la propria confusione: gli abitanti appaiono freddi, insensibili, quasi pazzi e divagano a qualsiasi richiesta di informazioni del protagonista.",
+    "structure": [
+      {
+        "name": "2 stagioni",
+        "episodes": "20 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=Wayward%20Pines%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "dark",
+    "title": "Dark",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Crime",
+      "Dramma",
+      "Sci-Fi & Fantasy",
+      "Mistero"
+    ],
+    "year": 2017,
+    "img": "images/serie/dark.jpg",
+    "studio": "Netflix",
+    "status": "Finito",
+    "episodes": 26,
+    "synopsis": "La scomparsa di un bambino dà il via a una frenetica ricerca di risposte e quattro famiglie finiscono per svelare un incredibile mistero che dura da tre generazioni.",
+    "structure": [
+      {
+        "name": "3 stagioni",
+        "episodes": "26 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=Dark%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "boris",
+    "title": "Boris",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Commedia"
+    ],
+    "year": 2007,
+    "img": "images/serie/boris.jpg",
+    "studio": "Disney+",
+    "status": "Finito",
+    "episodes": 50,
+    "synopsis": "Commedia dissacrante sui vizi e peccati del nostro Paese illustrati attraverso il dietro le quinte di una tipica fiction italiana, in particolare attraverso gli occhi di Alessandro, lo stagista ingenuo e pieno di ideali. Le storie di una troupe televisiva grottesca e improbabile alle prese con le dinamiche di potere, i compromessi, le raccomandazioni, le piccole e grandi rivalità.",
+    "structure": [
+      {
+        "name": "4 stagioni",
+        "episodes": "50 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=Boris%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "one-piece-live",
+    "title": "One Piece (Live Action)",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Action & Adventure",
+      "Sci-Fi & Fantasy"
+    ],
+    "year": 2023,
+    "img": "images/serie/one-piece-live.jpg",
+    "studio": "Netflix",
+    "status": "In corso",
+    "episodes": 8,
+    "synopsis": "Con il suo cappello di paglia e una ciurma sgangherata il pirata Monkey D. Luffy parte per un viaggio epico in cerca del tesoro in questo adattamento live action del celebre manga.",
+    "structure": [
+      {
+        "name": "Stagione 1",
+        "episodes": "8 episodi (2023)"
+      },
+      {
+        "name": "Stagione 2",
+        "episodes": "in arrivo"
+      }
+    ],
+    "links": {
+      "legal": [
+        {
+          "name": "Netflix",
+          "url": "https://www.netflix.com"
+        }
+      ],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=One%20Piece%20live%20action%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "1899",
+    "title": "1899",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Mistero",
+      "Dramma"
+    ],
+    "year": 2022,
+    "img": "images/serie/1899.jpg",
+    "studio": "Netflix",
+    "status": "Cancellato",
+    "episodes": 8,
+    "synopsis": "Alcuni eventi misteriosi modificano la rotta di una nave di migranti diretta a New York nel 1899, portando i passeggeri perplessi di fronte a un enigma spiazzante.",
+    "structure": [
+      {
+        "name": "Stagione unica",
+        "episodes": "8 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=1899%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "il-problema-dei-3-corpi",
+    "title": "Il problema dei 3 corpi",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Sci-Fi & Fantasy",
+      "Mistero",
+      "Dramma"
+    ],
+    "year": 2024,
+    "img": "images/serie/il-problema-dei-3-corpi.jpg",
+    "studio": "Netflix",
+    "status": "In corso",
+    "episodes": 8,
+    "synopsis": "Attraverso continenti e decadi, cinque amici geniali fanno scoperte sconvolgenti mentre le leggi della scienza si sgretolano ed emerge una minaccia esistenziale.",
+    "structure": [
+      {
+        "name": "Stagione unica",
+        "episodes": "8 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=Il%20problema%20dei%203%20corpi%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "heroes",
+    "title": "Heroes",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Sci-Fi & Fantasy",
+      "Dramma"
+    ],
+    "year": 2006,
+    "img": "images/serie/heroes.jpg",
+    "studio": "NBC",
+    "status": "Cancellato",
+    "episodes": 78,
+    "synopsis": "La serie racconta le storie di persone normali che scoprono di possedere capacità sovrumane, e di come queste hanno effetto nelle loro vite.",
+    "structure": [
+      {
+        "name": "4 stagioni",
+        "episodes": "78 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=Heroes%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "silo",
+    "title": "Silo",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Sci-Fi & Fantasy",
+      "Dramma"
+    ],
+    "year": 2023,
+    "img": "images/serie/silo.jpg",
+    "studio": "Apple TV",
+    "status": "In corso",
+    "episodes": 30,
+    "synopsis": "In un futuro tossico e in rovina, migliaia di persone vivono in un enorme silo sotterraneo. Dopo la violazione di una regola cardine da parte dello sceriffo e la morte misteriosa di alcuni residenti, Juliette, un tecnico, comincia a svelare dei segreti scioccanti e la verità sul silo.",
+    "structure": [
+      {
+        "name": "3 stagioni",
+        "episodes": "30 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=Silo%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "the-100",
+    "title": "The 100",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Sci-Fi & Fantasy",
+      "Action & Adventure",
+      "Dramma",
+      "Crime"
+    ],
+    "year": 2014,
+    "img": "images/serie/the-100.jpg",
+    "studio": "The CW",
+    "status": "Finito",
+    "episodes": 100,
+    "synopsis": "97 anni dopo una guerra nucleare globale che ha sconvolto il pianeta Terra, ciò che rimane del genere umano è una stazione spaziale, l'Arca, formata dalle 13 stazioni spaziali che si trovavano in orbita al momento del disastro. L'Arca ha leggi molto severe e chi trasgredisce viene punito con la morte per espulsione nel vuoto. Con l'aumento della popolazione e con il rapido deteriorarsi degli impianti di riciclo, i rappresentanti del governo decidono di inviare sulla Terra cento delinquenti. Questi giovani ragazzi intraprenderanno un viaggio molto pericoloso per cercare di ripopolare il Pianeta e creare una nuova comunità.",
+    "structure": [
+      {
+        "name": "7 stagioni",
+        "episodes": "100 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=The%20100%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "sweet-home",
+    "title": "Sweet Home",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Sci-Fi & Fantasy",
+      "Action & Adventure"
+    ],
+    "year": 2020,
+    "img": "images/serie/sweet-home.jpg",
+    "studio": "Netflix",
+    "status": "Finito",
+    "episodes": 26,
+    "synopsis": "Mentre le persone si trasformano in mostri feroci e seminano terrore, un adolescente tormentato e i suoi vicini d'appartamento lottano per sopravvivere e restare umani.",
+    "structure": [
+      {
+        "name": "3 stagioni",
+        "episodes": "26 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=Sweet%20Home%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "vikings",
+    "title": "Vikings",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Action & Adventure",
+      "Dramma",
+      "War & Politics"
+    ],
+    "year": 2013,
+    "img": "images/serie/vikings.jpg",
+    "studio": "Prime Video",
+    "status": "Finito",
+    "episodes": 89,
+    "synopsis": "L'eroe Ragnar Lothbrok ha l'obiettivo di estendere il regno vichingo, sfidando un re privo di ambizioni.",
+    "structure": [
+      {
+        "name": "6 stagioni",
+        "episodes": "89 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=Vikings%20streaming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "the-witcher",
+    "title": "The Witcher",
+    "category": "live",
+    "type": "Serie TV",
+    "rating": 0,
+    "top": false,
+    "genres": [
+      "Dramma",
+      "Action & Adventure"
+    ],
+    "year": 2019,
+    "img": "images/serie/the-witcher.jpg",
+    "studio": "Netflix",
+    "status": "In corso",
+    "episodes": 32,
+    "synopsis": "Geralt di Rivia, un cacciatore di mostri mutante, viaggia verso il suo destino in un mondo turbolento in cui le persone spesso si dimostrano più perverse delle bestie.",
+    "structure": [
+      {
+        "name": "4 stagioni",
+        "episodes": "32 episodi"
+      }
+    ],
+    "links": {
+      "legal": [],
+      "illegal": [
+        {
+          "name": "Cerca",
+          "url": "https://google.com/search?q=The%20Witcher%20streaming"
         }
       ]
     }

@@ -541,22 +541,8 @@ body {
 }
 
 /* SCRIM: gradiente trasparente→nero in basso per titolo/voto leggibili */
-.card-poster-wrap::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        to top,
-        rgba(0,0,0,0.92) 0%,
-        rgba(0,0,0,0.78) 18%,
-        rgba(0,0,0,0.34) 42%,
-        rgba(0,0,0,0) 64%
-    );
-    z-index: 1;
-    transition: opacity 0.28s var(--ease);
-    pointer-events: none;
-}
-.card:hover .card-poster-wrap::after { opacity: 0.88; }
+/* La legibilità del titolo è data dalla fascia adattiva di .card-info
+   (vedi sotto): cresce con il titolo, così nessun titolo viene mai tagliato. */
 
 /* VOTO: unico indicatore, chip vetro, stella con accento di categoria */
 .card-score {
@@ -582,6 +568,11 @@ body {
 .card-score i { font-size: 12px; color: var(--accent); line-height: 1; }
 .card-top .card-score i { color: var(--gold); }
 .score-gold, .score-green, .score-blue { color: #fff; }
+/* "Da valutare" (rating 0/assente): chip smorzata con stella vuota */
+.card-score-none { background: rgba(0,0,0,0.45); color: rgba(255,255,255,0.65); border-color: rgba(255,255,255,0.10); }
+.card-score-none i { color: rgba(255,255,255,0.65); font-size: 13px; }
+.list-score-none i { color: var(--text3); }
+.modal-rating.rating-none { font-size: 18px; font-weight: 700; color: var(--text3); letter-spacing: 0; }
 
 /* STATUS: micro-pill dentro lo scrim, in alto-sinistra */
 .card-badge-status {
@@ -685,9 +676,8 @@ body {
     font-size: var(--fs-3);
     font-weight: 700;
     color: var(--text);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    /* niente ellissi: il titolo va a capo per intero, mai tagliato */
+    overflow-wrap: anywhere;
 }
 .list-crown { color: var(--gold); font-size: 12px; margin-right: 5px; }
 .list-sub {
@@ -715,17 +705,25 @@ body {
 .list-row .card-act.act-watch.active { background: var(--green); border-color: var(--green); color: #fff; }
 .list-row .card-act.act-later.active { background: var(--blue);  border-color: var(--blue);  color: #fff; }
 
-/* TITOLO + META in overlay, ancorati in basso → griglia stabile */
+/* TITOLO + META in overlay, ancorati in basso. La fascia scura si adatta
+   all'altezza del testo → titoli di qualsiasi lunghezza sempre leggibili e MAI tagliati. */
 .card-info {
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
     z-index: 2;
-    padding: var(--s-3);
+    padding: 30px var(--s-3) var(--s-3);
     display: flex;
     flex-direction: column;
     gap: 5px;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.94) 0%,
+        rgba(0,0,0,0.86) 40%,
+        rgba(0,0,0,0.5) 72%,
+        rgba(0,0,0,0) 100%
+    );
 }
 .card-title {
     font-size: var(--fs-2);
@@ -734,17 +732,15 @@ body {
     line-height: 1.3;
     letter-spacing: -0.01em;
     margin: 0;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+    text-shadow: 0 1px 4px rgba(0,0,0,0.7);
+    /* nessun line-clamp: il titolo si mostra per intero */
 }
 .card-meta {
     display: flex;
     align-items: center;
     gap: var(--s-2);
     justify-content: flex-start;
+    flex-wrap: wrap;
 }
 .card-year {
     font-size: var(--fs-1);
@@ -1047,6 +1043,55 @@ body {
     font-style: italic;
 }
 .link-none i { font-size: 15px; }
+
+/* ── ADMIN (distintivo + pannello modifica) ──────────── */
+.admin-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    height: 38px;
+    padding: 0 12px;
+    border-radius: var(--r);
+    background: rgba(var(--accent-rgb), 0.15);
+    border: 1px solid rgba(var(--accent-rgb), 0.5);
+    color: var(--accent);
+    font-size: var(--fs-1);
+    font-weight: 700;
+}
+.admin-badge i { font-size: 15px; }
+
+.admin-panel {
+    margin-top: var(--s-5);
+    padding: var(--s-4);
+    border: 1px dashed rgba(var(--accent-rgb), 0.5);
+    border-radius: var(--r-lg);
+    background: rgba(var(--accent-rgb), 0.06);
+}
+.admin-panel-head {
+    display: flex; align-items: center; gap: 7px;
+    font-size: var(--fs-1); font-weight: 800; text-transform: uppercase; letter-spacing: 0.4px;
+    color: var(--accent); margin-bottom: var(--s-3);
+}
+.admin-fields { display: flex; flex-wrap: wrap; gap: var(--s-3); margin-bottom: var(--s-3); align-items: flex-end; }
+.admin-field { display: flex; flex-direction: column; gap: 4px; font-size: var(--fs-0); color: var(--text2); font-weight: 600; }
+.admin-field input[type="number"], .admin-field input[type="text"] {
+    height: 36px; padding: 0 10px;
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--r);
+    color: var(--text); font-family: inherit; font-size: var(--fs-2); outline: none;
+}
+.admin-field input:focus { border-color: var(--accent); }
+.admin-field input[type="number"] { width: 80px; }
+.admin-field-wide { flex: 1; min-width: 160px; }
+.admin-field-wide input { width: 100%; }
+.admin-check { flex-direction: row; align-items: center; gap: 7px; height: 36px; }
+.admin-check input { width: 18px; height: 18px; accent-color: var(--accent); }
+.admin-save {
+    display: inline-flex; align-items: center; gap: 7px;
+    padding: 9px 16px; background: var(--accent); color: #fff;
+    border: none; border-radius: var(--r); font-family: inherit; font-size: var(--fs-2);
+    font-weight: 700; cursor: pointer; transition: opacity 0.15s;
+}
+.admin-save:hover { opacity: 0.9; }
 
 /* ── LOGIN ──────────────────────────────────────────── */
 .login-body {

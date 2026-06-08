@@ -52,6 +52,7 @@
                 <button id="themeToggle" class="btn-nav btn-icon" title="Cambia tema" aria-label="Cambia tema">
                     <i class="ri-moon-line"></i>
                 </button>
+                <span id="adminBadge" class="admin-badge" style="display:none"><i class="ri-shield-star-fill"></i> Admin</span>
                 <span id="userInfo"></span>
                 <button id="loginBtn" class="btn-nav"><i class="ri-user-line"></i> Accedi</button>
                 <button id="logoutBtn" class="btn-nav" style="display:none"><i class="ri-logout-box-line"></i> Esci</button>
@@ -166,6 +167,25 @@
                             <div class="legal-links"></div>
                             <div class="illegal-links"></div>
                         </div>
+                    </div>
+
+                    <!-- PANNELLO ADMIN (visibile solo al proprietario) -->
+                    <div class="admin-panel" id="adminPanel" style="display:none">
+                        <div class="admin-panel-head"><i class="ri-shield-star-fill"></i> Modifica (admin)</div>
+                        <div class="admin-fields">
+                            <label class="admin-field">
+                                <span>Voto</span>
+                                <input type="number" id="admin-rating" min="0" max="10" step="1" placeholder="–">
+                            </label>
+                            <label class="admin-field admin-check">
+                                <input type="checkbox" id="admin-top"><span>TOP</span>
+                            </label>
+                            <label class="admin-field admin-field-wide">
+                                <span>Stato</span>
+                                <input type="text" id="admin-status" placeholder="es. Finito / In corso">
+                            </label>
+                        </div>
+                        <button id="admin-save" class="admin-save"><i class="ri-save-3-line"></i> Salva modifiche</button>
                     </div>
                 </div>
             </div>
