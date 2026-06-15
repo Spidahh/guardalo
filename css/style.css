@@ -444,3 +444,27 @@ em { font-style: italic; }
 .path-card-body .path-foot { margin-top: auto; }
 .path-start { color: var(--accent); font-weight: 800; display: inline-flex; align-items: center; gap: 3px; }
 .path-card:hover .path-start i { transform: translateX(3px); transition: transform .2s; }
+
+/* ═══ v10.5 — vista percorso cinematografica ══════════════════════════════ */
+.path-hero { position: relative; overflow: hidden; background: none; border-bottom: 1px solid var(--line);
+  padding: 0 0 26px; min-height: 236px; display: flex; align-items: flex-end; }
+.path-hero-bg { position: absolute; inset: 0; display: flex; z-index: 0; }
+.path-hero-bg .phb { flex: 1 1 0; background: var(--cc, var(--surface-2)); }
+.path-hero-bg .phb img { width: 100%; height: 100%; object-fit: cover; object-position: center 26%; opacity: 0; transition: opacity .7s; }
+.path-hero-bg .phb img.ld { opacity: .42; }
+.path-hero-veil { position: absolute; inset: 0; background:
+  linear-gradient(180deg, color-mix(in srgb, var(--bg) 50%, transparent), color-mix(in srgb, var(--bg) 74%, transparent) 58%, var(--bg)),
+  linear-gradient(90deg, color-mix(in srgb, var(--accent) 26%, transparent), transparent 56%); }
+.path-hero-content { position: relative; z-index: 1; width: 100%; padding-top: 14px; }
+.path-hero-in { align-items: center; }
+.path-hero-ic-wrap { display: grid; place-items: center; width: 62px; height: 62px; border-radius: 17px; font-size: 31px; color: #fff;
+  background: color-mix(in srgb, var(--accent) 86%, #000); box-shadow: 0 10px 24px -8px color-mix(in srgb, var(--accent) 70%, #000); flex-shrink: 0; }
+.path-hero-aud { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+  color: #fff; background: color-mix(in srgb, var(--accent) 82%, #000); padding: 3px 10px; border-radius: 999px; margin-bottom: 9px; }
+.path-hero-name { margin: 0 0 8px; }
+.path-hero-tag { color: var(--ink); opacity: .92; }
+/* rail dei livelli tematizzato nell'accent del percorso */
+.lv-rail::after { background: linear-gradient(var(--accent), var(--line-2)); opacity: .45; }
+.lv-doing .lv-num { border-color: var(--accent); color: var(--accent); }
+.lv-state-doing { background: color-mix(in srgb, var(--accent) 16%, transparent); color: var(--accent); }
+@media (max-width: 600px) { .path-hero-ic-wrap { width: 50px; height: 50px; font-size: 25px; } }

@@ -382,13 +382,18 @@
         </article>`;
       }).join('');
 
+      const aud = p.audience === 'principiante' ? 'Per iniziare' : p.audience === 'esperto' ? 'Per esperti' : 'Per tutti';
+      const banner = this.pathCovers(p, 8).map(t =>
+        `<span class="phb" style="--cc:${esc(t.coverColor || '#222')}"><img src="${esc(thumbS(t.coverImage))}" alt="" loading="lazy" onload="this.classList.add('ld')" onerror="this.classList.add('ld')"></span>`).join('');
       return `
       <section class="path-hero" style="--accent:${esc(p.accent)}">
-        <div class="wrap">
+        <div class="path-hero-bg">${banner}<span class="path-hero-veil"></span></div>
+        <div class="wrap path-hero-content">
           <a class="back" href="#/"><i class="ri-arrow-left-line"></i> Tutti i percorsi</a>
           <div class="path-hero-in">
-            <i class="${esc(p.icon)} path-hero-ic"></i>
-            <div>
+            <span class="path-hero-ic-wrap"><i class="${esc(p.icon)}"></i></span>
+            <div class="path-hero-txt">
+              <span class="path-hero-aud">${aud}</span>
               <h1 class="path-hero-name">${esc(p.title)}</h1>
               <p class="path-hero-tag">${esc(p.tagline)}</p>
               <div class="path-hero-meta">
@@ -399,7 +404,7 @@
           </div>
         </div>
       </section>
-      <section class="wrap levels">${levels}</section>`;
+      <section class="wrap levels" style="--accent:${esc(p.accent)}">${levels}</section>`;
     }
 
     // ── VISTA: TITOLO ────────────────────────────────────────────────────────────
