@@ -214,6 +214,7 @@
       if (seg === 'p' && arg) { html = this.viewPath(arg); active = 'home'; }
       else if (seg === 't' && arg) { html = this.viewTitle(arg); active = ''; }
       else if (seg === 'esplora') { html = this.viewEsplora(); active = 'esplora'; }
+      else if (seg === 'tempo' && arg) { html = this.viewTempo(arg); active = 'esplora'; }
       else if (seg === 'lista') { html = this.viewLista(); active = 'lista'; }
       else { html = this.viewHome(); active = 'home'; }
 
@@ -223,7 +224,18 @@
       window.scrollTo(0, 0);
       this.afterRender(seg);
     }
-    afterRender(seg) {}
+    afterRender(seg) {
+      const howClose = document.getElementById('howClose');
+      if (howClose) howClose.addEventListener('click', () => {
+        try { localStorage.setItem('guardalo_intro', '1'); } catch (e) {}
+        document.querySelector('.how')?.remove();
+      });
+      const pick = document.getElementById('pickFromList');
+      if (pick) pick.addEventListener('click', () => {
+        const ids = Object.keys(this.toWatch);
+        if (ids.length) location.hash = '#/t/' + ids[Math.floor(Math.random() * ids.length)];
+      });
+    }
 
     // ── COMPONENTI ──────────────────────────────────────────────────────────────
     lengthScale(t, compact) {
@@ -323,6 +335,14 @@
 
       const iconic = [...TITLES].sort((a, b) => (b.popularity || 0) - (a.popularity || 0)).slice(0, 9);
       const heroArt = iconic.map(t => this.miniCover(t)).join('');
+      let introSeen = false; try { introSeen = localStorage.getItem('guardalo_intro') === '1'; } catch (e) {}
+      const how = introSeen ? '' : `
+      <section class="wrap how">
+        <button class="how-x" id="howClose" aria-label="Ho capito"><i class="ri-close-line"></i></button>
+        <div class="how-step"><i class="ri-compass-3-line"></i><div><b>Scegli</b><span>per genere o per umore</span></div></div>
+        <div class="how-step"><i class="ri-information-line"></i><div><b>Scopri</b><span>perché, dove e quanto dura</span></div></div>
+        <div class="how-step"><i class="ri-check-double-line"></i><div><b>Segna</b><span>cosa hai visto e vai avanti</span></div></div>
+      </section>`;
 
       return `
       <section class="hero">
@@ -335,6 +355,7 @@
           <div class="hero-art" aria-hidden="true">${heroArt}</div>
         </div>
       </section>
+      ${how}
       <section class="wrap">
         <div class="sec-head"><h2>Scegli e parti</h2>
           <span class="sec-count">${visible.length} percorsi</span></div>
@@ -484,22 +505,23 @@
 
     recsSections(t) {
       const r = t.recommendations || {};
+      const seen = new Set([t.id]);
+      const take = arr => (arr || []).filter(x => { const id = x.id || x; if (seen.has(id)) return false; seen.add(id); return true; });
+      // "Se ti è piaciuto" raccoglie i consigli AniList + gli affini per atmosfera
+      const simili = take([...(r.simili || []), ...(r.affin || [])]).slice(0, 12);
+      const saga = take(r.saga).slice(0, 12);
+      const autore = take(r.autore).slice(0, 12);
+      const studio = take(r.studio).slice(0, 12);
       const blocks = [
-        ['simili', 'Se ti è piaciuto questo', 'ri-heart-3-line'],
-        ['saga', 'Stessa saga', 'ri-links-line'],
-        ['studio', 'Dallo stesso studio', 'ri-building-line'],
-        ['autore', 'Stesso autore / regista', 'ri-user-star-line'],
-        ['affin', 'Affini per atmosfera', 'ri-shapes-line'],
+        ['Se ti è piaciuto questo', 'ri-heart-3-line', simili, true],
+        ['Stessa saga', 'ri-links-line', saga, false],
+        ['Stesso autore o regista', 'ri-user-star-line', autore, true],
+        ['Dallo stesso studio', 'ri-building-line', studio, true],
       ];
-      const out = blocks.map(([k, label, ic]) => {
-        const list = (r[k] || []).slice(0, 10);
-        if (!list.length) return '';
-        return `<div class="t-sec">
+      return blocks.map(([label, ic, list, why]) => list.length ? `<div class="t-sec">
           <h3 class="t-sec-h"><i class="${ic}"></i> ${label}</h3>
-          ${this.row(list, { why: k !== 'saga' })}
-        </div>`;
-      }).join('');
-      return out;
+          ${this.row(list, { why })}
+        </div>` : '').join('');
     }
 
     // ── VISTA: ESPLORA (editoriale, a scaffali) ─────────────────────────────────
@@ -528,6 +550,12 @@
       <section class="wrap esplora-head">
         <h1>Esplora</h1>
         <p>Niente griglie piatte coi filtri. Scaffali per umore, tempo e voglia del momento. <button class="link-btn" id="esploraSearch">o cerca un titolo →</button></p>
+        <div class="time-chips">
+          <span class="time-chips-lbl">Quanto tempo hai?</span>
+          <a class="time-chip" href="#/tempo/sera">Una sera</a>
+          <a class="time-chip" href="#/tempo/weekend">Un weekend</a>
+          <a class="time-chip" href="#/tempo/maratona">Maratona</a>
+        </div>
       </section>
       <div class="wrap">
         ${later.length >= 3 ? shelf('La tua lista', 'Quello che hai segnato da vedere', 'ri-bookmark-line', later.slice(0, 16)) : ''}
@@ -543,8 +571,9 @@
 
     // ── VISTA: LA MIA LISTA ──────────────────────────────────────────────────────
     viewLista() {
-      const watched = Object.keys(this.watched).map(id => BY_ID.get(id)).filter(Boolean);
-      const later = Object.keys(this.toWatch).map(id => BY_ID.get(id)).filter(Boolean);
+      const order = ['cortissimo', 'corto', 'medio', 'lungo', 'lunghissimo'];
+      const watched = Object.keys(this.watched).map(id => BY_ID.get(id)).filter(Boolean).sort((a, b) => (b.score10 || 0) - (a.score10 || 0));
+      const later = Object.keys(this.toWatch).map(id => BY_ID.get(id)).filter(Boolean).sort((a, b) => order.indexOf(a.lengthBand) - order.indexOf(b.lengthBand));
       const hours = watched.reduce((s, t) => s + (t.coreMinutes || 0), 0) / 60;
 
       const grid = list => `<div class="grid">${list.map(t => this.card(t)).join('')}</div>`;
@@ -552,17 +581,40 @@
 
       return `
       <section class="wrap">
-        <div class="sec-head"><h1>La mia lista</h1></div>
+        <div class="sec-head"><h1>La mia lista</h1>
+          ${later.length ? `<button class="btn-ghost" id="pickFromList"><i class="ri-dice-line"></i> Scegli per me</button>` : ''}</div>
         <div class="list-stats">
           <div class="ls-stat"><b>${watched.length}</b><span>visti</span></div>
           <div class="ls-stat"><b>${later.length}</b><span>da vedere</span></div>
           <div class="ls-stat"><b>${Math.round(hours)}h</b><span>guardate</span></div>
         </div>
-        <div class="sec-head sub"><h2><i class="ri-bookmark-line"></i> Da vedere</h2></div>
+        <div class="sec-head sub"><h2><i class="ri-bookmark-line"></i> Da vedere</h2>${later.length ? '<span class="sec-count">dai più corti</span>' : ''}</div>
         ${later.length ? grid(later) : empty('ri-bookmark-line', 'Niente ancora in lista. Sfoglia i percorsi e salva cosa ti incuriosisce.')}
         <div class="sec-head sub"><h2><i class="ri-check-double-line"></i> Visti</h2></div>
-        ${watched.length ? grid(watched) : empty('ri-check-double-line', 'Segna i titoli che hai già visto: sbloccano i progressi nei percorsi.')}
+        ${watched.length ? grid(watched) : empty('ri-check-double-line', 'Segna i titoli che hai già visto.')}
       </section>`;
+    }
+
+    // ── VISTA: QUANTO TEMPO HAI ──────────────────────────────────────────────────
+    viewTempo(band) {
+      const map = {
+        sera: { label: 'Una sera', sub: 'Si comincia e si finisce stasera', bands: ['cortissimo', 'corto'] },
+        weekend: { label: 'Un weekend', sub: 'Una manciata di episodi da goderti con calma', bands: ['medio'] },
+        maratona: { label: 'Maratona', sub: 'Roba in cui perderti per un bel pezzo', bands: ['lungo', 'lunghissimo'] },
+      };
+      const m = map[band];
+      if (!m) return this.notFound();
+      const list = TITLES.filter(t => m.bands.includes(t.lengthBand)).sort((a, b) => (b.score10 || 0) - (a.score10 || 0));
+      const chips = Object.entries(map).map(([k, v]) =>
+        `<a class="time-chip ${k === band ? 'on' : ''}" href="#/tempo/${k}">${esc(v.label)}</a>`).join('');
+      return `
+      <section class="wrap esplora-head">
+        <a class="back" href="#/esplora"><i class="ri-arrow-left-line"></i> Esplora</a>
+        <h1>Quanto tempo hai?</h1>
+        <div class="time-chips">${chips}</div>
+        <p>${esc(m.sub)} · ${list.length} titoli, dal più votato.</p>
+      </section>
+      <section class="wrap"><div class="grid">${list.map(t => this.card(t)).join('')}</div></section>`;
     }
 
     notFound() {
