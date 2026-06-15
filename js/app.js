@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────
-// GUARDALO v10 — guida interattiva a livelli (vanilla JS, zero build)
+// GUARDALO v10 — guida interattiva agli anime (vanilla JS, zero build)
 // Dati: window.GUARDALO (generato da tools/build.mjs). Stato utente: localStorage
 // (anonimo) + Firebase Firestore (sincronizzato al login). Pubblico per default.
 // ─────────────────────────────────────────────────────────────────────────
@@ -333,7 +333,7 @@
           <div class="path-card-body">
             <p class="path-tag">${esc(p.tagline)}</p>
             <div class="path-foot">
-              <span class="path-levels"><i class="ri-stairs-line"></i> ${p.levels.length} livelli · ${pr.total} titoli</span>
+              <span class="path-levels"><i class="ri-film-line"></i> ${pr.total} titoli</span>
               <span class="path-prog">${progHtml}</span>
             </div>
           </div>
@@ -347,9 +347,9 @@
       <section class="hero">
         <div class="hero-in">
           <div class="hero-copy">
-            <p class="hero-kicker">La guida agli anime, livello dopo livello</p>
-            <h1 class="hero-title">Non un catalogo.<br><em>Un sensei.</em></h1>
-            <p class="hero-sub">Percorsi curati che ti portano dai primi anime alla roba che ti cambia. Niente liste a caso: un ordine, una tesi, e tu che segni cosa hai visto.</p>
+            <p class="hero-kicker">La guida agli anime, senza fronzoli</p>
+            <h1 class="hero-title">Cosa guardare,<br><em>detto dritto.</em></h1>
+            <p class="hero-sub">I migliori di ogni genere, scelti uno per uno: perché valgono, da dove iniziare, quanto ti impegnano. Niente Wikipedia, niente liste a caso — tu pensa solo a guardare.</p>
             <div class="doors">${doors}</div>
           </div>
           <div class="hero-art" aria-hidden="true">${heroArt}</div>
@@ -403,7 +403,7 @@
               <p class="path-hero-tag">${esc(p.tagline)}</p>
               <div class="path-hero-meta">
                 <span class="pp-bar lg"><span style="width:${pr.pct}%"></span></span>
-                <span>${pr.done} di ${pr.total} visti · ${p.levels.length} livelli</span>
+                <span>${pr.done} di ${pr.total} visti</span>
               </div>
             </div>
           </div>
