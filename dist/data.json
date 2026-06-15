@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-15T06:44:41.475Z",
+  "generatedAt": "2026-06-15T06:52:54.423Z",
   "attribution": "Dati e immagini da AniList (anilist.co)",
   "count": 97,
   "titles": [
@@ -156,14 +156,18 @@
           "recommendations"
         ]
       },
-      "hook": "Dietro mura altissime, l'umanità sopravvive nel terrore di giganti che divorano gli uomini per puro piacere. Quando la barriera cede, il giovane Eren giura vendetta. Parte come horror di sopravvivenza claustrofobico e si trasforma in qualcosa di molto più vasto e ambiguo: nessuno qui è solo eroe o solo mostro.",
+      "hook": "Dietro mura altissime, gli ultimi umani campano nel terrore di giganti che li sgranocchiano per puro gusto. Cadono le difese, il giovane Eren giura vendetta. Parte come horror di sopravvivenza claustrofobico e poi cambia pelle: dimentica il manicheismo da battle shonen, qui nessuno è solo eroe o solo mostro.",
       "tone": [
         "cupo",
         "teso",
         "epico",
         "amaro"
       ],
-      "forWho": "Per chi vuole un'opera che cresce di senso e non smette mai di rilanciare la posta.",
+      "forWho": "Per chi vuole un'opera che rilancia la posta a ogni stagione e non ti lascia mai comodo.",
+      "tips": [
+        "Nell'ultima stagione lo studio cambia (da WIT a MAPPA): lo stile si sposta un po', la qualità tiene.",
+        "Storia completamente conclusa, finale incluso."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -654,14 +658,18 @@
           "recommendations"
         ]
       },
-      "hook": "Un mercenario solitario, una spada enorme come un uomo, un mondo medievale crudele e attraversato dal demoniaco. Questo adattamento anni Novanta racconta soprattutto un'amicizia e un'ambizione che bruciano, con un'intensità ruvida e dolente. Attenzione: la regia è datata e il finale lascia volutamente in sospeso.",
+      "hook": "Un mercenario solitario, uno spadone più grande di lui, un medioevo crudele dove il demoniaco è di casa. L'adattamento anni Novanta punta tutto su un'amicizia e un'ambizione che bruciano, ruvide e dolenti. Avvertenza da otaku onesto: regia datata e finale che ti pianta lì in sospeso. Resta il dark fantasy adulto per eccellenza.",
       "tone": [
-        "cupo",
+        "dark fantasy",
         "tragico",
-        "medievale",
-        "ruvido"
+        "ruvido",
+        "edgy"
       ],
-      "forWho": "Per chi cerca dark fantasy adulto e non teme un racconto che ferisce.",
+      "forWho": "Per chi vuole dark fantasy da adulti e non si spaventa di un racconto che ferisce.",
+      "tips": [
+        "L'anime del 1997 copre solo l'arco iniziale (la Golden Age) e si ferma in sospeso, sul più bello.",
+        "Per il seguito ci sono i film e le serie 2016-17 in CG, molto criticate: arrivati qui, conviene passare al manga."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -1212,14 +1220,18 @@
           "recommendations"
         ]
       },
-      "hook": "Ichigo vede i fantasmi, e una notte eredita per caso i poteri di una mietitrice di anime: ora deve dare la caccia agli spiriti corrotti che infestano la sua città. Shonen di spade e duelli dal carisma immediato, con un cast vastissimo e un'estetica fortissima. È lungo: prendilo come una compagnia di lunga durata, non come una corsa.",
+      "hook": "Ichigo vede i fantasmi e una notte si ritrova, per sbaglio, i poteri di una mietitrice di anime: ora caccia gli spiriti corrotti che infestano la città. Battle shonen di spade e duelli, carisma immediato, cast sterminato ed estetica fortissima. È lungo: prendilo come una compagnia di lungo corso, non come uno sprint.",
       "tone": [
-        "azione pura",
+        "battle shonen",
         "carismatico",
         "soprannaturale",
-        "ritmo discontinuo"
+        "ritmo ballerino"
       ],
-      "forWho": "Per chi ama gli shonen di combattimento dallo stile spavaldo e si gode il viaggio lungo.",
+      "forWho": "Per chi ama gli shonen di combattimento con stile spavaldo e non ha fretta di arrivare in fondo.",
+      "tips": [
+        "Anche qui filler a pacchi nelle stagioni vecchie.",
+        "La parte finale (Thousand-Year Blood War) è in adattamento ora, animata benissimo: è la ricompensa per chi resiste."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -1645,14 +1657,15 @@
           "recommendations"
         ]
       },
-      "hook": "Un ragazzo di strada nella metropoli marcia e iperconnessa di Night City sceglie l'unica via per sopravvivere: diventare un mercenario fuorilegge. Dieci episodi soltanto, animati da TRIGGER con un'energia abbagliante e una colonna sonora che pulsa. Bello e crudele in egual misura: il cyberpunk qui non perdona.",
+      "hook": "Un ragazzo di strada nella metropoli marcia e iperconnessa di Night City sceglie l'unica via per non crepare: fare il mercenario fuorilegge. Dieci episodi, TRIGGER a manetta, una colonna sonora che pulsa nelle ossa. Bello e crudele in dose uguale: il cyberpunk qui non fa sconti a nessuno. Breve e devastante.",
       "tone": [
         "adrenalinico",
-        "cupo",
+        "cyberpunk",
         "stiloso",
         "spietato"
       ],
-      "forWho": "Per chi vuole un pugno breve, vibrante e senza rete di sicurezza.",
+      "forWho": "Per chi vuole un pugno corto, abbagliante e senza rete di sicurezza.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -2108,14 +2121,15 @@
           "recommendations"
         ]
       },
-      "hook": "Uno studente geniale trova un quaderno che uccide chiunque vi scriva un nome, e decide di ripulire il mondo dai criminali a modo suo. Ne nasce un duello di intelligenze pura tensione, fatto di mosse, bluff e contromosse. Thriller cerebrale che ti inchioda alla sedia e ti costringe a chiederti da che parte stai.",
+      "hook": "Uno studente geniale trova un quaderno che ammazza chiunque ci scriva sopra un nome, e decide di ripulire il mondo a modo suo. Da lì un duello di cervelli puro: mosse, bluff, contromosse. Thriller cerebrale che ti inchioda alla sedia e ti costringe a chiederti, scomodo, da che parte stai davvero.",
       "tone": [
         "teso",
         "cerebrale",
-        "cupo",
-        "intelligente"
+        "mindgame",
+        "moralmente torbido"
       ],
-      "forWho": "Per chi adora le partite a scacchi tra menti brillanti e moralmente scivolose.",
+      "forWho": "Per chi adora le partite a scacchi tra menti brillanti che scivolano sul lato sbagliato della morale.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -2508,14 +2522,18 @@
           "recommendations"
         ]
       },
-      "hook": "Due fratelli infrangono il tabù supremo dell'alchimia per riportare in vita la madre, e ne pagano un prezzo nella carne. Da lì parte la caccia a una pietra leggendaria, in un mondo che si rivela molto più grande di quanto sembri. Avventura shonen costruita alla perfezione: divertente, commovente, ferocemente coerente.",
+      "hook": "Due fratelli infrangono il tabù supremo dell'alchimia per riportare in vita la madre e lo pagano nella carne. Da lì, caccia a una pietra leggendaria in un mondo molto più grande di come sembra. Avventura shonen costruita col bilancino: divertente, commovente, ferocemente coerente. Di quelle che non sbagliano un colpo.",
       "tone": [
         "avventuroso",
         "epico",
         "commovente",
         "appagante"
       ],
-      "forWho": "Per chi vuole un'avventura completa che non sbaglia un colpo dall'inizio alla fine.",
+      "forWho": "Per chi vuole un'avventura completa che parte fortissimo e tiene il punto fino ai titoli di coda.",
+      "tips": [
+        "È QUESTA la versione da guardare: Brotherhood segue il manga dall'inizio alla fine.",
+        "La serie del 2003, uscita prima che il manga finisse, dalla seconda metà si inventa una storia e un finale tutti suoi. Bella, ma è un'altra cosa."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -3021,14 +3039,18 @@
           "recommendations"
         ]
       },
-      "hook": "L'umanità vive sepolta sottoterra, finché un ragazzo timido e un fratello adottivo spavaldo decidono di bucare il soffitto del mondo e raggiungere la superficie. Robot giganti, urla, trapani e una fede testarda nel futuro: un inno all'eccesso che parte buffo e diventa commovente. Lasciati travolgere, è il punto.",
+      "hook": "L'umanità vive sepolta sottoterra, finché un ragazzo timido e un fratellone spavaldo decidono di bucare il soffitto del mondo e salire in superficie. Mecha giganti, urla, trapani e una fede testarda nel domani: un inno all'eccesso che parte buffo e ti frega col cuore. Spegni il cervello e fatti travolgere, è il punto.",
       "tone": [
+        "mecha",
         "esaltante",
         "esagerato",
-        "commovente",
-        "energico"
+        "da lacrimuccia"
       ],
-      "forWho": "Per chi vuole gridare, esaltarsi e farsi trascinare oltre ogni misura.",
+      "forWho": "Per chi vuole urlare, esaltarsi e farsi trascinare ben oltre ogni misura.",
+      "tips": [
+        "Parte come cafonata simpatica e poi scala fino all'assurdo cosmico, di proposito: fidati del crescendo.",
+        "I due film riassuntivi sono opzionali, la serie è la via giusta."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -3495,14 +3517,18 @@
           "recommendations"
         ]
       },
-      "hook": "Gon parte alla ricerca del padre diventando Hunter, una professione tanto affascinante quanto letale. Nasce come avventura solare con amici memorabili, ma sotto la superficie pulsa un'intelligenza tattica e una crudeltà che non ti aspetti. Un'opera che continua a reinventarsi e a sorprenderti.",
+      "hook": "Gon parte a cercare il padre diventando Hunter, un mestiere tanto affascinante quanto letale. Nasce come avventura solare con amici memorabili, ma sotto la superficie pulsa un'intelligenza tattica e una crudeltà che non vedi arrivare. Uno shonen che si reinventa di continuo e si rifiuta di accontentarsi delle sue stesse regole.",
       "tone": [
         "avventuroso",
         "tattico",
         "imprevedibile",
-        "scuro sotto la superficie"
+        "dark sotto la vernice"
       ],
-      "forWho": "Per chi vuole uno shonen che pensa, sorprende e non si accontenta mai delle sue regole.",
+      "forWho": "Per chi vuole uno shonen che ragiona, sorprende e non gioca mai facile.",
+      "tips": [
+        "Guarda la versione 2011 (quella in catalogo): adatta il manga molto più avanti del vecchio anime del 1999.",
+        "Finisce su un arco altissimo… e poi il manga è in pausa quasi perenne: preparati."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -3936,14 +3962,18 @@
           "recommendations"
         ]
       },
-      "hook": "Uno studente scopre di avere un potere spettrale che combatte al suo posto, e parte con il nonno per l'Egitto a fermare un antico vampiro. Questo vecchio OVA condensa lo scontro più iconico della saga in poche puntate cupe e violente, lontane dal tono pop della serie moderna. Un assaggio crudo e datato dell'universo JoJo.",
+      "hook": "Uno studente scopre di avere uno spettro che combatte al posto suo e parte col nonno per l'Egitto a fermare un vampiro antico. Questo vecchio OVA condensa lo scontro più iconico della saga in poche puntate cupe e violente, lontane dal tono pop della serie moderna. Un assaggio crudo e d'annata dell'universo JoJo.",
       "tone": [
         "cupo",
         "bizzarro",
         "violento",
-        "datato"
+        "vintage"
       ],
-      "forWho": "Per chi è curioso delle origini di JoJo in versione horror e d'annata.",
+      "forWho": "Per chi è curioso delle origini di JoJo in versione horror e vecchia scuola.",
+      "tips": [
+        "Si guarda in ordine d'uscita: ogni 'parte' cambia protagonista, epoca e stile.",
+        "Le prime due (Phantom Blood / Battle Tendency) sono brevi e un po' datate: è dalla Parte 3 (Stardust Crusaders) che il fenomeno esplode."
+      ],
       "recommendations": {
         "simili": [],
         "saga": [],
@@ -4505,14 +4535,18 @@
           "recommendations"
         ]
       },
-      "hook": "Un ragazzino orfano, disprezzato dal villaggio per il demone sigillato dentro di lui, sogna di diventarne il capo riconosciuto da tutti. Storia di ninja, di amicizia e di rivalità che cresce con i suoi protagonisti. È enorme e a tratti diluito, ma il suo cuore sul tema della solitudine e del riscatto sa colpire forte.",
+      "hook": "Un orfano, disprezzato dal villaggio per il demone sigillato dentro di lui, sogna di diventarne il capo riconosciuto da tutti. Ninja, amicizia e rivalità che cresce coi protagonisti. È enorme e a tratti annacquato dai filler, ma quando va a colpire sulla solitudine e il riscatto, colpisce dove fa male. Saga generazionale, nel bene e nel male.",
       "tone": [
         "coming of age",
-        "avventuroso",
+        "battle shonen",
         "emotivo",
-        "diluito"
+        "annacquato"
       ],
-      "forWho": "Per chi vuole crescere insieme ai personaggi in una saga generazionale lunga una vita.",
+      "forWho": "Per chi vuole crescere insieme ai personaggi in una saga lunga una vita, filler compresi.",
+      "tips": [
+        "Pieno di filler: cerca una 'guida solo canon' per saltarli senza perderti niente.",
+        "Ordine: Naruto → Naruto Shippuden. Boruto è il seguito sulla generazione dopo, del tutto opzionale."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -4987,14 +5021,19 @@
           "recommendations"
         ]
       },
-      "hook": "Adolescenti chiamati a pilotare enormi macchine biomeccaniche contro misteriosi nemici chiamati Angeli, mentre il vero campo di battaglia è la psiche fragile di chi sta dentro l'abitacolo. Sotto il mecha si nasconde uno studio spietato sulla depressione e il bisogno d'amore. Ostico, datato e indimenticabile: lascia che ti scavi dentro.",
+      "hook": "Adolescenti chiamati a pilotare enormi macchine biomeccaniche contro nemici chiamati Angeli, mentre il vero campo di battaglia è la psiche a pezzi di chi sta nell'abitacolo. Sotto il mecha c'è uno studio spietato su depressione e bisogno d'amore. Ostico, datato, indimenticabile: il mindfuck che ha spaccato in due il medium. Lascia che ti scavi dentro.",
       "tone": [
         "psicologico",
         "introspettivo",
         "angosciante",
-        "sperimentale"
+        "mindfuck"
       ],
-      "forWho": "Per chi cerca un'opera che usa i robot per parlare del dolore di esistere.",
+      "forWho": "Per chi cerca un anime che usa i robot per parlare del dolore di esistere.",
+      "tips": [
+        "Il finale della serie (ep. 25-26) è astratto e psicologico: la produzione era a corto di soldi e tempo.",
+        "Per la conclusione 'concreta' degli eventi guarda il film The End of Evangelion.",
+        "I quattro film Rebuild (2007-2021) sono un reboot alternativo, non un seguito: vedili solo dopo la serie."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -5663,7 +5702,7 @@
           "recommendations"
         ]
       },
-      "hook": "Un ragazzo di gomma sogna di diventare Re dei Pirati e raduna una ciurma per cercare il tesoro più grande del mondo. Avventura sterminata e generosa, capace di alternare la risata sguaiata alla commozione più sincera, con un worldbuilding che cresce all'infinito. È un impegno enorme: prendilo come un viaggio di anni, non di settimane.",
+      "hook": "Un ragazzo di gomma vuole diventare Re dei Pirati e raduna una ciurma per andarsi a prendere il tesoro più grande del mondo. Avventura sconfinata e generosa, che passa dalla risata sguaiata alla commozione vera senza stonare, con un worldbuilding che cresce all'infinito. Impegno enorme: è un viaggio di anni, non di weekend.",
       "tone": [
         "avventuroso",
         "spassoso",
@@ -5671,6 +5710,10 @@
         "smisurato"
       ],
       "forWho": "Per chi vuole imbarcarsi in un viaggio lunghissimo e affezionarsi davvero a una ciurma.",
+      "tips": [
+        "1000+ episodi spaventano, ma esistono guide per saltare i filler e alleggerire.",
+        "È in arrivo anche un remake ('The One Piece'): se l'idea della maratona ti blocca, puoi aspettarlo."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -6148,14 +6191,18 @@
           "recommendations"
         ]
       },
-      "hook": "Un sedicente scienziato pazzo e i suoi amici scoprono per caso come mandare messaggi nel passato. Parte come commedia geek ad Akihabara e si stringe, episodio dopo episodio, in uno dei thriller di fantascienza più tesi mai animati. Abbi pazienza con il primo blocco: sta caricando la molla.",
+      "hook": "Un sedicente scienziato pazzo e i suoi sfigati di laboratorio scoprono per sbaglio come mandare messaggi nel passato. Parte come commedia geek ad Akihabara e si stringe, episodio dopo episodio, in uno dei thriller sci-fi più tesi mai animati. Regge il primo blocco lento: sta solo caricando la molla.",
       "tone": [
         "geek",
         "teso",
-        "fantascienza cerebrale",
-        "crescendo lento"
+        "sci-fi cerebrale",
+        "slow burn"
       ],
-      "forWho": "Per chi ama gli intrecci che ricompensano la pazienza.",
+      "forWho": "Per chi ama gli incastri che ripagano la pazienza.",
+      "tips": [
+        "Il primo blocco di episodi è lento di proposito: sta piazzando i pezzi. Resisti.",
+        "'Steins;Gate 0' è un sequel/parallelo, da vedere solo dopo. La serie alternativa puoi saltarla."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -6530,14 +6577,15 @@
           "recommendations"
         ]
       },
-      "hook": "Un ragazzo torna sull'isola natale per il funerale di un'amica d'infanzia, ma qualcosa non torna nella sua morte. Mistero estivo e soprannaturale dalla trama a incastro perfetto, che mescola atmosfera marina e suspense crescente. Una di quelle storie costruite come un orologio: ogni dettaglio conta.",
+      "hook": "Un ragazzo torna sull'isola natale per il funerale di un'amica d'infanzia, ma c'è qualcosa che non quadra in quella morte. Mystery estivo e soprannaturale a incastro perfetto, atmosfera marina e suspense che sale costante. Una di quelle storie montate come un orologio svizzero: ogni dettaglio è lì per un motivo.",
       "tone": [
         "teso",
-        "misterioso",
+        "mystery",
         "estivo",
-        "ad incastro"
+        "a incastro"
       ],
-      "forWho": "Per chi ama i thriller dalla meccanica precisa, dove ogni indizio va al suo posto.",
+      "forWho": "Per chi ama i thriller dalla meccanica precisa, dove ogni indizio finisce esattamente al suo posto.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -7002,14 +7050,15 @@
           "recommendations"
         ]
       },
-      "hook": "Durante il proibizionismo americano, un uomo torna nella città che gli ha ucciso la famiglia e si insinua nella famiglia mafiosa responsabile, coltivando in silenzio la propria vendetta. Dramma criminale sobrio ed elegante, dal passo controllato e dall'atmosfera fredda. Una storia di sangue raccontata senza fretta e senza redenzioni facili.",
+      "hook": "Durante il proibizionismo americano, un uomo torna nella città che gli ha sterminato la famiglia e si infila nella cosca responsabile, covando in silenzio la vendetta. Crime drama sobrio ed elegante, passo controllato, atmosfera gelida. Sangue raccontato senza fretta e senza redenzioni a buon mercato. Slow burn col cappotto buono.",
       "tone": [
-        "cupo",
+        "noir",
         "elegante",
         "vendicativo",
-        "controllato"
+        "slow burn"
       ],
-      "forWho": "Per chi ama i drammi di mafia adulti e il fascino amaro della vendetta lenta.",
+      "forWho": "Per chi ama i drammi di mafia da adulti e il fascino amaro della vendetta servita fredda.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -7425,14 +7474,15 @@
           "recommendations"
         ]
       },
-      "hook": "Due ragazzini di Osaka, legati a una galleria commerciale che sta crollando, finiscono risucchiati in mondi paralleli che parodiano ogni genere immaginabile. Commedia surreale, demenziale e velocissima, che sotto la slapstick nasconde una tenerezza inattesa sul lasciar andare l'infanzia. Caotica per scelta, ma con un cuore.",
+      "hook": "Due ragazzini di Osaka, legati a una galleria commerciale che sta crollando, finiscono risucchiati in mondi paralleli che parodiano ogni genere immaginabile. Commedia surreale, demenziale e velocissima che sotto la slapstick nasconde una tenerezza inattesa sul lasciar andare l'infanzia. Caotica per scelta, ma con un cuore che batte.",
       "tone": [
         "demenziale",
         "surreale",
         "parodico",
         "agrodolce"
       ],
-      "forWho": "Per chi ama l'umorismo assurdo e si fa sorprendere da una commozione finale.",
+      "forWho": "Per chi ama l'umorismo assurdo e si lascia fregare da una commozione che arriva sul finale.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -7768,14 +7818,15 @@
           "recommendations"
         ]
       },
-      "hook": "Un ragazzo scopre nel modo peggiore di essere un Ajin, un immortale braccato dal mondo intero come una cavia da catturare. Thriller d'azione teso e cupo sulla fuga e sull'istinto di sopravvivenza, con poteri inquietanti e un antagonista magnetico. L'animazione in CGI divide: dalle un episodio per abituarti.",
+      "hook": "Un ragazzo scopre nel modo peggiore di essere un Ajin, un immortale braccato dal mondo intero come cavia da catturare. Thriller d'azione teso e cupo, tutto fuga e istinto di sopravvivenza, poteri inquietanti e un antagonista magnetico. La CGI divide, lo so: dagli un episodio per farci l'occhio e poi non molli più.",
       "tone": [
         "teso",
         "cupo",
         "adrenalinico",
         "spietato"
       ],
-      "forWho": "Per chi vuole un thriller di inseguimenti senza eroi puliti e con un cattivo indimenticabile.",
+      "forWho": "Per chi vuole un thriller di inseguimenti senza eroi puliti e con un cattivo che resta in testa.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -8167,14 +8218,15 @@
           "recommendations"
         ]
       },
-      "hook": "In un impero marcio fino al midollo, un ragazzo di campagna si unisce a una squadra di assassini che combatte la corruzione lama alla mano. Fantasy d'azione che parte spavaldo e poi si fa improvvisamente spietato: nessun personaggio è al sicuro, è proprio lì sta la sua scossa. Brutale, diretto, senza rete.",
+      "hook": "In un impero marcio fino al midollo, un ragazzo di campagna si unisce a una squadra di assassini che ripulisce la corruzione lama alla mano. Parte spavaldo come tanti battle shōnen, poi cambia marcia: qui nessuno è blindato dalla trama, e quella è esattamente la scossa. Brutale, diretto, senza rete.",
       "tone": [
         "brutale",
-        "azione cupa",
+        "edgy",
         "spietato",
         "ritmo serrato"
       ],
-      "forWho": "Per chi vuole un fantasy d'azione che non risparmia nessuno è non chiede permesso.",
+      "forWho": "Per chi vuole un fantasy d'azione che non risparmia nessuno e non chiede permesso.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -8662,14 +8714,18 @@
           "recommendations"
         ]
       },
-      "hook": "Neo-Tokyo, trentun anni dopo la guerra: bande in moto sfrecciano in una metropoli al neon che cova un segreto sepolto sotto il cemento. Quando un membro della gang risveglia un potere immenso, l'amicizia diventa apocalisse. Pietra miliare cyberpunk dall'animazione tuttora sbalorditiva: denso, viscerale, monumentale.",
+      "hook": "Neo-Tokyo, trentun anni dopo la bomba: gang in moto sfrecciano in una metropoli al neon che cova un segreto sotto il cemento. Un membro della banda risveglia un potere immenso e l'amicizia degenera in apocalisse. Pietra angolare cyberpunk: animazione ancora oggi indecente, densa, viscerale, monumentale.",
       "tone": [
         "cyberpunk",
         "viscerale",
         "distopico",
         "monumentale"
       ],
-      "forWho": "Per chi vuole vedere da dove arriva metà dell'immaginario fantascientifico moderno.",
+      "forWho": "Per chi vuole vedere da dove ha rubato tutto metà della fantascienza che ama.",
+      "tips": [
+        "Film unico del 1988, ancora oggi un punto di riferimento tecnico.",
+        "Il manga è molto più ampio, ma l'anime regge da solo: guardalo in alta definizione e lingua originale."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -9138,14 +9194,15 @@
           "recommendations"
         ]
       },
-      "hook": "In una Kansai distopica e abbagliante, sei criminali leggendari vengono ingaggiati da un misterioso gatto nero per un colpo impossibile, e una ragazza qualunque finisce risucchiata nel loro mondo. Stile esplosivo, ritmo da treno in corsa e un'estetica neon-cyberpunk che non si ferma mai a respirare. Adrenalina pura con un'anima inattesa.",
+      "hook": "In una Kansai distopica e abbagliante, sei criminali leggendari vengono ingaggiati da un gatto nero parlante per un colpo impossibile, e una ragazza qualunque ci finisce dentro fino al collo. Stile esplosivo, ritmo da treno deragliato, estetica neon-cyberpunk che non si ferma a respirare. Adrenalina pura, con un'anima che non ti aspetti.",
       "tone": [
         "esplosivo",
         "cyberpunk",
         "ritmo serrato",
         "stiloso"
       ],
-      "forWho": "Per chi vuole stile, velocità e criminali carismatici senza mezze misure.",
+      "forWho": "Per chi vuole stile, velocità e criminali carismatici, senza mezze misure.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -9605,14 +9662,15 @@
           "recommendations"
         ]
       },
-      "hook": "In un mondo dove la magia è tutto, Asta è l'unico a nascerne privo: dovrà conquistare il titolo di Imperatore Magico a forza di urla, sudore e testardaggine. Shounen classico fino all'osso, con un avvio chiassoso che mette alla prova la pazienza prima di ingranare. Poi diventa l'epica corale che promette di essere.",
+      "hook": "In un mondo dove la magia è tutto, Asta nasce l'unico senza un grammo di potere: il titolo di Imperatore Magico se lo prenderà a forza di urla, sudore e testa dura. Battle shōnen classico fino all'osso, con un avvio chiassoso che mette alla prova i timpani. Regge il rodaggio: poi ingrana e diventa l'epica corale che promette.",
       "tone": [
-        "shounen classico",
+        "battle shōnen",
         "energico",
         "epico",
-        "crescendo lento"
+        "slow burn"
       ],
-      "forWho": "Per chi ama gli underdog che gridano e non mollano mai, e perdona un inizio rumoroso.",
+      "forWho": "Per chi tifa underdog che gridano e non mollano, e perdona un inizio a tutto volume.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -10049,14 +10107,15 @@
           "recommendations"
         ]
       },
-      "hook": "Michiru si sveglia un giorno trasformata in donna-tanuki e si rifugia ad Anima City, enclave per uomini-bestia. Lì incontra Shirou, un lupo che disprezza gli umani, e insieme si ritrovano dentro qualcosa di più grande di loro. TRIGGER firma una favola urbana colorata, dinamica, con un cuore sotto la pelliccia.",
+      "hook": "Michiru si sveglia trasformata in donna-tanuki e si rifugia ad Anima City, enclave per uomini-bestia. Lì incrocia Shirou, un lupo che gli umani non li digerisce, e i due finiscono in qualcosa di più grande di loro. TRIGGER firma una favola urbana satura di colore e movimento, con un cuore che batte sotto la pelliccia.",
       "tone": [
         "colorato",
         "dinamico",
-        "vivace",
+        "sakuga",
         "favola urbana"
       ],
-      "forWho": "Per chi vuole azione brillante e un discorso sull'appartenenza sotto le orecchie da animale.",
+      "forWho": "Per chi vuole azione brillante e un discorso sull'appartenenza sotto le orecchie da bestia.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -10448,14 +10507,15 @@
           "recommendations"
         ]
       },
-      "hook": "In una Londra nascosta e parallela, due streghe lavorano per un'agenzia che protegge e gestisce i draghi invisibili ai più. Tre episodi soltanto: un assaggio breve e raffinato, più biglietto da visita di un mondo che una storia intera. Eleganza visiva e ritmo agile, dallo stesso autore di Bleach.",
+      "hook": "In una Londra nascosta e parallela, due streghe lavorano per un'agenzia che gestisce i draghi invisibili ai comuni mortali. Tre episodi e basta: più biglietto da visita di un mondo che storia compiuta. Eleganza visiva, ritmo agile, e la firma dell'autore di Bleach. Sappilo: è un antipasto, non il piatto.",
       "tone": [
         "elegante",
         "urban fantasy",
         "agile",
         "stiloso"
       ],
-      "forWho": "Per chi vuole un boccone breve e curato, sapendo che è solo un antipasto.",
+      "forWho": "Per chi vuole un boccone breve e curato, sapendo già che è solo un assaggio.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -10848,14 +10908,18 @@
           "recommendations"
         ]
       },
-      "hook": "Denji è un ragazzo schiacciato dai debiti che caccia diavoli insieme al suo cane-motosega Pochita, finché un patto non lo trasforma in qualcosa di nuovo. Sotto la violenza spettacolare batte un cuore disperatamente umano: fame, solitudine, desideri minuscoli. Animazione cinematografica MAPPA, sporca e magnifica. Crudo e malinconico insieme.",
+      "hook": "Denji è un ragazzino soffocato dai debiti che caccia diavoli col suo cane-motosega Pochita, finché un patto non lo rifà da capo. Sotto la violenza spettacolare batte qualcosa di disperatamente umano: fame, solitudine, desideri minuscoli. Sakuga MAPPA cinematografico, sporco e magnifico. Crudo e malinconico nello stesso respiro.",
       "tone": [
         "crudo",
         "viscerale",
         "malinconico",
         "cinematografico"
       ],
-      "forWho": "Per chi vuole sangue e caos ma anche un protagonista che spezza il cuore.",
+      "forWho": "Per chi vuole sangue e caos ma anche un protagonista che ti spezza il cuore.",
+      "tips": [
+        "Studio MAPPA, regia 'cinematografica' divisiva: o la ami o ti spiazza.",
+        "La Stagione 1 è solo l'inizio: la storia continua nel film 'Reze Arc'."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -11305,7 +11369,7 @@
           "recommendations"
         ]
       },
-      "hook": "Mostri mangia-uomini infestano la terra, e le uniche a fronteggiarli sono guerriere ibride dagli occhi argentei. Clare cammina di battaglia in battaglia con una vendetta sepolta nel passato. Dark fantasy cupo e severo, con una protagonista glaciale e una violenza che non si abbellisce. Solitario e tagliente come la sua spada.",
+      "hook": "Mostri mangia-uomini infestano la terra, e a fronteggiarli ci sono solo guerriere ibride dagli occhi d'argento. Clare cammina di battaglia in battaglia con una vendetta sepolta nel passato. Dark fantasy cupo e severo, protagonista glaciale, violenza che non si abbellisce. Solitario e tagliente quanto la sua spada.",
       "tone": [
         "dark fantasy",
         "cupo",
@@ -11313,6 +11377,7 @@
         "malinconico"
       ],
       "forWho": "Per chi cerca una guerriera silenziosa e un mondo dove anche il predatore è preda.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -11767,7 +11832,7 @@
           "recommendations"
         ]
       },
-      "hook": "In un mondo dominato da un impero conquistatore, un principe esiliato ottiene per caso un potere assoluto sulla volontà altrui e lo usa per scatenare una ribellione. Thriller strategico con mecha, partite a scacchi umane e dilemmi morali sempre più scomodi. Magnetico, teatrale, costruito per farti dubitare di chi tifare.",
+      "hook": "In un mondo dominato da un impero conquistatore, un principe esiliato si ritrova in mano un potere assoluto sulla volontà altrui e lo usa per accendere una ribellione. Mecha, partite a scacchi tra esseri umani e dilemmi morali sempre più scomodi. Magnetico, teatrale, costruito apposta per farti dubitare di chi tifare.",
       "tone": [
         "strategico",
         "teatrale",
@@ -11775,6 +11840,10 @@
         "moralmente ambiguo"
       ],
       "forWho": "Per chi ama gli antieroi geniali e i piani che si ribaltano all'ultimo respiro.",
+      "tips": [
+        "Le due stagioni sono un'unica storia: vanno viste di fila.",
+        "Ci sono film riassuntivi e un seguito (Lelouch of the Re;surrection), ma per la storia originale basta e avanza la serie TV."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -12242,7 +12311,7 @@
           "recommendations"
         ]
       },
-      "hook": "Cacciatori di taglie alla deriva nel sistema solare, jazz che riempie il vuoto tra una stella e l'altra, passati che nessuno riesce davvero a lasciarsi alle spalle. Episodico, cool, malinconico: ogni puntata è un piccolo film. Un classico senza tempo che parla di solitudine con un sorriso storto. See you, space cowboy.",
+      "hook": "Cacciatori di taglie alla deriva nel sistema solare, jazz a riempire il vuoto tra una stella e l'altra, passati che nessuno riesce davvero a scrollarsi di dosso. Episodico, cool, malinconico: ogni puntata è un piccolo film. Un classico senza tempo che parla di solitudine con un sorriso storto. See you, space cowboy.",
       "tone": [
         "cool",
         "malinconico",
@@ -12250,6 +12319,10 @@
         "episodico"
       ],
       "forWho": "Per chi vuole stile, blues spaziale e storie che restano addosso a luci spente.",
+      "tips": [
+        "Episodico: si gode benissimo a puntate sciolte, senza maratona obbligata.",
+        "Il film (Knockin' on Heaven's Door) si colloca a metà serie; guardalo pure dopo. La serie live-action Netflix puoi ignorarla."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -12733,7 +12806,7 @@
           "recommendations"
         ]
       },
-      "hook": "Una medium che crede ai fantasmi ma non agli alieni, un nerd dell'occulto convinto del contrario: per darsi torto a vicenda finiscono entrambi nel paranormale fino al collo. Caos visivo travolgente, comicità sfrenata e, sotto, una storia d'amore adolescenziale sorprendentemente tenera. Frenetico, assurdo, irresistibile.",
+      "hook": "Una medium che crede ai fantasmi ma non agli alieni, un nerd dell'occulto convinto dell'esatto contrario: per darsi torto a vicenda finiscono entrambi nel paranormale fino al collo. Caos visivo travolgente, comicità sfrenata e, sotto, una storia d'amore adolescenziale sorprendentemente tenera. Frenetico, assurdo, irresistibile.",
       "tone": [
         "frenetico",
         "demenziale",
@@ -12741,6 +12814,7 @@
         "tenero"
       ],
       "forWho": "Per chi vuole azione scatenata, risate e batticuore tutto nello stesso respiro.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -13173,7 +13247,7 @@
           "recommendations"
         ]
       },
-      "hook": "Uno studente apre per curiosità un'app misteriosa e si ritrova catapultato in un gioco mortale dove i giocatori si affrontano con poteri chiamati Sigil, senza spiegazioni. Survival ritmato sui meccanismi del death game: regole da scoprire, alleanze fragili, sopravvivenza prima di tutto. Diretto e teso, da divorare.",
+      "hook": "Uno studente apre per curiosità un'app misteriosa e si ritrova catapultato in un death game dove i giocatori si scannano con poteri chiamati Sigil, zero spiegazioni in omaggio. Survival ritmato sui suoi meccanismi: regole da decifrare al volo, alleanze di carta, sopravvivere prima di tutto. Diretto, teso, da divorare.",
       "tone": [
         "teso",
         "survival",
@@ -13181,6 +13255,7 @@
         "adrenalinico"
       ],
       "forWho": "Per chi vuole un death game essenziale, veloce e senza giri di parole.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -13620,14 +13695,15 @@
           "recommendations"
         ]
       },
-      "hook": "Unico sopravvissuto a un massacro, Ganta viene incastrato e rinchiuso in una prigione-parco divertimenti dove i detenuti combattono fino alla morte per il pubblico. Survival cupo e disperato, con un potere legato al sangue e segreti più grandi di lui. Crudele, claustrofobico, irrequieto fin dal primo minuto.",
+      "hook": "Unico sopravvissuto a un massacro, Ganta viene incastrato e sbattuto in una prigione-parco divertimenti dove i detenuti si ammazzano per il pubblico pagante. Survival cupo e disperato, con un potere legato al sangue e segreti più grandi di lui. Crudele, claustrofobico, coi nervi a fior di pelle dal primo minuto.",
       "tone": [
         "cupo",
         "disperato",
-        "violento",
+        "edgy",
         "claustrofobico"
       ],
-      "forWho": "Per chi cerca un survival carcerario senza speranza e con i nervi sempre tesi.",
+      "forWho": "Per chi cerca un survival carcerario senza speranza e con la tensione sempre in canna.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -14093,14 +14169,15 @@
           "recommendations"
         ]
       },
-      "hook": "Quando due persone muoiono nello stesso istante, si risvegliano in un bar elegante tra i mondi dove un barista impassibile le costringe a giochi apparentemente innocui. Ma la posta è l'anima, e ogni partita ne smaschera la vera natura. Drammatico, psicologico, sorprendentemente umano. Eleganza inquieta in ogni bicchiere.",
+      "hook": "Quando due persone muoiono nello stesso istante, si risvegliano in un bar elegante sospeso tra i mondi, dove un barista impassibile le costringe a giochi solo in apparenza innocui. La posta è l'anima, e ogni partita smaschera chi sei davvero. Drammatico, psicologico, sorprendentemente umano. Eleganza inquieta in ogni bicchiere.",
       "tone": [
         "psicologico",
         "elegante",
         "introspettivo",
         "inquietante"
       ],
-      "forWho": "Per chi vuole un dramma da camera che frughi nell'animo, un episodio alla volta.",
+      "forWho": "Per chi vuole un dramma da camera che ti fruga dentro, un episodio alla volta.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -14490,14 +14567,15 @@
           "recommendations"
         ]
       },
-      "hook": "Su una fortezza mobile alta tremila metri, l'umanità superstite combatte mostri chiamati Gadoll: c'è chi è nato per battersi e chi no. L'incontro tra una ragazza piena di sogni e un riparatore disilluso accende qualcosa. Abbi pazienza con i primi episodi: questo mondo nasconde una sorpresa strutturale. Avventura sci-fi col cuore.",
+      "hook": "Su una fortezza mobile alta tremila metri, l'umanità superstite combatte mostri chiamati Gadoll: c'è chi nasce per battersi e chi no. Una ragazza piena di sogni incrocia un riparatore disilluso e qualcosa scatta. Regge i primi episodi: questo mondo nasconde una sorpresa strutturale che ti fa rivedere tutto. Sci-fi col cuore.",
       "tone": [
         "avventuroso",
         "sci-fi",
-        "sorprendente",
+        "mindfuck",
         "energico"
       ],
-      "forWho": "Per chi ama le storie che, dopo qualche puntata, ribaltano le carte in tavola.",
+      "forWho": "Per chi ama le storie che, dopo qualche puntata, ti ribaltano il tavolo in faccia.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -14972,14 +15050,17 @@
           "recommendations"
         ]
       },
-      "hook": "Giappone Taisho: dopo che un demone gli stermina la famiglia e trasforma la sorella, Tanjiro giura di renderla di nuovo umana e si fa cacciatore di demoni. Shounen dal cuore gentile e dall'animazione ufotable semplicemente sontuosa: i combattimenti sono coreografie luminose. Toccante, spettacolare, accessibile a chiunque.",
+      "hook": "Giappone Taisho: un demone gli stermina la famiglia e gli trasforma la sorella, così Tanjiro giura di renderla di nuovo umana e si fa cacciatore di demoni. Shōnen dal cuore gentile e sakuga ufotable semplicemente osceno: i combattimenti sono coreografie luminose. Toccante, spettacolare, alla portata di chiunque.",
       "tone": [
         "spettacolare",
         "commovente",
-        "shounen",
-        "luminoso"
+        "shōnen",
+        "sakuga"
       ],
       "forWho": "Per chi vuole un eroe gentile e i duelli più belli da vedere degli ultimi anni.",
+      "tips": [
+        "Ordine: Stagione 1 → film 'Il treno Mugen' → Stagione 2 → e così via. Il film non è un extra, è la trama che continua."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -15438,14 +15519,15 @@
           "recommendations"
         ]
       },
-      "hook": "Dante, mezzo uomo e mezzo demone, fa il cacciatore di mostri per chi può pagare, sciabola in una mano e due pistole nell'altra. Tratto dal videogioco, è azione stilosa ed episodica, più atmosfera dark e pose da rockstar che trama profonda. Sigarette, jukebox e demoni: cool fino in fondo, senza pretese.",
+      "hook": "Dante, mezzo uomo e mezzo demone, fa il cacciatore di mostri a pagamento: spadone in una mano, due pistole nell'altra. Tratto dal videogioco, è azione stilosa ed episodica, più atmosfera dark e pose da rockstar che trama profonda. Sigarette, jukebox e demoni: cool fino in fondo, e senza pretese di esserlo altro.",
       "tone": [
         "stiloso",
         "dark",
         "episodico",
         "spavaldo"
       ],
-      "forWho": "Per chi vuole azione cool e atmosfera da fumetto noir, senza cercarci dramma.",
+      "forWho": "Per chi vuole azione cool e atmosfera da fumetto noir, senza andarci a cercare il dramma.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -15846,14 +15928,18 @@
           "recommendations"
         ]
       },
-      "hook": "Akira è un ragazzo che piange per il dolore degli altri, finché un amico non lo trascina in una guerra antica tra umani e demoni. Yuasa prende un classico anni '70 e lo riscrive a tutta velocità: animazione liquida, ritmo febbrile, una tenerezza che convive con la brutalità. Crudo, sensuale, doloroso — non è una visione comoda.",
+      "hook": "Akira piange per il dolore degli altri, finche un amico non lo trascina in una guerra antica tra umani e demoni. Yuasa prende un classico anni Settanta e lo spinge a tavoletta: animazione liquida, ritmo febbrile, una tenerezza che convive con la brutalita. Crudo, sensuale, doloroso. Comodo non lo e mai, e va benissimo cosi.",
       "tone": [
         "viscerale",
         "frenetico",
         "tragico",
-        "stilizzato"
+        "edgy"
       ],
-      "forWho": "Per chi cerca un horror autoriale che colpisca allo stomaco e al cuore insieme.",
+      "forWho": "Per chi vuole un horror d'autore che colpisce allo stomaco e al cuore nello stesso colpo.",
+      "tips": [
+        "Reinterpretazione modernissima di un classico anni '70: 10 episodi, autoconclusiva.",
+        "Sangue e sesso molto espliciti: non è per tutti, sappilo prima."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -16384,14 +16470,18 @@
           "recommendations"
         ]
       },
-      "hook": "Prima delle saghe leggendarie c'era questo: un bambino con la coda e un bastone magico che incontra una ragazza a caccia di sfere che esaudiscono i desideri. Più avventura comica e fiaba di arti marziali che epopea di trasformazioni urlate. Spensierato, inventivo, sorprendentemente dolce — l'origine di tutto un genere.",
+      "hook": "Prima delle trasformazioni urlate e dei pianeti che esplodono c'era questo: un bambino con la coda e un bastone magico che incrocia una ragazza a caccia di sfere dei desideri. Piu fiaba di arti marziali e avventura comica che battle shonen. Spensierato, inventivo, sorprendentemente dolce. Qui nasce tutto un genere, quando era ancora gioco.",
       "tone": [
-        "avventuroso",
-        "comico",
+        "avventura comica",
         "leggero",
-        "nostalgico"
+        "nostalgico",
+        "fondativo"
       ],
-      "forWho": "Per chi vuole vedere da dove nasce lo shonen, quando era ancora gioco puro.",
+      "forWho": "Per chi vuole vedere lo shonen alle origini, prima che diventasse una gara di urla.",
+      "tips": [
+        "Per la storia classica: Dragon Ball → Dragon Ball Z (GT puoi saltarlo).",
+        "Di 'Z' esiste la versione 'Kai': più snella e senza filler, preferiscila se parti adesso."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -16869,14 +16959,15 @@
           "recommendations"
         ]
       },
-      "hook": "Un samurai morente di Sekigahara si risveglia in un mondo fantasy, accanto ad altri grandi guerrieri della Storia chiamati a combattere. Il gusto è quello della carneficina con il sorriso: violenza spettacolare, umorismo nero, tavolozze di colore accese. Sopra le righe e orgoglioso di esserlo, fatto per chi ama il caos coreografato.",
+      "hook": "Un samurai morente di Sekigahara si sveglia in un mondo fantasy, accanto ad altri grandi guerrieri della Storia chiamati a combattere. Il gusto e la carneficina col sorriso: violenza spettacolare, umorismo nero, tavolozze accese. Sopra le righe e orgoglioso di esserlo. Non si prende sul serio nemmeno per un secondo, ed e tutto il punto.",
       "tone": [
         "violento",
         "scanzonato",
         "esagerato",
         "ritmo serrato"
       ],
-      "forWho": "Per chi gode di battaglie sanguinose condite di ironia, senza prendersi troppo sul serio.",
+      "forWho": "Per chi gode di battaglie sanguinose servite con ironia, senza pretese di profondita.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -17316,14 +17407,15 @@
           "recommendations"
         ]
       },
-      "hook": "Una nazione si vanta di combattere una guerra con droni senza piloti. È una menzogna: dentro quelle macchine ci sono persone che lo Stato ha deciso di non considerare umane. Racconto bellico sulla discriminazione, diviso tra chi muore al fronte e chi comanda al sicuro. Cupo, indignato, scritto per farti male.",
+      "hook": "Una nazione si vanta di combattere una guerra con droni senza piloti. E una bugia: dentro quelle macchine ci sono persone che lo Stato ha deciso di non contare come umane. Racconto bellico sulla discriminazione, diviso tra chi muore al fronte e chi comanda al sicuro. Cupo, incazzato, scritto apposta per farti male.",
       "tone": [
         "cupo",
-        "drammatico",
         "amaro",
+        "drammatico",
         "introspettivo"
       ],
-      "forWho": "Per chi vuole un anime di guerra che parli di ingiustizia più che di robot.",
+      "forWho": "Per chi vuole un anime di guerra che parla di ingiustizia, non di robot fighi.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -17738,14 +17830,18 @@
           "recommendations"
         ]
       },
-      "hook": "Un fumettista trentenne con uno strano potere viene rispedito ai suoi undici anni, poco prima che una compagna di classe scompaia. Thriller che intreccia indagine e nostalgia, con il bianco gelido dell'inverno a fare da sfondo. Teso ma tenero, tiene insieme il giallo e il ritratto dell'infanzia — guardalo senza leggere troppo in giro.",
+      "hook": "Un fumettista trentenne con uno strano potere viene rispedito ai suoi undici anni, poco prima che una compagna di classe sparisca. Thriller che intreccia indagine e nostalgia, col bianco gelido dell'inverno a fare da fondale. Teso ma con un lato tenero, tiene insieme giallo e ritratto d'infanzia. Guardalo a freddo, senza spoilerarti in giro.",
       "tone": [
         "teso",
-        "malinconico",
         "investigativo",
+        "malinconico",
         "delicato"
       ],
-      "forWho": "Per chi vuole un thriller emotivo che corre veloce ma sa commuovere.",
+      "forWho": "Per chi vuole un thriller emotivo che corre veloce ma sa anche commuovere.",
+      "tips": [
+        "12 episodi serratissimi.",
+        "Il finale dell'anime è un po' più sbrigativo del manga: alcuni preferiscono quello cartaceo, ma la serie regge benissimo."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -18147,14 +18243,15 @@
           "recommendations"
         ]
       },
-      "hook": "Evocato in un altro mondo con i compagni di classe, Touka riceve l'abilità giudicata più inutile e viene scaricato tra le rovine per morire. Da lì parte una rivincita feroce. Isekai vendicativo che gioca con power fantasy e rancore, senza pretese di gentilezza. Compiaciuto e spietato, va preso per quello che è.",
+      "hook": "Evocato in un altro mondo coi compagni di classe, Touka becca l'abilità giudicata più inutile e viene scaricato tra le rovine a crepare. Da lì parte una rivincita feroce. Isekai vendicativo che gioca con power fantasy e rancore, senza nemmeno provare a fare il gentile. Compiaciuto e spietato: va preso per quello che è, senza pretendere altro.",
       "tone": [
-        "vendicativo",
+        "isekai vendicativo",
         "cupo",
         "azione pura",
-        "compiaciuto"
+        "edgy"
       ],
       "forWho": "Per chi ama gli isekai dove il sottovalutato si prende una rivincita brutale.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -18620,7 +18717,7 @@
           "recommendations"
         ]
       },
-      "hook": "Un dodicenne svogliato viene investito da una ragazza su un motorino, presa a colpi di basso in testa, e da quel momento dalla sua fronte iniziano a spuntare robot. Sotto l'assurdità c'è la cosa più seria del mondo: crescere. Un fulmine di sei episodi, montaggio impazzito e colonna sonora dei pillows. Lasciati travolgere senza pretendere di capire subito.",
+      "hook": "Un dodicenne svogliato viene investito da una ragazza su un motorino, presa a colpi di basso in testa, e dalla sua fronte iniziano a spuntare robot. Sotto l'assurdo c'e la cosa piu seria del mondo: crescere. Un fulmine di sei episodi, montaggio impazzito e i pillows a tutto volume. Lasciati travolgere, capire subito non e previsto.",
       "tone": [
         "surreale",
         "frenetico",
@@ -18628,6 +18725,7 @@
         "coming of age"
       ],
       "forWho": "Per chi vuole un'esplosione creativa che parla di adolescenza senza spiegarla mai.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -19096,14 +19194,17 @@
           "recommendations"
         ]
       },
-      "hook": "L'avventura è già finita, gli eroi hanno vinto. Frieren parte da dove gli altri fantasy chiudono: un'elfa quasi immortale che, troppo tardi, impara a dare valore al tempo passato con gli umani. Contemplativo, malinconico, bellissimo — un anime che respira.",
+      "hook": "L'avventura e gia finita, gli eroi hanno vinto, i titoli di coda sono scorsi. Frieren parte da dove gli altri fantasy chiudono: un'elfa quasi immortale che, troppo tardi, impara quanto valeva il tempo passato con gli umani. Lento, malinconico, bellissimo. Un anime che respira invece di urlare, e ti spacca il cuore senza una sola battaglia.",
       "tone": [
         "contemplativo",
         "malinconico",
-        "ritmo lento",
-        "delicato"
+        "slow burn",
+        "da lacrimuccia"
       ],
-      "forWho": "Per chi vuole commuoversi più che esaltarsi.",
+      "forWho": "Per chi vuole commuoversi piu che esaltarsi.",
+      "tips": [
+        "Fatto per essere assaporato con calma: la lentezza è il pregio, non un difetto. Seconda stagione in arrivo."
+      ],
       "recommendations": {
         "simili": [],
         "saga": [],
@@ -19470,14 +19571,15 @@
           "recommendations"
         ]
       },
-      "hook": "Un ragazzo solitario che annota tutto sul cellulare scopre che il suo diario ora prevede il futuro — ed è una delle tante armi in un gioco di sopravvivenza tra dodici concorrenti. Thriller psicologico isterico e melodrammatico, dominato da una delle figure femminili più ossessive dell'animazione. Eccessivo, nervoso, mai noioso.",
+      "hook": "Un ragazzo solitario che annota tutto sul cellulare scopre che il suo diario ora prevede il futuro, ed e una delle armi in un gioco di sopravvivenza tra dodici concorrenti. Death game psicologico isterico e melodrammatico, dominato da una delle yandere piu ossessive mai animate. Eccessivo, nervoso, mai noioso per un istante.",
       "tone": [
         "teso",
         "melodrammatico",
         "morboso",
         "ritmo serrato"
       ],
-      "forWho": "Per chi vuole un death game ad alta tensione e amori tossici all'ennesima potenza.",
+      "forWho": "Per chi vuole un death game ad alta tensione e amori tossici portati all'ennesima potenza.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -19931,14 +20033,15 @@
           "recommendations"
         ]
       },
-      "hook": "In una città sospesa nel cielo i ricchi gettano i rifiuti nell'abisso, e con essi chi giudicano spazzatura. Un ragazzo accusato ingiustamente precipita proprio lì sotto, dove il mondo scartato è diventato territorio di mostri. Estetica graffiante da street art, rabbia sociale e un potere legato agli oggetti scartati. Energico e visivamente sporco, nel senso migliore.",
+      "hook": "In una citta sospesa nel cielo i ricchi gettano i rifiuti nell'abisso, e con essi chi giudicano spazzatura. Un ragazzo accusato ingiustamente precipita proprio li sotto, dove il mondo scartato e diventato territorio di mostri. Estetica graffiante da street art, rabbia sociale e un potere legato agli oggetti. Energico e visivamente sporco, nel senso migliore.",
       "tone": [
         "energico",
         "ribelle",
         "azione pura",
         "stiloso"
       ],
-      "forWho": "Per chi vuole uno shonen di rivalsa con un'identità visiva fortissima.",
+      "forWho": "Per chi vuole uno shonen di rivalsa con un'identita visiva fortissima.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -20398,14 +20501,15 @@
           "recommendations"
         ]
       },
-      "hook": "A Ergastulum due tuttofare prendono i lavori sporchi che nessun altro vuole, tra mafie, polizia corrotta e gente ai margini. Noir adulto, ruvido, con un legame al centro che pesa più delle sparatorie. Atmosfera fumosa e malinconica, ritmo lento e cattivo — peccato per un finale che la produzione non ha potuto chiudere.",
+      "hook": "A Ergastulum due tuttofare prendono i lavori sporchi che nessun altro vuole, tra mafie, polizia corrotta e gente ai margini. Noir adulto e ruvido, con un legame al centro che pesa piu delle sparatorie. Atmosfera fumosa, ritmo lento e cattivo. Peccato solo per un finale che la produzione, fuori dal suo controllo, non ha potuto chiudere.",
       "tone": [
         "noir",
         "ruvido",
         "malinconico",
         "adulto"
       ],
-      "forWho": "Per chi cerca un crime maturo, sporco e con personaggi feriti.",
+      "forWho": "Per chi cerca un crime maturo, sporco, con personaggi feriti dentro.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -20790,7 +20894,7 @@
           "recommendations"
         ]
       },
-      "hook": "Quando muori, ti ritrovi in una stanza con una sfera nera che ti spedisce a dare la caccia ad alieni, pena la vita. Survival cinico e nichilista che usa la violenza per scavare nel peggio degli esseri umani. Brutale, sgradevole, esplicito su ogni fronte — un'opera che provoca apposta. Non è per stomaci delicati.",
+      "hook": "Quando muori ti ritrovi in una stanza con una sfera nera che ti spedisce a dare la caccia ad alieni, pena la vita. Survival cinico e nichilista che usa la violenza per scavare nel peggio degli esseri umani. Brutale, sgradevole, esplicito su ogni fronte: provoca apposta e lo sa benissimo. Non e roba per stomaci delicati, sei avvisato.",
       "tone": [
         "nichilista",
         "brutale",
@@ -20798,6 +20902,7 @@
         "disturbante"
       ],
       "forWho": "Per chi non si tira indietro davanti a un survival horror crudo e provocatorio.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -21237,14 +21342,15 @@
           "recommendations"
         ]
       },
-      "hook": "Un portale si apre nel cuore di Tokyo e ne escono draghi, cavalieri ed eserciti medievali. Risposta: le Forze di Autodifesa giapponesi attraversano la soglia per esplorare il mondo dall'altra parte. Isekai militare che incrocia logistica moderna e creature fantasy, con un protagonista otaku e tono leggero. Fa parteggiare per l'esercito senza troppe domande — sappilo.",
+      "hook": "Un portale si apre nel cuore di Tokyo e ne escono draghi, cavalieri ed eserciti medievali. La risposta giapponese: le Forze di Autodifesa varcano la soglia per esplorare il mondo dall'altra parte. Isekai militare che incrocia logistica moderna e creature fantasy, con un protagonista otaku e tono leggero. Fa il tifo per l'esercito senza troppe domande, tienilo a mente.",
       "tone": [
-        "avventuroso",
-        "militare",
+        "isekai militare",
+        "spettacolare",
         "leggero",
-        "spettacolare"
+        "avventuroso"
       ],
       "forWho": "Per chi vuole un fantasy d'azione dove l'esercito moderno incontra elfi e draghi.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -21685,14 +21791,18 @@
           "recommendations"
         ]
       },
-      "hook": "2029: in un mondo dove la mente si può digitalizzare, l'agente cyborg Motoko dà la caccia a un misterioso hacker capace di violare le coscienze. Sotto l'azione fantascientifica scorre una domanda filosofica: cosa resta di noi quando il corpo è una macchina? Visione iconica del cyberpunk, ipnotica e cerebrale. Pochi minuti, infinite riletture.",
+      "hook": "2029: in un mondo dove la mente si puo digitalizzare, l'agente cyborg Motoko da la caccia a un hacker capace di violare le coscienze. Sotto l'azione scorre una domanda che non se ne va: cosa resta di noi quando il corpo e una macchina? Caposaldo del cyberpunk, ipnotico e cerebrale. Pochi minuti, infinite riletture, niente risposte facili.",
       "tone": [
-        "cerebrale",
         "cyberpunk",
+        "cerebrale",
         "contemplativo",
         "elegante"
       ],
-      "forWho": "Per chi vuole fantascienza che faccia pensare quanto stupisce.",
+      "forWho": "Per chi vuole fantascienza che fa pensare quanto stupisce.",
+      "tips": [
+        "Il film del 1995 e la serie 'Stand Alone Complex' sono storie separate, entrambe ottime.",
+        "Parti dal film per il colpo estetico-filosofico, dalla serie se vuoi più indagine e trama."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -22031,14 +22141,15 @@
           "recommendations"
         ]
       },
-      "hook": "Hokkaido d'inizio Novecento: un veterano di guerra soprannominato l'Immortale e una ragazza ainu cercano un tesoro d'oro nascosto, inseguiti da soldati e criminali. Avventura nella neve che mescola caccia, sopravvivenza, cultura ainu e un umorismo demenziale che spunta dove meno te lo aspetti. Originale, sanguigno e sorprendentemente colto.",
+      "hook": "Hokkaido inizio Novecento: un veterano soprannominato l'Immortale e una ragazza ainu cercano un tesoro d'oro nascosto, inseguiti da soldati e criminali. Avventura nella neve che mescola caccia, sopravvivenza, cultura ainu e un umorismo demenziale che spunta dove meno te lo aspetti. Originale, sanguigno e, sotto la follia, sorprendentemente colto.",
       "tone": [
         "avventuroso",
         "ruvido",
         "demenziale",
         "storico"
       ],
-      "forWho": "Per chi vuole un'avventura fuori dai cliché, tra cucina, gastronomia e sparatorie nel gelo.",
+      "forWho": "Per chi vuole un'avventura fuori dai cliche, tra gastronomia e sparatorie nel gelo.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -22457,14 +22568,15 @@
           "recommendations"
         ]
       },
-      "hook": "Un gruppo di ragazzi si risveglia in un mondo simile a un gioco di ruolo, senza ricordi e senza poteri speciali: per mangiare devono diventare soldati, e perfino il primo goblin è una battaglia disperata. Isekai che rallenta dove gli altri corrono, attento alla fatica, alla paura e al lutto. Delicato, malinconico, dipinto come un acquerello.",
+      "hook": "Un gruppo di ragazzi si sveglia in un mondo simil-gdr, senza ricordi e senza poteri speciali: per mangiare devono fare i soldati, e perfino il primo goblin e una battaglia disperata. Isekai che rallenta dove gli altri corrono, attento alla fatica, alla paura, al lutto. Delicato, malinconico, dipinto come un acquerello. Niente power fantasy qui.",
       "tone": [
+        "slice of life crudo",
         "malinconico",
-        "introspettivo",
-        "ritmo lento",
+        "slow burn",
         "delicato"
       ],
-      "forWho": "Per chi vuole un isekai umano, dove sopravvivere costa davvero.",
+      "forWho": "Per chi vuole un isekai umano, dove sopravvivere costa davvero qualcosa.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -22930,14 +23042,15 @@
           "recommendations"
         ]
       },
-      "hook": "Saitou non si è mai sentito speciale. Catapultato in un mondo fantasy medievale, scopre che il suo mestiere più umile — scassinare, riparare, arrangiarsi — è proprio ciò che tiene in vita una compagnia di avventurieri sgangherata. Commedia fantasy episodica, tenera e senza pretese.",
+      "hook": "Saitou non si è mai sentito speciale. Sbattuto in un mondo fantasy medievale, scopre che il suo mestiere più umile — scassinare, riparare, arrangiarsi — è proprio ciò che tiene in piedi una compagnia di avventurieri sgangherata. Commedia fantasy episodica, tenera e senza pretese: niente epica, solo buona compagnia.",
       "tone": [
-        "leggero",
+        "slice of life fantasy",
         "tenero",
         "episodico",
         "rilassante"
       ],
-      "forWho": "Per chi vuole un fantasy comfort, da guardare un pezzo per volta.",
+      "forWho": "Per chi vuole un fantasy comfort, da gustare un pezzo per volta.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -23323,14 +23436,15 @@
           "recommendations"
         ]
       },
-      "hook": "Due racconti che si rincorrono: due ragazzi attraversano un Giappone in rovina popolato di mostri, mentre altrove dei bambini crescono protetti dentro una struttura immacolata che chiamano paradiso. Sci-fi misterioso e adulto, dal montaggio finissimo di Production I.G, che semina indizi e ti lascia ricomporli. Inquietante, dolce e spietato insieme.",
+      "hook": "Due racconti che si rincorrono: due ragazzi attraversano un Giappone in rovina popolato di mostri, mentre altrove dei bambini crescono protetti dentro una struttura immacolata che chiamano paradiso. Sci-fi misterioso e adulto, montato col bisturi da Production I.G. Semina indizi e ti lascia ricomporli. Inquietante, dolce e spietato insieme.",
       "tone": [
         "misterioso",
         "post-apocalittico",
         "inquietante",
         "adulto"
       ],
-      "forWho": "Per chi ama i puzzle narrativi che si svelano lentamente e non temono l'ambiguità.",
+      "forWho": "Per chi ama i puzzle narrativi che si svelano piano e non temono l'ambiguita.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -23726,14 +23840,15 @@
           "recommendations"
         ]
       },
-      "hook": "Fine del periodo Edo: uno shinobi condannato a morte può salvarsi solo riportando l'Elisir della vita da un'isola che dovrebbe essere il paradiso e si rivela un incubo. Condannati spietati e i loro boia sbarcano insieme in un luogo di bellezza letale. Dark fantasy MAPPA, elegante e crudele, con un cuore sorprendentemente romantico.",
+      "hook": "Fine periodo Edo: uno shinobi condannato a morte si salva solo riportando l'Elisir della vita da un'isola che dovrebbe essere il paradiso e si rivela un incubo. Condannati spietati e i loro boia sbarcano insieme in un posto di bellezza letale. Dark fantasy MAPPA, elegante e crudele, con un cuore romantico nascosto sotto il sangue.",
       "tone": [
         "dark fantasy",
-        "crudo",
         "survival",
+        "crudo",
         "elegante"
       ],
-      "forWho": "Per chi vuole un'avventura mortale dove ogni passo sull'isola può essere l'ultimo.",
+      "forWho": "Per chi vuole un'avventura mortale dove ogni passo sull'isola puo essere l'ultimo.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -24156,14 +24271,18 @@
           "recommendations"
         ]
       },
-      "hook": "Un'organizzazione segreta britannica caccia i non-morti, ma la sua arma migliore è Alucard: un vampiro che fa a brandelli altri vampiri con un sorriso da incubo. Action gotico e iperviolento, barocco fino all'eccesso, con un'animazione che esplode in ogni scontro. Sopra le righe, sanguinario, magnetico.",
+      "hook": "Un'organizzazione segreta britannica dà la caccia ai non-morti, ma la sua arma migliore è Alucard: un vampiro che fa a pezzi altri vampiri con un sorriso da incubo. Action gotico iperviolento, barocco fino all'eccesso, con sakuga che esplode a ogni scontro. Sopra le righe per scelta, e se ne vanta.",
       "tone": [
         "gotico",
         "iperviolento",
-        "sopra le righe",
-        "magnetico"
+        "edgy",
+        "sopra le righe"
       ],
-      "forWho": "Per chi vuole un antieroe carismatico e l'azione più eccessiva e teatrale.",
+      "forWho": "Per chi vuole un antieroe magnetico e l'azione più teatrale ed eccessiva che c'è.",
+      "tips": [
+        "Hellsing Ultimate (gli OVA) è l'adattamento fedele al manga, fino al finale vero.",
+        "La serie TV del 2001 ('Hellsing' liscio) diverge a metà e si inventa un finale: salta direttamente a Ultimate."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -24576,14 +24695,18 @@
           "recommendations"
         ]
       },
-      "hook": "I sentimenti negativi degli umani diventano Maledizioni, e si esorcizzano solo con altre Maledizioni. Un ragazzo ne inghiotte una potentissima per salvare un amico e finisce nella scuola degli stregoni. Shonen moderno firmato MAPPA: combattimenti splendidamente animati, regole interne ferree, umorismo nero e un'oscurità che morde davvero.",
+      "hook": "I sentimenti negativi degli umani diventano Maledizioni, e le esorcizzi solo con altre Maledizioni. Un ragazzo ne ingoia una potentissima per salvare un amico e finisce nella scuola degli stregoni. Battle shōnen moderno firmato MAPPA: sakuga da paura, regole interne ferree, umorismo nero e un'oscurità che morde sul serio.",
       "tone": [
-        "cupo",
-        "azione spettacolare",
-        "shonen moderno",
+        "dark",
+        "sakuga",
+        "battle shōnen",
         "ritmo serrato"
       ],
-      "forWho": "Per chi vuole battaglie magistralmente coreografate con un retrogusto amaro.",
+      "forWho": "Per chi vuole combattimenti coreografati alla perfezione con un retrogusto amaro.",
+      "tips": [
+        "Ordine consigliato: Stagione 1 → film 'Jujutsu Kaisen 0' (prequel) → Stagione 2.",
+        "Il film 0 funziona benissimo anche come primo assaggio, se vuoi capire se fa per te."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -25037,14 +25160,15 @@
           "recommendations"
         ]
       },
-      "hook": "In un Giappone flagellato dai kaiju, un addetto alla rimozione delle carcasse sogna ancora di entrare nelle forze di difesa. Poi una trasformazione inattesa lo rende lui stesso ciò che ha sempre combattuto. Action shonen brillante e accessibile, con un protagonista adulto, fuori tempo massimo, facile da amare. Spettacolare e cuore caldo.",
+      "hook": "Giappone flagellato dai kaiju: un addetto a smaltire le carcasse sogna ancora di entrare nelle forze di difesa, finché una trasformazione inattesa lo rende lui stesso ciò che ha sempre combattuto. Action shōnen brillante e accessibile, con un protagonista adulto e fuori tempo massimo che è impossibile non tifare. Spettacolo e cuore caldo.",
       "tone": [
+        "shōnen",
         "spettacolare",
-        "shonen",
         "accessibile",
         "trascinante"
       ],
-      "forWho": "Per chi vuole un mostro-eroe da tifare e un'azione immediata e adrenalinica.",
+      "forWho": "Per chi vuole un mostro-eroe da tifare e azione immediata, senza compiti a casa.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -25469,14 +25593,15 @@
           "recommendations"
         ]
       },
-      "hook": "Una ragazza arriva armata di mezza forbice gigante in un liceo dove il potere si misura in divise che conferiscono superpoteri. Pura energia animata firmata TRIGGER: ritmo forsennato, regia che non sta ferma un secondo, autoironia e un crescendo che sfonda ogni limite. Demenziale, eccessivo, esaltante.",
+      "hook": "Una ragazza arriva con mezza forbice gigante in un liceo dove il potere si misura in divise che danno superpoteri. Pura energia firmata TRIGGER: ritmo forsennato, regia che non sta ferma un secondo, autoironia e un crescendo che sfonda ogni limite del buon gusto. Demenziale ed esagerato — ed è esattamente il punto.",
       "tone": [
         "demenziale",
-        "ritmo forsennato",
-        "eccessivo",
-        "esaltante"
+        "esagerato",
+        "esaltante",
+        "stiloso"
       ],
-      "forWho": "Per chi vuole adrenalina pura e non si scandalizza per l'esagerazione voluta.",
+      "forWho": "Per chi vuole adrenalina pura e non si scandalizza per l'eccesso voluto.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -25791,14 +25916,15 @@
           "recommendations"
         ]
       },
-      "hook": "Cina antica, epoca degli Stati Combattenti: due ragazzi di umili origini sognano di diventare i più grandi generali del mondo. Tra congiure di palazzo, campagne militari e amicizie spezzate, un orfano si fa strada verso il campo di battaglia. Epica storica corale, lenta a partire ma travolgente nelle grandi manovre. Abbi pazienza con la CGI iniziale.",
+      "hook": "Cina antica, epoca degli Stati Combattenti: due ragazzi di umili origini sognano di diventare i più grandi generali del mondo. Tra congiure di palazzo, campagne militari e amicizie spezzate, un orfano si fa strada verso il fronte. Epica storica corale, slow burn nelle grandi manovre. Stringi i denti sulla CGI dei primi episodi.",
       "tone": [
         "epico",
         "storico",
         "strategico",
-        "corale"
+        "slow burn"
       ],
-      "forWho": "Per chi ama le grandi saghe di guerra e l'ascesa di un eroe dal nulla.",
+      "forWho": "Per chi vuole grandi saghe di guerra e l'ascesa di un eroe partito dal nulla.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -26135,14 +26261,15 @@
           "recommendations"
         ]
       },
-      "hook": "2052: una droga miracolosa ha liberato l'umanità dal dolore, finché il suo creatore riappare e annuncia che ucciderà chiunque l'abbia presa. Cinque agenti hanno poco tempo per fermarlo. Thriller fantascientifico di Shinichiro Watanabe (Cowboy Bebop), con la sua inconfondibile classe: ritmo sincopato e azione coreografata col gusto del jazz.",
+      "hook": "2052: una droga miracolosa ha cancellato il dolore dall'umanità, finché il suo creatore riappare e annuncia che ucciderà chiunque l'abbia presa. Cinque agenti, poco tempo per fermarlo. Thriller sci-fi di Shinichiro Watanabe (Cowboy Bebop), con la sua classe inconfondibile: ritmo sincopato e azione coreografata col gusto del jazz.",
       "tone": [
         "cool",
-        "thriller fantascientifico",
-        "ritmo serrato",
-        "stiloso"
+        "stiloso",
+        "thriller sci-fi",
+        "ritmo serrato"
       ],
       "forWho": "Per chi cerca stile, groove e una caccia all'uomo elegante più che cervellotica.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -26514,14 +26641,18 @@
           "recommendations"
         ]
       },
-      "hook": "Un'orfana e un robot dalle sembianze di bambino scendono in un abisso meraviglioso, l'ultima frontiera inesplorata del mondo. L'estetica fiabesca inganna: più si va in profondità, più il prezzo da pagare diventa atroce. Avventura sublime e crudele, capace di passare dall'incanto all'orrore senza preavviso. Non lasciarti ingannare dai disegni teneri.",
+      "hook": "Un'orfana e un robot dalle sembianze di bambino scendono in un abisso meraviglioso, l'ultima frontiera inesplorata del mondo. Non farti ingannare dai disegni teneri: più scendi, più il prezzo da pagare diventa atroce. Avventura sublime e crudele, che passa dall'incanto all'orrore senza preavviso. Carino fuori, spietato dentro.",
       "tone": [
         "meraviglioso",
         "crudele",
         "avventuroso",
         "spietato"
       ],
-      "forWho": "Per chi vuole la meraviglia dell'esplorazione e non teme che faccia male.",
+      "forWho": "Per chi vuole la meraviglia dell'esplorazione e non teme che faccia molto male.",
+      "tips": [
+        "L'estetica adorabile è una trappola voluta: il contenuto è durissimo.",
+        "Ordine: Stagione 1 → film 'Dawn of the Deep Soul' (canonico, continua la storia) → Stagione 2."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -26954,14 +27085,18 @@
           "recommendations"
         ]
       },
-      "hook": "Un ragazzino dimesso nasconde poteri psichici devastanti, ma vuole solo crescere come persona normale, non grazie ai suoi doni. Dagli autori di One-Punch Man, ma più tenero e profondo: animazione fluida e sperimentale, comicità calda e un messaggio sincero sull'accettarsi. Sotto la follia visiva batte un cuore enorme.",
+      "hook": "Un ragazzino dimesso nasconde poteri psichici devastanti, ma vuole solo crescere come persona normale, non grazie ai suoi doni. Dagli autori di One-Punch Man, ma più tenero e profondo: sakuga sperimentale, comicità calda e un discorso sincero sull'accettarsi. Sotto la follia visiva batte un cuore enorme.",
       "tone": [
         "caldo",
         "demenziale",
         "introspettivo",
-        "animazione sperimentale"
+        "sakuga"
       ],
       "forWho": "Per chi vuole ridere e poi commuoversi davanti a un protagonista che cresce davvero.",
+      "tips": [
+        "Stesso autore di One-Punch Man (ONE), ma con molto più cuore.",
+        "L'animazione dello studio Bones è tra le più creative in circolazione: parte del motivo per cui va visto."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -27429,14 +27564,18 @@
           "recommendations"
         ]
       },
-      "hook": "Un chirurgo brillante salva la vita a un bambino invece che a un notabile, e quella scelta morale lo trascina in un incubo lungo anni. Thriller psicologico adultissimo ambientato nella Germania post-Guerra Fredda: lento, denso, geometrico, popolato di personaggi indimenticabili. Una riflessione sul male che ti resta addosso. Dai tempo alle prime puntate.",
+      "hook": "Un chirurgo brillante salva la vita a un bambino invece che a un notabile, e quella scelta morale lo trascina in un incubo lungo anni. Thriller psicologico adultissimo nella Germania post-Guerra Fredda: lento, denso, geometrico, pieno di personaggi indimenticabili. Slow burn purissimo: regge i primi episodi e ti ripaga.",
       "tone": [
+        "seinen",
         "psicologico",
-        "adulto",
-        "ritmo lento",
+        "slow burn",
         "teso"
       ],
-      "forWho": "Per chi ama i thriller letterari che premiano la pazienza e mettono in crisi la morale.",
+      "forWho": "Per chi ama i thriller letterari che premiano la pazienza e ti spappolano la morale.",
+      "tips": [
+        "74 episodi col ritmo di un romanzo: niente filler, niente riassunti. Lento ma non molla un secondo.",
+        "Concluso e autoconclusivo: nessun seguito da rincorrere."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -27820,14 +27959,15 @@
           "recommendations"
         ]
       },
-      "hook": "In un mondo dove quasi tutti nascono con un superpotere, un ragazzino senza poteri sogna comunque di diventare eroe. Un incontro col più grande di tutti gli offre l'occasione per cambiare destino. Shonen supereroistico generoso e sincero, fatto di duro lavoro, scuola e amicizia. Classico nelle ossa, ma con una passione contagiosa.",
+      "hook": "In un mondo dove quasi tutti nascono con un superpotere, un ragazzino senza poteri sogna comunque di fare l'eroe. Un incontro col più grande di tutti gli dà l'occasione per ribaltare il destino. Shōnen supereroistico generoso e sincero, fatto di duro lavoro, scuola e amicizia. Classico nelle ossa, ma con una passione contagiosa.",
       "tone": [
+        "battle shōnen",
         "supereroistico",
-        "shonen",
         "sincero",
         "trascinante"
       ],
-      "forWho": "Per chi vuole la formula classica del cuore di leone fatta bene e con entusiasmo.",
+      "forWho": "Per chi vuole la formula classica del cuore di leone fatta bene e senza cinismo.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -28276,14 +28416,15 @@
           "recommendations"
         ]
       },
-      "hook": "Lo stesso mondo di My Hero Academia visto dal basso: dove gli eroi ufficiali non arrivano, agiscono i vigilanti, gente comune che combatte fuori dalla legge. Uno studente svogliato e i suoi compagni di strada raccolgono i casi dimenticati. Spin-off urbano e adulto, più ruvido e notturno dell'originale. Si gusta meglio se conosci già la serie madre.",
+      "hook": "Lo stesso mondo di My Hero Academia visto dal basso: dove gli eroi ufficiali non arrivano, agiscono i vigilanti, gente comune che mena fuori dalla legge. Uno studente svogliato e i suoi compagni di strada raccolgono i casi dimenticati. Spin-off urbano più ruvido e notturno dell'originale. Rende di più se la serie madre la conosci già.",
       "tone": [
+        "spin-off",
         "urbano",
-        "supereroistico",
         "ruvido",
         "notturno"
       ],
-      "forWho": "Per chi ama My Hero Academia e vuole il suo lato di strada, meno scolastico e più crudo.",
+      "forWho": "Per chi ama My Hero Academia e vuole il suo lato di strada, meno scuola e più asfalto.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -28799,14 +28940,18 @@
           "recommendations"
         ]
       },
-      "hook": "Un eroe è diventato così forte da abbattere qualunque nemico con un solo pugno, e ne è terribilmente annoiato. La parodia ribalta lo shonen: niente sfida, solo la noia esistenziale di chi ha già vinto tutto. Comicità affilata e, quando vuole, animazione da capolavoro. Esilarante e, sotto sotto, sorprendentemente malinconico.",
+      "hook": "Un eroe è diventato così forte da abbattere chiunque con un pugno solo, e ne è mortalmente annoiato. La parodia ribalta il battle shōnen: niente sfida, solo la noia esistenziale di chi ha già vinto tutto. Comicità affilata e, quando vuole, sakuga da capolavoro. Esilarante e, sotto sotto, sorprendentemente malinconico.",
       "tone": [
         "parodico",
-        "esilarante",
-        "azione spettacolare",
-        "satirico"
+        "satirico",
+        "sakuga",
+        "esilarante"
       ],
       "forWho": "Per chi vuole ridere dei cliché del genere senza rinunciare a scontri mozzafiato.",
+      "tips": [
+        "La Stagione 1 (studio Madhouse) è il picco assoluto dell'animazione comica.",
+        "La Stagione 2 cambia studio e si nota il calo: parti comunque dalla 1, è imperdibile."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -29325,14 +29470,15 @@
           "recommendations"
         ]
       },
-      "hook": "Un giocatore resta intrappolato nel suo MMO nei panni di un potentissimo signore non-morto, mentre il mondo virtuale prende vita attorno a lui. Isekai ribaltato: qui il protagonista è il sovrano oscuro, e la tensione sta nel vedere fin dove arriverà. Cupo, strategico, ambiguo. Lascia l'eroe buono fuori dalla porta.",
+      "hook": "Un giocatore resta intrappolato nel suo MMO nei panni di un potentissimo signore non-morto, mentre il mondo virtuale prende vita intorno a lui. Isekai ribaltato: qui il protagonista è il sovrano oscuro, e la tensione è capire fin dove arriverà. Cupo, strategico, ambiguo. L'eroe buono lascialo fuori dalla porta.",
       "tone": [
-        "cupo",
         "isekai",
+        "dark",
         "strategico",
         "ambiguo"
       ],
-      "forWho": "Per chi è stanco dei soliti eroi e vuole guardare il mondo dagli occhi del cattivo.",
+      "forWho": "Per chi è stufo dei soliti eroi e vuole guardare il mondo dagli occhi del cattivo.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -29775,14 +29921,17 @@
           "recommendations"
         ]
       },
-      "hook": "Parassiti alieni invadono i corpi umani per cibarsene, ma quello toccato a uno studente fallisce e si insedia nella sua mano destra. Costretti a convivere, ragazzo e creatura imparano l'uno dall'altro. Horror fantascientifico con un'anima filosofica: cosa ci rende umani? Body horror disturbante e riflessione sorprendentemente profonda.",
+      "hook": "Parassiti alieni invadono i corpi umani per cibarsene, ma quello toccato a uno studente fallisce e si insedia nella sua mano destra. Costretti a convivere, ragazzo e creatura imparano l'uno dall'altro. Body horror con un'anima filosofica: cosa ci rende umani? Disturbante sul corpo e, tra il sangue, sorprendentemente profondo.",
       "tone": [
         "body horror",
-        "fantascienza",
+        "sci-fi",
         "filosofico",
         "teso"
       ],
-      "forWho": "Per chi vuole un horror che, tra il sangue, fa domande serie sulla natura umana.",
+      "forWho": "Per chi vuole un horror che, tra le budella, fa domande serie sulla natura umana.",
+      "tips": [
+        "L'anime sposta l'ambientazione agli anni 2010 rispetto al manga anni '90: scelta voluta, non un errore. Autoconclusivo."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -30239,14 +30388,15 @@
           "recommendations"
         ]
       },
-      "hook": "Un detective robot indaga su una serie di omicidi in un mondo dove le macchine non possono uccidere gli umani. Rilettura adulta di un classico di Tezuka firmata Urasawa: giallo lento e malinconico sull'odio, la guerra e cosa significhi avere un'anima. Misurato, elegante, profondamente umano. Otto episodi che pesano come un romanzo.",
+      "hook": "Un detective robot indaga su una serie di omicidi in un mondo dove le macchine non possono uccidere gli umani. Rilettura adulta di un classico di Tezuka firmata Urasawa: giallo lento e malinconico su odio, guerra e cosa significhi avere un'anima. Misurato, elegante, profondamente umano. Otto episodi che pesano come un romanzo.",
       "tone": [
-        "malinconico",
+        "seinen",
         "giallo",
-        "riflessivo",
-        "elegante"
+        "malinconico",
+        "slow burn"
       ],
-      "forWho": "Per chi vuole fantascienza pacata e adulta che parla di lutto e umanità.",
+      "forWho": "Per chi vuole sci-fi pacato e adulto che parla di lutto e umanità.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -30651,14 +30801,17 @@
           "recommendations"
         ]
       },
-      "hook": "Un giovane principe colpito da una maledizione cerca una cura e finisce tra due mondi in guerra: una città del ferro che divora la foresta e gli spiriti animali che la difendono. Miyazaki non sceglie un buono e un cattivo, ma guarda tutti con la stessa pietà feroce. Epico, ruvido, di una bellezza che non consola.",
+      "hook": "Un giovane principe colpito da una maledizione cerca una cura e finisce tra due mondi in guerra: una città del ferro che divora la foresta e gli spiriti animali che la difendono. Miyazaki non ti dà un buono e un cattivo, ma guarda tutti con la stessa pietà feroce. Epico, ruvido, di una bellezza che non consola.",
       "tone": [
         "epico",
-        "viscerale",
+        "dark fantasy",
         "ecologista",
-        "moralmente complesso"
+        "moralmente grigio"
       ],
       "forWho": "Per chi cerca un fantasy adulto dove nessuno ha del tutto ragione.",
+      "tips": [
+        "Film unico Studio Ghibli (Miyazaki). Per la resa migliore, originale giapponese coi sottotitoli."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -31090,14 +31243,17 @@
           "recommendations"
         ]
       },
-      "hook": "Un pompiere esuberante e un capo ribelle che maneggia il fuoco si scontrano in una città dove certi mutanti bruciano. Trigger spinge l'azione fino al delirio cromatico: triangoli, esplosioni rosa e blu, mecha che non stanno fermi un secondo. Trama semplice, adrenalina e stile alle stelle. Cervello in folle, occhi spalancati.",
+      "hook": "Un pompiere esuberante e un capo ribelle che maneggia il fuoco si scontrano in una città dove certi mutanti bruciano. TRIGGER spinge l'azione fino al delirio cromatico: triangoli, esplosioni rosa e blu, mecha che non stanno fermi un secondo. Trama essenziale, adrenalina e stile alle stelle. Cervello in folle, occhi spalancati.",
       "tone": [
-        "adrenalinico",
+        "mecha",
         "esplosivo",
         "stilizzatissimo",
-        "demenziale"
+        "adrenalinico"
       ],
       "forWho": "Per chi vuole un'ora e mezza di pura energia visiva senza pensare troppo.",
+      "tips": [
+        "Stesso team di Gurren Lagann e Kill la Kill: un film, pura esplosione visiva. Spegni il cervello e goditi i colori."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -31524,14 +31680,15 @@
           "recommendations"
         ]
       },
-      "hook": "Il principe Bojji e sordo, non parla e non sa reggere una spada: il regno lo crede inadatto al trono. Poi incontra un'ombra che diventa il suo primo vero amico. Non lasciarti ingannare dal tratto da fiaba per bambini: sotto c'e un racconto sulla forza che non si misura in muscoli, capace di ferite vere e di una tenerezza disarmante.",
+      "hook": "Il principe Bojji è sordo, non parla, non regge una spada: il regno lo dà per spacciato. Poi fa amicizia con un'ombra. Non lasciarti fregare dal tratto da fiaba per bambini: sotto c'è un racconto sulla forza che non si misura in muscoli, capace di ferite vere e di una tenerezza che ti spiazza.",
       "tone": [
         "fiabesco",
-        "commovente",
-        "tenero",
-        "ingannevole"
+        "da lacrimuccia",
+        "ingannevole",
+        "tenero"
       ],
-      "forWho": "Per chi sa che le storie più dolci sanno colpire più forte.",
+      "forWho": "Per chi sa già che le storie più dolci sono quelle che picchiano più forte.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -32030,14 +32187,18 @@
           "recommendations"
         ]
       },
-      "hook": "Subaru viene catapultato in un mondo fantasy e scopre un solo, atroce potere: ogni volta che muore, riparte da un punto fisso, ricordando tutto. L'isekai si trasforma in un incubo psicologico dove ogni errore si paga sulla pelle. Crudele, teso, sorprendentemente intimo: il vero campo di battaglia è dentro di lui.",
+      "hook": "Subaru viene sbattuto in un mondo fantasy con un solo, atroce potere: ogni volta che crepa, riparte da un checkpoint ricordando tutto. L'isekai diventa un incubo psicologico dove ogni errore lo paghi sulla pelle. Crudele, teso, sorprendentemente intimo: il vero boss da battere è lui stesso.",
       "tone": [
         "psicologico",
+        "isekai",
         "angosciante",
-        "teso",
         "doloroso"
       ],
-      "forWho": "Per chi vuole un isekai che faccia male invece di consolare.",
+      "forWho": "Per chi vuole un isekai che fa male invece di coccolarti.",
+      "tips": [
+        "Il primo episodio è doppio (un'ora): è normale, non saltarlo.",
+        "Ci sono OVA e le stagioni 2-3: vai in ordine d'uscita. Si soffre con il protagonista — è esattamente il punto."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -32528,14 +32689,15 @@
           "recommendations"
         ]
       },
-      "hook": "Un uomo rinasce in un altro mondo non come eroe ma come spada senziente, e viene impugnato da Fran, una ragazzina gatto in fuga dalla schiavitu. Da qui nasce un duo maestro-allieva atipico e sorprendentemente caldo. Avventura leggera e confortante, dove a brillare e il legame tra una bambina ferita e la lama che la protegge.",
+      "hook": "Un tizio rinasce in un altro mondo non come eroe, ma come spada senziente, e finisce in mano a Fran, una ragazzina-gatto in fuga dalla schiavitù. Da lì nasce un duo maestro-allieva atipico e inaspettatamente caldo. Isekai leggero e confortante, dove a brillare è il legame tra una bambina ferita e la lama che la protegge.",
       "tone": [
         "confortante",
-        "avventuroso",
+        "isekai",
         "leggero",
         "affettuoso"
       ],
-      "forWho": "Per chi cerca un isekai dal cuore tenero più che dal cervello complicato.",
+      "forWho": "Per chi vuole un isekai col cuore tenero più che col cervello arzigogolato.",
+      "tips": [],
       "recommendations": {
         "simili": [],
         "saga": [],
@@ -32908,14 +33070,15 @@
           "recommendations"
         ]
       },
-      "hook": "Ragazzi addestrati per indossare armature mistiche e incanalare l'energia del Cosmo combattono in nome della dea Atena. E il capostipite di un'intera era di shonen: pose epiche, urla, colpi che diventano leggenda. Mostra i suoi anni nel ritmo e nel disegno, ma il fuoco mitologico e il senso del sacrificio restano contagiosi.",
+      "hook": "Ragazzi addestrati a vestire armature mistiche e a incanalare il Cosmo se le danno di santa ragione in nome della dea Atena. È il capostipite di un'era intera di shōnen: pose epiche, urla, colpi che diventano leggenda. Il ritmo e i disegni mostrano gli anni, ma il fuoco mitologico e il culto del sacrificio restano contagiosi.",
       "tone": [
         "epico",
         "nostalgico",
         "melodrammatico",
         "mitologico"
       ],
-      "forWho": "Per chi vuole le radici dello shonen anni Ottanta, pose e Cosmo compresi.",
+      "forWho": "Per chi vuole le radici dello shōnen anni Ottanta, pose e Cosmo inclusi.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -33384,14 +33547,18 @@
           "recommendations"
         ]
       },
-      "hook": "Un ronin disordinato, uno spadaccino freddo e una ragazza testarda viaggiano insieme nel Giappone Edo cercando un misterioso samurai. Watanabe mescola spade e hip-hop, storia e anacronismo, in un road movie elegante e cool come pochi. Episodico, ritmato, con un finale che ti resta addosso. Stile in ogni fotogramma.",
+      "hook": "Un rōnin sbracato, uno spadaccino glaciale e una ragazza testarda girano il Giappone Edo a caccia di un samurai misterioso. Watanabe impasta spade e hip-hop, Storia e anacronismo, in un road movie cool come pochi. Episodico, ritmato, con un finale che ti resta addosso. Stile in ogni singolo fotogramma.",
       "tone": [
         "cool",
-        "elegante",
         "episodico",
-        "ritmo hip-hop"
+        "stiloso",
+        "hip-hop"
       ],
-      "forWho": "Per chi ha amato Cowboy Bebop e vuole spade al posto delle astronavi.",
+      "forWho": "Per chi ha amato Cowboy Bebop e vuole le katane al posto delle astronavi.",
+      "tips": [
+        "Stesso regista di Cowboy Bebop (Watanabe): Giappone Edo mixato con hip-hop, struttura episodica.",
+        "Si guarda a puntate sciolte; l'arco principale torna verso la fine."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -33771,14 +33938,15 @@
           "recommendations"
         ]
       },
-      "hook": "Un giocatore esperto, specializzato nel finire videogiochi orribili, decide di affrontare il capolavoro VR del momento. Niente trappola mortale: qui si gioca per il puro gusto di esplorare, scoprire segreti e abbattere boss colossali. Ritmo travolgente e gioia contagiosa per chi ama davvero i giochi. Un power fantasy che sa di domenica spensierata.",
+      "hook": "Un giocatore esperto, specializzato nel finire videogiochi orribili, decide di buttarsi sul capolavoro VR del momento. Niente death game: qui si gioca per il gusto puro di esplorare, scovare segreti e abbattere boss giganteschi. Ritmo travolgente e una gioia da gamer vero che si attacca. Power fantasy che sa di domenica spensierata.",
       "tone": [
-        "spensierato",
-        "adrenalinico",
         "gamer",
+        "adrenalinico",
+        "spensierato",
         "trascinante"
       ],
-      "forWho": "Per chi gioca davvero e vuole un anime che capisca quel piacere.",
+      "forWho": "Per chi gioca davvero e vuole un anime che capisca quel gusto lì.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -34247,14 +34415,15 @@
           "recommendations"
         ]
       },
-      "hook": "In un mondo dove i cacciatori sfidano i dungeon, Seong Jin-U e il più debole di tutti, finché un sistema misterioso visibile solo a lui inizia a potenziarlo senza limiti. Power fantasy puro, montato come uno spettacolo: animazioni curatissime, combattimenti spettacolari, salita continua. Non cerca profondita, cerca il brivido del livellare. E lo centra.",
+      "hook": "In un mondo dove i cacciatori sfidano i dungeon, Seong Jin-U è il più scarso di tutti, finché un sistema misterioso visibile solo a lui inizia a potenziarlo senza freni. Power fantasy puro montato come uno spettacolo: animazione curatissima, scontri spettacolari, salita continua. Non cerca profondità, cerca il brivido del livellare. E lo centra.",
       "tone": [
-        "adrenalinico",
-        "spettacolare",
         "power fantasy",
+        "spettacolare",
+        "adrenalinico",
         "ritmo serrato"
       ],
-      "forWho": "Per chi vuole godersi una scalata senza freni, tutta progressione e azione.",
+      "forWho": "Per chi vuole godersi una scalata senza freni, tutta progressione e botte.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -34723,14 +34892,15 @@
           "recommendations"
         ]
       },
-      "hook": "Una spia deve costruirsi in fretta una finta famiglia per una missione: peccato che la figlia adottiva legga nel pensiero e la moglie sia un'assassina, ognuno all'oscuro del segreto dell'altro. Ne nasce una commedia familiare deliziosa, che alterna spionaggio e tenerezza domestica. Brillante, calda, irresistibile. Difficile non affezionarsi a tutti e tre.",
+      "hook": "Una spia deve montarsi in fretta una finta famiglia per una missione: peccato che la figlia adottiva legga nel pensiero e la moglie sia una sicaria, ciascuno all'oscuro del segreto dell'altro. Ne esce una slice of life familiare deliziosa, tra spionaggio e tenerezza domestica. Brillante, calda, irresistibile: difficile non affezionarsi a tutti e tre.",
       "tone": [
         "brillante",
-        "tenero",
+        "slice of life",
         "spiritoso",
         "caldo"
       ],
-      "forWho": "Per chi vuole ridere e intenerirsi con la famiglia più improbabile che ci sia.",
+      "forWho": "Per chi vuole ridere e intenerirsi con la famiglia più improbabile in circolazione.",
+      "tips": [],
       "recommendations": {
         "simili": [],
         "saga": [],
@@ -35094,14 +35264,15 @@
           "recommendations"
         ]
       },
-      "hook": "Migliaia di giocatori restano intrappolati in un mondo virtuale dove morire nel gioco significa morire davvero: l'unica uscita e arrivare in cima alla torre. Un classico che ha definito il genere del videogioco-prigione, tra avventura, sopravvivenza e romanticismo. Discontinuo ma centrale: difficile parlare di isekai moderni senza partire da qui.",
+      "hook": "Migliaia di giocatori restano intrappolati in un mondo virtuale dove morire nel gioco significa morire davvero: l'unica via d'uscita è arrivare in cima alla torre. Il classico che ha sdoganato il filone del videogioco-prigione, tra avventura, sopravvivenza e romanticismo. Discontinuo, ma fondativo: parlare di isekai moderni senza citarlo è impossibile.",
       "tone": [
-        "avventuroso",
+        "isekai",
         "romantico",
         "drammatico",
         "fondativo"
       ],
-      "forWho": "Per chi vuole capire da dove nasce il filone del mondo-videogioco mortale.",
+      "forWho": "Per chi vuole capire da dove arriva tutto il filone del mondo-videogioco mortale.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -35532,14 +35703,15 @@
           "recommendations"
         ]
       },
-      "hook": "Nel ventiseiesimo secolo Marte è stato terraformato con alghe e scarafaggi, che però sono mutati in mostri umanoidi spaventosi. Una squadra geneticamente potenziata atterra sul pianeta per una cura disperata, e inizia un massacro. Body horror fantascientifico, brutale e senza pietà. Sangue, mutazioni e tensione costante: non è per stomaci delicati.",
+      "hook": "Ventiseiesimo secolo: Marte è stato terraformato con alghe e scarafaggi, che però sono mutati in mostri umanoidi spaventosi. Una squadra geneticamente potenziata atterra per una cura disperata, e parte il massacro. Body horror fantascientifico, brutale e senza pietà. Sangue, mutazioni e tensione costante: non è roba per stomaci delicati.",
       "tone": [
-        "brutale",
         "body horror",
+        "brutale",
         "claustrofobico",
         "splatter"
       ],
-      "forWho": "Per chi regge l'orrore corporeo e vuole una fantascienza spietata.",
+      "forWho": "Per chi regge l'orrore corporeo e vuole una sci-fi che non fa sconti a nessuno.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -35890,14 +36062,15 @@
           "recommendations"
         ]
       },
-      "hook": "Cid sogna di essere non l'eroe ne il cattivo, ma il manipolatore nell'ombra che muove i fili. Trasportato in un altro mondo, si inventa una setta nemica per gioco, salvo scoprire che quella setta esiste davvero. Parodia geniale del chuunibyou e dell'isekai, che ride di se mentre regala azione e svolte assurde. Demenziale e furbissimo.",
+      "hook": "Cid non vuole essere l'eroe né il cattivo, ma il manipolatore nell'ombra che muove i fili. Catapultato in un altro mondo, si inventa una setta nemica per gioco, salvo scoprire che quella setta esiste sul serio. Parodia geniale del chuunibyou e dell'isekai, che ride di sé mentre serve azione e svolte assurde. Demenziale e furbissimo.",
       "tone": [
-        "demenziale",
         "parodico",
+        "isekai",
         "furbo",
         "esagerato"
       ],
-      "forWho": "Per chi conosce i cliche dell'isekai e vuole vederli presi in giro con stile.",
+      "forWho": "Per chi conosce a memoria i cliché dell'isekai e vuole vederli sfottuti con stile.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -36330,14 +36503,18 @@
           "recommendations"
         ]
       },
-      "hook": "Emma, Norman e Ray sono i bambini più brillanti di un orfanotrofio idilliaco, amati da una premurosa 'mamma'. Poi scoprono la verità sul mondo che gli è proibito vedere. Un thriller di astuzia pura, fatto di sguardi, deduzioni e tensione che stringe la gola. Goditi soprattutto questa prima parte: è una partita a scacchi mozzafiato.",
+      "hook": "Emma, Norman e Ray sono i bambini più svegli di un orfanotrofio idilliaco, coccolati da una premurosa 'mamma'. Poi scoprono la verità sul mondo che gli è vietato vedere. Mindfuck di astuzia pura, fatto di sguardi, deduzioni e una tensione che stringe la gola. Gusta soprattutto questa prima parte: è una partita a scacchi che ti toglie il fiato.",
       "tone": [
         "teso",
         "cerebrale",
-        "angosciante",
-        "thriller"
+        "mindfuck",
+        "angosciante"
       ],
-      "forWho": "Per chi ama i duelli di intelligenza dove un errore costa tutto.",
+      "forWho": "Per chi ama i duelli di intelligenza dove un singolo errore costa tutto.",
+      "tips": [
+        "Guarda la Stagione 1 e fermati lì: la 2 taglia interi archi del manga ed è bocciata dai più.",
+        "Per come prosegue davvero la storia, recupera il manga."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -36754,14 +36931,15 @@
           "recommendations"
         ]
       },
-      "hook": "Naofumi viene evocato come uno dei quattro eroi leggendari, ma gli tocca lo scudo, l'arma più debole, e in breve si ritrova solo, accusato e tradito da tutti. Da quella rabbia nasce un isekai più amaro e rancoroso degli altri, dove la fiducia va riconquistata a fatica. Catartico per chi ama vedere un protagonista risalire dal fondo.",
+      "hook": "Naofumi viene evocato come uno dei quattro eroi leggendari, ma gli tocca lo scudo, l'arma più scarsa, e in due secondi si ritrova solo, accusato e tradito. Da quella rabbia nasce un isekai più amaro e rancoroso del solito, dove la fiducia te la devi riconquistare a fatica. Catartico per chi gode a vedere un eroe risalire dal fondo.",
       "tone": [
+        "isekai",
         "amaro",
-        "catartico",
         "rancoroso",
-        "avventuroso"
+        "catartico"
       ],
       "forWho": "Per chi vuole un eroe tradito che si rialza con la rabbia dalla sua parte.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -37191,14 +37369,15 @@
           "recommendations"
         ]
       },
-      "hook": "Il miglior sicario del mondo rinasce nel corpo del primogenito di una casata di assassini fantasy, con una missione divina sulle spalle. È un isekai più freddo e metodico del solito: meno gag da power-fantasy, più calcolo, eleganza e pianificazione chirurgica. Patinato, controllato, con un fascino da spia in livrea aristocratica.",
+      "hook": "Il miglior sicario del mondo rinasce nel corpo del primogenito di una casata di assassini fantasy, con una missione divina sul groppone. È un isekai più freddo e metodico del solito: meno gag da power fantasy, più calcolo, eleganza e pianificazione chirurgica. Patinato, controllato, con un fascino da spia in livrea aristocratica.",
       "tone": [
+        "isekai",
         "calcolato",
         "elegante",
-        "patinato",
         "freddo"
       ],
-      "forWho": "Per chi vuole un isekai più cerebrale e composto, fatto di strategia più che di urla.",
+      "forWho": "Per chi vuole un isekai cerebrale e composto, fatto di strategia più che di urla.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -37669,14 +37848,15 @@
           "recommendations"
         ]
       },
-      "hook": "In questo mondo i supereroi esistono solo finché la gente crede in loro: la fiducia è un numero sul polso, e più sale più diventi potente. Antologia cinese ambiziosa, montata fuori ordine, che usa la formula del supereroe per parlare di fama, percezione e fragilità del consenso. Visivamente spericolato, concettualmente più sveglio della media.",
+      "hook": "Qui i supereroi esistono solo finché la gente crede in loro: la fiducia è un numero sul polso, e più sale più diventi potente. Antologia cinese ambiziosa, montata fuori ordine, che usa la formula del supereroe per parlare di fama, percezione e fragilità del consenso. Visivamente spericolata, concettualmente più sveglia della media.",
       "tone": [
         "ambizioso",
         "concettuale",
         "visivamente audace",
         "amaro"
       ],
-      "forWho": "Per chi cerca un supereroistico adulto che ragiona sul prezzo della popolarità.",
+      "forWho": "Per chi vuole un supereroistico adulto che ragiona sul prezzo della popolarità.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -38143,14 +38323,17 @@
           "recommendations"
         ]
       },
-      "hook": "Un trentenne fallito scopre di poter tornare indietro di dodici anni, agli anni delle bande delinquenziali del suo liceo, per cambiare un destino tragico. Mescola dramma adolescenziale, lealtà tra teppisti e una tensione da viaggio nel tempo che si fa via via più seria. Sopra le righe e melodrammatico, ma con un cuore sincero.",
+      "hook": "Un trentenne sfallito scopre di poter saltare indietro di dodici anni, ai tempi delle bande del liceo, per riscrivere un finale tragico. Mescola delinquenti adolescenti, lealtà da teppisti e una tensione da viaggio nel tempo che si fa sempre più seria. Melodrammatico fino al midollo, urla e botte a parte: sotto c'è un cuore che ci crede davvero.",
       "tone": [
         "melodrammatico",
         "teso",
         "adrenalinico",
-        "emotivo"
+        "edgy"
       ],
-      "forWho": "Per chi ama le storie di amicizia maschia e seconde possibilità, senza temere il pathos.",
+      "forWho": "Per chi non si vergogna di un po' di pathos tra amicizie maschie e seconde chance.",
+      "tips": [
+        "Si guarda in ordine d'uscita. Mix di delinquenti e viaggi nel tempo: la prima stagione parte forte, le successive dividono."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -38608,14 +38791,15 @@
           "recommendations"
         ]
       },
-      "hook": "Un ragazzo cresciuto nel buio segue l'unica persona che ami dentro una torre misteriosa che promette di esaudire ogni desiderio a chi ne raggiunge la cima. Fantasy di scalata a prove successive, con un mondo stratificato e regole tutte da decifrare. Estetica particolare e tante facce: dagli pazienza con la mole di nomi e fazioni del primo blocco.",
+      "hook": "Un ragazzo cresciuto nel buio insegue l'unica persona che gli importa dentro una torre che, a chi ne raggiunge la cima, promette di esaudire qualunque desiderio. Fantasy a piani e prove successive, con un worldbuilding stratificato e regole tutte da decifrare. Estetica particolare e una valanga di nomi: stringi i denti nel primo blocco, poi ingrana.",
       "tone": [
         "misterioso",
         "stratificato",
         "avventuroso",
-        "crescente"
+        "slow burn"
       ],
-      "forWho": "Per chi ama i mondi da decifrare e le gerarchie di prove sempre più alte.",
+      "forWho": "Per chi vuole un mondo da smontare pezzo per pezzo e gerarchie di prove sempre più alte.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -39083,14 +39267,15 @@
           "recommendations"
         ]
       },
-      "hook": "Vash the Stampede ha la taglia più alta del pianeta desertico e lascia città in rovina dietro di sé, eppure nessuno l'ha mai visto uccidere: è un pistolero pacifista e ciambellomane, più sciocco che fuorilegge. Parte come western spaziale spassoso e, sotto la comicità, cova un discorso sorprendentemente serio. Abbi pazienza: la maschera buffa nasconde molto.",
+      "hook": "Vash the Stampede ha la taglia più alta del pianeta deserto e lascia macerie ovunque passi, eppure nessuno l'ha mai visto uccidere: è un pistolero pacifista, fissato con le ciambelle, più imbranato che fuorilegge. Parte come western spaziale spassoso, ma sotto la slapstick cova qualcosa di serissimo. La maschera buffa nasconde un sacco: abbi pazienza.",
       "tone": [
-        "western",
+        "western spaziale",
         "scanzonato",
         "umanista",
         "ingannevole"
       ],
-      "forWho": "Per chi vuole ridere all'inizio e ritrovarsi commosso senza accorgersene.",
+      "forWho": "Per chi ride all'inizio e si ritrova con un groppo in gola senza accorgersene.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -39573,14 +39758,18 @@
           "recommendations"
         ]
       },
-      "hook": "Figlio di un grande guerriero vichingo, il giovane Thorfinn vede il padre cadere per mano di un mercenario e si lega a quella banda con un solo scopo: la vendetta. Saga storica cruda e magnificamente animata, ambientata tra razzie e guerre per la corona d'Inghilterra. Violenta ma riflessiva, interrogazione sincera su cosa significhi davvero essere un uomo.",
+      "hook": "Figlio di un grande guerriero vichingo, il giovane Thorfinn vede il padre cadere per mano di un mercenario e si attacca a quella banda con un solo chiodo fisso: la vendetta. Saga storica cruda e animata da dio, tra razzie e guerre per la corona d'Inghilterra. Violenta sì, ma con la testa: cosa vuol dire, davvero, essere un uomo?",
       "tone": [
         "crudo",
         "storico",
         "riflessivo",
-        "epico"
+        "seinen"
       ],
-      "forWho": "Per chi cerca un dramma storico adulto sulla violenza e su come la si supera.",
+      "forWho": "Per chi vuole un dramma storico adulto sulla violenza e su come ci si tira fuori.",
+      "tips": [
+        "La Stagione 1 è azione vichinga; la 2 cambia marcia e diventa un dramma più lento e agricolo, di proposito.",
+        "Se la 2 ti sembra spenta è una scelta narrativa: ripaga alla grande."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -40069,14 +40258,15 @@
           "recommendations"
         ]
       },
-      "hook": "Will entra in un'accademia di magia con un solo, fatale problema: non sa usare la magia. In un mondo che venera gli incantesimi, lui risponde con la spada e una testardaggine commovente. Fantasy scolastico classico e diretto, fatto di duelli vistosi e di una promessa da onorare. Comfort food shounen, eseguito con cura ed energia.",
+      "hook": "Will entra in un'accademia di magia con un dettaglio scomodo: la magia non la sa usare. In un mondo che venera gli incantesimi, lui risponde con la spada e una testardaggine da prendere a schiaffi il destino. Fantasy scolastico classico e diretto, duelli vistosi e una promessa da mantenere. Comfort food shōnen, ma servito con cura ed energia.",
       "tone": [
-        "shounen",
+        "shōnen",
         "diretto",
         "adrenalinico",
-        "incoraggiante"
+        "comfort food"
       ],
-      "forWho": "Per chi tifa per l'outsider che compensa il talento con la determinazione.",
+      "forWho": "Per chi tifa l'outsider che al talento risponde con la testa dura.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -40523,14 +40713,15 @@
           "recommendations"
         ]
       },
-      "hook": "In un futuro morente i lupi sono creduti estinti da secoli, ma sopravvivono nascosti in forma umana, attratti dal profumo di un paradiso che forse non esiste. Viaggio malinconico e allegorico, con musiche memorabili e un'atmosfera da elegia fredda. Lento e sognante: lasciati cullare più che incalzare, e respira insieme al branco.",
+      "hook": "In un futuro che sta morendo i lupi si credono estinti da secoli, ma sopravvivono nascosti in forma umana, tirati dal profumo di un paradiso che forse non esiste. Viaggio malinconico e allegorico, musiche che restano e un'atmosfera da elegia ghiacciata. Lento e sognante per scelta: qui non si corre, si respira col branco.",
       "tone": [
         "malinconico",
         "onirico",
         "elegiaco",
-        "ritmo lento"
+        "slow burn"
       ],
-      "forWho": "Per chi vuole un fantasy poetico da assaporare lentamente, più atmosfera che azione.",
+      "forWho": "Per chi vuole un fantasy poetico da centellinare, più atmosfera che azione.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -40997,14 +41188,15 @@
           "recommendations"
         ]
       },
-      "hook": "In un villaggio di montagna sorvegliato da due guardiani di pietra, il giovane Yuru vive sereno accanto alla gemella Asa, che però svolge un misterioso \"dovere\" rinchiusa in una gabbia. Fantasy soprannaturale firmato dall'autore di Dorohedoro, con il suo gusto inconfondibile per il bizzarro e il tenero insieme. Avvio quieto che custodisce segreti.",
+      "hook": "In un villaggio di montagna sorvegliato da due guardiani di pietra, il giovane Yuru vive tranquillo accanto alla gemella Asa, che però svolge un misterioso \"dovere\" chiusa in una gabbia. Fantasy soprannaturale firmato dall'autore di Dorohedoro, con quel suo gusto inconfondibile per il bizzarro e il tenero nello stesso respiro. Avvio quieto che si tiene stretti i segreti.",
       "tone": [
         "bizzarro",
         "soprannaturale",
         "intrigante",
-        "caldo"
+        "weird"
       ],
-      "forWho": "Per chi ama il fantasy stravagante e leggermente storto, con un fondo di tenerezza.",
+      "forWho": "Per chi ama il fantasy storto e stravagante, con un fondo di tenerezza inaspettata.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -41434,14 +41626,15 @@
           "recommendations"
         ]
       },
-      "hook": "Un uomo moderno rinasce principe in una città di confine e, anziché incantesimi e profezie, porta il suo asset più potente: la conoscenza tecnologica. Salva delle streghe dalla Chiesa e fonde magia e ingegneria per costruire armi, eserciti e macchine a vapore. Isekai gestionale, dove la vera arma è il progresso più che la spada.",
+      "hook": "Un uomo moderno rinasce principe in una città di confine e, invece di profezie e incantesimi, si porta dietro l'arma migliore: il know-how tecnologico. Salva delle streghe dalla Chiesa e fonde magia e ingegneria per tirare su armi, eserciti e macchine a vapore. Isekai gestionale, dove a vincere è il progresso più che la spada.",
       "tone": [
-        "gestionale",
+        "isekai gestionale",
         "ingegnoso",
         "strategico",
         "ottimista"
       ],
-      "forWho": "Per chi si appassiona alla costruzione di un regno fatta di tecnologia e logica.",
+      "forWho": "Per chi si esalta a costruire un regno a colpi di tecnologia e logica.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -41846,14 +42039,15 @@
           "recommendations"
         ]
       },
-      "hook": "Touya non eccelle in nulla, per quanto si sforzi. Poi incontra Haito, campionessa di kendo e protettrice dell'umanità, che attinge ai poteri delle proprie vite passate a un prezzo agghiacciante. Battle shounen dalla premessa cupa e dal gancio inquietante, che impasta talento, sacrificio e reincarnazione. Promette un'azione dal sapore amaro.",
+      "hook": "Touya non spicca in niente, per quanto si scervelli. Poi incontra Haito, campionessa di kendo e protettrice dell'umanità, che pesca dai poteri delle proprie vite passate a un prezzo da brividi. Battle shōnen dalla premessa cupa e dal gancio inquietante, che impasta talento, sacrificio e reincarnazione. Promette azione dal retrogusto amaro.",
       "tone": [
+        "battle shōnen",
         "cupo",
-        "shounen",
         "intenso",
-        "inquietante"
+        "edgy"
       ],
-      "forWho": "Per chi cerca un battle shounen dalla premessa oscura e dal prezzo doloroso.",
+      "forWho": "Per chi vuole un battle shōnen dalla premessa oscura e dal conto salato.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {
@@ -42292,7 +42486,7 @@
           "recommendations"
         ]
       },
-      "hook": "Sette maghi evocano leggendari eroi del passato e si combattono fino all'ultimo per un Graal che esaudisce qualsiasi desiderio. Fate/Zero è il prologo più adulto e fosco della saga: ufotable in stato di grazia, dilemmi morali tra ideali inconciliabili, mai una vittoria pulita. Denso di dialoghi e personaggi: dagli attenzione, ne vale la posta.",
+      "hook": "Sette maghi evocano eroi leggendari del passato e se le danno fino all'ultimo per un Graal che esaudisce qualsiasi desiderio. Fate/Zero è il prologo più adulto e fosco della saga: ufotable in stato di grazia, dilemmi morali tra ideali che non si possono conciliare, mai una vittoria pulita. Denso di dialoghi e personaggi: dagli attenzione, ne vale la posta.",
       "tone": [
         "fosco",
         "tragico",
@@ -42300,6 +42494,10 @@
         "sontuoso"
       ],
       "forWho": "Per chi vuole un battle royale di idee, dove ogni combattente ha la sua verità.",
+      "tips": [
+        "Franchise dall'ordine famigerato. Per iniziare bene: Fate/Zero (è il prequel ma scritto meglio) oppure Fate/stay night [Unlimited Blade Works].",
+        "Evita la serie del 2006, invecchiata male e con animazioni datate."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -42749,14 +42947,17 @@
           "recommendations"
         ]
       },
-      "hook": "La piccola Chihiro, dieci anni e tanto broncio, finisce in un mondo di spiriti dove deve lavorare in una favolosa terma per liberare i genitori. Il capolavoro di Miyazaki: un racconto di crescita pieno di meraviglia, creature indimenticabili e una grazia visiva senza pari. Non spiega tutto, è proprio per questo incanta. Da vedere almeno una volta nella vita.",
+      "hook": "La piccola Chihiro, dieci anni e broncio facile, finisce in un mondo di spiriti dove deve sgobbare in una favolosa terma per liberare i genitori. Il capolavoro di Miyazaki: crescita, meraviglia, creature che non scordi e una grazia visiva fuori scala. Non ti spiega tutto, ed è esattamente per questo che incanta. Da vedere almeno una volta nella vita, punto.",
       "tone": [
         "incantato",
-        "delicato",
+        "slice of life onirico",
         "meraviglioso",
         "poetico"
       ],
       "forWho": "Per chiunque, davvero: è la porta d'ingresso più luminosa al cinema d'animazione.",
+      "tips": [
+        "Film unico Studio Ghibli (Miyazaki), premio Oscar. Originale coi sottotitoli per goderselo davvero."
+      ],
       "recommendations": {
         "simili": [
           {
@@ -43150,14 +43351,15 @@
           "recommendations"
         ]
       },
-      "hook": "In un mondo dove l'eroismo è una condanna, Xylo, un deicida, combatte orde di abomini come membro di un'unità penale di eroi: la morte non è una fuga, solo un ciclo di resurrezione e battaglia. Dark fantasy cupo e violento, che ribalta il concetto di eroe in punizione perpetua. Poi un incontro inatteso accende una scintilla di ribellione.",
+      "hook": "In un mondo dove l'eroismo è una condanna, Xylo, un deicida, fa a pezzi orde di abomini in un'unità penale di eroi: la morte non è una via d'uscita, solo un ciclo di resurrezione e battaglia. Dark fantasy cupo e violento, che ribalta l'idea di eroe in punizione perpetua. Poi un incontro inatteso accende la scintilla della rivolta.",
       "tone": [
-        "cupo",
+        "dark fantasy",
         "violento",
         "amaro",
         "ribelle"
       ],
       "forWho": "Per chi vuole un dark fantasy duro dove l'eroe è un dannato in cerca di riscatto.",
+      "tips": [],
       "recommendations": {
         "simili": [
           {

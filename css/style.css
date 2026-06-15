@@ -468,3 +468,12 @@ em { font-style: italic; }
 .lv-doing .lv-num { border-color: var(--accent); color: var(--accent); }
 .lv-state-doing { background: color-mix(in srgb, var(--accent) 16%, transparent); color: var(--accent); }
 @media (max-width: 600px) { .path-hero-ic-wrap { width: 50px; height: 50px; font-size: 25px; } }
+
+/* ═══ v10.8 — "Dritte per la visione": info pratiche e accurate ═══════════ */
+.t-tips { background: color-mix(in srgb, var(--gold) 9%, var(--surface)); border: 1px solid color-mix(in srgb, var(--gold) 28%, var(--line));
+  border-left: 3px solid var(--gold); border-radius: var(--r); padding: 14px 18px 14px 20px; margin-bottom: 20px; }
+.t-tips-h { display: inline-flex; align-items: center; gap: 7px; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; font-weight: 800; color: var(--gold); margin-bottom: 9px; }
+.t-tips ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 7px; }
+.t-tips li { font-size: 14.5px; line-height: 1.5; color: var(--ink); }
+.t-tips li::marker { color: var(--gold); }
+.g-chip { cursor: help; }

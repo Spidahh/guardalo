@@ -20,6 +20,18 @@
     Sports: 'Sport', Supernatural: 'Soprannaturale', Thriller: 'Thriller',
   };
   const itGenre = g => GENRE_IT[g] || g;
+  // spiegazione semplice dei generi (niente roba da Wikipedia)
+  const GENRE_GLOSS = {
+    Action: 'Botte, inseguimenti, adrenalina.', Adventure: 'Viaggi ed esplorazione, un mondo da scoprire.',
+    Comedy: 'Fatto per farti ridere.', Drama: 'Punta dritto alle emozioni.',
+    Ecchi: 'Ammiccante e piccante, ma niente di esplicito.', Fantasy: 'Magia, mondi inventati, spade e mostri.',
+    Horror: 'Vuole farti paura o ribrezzo.', 'Mahou Shoujo': 'Ragazze con poteri magici (magical girl).',
+    Mecha: 'Robot giganti pilotati.', Music: 'La musica è al centro.',
+    Mystery: 'Un enigma da risolvere con i protagonisti.', Psychological: 'Ti lavora la testa: tensione mentale più che fisica.',
+    Romance: 'Storie di cuore.', 'Sci-Fi': 'Tecnologia, futuro, fantascienza.',
+    'Slice of Life': 'Quotidianità e ritmi lenti, niente grandi eventi.', Sports: 'Competizione e sport.',
+    Supernatural: 'Spiriti, poteri, roba oltre il reale.', Thriller: 'Tensione costante, ti tiene sul filo.',
+  };
 
   // scaffali per mood nella vista Esplora (genere AniList → titolo scaffale)
   const MOOD_SHELVES = [
@@ -413,8 +425,13 @@
       if (!t) return this.notFound();
       const w = this.isWatched(id), l = this.isLater(id);
 
-      const genres = (t.genres || []).map(g => `<span class="g-chip">${esc(itGenre(g))}</span>`).join('');
+      const genres = (t.genres || []).map(g => `<span class="g-chip" title="${esc(GENRE_GLOSS[g] || '')}">${esc(itGenre(g))}</span>`).join('');
       const tone = (t.tone || []).map(x => `<span class="t-chip">${esc(x)}</span>`).join('');
+      const tipsHtml = (t.tips && t.tips.length) ? `
+            <div class="t-tips">
+              <span class="t-tips-h"><i class="ri-lightbulb-flash-line"></i> Dritte per la visione</span>
+              <ul>${t.tips.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+            </div>` : '';
 
       const struct = (t.structure || []);
       const mainSteps = struct.filter(s => s.main);
@@ -480,6 +497,8 @@
               <p>${esc(t.hook || 'Scheda in arrivo.')}</p>
               ${t.forWho ? `<p class="t-forwho">${esc(t.forWho)}</p>` : ''}
             </div>
+
+            ${tipsHtml}
 
             <div class="t-genres">${genres}</div>
             ${structHtml}

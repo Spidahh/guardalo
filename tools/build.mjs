@@ -30,6 +30,7 @@ const SRC_JSON    = join(SRC_DIR, 'anime.json');
 const EDIT_DIR    = join(ROOT, 'editorial');
 const EDIT_TITLES = join(EDIT_DIR, 'titles.json');
 const EDIT_PATHS  = join(EDIT_DIR, 'paths.json');
+const EDIT_TIPS   = join(EDIT_DIR, 'tips.json');
 const OUT_JS      = join(ROOT, 'js', 'data.js');
 const OUT_JSON    = join(ROOT, 'dist', 'data.json');
 
@@ -459,6 +460,7 @@ async function cmdGen() {
     const records = JSON.parse(await readFile(SRC_JSON, 'utf8'));
     const titlesEd = existsSync(EDIT_TITLES) ? JSON.parse(await readFile(EDIT_TITLES, 'utf8')) : {};
     const paths    = existsSync(EDIT_PATHS)  ? JSON.parse(await readFile(EDIT_PATHS, 'utf8'))  : [];
+    const tipsEd   = existsSync(EDIT_TIPS)   ? JSON.parse(await readFile(EDIT_TIPS, 'utf8'))   : {};
 
     // mappe di cross-link
     const byAnilist = new Map();         // anilistId → slug
@@ -522,6 +524,7 @@ async function cmdGen() {
             hook: ed.hook || null,
             tone: ed.tone || [],
             forWho: ed.forWho || null,
+            tips: Array.isArray(tipsEd[r.id]) ? tipsEd[r.id] : [],
             recommendations: { simili, saga, studio, autore, affin },
             editorial: !!ed.hook,
         };
