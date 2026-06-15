@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-15T07:29:22.791Z",
+  "generatedAt": "2026-06-15T07:35:26.313Z",
   "attribution": "Dati e immagini da AniList (anilist.co)",
   "count": 189,
   "titles": [
@@ -119510,7 +119510,7 @@
     {
       "id": "da-zero-a-otaku",
       "title": "Da Zero a Otaku",
-      "tagline": "Pensi siano cartoni per ragazzini? Cinque livelli per smontarti l'idea e portarti da \"embè?\" a sapere di cosa si parla quando ne parlano gli altri.",
+      "tagline": "Pensi siano cartoni per ragazzini? Si parte da zero e, un titolo dopo l'altro, si arriva a capire di cosa parlano gli altri quando parlano di anime.",
       "audience": "principiante",
       "icon": "ri-compass-3-line",
       "accent": "#c8643c",
@@ -119886,7 +119886,7 @@
         },
         {
           "title": "Horror puro e disturbante",
-          "why": "Roba che lascia il segno: atmosfera malata, body horror, immagini che non ti molli più. Solo se i livelli prima non ti hanno fermato.",
+          "why": "Roba che lascia il segno: atmosfera malata, body horror, immagini che non ti molli più. Da affrontare solo se quello che hai visto prima non ti ha fermato.",
           "titles": [
             "shiki",
             "junji-ito-collection",
