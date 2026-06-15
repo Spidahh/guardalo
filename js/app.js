@@ -221,14 +221,7 @@
       window.scrollTo(0, 0);
       this.afterRender(seg);
     }
-    afterRender(seg) {
-      // bind filtri "porta" in home
-      if (!seg || seg === '') {
-        document.querySelectorAll('.door').forEach(d => d.addEventListener('click', () => {
-          this.homeAudience = d.dataset.aud; this.route();
-        }));
-      }
-    }
+    afterRender(seg) {}
 
     // ── COMPONENTI ──────────────────────────────────────────────────────────────
     lengthScale(t, compact) {
@@ -300,21 +293,7 @@
       return `<span class="mc" style="--cc:${esc(t.coverColor || '#2a2419')}"><img src="${esc(u)}" alt="" loading="lazy" onload="this.classList.add('ld')" onerror="this.classList.add('ld')"></span>`;
     }
     viewHome() {
-      const aud = this.homeAudience;
-      const visible = PATHS.filter(p =>
-        aud === 'tutti' ? true :
-        aud === 'principiante' ? p.audience !== 'esperto' :
-        p.audience !== 'principiante');
-
-      const doors = [
-        ['principiante', 'ri-seedling-line', 'Parto da zero', 'Mai visto un anime. Dimmi tu da dove si comincia.'],
-        ['esperto', 'ri-vip-crown-2-line', 'Ne ho già macinati', 'Salta le basi. Portami in profondità, tira fuori la roba non ovvia.'],
-        ['tutti', 'ri-stack-line', 'Fammi vedere tutto', 'Niente filtri: tutti i percorsi, decido io.'],
-      ].map(([k, ic, t, s]) => `
-        <button class="door ${aud === k ? 'on' : ''}" data-aud="${k}">
-          <i class="${ic}"></i><b>${t}</b><span>${s}</span>
-        </button>`).join('');
-
+      const visible = PATHS;
       const cards = visible.map(p => {
         const pr = this.pathProgress(p);
         const tag = p.audience === 'principiante' ? 'Per iniziare' : p.audience === 'esperto' ? 'Per esperti' : 'Per tutti';
@@ -350,13 +329,12 @@
             <p class="hero-kicker">La guida agli anime, senza fronzoli</p>
             <h1 class="hero-title">Cosa guardare,<br><em>detto dritto.</em></h1>
             <p class="hero-sub">I migliori di ogni genere, scelti uno per uno: perché valgono, da dove iniziare, quanto ti impegnano. Niente Wikipedia, niente liste a caso — tu pensa solo a guardare.</p>
-            <div class="doors">${doors}</div>
           </div>
           <div class="hero-art" aria-hidden="true">${heroArt}</div>
         </div>
       </section>
       <section class="wrap">
-        <div class="sec-head"><h2>${aud === 'tutti' ? 'Tutti i percorsi' : aud === 'principiante' ? 'Per cominciare' : 'Per chi vuole il profondo'}</h2>
+        <div class="sec-head"><h2>Scegli e parti</h2>
           <span class="sec-count">${visible.length} percorsi</span></div>
         <div class="paths-grid">${cards}</div>
       </section>`;
