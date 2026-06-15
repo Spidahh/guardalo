@@ -51,6 +51,7 @@ const MANUAL_MAP = {
     'fate-franchise-completo': 10087,// porta d'accesso: Fate/Zero (2011)
     'la-citta-incantata': 199,       // Spirited Away (titolo IT non trovato)
     'sentence-to-be-hero': 167152,   // Sentenced to Be a Hero (2026)
+    'natsume-yuujinchou': 432,       // ricerca prendeva uno special collaborativo
 };
 
 // titoli da NON includere: animazione occidentale, non presente/affidabile su AniList.

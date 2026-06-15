@@ -575,5 +575,556 @@
     "anilistId": 167152,
     "title": "Sentence to be hero",
     "manual": true
+  },
+  "k-on": {
+    "anilistId": 5680,
+    "title": "K-On!",
+    "matched": "K-ON!",
+    "score": 111
+  },
+  "violet-evergarden": {
+    "anilistId": 21827,
+    "title": "Violet Evergarden",
+    "matched": "Violet Evergarden",
+    "score": 111
+  },
+  "a-silent-voice": {
+    "anilistId": 20954,
+    "title": "A Silent Voice",
+    "matched": "A Silent Voice",
+    "score": 111
+  },
+  "march-comes-in-like-a-lion": {
+    "anilistId": 21366,
+    "title": "March Comes in Like a Lion",
+    "matched": "March comes in like a lion",
+    "score": 111
+  },
+  "barakamon": {
+    "anilistId": 20722,
+    "title": "Barakamon",
+    "matched": "Barakamon",
+    "score": 111
+  },
+  "mushishi": {
+    "anilistId": 457,
+    "title": "Mushishi",
+    "matched": "MUSHI-SHI",
+    "score": 111
+  },
+  "natsume-yuujinchou": {
+    "anilistId": 432,
+    "title": "Natsume's Book of Friends",
+    "manual": true
+  },
+  "non-non-biyori": {
+    "anilistId": 17549,
+    "title": "Non Non Biyori",
+    "matched": "Non Non Biyori",
+    "score": 111
+  },
+  "laid-back-camp": {
+    "anilistId": 98444,
+    "title": "Laid-Back Camp",
+    "matched": "Laid-Back Camp",
+    "score": 111
+  },
+  "your-name": {
+    "anilistId": 21519,
+    "title": "Your Name.",
+    "matched": "Your Name.",
+    "score": 111
+  },
+  "toradora": {
+    "anilistId": 4224,
+    "title": "Toradora!",
+    "matched": "Toradora!",
+    "score": 111
+  },
+  "clannad": {
+    "anilistId": 2167,
+    "title": "Clannad",
+    "matched": "Clannad",
+    "score": 111
+  },
+  "clannad-after-story": {
+    "anilistId": 4181,
+    "title": "Clannad: After Story",
+    "matched": "Clannad: After Story",
+    "score": 111
+  },
+  "your-lie-in-april": {
+    "anilistId": 20665,
+    "title": "Your Lie in April",
+    "matched": "Your lie in April",
+    "score": 111
+  },
+  "fruits-basket-2019": {
+    "anilistId": 105334,
+    "title": "Fruits Basket (2019)",
+    "matched": "Fruits Basket (2019)",
+    "score": 111
+  },
+  "kaguya-sama-love-is-war": {
+    "anilistId": 101921,
+    "title": "Kaguya-sama: Love is War",
+    "matched": "Kaguya-sama: Love is War",
+    "score": 111
+  },
+  "horimiya": {
+    "anilistId": 124080,
+    "title": "Horimiya",
+    "matched": "Horimiya",
+    "score": 111
+  },
+  "bunny-girl-senpai": {
+    "anilistId": 101291,
+    "title": "Rascal Does Not Dream of Bunny Girl Senpai",
+    "matched": "Rascal Does Not Dream of Bunny Girl Senpai",
+    "score": 111
+  },
+  "nana": {
+    "anilistId": 877,
+    "title": "NANA",
+    "matched": "NANA",
+    "score": 111
+  },
+  "maquia": {
+    "anilistId": 99457,
+    "title": "Maquia: When the Promised Flower Blooms",
+    "matched": "Maquia: When the Promised Flower Blooms",
+    "score": 111
+  },
+  "honey-and-clover": {
+    "anilistId": 16,
+    "title": "Honey and Clover",
+    "matched": "Honey and Clover",
+    "score": 111
+  },
+  "haikyuu": {
+    "anilistId": 20464,
+    "title": "Haikyuu!!",
+    "matched": "HAIKYU!!",
+    "score": 111
+  },
+  "hajime-no-ippo": {
+    "anilistId": 263,
+    "title": "Hajime no Ippo",
+    "matched": "Hajime no Ippo: The Fighting!",
+    "score": 91
+  },
+  "slam-dunk": {
+    "anilistId": 170,
+    "title": "Slam Dunk",
+    "matched": "Slam Dunk",
+    "score": 111
+  },
+  "kuroko-no-basket": {
+    "anilistId": 11771,
+    "title": "Kuroko's Basketball",
+    "matched": "Kuroko's Basketball",
+    "score": 111
+  },
+  "ping-pong-the-animation": {
+    "anilistId": 20607,
+    "title": "Ping Pong the Animation",
+    "matched": "Ping Pong the Animation",
+    "score": 111
+  },
+  "megalo-box": {
+    "anilistId": 100298,
+    "title": "Megalo Box",
+    "matched": "Megalobox",
+    "score": 111
+  },
+  "yuri-on-ice": {
+    "anilistId": 21709,
+    "title": "Yuri!!! on Ice",
+    "matched": "Yuri!!! on ICE",
+    "score": 111
+  },
+  "blue-lock": {
+    "anilistId": 137822,
+    "title": "Blue Lock",
+    "matched": "BLUE LOCK",
+    "score": 111
+  },
+  "run-with-the-wind": {
+    "anilistId": 101903,
+    "title": "Run with the Wind",
+    "matched": "Run with the Wind",
+    "score": 111
+  },
+  "gintama": {
+    "anilistId": 918,
+    "title": "Gintama",
+    "matched": "Gintama",
+    "score": 111
+  },
+  "konosuba": {
+    "anilistId": 21202,
+    "title": "KonoSuba",
+    "matched": "KONOSUBA -God's blessing on this wonderful world!",
+    "score": 111
+  },
+  "grand-blue": {
+    "anilistId": 100922,
+    "title": "Grand Blue",
+    "matched": "Grand Blue Dreaming",
+    "score": 111
+  },
+  "nichijou": {
+    "anilistId": 10165,
+    "title": "Nichijou",
+    "matched": "Nichijou - My Ordinary Life",
+    "score": 111
+  },
+  "saiki-k": {
+    "anilistId": 21804,
+    "title": "The Disastrous Life of Saiki K.",
+    "matched": "The Disastrous Life of Saiki K.",
+    "score": 111
+  },
+  "daily-lives-of-high-school-boys": {
+    "anilistId": 11843,
+    "title": "Daily Lives of High School Boys",
+    "matched": "Daily Lives of High School Boys",
+    "score": 111
+  },
+  "hinamatsuri": {
+    "anilistId": 100077,
+    "title": "Hinamatsuri",
+    "matched": "HINAMATSURI",
+    "score": 111
+  },
+  "great-teacher-onizuka": {
+    "anilistId": 245,
+    "title": "Great Teacher Onizuka",
+    "matched": "GTO: Great Teacher Onizuka",
+    "score": 91
+  },
+  "psycho-pass": {
+    "anilistId": 13601,
+    "title": "Psycho-Pass",
+    "matched": "PSYCHO-PASS",
+    "score": 111
+  },
+  "gundam-iron-blooded-orphans": {
+    "anilistId": 21268,
+    "title": "Mobile Suit Gundam: Iron-Blooded Orphans",
+    "matched": "Mobile Suit GUNDAM Iron Blooded Orphans",
+    "score": 111
+  },
+  "macross-frontier": {
+    "anilistId": 3572,
+    "title": "Macross Frontier",
+    "matched": "Macross Frontier",
+    "score": 111
+  },
+  "darling-in-the-franxx": {
+    "anilistId": 99423,
+    "title": "Darling in the FranXX",
+    "matched": "DARLING in the FRANXX",
+    "score": 111
+  },
+  "eureka-seven": {
+    "anilistId": 237,
+    "title": "Eureka Seven",
+    "matched": "Eureka Seven",
+    "score": 111
+  },
+  "planetes": {
+    "anilistId": 329,
+    "title": "Planetes",
+    "matched": "Planetes",
+    "score": 111
+  },
+  "legend-of-the-galactic-heroes": {
+    "anilistId": 820,
+    "title": "Legend of the Galactic Heroes",
+    "matched": "Legend of the Galactic Heroes",
+    "score": 108
+  },
+  "serial-experiments-lain": {
+    "anilistId": 339,
+    "title": "Serial Experiments Lain",
+    "matched": "Serial Experiments Lain",
+    "score": 111
+  },
+  "texhnolyze": {
+    "anilistId": 26,
+    "title": "Texhnolyze",
+    "matched": "Texhnolyze",
+    "score": 111
+  },
+  "ergo-proxy": {
+    "anilistId": 790,
+    "title": "Ergo Proxy",
+    "matched": "Ergo Proxy",
+    "score": 111
+  },
+  "madoka-magica": {
+    "anilistId": 9756,
+    "title": "Puella Magi Madoka Magica",
+    "matched": "Puella Magi Madoka Magica",
+    "score": 111
+  },
+  "perfect-blue": {
+    "anilistId": 437,
+    "title": "Perfect Blue",
+    "matched": "Perfect Blue",
+    "score": 107
+  },
+  "paprika": {
+    "anilistId": 1943,
+    "title": "Paprika",
+    "matched": "Paprika",
+    "score": 111
+  },
+  "paranoia-agent": {
+    "anilistId": 323,
+    "title": "Paranoia Agent",
+    "matched": "Paranoia Agent",
+    "score": 111
+  },
+  "welcome-to-the-nhk": {
+    "anilistId": 1210,
+    "title": "Welcome to the NHK",
+    "matched": "Welcome to the N-H-K",
+    "score": 111
+  },
+  "higurashi": {
+    "anilistId": 934,
+    "title": "Higurashi When They Cry",
+    "matched": "When They Cry",
+    "score": 111
+  },
+  "tokyo-ghoul": {
+    "anilistId": 20605,
+    "title": "Tokyo Ghoul",
+    "matched": "Tokyo Ghoul",
+    "score": 111
+  },
+  "another": {
+    "anilistId": 11111,
+    "title": "Another",
+    "matched": "Another",
+    "score": 111
+  },
+  "shiki": {
+    "anilistId": 7724,
+    "title": "Shiki",
+    "matched": "Shiki",
+    "score": 111
+  },
+  "elfen-lied": {
+    "anilistId": 226,
+    "title": "Elfen Lied",
+    "matched": "Elfen Lied",
+    "score": 111
+  },
+  "junji-ito-collection": {
+    "anilistId": 99940,
+    "title": "Junji Ito Collection",
+    "matched": "Junji Ito Collection",
+    "score": 111
+  },
+  "uzumaki": {
+    "anilistId": 111314,
+    "title": "Uzumaki",
+    "matched": "Uzumaki",
+    "score": 111
+  },
+  "yu-yu-hakusho": {
+    "anilistId": 392,
+    "title": "Yu Yu Hakusho",
+    "matched": "Yu Yu Hakusho: Ghostfiles",
+    "score": 111
+  },
+  "rurouni-kenshin": {
+    "anilistId": 45,
+    "title": "Rurouni Kenshin",
+    "matched": "Rurouni Kenshin",
+    "score": 111
+  },
+  "fist-of-the-north-star": {
+    "anilistId": 967,
+    "title": "Fist of the North Star",
+    "matched": "Fist of the North Star",
+    "score": 111
+  },
+  "soul-eater": {
+    "anilistId": 3588,
+    "title": "Soul Eater",
+    "matched": "Soul Eater",
+    "score": 111
+  },
+  "dr-stone": {
+    "anilistId": 105333,
+    "title": "Dr. Stone",
+    "matched": "Dr. STONE",
+    "score": 111
+  },
+  "fire-force": {
+    "anilistId": 105310,
+    "title": "Fire Force",
+    "matched": "Fire Force",
+    "score": 111
+  },
+  "blue-exorcist": {
+    "anilistId": 9919,
+    "title": "Blue Exorcist",
+    "matched": "Blue Exorcist",
+    "score": 111
+  },
+  "black-lagoon": {
+    "anilistId": 889,
+    "title": "Black Lagoon",
+    "matched": "Black Lagoon",
+    "score": 111
+  },
+  "magi": {
+    "anilistId": 14513,
+    "title": "Magi: The Labyrinth of Magic",
+    "matched": "Magi: The Labyrinth of Magic",
+    "score": 111
+  },
+  "dororo": {
+    "anilistId": 101347,
+    "title": "Dororo",
+    "matched": "Dororo",
+    "score": 111
+  },
+  "mushoku-tensei": {
+    "anilistId": 108465,
+    "title": "Mushoku Tensei: Jobless Reincarnation",
+    "matched": "Mushoku Tensei: Jobless Reincarnation",
+    "score": 111
+  },
+  "tensura": {
+    "anilistId": 101280,
+    "title": "That Time I Got Reincarnated as a Slime",
+    "matched": "That Time I Got Reincarnated as a Slime",
+    "score": 111
+  },
+  "goblin-slayer": {
+    "anilistId": 101165,
+    "title": "Goblin Slayer",
+    "matched": "GOBLIN SLAYER",
+    "score": 111
+  },
+  "the-apothecary-diaries": {
+    "anilistId": 161645,
+    "title": "The Apothecary Diaries",
+    "matched": "The Apothecary Diaries",
+    "score": 111
+  },
+  "dungeon-meshi": {
+    "anilistId": 153518,
+    "title": "Delicious in Dungeon",
+    "matched": "Delicious in Dungeon",
+    "score": 111
+  },
+  "no-game-no-life": {
+    "anilistId": 19815,
+    "title": "No Game No Life",
+    "matched": "No Game, No Life",
+    "score": 111
+  },
+  "log-horizon": {
+    "anilistId": 17265,
+    "title": "Log Horizon",
+    "matched": "Log Horizon",
+    "score": 111
+  },
+  "weathering-with-you": {
+    "anilistId": 106286,
+    "title": "Weathering with You",
+    "matched": "Weathering With You",
+    "score": 111
+  },
+  "5-centimeters-per-second": {
+    "anilistId": 1689,
+    "title": "5 Centimeters per Second",
+    "matched": "5 Centimeters per Second",
+    "score": 111
+  },
+  "millennium-actress": {
+    "anilistId": 1033,
+    "title": "Millennium Actress",
+    "matched": "Millennium Actress",
+    "score": 107
+  },
+  "tokyo-godfathers": {
+    "anilistId": 759,
+    "title": "Tokyo Godfathers",
+    "matched": "Tokyo Godfathers",
+    "score": 111
+  },
+  "wolf-children": {
+    "anilistId": 12355,
+    "title": "Wolf Children",
+    "matched": "Wolf Children",
+    "score": 111
+  },
+  "summer-wars": {
+    "anilistId": 5681,
+    "title": "Summer Wars",
+    "matched": "Summer Wars",
+    "score": 111
+  },
+  "the-girl-who-leapt-through-time": {
+    "anilistId": 2236,
+    "title": "The Girl Who Leapt Through Time",
+    "matched": "The Girl Who Leapt Through Time",
+    "score": 111
+  },
+  "grave-of-the-fireflies": {
+    "anilistId": 578,
+    "title": "Grave of the Fireflies",
+    "matched": "Grave of the Fireflies",
+    "score": 111
+  },
+  "howls-moving-castle": {
+    "anilistId": 431,
+    "title": "Howl's Moving Castle",
+    "matched": "Howl‘s Moving Castle",
+    "score": 111
+  },
+  "my-neighbor-totoro": {
+    "anilistId": 523,
+    "title": "My Neighbor Totoro",
+    "matched": "My Neighbor Totoro",
+    "score": 111
+  },
+  "nausicaa": {
+    "anilistId": 572,
+    "title": "Nausicaa of the Valley of the Wind",
+    "matched": "Nausicaä of the Valley of the Wind",
+    "score": 111
+  },
+  "redline": {
+    "anilistId": 6675,
+    "title": "Redline",
+    "matched": "Redline",
+    "score": 111
+  },
+  "dorohedoro": {
+    "anilistId": 105228,
+    "title": "Dorohedoro",
+    "matched": "Dorohedoro",
+    "score": 111
+  },
+  "banana-fish": {
+    "anilistId": 100388,
+    "title": "Banana Fish",
+    "matched": "BANANA FISH",
+    "score": 111
+  },
+  "oshi-no-ko": {
+    "anilistId": 150672,
+    "title": "Oshi no Ko",
+    "matched": "Oshi No Ko",
+    "score": 111
   }
 }
