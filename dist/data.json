@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-15T06:37:35.106Z",
+  "generatedAt": "2026-06-15T06:44:41.475Z",
   "attribution": "Dati e immagini da AniList (anilist.co)",
   "count": 97,
   "titles": [
@@ -43538,14 +43538,14 @@
     {
       "id": "da-zero-a-otaku",
       "title": "Da Zero a Otaku",
-      "tagline": "Non hai mai visto un anime in vita tua? Si parte da qui. Ti prendo per mano e, livello dopo livello, ti insegno a leggere questo linguaggio — fino a portarti dritto ai capolavori più densi.",
+      "tagline": "Pensi siano cartoni per ragazzini? Cinque livelli per smontarti l'idea e portarti da \"embè?\" a sapere di cosa si parla quando ne parlano gli altri.",
       "audience": "principiante",
       "icon": "ri-compass-3-line",
       "accent": "#c8643c",
       "levels": [
         {
-          "title": "Il primo passo",
-          "why": "Porte d'ingresso modernissime: ritmo, regia e impatto immediato. Bastano due episodi per capire perché un cartone giapponese può inchiodarti allo schermo. Nessuna conoscenza richiesta — solo voglia di farti travolgere.",
+          "title": "La prima dose",
+          "why": "Roba moderna che spacca dal primo episodio: regia, ritmo, impatto. Due puntate e capisci perché la gente ci perde le notti. Nessun prerequisito, solo il telecomando.",
           "titles": [
             "death-note",
             "demon-slayer",
@@ -43558,8 +43558,8 @@
           ]
         },
         {
-          "title": "Il linguaggio dello shōnen",
-          "why": "Il genere più popolare al mondo: crescita, amicizia, sfide che si alzano sempre di più. Qui impari i suoi codici e i suoi tempi — la grammatica che ti servirà per capire tutto il resto.",
+          "title": "Scuola shōnen",
+          "why": "Il genere che ha cresciuto mezzo pianeta: si mena, si cresce, si urla il nome delle mosse. Qui impari la grammatica di base — ti serve per capire tutto il resto, fidati.",
           "titles": [
             "my-hero-academia",
             "fullmetal-alchemist-brotherhood",
@@ -43571,8 +43571,8 @@
           ]
         },
         {
-          "title": "Quando l'anime diventa autore",
-          "why": "Qui la storia smette di essere solo intrattenimento e diventa scrittura adulta: politica, etica, world-building. Guarda come ti svelano le regole del mondo un pezzo alla volta, e come ti fanno dubitare di chi tifare.",
+          "title": "Quando diventa roba seria",
+          "why": "Qui smette di essere intrattenimento e diventa scrittura adulta: politica, etica, world-building. Cominci a fare il tifo per gente di cui dovresti diffidare. Bello, eh?",
           "titles": [
             "attack-on-titan",
             "steins-gate",
@@ -43581,8 +43581,8 @@
           ]
         },
         {
-          "title": "I classici che ti hanno preceduto",
-          "why": "Prima di te, questi hanno definito cosa l'animazione poteva fare. Datati solo all'anagrafe: il loro sguardo è ancora avanti al nostro. Senza di loro non esisterebbe niente di quello che ami.",
+          "title": "I vecchi che comandano ancora",
+          "why": "I boomer del medium. Datati all'anagrafe, ma il loro sguardo è ancora avanti al nostro. Senza questi non esisterebbe niente di quello che hai visto finora.",
           "titles": [
             "cowboy-bebop",
             "neon-genesis-evangelion",
@@ -43591,8 +43591,8 @@
           ]
         },
         {
-          "title": "Sei pronto per il profondo",
-          "why": "Non più porte d'ingresso: opere che chiedono attenzione e restituiscono il doppio. Se sei arrivato fin qui, ora le capisci davvero — e non le dimenticherai più.",
+          "title": "Adesso fa male",
+          "why": "Niente più porte d'ingresso: opere che chiedono attenzione e restituiscono il doppio. Se sei arrivato fin qui, ora le capisci davvero. E non te le togli più di dosso.",
           "titles": [
             "monster",
             "made-in-abyss",
@@ -43604,15 +43604,15 @@
     },
     {
       "id": "i-pilastri",
-      "title": "I Pilastri",
-      "tagline": "Gli imprescindibili. Le opere che chiunque parli di anime dà per viste. Se vuoi colmare le lacune o costruirti delle fondamenta solide, è la tua mappa del canone.",
+      "title": "Il Canone",
+      "tagline": "Gli intoccabili. Se provi a parlare di anime senza averli visti, si nota. Colma le lacune e smetti di figurare male nei discorsi.",
       "audience": "tutti",
       "icon": "ri-ancient-pavilion-line",
       "accent": "#b8902f",
       "levels": [
         {
-          "title": "Le radici (anni '80–'90)",
-          "why": "Da qui nasce tutto. Lo sguardo cyberpunk, il dramma mecha, il jazz spaziale: l'estetica e i temi che ancora oggi tutti citano, spesso senza saperlo.",
+          "title": "I padri fondatori (anni '80–'90)",
+          "why": "Da qui nasce tutto: lo sguardo cyberpunk, il dramma mecha, il jazz spaziale. L'estetica che ancora oggi tutti copiano, spesso senza neanche saperlo.",
           "titles": [
             "akira",
             "ghost-in-the-shell",
@@ -43626,8 +43626,8 @@
           ]
         },
         {
-          "title": "L'epoca d'oro (anni 2000)",
-          "why": "L'anime conquista il mondo e alza l'asticella della scrittura: thriller perfetti, tragedie politiche, alchimia e bizzarria che non sbagliano un colpo.",
+          "title": "L'epoca d'oro (2000s)",
+          "why": "L'anime conquista il mondo e alza l'asticella: thriller perfetti, tragedie politiche, alchimia e bizzarria che non sbagliano un colpo. Decennio fenomenale.",
           "titles": [
             "death-note",
             "code-geass",
@@ -43642,8 +43642,8 @@
           ]
         },
         {
-          "title": "I moderni che faranno storia (2010+)",
-          "why": "I capolavori della tua generazione: quelli che fra vent'anni saranno citati come oggi citiamo Evangelion. Sei in tempo per dire 'io c'ero'.",
+          "title": "I nuovi mostri (2010+)",
+          "why": "I capolavori della tua generazione: quelli che fra vent'anni si citeranno come oggi si cita Evangelion. Sei in tempo per dire \"io c'ero\".",
           "titles": [
             "attack-on-titan",
             "steins-gate",
@@ -43659,15 +43659,15 @@
     },
     {
       "id": "ti-frigge-il-cervello",
-      "title": "Ti frigge il cervello",
-      "tagline": "Thriller psicologici, paradossi temporali, partite a scacchi tra menti geniali. Per chi vuole uscire da un episodio con la testa che gira e la voglia di rivederlo da capo.",
+      "title": "Mindfuck",
+      "tagline": "Thriller psicologici e paradossi che ti lasciano a fissare il soffitto. Per chi finisce un episodio incazzato di doverlo rivedere per capirci qualcosa.",
       "audience": "tutti",
       "icon": "ri-brain-line",
       "accent": "#6b5ca5",
       "levels": [
         {
-          "title": "La trappola si chiude",
-          "why": "Premesse semplici che diventano congegni perfetti. Qui impari cos'è la tensione costruita col cervello, non con l'azione: ogni scelta ha un prezzo.",
+          "title": "La trappola scatta",
+          "why": "Premesse semplici che diventano congegni perfetti. Qui impari cos'è la tensione costruita col cervello, non con le botte: ogni mossa ha un prezzo.",
           "titles": [
             "death-note",
             "steins-gate",
@@ -43679,8 +43679,8 @@
           ]
         },
         {
-          "title": "Niente è come sembra",
-          "why": "Qui il dubbio diventa il vero protagonista: chi mente, chi ricorda, chi sopravvive. Tieni gli occhi aperti sui dettagli — sono tutti lì per un motivo.",
+          "title": "Non fidarti di nessuno",
+          "why": "Qui il vero protagonista è il dubbio: chi mente, chi ricorda male, chi sopravvive. Occhio ai dettagli — sono tutti lì per fregarti, o per salvarti.",
           "titles": [
             "code-geass",
             "monster",
@@ -43692,8 +43692,8 @@
           ]
         },
         {
-          "title": "Domande senza fondo",
-          "why": "Le opere che usano la fantascienza per chiederti cos'è una coscienza, cos'è un'anima, cosa resta dell'umano. Si esce cambiati, non solo intrattenuti.",
+          "title": "Crisi esistenziale garantita",
+          "why": "Fantascienza usata per chiederti cos'è una coscienza, cos'è un'anima, cosa resta dell'umano. Si esce cambiati, non solo intrattenuti.",
           "titles": [
             "neon-genesis-evangelion",
             "ghost-in-the-shell",
@@ -43708,15 +43708,15 @@
     },
     {
       "id": "buio-e-disagio",
-      "title": "Buio e disagio",
-      "tagline": "Horror, violenza, dilemmi morali senza rete. Non per stomaci deboli: qui l'animazione guarda dritto nell'abisso. Roba forte, scelta con cura.",
+      "title": "Disagio & Grimdark",
+      "tagline": "Horror, gore, dilemmi morali senza rete. Niente principesse, niente lieto fine garantito. Se reggi lo stomaco, qui c'è il meglio del marcio.",
       "audience": "esperto",
       "icon": "ri-skull-2-line",
       "accent": "#8c3b3b",
       "levels": [
         {
-          "title": "Il primo brivido",
-          "why": "Il disagio entra in casa con storie ancora 'maneggiabili': impari quanto in basso è disposto a spingersi questo medium, senza ancora toglierti il sonno.",
+          "title": "Il primo pugno nello stomaco",
+          "why": "Il disagio entra in casa con roba ancora gestibile: capisci quanto in basso è disposto a spingersi questo medium, senza ancora toglierti il sonno.",
           "titles": [
             "parasyte-the-maxim",
             "ajin-demi-human",
@@ -43730,7 +43730,7 @@
         },
         {
           "title": "Sangue e dannazione",
-          "why": "Dark fantasy e azione brutale dove la posta è sempre la sopravvivenza o l'anima. Estetica magnifica, contenuto spietato: bellezza e crudeltà nella stessa inquadratura.",
+          "why": "Dark fantasy e violenza dove la posta è sempre la sopravvivenza o l'anima. Estetica magnifica, contenuto spietato: bellezza e crudeltà nella stessa inquadratura.",
           "titles": [
             "berserk",
             "hellsing-ultimate",
@@ -43743,8 +43743,8 @@
           ]
         },
         {
-          "title": "L'abisso vero",
-          "why": "Le opere che lasciano un segno: crudeltà fredda, meraviglia che fa male, domande che non ti molli più. Da affrontare solo se le precedenti non ti hanno fermato.",
+          "title": "L'abisso, quello vero",
+          "why": "Roba che lascia il segno: crudeltà fredda, meraviglia che fa male, domande che non ti molli più. Da affrontare solo se i livelli prima non ti hanno fermato.",
           "titles": [
             "monster",
             "made-in-abyss",
@@ -43758,15 +43758,15 @@
     },
     {
       "id": "adrenalina-pura",
-      "title": "Adrenalina pura",
-      "tagline": "Combattimenti coreografati come balletti, poteri che escalano all'infinito, animazioni che ti fanno saltare dalla sedia. Quando vuoi solo essere travolto.",
+      "title": "Battle Shōnen",
+      "tagline": "Botte coreografate, poteri che scalano all'infinito, animazioni che ti fanno alzare dal divano. Quando vuoi spegnere il cervello e goderti lo spettacolo.",
       "audience": "principiante",
       "icon": "ri-flashlight-line",
       "accent": "#d2553f",
       "levels": [
         {
           "title": "Spettacolo puro",
-          "why": "Massima resa, minima fatica: bastano due episodi per capire perché questi nomi sono ovunque. Animazione da urlo e soddisfazione immediata.",
+          "why": "Massima resa, minima fatica: due episodi e capisci perché questi nomi stanno ovunque. Animazione da urlo e soddisfazione immediata.",
           "titles": [
             "demon-slayer",
             "jujutsu-kaisen",
@@ -43779,8 +43779,8 @@
           ]
         },
         {
-          "title": "Le grandi battaglie",
-          "why": "Saghe che hanno definito lo shōnen: tornei, rivalità, poteri che diventano leggenda. Lunghe, sì — ma è proprio nella durata che ti entrano dentro.",
+          "title": "Le saghe che menano",
+          "why": "Shōnen che hanno definito il genere: tornei, rivalità, poteri che diventano leggenda. Lunghe, sì — ed è proprio nella durata che ti entrano dentro.",
           "titles": [
             "bleach",
             "my-hero-academia",
@@ -43793,8 +43793,8 @@
           ]
         },
         {
-          "title": "Azione d'autore",
-          "why": "Quando il combattimento diventa idea registica: stile, montaggio e follia creativa al servizio dell'adrenalina. L'azione come forma d'arte, non come riempitivo.",
+          "title": "Quando le botte sono arte (sakuga)",
+          "why": "Il combattimento come idea registica: stile, montaggio e follia creativa al servizio dell'azione. Roba che i fan rivedono frame per frame, e a ragione.",
           "titles": [
             "hunter-x-hunter",
             "gurren-lagann",
@@ -43809,15 +43809,15 @@
     },
     {
       "id": "cuore-e-storia",
-      "title": "Cuore, storia e respiro",
-      "tagline": "Per quando vuoi sentire qualcosa. Drammi che restano, epica storica, viaggi lenti che valgono la pazienza. L'anime che ti commuove invece di stordirti.",
+      "title": "Drama & Feels",
+      "tagline": "Per quando vuoi che un cartone ti faccia piangere e poi negare di aver pianto. Drammi, epica storica, lentezza che ripaga. Roba da adulti.",
       "audience": "tutti",
       "icon": "ri-quill-pen-line",
       "accent": "#3f7d6e",
       "levels": [
         {
-          "title": "Emozione a fuoco lento",
-          "why": "Storie che scaldano: tenerezza, malinconia, meraviglia. Qui impari che un anime può essere prima di tutto un sentimento — e che la lentezza è un pregio.",
+          "title": "Feels a fuoco lento",
+          "why": "Storie che scaldano: tenerezza, malinconia, meraviglia. Qui capisci che un anime può essere prima di tutto un sentimento — e che la lentezza è un pregio, non un difetto.",
           "titles": [
             "frieren",
             "ranking-of-kings",
@@ -43829,7 +43829,7 @@
         },
         {
           "title": "Sangue e Storia",
-          "why": "Epica storica e di formazione: vendetta, guerra, redenzione. Personaggi che cambiano sul serio, episodio dopo episodio, fino a non riconoscere più chi erano all'inizio.",
+          "why": "Epica storica e di formazione: vendetta, guerra, redenzione. Personaggi che cambiano sul serio, fino a non riconoscere più chi erano all'inizio.",
           "titles": [
             "vinland-saga",
             "golden-kamuy",
@@ -43842,8 +43842,8 @@
           ]
         },
         {
-          "title": "Il peso dell'essere umani",
-          "why": "Le opere più adulte della guida: la colpa, la memoria, cosa significa restare buoni in un mondo che non lo è. Storie che ti accompagnano per anni.",
+          "title": "Quando fa male sul serio",
+          "why": "Le opere più adulte della guida: la colpa, la memoria, cosa significa restare umani in un mondo che non lo è. Storie che ti accompagnano per anni.",
           "titles": [
             "monster",
             "pluto",
@@ -43858,15 +43858,15 @@
     },
     {
       "id": "altri-mondi",
-      "title": "Altri mondi",
-      "tagline": "Isekai, fantasy, avventure in universi enormi. Dalla porta facile dell'isekai fino alle saghe-mondo dove puoi perderti per mesi. Per chi vuole evadere.",
+      "title": "Isekai & Fantasy",
+      "tagline": "Tizio qualunque sbatte la testa e si risveglia in un altro mondo con poteri assurdi. Sì, è un genere intero; sì, è inflazionato; e sì, ci sono perle. Più il fantasy vero e le saghe-mondo.",
       "audience": "tutti",
       "icon": "ri-door-open-line",
       "accent": "#4a6fa5",
       "levels": [
         {
           "title": "Benvenuto nell'isekai",
-          "why": "Il fenomeno del momento: gente comune catapultata in un altro mondo. Tre porte d'accesso, tre toni diversi — drammatico, epico, sopra le righe — per capire di che pasta sei.",
+          "why": "Il fenomeno del momento: gente comune catapultata in un altro mondo. Tre porte d'accesso, tre toni — drammatico, megalomane, sopra le righe — per capire di che pasta sei.",
           "titles": [
             "re-zero-starting-life-in-another-world",
             "overlord",
@@ -43878,8 +43878,8 @@
           ]
         },
         {
-          "title": "Avventura e meraviglia",
-          "why": "Mondi costruiti con cura maniacale, dove ogni episodio allarga la mappa. Qui il viaggio conta quanto la meta — e la voglia di sapere 'cosa c'è oltre' non ti molla.",
+          "title": "Fantasy serio & avventura",
+          "why": "Mondi costruiti con cura maniacale, dove ogni episodio allarga la mappa. Qui il viaggio conta quanto la meta — e la voglia di sapere \"cosa c'è oltre\" non ti molla.",
           "titles": [
             "made-in-abyss",
             "frieren",
@@ -43895,8 +43895,8 @@
           ]
         },
         {
-          "title": "Le saghe-mondo",
-          "why": "I grandi continenti narrativi: ci entri e non ne esci più. Impegno enorme, ricompensa enorme — il tipo di storia che diventa parte della tua vita.",
+          "title": "Le saghe-mondo (preparati a mesi)",
+          "why": "Continenti narrativi: ci entri e non ne esci più. Impegno enorme, ricompensa enorme — il tipo di storia che diventa parte della tua vita, nel bene e nel male.",
           "titles": [
             "one-piece",
             "hunter-x-hunter",
@@ -43910,15 +43910,15 @@
     },
     {
       "id": "visionari",
-      "title": "Visionari e fuoriclasse",
-      "tagline": "Per chi le basi le ha già. Studi e registi con una firma inconfondibile, film d'autore, sperimentazioni folli. Il deep end della guida.",
+      "title": "Roba d'Autore",
+      "tagline": "Le basi le hai già? Allora guarda gente che con l'animazione ci gioca davvero: registi con la firma, studi pazzi (ciao Trigger), film che sembrano dipinti. Snobismo consentito.",
       "audience": "esperto",
       "icon": "ri-sparkling-2-line",
       "accent": "#a14a78",
       "levels": [
         {
           "title": "Il mondo Trigger",
-          "why": "Lo studio dell'eccesso gioioso: colore, energia, regia che rompe ogni regola. Riconoscerai la firma dopo due minuti — e poi la cercherai ovunque.",
+          "why": "Lo studio dell'eccesso gioioso: colore, energia, regia che rompe ogni regola. Riconosci la firma dopo due minuti — e poi la cerchi ovunque.",
           "titles": [
             "gurren-lagann",
             "kill-la-kill",
@@ -43930,7 +43930,7 @@
           ]
         },
         {
-          "title": "Gli sperimentatori",
+          "title": "I pazzi sperimentali",
           "why": "Opere che usano l'animazione come laboratorio: ritmo, montaggio e immaginazione spinti al limite. Non per tutti — e va benissimo così.",
           "titles": [
             "flcl",
@@ -43943,8 +43943,8 @@
           ]
         },
         {
-          "title": "Il cinema d'animazione",
-          "why": "I film che hanno fatto conoscere l'animazione giapponese al mondo intero. Da vedere grande, su uno schermo che se lo merita, con il telefono in un'altra stanza.",
+          "title": "Cinema vero",
+          "why": "I film che hanno fatto conoscere l'animazione giapponese al mondo intero. Da vedere grandi, su uno schermo che se lo merita, col telefono in un'altra stanza.",
           "titles": [
             "akira",
             "ghost-in-the-shell",
@@ -43956,15 +43956,15 @@
     },
     {
       "id": "chicche-e-deep-cut",
-      "title": "Chicche e deep cut",
-      "tagline": "Niente titoli ovvi. Solo gemme che la maggior parte si è persa: gioielli nascosti, cult dimenticati, perle di nicchia. Per esperti a caccia di scoperte.",
+      "title": "Deep Cut",
+      "tagline": "Niente titoli che sanno tutti. Solo gemme che la massa si è persa: roba da tirar fuori per far vedere che ne sai più degli altri. (Lo facciamo tutti.)",
       "audience": "esperto",
       "icon": "ri-treasure-map-line",
       "accent": "#5b7a52",
       "levels": [
         {
           "title": "Gemme sottovalutate",
-          "why": "Avresti dovuto sentirne parlare ovunque, e invece no. Recuperale adesso, prima che diventino il prossimo culto di massa e tocchi dire 'io c'ero prima'.",
+          "why": "Avresti dovuto sentirne parlare ovunque, e invece no. Recuperale adesso, prima che diventino il prossimo culto di massa e tocchi dire \"io c'ero prima\".",
           "titles": [
             "death-parade",
             "91-days",
@@ -43976,8 +43976,8 @@
           ]
         },
         {
-          "title": "Cult per pochi",
-          "why": "Opere con un'identità fortissima e un pubblico piccolo e fedele. Strane, personali, impossibili da dimenticare — e da consigliare con un ghigno.",
+          "title": "Cult per quattro gatti",
+          "why": "Opere con un'identità fortissima e un pubblico piccolo e fedele. Strane, personali, impossibili da dimenticare — e da consigliare con un mezzo ghigno.",
           "titles": [
             "wolf-s-rain",
             "akudama-drive",

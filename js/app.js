@@ -23,14 +23,14 @@
 
   // scaffali per mood nella vista Esplora (genere AniList → titolo scaffale)
   const MOOD_SHELVES = [
-    { key: 'Action',       label: 'Azione e adrenalina',  icon: 'ri-sword-line' },
-    { key: 'Fantasy',      label: 'Mondi fantasy',        icon: 'ri-magic-line' },
-    { key: 'Sci-Fi',       label: 'Fantascienza',         icon: 'ri-rocket-line' },
-    { key: 'Psychological', label: 'Ti frigge il cervello', icon: 'ri-brain-line' },
-    { key: 'Horror',       label: 'Buio e disagio',       icon: 'ri-skull-2-line' },
-    { key: 'Drama',        label: 'Drammi che restano',   icon: 'ri-quill-pen-line' },
-    { key: 'Adventure',    label: 'Grandi avventure',     icon: 'ri-compass-3-line' },
-    { key: 'Comedy',       label: 'Per ridere',           icon: 'ri-emotion-laugh-line' },
+    { key: 'Action',        label: 'Botte da orbi',       icon: 'ri-sword-line' },
+    { key: 'Fantasy',       label: 'Spade & magia',       icon: 'ri-magic-line' },
+    { key: 'Sci-Fi',        label: 'Fantascienza',        icon: 'ri-rocket-line' },
+    { key: 'Psychological', label: 'Mindfuck',            icon: 'ri-brain-line' },
+    { key: 'Horror',        label: 'Roba disturbante',    icon: 'ri-skull-2-line' },
+    { key: 'Drama',         label: 'Per soffrire',        icon: 'ri-quill-pen-line' },
+    { key: 'Adventure',     label: 'Grandi avventure',    icon: 'ri-compass-3-line' },
+    { key: 'Comedy',        label: 'Due risate',          icon: 'ri-emotion-laugh-line' },
   ];
 
   // ── fasce lunghezza ────────────────────────────────────────────────────────
@@ -295,9 +295,9 @@
         p.audience !== 'principiante');
 
       const doors = [
-        ['principiante', 'ri-seedling-line', 'Sono alle prime armi', 'Non so da dove iniziare. Guidami passo passo.'],
-        ['esperto', 'ri-vip-crown-2-line', 'Ne ho già viste tante', 'Portami in profondità, fammi scoprire roba non ovvia.'],
-        ['tutti', 'ri-stack-line', 'Mostrami tutto', 'Fammi vedere tutti i percorsi disponibili.'],
+        ['principiante', 'ri-seedling-line', 'Parto da zero', 'Mai visto un anime. Dimmi tu da dove si comincia.'],
+        ['esperto', 'ri-vip-crown-2-line', 'Ne ho già macinati', 'Salta le basi. Portami in profondità, tira fuori la roba non ovvia.'],
+        ['tutti', 'ri-stack-line', 'Fammi vedere tutto', 'Niente filtri: tutti i percorsi, decido io.'],
       ].map(([k, ic, t, s]) => `
         <button class="door ${aud === k ? 'on' : ''}" data-aud="${k}">
           <i class="${ic}"></i><b>${t}</b><span>${s}</span>
@@ -337,7 +337,7 @@
           <div class="hero-copy">
             <p class="hero-kicker">La guida agli anime, livello dopo livello</p>
             <h1 class="hero-title">Non un catalogo.<br><em>Un sensei.</em></h1>
-            <p class="hero-sub">Percorsi curati che ti prendono per mano — dai primi passi ai capolavori più densi. Segna cosa hai visto, e procedi.</p>
+            <p class="hero-sub">Percorsi curati che ti portano dai primi anime alla roba che ti cambia. Niente liste a caso: un ordine, una tesi, e tu che segni cosa hai visto.</p>
             <div class="doors">${doors}</div>
           </div>
           <div class="hero-art" aria-hidden="true">${heroArt}</div>
@@ -537,14 +537,14 @@
       return `
       <section class="wrap esplora-head">
         <h1>Esplora</h1>
-        <p>Niente liste piatte: scaffali curati per umore, tempo e voglia del momento. <button class="link-btn" id="esploraSearch">o cerca un titolo →</button></p>
+        <p>Niente griglie piatte coi filtri. Scaffali per umore, tempo e voglia del momento. <button class="link-btn" id="esploraSearch">o cerca un titolo →</button></p>
       </section>
       <div class="wrap">
-        ${shelf('Inizia stasera', 'Corti e cortissimi che valgono una serata', 'ri-moon-clear-line', tonight)}
-        ${shelf('Le pietre miliari', 'I classici che hanno fatto la storia', 'ri-ancient-pavilion-line', pillars)}
-        ${shelf('Appena usciti', 'Il meglio degli ultimi anni', 'ri-fire-line', fresh)}
-        ${shelf('Da maratona', 'Quando vuoi qualcosa in cui perderti per mesi', 'ri-calendar-todo-line', marathon)}
-        ${shelf('Nascosti bene', 'Gemme che la maggior parte si è persa', 'ri-treasure-map-line', hidden)}
+        ${shelf('Stasera senza impegni', 'Corti che valgono una serata e bona lì', 'ri-moon-clear-line', tonight)}
+        ${shelf('Cultura generale', 'Roba che dovresti aver già visto', 'ri-ancient-pavilion-line', pillars)}
+        ${shelf('Appena usciti', 'Il meglio delle ultime stagioni', 'ri-fire-line', fresh)}
+        ${shelf('Se hai mesi da buttare', 'Saghe-mondo in cui perderti per un pezzo', 'ri-calendar-todo-line', marathon)}
+        ${shelf('Deep cut', 'Gemme che la massa si è persa', 'ri-treasure-map-line', hidden)}
         ${moodShelves}
       </div>`;
     }
