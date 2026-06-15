@@ -343,3 +343,45 @@ em { font-style: italic; }
   .lv-num { width: 36px; height: 36px; font-size: 16px; }
   .foot-note { margin-left: 0; flex-basis: 100%; }
 }
+
+/* ═══ v10.1 — home visiva: copertine ovunque, niente card vuote ═══════════ */
+
+/* placeholder colorato (coverColor) + dissolvenza in entrata */
+.card-poster { background: var(--cc, var(--surface-2)); }
+.card-poster img { opacity: 0; transition: opacity .5s ease; }
+.card-poster img.ld { opacity: 1; }
+
+/* mini-cover riutilizzabile (card percorso + collage hero) */
+.mc { display: block; position: relative; background: var(--cc, var(--surface-2)); overflow: hidden; }
+.mc img { width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .6s ease; }
+.mc img.ld { opacity: 1; }
+
+/* CARD PERCORSO — striscia di copertine in testa */
+.path-card { padding: 0; min-height: 0; }
+.path-card::before { inset: 0 0 auto 0; width: auto; height: 3px; background: var(--accent); z-index: 3; }
+.path-card::after { display: none; }
+.path-covers { position: relative; display: flex; height: 134px; background: var(--surface-2); }
+.path-covers .mc { flex: 1 1 0; height: 100%; }
+.path-covers .mc img { filter: saturate(.94) brightness(.96); transition: transform .4s, opacity .6s; }
+.path-card:hover .path-covers .mc img { transform: scale(1.06); }
+.path-covers-veil { position: absolute; inset: 0; pointer-events: none; background:
+   linear-gradient(180deg, transparent 32%, color-mix(in srgb, var(--accent) 22%, transparent) 100%),
+   linear-gradient(180deg, transparent 52%, var(--surface) 99%); }
+.path-ic { position: absolute; left: 16px; bottom: 11px; z-index: 2; font-size: 30px; color: #fff;
+   filter: drop-shadow(0 2px 7px rgba(0,0,0,.7)); }
+.path-card-main { padding: 14px 20px 20px; display: flex; flex-direction: column; flex: 1; }
+.path-card-top { align-items: flex-start; margin-bottom: 8px; gap: 10px; }
+.path-name { margin: 0; font-size: 22px; line-height: 1.08; }
+.path-aud { white-space: nowrap; margin-top: 3px; }
+.path-tag { -webkit-line-clamp: 2; font-size: 13px; }
+
+/* HERO — due colonne con collage di copertine iconiche */
+.hero-in { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr); gap: 44px; align-items: center; }
+.hero-art { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; transform: rotate(-5deg) scale(1.04);
+   -webkit-mask-image: radial-gradient(125% 105% at 58% 42%, #000 52%, transparent 84%);
+           mask-image: radial-gradient(125% 105% at 58% 42%, #000 52%, transparent 84%); }
+.hero-art .mc { aspect-ratio: 2/3; border-radius: 11px; box-shadow: var(--shadow); }
+@media (max-width: 900px) { .hero-in { grid-template-columns: 1fr; gap: 0; } .hero-art { display: none; } }
+
+/* scala lunghezza nelle card: leggermente più leggibile */
+.lscale-c { background: linear-gradient(90deg, rgba(8,5,2,.8), rgba(8,5,2,.45)); padding: 4px 6px; }

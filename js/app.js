@@ -42,6 +42,8 @@
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c =>
     ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const cover = t => t.coverImage || '';
+  // variante leggera (AniList ~24KB invece di ~80KB) per card e mini-cover
+  const thumb = u => (u || '').replace('/cover/large/', '/cover/medium/');
 
   // ════════════════════════════════════════════════════════════════════════
   class Guardalo {
@@ -238,7 +240,7 @@
       const col = t.coverColor ? `style="--cc:${esc(t.coverColor)}"` : '';
       return `<a class="card ${w ? 'is-watched' : ''} ${l ? 'is-later' : ''}" data-card="${esc(t.id)}" href="#/t/${esc(t.id)}" ${col}>
         <div class="card-poster">
-          <img src="${esc(cover(t))}" alt="${esc(t.title)}" loading="lazy">
+          <img src="${esc(thumb(cover(t)))}" alt="${esc(t.title)}" loading="lazy" onload="this.classList.add('ld')" onerror="this.classList.add('ld')">
           <div class="card-marks">
             <button class="cm js-watch ${w ? 'on' : ''}" data-id="${esc(t.id)}" title="Visto" aria-label="Segna come visto"><i class="ri-check-line"></i></button>
             <button class="cm js-later ${l ? 'on' : ''}" data-id="${esc(t.id)}" title="Da vedere" aria-label="Aggiungi a Da vedere"><i class="ri-bookmark-line"></i></button>
@@ -268,6 +270,20 @@
       let done = 0; ids.forEach(id => { if (this.isWatched(id)) done++; });
       return { total, done, pct: total ? Math.round(done / total * 100) : 0 };
     }
+    // prime N copertine rappresentative di un percorso (per la card visiva)
+    pathCovers(p, n) {
+      const seen = new Set(), out = [];
+      for (const lv of p.levels) for (const id of (lv.titles || [])) {
+        if (seen.has(id)) continue; seen.add(id);
+        const t = BY_ID.get(id);
+        if (t && t.coverImage) out.push(t);
+        if (out.length >= n) return out;
+      }
+      return out;
+    }
+    miniCover(t) {
+      return `<span class="mc" style="--cc:${esc(t.coverColor || '#2a2419')}"><img src="${esc(thumb(t.coverImage))}" alt="" loading="lazy" onload="this.classList.add('ld')" onerror="this.classList.add('ld')"></span>`;
+    }
     viewHome() {
       const aud = this.homeAudience;
       const visible = PATHS.filter(p =>
@@ -287,27 +303,36 @@
       const cards = visible.map(p => {
         const pr = this.pathProgress(p);
         const tag = p.audience === 'principiante' ? 'Per iniziare' : p.audience === 'esperto' ? 'Per esperti' : 'Per tutti';
+        const covers = this.pathCovers(p, 4).map(t => this.miniCover(t)).join('');
         return `<a class="path-card" href="#/p/${esc(p.id)}" style="--accent:${esc(p.accent)}">
-          <div class="path-card-top">
-            <i class="${esc(p.icon)} path-ic"></i>
-            <span class="path-aud">${tag}</span>
-          </div>
-          <h3 class="path-name">${esc(p.title)}</h3>
-          <p class="path-tag">${esc(p.tagline)}</p>
-          <div class="path-foot">
-            <span class="path-levels"><i class="ri-stairs-line"></i> ${p.levels.length} livelli</span>
-            <span class="path-prog"><span class="pp-bar"><span style="width:${pr.pct}%"></span></span>${pr.done}/${pr.total}</span>
+          <div class="path-covers">${covers}<span class="path-covers-veil"></span><i class="${esc(p.icon)} path-ic"></i></div>
+          <div class="path-card-main">
+            <div class="path-card-top">
+              <h3 class="path-name">${esc(p.title)}</h3>
+              <span class="path-aud">${tag}</span>
+            </div>
+            <p class="path-tag">${esc(p.tagline)}</p>
+            <div class="path-foot">
+              <span class="path-levels"><i class="ri-stairs-line"></i> ${p.levels.length} livelli</span>
+              <span class="path-prog"><span class="pp-bar"><span style="width:${pr.pct}%"></span></span>${pr.done}/${pr.total}</span>
+            </div>
           </div>
         </a>`;
       }).join('');
 
+      const iconic = [...TITLES].sort((a, b) => (b.popularity || 0) - (a.popularity || 0)).slice(0, 9);
+      const heroArt = iconic.map(t => this.miniCover(t)).join('');
+
       return `
       <section class="hero">
         <div class="hero-in">
-          <p class="hero-kicker">La guida agli anime, livello dopo livello</p>
-          <h1 class="hero-title">Non un catalogo.<br><em>Un sensei.</em></h1>
-          <p class="hero-sub">Percorsi curati che ti prendono per mano — dai primi passi ai capolavori più densi. Segna cosa hai visto, e procedi.</p>
-          <div class="doors">${doors}</div>
+          <div class="hero-copy">
+            <p class="hero-kicker">La guida agli anime, livello dopo livello</p>
+            <h1 class="hero-title">Non un catalogo.<br><em>Un sensei.</em></h1>
+            <p class="hero-sub">Percorsi curati che ti prendono per mano — dai primi passi ai capolavori più densi. Segna cosa hai visto, e procedi.</p>
+            <div class="doors">${doors}</div>
+          </div>
+          <div class="hero-art" aria-hidden="true">${heroArt}</div>
         </div>
       </section>
       <section class="wrap">
