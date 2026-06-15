@@ -1,698 +1,589 @@
-// GUARDALO — app.js v9
-// Generi principali (in italiano) con accorpamento dei generi grezzi rari.
-// Un titolo appartiene al gruppo se ha almeno uno dei generi "raw".
-const GENRE_GROUPS = [
-    { name: 'Azione',         icon: 'ri-sword-line',        raw: ['Action', 'Martial Arts', 'Military', 'Western', 'Action & Adventure', 'War & Politics', 'Guerra'] },
-    { name: 'Avventura',      icon: 'ri-compass-3-line',    raw: ['Adventure', 'Action & Adventure', 'Avventura'] },
-    { name: 'Fantasy',        icon: 'ri-magic-line',        raw: ['Fantasy', 'Sci-Fi & Fantasy', 'Fantascienza'] },
-    { name: 'Fantascienza',   icon: 'ri-rocket-line',       raw: ['Sci-Fi', 'Cyberpunk', 'Post-apocalyptic', 'Time Travel', 'Game', 'Sci-Fi & Fantasy', 'Fantascienza'] },
-    { name: 'Drammatico',     icon: 'ri-emotion-sad-line',  raw: ['Drama', 'Dramma'] },
-    { name: 'Soprannaturale', icon: 'ri-ghost-line',        raw: ['Supernatural', 'Vampire'] },
-    { name: 'Commedia',       icon: 'ri-emotion-laugh-line',raw: ['Comedy', 'Parody', 'Commedia'] },
-    { name: 'Horror',         icon: 'ri-skull-2-line',      raw: ['Horror'] },
-    { name: 'Thriller',       icon: 'ri-search-eye-line',   raw: ['Thriller', 'Mystery', 'Crime', 'Psychological', 'Mistero'] },
-    { name: 'Storico',        icon: 'ri-ancient-gate-line', raw: ['Historical', 'Storia'] },
-    { name: 'Isekai',         icon: 'ri-door-open-line',    raw: ['Isekai'] },
-    { name: 'Supereroi',      icon: 'ri-shield-star-line',  raw: ['Superhero'] },
-    { name: 'Mecha',          icon: 'ri-robot-line',        raw: ['Mecha'] },
-];
+// ─────────────────────────────────────────────────────────────────────────
+// GUARDALO v10 — guida interattiva a livelli (vanilla JS, zero build)
+// Dati: window.GUARDALO (generato da tools/build.mjs). Stato utente: localStorage
+// (anonimo) + Firebase Firestore (sincronizzato al login). Pubblico per default.
+// ─────────────────────────────────────────────────────────────────────────
+(function () {
+  'use strict';
 
-class GuardaloApp {
+  const DATA   = window.GUARDALO || { titles: [], paths: [], attribution: '' };
+  const TITLES = DATA.titles || [];
+  const PATHS  = DATA.paths || [];
+  const BY_ID  = new Map(TITLES.map(t => [t.id, t]));
+
+  // ── tassonomia generi (EN grezzo → IT) ────────────────────────────────────
+  const GENRE_IT = {
+    Action: 'Azione', Adventure: 'Avventura', Comedy: 'Commedia', Drama: 'Drammatico',
+    Ecchi: 'Ecchi', Fantasy: 'Fantasy', Horror: 'Horror', 'Mahou Shoujo': 'Magical Girl',
+    Mecha: 'Mecha', Music: 'Musicale', Mystery: 'Mistero', Psychological: 'Psicologico',
+    Romance: 'Romantico', 'Sci-Fi': 'Fantascienza', 'Slice of Life': 'Slice of Life',
+    Sports: 'Sport', Supernatural: 'Soprannaturale', Thriller: 'Thriller',
+  };
+  const itGenre = g => GENRE_IT[g] || g;
+
+  // scaffali per mood nella vista Esplora (genere AniList → titolo scaffale)
+  const MOOD_SHELVES = [
+    { key: 'Action',       label: 'Azione e adrenalina',  icon: 'ri-sword-line' },
+    { key: 'Fantasy',      label: 'Mondi fantasy',        icon: 'ri-magic-line' },
+    { key: 'Sci-Fi',       label: 'Fantascienza',         icon: 'ri-rocket-line' },
+    { key: 'Psychological', label: 'Ti frigge il cervello', icon: 'ri-brain-line' },
+    { key: 'Horror',       label: 'Buio e disagio',       icon: 'ri-skull-2-line' },
+    { key: 'Drama',        label: 'Drammi che restano',   icon: 'ri-quill-pen-line' },
+    { key: 'Adventure',    label: 'Grandi avventure',     icon: 'ri-compass-3-line' },
+    { key: 'Comedy',       label: 'Per ridere',           icon: 'ri-emotion-laugh-line' },
+  ];
+
+  // ── fasce lunghezza ────────────────────────────────────────────────────────
+  const BANDS = ['cortissimo', 'corto', 'medio', 'lungo', 'lunghissimo'];
+  const bandIndex = b => Math.max(0, BANDS.indexOf(b));
+
+  // ── util ───────────────────────────────────────────────────────────────────
+  const $  = (s, r = document) => r.querySelector(s);
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c =>
+    ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const cover = t => t.coverImage || '';
+
+  // ════════════════════════════════════════════════════════════════════════
+  class Guardalo {
     constructor() {
-        this.animeData = [];
-        this.filteredAnime = [];
-        this.filters = { search: '', genres: [], status: 'all', category: 'animazione' };
-        this.sortBy = 'rating';
-        this.viewMode = 'grid';
-        this.currentUser = null;
-        this.userAnime = {};
-        this.isAdmin = false;
-        this.overrides = {};
-        this.init();
+      this.watched = {};
+      this.toWatch = {};
+      this.user = null;
+      this.isAdmin = false;
+      this.homeAudience = 'tutti';
+      this.boot();
     }
 
-    async init() {
-        this.animeData = [...animeData];
-        this.filteredAnime = [...animeData];
-        document.body.dataset.cat = this.filters.category;
-        this.initTheme();
-        this.initView();
-        this.updateCatCounts();
-        this.buildGenreChips();
-        this.bindEvents();
-        this.applyFilters();
-        this.initFirebase();
-        this.loadOverrides();
+    boot() {
+      this.loadLocal();
+      this.bindChrome();
+      this.initFirebase();
+      const attr = $('#footAttr'); if (attr) attr.textContent = DATA.attribution || '';
+      window.addEventListener('hashchange', () => this.route());
+      this.route();
     }
 
-    // ── OVERRIDE ADMIN (voti/dati modificati dal proprietario) ────────
-    // Documento pubblico in lettura: applicato sopra ai dati statici, così
-    // le modifiche del proprietario le vedono tutti senza ricommittare.
-    loadOverrides() {
-        if (typeof db === 'undefined') return;
-        db.collection('meta').doc('overrides').get()
-            .then(doc => {
-                this.overrides = (doc.exists && doc.data().data) || {};
-                this.applyOverrides();
-                this.applyFilters();
-            })
-            .catch(() => {});
+    // ── persistenza ──────────────────────────────────────────────────────────
+    loadLocal() {
+      try {
+        const r = JSON.parse(localStorage.getItem('guardalo_v10') || '{}');
+        this.watched = r.watched || {};
+        this.toWatch = r.toWatch || {};
+      } catch (e) {}
     }
-
-    applyOverrides() {
-        animeData.forEach(a => {
-            const ov = this.overrides[a.id];
-            if (ov) Object.assign(a, ov);
-        });
-    }
-
-    // Titoli appartenenti alla categoria attiva
-    inCategory(a) {
-        // retro-compatibile: voci senza category sono "animazione"
-        return (a.category || 'animazione') === this.filters.category;
-    }
-
-    updateCatCounts() {
-        const counts = { animazione: 0, live: 0 };
-        animeData.forEach(a => { counts[a.category || 'animazione']++; });
-        const an = document.getElementById('count-animazione');
-        const lv = document.getElementById('count-live');
-        if (an) an.textContent = counts.animazione;
-        if (lv) lv.textContent = counts.live;
-    }
-
-    switchCategory(cat) {
-        if (this.filters.category === cat) return;
-        this.filters.category = cat;
-        this.filters.genres = [];
-        document.body.dataset.cat = cat;
-        document.querySelectorAll('.cat-tab').forEach(t =>
-            t.classList.toggle('active', t.dataset.cat === cat));
-        const search = document.getElementById('searchInput');
-        search.placeholder = cat === 'live' ? 'Cerca serie TV...' : 'Cerca anime...';
-
-        // View Transitions API (2026): crossfade nativo, con fallback automatico
-        const update = () => { this.buildGenreChips(); this.applyFilters(); };
-        if (document.startViewTransition) document.startViewTransition(update);
-        else update();
-    }
-
-    // ── FIREBASE ──────────────────────────────────────────────
-    initFirebase() {
-        try {
-            if (typeof auth === 'undefined') return;
-            auth.onAuthStateChanged(user => {
-                this.currentUser = user;
-                const adminEmail = (typeof ADMIN_EMAIL !== 'undefined' ? ADMIN_EMAIL : '').toLowerCase();
-                this.isAdmin = !!(user && user.email && user.email.toLowerCase() === adminEmail);
-                this.updateNavUI();
-                this.updateAdminUI();
-                if (user) this.loadFromCloud();
-                else this.loadFromLocal();
-            });
-        } catch (e) {
-            console.warn('Firebase non disponibile', e);
-            this.loadFromLocal();
-        }
-    }
-
-    loadFromCloud() {
-        db.collection('users').doc(this.currentUser.uid).get()
-            .then(doc => {
-                const raw = doc.exists ? (doc.data().anime || {}) : {};
-                this.userAnime = this.migrateUserAnime(raw);
-                if (this._userAnimeMigrated) this.save(); // riscrive in cloud con chiave id
-                this.applyFilters();
-            })
-            .catch(() => this.loadFromLocal());
-    }
-
-    loadFromLocal() {
-        let raw = {};
-        try {
-            const stored = localStorage.getItem('guardalo_anime');
-            if (stored) raw = JSON.parse(stored);
-        } catch (e) {}
-        this.userAnime = this.migrateUserAnime(raw);
-        if (this._userAnimeMigrated) this.save();
-        this.applyFilters();
-    }
-
-    // Migra lo stato salvato dalla vecchia chiave (titolo) all'id stabile.
-    // Idempotente: ai caricamenti successivi le chiavi sono già id e non cambia nulla.
-    migrateUserAnime(raw) {
-        const titleToId = {};
-        animeData.forEach(a => { titleToId[a.title] = a.id; });
-        const out = {};
-        let changed = false;
-        for (const [key, val] of Object.entries(raw || {})) {
-            const mappedId = titleToId[key];
-            if (mappedId) changed = true;          // la chiave era un titolo → convertita
-            const k = mappedId || key;             // altrimenti è già un id
-            out[k] = { ...(out[k] || {}), ...val };
-        }
-        this._userAnimeMigrated = changed;
-        return out;
-    }
-
     save() {
-        if (this.currentUser && typeof db !== 'undefined') {
-            db.collection('users').doc(this.currentUser.uid)
-                .set({ anime: this.userAnime }, { merge: true });
-        } else {
-            localStorage.setItem('guardalo_anime', JSON.stringify(this.userAnime));
+      const payload = { watched: this.watched, toWatch: this.toWatch };
+      if (this.user && window.db) {
+        window.db.collection('users').doc(this.user.uid).set({ guardalo: payload }, { merge: true }).catch(() => {});
+      }
+      try { localStorage.setItem('guardalo_v10', JSON.stringify(payload)); } catch (e) {}
+    }
+    isWatched(id) { return !!this.watched[id]; }
+    isLater(id)   { return !!this.toWatch[id]; }
+
+    toggle(id, field) {
+      const store = field === 'watched' ? this.watched : this.toWatch;
+      if (store[id]) delete store[id];
+      else {
+        store[id] = true;
+        // visto e da-vedere si escludono
+        if (field === 'watched') delete this.toWatch[id];
+        else delete this.watched[id];
+      }
+      this.save();
+      this.refreshMarks(id);
+      const on = field === 'watched' ? this.isWatched(id) : this.isLater(id);
+      const msg = field === 'watched'
+        ? (on ? '✓ Segnato come visto' : 'Rimosso dai visti')
+        : (on ? '🔖 Aggiunto a “Da vedere”' : 'Rimosso da “Da vedere”');
+      this.toast(msg, on ? (field === 'watched' ? 'ok' : 'later') : 'muted');
+    }
+
+    // aggiorna le spunte visibili senza ri-renderizzare tutta la vista
+    refreshMarks(id) {
+      document.querySelectorAll(`[data-card="${CSS.escape(id)}"]`).forEach(c => {
+        c.classList.toggle('is-watched', this.isWatched(id));
+        c.classList.toggle('is-later', this.isLater(id));
+        const w = c.querySelector('.js-watch'); if (w) w.classList.toggle('on', this.isWatched(id));
+        const l = c.querySelector('.js-later'); if (l) l.classList.toggle('on', this.isLater(id));
+      });
+      // progressi percorsi / contatori, se in vista
+      const route = (location.hash.slice(1) || '/');
+      if (route === '/' || route.startsWith('/p/') || route === '/lista') this.route();
+    }
+
+    // ── FIREBASE ──────────────────────────────────────────────────────────────
+    initFirebase() {
+      try {
+        if (typeof window.auth === 'undefined') return;
+        window.auth.onAuthStateChanged(user => {
+          this.user = user;
+          const admin = (window.ADMIN_EMAIL || '').toLowerCase();
+          this.isAdmin = !!(user && user.email && user.email.toLowerCase() === admin);
+          this.updateUserChrome();
+          if (user) this.loadCloud();
+        });
+      } catch (e) {}
+    }
+    loadCloud() {
+      window.db.collection('users').doc(this.user.uid).get().then(doc => {
+        const g = (doc.exists && doc.data().guardalo) || null;
+        if (g) {
+          // unione: locale + cloud (non perdere progressi fatti da sloggati)
+          this.watched = Object.assign({}, this.watched, g.watched || {});
+          this.toWatch = Object.assign({}, this.toWatch, g.toWatch || {});
         }
-    }
-
-    updateNavUI() {
-        const loginBtn  = document.getElementById('loginBtn');
-        const logoutBtn = document.getElementById('logoutBtn');
-        const userInfo  = document.getElementById('userInfo');
-        if (this.currentUser) {
-            loginBtn.style.display  = 'none';
-            logoutBtn.style.display = 'flex';
-            userInfo.textContent = this.currentUser.displayName || this.currentUser.email;
-        } else {
-            loginBtn.style.display  = 'flex';
-            logoutBtn.style.display = 'none';
-            userInfo.textContent = '';
-        }
-    }
-
-    // Mostra un piccolo distintivo "Admin" e segna lo stato sul body
-    updateAdminUI() {
-        document.body.classList.toggle('is-admin', this.isAdmin);
-        const badge = document.getElementById('adminBadge');
-        if (badge) badge.style.display = this.isAdmin ? 'inline-flex' : 'none';
-    }
-
-    // Salva una modifica admin sul documento pubblico (solo l'admin può scrivere
-    // grazie alle regole Firestore) e la applica subito in locale.
-    saveOverride(id, patch) {
-        const entry = this.animeData.find(a => a.id === id) || animeData.find(a => a.id === id);
-        if (entry) Object.assign(entry, patch);
-        this.overrides[id] = { ...(this.overrides[id] || {}), ...patch };
-        if (typeof db !== 'undefined') {
-            db.collection('meta').doc('overrides')
-                .set({ data: { [id]: this.overrides[id] } }, { merge: true })
-                .then(() => this.toast('✓ Modifica salvata', 'toast-watched'))
-                .catch(e => this.toast('Errore salvataggio: ' + e.code, 'toast-removed'));
-        }
-        this.applyFilters();
-    }
-
-    // ── TEMA CHIARO/SCURO ─────────────────────────────────────
-    initTheme() {
-        let theme = 'dark';
-        try { theme = localStorage.getItem('guardalo_theme') || 'dark'; } catch (e) {}
-        this.applyTheme(theme);
-    }
-
-    applyTheme(theme) {
-        document.body.dataset.theme = theme;
-        const icon = document.querySelector('#themeToggle i');
-        if (icon) icon.className = theme === 'light' ? 'ri-sun-line' : 'ri-moon-line';
-        // aggiorna il colore della barra di stato del browser/PWA
-        const meta = document.querySelector('meta[name="theme-color"]');
-        if (meta) meta.setAttribute('content', theme === 'light' ? '#f4f5f8' : '#0b0b0f');
-    }
-
-    toggleTheme() {
-        const next = document.body.dataset.theme === 'light' ? 'dark' : 'light';
-        this.applyTheme(next);
-        try { localStorage.setItem('guardalo_theme', next); } catch (e) {}
-    }
-
-    // ── VISTA: griglia / elenco compatto ──────────────────────
-    initView() {
-        let v = 'grid';
-        try { v = localStorage.getItem('guardalo_view') || 'grid'; } catch (e) {}
-        this.applyView(v);
-    }
-
-    applyView(v) {
-        this.viewMode = v === 'list' ? 'list' : 'grid';
-        const btn = document.getElementById('viewToggle');
-        if (btn) {
-            const icon = btn.querySelector('i');
-            if (icon) icon.className = this.viewMode === 'list' ? 'ri-layout-grid-fill' : 'ri-list-unordered';
-            btn.title = this.viewMode === 'list' ? 'Vista griglia' : 'Vista elenco';
-            btn.setAttribute('aria-pressed', this.viewMode === 'list' ? 'true' : 'false');
-        }
-    }
-
-    toggleView() {
-        this.applyView(this.viewMode === 'list' ? 'grid' : 'list');
-        try { localStorage.setItem('guardalo_view', this.viewMode); } catch (e) {}
-        this.render();
-    }
-
-    // ── GENRE CHIPS ───────────────────────────────────────────
-    // Un titolo appartiene a un gruppo se ha almeno uno dei suoi generi raw
-    matchesGroup(anime, group) {
-        return anime.genres.some(g => group.raw.includes(g));
-    }
-
-    buildGenreChips() {
-        const container = document.getElementById('genreChips');
-        if (!container) return;
-        container.innerHTML = '';
-        const inCat = animeData.filter(a => this.inCategory(a));
-
-        GENRE_GROUPS.forEach(group => {
-            const count = inCat.filter(a => this.matchesGroup(a, group)).length;
-            if (count === 0) return; // niente categorie vuote nella sezione corrente
-            const active = this.filters.genres.includes(group.name);
-            const btn = document.createElement('button');
-            btn.className = 'genre-chip' + (active ? ' active' : '');
-            btn.innerHTML =
-                `<i class="${group.icon} g-icon"></i>` +
-                `<span class="g-name">${group.name}</span>` +
-                `<span class="g-count">${count}</span>`;
-            btn.addEventListener('click', () => this.toggleGenre(group.name));
-            container.appendChild(btn);
-        });
-    }
-
-    toggleGenre(name) {
-        if (this.filters.genres.includes(name)) {
-            this.filters.genres = this.filters.genres.filter(g => g !== name);
-        } else {
-            this.filters.genres.push(name);
-        }
-        this.buildGenreChips();
-        this.applyFilters();
-    }
-
-    clearGenres() {
-        this.filters.genres = [];
-        this.buildGenreChips();
-        this.applyFilters();
-    }
-
-    // ── EVENTI ───────────────────────────────────────────────
-    bindEvents() {
-        const searchInput = document.getElementById('searchInput');
-        const clearSearch = document.getElementById('clearSearch');
-
-        // Tab categoria
-        document.querySelectorAll('.cat-tab').forEach(tab => {
-            tab.addEventListener('click', () => this.switchCategory(tab.dataset.cat));
-        });
-
-        // Toggle tema chiaro/scuro
-        document.getElementById('themeToggle').addEventListener('click', () => this.toggleTheme());
-
-        // Toggle vista griglia / elenco
-        document.getElementById('viewToggle').addEventListener('click', () => this.toggleView());
-
-        // "Mostra tutti" — azzera i generi selezionati
-        document.getElementById('genreClear').addEventListener('click', () => this.clearGenres());
-
-
-        searchInput.addEventListener('input', () => {
-            this.filters.search = searchInput.value.toLowerCase().trim();
-            clearSearch.classList.toggle('visible', !!searchInput.value);
-            this.applyFilters();
-        });
-
-        clearSearch.addEventListener('click', () => {
-            searchInput.value = '';
-            this.filters.search = '';
-            clearSearch.classList.remove('visible');
-            searchInput.focus();
-            this.applyFilters();
-        });
-
-        document.getElementById('sortSelect').addEventListener('change', e => {
-            this.sortBy = e.target.value;
-            this.applyFilters();
-        });
-
-        document.getElementById('statusFilter').addEventListener('change', e => {
-            this.filters.status = e.target.value;
-            this.applyFilters();
-        });
-
-        document.getElementById('clearFilters').addEventListener('click', () => {
-            this.filters = { search: '', genres: [], status: 'all', category: this.filters.category };
-            this.sortBy = 'rating';
-            document.getElementById('searchInput').value = '';
-            document.getElementById('statusFilter').value = 'all';
-            document.getElementById('sortSelect').value = 'rating';
-            clearSearch.classList.remove('visible');
-            this.buildGenreChips();
-            this.applyFilters();
-        });
-
-        // Modal chiudi
-        document.getElementById('close-modal').addEventListener('click', () => this.closeModal('detail-modal'));
-        document.getElementById('close-login').addEventListener('click', () => this.closeModal('login-modal'));
-        document.getElementById('detail-modal').addEventListener('click', e => {
-            if (e.target === e.currentTarget) this.closeModal('detail-modal');
-        });
-        document.getElementById('login-modal').addEventListener('click', e => {
-            if (e.target === e.currentTarget) this.closeModal('login-modal');
-        });
-
-        // Login / Logout
-        document.getElementById('loginBtn').addEventListener('click', () => {
-            document.getElementById('login-modal').classList.add('open');
-        });
-        document.getElementById('logoutBtn').addEventListener('click', () => {
-            if (typeof auth !== 'undefined') auth.signOut();
-        });
-        document.getElementById('google-login').addEventListener('click', () => {
-            if (typeof auth !== 'undefined') {
-                auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
-            }
-        });
-
-        // Keyboard
-        document.addEventListener('keydown', e => {
-            if (e.key === 'Escape') {
-                this.closeModal('detail-modal');
-                this.closeModal('login-modal');
-            }
-            if (e.key === '/' && !['INPUT','TEXTAREA'].includes(document.activeElement.tagName)) {
-                e.preventDefault();
-                document.getElementById('searchInput').focus();
-            }
-        });
-
-        // Swipe to close su mobile
-        const modalEl = document.querySelector('#detail-modal .modal');
-        let touchY = 0;
-        modalEl.addEventListener('touchstart', e => { touchY = e.touches[0].clientY; }, { passive: true });
-        modalEl.addEventListener('touchend', e => {
-            if (e.changedTouches[0].clientY - touchY > 70) this.closeModal('detail-modal');
-        }, { passive: true });
-    }
-
-    closeModal(id) {
-        document.getElementById(id)?.classList.remove('open');
-    }
-
-    // ── FILTRI + RENDER ───────────────────────────────────────
-    applyFilters() {
-        const { search, genres, status } = this.filters;
-
-        this.filteredAnime = animeData.filter(a => {
-            if (!this.inCategory(a)) return false;
-            if (search) {
-                const q = search;
-                const match =
-                    a.title.toLowerCase().includes(q) ||
-                    a.genres.some(g => g.toLowerCase().includes(q)) ||
-                    GENRE_GROUPS.some(gr => gr.name.toLowerCase().includes(q) && this.matchesGroup(a, gr)) ||
-                    (a.studio?.toLowerCase().includes(q)) ||
-                    (a.synopsis?.toLowerCase().includes(q));
-                if (!match) return false;
-            }
-            if (genres.length > 0) {
-                const ok = genres.every(name => {
-                    const group = GENRE_GROUPS.find(gr => gr.name === name);
-                    return group && this.matchesGroup(a, group);
-                });
-                if (!ok) return false;
-            }
-            if (status !== 'all') {
-                const us = this.userAnime[a.id];
-                if (status === 'watched' && !us?.watched) return false;
-                if (status === 'towatch' && !us?.toWatch) return false;
-            }
-            return true;
-        });
-
-        this.filteredAnime.sort((a, b) => {
-            if (this.sortBy === 'title') return a.title.localeCompare(b.title);
-            if (this.sortBy === 'year')  return b.year - a.year;
-            return b.rating - a.rating;
-        });
-
-        this.render();
-    }
-
-    render() {
-        const grid     = document.getElementById('animeGrid');
-        const counter  = document.getElementById('results-count');
-        const catTotal = animeData.filter(a => this.inCategory(a)).length;
-        const shown    = this.filteredAnime.length;
-        const noun     = this.filters.category === 'live' ? 'serie TV' : 'titoli';
-
-        counter.textContent = shown === catTotal
-            ? `${catTotal} ${noun}`
-            : `${shown} di ${catTotal} ${noun}`;
-
-        const rt = document.getElementById('results-title');
-        if (rt) rt.textContent = this.filters.category === 'live'
-            ? 'Serie TV consigliate' : 'Animazione consigliata';
-
-        grid.className = this.viewMode === 'list' ? 'list-view' : 'grid';
-        grid.innerHTML = '';
-
-        if (shown === 0) {
-            // Categoria ancora vuota (es. Serie TV non ancora popolata)
-            if (catTotal === 0) {
-                grid.innerHTML = `<div class="no-results">
-                    <i class="ri-tv-2-line"></i>
-                    <strong>Sezione in arrivo</strong>
-                    Qui troverai presto le serie TV consigliate
-                </div>`;
-            } else {
-                grid.innerHTML = `<div class="no-results">
-                    <i class="ri-search-line"></i>
-                    <strong>Nessun risultato</strong>
-                    Prova a cambiare i filtri o la ricerca
-                </div>`;
-            }
-            return;
-        }
-
-        const make = this.viewMode === 'list'
-            ? a => this.makeListRow(a)
-            : a => this.makeCard(a);
-        this.filteredAnime.forEach(anime => grid.appendChild(make(anime)));
-    }
-
-    // Markup condiviso dei due tasti "spunta rapida" (Visto / Da vedere)
-    quickActionsHTML(us) {
-        return `<div class="card-actions">
-            <button class="card-act act-watch ${us.watched ? 'active' : ''}" data-act="watched" title="Segna come Visto" aria-label="Segna come Visto"><i class="ri-check-line"></i></button>
-            <button class="card-act act-later ${us.toWatch ? 'active' : ''}" data-act="toWatch" title="Aggiungi a Da vedere" aria-label="Aggiungi a Da vedere"><i class="ri-bookmark-line"></i></button>
-        </div>`;
-    }
-
-    // Collega i tasti spunta di una card/riga senza aprire il dettaglio
-    bindQuickActions(el, anime) {
-        el.querySelectorAll('.card-act').forEach(btn =>
-            btn.addEventListener('click', e => {
-                e.stopPropagation();
-                this.toggleStatus(anime.id, btn.dataset.act);
-            }));
-    }
-
-    // ── RIGA VISTA ELENCO (compatta: thumb minuscola + info principali) ──
-    makeListRow(anime) {
-        const us = this.userAnime[anime.id] || {};
-        const row = document.createElement('div');
-        row.className = 'list-row' + (anime.top ? ' is-top' : '');
-        row.tabIndex = 0;
-        row.setAttribute('role', 'button');
-        row.setAttribute('aria-label', anime.title);
-
-        const durata = anime.type === 'Film' ? 'Film' : `${anime.episodes} ep`;
-        const sub = [anime.year, durata, anime.type].filter(Boolean).join('  ·  ');
-
-        row.innerHTML = `
-            <img class="list-thumb" src="${anime.img}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
-            <div class="list-main">
-                <span class="list-title">${anime.top ? '<i class="ri-vip-crown-fill list-crown"></i>' : ''}${anime.title}</span>
-                <span class="list-sub">${sub}</span>
-            </div>
-            <span class="list-score ${anime.rating ? '' : 'list-score-none'}">${anime.rating ? `<i class="ri-star-fill"></i>${anime.rating}` : '<i class="ri-star-line"></i>'}</span>
-            ${this.quickActionsHTML(us)}`;
-
-        row.addEventListener('click', () => this.openDetail(anime));
-        row.addEventListener('keydown', e => {
-            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); this.openDetail(anime); }
-        });
-        this.bindQuickActions(row, anime);
-        return row;
-    }
-
-    makeCard(anime) {
-        const us = this.userAnime[anime.id] || {};
-        const card = document.createElement('div');
-        card.className = 'card' + (anime.top ? ' card-top' : '');
-        card.tabIndex = 0;
-        card.setAttribute('role', 'button');
-        card.setAttribute('aria-label', anime.title);
-
-        const scoreClass = anime.rating >= 9 ? 'score-gold'
-                         : anime.rating >= 7 ? 'score-green'
-                         : 'score-blue';
-        // rating 0/assente = "da valutare" (i voti li mette l'utente)
-        const scoreChip = anime.rating
-            ? `<span class="card-score ${scoreClass}"><i class="ri-star-fill"></i>${anime.rating}</span>`
-            : `<span class="card-score card-score-none" title="Da valutare"><i class="ri-star-line"></i></span>`;
-
-        const topBadge = anime.top
-            ? `<span class="card-badge-top">TOP</span>`
-            : '';
-
-        card.innerHTML = `
-            <div class="card-poster-wrap">
-                <img class="card-poster" src="${anime.img}" alt="${anime.title}" loading="lazy" style="aspect-ratio:2/3"
-                     onerror="this.outerHTML='<div class=card-poster-placeholder><i class=ri-image-line></i></div>'">
-                ${topBadge}
-                ${scoreChip}
-                ${this.quickActionsHTML(us)}
-            </div>
-            <div class="card-info">
-                <div class="card-title">${anime.title}</div>
-                <div class="card-meta">
-                    <span class="card-year">${anime.year}</span>
-                    <span class="card-type">${anime.type || ''}</span>
-                </div>
-            </div>`;
-
-        card.addEventListener('click', () => this.openDetail(anime));
-        card.addEventListener('keydown', e => {
-            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); this.openDetail(anime); }
-        });
-        this.bindQuickActions(card, anime);
-        return card;
-    }
-
-    // ── MODAL DETTAGLIO ───────────────────────────────────────
-    openDetail(anime) {
-        const us    = this.userAnime[anime.id] || {};
-        const modal = document.getElementById('detail-modal');
-
-        modal.querySelector('.modal-title').textContent = anime.title;
-        modal.querySelector('.modal-img').src  = anime.img;
-        modal.querySelector('.modal-img').alt  = anime.title;
-        const ratingEl = modal.querySelector('.modal-rating');
-        const maxEl    = modal.querySelector('.score-max');
-        if (anime.rating) {
-            ratingEl.textContent = anime.rating;
-            ratingEl.classList.remove('rating-none');
-            if (maxEl) maxEl.style.display = '';
-        } else {
-            ratingEl.textContent = 'Da valutare';
-            ratingEl.classList.add('rating-none');
-            if (maxEl) maxEl.style.display = 'none';
-        }
-        modal.querySelector('.modal-year').textContent     = anime.year;
-        modal.querySelector('.modal-episodes').textContent = `${anime.episodes} ep.`;
-        modal.querySelector('.modal-studio').textContent   = anime.studio;
-        modal.querySelector('.modal-status').textContent   = anime.status;
-        modal.querySelector('.modal-synopsis').textContent = anime.synopsis;
-
-        document.getElementById('score-fill').style.width = `${(anime.rating || 0) * 10}%`;
-
-        modal.querySelector('.modal-tags').innerHTML =
-            anime.genres.map(g => `<span class="chip-tag">${g}</span>`).join('');
-
-        modal.querySelector('.modal-structure').innerHTML =
-            anime.structure.map(s => `
-                <div class="struct-item">
-                    <span class="struct-name">${s.name}</span>
-                    <span class="struct-ep">${s.episodes}</span>
-                </div>`).join('');
-
-        const legal  = anime.links.legal  || [];
-        const search = anime.links.illegal || [];
-
-        modal.querySelector('.legal-links').innerHTML = legal.length
-            ? legal.map(l =>
-                `<a href="${l.url}" target="_blank" rel="noopener" class="link-btn link-legal"><i class="ri-play-circle-fill"></i> ${l.name}</a>`
-              ).join('')
-            : `<span class="link-none"><i class="ri-information-line"></i> Nessuno streaming legale noto</span>`;
-
-        modal.querySelector('.illegal-links').innerHTML =
-            search.map(l =>
-                `<a href="${l.url}" target="_blank" rel="noopener" class="link-btn link-search"><i class="ri-search-line"></i> ${l.name === 'Cerca' ? 'Cerca dove vederlo' : l.name}</a>`
-            ).join('');
-
-        const watchBtn = document.getElementById('btn-watched');
-        const laterBtn = document.getElementById('btn-towatch');
-        watchBtn.classList.toggle('active', !!us.watched);
-        laterBtn.classList.toggle('active', !!us.toWatch);
-
-        watchBtn.onclick = () => this.toggleStatus(anime.id, 'watched');
-        laterBtn.onclick = () => this.toggleStatus(anime.id, 'toWatch');
-
-        // ── Pannello admin (solo proprietario) ──
-        const panel = document.getElementById('adminPanel');
-        if (this.isAdmin) {
-            panel.style.display = '';
-            const rIn = document.getElementById('admin-rating');
-            const tIn = document.getElementById('admin-top');
-            const sIn = document.getElementById('admin-status');
-            rIn.value = anime.rating || '';
-            tIn.checked = !!anime.top;
-            sIn.value = anime.status || '';
-            document.getElementById('admin-save').onclick = () => {
-                let r = parseInt(rIn.value, 10);
-                if (isNaN(r) || r < 0) r = 0;
-                if (r > 10) r = 10;
-                this.saveOverride(anime.id, { rating: r, top: tIn.checked, status: sIn.value.trim() || anime.status });
-                this.openDetail(anime); // ricarica con i valori aggiornati
-            };
-        } else {
-            panel.style.display = 'none';
-        }
-
-        modal.querySelector('.modal-right').scrollTop = 0;
-        modal.classList.add('open');
-    }
-
-    toggleStatus(id, field) {
-        if (!this.userAnime[id]) this.userAnime[id] = {};
-        this.userAnime[id][field] = !this.userAnime[id][field];
-
-        if (field === 'watched' && this.userAnime[id].watched)  this.userAnime[id].toWatch = false;
-        if (field === 'toWatch' && this.userAnime[id].toWatch)  this.userAnime[id].watched = false;
-
         this.save();
-        this.applyFilters();
-
-        // Riallinea il modal SOLO se è aperto (le spunte sulle card non lo aprono)
-        const modalEl = document.getElementById('detail-modal');
-        if (modalEl && modalEl.classList.contains('open')) {
-            const anime = this.animeData.find(a => a.id === id);
-            if (anime) this.openDetail(anime);
-        }
-
-        const isOn = this.userAnime[id][field];
-        const msgs = {
-            watched: ['✓ Segnato come Visto',     'toast-watched'],
-            toWatch: ['🔖 Aggiunto a Da vedere', 'toast-towatch'],
-        };
-        const [msg, cls] = isOn ? msgs[field] : ['Rimosso dalla lista', 'toast-removed'];
-        this.toast(msg, cls);
+        this.route();
+      }).catch(() => {});
+    }
+    updateUserChrome() {
+      const chip = $('#userChip'), login = $('#loginBtn'), logout = $('#logoutBtn'), badge = $('#adminBadge');
+      if (this.user) {
+        chip.hidden = false; chip.textContent = this.user.displayName || this.user.email;
+        login.hidden = true; logout.hidden = false;
+      } else {
+        chip.hidden = true; login.hidden = false; logout.hidden = true;
+      }
+      if (badge) badge.hidden = !this.isAdmin;
     }
 
-    // ── TOAST ─────────────────────────────────────────────────
-    toast(msg, cls) {
-        const t = document.createElement('div');
-        t.className = `toast ${cls}`;
-        t.textContent = msg;
-        document.getElementById('toast-container').appendChild(t);
-        requestAnimationFrame(() => requestAnimationFrame(() => t.classList.add('show')));
-        setTimeout(() => {
-            t.classList.remove('show');
-            setTimeout(() => t.remove(), 400);
-        }, 2500);
+    // ── CHROME (nav, tema, ricerca, login) ────────────────────────────────────
+    bindChrome() {
+      $('#themeToggle').addEventListener('click', () => this.toggleTheme());
+      $('#searchOpen').addEventListener('click', () => this.openSearch());
+      $('#searchClose').addEventListener('click', () => this.closeSearch());
+      $('#searchOverlay').addEventListener('click', e => { if (e.target.id === 'searchOverlay') this.closeSearch(); });
+      $('#searchInput').addEventListener('input', e => this.renderSearch(e.target.value));
+
+      $('#loginBtn').addEventListener('click', () => $('#loginModal').classList.add('open'));
+      $('#loginClose').addEventListener('click', () => $('#loginModal').classList.remove('open'));
+      $('#loginModal').addEventListener('click', e => { if (e.target.id === 'loginModal') e.currentTarget.classList.remove('open'); });
+      $('#googleLogin').addEventListener('click', () => {
+        if (window.auth) window.auth.signInWithPopup(new window.firebase.auth.GoogleAuthProvider())
+          .then(() => $('#loginModal').classList.remove('open')).catch(() => {});
+      });
+      $('#logoutBtn').addEventListener('click', () => { if (window.auth) window.auth.signOut(); });
+
+      // delega azioni "visto / da vedere"
+      document.addEventListener('click', e => {
+        const b = e.target.closest('.js-watch, .js-later');
+        if (b) { e.preventDefault(); e.stopPropagation(); this.toggle(b.dataset.id, b.classList.contains('js-watch') ? 'watched' : 'toWatch'); }
+      });
+
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') { this.closeSearch(); $('#loginModal').classList.remove('open'); }
+        if (e.key === '/' && !/^(INPUT|TEXTAREA)$/.test(document.activeElement.tagName)) { e.preventDefault(); this.openSearch(); }
+      });
+      window.addEventListener('scroll', () => {
+        document.querySelector('.nav')?.classList.toggle('scrolled', window.scrollY > 6);
+      }, { passive: true });
     }
-}
+    toggleTheme() {
+      const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+      document.documentElement.dataset.theme = next;
+      const meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.content = next === 'light' ? '#f6f1e7' : '#17140f';
+      try { localStorage.setItem('guardalo_theme', next); } catch (e) {}
+    }
+    openSearch() { const o = $('#searchOverlay'); o.hidden = false; requestAnimationFrame(() => o.classList.add('open')); $('#searchInput').focus(); this.renderSearch(''); }
+    closeSearch() { const o = $('#searchOverlay'); o.classList.remove('open'); setTimeout(() => o.hidden = true, 200); $('#searchInput').value = ''; }
 
-document.addEventListener('DOMContentLoaded', () => { window.app = new GuardaloApp(); });
+    // ── ROUTER ─────────────────────────────────────────────────────────────────
+    route() {
+      const hash = location.hash.slice(1) || '/';
+      const [_, seg, arg] = hash.split('/');
+      let html, active = 'home';
+      if (seg === 'p' && arg) { html = this.viewPath(arg); active = 'home'; }
+      else if (seg === 't' && arg) { html = this.viewTitle(arg); active = ''; }
+      else if (seg === 'esplora') { html = this.viewEsplora(); active = 'esplora'; }
+      else if (seg === 'lista') { html = this.viewLista(); active = 'lista'; }
+      else { html = this.viewHome(); active = 'home'; }
 
-// Navbar che si "stacca" allo scroll (look 2026)
-window.addEventListener('scroll', () => {
-    const n = document.querySelector('.navbar');
-    if (n) n.classList.toggle('is-scrolled', window.scrollY > 8);
-}, { passive: true });
+      const app = $('#app');
+      app.innerHTML = html;
+      document.querySelectorAll('.nav-links a').forEach(a => a.classList.toggle('active', a.dataset.route === active));
+      window.scrollTo(0, 0);
+      this.afterRender(seg);
+    }
+    afterRender(seg) {
+      // bind filtri "porta" in home
+      if (!seg || seg === '') {
+        document.querySelectorAll('.door').forEach(d => d.addEventListener('click', () => {
+          this.homeAudience = d.dataset.aud; this.route();
+        }));
+      }
+    }
+
+    // ── COMPONENTI ──────────────────────────────────────────────────────────────
+    lengthScale(t, compact) {
+      const idx = bandIndex(t.lengthBand);
+      const bars = BANDS.map((b, i) =>
+        `<span class="ls-bar ${i <= idx ? 'on' : ''} ls-${t.lengthBand}"></span>`).join('');
+      if (compact) return `<span class="lscale lscale-c" title="${esc(t.lengthLabel)} · ${esc(t.lengthHint)}">${bars}</span>`;
+      return `<div class="lscale">
+        <div class="ls-bars ls-${t.lengthBand}">${bars}</div>
+        <div class="ls-text"><b>${esc(t.lengthLabel)}</b><span>${esc(t.lengthHint)}</span></div>
+      </div>`;
+    }
+    statusBadge(t) {
+      const map = { 'Concluso': 'done', 'In corso': 'airing', 'Annunciato': 'soon', 'In pausa': 'soon', 'Cancellato': 'soon' };
+      const ic = { 'Concluso': 'ri-check-line', 'In corso': 'ri-loader-2-line', 'Annunciato': 'ri-time-line' };
+      return `<span class="status status-${map[t.statusLabel] || 'soon'}"><i class="${ic[t.statusLabel] || 'ri-time-line'}"></i>${esc(t.statusLabel)}</span>`;
+    }
+    card(t, opts = {}) {
+      if (!t) return '';
+      const w = this.isWatched(t.id), l = this.isLater(t.id);
+      const why = opts.why ? `<span class="card-why">${esc(opts.why)}</span>` : '';
+      const col = t.coverColor ? `style="--cc:${esc(t.coverColor)}"` : '';
+      return `<a class="card ${w ? 'is-watched' : ''} ${l ? 'is-later' : ''}" data-card="${esc(t.id)}" href="#/t/${esc(t.id)}" ${col}>
+        <div class="card-poster">
+          <img src="${esc(cover(t))}" alt="${esc(t.title)}" loading="lazy">
+          <div class="card-marks">
+            <button class="cm js-watch ${w ? 'on' : ''}" data-id="${esc(t.id)}" title="Visto" aria-label="Segna come visto"><i class="ri-check-line"></i></button>
+            <button class="cm js-later ${l ? 'on' : ''}" data-id="${esc(t.id)}" title="Da vedere" aria-label="Aggiungi a Da vedere"><i class="ri-bookmark-line"></i></button>
+          </div>
+          ${w ? '<span class="card-seen"><i class="ri-check-double-line"></i> Visto</span>' : ''}
+          ${this.lengthScale(t, true)}
+        </div>
+        <div class="card-body">
+          <div class="card-title">${esc(t.title)}</div>
+          <div class="card-meta">${esc(t.year || '')} · ${esc(t.typeLabel)}${t.score10 ? ` · <span class="card-score"><i class="ri-star-fill"></i>${t.score10}</span>` : ''}</div>
+          ${why}
+        </div>
+      </a>`;
+    }
+    row(ids, opts = {}) {
+      const items = ids.map(x => typeof x === 'string' ? { t: BY_ID.get(x) } : { t: BY_ID.get(x.id), why: x.why })
+        .filter(o => o.t);
+      if (!items.length) return '';
+      return `<div class="row-scroll">${items.map(o => this.card(o.t, { why: opts.why ? o.why : null })).join('')}</div>`;
+    }
+
+    // ── VISTA: HOME (percorsi) ──────────────────────────────────────────────────
+    pathProgress(p) {
+      const ids = new Set();
+      p.levels.forEach(l => (l.titles || []).forEach(id => ids.add(id)));
+      const total = ids.size;
+      let done = 0; ids.forEach(id => { if (this.isWatched(id)) done++; });
+      return { total, done, pct: total ? Math.round(done / total * 100) : 0 };
+    }
+    viewHome() {
+      const aud = this.homeAudience;
+      const visible = PATHS.filter(p =>
+        aud === 'tutti' ? true :
+        aud === 'principiante' ? p.audience !== 'esperto' :
+        p.audience !== 'principiante');
+
+      const doors = [
+        ['principiante', 'ri-seedling-line', 'Sono alle prime armi', 'Non so da dove iniziare. Guidami passo passo.'],
+        ['esperto', 'ri-vip-crown-2-line', 'Ne ho già viste tante', 'Portami in profondità, fammi scoprire roba non ovvia.'],
+        ['tutti', 'ri-stack-line', 'Mostrami tutto', 'Fammi vedere tutti i percorsi disponibili.'],
+      ].map(([k, ic, t, s]) => `
+        <button class="door ${aud === k ? 'on' : ''}" data-aud="${k}">
+          <i class="${ic}"></i><b>${t}</b><span>${s}</span>
+        </button>`).join('');
+
+      const cards = visible.map(p => {
+        const pr = this.pathProgress(p);
+        const tag = p.audience === 'principiante' ? 'Per iniziare' : p.audience === 'esperto' ? 'Per esperti' : 'Per tutti';
+        return `<a class="path-card" href="#/p/${esc(p.id)}" style="--accent:${esc(p.accent)}">
+          <div class="path-card-top">
+            <i class="${esc(p.icon)} path-ic"></i>
+            <span class="path-aud">${tag}</span>
+          </div>
+          <h3 class="path-name">${esc(p.title)}</h3>
+          <p class="path-tag">${esc(p.tagline)}</p>
+          <div class="path-foot">
+            <span class="path-levels"><i class="ri-stairs-line"></i> ${p.levels.length} livelli</span>
+            <span class="path-prog"><span class="pp-bar"><span style="width:${pr.pct}%"></span></span>${pr.done}/${pr.total}</span>
+          </div>
+        </a>`;
+      }).join('');
+
+      return `
+      <section class="hero">
+        <div class="hero-in">
+          <p class="hero-kicker">La guida agli anime, livello dopo livello</p>
+          <h1 class="hero-title">Non un catalogo.<br><em>Un sensei.</em></h1>
+          <p class="hero-sub">Percorsi curati che ti prendono per mano — dai primi passi ai capolavori più densi. Segna cosa hai visto, e procedi.</p>
+          <div class="doors">${doors}</div>
+        </div>
+      </section>
+      <section class="wrap">
+        <div class="sec-head"><h2>${aud === 'tutti' ? 'Tutti i percorsi' : aud === 'principiante' ? 'Per cominciare' : 'Per chi vuole il profondo'}</h2>
+          <span class="sec-count">${visible.length} percorsi</span></div>
+        <div class="paths-grid">${cards}</div>
+      </section>`;
+    }
+
+    // ── VISTA: PERCORSO ──────────────────────────────────────────────────────────
+    viewPath(id) {
+      const p = PATHS.find(x => x.id === id);
+      if (!p) return this.notFound();
+      const pr = this.pathProgress(p);
+      const levels = p.levels.map((lv, i) => {
+        const ids = lv.titles || [];
+        const done = ids.filter(x => this.isWatched(x)).length;
+        const state = done === ids.length && ids.length ? 'done' : done > 0 ? 'doing' : 'todo';
+        const stLabel = state === 'done' ? 'Completato' : state === 'doing' ? 'In corso' : 'Da iniziare';
+        const cards = ids.map(x => this.card(BY_ID.get(x))).join('');
+        const bonus = (lv.bonus || []).filter(x => BY_ID.get(x));
+        const bonusHtml = bonus.length ? `
+          <div class="lv-bonus">
+            <span class="lv-bonus-h"><i class="ri-add-circle-line"></i> Bonus facoltativi</span>
+            <div class="row-scroll">${bonus.map(x => this.card(BY_ID.get(x))).join('')}</div>
+          </div>` : '';
+        return `
+        <article class="level lv-${state}">
+          <div class="lv-rail"><span class="lv-num">${i + 1}</span></div>
+          <div class="lv-body">
+            <div class="lv-head">
+              <h3 class="lv-title">${esc(lv.title)}</h3>
+              <span class="lv-state lv-state-${state}">${stLabel} · ${done}/${ids.length}</span>
+            </div>
+            <p class="lv-why">${esc(lv.why)}</p>
+            <div class="lv-cards">${cards}</div>
+            ${bonusHtml}
+          </div>
+        </article>`;
+      }).join('');
+
+      return `
+      <section class="path-hero" style="--accent:${esc(p.accent)}">
+        <div class="wrap">
+          <a class="back" href="#/"><i class="ri-arrow-left-line"></i> Tutti i percorsi</a>
+          <div class="path-hero-in">
+            <i class="${esc(p.icon)} path-hero-ic"></i>
+            <div>
+              <h1 class="path-hero-name">${esc(p.title)}</h1>
+              <p class="path-hero-tag">${esc(p.tagline)}</p>
+              <div class="path-hero-meta">
+                <span class="pp-bar lg"><span style="width:${pr.pct}%"></span></span>
+                <span>${pr.done} di ${pr.total} visti · ${p.levels.length} livelli</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="wrap levels">${levels}</section>`;
+    }
+
+    // ── VISTA: TITOLO ────────────────────────────────────────────────────────────
+    viewTitle(id) {
+      const t = BY_ID.get(id);
+      if (!t) return this.notFound();
+      const w = this.isWatched(id), l = this.isLater(id);
+
+      const genres = (t.genres || []).map(g => `<span class="g-chip">${esc(itGenre(g))}</span>`).join('');
+      const tone = (t.tone || []).map(x => `<span class="t-chip">${esc(x)}</span>`).join('');
+
+      const struct = (t.structure || []);
+      const mainSteps = struct.filter(s => s.main);
+      const extras = struct.filter(s => !s.main);
+      const structHtml = struct.length ? `
+        <div class="t-sec">
+          <h3 class="t-sec-h"><i class="ri-stairs-line"></i> ${t.startFrom ? `Da dove iniziare: <em>${esc(t.startFrom)}</em>` : 'Struttura'}</h3>
+          <ol class="struct">${mainSteps.map(s => `<li><span class="st-name">${esc(s.name)}</span><span class="st-ep">${esc(s.episodes)}${s.year ? ` · ${s.year}` : ''}</span></li>`).join('')}</ol>
+          ${extras.length ? `<div class="struct-extra"><span class="se-h">Extra (film/OVA collegati)</span>${extras.map(s => `<span class="se-chip">${esc(s.name)}</span>`).join('')}</div>` : ''}
+        </div>` : '';
+
+      const streaming = (t.streaming || []);
+      const streamHtml = `
+        <div class="t-sec">
+          <h3 class="t-sec-h"><i class="ri-play-circle-line"></i> Dove vederlo <span class="legal-pill">solo legale</span></h3>
+          ${streaming.length
+            ? `<div class="streams">${streaming.map(s => `<a class="stream" href="${esc(s.url)}" target="_blank" rel="noopener nofollow"><i class="ri-external-link-line"></i> ${esc(s.name)}</a>`).join('')}</div>`
+            : `<p class="muted-line">Nessuna piattaforma legale segnalata da AniList. <a href="https://www.justwatch.com/it/cerca?q=${encodeURIComponent(t.title)}" target="_blank" rel="noopener nofollow">Cerca su JustWatch →</a></p>`}
+        </div>`;
+
+      const recs = this.recsSections(t);
+
+      const credits = [
+        t.studios?.length ? ['Studio', t.studios.join(', ')] : null,
+        t.director ? ['Regia', t.director] : null,
+        t.creator ? ['Opera originale', t.creator] : null,
+        t.sourceLabel ? ['Tratto da', t.sourceLabel] : null,
+      ].filter(Boolean).map(([k, v]) => `<div class="cr"><span>${k}</span><b>${esc(v)}</b></div>`).join('');
+
+      const banner = t.bannerImage
+        ? `style="background-image:linear-gradient(180deg,rgba(0,0,0,.15),var(--surface) 92%),url('${esc(t.bannerImage)}')"`
+        : `style="background:linear-gradient(180deg,${esc(t.coverColor || '#3a3a3a')}22,var(--surface) 92%)"`;
+
+      return `
+      <article class="title-view">
+        <div class="t-banner" ${banner}></div>
+        <div class="wrap t-grid">
+          <aside class="t-aside">
+            <img class="t-cover" src="${esc(cover(t))}" alt="${esc(t.title)}">
+            <div class="t-actions">
+              <button class="t-btn js-watch ${w ? 'on' : ''}" data-id="${esc(t.id)}"><i class="ri-check-double-line"></i> ${w ? 'Visto' : 'Segna visto'}</button>
+              <button class="t-btn ghost js-later ${l ? 'on' : ''}" data-id="${esc(t.id)}"><i class="ri-bookmark-line"></i> ${l ? 'In lista' : 'Da vedere'}</button>
+            </div>
+            <div class="t-credits">${credits}</div>
+          </aside>
+
+          <div class="t-main">
+            <a class="back" href="javascript:history.back()"><i class="ri-arrow-left-line"></i> Indietro</a>
+            <h1 class="t-title">${esc(t.title)}</h1>
+            ${t.titleNative ? `<p class="t-native">${esc(t.titleNative)}</p>` : ''}
+
+            <div class="t-badges">
+              ${this.lengthScale(t, false)}
+              ${this.statusBadge(t)}
+              ${t.score10 ? `<span class="t-score"><i class="ri-star-fill"></i> ${t.score10}<span>/10</span></span>` : ''}
+              <span class="t-year">${esc(t.year || '')}</span>
+            </div>
+
+            ${tone ? `<div class="t-tone">${tone}</div>` : ''}
+
+            <div class="t-hook">
+              <span class="t-hook-h"><i class="ri-quote-text"></i> Cosa sapere prima di iniziare</span>
+              <p>${esc(t.hook || 'Scheda in arrivo.')}</p>
+              ${t.forWho ? `<p class="t-forwho">${esc(t.forWho)}</p>` : ''}
+            </div>
+
+            <div class="t-genres">${genres}</div>
+            ${structHtml}
+            ${streamHtml}
+            ${recs}
+          </div>
+        </div>
+      </article>`;
+    }
+
+    recsSections(t) {
+      const r = t.recommendations || {};
+      const blocks = [
+        ['simili', 'Se ti è piaciuto questo', 'ri-heart-3-line'],
+        ['saga', 'Stessa saga', 'ri-links-line'],
+        ['studio', 'Dallo stesso studio', 'ri-building-line'],
+        ['autore', 'Stesso autore / regista', 'ri-user-star-line'],
+        ['affin', 'Affini per atmosfera', 'ri-shapes-line'],
+      ];
+      const out = blocks.map(([k, label, ic]) => {
+        const list = (r[k] || []).slice(0, 10);
+        if (!list.length) return '';
+        return `<div class="t-sec">
+          <h3 class="t-sec-h"><i class="${ic}"></i> ${label}</h3>
+          ${this.row(list, { why: k !== 'saga' })}
+        </div>`;
+      }).join('');
+      return out;
+    }
+
+    // ── VISTA: ESPLORA (editoriale, a scaffali) ─────────────────────────────────
+    viewEsplora() {
+      const byScore = [...TITLES].sort((a, b) => (b.score10 || 0) - (a.score10 || 0));
+      const tonight = [...TITLES].filter(t => ['cortissimo', 'corto'].includes(t.lengthBand))
+        .sort((a, b) => (b.score10 || 0) - (a.score10 || 0)).slice(0, 14);
+      const pillars = byScore.filter(t => (t.year || 0) <= 2010).slice(0, 14);
+      const marathon = [...TITLES].filter(t => ['lungo', 'lunghissimo'].includes(t.lengthBand))
+        .sort((a, b) => (b.score10 || 0) - (a.score10 || 0)).slice(0, 14);
+      const hidden = [...TITLES].filter(t => (t.score10 || 0) >= 7.5 && (t.popularity || 0) < 120000)
+        .sort((a, b) => (b.score10 || 0) - (a.score10 || 0)).slice(0, 14);
+      const fresh = [...TITLES].filter(t => (t.year || 0) >= 2022)
+        .sort((a, b) => (b.score10 || 0) - (a.score10 || 0)).slice(0, 14);
+
+      const shelf = (title, sub, ic, list) => list.length ? `
+        <section class="shelf">
+          <div class="shelf-head"><h2><i class="${ic}"></i> ${title}</h2><p>${sub}</p></div>
+          <div class="row-scroll">${list.map(t => this.card(t)).join('')}</div>
+        </section>` : '';
+
+      const moodShelves = MOOD_SHELVES.map(m => {
+        const list = byScore.filter(t => (t.genres || []).includes(m.key)).slice(0, 14);
+        return shelf(m.label, '', m.icon, list);
+      }).join('');
+
+      return `
+      <section class="wrap esplora-head">
+        <h1>Esplora</h1>
+        <p>Niente liste piatte: scaffali curati per umore, tempo e voglia del momento. <button class="link-btn" id="esploraSearch">o cerca un titolo →</button></p>
+      </section>
+      <div class="wrap">
+        ${shelf('Inizia stasera', 'Corti e cortissimi che valgono una serata', 'ri-moon-clear-line', tonight)}
+        ${shelf('Le pietre miliari', 'I classici che hanno fatto la storia', 'ri-ancient-pavilion-line', pillars)}
+        ${shelf('Appena usciti', 'Il meglio degli ultimi anni', 'ri-fire-line', fresh)}
+        ${shelf('Da maratona', 'Quando vuoi qualcosa in cui perderti per mesi', 'ri-calendar-todo-line', marathon)}
+        ${shelf('Nascosti bene', 'Gemme che la maggior parte si è persa', 'ri-treasure-map-line', hidden)}
+        ${moodShelves}
+      </div>`;
+    }
+
+    // ── VISTA: LA MIA LISTA ──────────────────────────────────────────────────────
+    viewLista() {
+      const watched = Object.keys(this.watched).map(id => BY_ID.get(id)).filter(Boolean);
+      const later = Object.keys(this.toWatch).map(id => BY_ID.get(id)).filter(Boolean);
+      const hours = watched.reduce((s, t) => s + (t.coreMinutes || 0), 0) / 60;
+
+      const grid = list => `<div class="grid">${list.map(t => this.card(t)).join('')}</div>`;
+      const empty = (ic, msg) => `<div class="empty"><i class="${ic}"></i><p>${msg}</p><a class="btn-ghost" href="#/">Vai ai percorsi</a></div>`;
+
+      return `
+      <section class="wrap">
+        <div class="sec-head"><h1>La mia lista</h1></div>
+        <div class="list-stats">
+          <div class="ls-stat"><b>${watched.length}</b><span>visti</span></div>
+          <div class="ls-stat"><b>${later.length}</b><span>da vedere</span></div>
+          <div class="ls-stat"><b>${Math.round(hours)}h</b><span>guardate</span></div>
+        </div>
+        <div class="sec-head sub"><h2><i class="ri-bookmark-line"></i> Da vedere</h2></div>
+        ${later.length ? grid(later) : empty('ri-bookmark-line', 'Niente ancora in lista. Sfoglia i percorsi e salva cosa ti incuriosisce.')}
+        <div class="sec-head sub"><h2><i class="ri-check-double-line"></i> Visti</h2></div>
+        ${watched.length ? grid(watched) : empty('ri-check-double-line', 'Segna i titoli che hai già visto: sbloccano i progressi nei percorsi.')}
+      </section>`;
+    }
+
+    notFound() {
+      return `<section class="wrap empty big"><i class="ri-compass-3-line"></i><h2>Non trovato</h2><p>Questa pagina non esiste.</p><a class="btn-ghost" href="#/">Torna ai percorsi</a></section>`;
+    }
+
+    // ── RICERCA ──────────────────────────────────────────────────────────────────
+    renderSearch(q) {
+      const box = $('#searchResults');
+      q = (q || '').toLowerCase().trim();
+      if (!q) {
+        box.innerHTML = `<p class="sr-hint">Cerca per titolo, studio, genere o atmosfera. Premi <kbd>/</kbd> per riaprire.</p>`;
+        return;
+      }
+      const hits = TITLES.filter(t =>
+        t.title.toLowerCase().includes(q) ||
+        (t.titleRomaji || '').toLowerCase().includes(q) ||
+        (t.studios || []).some(s => s.toLowerCase().includes(q)) ||
+        (t.genres || []).some(g => itGenre(g).toLowerCase().includes(q) || g.toLowerCase().includes(q)) ||
+        (t.tone || []).some(x => x.toLowerCase().includes(q)) ||
+        (t.director || '').toLowerCase().includes(q)
+      ).slice(0, 24);
+      box.innerHTML = hits.length
+        ? hits.map(t => `<a class="sr-item" href="#/t/${esc(t.id)}" data-srclose>
+            <img src="${esc(cover(t))}" alt="" loading="lazy">
+            <div><b>${esc(t.title)}</b><span>${esc(t.year || '')} · ${esc(t.typeLabel)} · ${esc(t.lengthLabel)}</span></div>
+          </a>`).join('')
+        : `<p class="sr-hint">Nessun titolo per “${esc(q)}”.</p>`;
+      box.querySelectorAll('[data-srclose]').forEach(a => a.addEventListener('click', () => this.closeSearch()));
+    }
+
+    // ── TOAST ────────────────────────────────────────────────────────────────────
+    toast(msg, kind) {
+      const t = document.createElement('div');
+      t.className = `toast toast-${kind || 'ok'}`;
+      t.textContent = msg;
+      $('#toasts').appendChild(t);
+      requestAnimationFrame(() => t.classList.add('show'));
+      setTimeout(() => { t.classList.remove('show'); setTimeout(() => t.remove(), 300); }, 2400);
+    }
+  }
+
+  // delega click "cerca" dentro Esplora (rendi dopo il render)
+  document.addEventListener('click', e => {
+    if (e.target.id === 'esploraSearch' || e.target.closest('#searchOpen')) {}
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    window.app = new Guardalo();
+    document.addEventListener('click', e => {
+      if (e.target.id === 'esploraSearch') window.app.openSearch();
+    });
+  });
+})();

@@ -1,0 +1,487 @@
+[
+  {
+    "id": "attack-on-titan",
+    "title": "Attack on Titan",
+    "year": 2013
+  },
+  {
+    "id": "berserk",
+    "title": "Berserk",
+    "year": 1997
+  },
+  {
+    "id": "bleach",
+    "title": "BLEACH",
+    "year": 2004
+  },
+  {
+    "id": "cyberpunk-edgerunners",
+    "title": "Cyberpunk: Edgerunners",
+    "year": 2022
+  },
+  {
+    "id": "death-note",
+    "title": "Death Note",
+    "year": 2006
+  },
+  {
+    "id": "fullmetal-alchemist-brotherhood",
+    "title": "Fullmetal Alchemist: Brotherhood",
+    "year": 2009
+  },
+  {
+    "id": "gurren-lagann",
+    "title": "Gurren Lagann",
+    "year": 2007
+  },
+  {
+    "id": "hunter-x-hunter",
+    "title": "HUNTER x HUNTER",
+    "year": 2011
+  },
+  {
+    "id": "jojo-s-bizarre-adventure",
+    "title": "JoJo's Bizarre Adventure",
+    "year": 2012
+  },
+  {
+    "id": "naruto",
+    "title": "NARUTO",
+    "year": 2002
+  },
+  {
+    "id": "neon-genesis-evangelion",
+    "title": "Neon Genesis Evangelion",
+    "year": 1995
+  },
+  {
+    "id": "one-piece",
+    "title": "ONE PIECE",
+    "year": 1999
+  },
+  {
+    "id": "steins-gate",
+    "title": "Steins;Gate",
+    "year": 2011
+  },
+  {
+    "id": "summer-time-rendering",
+    "title": "Summer Time Rendering",
+    "year": 2022
+  },
+  {
+    "id": "91-days",
+    "title": "91 Days",
+    "year": 2016
+  },
+  {
+    "id": "abenobashi-magical-shopping-street",
+    "title": "Abenobashi Magical Shopping Street",
+    "year": 2002
+  },
+  {
+    "id": "ajin-demi-human",
+    "title": "Ajin: Demi-Human",
+    "year": 2016
+  },
+  {
+    "id": "akame-ga-kill",
+    "title": "Akame Ga Kill!",
+    "year": 2014
+  },
+  {
+    "id": "akira",
+    "title": "Akira",
+    "year": 1988
+  },
+  {
+    "id": "akudama-drive",
+    "title": "Akudama Drive",
+    "year": 2020
+  },
+  {
+    "id": "black-clover",
+    "title": "Black Clover",
+    "year": 2017
+  },
+  {
+    "id": "bna-brand-new-animal",
+    "title": "BNA: Brand New Animal",
+    "year": 2020
+  },
+  {
+    "id": "burn-the-witch",
+    "title": "Burn the Witch",
+    "year": 2020
+  },
+  {
+    "id": "chainsaw-man",
+    "title": "Chainsaw Man",
+    "year": 2022
+  },
+  {
+    "id": "claymore",
+    "title": "Claymore",
+    "year": 2007
+  },
+  {
+    "id": "code-geass",
+    "title": "Code Geass",
+    "year": 2006
+  },
+  {
+    "id": "cowboy-bebop",
+    "title": "Cowboy Bebop",
+    "year": 1998
+  },
+  {
+    "id": "dan-da-dan",
+    "title": "DAN DA DAN",
+    "year": 2024
+  },
+  {
+    "id": "darwin-s-game",
+    "title": "Darwin's Game",
+    "year": 2020
+  },
+  {
+    "id": "deadman-wonderland",
+    "title": "Deadman Wonderland",
+    "year": 2011
+  },
+  {
+    "id": "death-parade",
+    "title": "Death Parade",
+    "year": 2015
+  },
+  {
+    "id": "deca-dence",
+    "title": "Deca-Dence",
+    "year": 2020
+  },
+  {
+    "id": "demon-slayer",
+    "title": "Demon Slayer",
+    "year": 2019
+  },
+  {
+    "id": "devil-may-cry",
+    "title": "Devil May Cry",
+    "year": 2007
+  },
+  {
+    "id": "devilman-crybaby",
+    "title": "Devilman Crybaby",
+    "year": 2018
+  },
+  {
+    "id": "dragon-ball",
+    "title": "Dragon Ball",
+    "year": 1986
+  },
+  {
+    "id": "drifters",
+    "title": "Drifters",
+    "year": 2016
+  },
+  {
+    "id": "86-eighty-six",
+    "title": "86 EIGHTY-SIX",
+    "year": 2021
+  },
+  {
+    "id": "erased",
+    "title": "Erased",
+    "year": 2016
+  },
+  {
+    "id": "failure-frame-i-became-the-strongest",
+    "title": "Failure Frame: I Became the Strongest",
+    "year": 2024
+  },
+  {
+    "id": "fate-franchise-completo",
+    "title": "Fate (Franchise Completo)",
+    "year": 2006
+  },
+  {
+    "id": "flcl",
+    "title": "FLCL",
+    "year": 2000
+  },
+  {
+    "id": "frieren",
+    "title": "Frieren",
+    "year": 2023
+  },
+  {
+    "id": "future-diary",
+    "title": "Future Diary",
+    "year": 2012
+  },
+  {
+    "id": "gachiakuta",
+    "title": "Gachiakuta",
+    "year": 2025
+  },
+  {
+    "id": "gangsta",
+    "title": "Gangsta.",
+    "year": 2015
+  },
+  {
+    "id": "gantz",
+    "title": "Gantz",
+    "year": 2004
+  },
+  {
+    "id": "gate",
+    "title": "Gate",
+    "year": 2015
+  },
+  {
+    "id": "ghost-in-the-shell",
+    "title": "Ghost in the Shell",
+    "year": 1995
+  },
+  {
+    "id": "golden-kamuy",
+    "title": "Golden Kamuy",
+    "year": 2018
+  },
+  {
+    "id": "grimgar-of-fantasy-and-ash",
+    "title": "Grimgar of Fantasy and Ash",
+    "year": 2016
+  },
+  {
+    "id": "handyman-saitou-in-another-world",
+    "title": "Handyman Saitou in Another World",
+    "year": 2023
+  },
+  {
+    "id": "heavenly-delusion",
+    "title": "Heavenly Delusion",
+    "year": 2023
+  },
+  {
+    "id": "hell-s-paradise-jigokuraku",
+    "title": "Hell's Paradise: Jigokuraku",
+    "year": 2023
+  },
+  {
+    "id": "hellsing-ultimate",
+    "title": "Hellsing Ultimate",
+    "year": 2006
+  },
+  {
+    "id": "jujutsu-kaisen",
+    "title": "Jujutsu Kaisen",
+    "year": 2020
+  },
+  {
+    "id": "kaiju-no-8",
+    "title": "Kaiju No. 8",
+    "year": 2024
+  },
+  {
+    "id": "kill-la-kill",
+    "title": "Kill la Kill",
+    "year": 2013
+  },
+  {
+    "id": "kingdom",
+    "title": "Kingdom",
+    "year": 2012
+  },
+  {
+    "id": "la-citta-incantata",
+    "title": "La città incantata",
+    "year": 2001
+  },
+  {
+    "id": "lazarus",
+    "title": "Lazarus",
+    "year": 2025
+  },
+  {
+    "id": "made-in-abyss",
+    "title": "Made in Abyss",
+    "year": 2017
+  },
+  {
+    "id": "mob-psycho-100",
+    "title": "Mob Psycho 100",
+    "year": 2016
+  },
+  {
+    "id": "monster",
+    "title": "Monster",
+    "year": 2004
+  },
+  {
+    "id": "my-hero-academia",
+    "title": "My Hero Academia",
+    "year": 2016
+  },
+  {
+    "id": "my-hero-academia-vigilantes",
+    "title": "My Hero Academia: Vigilantes",
+    "year": 2025
+  },
+  {
+    "id": "one-punch-man",
+    "title": "One-Punch Man",
+    "year": 2015
+  },
+  {
+    "id": "overlord",
+    "title": "Overlord",
+    "year": 2015
+  },
+  {
+    "id": "parasyte-the-maxim",
+    "title": "Parasyte -the maxim-",
+    "year": 2014
+  },
+  {
+    "id": "pluto",
+    "title": "PLUTO",
+    "year": 2023
+  },
+  {
+    "id": "principessa-mononoke",
+    "title": "Principessa Mononoke",
+    "year": 1997
+  },
+  {
+    "id": "promare",
+    "title": "Promare",
+    "year": 2019
+  },
+  {
+    "id": "ranking-of-kings",
+    "title": "Ranking of Kings",
+    "year": 2021
+  },
+  {
+    "id": "re-zero-starting-life-in-another-world",
+    "title": "Re:ZERO -Starting Life in Another World-",
+    "year": 2016
+  },
+  {
+    "id": "reincarnated-as-a-sword",
+    "title": "Reincarnated as a Sword",
+    "year": 2022
+  },
+  {
+    "id": "saint-seiya",
+    "title": "Saint Seiya",
+    "year": 1986
+  },
+  {
+    "id": "samurai-champloo",
+    "title": "Samurai Champloo",
+    "year": 2004
+  },
+  {
+    "id": "sentence-to-be-hero",
+    "title": "Sentence to be hero",
+    "year": 2026
+  },
+  {
+    "id": "shangri-la-frontier",
+    "title": "Shangri-La Frontier",
+    "year": 2023
+  },
+  {
+    "id": "solo-leveling",
+    "title": "Solo Leveling",
+    "year": 2024
+  },
+  {
+    "id": "spy-x-family",
+    "title": "SPY x FAMILY",
+    "year": 2022
+  },
+  {
+    "id": "sword-art-online",
+    "title": "Sword Art Online",
+    "year": 2012
+  },
+  {
+    "id": "terra-formars",
+    "title": "Terra Formars",
+    "year": 2014
+  },
+  {
+    "id": "the-eminence-in-shadow",
+    "title": "The Eminence in Shadow",
+    "year": 2022
+  },
+  {
+    "id": "the-promised-neverland",
+    "title": "The Promised Neverland",
+    "year": 2019
+  },
+  {
+    "id": "the-rising-of-the-shield-hero",
+    "title": "The Rising of the Shield Hero",
+    "year": 2019
+  },
+  {
+    "id": "the-world-s-finest-assassin-gets-reincarnated-in-another-world-as-an-aristocrat",
+    "title": "The World's Finest Assassin Gets Reincarnated in Another World as an Aristocrat",
+    "year": 2021
+  },
+  {
+    "id": "to-be-hero-x",
+    "title": "To Be Hero X",
+    "year": 2023
+  },
+  {
+    "id": "tokyo-revengers",
+    "title": "Tokyo Revengers",
+    "year": 2021
+  },
+  {
+    "id": "tower-of-god",
+    "title": "Tower of God",
+    "year": 2020
+  },
+  {
+    "id": "trigun",
+    "title": "Trigun",
+    "year": 1998
+  },
+  {
+    "id": "vinland-saga",
+    "title": "Vinland Saga",
+    "year": 2019
+  },
+  {
+    "id": "wistoria-wand-and-sword",
+    "title": "Wistoria: Wand and Sword",
+    "year": 2024
+  },
+  {
+    "id": "wolf-s-rain",
+    "title": "Wolf's Rain",
+    "year": 2003
+  },
+  {
+    "id": "daemons-of-the-shadow-realm",
+    "title": "Daemons of the Shadow Realm",
+    "year": 2026
+  },
+  {
+    "id": "release-that-witch",
+    "title": "Release that Witch",
+    "year": 2026
+  },
+  {
+    "id": "petals-of-reincarnation",
+    "title": "Petals of Reincarnation",
+    "year": 2026
+  }
+]

@@ -3,213 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>GUARDALO — Cose da vedere</title>
-    <meta name="description" content="La mia lista personale di anime e serie consigliati, con voti, trame e dove guardarli.">
+    <title>GUARDALO — La guida agli anime, livello dopo livello</title>
+    <meta name="description" content="Non un catalogo, una guida. Percorsi curati a livelli che ti accompagnano nel mondo degli anime: dai primi passi ai capolavori. Schede senza spoiler, durata reale, dove vederlo.">
 
-    <!-- PWA -->
-    <link rel="manifest" href="manifest.webmanifest">
-    <meta name="theme-color" content="#0b0b0f">
     <link rel="icon" href="icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="icon.svg">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="GUARDALO">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#16130e">
+
+    <!-- AdSense — al lancio: incolla qui lo script con il tuo publisher id e crea /ads.txt
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXX" crossorigin="anonymous"></script>
+    -->
 
     <!-- Social / Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="GUARDALO — Cose da vedere">
-    <meta property="og:description" content="Anime e serie consigliati personalmente: voti, trame e dove guardarli.">
+    <meta property="og:title" content="GUARDALO — La guida agli anime, livello dopo livello">
+    <meta property="og:description" content="Percorsi curati a livelli: dai primi passi ai capolavori. Schede senza spoiler, durata reale, dove vederlo.">
     <meta property="og:image" content="icon.svg">
     <meta name="twitter:card" content="summary">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
 
     <!-- Applica il tema salvato prima del render (niente flash) -->
     <script>
-        try {
-            document.body.dataset.theme = localStorage.getItem('guardalo_theme') || 'dark';
-        } catch (e) { document.body.dataset.theme = 'dark'; }
+        try { document.documentElement.dataset.theme = localStorage.getItem('guardalo_theme') || 'dark'; }
+        catch (e) { document.documentElement.dataset.theme = 'dark'; }
     </script>
+</head>
+<body>
 
     <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="navbar-inner">
-            <span class="brand"><i class="ri-play-circle-fill"></i> GUARDALO <span class="brand-dot"></span></span>
-            <div class="nav-search">
-                <div class="search-box">
-                    <i class="ri-search-line"></i>
-                    <input id="searchInput" type="text" placeholder="Cerca un titolo...">
-                    <button id="clearSearch" class="clear-btn" title="Cancella"><i class="ri-close-line"></i></button>
-                </div>
-            </div>
+    <header class="nav">
+        <div class="nav-in">
+            <a class="brand" href="#/" aria-label="GUARDALO — home">
+                <span class="brand-mark">G</span>
+                <span class="brand-word">GUARDALO</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#/" data-route="home"><i class="ri-route-line"></i><span>Percorsi</span></a>
+                <a href="#/esplora" data-route="esplora"><i class="ri-compass-3-line"></i><span>Esplora</span></a>
+                <a href="#/lista" data-route="lista"><i class="ri-bookmark-line"></i><span>La mia lista</span></a>
+            </nav>
+
             <div class="nav-right">
-                <button id="themeToggle" class="btn-nav btn-icon" title="Cambia tema" aria-label="Cambia tema">
-                    <i class="ri-moon-line"></i>
-                </button>
-                <span id="adminBadge" class="admin-badge" style="display:none"><i class="ri-shield-star-fill"></i> Admin</span>
-                <span id="userInfo"></span>
-                <button id="loginBtn" class="btn-nav"><i class="ri-user-line"></i> Accedi</button>
-                <button id="logoutBtn" class="btn-nav" style="display:none"><i class="ri-logout-box-line"></i> Esci</button>
+                <button id="searchOpen" class="icon-btn" title="Cerca (/)" aria-label="Cerca"><i class="ri-search-line"></i></button>
+                <button id="themeToggle" class="icon-btn" title="Tema chiaro/scuro" aria-label="Cambia tema"><i class="ri-contrast-2-line"></i></button>
+                <span id="adminBadge" class="admin-badge" hidden><i class="ri-shield-star-fill"></i></span>
+                <span id="userChip" class="user-chip" hidden></span>
+                <button id="loginBtn" class="btn-ghost"><i class="ri-user-line"></i><span>Accedi</span></button>
+                <button id="logoutBtn" class="icon-btn" title="Esci" aria-label="Esci" hidden><i class="ri-logout-box-r-line"></i></button>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <div class="page">
+    <!-- CONTENUTO (renderizzato dal router) -->
+    <main id="app" class="app"></main>
 
-        <!-- TAB CATEGORIA -->
-        <div class="cat-tabs" id="catTabs">
-            <button class="cat-tab active" data-cat="animazione">
-                <i class="ri-film-fill"></i> Animazione
-                <span class="cat-count" id="count-animazione"></span>
-            </button>
-            <button class="cat-tab" data-cat="live">
-                <i class="ri-tv-2-fill"></i> Serie TV
-                <span class="cat-count" id="count-live"></span>
-            </button>
+    <!-- FOOTER -->
+    <footer class="foot">
+        <div class="foot-in">
+            <span class="foot-brand">GUARDALO</span>
+            <span class="foot-attr" id="footAttr"></span>
+            <span class="foot-note">Una guida, non un catalogo · Dati e copertine da AniList</span>
         </div>
+    </footer>
 
-        <!-- GENERI (griglia sempre visibile, multi-selezione) -->
-        <div class="genres-section">
-            <div class="genres-head">
-                <span class="genres-title"><i class="ri-grid-fill"></i> Sfoglia per genere</span>
-                <button id="genreClear" class="genres-clear">Mostra tutti</button>
+    <!-- OVERLAY RICERCA -->
+    <div id="searchOverlay" class="search-overlay" hidden>
+        <div class="search-panel">
+            <div class="search-bar">
+                <i class="ri-search-line"></i>
+                <input id="searchInput" type="text" placeholder="Cerca un titolo, uno studio, un'atmosfera…" autocomplete="off">
+                <button id="searchClose" class="icon-btn" aria-label="Chiudi"><i class="ri-close-line"></i></button>
             </div>
-            <div id="genreChips" class="genre-grid"></div>
-        </div>
-
-        <!-- HEADER DI SEZIONE + FILTRI -->
-        <div class="results-head">
-            <div class="results-left">
-                <h2 class="results-title" id="results-title">I miei consigli</h2>
-                <div class="count-row"><span id="results-count"></span></div>
-            </div>
-            <div class="results-controls">
-                <button id="viewToggle" class="btn-reset" title="Vista elenco" aria-label="Cambia vista" aria-pressed="false">
-                    <i class="ri-list-unordered"></i>
-                </button>
-                <select id="statusFilter" class="sel">
-                    <option value="all">Tutti</option>
-                    <option value="watched">Visti</option>
-                    <option value="towatch">Da vedere</option>
-                </select>
-                <select id="sortSelect" class="sel">
-                    <option value="rating">Voto ↓</option>
-                    <option value="title">A → Z</option>
-                    <option value="year">Anno ↓</option>
-                </select>
-                <button id="clearFilters" class="btn-reset" title="Azzera filtri">
-                    <i class="ri-refresh-line"></i>
-                </button>
-            </div>
-        </div>
-
-        <!-- GRIGLIA -->
-        <div id="animeGrid" class="grid"></div>
-    </div>
-
-    <!-- MODAL DETTAGLIO -->
-    <div id="detail-modal" class="overlay">
-        <div class="modal">
-            <button class="modal-x" id="close-modal"><i class="ri-close-line"></i></button>
-            <div class="modal-inner">
-
-                <!-- POSTER -->
-                <div class="modal-left">
-                    <img class="modal-img" src="" alt="">
-                    <div class="modal-actions">
-                        <button id="btn-watched" class="act-btn act-watch">
-                            <i class="ri-check-double-line"></i> Visto
-                        </button>
-                        <button id="btn-towatch" class="act-btn act-later">
-                            <i class="ri-bookmark-line"></i> Da vedere
-                        </button>
-                    </div>
-                </div>
-
-                <!-- INFO -->
-                <div class="modal-right">
-                    <h2 class="modal-title"></h2>
-
-                    <div class="modal-score">
-                        <span class="score-num modal-rating"></span>
-                        <span class="score-max">/10</span>
-                        <div class="score-bar"><div class="score-fill" id="score-fill"></div></div>
-                    </div>
-
-                    <div class="modal-chips modal-tags"></div>
-
-                    <div class="info-grid">
-                        <div class="info-item"><span class="info-label">Anno</span><span class="modal-year info-val"></span></div>
-                        <div class="info-item"><span class="info-label">Episodi</span><span class="modal-episodes info-val"></span></div>
-                        <div class="info-item"><span class="info-label">Studio</span><span class="modal-studio info-val"></span></div>
-                        <div class="info-item"><span class="info-label">Stato</span><span class="modal-status info-val"></span></div>
-                    </div>
-
-                    <div class="modal-section">
-                        <div class="section-title">Trama</div>
-                        <p class="modal-synopsis"></p>
-                    </div>
-
-                    <div class="modal-section">
-                        <div class="section-title">Struttura</div>
-                        <div class="modal-structure"></div>
-                    </div>
-
-                    <div class="modal-section">
-                        <div class="section-title">Dove guardarlo</div>
-                        <div class="links-row">
-                            <div class="legal-links"></div>
-                            <div class="illegal-links"></div>
-                        </div>
-                    </div>
-
-                    <!-- PANNELLO ADMIN (visibile solo al proprietario) -->
-                    <div class="admin-panel" id="adminPanel" style="display:none">
-                        <div class="admin-panel-head"><i class="ri-shield-star-fill"></i> Modifica (admin)</div>
-                        <div class="admin-fields">
-                            <label class="admin-field">
-                                <span>Voto</span>
-                                <input type="number" id="admin-rating" min="0" max="10" step="1" placeholder="–">
-                            </label>
-                            <label class="admin-field admin-check">
-                                <input type="checkbox" id="admin-top"><span>TOP</span>
-                            </label>
-                            <label class="admin-field admin-field-wide">
-                                <span>Stato</span>
-                                <input type="text" id="admin-status" placeholder="es. Finito / In corso">
-                            </label>
-                        </div>
-                        <button id="admin-save" class="admin-save"><i class="ri-save-3-line"></i> Salva modifiche</button>
-                    </div>
-                </div>
-            </div>
+            <div id="searchResults" class="search-results"></div>
         </div>
     </div>
 
     <!-- LOGIN MODAL -->
-    <div id="login-modal" class="overlay">
-        <div class="modal modal-sm">
-            <button class="modal-x" id="close-login"><i class="ri-close-line"></i></button>
+    <div id="loginModal" class="overlay">
+        <div class="sheet sheet-sm">
+            <button class="sheet-x" id="loginClose" aria-label="Chiudi"><i class="ri-close-line"></i></button>
             <div class="login-body">
-                <i class="ri-play-circle-fill login-icon"></i>
+                <span class="brand-mark brand-mark-lg">G</span>
                 <h2>Accedi a GUARDALO</h2>
-                <p>Sincronizza la tua lista su tutti i dispositivi</p>
-                <button id="google-login" class="google-btn">
-                    <i class="ri-google-fill"></i> Continua con Google
-                </button>
+                <p>Salva i tuoi progressi e ritrovali su ogni dispositivo. Sfogliare la guida non richiede account.</p>
+                <button id="googleLogin" class="btn-google"><i class="ri-google-fill"></i> Continua con Google</button>
             </div>
         </div>
     </div>
 
     <!-- TOAST -->
-    <div id="toast-container"></div>
+    <div id="toasts" class="toasts"></div>
 
+    <!-- Firebase (auth + sync opzionale) -->
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
@@ -217,13 +109,10 @@
     <script src="js/data.js"></script>
     <script src="js/app.js"></script>
 
-    <!-- In sviluppo: assicura che il vecchio service worker in cache si disattivi
-         e che si veda sempre l'ultima versione (la PWA tornerà prima del lancio). -->
+    <!-- PWA: cache dell'app shell -->
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.getRegistrations().then(regs => {
-                if (regs.length) navigator.serviceWorker.register('sw.js').catch(() => {});
-            });
+            window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
         }
     </script>
 </body>

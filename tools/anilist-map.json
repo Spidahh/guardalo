@@ -1,0 +1,579 @@
+{
+  "attack-on-titan": {
+    "anilistId": 16498,
+    "title": "Attack on Titan",
+    "matched": "Attack on Titan",
+    "score": 111
+  },
+  "berserk": {
+    "anilistId": 33,
+    "title": "Berserk",
+    "matched": "Berserk",
+    "score": 111
+  },
+  "bleach": {
+    "anilistId": 269,
+    "title": "BLEACH",
+    "matched": "Bleach",
+    "score": 111
+  },
+  "cyberpunk-edgerunners": {
+    "anilistId": 120377,
+    "title": "Cyberpunk: Edgerunners",
+    "matched": "Cyberpunk: Edgerunners",
+    "score": 108
+  },
+  "death-note": {
+    "anilistId": 1535,
+    "title": "Death Note",
+    "matched": "Death Note",
+    "score": 111
+  },
+  "fullmetal-alchemist-brotherhood": {
+    "anilistId": 5114,
+    "title": "Fullmetal Alchemist: Brotherhood",
+    "matched": "Fullmetal Alchemist: Brotherhood",
+    "score": 111
+  },
+  "gurren-lagann": {
+    "anilistId": 2001,
+    "title": "Gurren Lagann",
+    "matched": "Gurren Lagann",
+    "score": 111
+  },
+  "hunter-x-hunter": {
+    "anilistId": 136,
+    "title": "HUNTER x HUNTER",
+    "matched": "Hunter x Hunter",
+    "score": 99
+  },
+  "jojo-s-bizarre-adventure": {
+    "anilistId": 666,
+    "title": "JoJo's Bizarre Adventure",
+    "matched": "JoJo's Bizarre Adventure",
+    "score": 96
+  },
+  "naruto": {
+    "anilistId": 20,
+    "title": "NARUTO",
+    "matched": "Naruto",
+    "score": 111
+  },
+  "neon-genesis-evangelion": {
+    "anilistId": 30,
+    "title": "Neon Genesis Evangelion",
+    "matched": "Neon Genesis Evangelion",
+    "score": 111
+  },
+  "one-piece": {
+    "anilistId": 21,
+    "title": "ONE PIECE",
+    "matched": "ONE PIECE",
+    "score": 111
+  },
+  "steins-gate": {
+    "anilistId": 9253,
+    "title": "Steins;Gate",
+    "matched": "Steins;Gate",
+    "score": 111
+  },
+  "summer-time-rendering": {
+    "anilistId": 129201,
+    "title": "Summer Time Rendering",
+    "matched": "Summer Time Rendering",
+    "score": 111
+  },
+  "91-days": {
+    "anilistId": 21711,
+    "title": "91 Days",
+    "matched": "91 Days",
+    "score": 111
+  },
+  "abenobashi-magical-shopping-street": {
+    "anilistId": 306,
+    "title": "Abenobashi Magical Shopping Street",
+    "matched": "Magical Shopping Arcade Abenobashi",
+    "score": 91
+  },
+  "ajin-demi-human": {
+    "anilistId": 21341,
+    "title": "Ajin: Demi-Human",
+    "matched": "AJIN: Demi-Human",
+    "score": 111
+  },
+  "akame-ga-kill": {
+    "anilistId": 20613,
+    "title": "Akame Ga Kill!",
+    "matched": "Akame ga Kill!",
+    "score": 111
+  },
+  "akira": {
+    "anilistId": 47,
+    "title": "Akira",
+    "matched": "Akira",
+    "score": 111
+  },
+  "akudama-drive": {
+    "anilistId": 116566,
+    "title": "Akudama Drive",
+    "matched": "Akudama Drive",
+    "score": 111
+  },
+  "black-clover": {
+    "anilistId": 97940,
+    "title": "Black Clover",
+    "matched": "Black Clover",
+    "score": 111
+  },
+  "bna-brand-new-animal": {
+    "anilistId": 110354,
+    "title": "BNA: Brand New Animal",
+    "matched": "BNA",
+    "score": 108
+  },
+  "burn-the-witch": {
+    "anilistId": 116673,
+    "title": "Burn the Witch",
+    "matched": "BURN THE WITCH",
+    "score": 108
+  },
+  "chainsaw-man": {
+    "anilistId": 127230,
+    "title": "Chainsaw Man",
+    "matched": "Chainsaw Man",
+    "score": 111
+  },
+  "claymore": {
+    "anilistId": 1818,
+    "title": "Claymore",
+    "matched": "Claymore",
+    "score": 111
+  },
+  "code-geass": {
+    "anilistId": 1575,
+    "title": "Code Geass",
+    "matched": "Code Geass: Lelouch of the Rebellion",
+    "score": 91
+  },
+  "cowboy-bebop": {
+    "anilistId": 1,
+    "title": "Cowboy Bebop",
+    "matched": "Cowboy Bebop",
+    "score": 111
+  },
+  "dan-da-dan": {
+    "anilistId": 171018,
+    "title": "DAN DA DAN",
+    "matched": "DAN DA DAN",
+    "score": 111
+  },
+  "darwin-s-game": {
+    "anilistId": 105190,
+    "title": "Darwin's Game",
+    "matched": "Darwin's Game",
+    "score": 111
+  },
+  "deadman-wonderland": {
+    "anilistId": 6880,
+    "title": "Deadman Wonderland",
+    "matched": "Deadman Wonderland",
+    "score": 111
+  },
+  "death-parade": {
+    "anilistId": 20931,
+    "title": "Death Parade",
+    "matched": "Death Parade",
+    "score": 111
+  },
+  "deca-dence": {
+    "anilistId": 110353,
+    "title": "Deca-Dence",
+    "matched": "DECA-DENCE",
+    "score": 111
+  },
+  "demon-slayer": {
+    "anilistId": 101922,
+    "title": "Demon Slayer",
+    "manual": true
+  },
+  "devil-may-cry": {
+    "anilistId": 1726,
+    "title": "Devil May Cry",
+    "matched": "Devil May Cry",
+    "score": 111
+  },
+  "devilman-crybaby": {
+    "anilistId": 98460,
+    "title": "Devilman Crybaby",
+    "matched": "Devilman Crybaby",
+    "score": 108
+  },
+  "dragon-ball": {
+    "anilistId": 223,
+    "title": "Dragon Ball",
+    "matched": "Dragon Ball",
+    "score": 111
+  },
+  "drifters": {
+    "anilistId": 21123,
+    "title": "Drifters",
+    "matched": "DRIFTERS",
+    "score": 111
+  },
+  "86-eighty-six": {
+    "anilistId": 116589,
+    "title": "86 EIGHTY-SIX",
+    "matched": "86 EIGHTY-SIX",
+    "score": 111
+  },
+  "erased": {
+    "anilistId": 21234,
+    "title": "Erased",
+    "matched": "ERASED",
+    "score": 111
+  },
+  "failure-frame-i-became-the-strongest": {
+    "anilistId": 173694,
+    "title": "Failure Frame: I Became the Strongest",
+    "matched": "Failure Frame: I Became the Strongest and Annihilated Everything with Low-Level Spells",
+    "score": 91
+  },
+  "flcl": {
+    "anilistId": 227,
+    "title": "FLCL",
+    "matched": "FLCL",
+    "score": 108
+  },
+  "frieren": {
+    "anilistId": 154587,
+    "title": "Frieren",
+    "matched": "Frieren: Beyond Journey’s End",
+    "score": 111
+  },
+  "future-diary": {
+    "anilistId": 10620,
+    "title": "Future Diary",
+    "manual": true
+  },
+  "gachiakuta": {
+    "anilistId": 178025,
+    "title": "Gachiakuta",
+    "matched": "Gachiakuta",
+    "score": 111
+  },
+  "gangsta": {
+    "anilistId": 20773,
+    "title": "Gangsta.",
+    "matched": "GANGSTA.",
+    "score": 111
+  },
+  "gantz": {
+    "anilistId": 384,
+    "title": "Gantz",
+    "matched": "Gantz",
+    "score": 111
+  },
+  "gate": {
+    "anilistId": 20994,
+    "title": "Gate",
+    "matched": "Gate",
+    "score": 111
+  },
+  "ghost-in-the-shell": {
+    "anilistId": 43,
+    "title": "Ghost in the Shell",
+    "matched": "Ghost in the Shell",
+    "score": 111
+  },
+  "golden-kamuy": {
+    "anilistId": 99699,
+    "title": "Golden Kamuy",
+    "matched": "Golden Kamuy",
+    "score": 111
+  },
+  "grimgar-of-fantasy-and-ash": {
+    "anilistId": 21428,
+    "title": "Grimgar of Fantasy and Ash",
+    "matched": "Grimgar of Fantasy and Ash",
+    "score": 111
+  },
+  "handyman-saitou-in-another-world": {
+    "anilistId": 144092,
+    "title": "Handyman Saitou in Another World",
+    "matched": "Handyman Saitou in Another World",
+    "score": 111
+  },
+  "heavenly-delusion": {
+    "anilistId": 155783,
+    "title": "Heavenly Delusion",
+    "matched": "Tengoku Daimakyo",
+    "score": 111
+  },
+  "hell-s-paradise-jigokuraku": {
+    "anilistId": 128893,
+    "title": "Hell's Paradise: Jigokuraku",
+    "matched": "Hell’s Paradise",
+    "score": 111
+  },
+  "hellsing-ultimate": {
+    "anilistId": 777,
+    "title": "Hellsing Ultimate",
+    "matched": "Hellsing Ultimate",
+    "score": 108
+  },
+  "jujutsu-kaisen": {
+    "anilistId": 113415,
+    "title": "Jujutsu Kaisen",
+    "matched": "JUJUTSU KAISEN",
+    "score": 111
+  },
+  "kaiju-no-8": {
+    "anilistId": 153288,
+    "title": "Kaiju No. 8",
+    "matched": "Kaiju No. 8",
+    "score": 111
+  },
+  "kill-la-kill": {
+    "anilistId": 18679,
+    "title": "Kill la Kill",
+    "matched": "Kill la Kill",
+    "score": 111
+  },
+  "kingdom": {
+    "anilistId": 12031,
+    "title": "Kingdom",
+    "matched": "Kingdom",
+    "score": 111
+  },
+  "lazarus": {
+    "anilistId": 167336,
+    "title": "Lazarus",
+    "matched": "LAZARUS",
+    "score": 111
+  },
+  "made-in-abyss": {
+    "anilistId": 97986,
+    "title": "Made in Abyss",
+    "matched": "Made in Abyss",
+    "score": 111
+  },
+  "mob-psycho-100": {
+    "anilistId": 21507,
+    "title": "Mob Psycho 100",
+    "matched": "Mob Psycho 100",
+    "score": 111
+  },
+  "monster": {
+    "anilistId": 19,
+    "title": "Monster",
+    "matched": "Monster",
+    "score": 111
+  },
+  "my-hero-academia": {
+    "anilistId": 21459,
+    "title": "My Hero Academia",
+    "matched": "My Hero Academia",
+    "score": 111
+  },
+  "my-hero-academia-vigilantes": {
+    "anilistId": 185736,
+    "title": "My Hero Academia: Vigilantes",
+    "matched": "My Hero Academia: Vigilantes",
+    "score": 111
+  },
+  "one-punch-man": {
+    "anilistId": 21087,
+    "title": "One-Punch Man",
+    "matched": "One-Punch Man",
+    "score": 111
+  },
+  "overlord": {
+    "anilistId": 20832,
+    "title": "Overlord",
+    "matched": "Overlord",
+    "score": 111
+  },
+  "parasyte-the-maxim": {
+    "anilistId": 20623,
+    "title": "Parasyte -the maxim-",
+    "matched": "Parasyte -the maxim-",
+    "score": 111
+  },
+  "pluto": {
+    "anilistId": 99088,
+    "title": "PLUTO",
+    "matched": "PLUTO",
+    "score": 108
+  },
+  "principessa-mononoke": {
+    "anilistId": 164,
+    "title": "Principessa Mononoke",
+    "matched": "Princess Mononoke",
+    "score": 111
+  },
+  "promare": {
+    "anilistId": 99425,
+    "title": "Promare",
+    "matched": "Promare",
+    "score": 111
+  },
+  "ranking-of-kings": {
+    "anilistId": 113717,
+    "title": "Ranking of Kings",
+    "matched": "Ranking of Kings",
+    "score": 111
+  },
+  "re-zero-starting-life-in-another-world": {
+    "anilistId": 21355,
+    "title": "Re:ZERO -Starting Life in Another World-",
+    "matched": "Re:ZERO -Starting Life in Another World-",
+    "score": 111
+  },
+  "reincarnated-as-a-sword": {
+    "anilistId": 139587,
+    "title": "Reincarnated as a Sword",
+    "matched": "Reincarnated as a Sword",
+    "score": 108
+  },
+  "saint-seiya": {
+    "anilistId": 1254,
+    "title": "Saint Seiya",
+    "matched": "Saint Seiya: Knights of the Zodiac",
+    "score": 111
+  },
+  "samurai-champloo": {
+    "anilistId": 205,
+    "title": "Samurai Champloo",
+    "matched": "Samurai Champloo",
+    "score": 111
+  },
+  "shangri-la-frontier": {
+    "anilistId": 151970,
+    "title": "Shangri-La Frontier",
+    "matched": "Shangri-La Frontier",
+    "score": 111
+  },
+  "solo-leveling": {
+    "anilistId": 151807,
+    "title": "Solo Leveling",
+    "matched": "Solo Leveling",
+    "score": 111
+  },
+  "spy-x-family": {
+    "anilistId": 140960,
+    "title": "SPY x FAMILY",
+    "matched": "SPY x FAMILY",
+    "score": 111
+  },
+  "sword-art-online": {
+    "anilistId": 11757,
+    "title": "Sword Art Online",
+    "matched": "Sword Art Online",
+    "score": 111
+  },
+  "terra-formars": {
+    "anilistId": 20629,
+    "title": "Terra Formars",
+    "matched": "Terra Formars",
+    "score": 111
+  },
+  "the-eminence-in-shadow": {
+    "anilistId": 130298,
+    "title": "The Eminence in Shadow",
+    "matched": "The Eminence in Shadow",
+    "score": 111
+  },
+  "the-promised-neverland": {
+    "anilistId": 101759,
+    "title": "The Promised Neverland",
+    "matched": "The Promised Neverland",
+    "score": 111
+  },
+  "the-rising-of-the-shield-hero": {
+    "anilistId": 99263,
+    "title": "The Rising of the Shield Hero",
+    "matched": "The Rising of the Shield Hero",
+    "score": 111
+  },
+  "the-world-s-finest-assassin-gets-reincarnated-in-another-world-as-an-aristocrat": {
+    "anilistId": 129898,
+    "title": "The World's Finest Assassin Gets Reincarnated in Another World as an Aristocrat",
+    "matched": "The World's Finest Assassin Gets Reincarnated in Another World as an Aristocrat",
+    "score": 111
+  },
+  "to-be-hero-x": {
+    "anilistId": 156092,
+    "title": "To Be Hero X",
+    "matched": "To Be Hero X",
+    "score": 100
+  },
+  "tokyo-revengers": {
+    "anilistId": 120120,
+    "title": "Tokyo Revengers",
+    "matched": "Tokyo Revengers",
+    "score": 111
+  },
+  "tower-of-god": {
+    "anilistId": 115230,
+    "title": "Tower of God",
+    "matched": "Tower of God",
+    "score": 111
+  },
+  "trigun": {
+    "anilistId": 6,
+    "title": "Trigun",
+    "matched": "Trigun",
+    "score": 111
+  },
+  "vinland-saga": {
+    "anilistId": 101348,
+    "title": "Vinland Saga",
+    "matched": "Vinland Saga",
+    "score": 111
+  },
+  "wistoria-wand-and-sword": {
+    "anilistId": 174576,
+    "title": "Wistoria: Wand and Sword",
+    "matched": "Wistoria: Wand and Sword",
+    "score": 111
+  },
+  "wolf-s-rain": {
+    "anilistId": 202,
+    "title": "Wolf's Rain",
+    "matched": "Wolf's Rain",
+    "score": 111
+  },
+  "daemons-of-the-shadow-realm": {
+    "anilistId": 195600,
+    "title": "Daemons of the Shadow Realm",
+    "matched": "Daemons of the Shadow Realm",
+    "score": 111
+  },
+  "release-that-witch": {
+    "anilistId": 137662,
+    "title": "Release that Witch",
+    "matched": "Release that Witch",
+    "score": 108
+  },
+  "petals-of-reincarnation": {
+    "anilistId": 179950,
+    "title": "Petals of Reincarnation",
+    "matched": "Petals of Reincarnation",
+    "score": 111
+  },
+  "fate-franchise-completo": {
+    "anilistId": 10087,
+    "title": "Fate (Franchise Completo)",
+    "manual": true
+  },
+  "la-citta-incantata": {
+    "anilistId": 199,
+    "title": "La città incantata",
+    "manual": true
+  },
+  "sentence-to-be-hero": {
+    "anilistId": 167152,
+    "title": "Sentence to be hero",
+    "manual": true
+  }
+}
