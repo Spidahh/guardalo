@@ -10,29 +10,55 @@
       {
         "title": "La prima dose",
         "why": "Capolavori moderni e accessibili: regia, ritmo, impatto. Due episodi e capisci perché la gente ci perde le notti. Zero prerequisiti.",
-        "titles": ["death-note", "fullmetal-alchemist-brotherhood", "demon-slayer", "attack-on-titan"]
+        "titles": [
+          "death-note",
+          "fullmetal-alchemist-brotherhood",
+          "demon-slayer",
+          "attack-on-titan"
+        ]
       },
       {
         "title": "Allarga lo sguardo",
         "why": "Sapori diversi per capire quanto è vasta la roba: fantascienza, avventura, un film che ti spacca il cuore in due ore.",
-        "titles": ["steins-gate", "hunter-x-hunter", "your-name", "spy-x-family"]
+        "titles": [
+          "steins-gate",
+          "hunter-x-hunter",
+          "your-name",
+          "spy-x-family"
+        ]
       },
       {
         "title": "Trova il tuo genere",
         "why": "Uno per reparto: sport, fantasy, azione, romantica. Serve a scoprire cosa ti accende davvero, prima di buttarti.",
-        "titles": ["haikyuu", "frieren", "jujutsu-kaisen", "kaguya-sama-love-is-war"]
+        "titles": [
+          "haikyuu",
+          "frieren",
+          "jujutsu-kaisen",
+          "kaguya-sama-love-is-war"
+        ]
       },
       {
         "title": "I classici imprescindibili",
         "why": "Prima di te, questi hanno deciso cosa l'animazione poteva fare. Datati all'anagrafe, avanti col cervello.",
-        "titles": ["cowboy-bebop", "neon-genesis-evangelion", "akira", "la-citta-incantata"]
+        "titles": [
+          "cowboy-bebop",
+          "neon-genesis-evangelion",
+          "akira",
+          "la-citta-incantata"
+        ]
       },
       {
         "title": "Sei pronto per il profondo",
         "why": "Niente più porte d'ingresso: opere che chiedono attenzione e restituiscono il doppio. Adesso le capisci davvero.",
-        "titles": ["monster", "vinland-saga", "made-in-abyss", "berserk"]
+        "titles": [
+          "monster",
+          "vinland-saga",
+          "made-in-abyss",
+          "berserk"
+        ]
       }
-    ]
+    ],
+    "blurb": "Mai visto un anime? Si parte da qui, dal niente assoluto."
   },
   {
     "id": "il-canone",
@@ -45,22 +71,51 @@
       {
         "title": "I padri fondatori (anni '80–'90)",
         "why": "Da qui nasce tutto: cyberpunk, mecha, jazz spaziale. L'estetica che ancora oggi tutti copiano, spesso senza saperlo.",
-        "titles": ["akira", "neon-genesis-evangelion", "ghost-in-the-shell", "cowboy-bebop", "dragon-ball"],
-        "bonus": ["legend-of-the-galactic-heroes", "fist-of-the-north-star", "yu-yu-hakusho"]
+        "titles": [
+          "akira",
+          "neon-genesis-evangelion",
+          "ghost-in-the-shell",
+          "cowboy-bebop",
+          "dragon-ball"
+        ],
+        "bonus": [
+          "legend-of-the-galactic-heroes",
+          "fist-of-the-north-star",
+          "yu-yu-hakusho"
+        ]
       },
       {
         "title": "L'epoca d'oro (2000s)",
         "why": "L'anime conquista il mondo e alza l'asticella: thriller perfetti, tragedie politiche, alchimia che non sbaglia un colpo.",
-        "titles": ["death-note", "fullmetal-alchemist-brotherhood", "code-geass", "monster", "gurren-lagann"],
-        "bonus": ["clannad-after-story", "samurai-champloo"]
+        "titles": [
+          "death-note",
+          "fullmetal-alchemist-brotherhood",
+          "code-geass",
+          "monster",
+          "gurren-lagann"
+        ],
+        "bonus": [
+          "clannad-after-story",
+          "samurai-champloo"
+        ]
       },
       {
         "title": "I nuovi mostri (2010+)",
         "why": "I capolavori della tua generazione: quelli che fra vent'anni si citeranno come oggi si cita Evangelion.",
-        "titles": ["attack-on-titan", "steins-gate", "hunter-x-hunter", "madoka-magica", "vinland-saga"],
-        "bonus": ["frieren", "made-in-abyss"]
+        "titles": [
+          "attack-on-titan",
+          "steins-gate",
+          "hunter-x-hunter",
+          "madoka-magica",
+          "vinland-saga"
+        ],
+        "bonus": [
+          "frieren",
+          "made-in-abyss"
+        ]
       }
-    ]
+    ],
+    "blurb": "I grandi classici: quelli che chiunque dovrebbe aver visto."
   },
   {
     "id": "battle-shonen",
@@ -73,22 +128,50 @@
       {
         "title": "I pilastri dello shōnen",
         "why": "Le colonne portanti del genere: qui impari la grammatica di tornei, rivalità e allenamenti. Lunghi, ma è nella durata che ti entrano dentro.",
-        "titles": ["fullmetal-alchemist-brotherhood", "hunter-x-hunter", "dragon-ball", "naruto"],
-        "bonus": ["bleach", "yu-yu-hakusho", "rurouni-kenshin"]
+        "titles": [
+          "fullmetal-alchemist-brotherhood",
+          "hunter-x-hunter",
+          "dragon-ball",
+          "naruto"
+        ],
+        "bonus": [
+          "bleach",
+          "yu-yu-hakusho",
+          "rurouni-kenshin"
+        ]
       },
       {
         "title": "La nuova generazione",
         "why": "Gli shōnen che oggi spaccano il botteghino: animazione da urlo, soddisfazione immediata.",
-        "titles": ["jujutsu-kaisen", "demon-slayer", "my-hero-academia", "chainsaw-man"],
-        "bonus": ["dr-stone", "fire-force", "black-clover", "solo-leveling"]
+        "titles": [
+          "jujutsu-kaisen",
+          "demon-slayer",
+          "my-hero-academia",
+          "chainsaw-man"
+        ],
+        "bonus": [
+          "dr-stone",
+          "fire-force",
+          "black-clover",
+          "solo-leveling"
+        ]
       },
       {
         "title": "Azione d'autore (sakuga)",
         "why": "Quando il combattimento diventa idea registica: stile e follia creativa. Roba che i fan rivedono frame per frame.",
-        "titles": ["mob-psycho-100", "jojo-s-bizarre-adventure", "gurren-lagann", "kill-la-kill"],
-        "bonus": ["soul-eater", "one-punch-man"]
+        "titles": [
+          "mob-psycho-100",
+          "jojo-s-bizarre-adventure",
+          "gurren-lagann",
+          "kill-la-kill"
+        ],
+        "bonus": [
+          "soul-eater",
+          "one-punch-man"
+        ]
       }
-    ]
+    ],
+    "blurb": "Combattimenti, poteri che crescono, tornei: lo shōnen d'azione."
   },
   {
     "id": "seinen-e-maturo",
@@ -101,21 +184,42 @@
       {
         "title": "Crimine e sangue freddo",
         "why": "Thriller adulti dove nessuno ha la coscienza pulita: tensione, criminali carismatici, scelte che pesano.",
-        "titles": ["monster", "black-lagoon", "91-days", "banana-fish"],
-        "bonus": ["gangsta", "darwin-s-game"]
+        "titles": [
+          "monster",
+          "black-lagoon",
+          "91-days",
+          "banana-fish"
+        ],
+        "bonus": [
+          "gangsta",
+          "darwin-s-game"
+        ]
       },
       {
         "title": "Guerra e storia",
         "why": "Epica adulta: strategia, sangue, redenzione. Personaggi che cambiano sul serio, fino a non riconoscersi.",
-        "titles": ["vinland-saga", "kingdom", "golden-kamuy", "legend-of-the-galactic-heroes"]
+        "titles": [
+          "vinland-saga",
+          "kingdom",
+          "golden-kamuy",
+          "legend-of-the-galactic-heroes"
+        ]
       },
       {
         "title": "Fantasy adulto e brutale",
         "why": "Dark fantasy che non fa sconti: estetica magnifica, contenuto spietato. Bellezza e crudeltà nella stessa inquadratura.",
-        "titles": ["berserk", "dorohedoro", "dororo", "claymore"],
-        "bonus": ["drifters"]
+        "titles": [
+          "berserk",
+          "dorohedoro",
+          "dororo",
+          "claymore"
+        ],
+        "bonus": [
+          "drifters"
+        ]
       }
-    ]
+    ],
+    "blurb": "Anime per adulti: temi pesanti, violenza, niente buonismo."
   },
   {
     "id": "mindfuck",
@@ -128,22 +232,49 @@
       {
         "title": "La trappola scatta",
         "why": "Premesse semplici che diventano congegni perfetti. Tensione costruita col cervello, non con le botte.",
-        "titles": ["death-note", "steins-gate", "code-geass", "erased"],
-        "bonus": ["the-promised-neverland", "tokyo-revengers"]
+        "titles": [
+          "death-note",
+          "steins-gate",
+          "code-geass",
+          "erased"
+        ],
+        "bonus": [
+          "the-promised-neverland",
+          "tokyo-revengers"
+        ]
       },
       {
         "title": "La realtà si sgretola",
         "why": "Qui il dubbio è il vero protagonista: chi mente, chi ricorda male, chi sopravvive. Occhio ai dettagli.",
-        "titles": ["monster", "madoka-magica", "psycho-pass", "summer-time-rendering"],
-        "bonus": ["death-parade", "future-diary"]
+        "titles": [
+          "monster",
+          "madoka-magica",
+          "psycho-pass",
+          "summer-time-rendering"
+        ],
+        "bonus": [
+          "death-parade",
+          "future-diary"
+        ]
       },
       {
         "title": "Crisi esistenziale garantita",
         "why": "Fantascienza e astrazione usate per chiederti cos'è una coscienza, cos'è un'anima. Si esce cambiati.",
-        "titles": ["neon-genesis-evangelion", "ghost-in-the-shell", "perfect-blue", "serial-experiments-lain"],
-        "bonus": ["paranoia-agent", "paprika", "pluto", "texhnolyze"]
+        "titles": [
+          "neon-genesis-evangelion",
+          "ghost-in-the-shell",
+          "perfect-blue",
+          "serial-experiments-lain"
+        ],
+        "bonus": [
+          "paranoia-agent",
+          "paprika",
+          "pluto",
+          "texhnolyze"
+        ]
       }
-    ]
+    ],
+    "blurb": "Thriller psicologici che ti incasinano la testa."
   },
   {
     "id": "isekai-e-fantasy",
@@ -156,22 +287,49 @@
       {
         "title": "Isekai, i veri benchmark",
         "why": "I migliori del genere, non i cloni: chi l'ha definito e chi l'ha preso in giro. Da qui si parte, non da Solo Leveling.",
-        "titles": ["mushoku-tensei", "re-zero-starting-life-in-another-world", "konosuba", "overlord"],
-        "bonus": ["tensura", "the-eminence-in-shadow"]
+        "titles": [
+          "mushoku-tensei",
+          "re-zero-starting-life-in-another-world",
+          "konosuba",
+          "overlord"
+        ],
+        "bonus": [
+          "tensura",
+          "the-eminence-in-shadow"
+        ]
       },
       {
         "title": "Fantasy d'avventura",
         "why": "Mondi costruiti con cura maniacale, dove ogni episodio allarga la mappa. Il viaggio conta quanto la meta.",
-        "titles": ["frieren", "made-in-abyss", "dungeon-meshi", "magi"],
-        "bonus": ["the-apothecary-diaries", "dororo"]
+        "titles": [
+          "frieren",
+          "made-in-abyss",
+          "dungeon-meshi",
+          "magi"
+        ],
+        "bonus": [
+          "the-apothecary-diaries",
+          "dororo"
+        ]
       },
       {
         "title": "Mondi e giochi",
         "why": "Fantasy moderno tra gilde, dungeon e mondi-videogioco. Roba da binge, con qualche gemma sorprendente.",
-        "titles": ["tower-of-god", "no-game-no-life", "log-horizon", "solo-leveling"],
-        "bonus": ["sword-art-online", "goblin-slayer", "the-rising-of-the-shield-hero", "gate"]
+        "titles": [
+          "tower-of-god",
+          "no-game-no-life",
+          "log-horizon",
+          "solo-leveling"
+        ],
+        "bonus": [
+          "sword-art-online",
+          "goblin-slayer",
+          "the-rising-of-the-shield-hero",
+          "gate"
+        ]
       }
-    ]
+    ],
+    "blurb": "Catapultato in un altro mondo: magia e avventura."
   },
   {
     "id": "sci-fi-e-mecha",
@@ -184,22 +342,48 @@
       {
         "title": "Cyberpunk e futuro marcio",
         "why": "Neon, pioggia e implants: metropoli che fagocitano l'uomo. L'estetica sci-fi più copiata di sempre.",
-        "titles": ["ghost-in-the-shell", "cyberpunk-edgerunners", "akira", "psycho-pass"],
-        "bonus": ["ergo-proxy", "lazarus"]
+        "titles": [
+          "ghost-in-the-shell",
+          "cyberpunk-edgerunners",
+          "akira",
+          "psycho-pass"
+        ],
+        "bonus": [
+          "ergo-proxy",
+          "lazarus"
+        ]
       },
       {
         "title": "Robot giganti (mecha)",
         "why": "Cabine di pilotaggio e battaglie colossali — ma i migliori mecha parlano sempre delle persone dentro l'abitacolo.",
-        "titles": ["neon-genesis-evangelion", "code-geass", "gurren-lagann", "gundam-iron-blooded-orphans"],
-        "bonus": ["macross-frontier", "eureka-seven", "darling-in-the-franxx"]
+        "titles": [
+          "neon-genesis-evangelion",
+          "code-geass",
+          "gurren-lagann",
+          "gundam-iron-blooded-orphans"
+        ],
+        "bonus": [
+          "macross-frontier",
+          "eureka-seven",
+          "darling-in-the-franxx"
+        ]
       },
       {
         "title": "Fantascienza che pensa",
         "why": "Niente esplosioni a vuoto: tempo, spazio, politica e coscienza. La sci-fi adulta che resta nei pensieri.",
-        "titles": ["steins-gate", "planetes", "legend-of-the-galactic-heroes", "pluto"],
-        "bonus": ["serial-experiments-lain", "texhnolyze"]
+        "titles": [
+          "steins-gate",
+          "planetes",
+          "legend-of-the-galactic-heroes",
+          "pluto"
+        ],
+        "bonus": [
+          "serial-experiments-lain",
+          "texhnolyze"
+        ]
       }
-    ]
+    ],
+    "blurb": "Fantascienza e robot giganti: futuro, tecnologia, cyberpunk."
   },
   {
     "id": "horror-e-disagio",
@@ -212,22 +396,47 @@
       {
         "title": "Il primo brivido",
         "why": "L'orrore entra in casa con roba ancora gestibile: capisci quanto in basso sa spingersi questo medium.",
-        "titles": ["parasyte-the-maxim", "tokyo-ghoul", "another", "ajin-demi-human"],
-        "bonus": ["deadman-wonderland", "hell-s-paradise-jigokuraku"]
+        "titles": [
+          "parasyte-the-maxim",
+          "tokyo-ghoul",
+          "another",
+          "ajin-demi-human"
+        ],
+        "bonus": [
+          "deadman-wonderland",
+          "hell-s-paradise-jigokuraku"
+        ]
       },
       {
         "title": "Sangue e dannazione",
         "why": "Dark e violenza dove la posta è la sopravvivenza o l'anima. Magnifico da vedere, spietato da reggere.",
-        "titles": ["berserk", "hellsing-ultimate", "devilman-crybaby", "chainsaw-man"],
-        "bonus": ["elfen-lied", "claymore"]
+        "titles": [
+          "berserk",
+          "hellsing-ultimate",
+          "devilman-crybaby",
+          "chainsaw-man"
+        ],
+        "bonus": [
+          "elfen-lied",
+          "claymore"
+        ]
       },
       {
         "title": "Horror puro e disturbante",
         "why": "Roba che lascia il segno: atmosfera malata, body horror, immagini che non ti molli più. Da affrontare solo se quello che hai visto prima non ti ha fermato.",
-        "titles": ["shiki", "junji-ito-collection", "uzumaki", "gantz"],
-        "bonus": ["higurashi", "terra-formars"]
+        "titles": [
+          "shiki",
+          "junji-ito-collection",
+          "uzumaki",
+          "gantz"
+        ],
+        "bonus": [
+          "higurashi",
+          "terra-formars"
+        ]
       }
-    ]
+    ],
+    "blurb": "Mostri, sangue e incubi: roba che mette a disagio."
   },
   {
     "id": "romance",
@@ -240,22 +449,43 @@
       {
         "title": "Il colpo al cuore",
         "why": "Roba che ti distrugge e poi ti ricuce. Se non ti commuovi qui, controlla di averlo, un cuore.",
-        "titles": ["your-name", "your-lie-in-april", "a-silent-voice", "toradora"],
-        "bonus": ["clannad"]
+        "titles": [
+          "your-name",
+          "your-lie-in-april",
+          "a-silent-voice",
+          "toradora"
+        ],
+        "bonus": [
+          "clannad"
+        ]
       },
       {
         "title": "Commedia romantica",
         "why": "L'amore preso con ironia: tira-e-molla, gelosie e battute. Leggera ma non stupida.",
-        "titles": ["kaguya-sama-love-is-war", "horimiya", "bunny-girl-senpai"],
-        "bonus": ["spy-x-family"]
+        "titles": [
+          "kaguya-sama-love-is-war",
+          "horimiya",
+          "bunny-girl-senpai"
+        ],
+        "bonus": [
+          "spy-x-family"
+        ]
       },
       {
         "title": "Amori adulti e drammatici",
         "why": "Quando il romanticismo diventa roba seria: scelte, dolore, legami che lasciano cicatrici.",
-        "titles": ["nana", "clannad-after-story", "honey-and-clover", "maquia"],
-        "bonus": ["banana-fish"]
+        "titles": [
+          "nana",
+          "clannad-after-story",
+          "honey-and-clover",
+          "maquia"
+        ],
+        "bonus": [
+          "banana-fish"
+        ]
       }
-    ]
+    ],
+    "blurb": "Storie d'amore: ti fanno piangere o sorridere come un cretino."
   },
   {
     "id": "slice-of-life",
@@ -268,14 +498,25 @@
       {
         "title": "Quotidianità che scalda",
         "why": "Amici, hobby, giornate normali rese bellissime. Zero ansia, tanto comfort: l'anime come tisana calda.",
-        "titles": ["k-on", "barakamon", "laid-back-camp", "non-non-biyori"]
+        "titles": [
+          "k-on",
+          "barakamon",
+          "laid-back-camp",
+          "non-non-biyori"
+        ]
       },
       {
         "title": "Bellezza malinconica",
         "why": "Slice of life con un'anima più profonda: solitudine, tempo che passa, piccole epifanie. Quieto ma non vuoto.",
-        "titles": ["violet-evergarden", "march-comes-in-like-a-lion", "mushishi", "natsume-yuujinchou"]
+        "titles": [
+          "violet-evergarden",
+          "march-comes-in-like-a-lion",
+          "mushishi",
+          "natsume-yuujinchou"
+        ]
       }
-    ]
+    ],
+    "blurb": "Vita quotidiana e ritmi lenti: l'anime-coccola, niente ansia."
   },
   {
     "id": "commedia",
@@ -288,16 +529,31 @@
       {
         "title": "Risate garantite",
         "why": "Tempi comici da maestri e assurdità a raffica. Se non ridi almeno una volta, ti sei rotto qualcosa.",
-        "titles": ["gintama", "nichijou", "grand-blue", "saiki-k"],
-        "bonus": ["hinamatsuri"]
+        "titles": [
+          "gintama",
+          "nichijou",
+          "grand-blue",
+          "saiki-k"
+        ],
+        "bonus": [
+          "hinamatsuri"
+        ]
       },
       {
         "title": "Commedia con un'anima",
         "why": "Si ride, ma c'è anche del cuore e dei personaggi che ti restano. La commedia che non è solo battute.",
-        "titles": ["daily-lives-of-high-school-boys", "great-teacher-onizuka", "konosuba"],
-        "bonus": ["spy-x-family", "kaguya-sama-love-is-war"]
+        "titles": [
+          "daily-lives-of-high-school-boys",
+          "great-teacher-onizuka",
+          "konosuba"
+        ],
+        "bonus": [
+          "spy-x-family",
+          "kaguya-sama-love-is-war"
+        ]
       }
-    ]
+    ],
+    "blurb": "Anime fatti apposta per farti ridere."
   },
   {
     "id": "sport",
@@ -310,15 +566,28 @@
       {
         "title": "Adrenalina sportiva",
         "why": "Le partite più tese dell'animazione: ti ritrovi a tifare urlando per uno sport che non hai mai praticato.",
-        "titles": ["haikyuu", "hajime-no-ippo", "kuroko-no-basket", "blue-lock"],
-        "bonus": ["slam-dunk"]
+        "titles": [
+          "haikyuu",
+          "hajime-no-ippo",
+          "kuroko-no-basket",
+          "blue-lock"
+        ],
+        "bonus": [
+          "slam-dunk"
+        ]
       },
       {
         "title": "Lo sport come arte",
         "why": "Quando lo sport diventa regia e dramma umano: meno tornei, più poesia del corpo e della testa.",
-        "titles": ["ping-pong-the-animation", "megalo-box", "run-with-the-wind", "yuri-on-ice"]
+        "titles": [
+          "ping-pong-the-animation",
+          "megalo-box",
+          "run-with-the-wind",
+          "yuri-on-ice"
+        ]
       }
-    ]
+    ],
+    "blurb": "Squadre, rivalità e partite all'ultimo respiro."
   },
   {
     "id": "cinema-dautore",
@@ -331,21 +600,46 @@
       {
         "title": "Studio Ghibli",
         "why": "Il marchio che ha reso l'animazione 'rispettabile' anche per chi la snobbava. Magia, natura, infanzia: roba senza tempo.",
-        "titles": ["la-citta-incantata", "principessa-mononoke", "my-neighbor-totoro", "howls-moving-castle"],
-        "bonus": ["nausicaa", "grave-of-the-fireflies"]
+        "titles": [
+          "la-citta-incantata",
+          "principessa-mononoke",
+          "my-neighbor-totoro",
+          "howls-moving-castle"
+        ],
+        "bonus": [
+          "nausicaa",
+          "grave-of-the-fireflies"
+        ]
       },
       {
         "title": "Makoto Shinkai",
         "why": "Il re del 'feels' moderno: cieli iperdettagliati, distanze, occasioni mancate. Bellissimo da far male.",
-        "titles": ["your-name", "weathering-with-you", "5-centimeters-per-second"]
+        "titles": [
+          "your-name",
+          "weathering-with-you",
+          "5-centimeters-per-second"
+        ]
       },
       {
         "title": "Maestri e gemme",
         "why": "Satoshi Kon, Hosoda e i film-culto: animazione adulta, sperimentale, indimenticabile. Roba da cinefili.",
-        "titles": ["perfect-blue", "akira", "millennium-actress", "wolf-children"],
-        "bonus": ["paprika", "tokyo-godfathers", "summer-wars", "the-girl-who-leapt-through-time", "a-silent-voice", "redline"]
+        "titles": [
+          "perfect-blue",
+          "akira",
+          "millennium-actress",
+          "wolf-children"
+        ],
+        "bonus": [
+          "paprika",
+          "tokyo-godfathers",
+          "summer-wars",
+          "the-girl-who-leapt-through-time",
+          "a-silent-voice",
+          "redline"
+        ]
       }
-    ]
+    ],
+    "blurb": "I film d'animazione dei grandi registi: Ghibli, Shinkai e co."
   },
   {
     "id": "chicche-e-deep-cut",
@@ -358,21 +652,46 @@
       {
         "title": "Gemme sottovalutate",
         "why": "Avresti dovuto sentirne parlare ovunque, e invece no. Recuperale prima che diventino il prossimo culto di massa.",
-        "titles": ["death-parade", "91-days", "deca-dence", "heavenly-delusion"],
-        "bonus": ["planetes", "megalo-box"]
+        "titles": [
+          "death-parade",
+          "91-days",
+          "deca-dence",
+          "heavenly-delusion"
+        ],
+        "bonus": [
+          "planetes",
+          "megalo-box"
+        ]
       },
       {
         "title": "Cult per quattro gatti",
         "why": "Identità fortissima, pubblico piccolo e fedele. Strane, personali, impossibili da dimenticare.",
-        "titles": ["wolf-s-rain", "akudama-drive", "gangsta", "texhnolyze"],
-        "bonus": ["ergo-proxy", "abenobashi-magical-shopping-street"]
+        "titles": [
+          "wolf-s-rain",
+          "akudama-drive",
+          "gangsta",
+          "texhnolyze"
+        ],
+        "bonus": [
+          "ergo-proxy",
+          "abenobashi-magical-shopping-street"
+        ]
       },
       {
         "title": "Da riscoprire",
         "why": "Classici minori e perle d'atmosfera che il tempo ha messo in ombra ingiustamente. La curatela serve a questo.",
-        "titles": ["golden-kamuy", "mushishi", "paranoia-agent", "dororo"],
-        "bonus": ["claymore", "banana-fish"]
+        "titles": [
+          "golden-kamuy",
+          "mushishi",
+          "paranoia-agent",
+          "dororo"
+        ],
+        "bonus": [
+          "claymore",
+          "banana-fish"
+        ]
       }
-    ]
+    ],
+    "blurb": "Chicche di nicchia che quasi nessuno conosce."
   }
 ]

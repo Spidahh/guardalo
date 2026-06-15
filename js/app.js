@@ -324,7 +324,7 @@
             <h3 class="path-name">${esc(p.title)}</h3>
           </div>
           <div class="path-card-body">
-            <p class="path-tag">${esc(p.tagline)}</p>
+            <p class="path-blurb">${esc(p.blurb || p.tagline)}</p>
             <div class="path-foot">
               <span class="path-levels"><i class="ri-film-line"></i> ${pr.total} titoli</span>
               <span class="path-prog">${progHtml}</span>
@@ -401,6 +401,7 @@
             <div class="path-hero-txt">
               <span class="path-hero-aud">${aud}</span>
               <h1 class="path-hero-name">${esc(p.title)}</h1>
+              <p class="path-hero-blurb">${esc(p.blurb || '')}</p>
               <p class="path-hero-tag">${esc(p.tagline)}</p>
               <div class="path-hero-meta">
                 <span class="pp-bar lg"><span style="width:${pr.pct}%"></span></span>

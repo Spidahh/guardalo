@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-15T07:48:49.622Z",
+  "generatedAt": "2026-06-15T08:07:19.103Z",
   "attribution": "Dati e immagini da AniList (anilist.co)",
   "count": 189,
   "titles": [
@@ -39869,7 +39869,8 @@
             "berserk"
           ]
         }
-      ]
+      ],
+      "blurb": "Mai visto un anime? Si parte da qui, dal niente assoluto."
     },
     {
       "id": "il-canone",
@@ -39919,7 +39920,8 @@
             "made-in-abyss"
           ]
         }
-      ]
+      ],
+      "blurb": "I grandi classici: quelli che chiunque dovrebbe aver visto."
     },
     {
       "id": "battle-shonen",
@@ -39968,7 +39970,8 @@
             "one-punch-man"
           ]
         }
-      ]
+      ],
+      "blurb": "Combattimenti, poteri che crescono, tornei: lo shōnen d'azione."
     },
     {
       "id": "seinen-e-maturo",
@@ -40011,7 +40014,8 @@
             "drifters"
           ]
         }
-      ]
+      ],
+      "blurb": "Anime per adulti: temi pesanti, violenza, niente buonismo."
     },
     {
       "id": "mindfuck",
@@ -40059,7 +40063,8 @@
             "texhnolyze"
           ]
         }
-      ]
+      ],
+      "blurb": "Thriller psicologici che ti incasinano la testa."
     },
     {
       "id": "isekai-e-fantasy",
@@ -40107,7 +40112,8 @@
             "gate"
           ]
         }
-      ]
+      ],
+      "blurb": "Catapultato in un altro mondo: magia e avventura."
     },
     {
       "id": "sci-fi-e-mecha",
@@ -40154,7 +40160,8 @@
             "texhnolyze"
           ]
         }
-      ]
+      ],
+      "blurb": "Fantascienza e robot giganti: futuro, tecnologia, cyberpunk."
     },
     {
       "id": "horror-e-disagio",
@@ -40200,7 +40207,8 @@
             "terra-formars"
           ]
         }
-      ]
+      ],
+      "blurb": "Mostri, sangue e incubi: roba che mette a disagio."
     },
     {
       "id": "romance",
@@ -40242,7 +40250,8 @@
             "banana-fish"
           ]
         }
-      ]
+      ],
+      "blurb": "Storie d'amore: ti fanno piangere o sorridere come un cretino."
     },
     {
       "id": "slice-of-life",
@@ -40272,7 +40281,8 @@
             "natsume-yuujinchou"
           ]
         }
-      ]
+      ],
+      "blurb": "Vita quotidiana e ritmi lenti: l'anime-coccola, niente ansia."
     },
     {
       "id": "commedia",
@@ -40304,7 +40314,8 @@
             "kaguya-sama-love-is-war"
           ]
         }
-      ]
+      ],
+      "blurb": "Anime fatti apposta per farti ridere."
     },
     {
       "id": "sport",
@@ -40335,7 +40346,8 @@
             "yuri-on-ice"
           ]
         }
-      ]
+      ],
+      "blurb": "Squadre, rivalità e partite all'ultimo respiro."
     },
     {
       "id": "cinema-dautore",
@@ -40382,7 +40394,8 @@
             "redline"
           ]
         }
-      ]
+      ],
+      "blurb": "I film d'animazione dei grandi registi: Ghibli, Shinkai e co."
     },
     {
       "id": "chicche-e-deep-cut",
@@ -40428,7 +40441,8 @@
             "banana-fish"
           ]
         }
-      ]
+      ],
+      "blurb": "Chicche di nicchia che quasi nessuno conosce."
     }
   ]
 }
