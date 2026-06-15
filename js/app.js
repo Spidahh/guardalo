@@ -247,10 +247,11 @@
             <button class="cm js-later ${l ? 'on' : ''}" data-id="${esc(t.id)}" title="Da vedere" aria-label="Aggiungi a Da vedere"><i class="ri-bookmark-line"></i></button>
           </div>
           ${w ? '<span class="card-seen"><i class="ri-check-double-line"></i> Visto</span>' : ''}
-          ${this.lengthScale(t, true)}
+          <span class="lchip ls-${t.lengthBand}" title="${esc(t.lengthLabel)} · ${esc(t.lengthHint)}"><i class="ri-time-line"></i>${esc(t.lengthLabel)}</span>
         </div>
         <div class="card-body">
           <div class="card-title">${esc(t.title)}</div>
+          <div class="card-len ls-${t.lengthBand}"><i class="ri-time-line"></i>${esc(t.lengthLabel)}<span class="card-len-hint">· ${esc(t.lengthHint)}</span></div>
           <div class="card-meta">${esc(t.year || '')} · ${esc(t.typeLabel)}${t.score10 ? ` · <span class="card-score"><i class="ri-star-fill"></i>${t.score10}</span>` : ''}</div>
           ${why}
         </div>
@@ -584,8 +585,8 @@
       ).slice(0, 24);
       box.innerHTML = hits.length
         ? hits.map(t => `<a class="sr-item" href="#/t/${esc(t.id)}" data-srclose>
-            <img src="${esc(cover(t))}" alt="" loading="lazy">
-            <div><b>${esc(t.title)}</b><span>${esc(t.year || '')} · ${esc(t.typeLabel)} · ${esc(t.lengthLabel)}</span></div>
+            <img src="${esc(thumbS(cover(t)))}" alt="" loading="lazy">
+            <div><b>${esc(t.title)}</b><span>${esc(t.year || '')} · ${esc(t.typeLabel)} · <span class="sr-len ls-${t.lengthBand}">${esc(t.lengthLabel)}</span></span></div>
           </a>`).join('')
         : `<p class="sr-hint">Nessun titolo per “${esc(q)}”.</p>`;
       box.querySelectorAll('[data-srclose]').forEach(a => a.addEventListener('click', () => this.closeSearch()));

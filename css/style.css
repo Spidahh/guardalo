@@ -394,3 +394,24 @@ em { font-style: italic; }
 .lchip.ls-lungo { color: var(--len-lungo); }
 .lchip.ls-lunghissimo { color: var(--len-lunghissimo); }
 .row-scroll .lchip, .lv-cards .lchip { font-size: 9.5px; }
+
+/* lunghezza come TESTO colorato nella riga info di ogni card (chiara in ogni elenco) */
+.card-len { display: flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 800; margin: 2px 0 3px; line-height: 1.2; }
+.card-len i { font-size: 13px; opacity: .9; }
+.card-len-hint { font-weight: 500; color: var(--ink-faint); font-size: 10.5px; }
+.card-len.ls-cortissimo { color: var(--len-cortissimo); }
+.card-len.ls-corto { color: var(--len-corto); }
+.card-len.ls-medio { color: var(--len-medio); }
+.card-len.ls-lungo { color: var(--len-lungo); }
+.card-len.ls-lunghissimo { color: var(--len-lunghissimo); }
+/* nelle card piccole (righe/livelli) mostra solo l'etichetta, senza il "· un weekend" */
+.row-scroll .card-len-hint, .lv-cards .card-len-hint { display: none; }
+.row-scroll .card-len, .lv-cards .card-len { font-size: 11px; }
+
+/* lunghezza colorata anche nei risultati di ricerca */
+.sr-len { font-weight: 700; }
+.sr-len.ls-cortissimo { color: var(--len-cortissimo); }
+.sr-len.ls-corto { color: var(--len-corto); }
+.sr-len.ls-medio { color: var(--len-medio); }
+.sr-len.ls-lungo { color: var(--len-lungo); }
+.sr-len.ls-lunghissimo { color: var(--len-lunghissimo); }
