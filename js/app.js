@@ -306,18 +306,23 @@
       const cards = visible.map(p => {
         const pr = this.pathProgress(p);
         const tag = p.audience === 'principiante' ? 'Per iniziare' : p.audience === 'esperto' ? 'Per esperti' : 'Per tutti';
-        const covers = this.pathCovers(p, 4).map(t => this.miniCover(t, true)).join('');
+        const covers = this.pathCovers(p, 5).map(t => this.miniCover(t, true)).join('');
+        const progHtml = pr.done > 0
+          ? `<span class="pp-bar"><span style="width:${pr.pct}%"></span></span>${pr.done}/${pr.total}`
+          : `<span class="path-start">Inizia <i class="ri-arrow-right-line"></i></span>`;
         return `<a class="path-card" href="#/p/${esc(p.id)}" style="--accent:${esc(p.accent)}">
-          <div class="path-covers">${covers}<span class="path-covers-veil"></span><i class="${esc(p.icon)} path-ic"></i></div>
-          <div class="path-card-main">
-            <div class="path-card-top">
-              <h3 class="path-name">${esc(p.title)}</h3>
-              <span class="path-aud">${tag}</span>
-            </div>
+          <div class="path-hero-img">
+            <div class="path-montage">${covers}</div>
+            <span class="path-grad"></span>
+            <span class="path-ic-wrap"><i class="${esc(p.icon)}"></i></span>
+            <span class="path-aud">${tag}</span>
+            <h3 class="path-name">${esc(p.title)}</h3>
+          </div>
+          <div class="path-card-body">
             <p class="path-tag">${esc(p.tagline)}</p>
             <div class="path-foot">
-              <span class="path-levels"><i class="ri-stairs-line"></i> ${p.levels.length} livelli</span>
-              <span class="path-prog"><span class="pp-bar"><span style="width:${pr.pct}%"></span></span>${pr.done}/${pr.total}</span>
+              <span class="path-levels"><i class="ri-stairs-line"></i> ${p.levels.length} livelli · ${pr.total} titoli</span>
+              <span class="path-prog">${progHtml}</span>
             </div>
           </div>
         </a>`;
