@@ -222,7 +222,7 @@
       const idx = bandIndex(t.lengthBand);
       const bars = BANDS.map((b, i) =>
         `<span class="ls-bar ${i <= idx ? 'on' : ''} ls-${t.lengthBand}"></span>`).join('');
-      if (compact) return `<span class="lscale lscale-c" title="${esc(t.lengthLabel)} · ${esc(t.lengthHint)}">${bars}</span>`;
+      if (compact) return `<span class="lchip ls-${t.lengthBand}" title="${esc(t.lengthLabel)} · ${esc(t.lengthHint)}"><i class="ri-time-line"></i>${esc(t.lengthLabel)}</span>`;
       return `<div class="lscale">
         <div class="ls-bars ls-${t.lengthBand}">${bars}</div>
         <div class="ls-text"><b>${esc(t.lengthLabel)}</b><span>${esc(t.lengthHint)}</span></div>

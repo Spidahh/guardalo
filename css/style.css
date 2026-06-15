@@ -383,5 +383,14 @@ em { font-style: italic; }
 .hero-art .mc { aspect-ratio: 2/3; border-radius: 11px; box-shadow: var(--shadow); }
 @media (max-width: 900px) { .hero-in { grid-template-columns: 1fr; gap: 0; } .hero-art { display: none; } }
 
-/* scala lunghezza nelle card: leggermente più leggibile */
-.lscale-c { background: linear-gradient(90deg, rgba(8,5,2,.8), rgba(8,5,2,.45)); padding: 4px 6px; }
+/* lunghezza sulle card: pillola di testo colorata (leggibile a colpo d'occhio) */
+.lchip { position: absolute; bottom: 8px; left: 8px; display: inline-flex; align-items: center; gap: 4px;
+  font-size: 10.5px; font-weight: 800; letter-spacing: .02em; text-transform: uppercase;
+  padding: 3px 8px 3px 6px; border-radius: 7px; background: rgba(8,5,2,.66); backdrop-filter: blur(5px); }
+.lchip i { font-size: 12px; opacity: .85; }
+.lchip.ls-cortissimo { color: var(--len-cortissimo); }
+.lchip.ls-corto { color: var(--len-corto); }
+.lchip.ls-medio { color: var(--len-medio); }
+.lchip.ls-lungo { color: var(--len-lungo); }
+.lchip.ls-lunghissimo { color: var(--len-lunghissimo); }
+.row-scroll .lchip, .lv-cards .lchip { font-size: 9.5px; }
