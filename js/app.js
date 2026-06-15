@@ -170,6 +170,8 @@
       $('#searchClose').addEventListener('click', () => this.closeSearch());
       $('#searchOverlay').addEventListener('click', e => { if (e.target.id === 'searchOverlay') this.closeSearch(); });
       $('#searchInput').addEventListener('input', e => this.renderSearch(e.target.value));
+      $('#searchInput').addEventListener('keydown', e => this.searchKey(e));
+      $('#randomBtn').addEventListener('click', () => this.surprise());
 
       $('#loginBtn').addEventListener('click', () => $('#loginModal').classList.add('open'));
       $('#loginClose').addEventListener('click', () => $('#loginModal').classList.remove('open'));
@@ -503,24 +505,22 @@
     // ── VISTA: ESPLORA (editoriale, a scaffali) ─────────────────────────────────
     viewEsplora() {
       const byScore = [...TITLES].sort((a, b) => (b.score10 || 0) - (a.score10 || 0));
-      const tonight = [...TITLES].filter(t => ['cortissimo', 'corto'].includes(t.lengthBand))
-        .sort((a, b) => (b.score10 || 0) - (a.score10 || 0)).slice(0, 14);
-      const pillars = byScore.filter(t => (t.year || 0) <= 2010).slice(0, 14);
-      const marathon = [...TITLES].filter(t => ['lungo', 'lunghissimo'].includes(t.lengthBand))
-        .sort((a, b) => (b.score10 || 0) - (a.score10 || 0)).slice(0, 14);
-      const hidden = [...TITLES].filter(t => (t.score10 || 0) >= 7.5 && (t.popularity || 0) < 120000)
-        .sort((a, b) => (b.score10 || 0) - (a.score10 || 0)).slice(0, 14);
-      const fresh = [...TITLES].filter(t => (t.year || 0) >= 2022)
-        .sort((a, b) => (b.score10 || 0) - (a.score10 || 0)).slice(0, 14);
+      const tonight = byScore.filter(t => ['cortissimo', 'corto'].includes(t.lengthBand) && t.typeLabel !== 'Film').slice(0, 16);
+      const films = byScore.filter(t => t.typeLabel === 'Film').slice(0, 16);
+      const masterpieces = byScore.filter(t => (t.score10 || 0) >= 8.4).slice(0, 16);
+      const marathon = byScore.filter(t => ['lungo', 'lunghissimo'].includes(t.lengthBand)).slice(0, 16);
+      const hidden = byScore.filter(t => (t.score10 || 0) >= 7.6 && (t.popularity || 0) < 100000).slice(0, 16);
+      const fresh = byScore.filter(t => (t.year || 0) >= 2022).slice(0, 16);
+      const later = Object.keys(this.toWatch).map(id => BY_ID.get(id)).filter(Boolean);
 
       const shelf = (title, sub, ic, list) => list.length ? `
         <section class="shelf">
-          <div class="shelf-head"><h2><i class="${ic}"></i> ${title}</h2><p>${sub}</p></div>
+          <div class="shelf-head"><h2><i class="${ic}"></i> ${title}</h2>${sub ? `<p>${sub}</p>` : ''}</div>
           <div class="row-scroll">${list.map(t => this.card(t)).join('')}</div>
         </section>` : '';
 
       const moodShelves = MOOD_SHELVES.map(m => {
-        const list = byScore.filter(t => (t.genres || []).includes(m.key)).slice(0, 14);
+        const list = byScore.filter(t => (t.genres || []).includes(m.key)).slice(0, 16);
         return shelf(m.label, '', m.icon, list);
       }).join('');
 
@@ -530,10 +530,12 @@
         <p>Niente griglie piatte coi filtri. Scaffali per umore, tempo e voglia del momento. <button class="link-btn" id="esploraSearch">o cerca un titolo →</button></p>
       </section>
       <div class="wrap">
+        ${later.length >= 3 ? shelf('La tua lista', 'Quello che hai segnato da vedere', 'ri-bookmark-line', later.slice(0, 16)) : ''}
+        ${shelf('Capolavori assoluti', 'I voti più alti, quelli che non si discutono', 'ri-trophy-line', masterpieces)}
         ${shelf('Stasera senza impegni', 'Corti che valgono una serata e bona lì', 'ri-moon-clear-line', tonight)}
-        ${shelf('Cultura generale', 'Roba che dovresti aver già visto', 'ri-ancient-pavilion-line', pillars)}
+        ${shelf('Film da una sera', 'Una storia intera in un colpo solo', 'ri-film-line', films)}
         ${shelf('Appena usciti', 'Il meglio delle ultime stagioni', 'ri-fire-line', fresh)}
-        ${shelf('Se hai mesi da buttare', 'Saghe-mondo in cui perderti per un pezzo', 'ri-calendar-todo-line', marathon)}
+        ${shelf('Se hai mesi da buttare', 'Saghe in cui perderti per un pezzo', 'ri-calendar-todo-line', marathon)}
         ${shelf('Deep cut', 'Gemme che la massa si è persa', 'ri-treasure-map-line', hidden)}
         ${moodShelves}
       </div>`;
@@ -568,8 +570,23 @@
     }
 
     // ── RICERCA ──────────────────────────────────────────────────────────────────
+    surprise() {
+      const t = TITLES[Math.floor(Math.random() * TITLES.length)];
+      if (t) { this.closeSearch(); location.hash = '#/t/' + t.id; this.toast('🎲 ' + t.title, 'ok'); }
+    }
+    searchKey(e) {
+      const items = [...document.querySelectorAll('#searchResults .sr-item')];
+      if (!items.length) return;
+      if (e.key === 'Enter') { e.preventDefault(); (items[this.searchSel] || items[0]).click(); return; }
+      if (e.key === 'ArrowDown') { e.preventDefault(); this.searchSel = Math.min((this.searchSel ?? -1) + 1, items.length - 1); }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); this.searchSel = Math.max((this.searchSel ?? 0) - 1, 0); }
+      else return;
+      items.forEach((it, i) => it.classList.toggle('sel', i === this.searchSel));
+      items[this.searchSel]?.scrollIntoView({ block: 'nearest' });
+    }
     renderSearch(q) {
       const box = $('#searchResults');
+      this.searchSel = -1;
       q = (q || '').toLowerCase().trim();
       if (!q) {
         box.innerHTML = `<p class="sr-hint">Cerca per titolo, studio, genere o atmosfera. Premi <kbd>/</kbd> per riaprire.</p>`;

@@ -526,7 +526,10 @@ async function cmdGen() {
             tone: ed.tone || [],
             forWho: ed.forWho || null,
             tips: Array.isArray(tipsEd[r.id]) ? tipsEd[r.id] : [],
-            recommendations: { simili, saga, studio, autore, affin },
+            recommendations: {
+                simili: simili.slice(0, 12), saga: saga.slice(0, 12), studio: studio.slice(0, 12),
+                autore: autore.slice(0, 12), affin: affin.slice(0, 12),
+            },
             editorial: !!ed.hook,
         };
     });

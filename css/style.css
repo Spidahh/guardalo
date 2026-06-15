@@ -477,3 +477,6 @@ em { font-style: italic; }
 .t-tips li { font-size: 14.5px; line-height: 1.5; color: var(--ink); }
 .t-tips li::marker { color: var(--gold); }
 .g-chip { cursor: help; }
+
+/* ═══ v10.15 — quality of life ════════════════════════════════════════════ */
+.sr-item.sel { background: var(--accent-soft); outline: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); }
