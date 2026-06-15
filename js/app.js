@@ -373,12 +373,6 @@
         const state = done === ids.length && ids.length ? 'done' : done > 0 ? 'doing' : 'todo';
         const stLabel = state === 'done' ? 'Completato' : state === 'doing' ? 'In corso' : 'Da iniziare';
         const cards = ids.map(x => this.card(BY_ID.get(x))).join('');
-        const bonus = (lv.bonus || []).filter(x => BY_ID.get(x));
-        const bonusHtml = bonus.length ? `
-          <div class="lv-bonus">
-            <span class="lv-bonus-h"><i class="ri-add-circle-line"></i> Bonus facoltativi</span>
-            <div class="row-scroll">${bonus.map(x => this.card(BY_ID.get(x))).join('')}</div>
-          </div>` : '';
         return `
         <article class="level lv-${state}">
           <div class="lv-rail"><span class="lv-num">${i + 1}</span></div>
@@ -389,7 +383,6 @@
             </div>
             <p class="lv-why">${esc(lv.why)}</p>
             <div class="lv-cards">${cards}</div>
-            ${bonusHtml}
           </div>
         </article>`;
       }).join('');

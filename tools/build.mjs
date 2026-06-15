@@ -532,12 +532,17 @@ async function cmdGen() {
     });
 
     const coverage = titles.filter(t => t.editorial).length;
+    // i "bonus" si fondono nei titoli del livello: niente distinzione obbligatori/facoltativi
+    const mergedPaths = paths.map(p => ({
+        ...p,
+        levels: p.levels.map(l => ({ title: l.title, why: l.why, titles: [...(l.titles || []), ...(l.bonus || [])] })),
+    }));
     const payload = {
         generatedAt: new Date().toISOString(),
         attribution: 'Dati e immagini da AniList (anilist.co)',
         count: titles.length,
         titles,
-        paths,
+        paths: mergedPaths,
     };
 
     // js/data.js — globale (zero build, funziona ovunque incluso file://)
