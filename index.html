@@ -15,7 +15,6 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXX" crossorigin="anonymous"></script>
     -->
 
-    <!-- Social / Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="GUARDALO — La guida agli anime">
     <meta property="og:description" content="I migliori anime di ogni genere, scelti e spiegati senza fronzoli: perché guardarli, da dove iniziare, dove vederli.">
@@ -26,9 +25,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=10.18">
+    <link rel="stylesheet" href="css/style.css?v=10.19">
 
-    <!-- Applica il tema salvato prima del render (niente flash) -->
     <script>
         try { document.documentElement.dataset.theme = localStorage.getItem('guardalo_theme') || 'dark'; }
         catch (e) { document.documentElement.dataset.theme = 'dark'; }
@@ -36,43 +34,48 @@
 </head>
 <body>
 
-    <!-- NAVBAR -->
-    <header class="nav">
-        <div class="nav-in">
-            <a class="brand" href="#/" aria-label="GUARDALO — home">
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+            <a class="side-brand" href="#/" aria-label="GUARDALO — home">
                 <span class="brand-mark">G</span>
-                <span class="brand-word">GUARDALO</span>
+                <span class="side-brand-txt"><b>GUARDALO</b><small>guida con anima</small></span>
             </a>
 
-            <nav class="nav-links" id="navLinks">
+            <nav class="side-nav">
                 <a href="#/" data-route="home"><i class="ri-route-line"></i><span>Percorsi</span></a>
                 <a href="#/esplora" data-route="esplora"><i class="ri-compass-3-line"></i><span>Esplora</span></a>
                 <a href="#/lista" data-route="lista"><i class="ri-bookmark-line"></i><span>La mia lista</span></a>
             </nav>
 
-            <div class="nav-right">
-                <button id="randomBtn" class="icon-btn" title="Sorprendimi — un titolo a caso" aria-label="Titolo a caso"><i class="ri-dice-line"></i></button>
-                <button id="searchOpen" class="icon-btn" title="Cerca (/)" aria-label="Cerca"><i class="ri-search-line"></i></button>
-                <button id="themeToggle" class="icon-btn" title="Tema chiaro/scuro" aria-label="Cambia tema"><i class="ri-contrast-2-line"></i></button>
-                <span id="adminBadge" class="admin-badge" hidden><i class="ri-shield-star-fill"></i></span>
+            <div class="side-foot">
+                <span id="adminBadge" class="admin-badge" hidden><i class="ri-shield-star-fill"></i> Admin</span>
                 <span id="userChip" class="user-chip" hidden></span>
-                <button id="loginBtn" class="btn-ghost"><i class="ri-user-line"></i><span>Accedi</span></button>
-                <button id="logoutBtn" class="icon-btn" title="Esci" aria-label="Esci" hidden><i class="ri-logout-box-r-line"></i></button>
+                <div class="side-actions">
+                    <button id="loginBtn" class="btn-ghost"><i class="ri-user-line"></i><span>Accedi</span></button>
+                    <button id="themeToggle" class="icon-btn" title="Tema chiaro/scuro" aria-label="Cambia tema"><i class="ri-contrast-2-line"></i></button>
+                    <button id="logoutBtn" class="icon-btn" title="Esci" aria-label="Esci" hidden><i class="ri-logout-box-r-line"></i></button>
+                </div>
             </div>
-        </div>
-    </header>
+        </aside>
 
-    <!-- CONTENUTO (renderizzato dal router) -->
-    <main id="app" class="app"></main>
+        <!-- CONTENUTO -->
+        <div class="content">
+            <div class="topbar">
+                <button class="brand-mobile" id="sideToggle" aria-label="Menu"><i class="ri-menu-line"></i></button>
+                <button id="searchOpen" class="topbar-search"><i class="ri-search-line"></i><span>Cerca anime, film, registi, temi…</span></button>
+                <button id="randomBtn" class="icon-btn" title="Sorprendimi — un titolo a caso" aria-label="Titolo a caso"><i class="ri-dice-line"></i></button>
+            </div>
 
-    <!-- FOOTER -->
-    <footer class="foot">
-        <div class="foot-in">
-            <span class="foot-brand">GUARDALO</span>
-            <span class="foot-attr" id="footAttr"></span>
-            <span class="foot-note">Una guida, non un catalogo · Dati e copertine da AniList</span>
+            <main id="app" class="app"></main>
+
+            <footer class="foot">
+                <p class="foot-quote">«La guida giusta non ti dice cosa amare, ma perché vale la pena guardare.»</p>
+                <p class="foot-attr"><span id="footAttr"></span> · Una guida, non un catalogo</p>
+            </footer>
         </div>
-    </footer>
+    </div>
 
     <!-- OVERLAY RICERCA -->
     <div id="searchOverlay" class="search-overlay" hidden>
@@ -99,18 +102,15 @@
         </div>
     </div>
 
-    <!-- TOAST -->
     <div id="toasts" class="toasts"></div>
 
-    <!-- Firebase (auth + sync opzionale) -->
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
     <script src="js/firebase-config.js"></script>
     <script src="js/data.js"></script>
-    <script src="js/app.js?v=10.18"></script>
+    <script src="js/app.js?v=10.19"></script>
 
-    <!-- PWA: cache dell'app shell -->
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));

@@ -182,6 +182,11 @@
       });
       $('#logoutBtn').addEventListener('click', () => { if (window.auth) window.auth.signOut(); });
 
+      // sidebar mobile
+      const sb = document.getElementById('sidebar');
+      document.getElementById('sideToggle')?.addEventListener('click', () => sb.classList.toggle('open'));
+      document.querySelectorAll('.side-nav a').forEach(a => a.addEventListener('click', () => sb.classList.remove('open')));
+
       // delega azioni "visto / da vedere"
       document.addEventListener('click', e => {
         const b = e.target.closest('.js-watch, .js-later');
@@ -220,7 +225,7 @@
 
       const app = $('#app');
       app.innerHTML = html;
-      document.querySelectorAll('.nav-links a').forEach(a => a.classList.toggle('active', a.dataset.route === active));
+      document.querySelectorAll('.side-nav a').forEach(a => a.classList.toggle('active', a.dataset.route === active));
       window.scrollTo(0, 0);
       this.afterRender(seg);
     }
@@ -306,6 +311,12 @@
       const u = small ? thumbS(t.coverImage) : thumb(t.coverImage);
       return `<span class="mc" style="--cc:${esc(t.coverColor || '#2a2419')}"><img src="${esc(u)}" alt="" loading="lazy" onload="this.classList.add('ld')" onerror="this.classList.add('ld')"></span>`;
     }
+    nextInPath(p) {
+      for (const lv of p.levels) for (const id of (lv.titles || [])) {
+        if (!this.isWatched(id)) { const t = BY_ID.get(id); if (t) return t; }
+      }
+      return null;
+    }
     viewHome() {
       const visible = PATHS;
       const cards = visible.map(p => {
@@ -333,34 +344,89 @@
         </a>`;
       }).join('');
 
-      const iconic = [...TITLES].sort((a, b) => (b.popularity || 0) - (a.popularity || 0)).slice(0, 9);
-      const heroArt = iconic.map(t => this.miniCover(t)).join('');
-      let introSeen = false; try { introSeen = localStorage.getItem('guardalo_intro') === '1'; } catch (e) {}
-      const how = introSeen ? '' : `
-      <section class="wrap how">
-        <button class="how-x" id="howClose" aria-label="Ho capito"><i class="ri-close-line"></i></button>
-        <div class="how-step"><i class="ri-compass-3-line"></i><div><b>Scegli</b><span>per genere o per umore</span></div></div>
-        <div class="how-step"><i class="ri-information-line"></i><div><b>Scopri</b><span>perché, dove e quanto dura</span></div></div>
-        <div class="how-step"><i class="ri-check-double-line"></i><div><b>Segna</b><span>cosa hai visto e vai avanti</span></div></div>
-      </section>`;
+      const byScore = [...TITLES].sort((a, b) => (b.score10 || 0) - (a.score10 || 0));
+
+      // percorso in evidenza
+      const featured = PATHS.find(p => p.id === 'da-zero-a-otaku') || PATHS[0];
+      const fart = this.pathCovers(featured, 6).map(t => this.miniCover(t, true)).join('');
+
+      // da dove vuoi partire
+      const doors = [
+        ['#/p/da-zero-a-otaku', 'ri-seedling-line', 'Parto da zero', 'Mai visto un anime: guidami dai primi titoli.'],
+        ['#/p/seinen-e-maturo', 'ri-goblet-2-line', 'Voglio roba adulta', 'Storie mature, complesse, senza compromessi.'],
+        ['#/tempo/sera', 'ri-time-line', 'Ho poco tempo', 'Episodi brevi, film, serie compatte.'],
+      ].map(([href, ic, t, s]) => `<a class="door" href="${href}"><i class="${ic}"></i><div><b>${t}</b><span>${s}</span></div></a>`).join('');
+
+      // i tuoi percorsi (in corso)
+      const inProgress = PATHS.map(p => ({ p, pr: this.pathProgress(p) }))
+        .filter(x => x.pr.done > 0 && x.pr.done < x.pr.total)
+        .sort((a, b) => b.pr.pct - a.pr.pct).slice(0, 2);
+      const yourPaths = inProgress.length ? `
+        <section class="home-sec">
+          <h2 class="home-h">I tuoi percorsi</h2>
+          ${inProgress.map(({ p, pr }) => { const nx = this.nextInPath(p); return `
+          <a class="cont-card" href="#/p/${esc(p.id)}" style="--accent:${esc(p.accent)}">
+            <span class="cont-ring" style="background:conic-gradient(var(--accent) ${pr.pct * 3.6}deg, var(--line-2) 0)"><b>${pr.pct}%</b></span>
+            <div class="cont-info">
+              <b class="cont-name">${esc(p.title)}</b>
+              <span class="cont-sub">${pr.done} / ${pr.total} opere${nx ? ` · prossima: <em>${esc(nx.title)}</em>` : ''}</span>
+              <span class="cont-bar"><span style="width:${pr.pct}%"></span></span>
+            </div>
+            <span class="cont-btn">Riprendi</span>
+          </a>`; }).join('')}
+        </section>` : '';
+
+      // colonna destra: il verdetto + da non perdere
+      const vlabel = s => s >= 8.7 ? ['Capolavoro', 'cap'] : s >= 8.3 ? ['Ottimo', 'ott'] : ['Notevole', 'not'];
+      const firstSentence = t => { let h = (t.hook || '').split('. ')[0] || ''; if (h.length > 92) h = h.slice(0, 90) + '…'; return esc(h); };
+      const verdictHtml = byScore.slice(0, 4).map(t => { const [v, c] = vlabel(t.score10 || 0); return `
+        <a class="rail-item" href="#/t/${esc(t.id)}">
+          <img src="${esc(thumbS(cover(t)))}" alt="" loading="lazy" onload="this.classList.add('ld')">
+          <div class="rail-item-txt"><b>${esc(t.title)}</b><span class="verdict v-${c}">${v}</span><span class="rail-note">${firstSentence(t)}</span></div>
+        </a>`; }).join('');
+      const missHtml = byScore.slice(4, 11).map(t => `
+        <a class="rail-mini" href="#/t/${esc(t.id)}">
+          <img src="${esc(thumbS(cover(t)))}" alt="" loading="lazy" onload="this.classList.add('ld')">
+          <div><b>${esc(t.title)}</b><span>${(t.genres || []).slice(0, 2).map(g => esc(itGenre(g))).join(', ')}</span></div>
+        </a>`).join('');
 
       return `
-      <section class="hero">
-        <div class="hero-in">
-          <div class="hero-copy">
-            <p class="hero-kicker">La guida agli anime, senza fronzoli</p>
-            <h1 class="hero-title">Cosa guardare,<br><em>detto dritto.</em></h1>
-            <p class="hero-sub">I migliori di ogni genere, scelti uno per uno: perché valgono, da dove iniziare, quanto ti impegnano. Niente Wikipedia, niente liste a caso — tu pensa solo a guardare.</p>
-          </div>
-          <div class="hero-art" aria-hidden="true">${heroArt}</div>
+      <div class="home-grid">
+        <div class="home-main">
+          <a class="featured" href="#/p/${esc(featured.id)}" style="--accent:${esc(featured.accent)}">
+            <div class="featured-art">${fart}<span class="featured-veil"></span></div>
+            <div class="featured-body">
+              <span class="featured-kicker">Percorso in evidenza</span>
+              <h1 class="featured-title">${esc(featured.title)}</h1>
+              <p class="featured-blurb">${esc(featured.blurb || '')}</p>
+              <span class="featured-btn">Inizia il percorso <i class="ri-arrow-right-line"></i></span>
+            </div>
+          </a>
+
+          <section class="home-sec">
+            <h2 class="home-h">Da dove vuoi partire?</h2>
+            <div class="doors">${doors}</div>
+          </section>
+
+          ${yourPaths}
+
+          <section class="home-sec">
+            <div class="home-h-row"><h2 class="home-h">Scegli un percorso</h2><span class="home-count">${PATHS.length} percorsi</span></div>
+            <div class="paths-grid">${cards}</div>
+          </section>
         </div>
-      </section>
-      ${how}
-      <section class="wrap">
-        <div class="sec-head"><h2>Scegli e parti</h2>
-          <span class="sec-count">${visible.length} percorsi</span></div>
-        <div class="paths-grid">${cards}</div>
-      </section>`;
+
+        <aside class="home-rail">
+          <section class="rail-sec">
+            <h3 class="rail-h"><i class="ri-medal-line"></i> Il verdetto</h3>
+            ${verdictHtml}
+          </section>
+          <section class="rail-sec">
+            <h3 class="rail-h"><i class="ri-star-line"></i> Da non perdere</h3>
+            <div class="rail-minis">${missHtml}</div>
+          </section>
+        </aside>
+      </div>`;
     }
 
     // ── VISTA: PERCORSO ──────────────────────────────────────────────────────────
@@ -401,8 +467,7 @@
             <div class="path-hero-txt">
               <span class="path-hero-aud">${aud}</span>
               <h1 class="path-hero-name">${esc(p.title)}</h1>
-              <p class="path-hero-blurb">${esc(p.blurb || '')}</p>
-              <p class="path-hero-tag">${esc(p.tagline)}</p>
+              <p class="path-hero-blurb">${esc(p.blurb || p.tagline)}</p>
               <div class="path-hero-meta">
                 <span class="pp-bar lg"><span style="width:${pr.pct}%"></span></span>
                 <span>${pr.done} di ${pr.total} visti</span>
