@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-15T08:07:19.103Z",
+  "generatedAt": "2026-06-15T08:10:56.017Z",
   "attribution": "Dati e immagini da AniList (anilist.co)",
   "count": 189,
   "titles": [
@@ -39874,7 +39874,7 @@
     },
     {
       "id": "il-canone",
-      "title": "Il Canone",
+      "title": "I Grandi Classici",
       "tagline": "Gli intoccabili, in ordine di epoca. Se provi a parlare di anime senza averli visti, si nota. La mappa per non figurare da ignorante.",
       "audience": "tutti",
       "icon": "ri-ancient-pavilion-line",
@@ -39921,7 +39921,7 @@
           ]
         }
       ],
-      "blurb": "I grandi classici: quelli che chiunque dovrebbe aver visto."
+      "blurb": "Le opere che tutti danno per viste: colma le lacune."
     },
     {
       "id": "battle-shonen",
@@ -40351,7 +40351,7 @@
     },
     {
       "id": "cinema-dautore",
-      "title": "Cinema d'Autore",
+      "title": "Film d'Animazione",
       "tagline": "I film che hanno fatto conoscere l'animazione giapponese al mondo. Da vedere grandi, su uno schermo che se lo merita.",
       "audience": "tutti",
       "icon": "ri-film-line",
@@ -40395,11 +40395,11 @@
           ]
         }
       ],
-      "blurb": "I film d'animazione dei grandi registi: Ghibli, Shinkai e co."
+      "blurb": "I film dei grandi registi: Ghibli, Shinkai, Miyazaki e co."
     },
     {
       "id": "chicche-e-deep-cut",
-      "title": "Deep Cut",
+      "title": "Chicche Nascoste",
       "tagline": "Niente titoli che sanno tutti. Solo gemme che la massa si è persa: roba da tirar fuori per far vedere che ne sai più degli altri.",
       "audience": "esperto",
       "icon": "ri-treasure-map-line",
@@ -40442,7 +40442,7 @@
           ]
         }
       ],
-      "blurb": "Chicche di nicchia che quasi nessuno conosce."
+      "blurb": "Roba di nicchia che quasi nessuno conosce: per intenditori."
     }
   ]
 }
