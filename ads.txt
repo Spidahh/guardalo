@@ -1,0 +1,3 @@
+# ads.txt — dopo l'approvazione di Google AdSense, sostituisci la riga sotto
+# con quella esatta fornita nel tuo account (Sites → ads.txt).
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0

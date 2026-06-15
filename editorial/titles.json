@@ -497,7 +497,8 @@
       "cupo",
       "inquietante"
     ],
-    "forWho": "Per chi ama i misteri lenti che si svelano poco a poco."
+    "forWho": "Per chi ama i misteri lenti che si svelano poco a poco.",
+    "titleOverride": "Heavenly Delusion"
   },
   "hell-s-paradise-jigokuraku": {
     "hook": "Action storico-soprannaturale: un ninja condannato a morte può ottenere la grazia solo recuperando l'elisir di vita eterna su un'isola misteriosa, insieme ad altri criminali e ai loro sorveglianti. Ambientazione fine-Edo, tono dark e molto violento, con un'isola che nasconde creature e segreti inquietanti.",
@@ -969,16 +970,6 @@
     ],
     "forWho": "Per chi cerca un fantasy rilassante e brillante senza grandi pretese."
   },
-  "k-on": {
-    "hook": "Commedia scolastica sulla musica: quattro ragazze tengono in vita il club di musica leggera del liceo tra prove, merende e amicizia. Quasi senza trama, punta tutto sull'atmosfera leggera e sui personaggi. Animazione curatissima di Kyoto Animation. Per chi vuole qualcosa di rilassante e di buon umore.",
-    "tone": [
-      "slice of life",
-      "leggero",
-      "musicale",
-      "rilassante"
-    ],
-    "forWho": "Per chi cerca un anime dolce e senza pretese, da guardare per stare bene."
-  },
   "violet-evergarden": {
     "hook": "Dramma emotivo nel dopoguerra: una ex bambina-soldato impara a comprendere i sentimenti scrivendo lettere per gli altri, mentre cerca il significato delle ultime parole di una persona cara. Tono delicato e malinconico, con un'animazione tra le più belle mai realizzate. Per chi cerca emozione e bellezza visiva.",
     "tone": [
@@ -1029,26 +1020,6 @@
     ],
     "forWho": "Per chi vuole un anime calmo e suggestivo, da guardare senza fretta."
   },
-  "natsume-yuujinchou": {
-    "hook": "Fantascienza d'azione anni '90: Iria, giovane e abile cacciatrice di taglie, finisce in una guerra personale contro Zeiram, un alieno quasi inarrestabile, dopo una missione su una stazione spaziale finita male. Tono avventuroso e action, in stile classico OVA. Per chi cerca sci-fi d'azione dal sapore retrò.",
-    "tone": [
-      "fantascienza",
-      "azione",
-      "avventura",
-      "retrò"
-    ],
-    "forWho": "Per chi cerca un'avventura sci-fi anni '90 con una protagonista combattiva."
-  },
-  "non-non-biyori": {
-    "hook": "Slice of life rurale: una ragazzina di Tokyo si trasferisce in un paesino minuscolo, dove la scuola conta cinque alunni in tutto, e scopre il ritmo lento della campagna con le nuove amiche. Tono pacato e nostalgico, senza tensioni. Per chi cerca un anime rilassante che celebra le piccole cose.",
-    "tone": [
-      "slice of life",
-      "rilassante",
-      "nostalgico",
-      "lento"
-    ],
-    "forWho": "Per chi vuole staccare con un anime tranquillo e dall'atmosfera serena."
-  },
   "laid-back-camp": {
     "hook": "Slice of life sul campeggio: alcune ragazze condividono uscite in tenda ai piedi del Monte Fuji, tra paesaggi, cibo all'aperto e amicizia. Tono calmo e accogliente, con scenari curatissimi che fanno venire voglia di partire. Per chi cerca un anime rilassante e genuinamente di buon umore.",
     "tone": [
@@ -1068,26 +1039,6 @@
       "spettacolare"
     ],
     "forWho": "Per chi vuole un film romantico travolgente e visivamente magnifico."
-  },
-  "toradora": {
-    "hook": "Commedia romantica scolastica: due studenti dall'aspetto ingannevole stringono un'alleanza per aiutarsi a vicenda con le rispettive cotte. Inizia come commedia leggera e diventa un dramma sentimentale sincero e ben costruito. Tra i romance più amati. Per chi cerca una storia d'amore che cresce con i personaggi.",
-    "tone": [
-      "romantico",
-      "commedia",
-      "scolastico",
-      "emotivo"
-    ],
-    "forWho": "Per chi vuole una commedia romantica che si trasforma in qualcosa di profondo."
-  },
-  "clannad": {
-    "hook": "Dramma sentimentale scolastico: un ragazzo disilluso ritrova un senso alla propria vita legandosi a una compagna fragile e alle persone attorno a lei. Mescola commedia, romanticismo e momenti commoventi. Prima parte di una storia più ampia. Per chi cerca un anime che intreccia leggerezza ed emozione.",
-    "tone": [
-      "drammatico",
-      "romantico",
-      "emotivo",
-      "scolastico"
-    ],
-    "forWho": "Per chi vuole un romance lento che pone le basi di una storia toccante."
   },
   "clannad-after-story": {
     "hook": "Dramma sulla vita adulta: il seguito diretto di Clannad segue i protagonisti oltre la scuola, tra lavoro, famiglia e difficoltà reali, scoprendo cosa significhi davvero il legame familiare. Tono molto più maturo e commovente del primo. Da vedere dopo Clannad. Per chi cerca un anime che commuove profondamente.",
@@ -1159,16 +1110,6 @@
     ],
     "forWho": "Per chi vuole un film fantasy intenso sul tempo e i legami affettivi."
   },
-  "honey-and-clover": {
-    "hook": "Dramma sentimentale tra giovani adulti: alcuni studenti d'arte squattrinati condividono casa, sogni e amori non corrisposti, mentre cercano la propria strada. Tono agrodolce, tra commedia e malinconia, sulla difficoltà di crescere. Per chi cerca un racconto sincero sull'incertezza dei vent'anni.",
-    "tone": [
-      "drammatico",
-      "agrodolce",
-      "romantico",
-      "introspettivo"
-    ],
-    "forWho": "Per chi vuole un anime maturo sui dubbi e gli amori della giovinezza adulta."
-  },
   "haikyuu": {
     "hook": "Anime sportivo sulla pallavolo: un ragazzo basso ma esplosivo entra in una squadra liceale e deve imparare a collaborare con il rivale che lo aveva sconfitto. Ritmo trascinante, partite tese e personaggi che crescono insieme. Tra i migliori sportivi mai realizzati. Per chi cerca azione, tensione e spirito di squadra.",
     "tone": [
@@ -1199,16 +1140,6 @@
     ],
     "forWho": "Per chi vuole lo sport shonen che ha definito il genere."
   },
-  "kuroko-no-basket": {
-    "hook": "Anime sportivo sul basket: un giocatore quasi invisibile in campo e un fenomeno tornato dagli Stati Uniti puntano a battere i 'cinque prodigi' con cui il primo aveva giocato. Sport spettacolare con abilità quasi sovrumane, ritmo serrato e rivalità ben costruite. Adrenalina e partite memorabili.",
-    "tone": [
-      "sportivo",
-      "spettacolare",
-      "competitivo",
-      "adrenalinico"
-    ],
-    "forWho": "Per chi cerca partite spettacolari e rivalità intense."
-  },
   "ping-pong-the-animation": {
     "hook": "Dramma sportivo sul ping pong: due amici di liceo, uno chiuso e uno esuberante, affrontano il talento e il prezzo dell'ambizione. La regia di Masaaki Yuasa ha uno stile visivo unico e ruvido, lontano dal solito anime. Una storia matura sulla pressione e sul significato del vincere.",
     "tone": [
@@ -1218,26 +1149,6 @@
       "maturo"
     ],
     "forWho": "Per chi vuole sport con uno stile visivo fuori dal comune."
-  },
-  "megalo-box": {
-    "hook": "Dramma sportivo fantascientifico: in un futuro dove la boxe usa arti meccaniche, un pugile clandestino rinuncia agli arti potenziati per scalare la classifica con le sue sole forze. Stile retro volutamente grezzo, omaggio ai classici del genere. Storia essenziale di riscatto e dignita.",
-    "tone": [
-      "sportivo",
-      "fantascienza",
-      "retro",
-      "intenso"
-    ],
-    "forWho": "Per chi ama le storie di riscatto sul ring."
-  },
-  "yuri-on-ice": {
-    "hook": "Dramma sportivo sul pattinaggio artistico: un atleta giapponese sull'orlo del ritiro ritrova la motivazione quando un campione decide di allenarlo. Animazione curata delle coreografie sul ghiaccio e forte attenzione ai personaggi. Apprezzato per il rapporto emotivo tra i protagonisti.",
-    "tone": [
-      "sportivo",
-      "emotivo",
-      "elegante",
-      "intimo"
-    ],
-    "forWho": "Per chi cerca uno sport elegante e centrato sui rapporti."
   },
   "blue-lock": {
     "hook": "Anime sportivo sul calcio: trecento attaccanti vengono rinchiusi in un programma estremo che premia solo l'egoismo, per creare il bomber che portera il Giappone al Mondiale. Toni competitivi è quasi battle royale, lontani dallo spirito di squadra tradizionale. Ritmo teso e provocatorio.",
@@ -1268,16 +1179,6 @@
       "drammatico"
     ],
     "forWho": "Per chi vuole una commedia lunga che alterna risate e dramma."
-  },
-  "konosuba": {
-    "hook": "Commedia fantasy isekai: un ragazzo muore e rinasce in un mondo da videogioco, ma sceglie come unico potere una dea inutile e si ritrova un gruppo di compagni disastrosi. Parodia spassosa dei cliche del genere, costruita su personaggi pessimi e situazioni assurde. Leggera e molto divertente.",
-    "tone": [
-      "comico",
-      "fantasy",
-      "parodico",
-      "leggero"
-    ],
-    "forWho": "Per chi vuole una parodia divertente dell'isekai."
   },
   "grand-blue": {
     "hook": "Commedia sulla vita universitaria: un matricola arriva in una città di mare sognando una vita perfetta e finisce in un circolo di sub ossessionati da alcol e feste. Comicita sfrenata e demenziale, con poco vero immersionismo. Una delle commedie più sopra le righe degli ultimi anni.",
@@ -1349,46 +1250,6 @@
     ],
     "forWho": "Per chi vuole fantascienza dark che fa riflettere."
   },
-  "gundam-iron-blooded-orphans": {
-    "hook": "Dramma mecha fantascientifico: un gruppo di ragazzi soldato sfruttati si ribella e prende il controllo del proprio destino, scortando una giovane idealista verso la Terra. Toni cupi e maturi su guerra, sfruttamento e legami tra emarginati. Capitolo accessibile e autoconclusivo del franchise Gundam.",
-    "tone": [
-      "mecha",
-      "fantascienza",
-      "cupo",
-      "maturo"
-    ],
-    "forWho": "Per chi vuole un Gundam cupo su ragazzi soldato."
-  },
-  "macross-frontier": {
-    "hook": "Fantascienza mecha con musica e romanticismo: su una flotta di colonie spaziali, un giovane pilota difende due cantanti mentre creature aliene minacciano l'umanità. Combatti aerei spettacolari, idol pop e un triangolo amoroso. Tratto distintivo del franchise: la musica come arma narrativa.",
-    "tone": [
-      "mecha",
-      "fantascienza",
-      "musicale",
-      "romantico"
-    ],
-    "forWho": "Per chi cerca fantascienza spaziale con musica e romanticismo."
-  },
-  "darling-in-the-franxx": {
-    "hook": "Dramma mecha fantascientifico: in un futuro desolato, coppie di ragazzi cresciuti solo per combattere pilotano robot contro mostri giganti, finché un ragazzo incontra una misteriosa ragazza. Mescola azione, crescita adolescenziale e temi sull'intimita. Ottima animazione, ma giudizi divisi sul finale.",
-    "tone": [
-      "mecha",
-      "fantascienza",
-      "drammatico",
-      "adolescenziale"
-    ],
-    "forWho": "Per chi vuole un mecha sui legami tra i piloti."
-  },
-  "eureka-seven": {
-    "hook": "Avventura mecha fantascientifica: un ragazzo di provincia insegue il sogno di unirsi a un gruppo di piloti ribelli e si lega a una ragazza enigmatica. Lungo racconto di formazione che unisce azione aerea, romanticismo e crescita. Ritmo disteso, ma un percorso emotivo molto curato.",
-    "tone": [
-      "mecha",
-      "avventura",
-      "romantico",
-      "formazione"
-    ],
-    "forWho": "Per chi vuole un lungo racconto di crescita con i mecha."
-  },
   "planetes": {
     "hook": "Fantascienza realistica e quotidiana: nel 2075 una squadra raccoglie i detriti che orbitano attorno alla Terra, un lavoro umile ma essenziale per la sicurezza spaziale. Tono sobrio e adulto, attento al lavoro e ai sogni delle persone comuni nello spazio. Fantascienza credibile e umana.",
     "tone": [
@@ -1419,26 +1280,6 @@
     ],
     "forWho": "Per chi cerca fantascienza astratta e introspettiva."
   },
-  "texhnolyze": {
-    "hook": "Fantascienza cupa e cerebrale: in una città sotterranea in decadenza, un combattente perde gli arti e li sostituisce con protesi sperimentali, finendo in una guerra per il controllo. Ritmo lentissimo, dialoghi rarefatti, atmosfera opprimente. Opera ostica ma intensa su violenza e declino.",
-    "tone": [
-      "fantascienza",
-      "cupo",
-      "lento",
-      "cerebrale"
-    ],
-    "forWho": "Per chi vuole una fantascienza dark, lenta e impegnativa."
-  },
-  "ergo-proxy": {
-    "hook": "Fantascienza distopica e cerebrale: in una cupola dove l'umanità sopravvive accanto ad androidi, un'investigatrice indaga su una serie di omicidi e su un virus che rende coscienti le macchine. Tono cupo e filosofico, denso di simbolismo. Per chi cerca un mistero che richiede attenzione e riflessione.",
-    "tone": [
-      "fantascienza",
-      "distopico",
-      "cerebrale",
-      "cupo"
-    ],
-    "forWho": "Per chi ama la fantascienza filosofica che fa pensare."
-  },
   "madoka-magica": {
     "hook": "Maghette in apparenza, ma è tutt'altro: una ragazza viene invitata a stringere un patto che la trasformerebbe in combattente magica. Dietro l'estetica colorata si nasconde un dark fantasy psicologico e drammatico, scritto da Gen Urobuchi. Animazione sperimentale di Shaft. Non lasciatevi ingannare dai primi episodi.",
     "tone": [
@@ -1459,26 +1300,6 @@
     ],
     "forWho": "Per chi cerca un thriller adulto che mette a disagio."
   },
-  "paprika": {
-    "hook": "Fantascienza onirica di Satoshi Kon: una macchina permette di entrare nei sogni, finché qualcuno la ruba e i confini tra sogno e veglia collassano. Visivamente straordinario, ipnotico, con un montaggio vertiginoso. Ha ispirato il cinema occidentale. Per chi cerca un'esperienza visiva più che una trama lineare.",
-    "tone": [
-      "onirico",
-      "fantascienza",
-      "visionario",
-      "ipnotico"
-    ],
-    "forWho": "Per chi vuole un'esperienza visiva fuori dal comune."
-  },
-  "paranoia-agent": {
-    "hook": "Thriller psicologico a episodi di Satoshi Kon: un ragazzino con una mazza da baseball aggredisce le persone, e due detective indagano. In realtà è un ritratto inquietante della società giapponese, della pressione e della fuga dalla responsabilità. Cupo e stratificato. Per chi apprezza storie ambigue e adulte.",
-    "tone": [
-      "psicologico",
-      "inquietante",
-      "sociale",
-      "stratificato"
-    ],
-    "forWho": "Per chi ama le storie ambigue che parlano di società."
-  },
   "welcome-to-the-nhk": {
     "hook": "Dramma psicologico sull'isolamento sociale: un giovane recluso, convinto di essere vittima di una cospirazione, incontra una ragazza decisa ad aiutarlo a tornare nel mondo. Affronta con onestà depressione, dipendenze e ansia, alternando umorismo nero e momenti durissimi. Per chi cerca un ritratto sincero del disagio giovanile.",
     "tone": [
@@ -1489,106 +1310,6 @@
     ],
     "forWho": "Per chi vuole una storia sincera sull'isolamento e la depressione."
   },
-  "higurashi": {
-    "hook": "Horror e mistero in un villaggio rurale: durante un'estate apparentemente serena, una serie di morti svela che gli amici del protagonista nascondono qualcosa. Narrato per archi che si ripetono e si chiariscono a poco a poco. Violento e angosciante. L'animazione datata premia chi resta per la trama.",
-    "tone": [
-      "horror",
-      "mistero",
-      "angosciante",
-      "violento"
-    ],
-    "forWho": "Per chi ama i misteri che si svelano pezzo dopo pezzo."
-  },
-  "tokyo-ghoul": {
-    "hook": "Dark fantasy urbano: a Tokyo esseri chiamati ghoul si nutrono di umani, finché uno studente normale si ritrova sospeso tra le due nature. Esplora identità, mostruosità e il prezzo della sopravvivenza. Cupo e violento, con buona prima stagione. Le stagioni successive divergono molto dal manga.",
-    "tone": [
-      "dark",
-      "horror",
-      "drammatico",
-      "cupo"
-    ],
-    "forWho": "Per chi cerca un horror urbano su identità e mostruosità."
-  },
-  "another": {
-    "hook": "Horror misterioso in ambiente scolastico: un trasferito percepisce qualcosa di sbagliato nella nuova classe, legato a una ragazza che gli altri sembrano ignorare. Atmosfera gelida e tesa, costruita su una maledizione e una serie di morti. Per chi ama l'horror d'atmosfera con un enigma da risolvere.",
-    "tone": [
-      "horror",
-      "mistero",
-      "atmosferico",
-      "teso"
-    ],
-    "forWho": "Per chi vuole un horror d'atmosfera con un enigma centrale."
-  },
-  "shiki": {
-    "hook": "Horror lento e d'atmosfera: in un villaggio isolato, durante un'estate torrida, iniziano morti inspiegabili che coincidono con l'arrivo di una famiglia misteriosa. Più che spaventare, costruisce tensione morale e dilemmi sul bene e il male. Ritmo lento iniziale, ma cresce molto. Per chi cerca un horror riflessivo.",
-    "tone": [
-      "horror",
-      "atmosferico",
-      "lento",
-      "morale"
-    ],
-    "forWho": "Per chi vuole un horror lento che diventa un dilemma morale."
-  },
-  "elfen-lied": {
-    "hook": "Dramma violento e fantascientifico: una ragazza con poteri letali fugge da un laboratorio, perde la memoria e viene accolta da due studenti. Alterna tenerezza, tragedia e violenza estrema, con temi su trauma e discriminazione. Molto cruento e con contenuti espliciti. Diviso tra ammiratori e detrattori.",
-    "tone": [
-      "violento",
-      "drammatico",
-      "tragico",
-      "esplicito"
-    ],
-    "forWho": "Per chi regge un dramma cruento su trauma ed emarginazione."
-  },
-  "junji-ito-collection": {
-    "hook": "Antologia horror tratta dai racconti del maestro Junji Ito: episodi brevi e indipendenti, dal grottesco al perturbante. Utile per conoscere il suo immaginario, ma l'adattamento è spesso considerato debole, lontano dalla forza dei disegni originali. Per chi è curioso di Ito ma con aspettative misurate.",
-    "tone": [
-      "horror",
-      "antologico",
-      "grottesco",
-      "irregolare"
-    ],
-    "forWho": "Per chi è curioso dell'horror di Junji Ito senza grandi pretese."
-  },
-  "uzumaki": {
-    "hook": "Horror in quattro episodi tratto da Junji Ito: una cittadina costiera è maledetta non da un essere, ma da una forma, la spirale, che contagia e ossessiona i suoi abitanti. Concepito in bianco e nero per evocare il tratto del manga. L'esecuzione è discontinua e ha deluso molti. Per i curiosi dell'autore.",
-    "tone": [
-      "horror",
-      "grottesco",
-      "ossessivo",
-      "irregolare"
-    ],
-    "forWho": "Per chi vuole assaggiare l'horror visionario di Junji Ito."
-  },
-  "rurouni-kenshin": {
-    "hook": "Avventura storica e d'azione nel Giappone Meiji: un ex assassino, che ha giurato di non uccidere più, vaga aiutando le persone mentre il suo passato lo insegue. Mescola duelli di spada, dramma e leggerezza. Un classico del genere samurai, con momenti più maturi negli archi narrativi migliori.",
-    "tone": [
-      "action",
-      "storico",
-      "samurai",
-      "classico"
-    ],
-    "forWho": "Per chi cerca un classico di samurai con cuore e azione."
-  },
-  "fist-of-the-north-star": {
-    "hook": "Action post-apocalittico anni '80: in un mondo devastato dalla guerra nucleare, un maestro di un'arte marziale devastante difende i deboli dai banditi. Cupo, brutale e profondamente influente: ha definito l'archetipo dell'eroe stoico e muscolare. Animazione datata. Per chi vuole conoscere le radici del genere.",
-    "tone": [
-      "action",
-      "post-apocalittico",
-      "brutale",
-      "iconico"
-    ],
-    "forWho": "Per chi vuole risalire alle radici dell'action virile anni '80."
-  },
-  "soul-eater": {
-    "hook": "Action fantasy con stile visivo unico: in una scuola per cacciatori di anime, studenti e armi viventi collaborano per diventare più forti. Estetica gotica e bizzarra, ritmo brioso e combattimenti energici. Per chi cerca uno shounen dallo stile riconoscibile, divertente e dal taglio dark ma leggero.",
-    "tone": [
-      "action",
-      "fantasy",
-      "stiloso",
-      "energico"
-    ],
-    "forWho": "Per chi vuole uno shounen dallo stile visivo originale."
-  },
   "dr-stone": {
     "hook": "Avventura di fantascienza e sopravvivenza: dopo che un fenomeno pietrifica l'umanità, un ragazzo geniale si risveglia millenni dopo e decide di ricostruire la civiltà da zero usando la scienza. Educativo, ottimista e sorprendentemente accurato. Per chi vuole un'avventura intelligente che celebra l'ingegno umano.",
     "tone": [
@@ -1598,46 +1319,6 @@
       "intelligente"
     ],
     "forWho": "Per chi ama le avventure che celebrano scienza e ingegno."
-  },
-  "fire-force": {
-    "hook": "Action soprannaturale: in un mondo dove gli umani possono prendere fuoco spontaneamente, brigate speciali combattono questi 'Infernali' usando poteri di fiamma. Animazione spettacolare di david production, con un mistero di fondo sul passato del protagonista. Per chi cerca combattimenti dinamici e visivamente curati.",
-    "tone": [
-      "action",
-      "soprannaturale",
-      "spettacolare",
-      "dinamico"
-    ],
-    "forWho": "Per chi vuole combattimenti spettacolari e ben animati."
-  },
-  "blue-exorcist": {
-    "hook": "Action fantasy soprannaturale: scoperto di essere figlio di Satana, un ragazzo sceglie di addestrarsi come esorcista per combattere i demoni anziché servirli. Classico shounen su famiglia, identità e accettazione, con buona animazione. Per chi cerca un'avventura demoniaca accessibile e dai temi familiari.",
-    "tone": [
-      "action",
-      "soprannaturale",
-      "fantasy",
-      "shounen"
-    ],
-    "forWho": "Per chi vuole uno shounen demoniaco accessibile e diretto."
-  },
-  "black-lagoon": {
-    "hook": "Action criminale per adulti: un impiegato giapponese finisce tra mercenari nei mari del Sudest asiatico e si reinventa nel mondo del crimine. Cinico, violento e adrenalinico, con sparatorie in stile cinema d'azione e dialoghi taglienti. Per chi cerca un thriller crudo, lontano dai cliché scolastici.",
-    "tone": [
-      "action",
-      "criminale",
-      "cinico",
-      "adrenalinico"
-    ],
-    "forWho": "Per chi vuole un action criminale crudo e per adulti."
-  },
-  "magi": {
-    "hook": "Avventura fantasy ispirata alle Mille e una notte: un giovane mago dal destino speciale viaggia esplorando labirinti magici e scegliendo i futuri re del mondo. Worldbuilding ricco, temi politici sorprendentemente maturi e personaggi carismatici. Per chi cerca un fantasy avventuroso dall'ambientazione esotica.",
-    "tone": [
-      "avventura",
-      "fantasy",
-      "epico",
-      "politico"
-    ],
-    "forWho": "Per chi vuole un fantasy avventuroso dall'ampio worldbuilding."
   },
   "dororo": {
     "hook": "Dark fantasy storico: un guerriero nato senza parti del corpo, cedute dal padre ai demoni in cambio di potere, le riconquista una a una uccidendo i mostri, accompagnato da un giovane ladro. Cupo, emotivo e maturo, su vendetta e umanità. Animazione MAPPA. Per chi cerca un'avventura tragica e toccante.",
@@ -1669,16 +1350,6 @@
     ],
     "forWho": "Per chi vuole un isekai solido e piacevole senza pretese cupe."
   },
-  "goblin-slayer": {
-    "hook": "Dark fantasy: un guerriero ossessionato vive per un solo scopo, sterminare i goblin con metodi spietati e tattici. Più cupo e violento del solito fantasy d'avventura, con un protagonista freddo e pragmatico. Nota: il primo episodio è molto crudo, lo stile poi si stabilizza.",
-    "tone": [
-      "dark",
-      "fantasy",
-      "violento",
-      "cupo"
-    ],
-    "forWho": "Per chi cerca un fantasy duro e senza idealizzazioni."
-  },
   "the-apothecary-diaries": {
     "hook": "Mistero a corte imperiale: una giovane esperta di erbe e veleni, venduta come serva nel palazzo, risolve enigmi medici e intrighi grazie alla sua mente acuta. Investigazione elegante con tocchi di commedia e romance accennato. Scrittura intelligente e protagonista memorabile.",
     "tone": [
@@ -1699,16 +1370,6 @@
     ],
     "forWho": "Per chi vuole un fantasy fresco con un'idea fuori dagli schemi."
   },
-  "no-game-no-life": {
-    "hook": "Isekai sui giochi: due geniali fratelli reclusi vengono trasportati in un mondo dove ogni conflitto si risolve con una sfida, e nessuna scommessa è proibita. Brillante nei duelli di astuzia, con stile visivo molto colorato. Nota: contiene fanservice frequente che può infastidire.",
-    "tone": [
-      "isekai",
-      "strategico",
-      "brillante",
-      "colorato"
-    ],
-    "forWho": "Per chi ama le battaglie di ingegno e i giochi mentali."
-  },
   "weathering-with-you": {
     "hook": "Dramma romantico soprannaturale: a Tokyo un ragazzo fuggito di casa incontra una ragazza capace di fermare la pioggia e schiarire il cielo. Storia d'amore giovanile con sfondo climatico, firmata Makoto Shinkai. Animazione e fondali splendidi, emotività intensa e colonna sonora curata.",
     "tone": [
@@ -1718,16 +1379,6 @@
       "visivamente splendido"
     ],
     "forWho": "Per chi cerca un romance commovente dall'estetica raffinata."
-  },
-  "5-centimeters-per-second": {
-    "hook": "Dramma romantico: tre episodi seguono negli anni due amici d'infanzia separati dalla distanza e dal tempo. Riflessione delicata e malinconica sull'amore che svanisce e sulla nostalgia. Animazione di Shinkai magnifica, ma il ritmo è lento e il tono volutamente amaro.",
-    "tone": [
-      "romantico",
-      "malinconico",
-      "lento",
-      "intimo"
-    ],
-    "forWho": "Per chi accetta una storia d'amore agrodolce e contemplativa."
   },
   "millennium-actress": {
     "hook": "Dramma fantasy: un documentarista intervista una leggendaria attrice ritiratasi, e i suoi ricordi si fondono con i film che ha girato. Racconto sull'amore e sul cinema dove realtà e finzione si confondono di continuo. Opera raffinata di Satoshi Kon, regia inventiva e struttura ipnotica.",
@@ -1758,26 +1409,6 @@
       "commovente"
     ],
     "forWho": "Per chi vuole una storia sulla famiglia che tocca corde profonde."
-  },
-  "summer-wars": {
-    "hook": "Avventura tra realtà e mondo digitale: uno studente timido finge di essere il fidanzato di una compagna durante una grande riunione di famiglia, mentre un'intelligenza artificiale minaccia il mondo online. Mescola commedia familiare e thriller tecnologico. Diretto da Hosoda, energico, visivamente brillante e coinvolgente.",
-    "tone": [
-      "avventura",
-      "familiare",
-      "sci-fi",
-      "energico"
-    ],
-    "forWho": "Per chi cerca un film d'avventura corale e ottimista."
-  },
-  "the-girl-who-leapt-through-time": {
-    "hook": "Dramma fantascientifico: una studentessa scopre di poter saltare indietro nel tempo e all'inizio usa il potere per piccolezze quotidiane, prima di capirne le conseguenze. Storia di crescita garbata e nostalgica, con un nucleo emotivo sincero. Regia di Hosoda, leggera ma toccante.",
-    "tone": [
-      "sci-fi",
-      "crescita",
-      "nostalgico",
-      "garbato"
-    ],
-    "forWho": "Per chi vuole una storia di formazione tenera e riflessiva."
   },
   "grave-of-the-fireflies": {
     "hook": "Dramma di guerra: due fratelli orfani lottano per sopravvivere nel Giappone devastato dai bombardamenti della Seconda guerra mondiale. Opera durissima e straziante sulla fragilità dell'infanzia di fronte alla guerra. Capolavoro dello Studio Ghibli, ma profondamente doloroso: da affrontare con la giusta predisposizione.",
@@ -1829,16 +1460,6 @@
     ],
     "forWho": "Per chi vuole spettacolo visivo e velocità allo stato puro."
   },
-  "dorohedoro": {
-    "hook": "Dark fantasy grottesco: un uomo con la testa da lucertola e amnesia caccia i maghi per scoprire chi lo ha trasformato. Mondo sporco e violento mescolato a una commedia surreale e a un cast bizzarro. Animazione MAPPA in CGI distintiva, tono unico e imprevedibile.",
-    "tone": [
-      "dark",
-      "fantasy",
-      "grottesco",
-      "surreale"
-    ],
-    "forWho": "Per chi cerca un fantasy violento e fuori da ogni schema."
-  },
   "banana-fish": {
     "hook": "Thriller drammatico: nelle strade di New York un giovane capobanda indaga su una sostanza misteriosa legata al suo passato, mentre stringe un legame profondo con un fotografo giapponese. Crime teso e maturo, con temi pesanti come abuso e violenza. Emotivamente intenso e ben scritto.",
     "tone": [
@@ -1848,16 +1469,6 @@
       "intenso"
     ],
     "forWho": "Per chi vuole un thriller maturo dal forte impatto emotivo."
-  },
-  "oshi-no-ko": {
-    "hook": "Dramma misterioso sul mondo dello spettacolo: un medico rinasce come figlio della sua idol preferita e scopre il lato oscuro dell'industria dell'intrattenimento. Mescola critica sociale, mistero e svolte cupe. Premessa scioccante e primo episodio lungo che funziona quasi come un film a sé.",
-    "tone": [
-      "dramma",
-      "mistery",
-      "psicologico",
-      "cupo"
-    ],
-    "forWho": "Per chi vuole uno sguardo crudo dietro le luci dello showbiz."
   },
   "kaguya-sama-love-is-war": {
     "hook": "Commedia romantica e strategica: due studenti brillanti e orgogliosi si rifiutano di confessarsi, perciò trasformano l'amore in una guerra di astuzie per costringere l'altro a cedere per primo. Comicità intelligente e ritmo serrato. Per chi cerca una commedia romantica originale, divertente e ben scritta.",
@@ -1879,14 +1490,316 @@
     ],
     "forWho": "Per chi ama gli shounen di combattimento classici e ben fatti."
   },
-  "log-horizon": {
-    "hook": "Fantasy isekai: migliaia di giocatori restano intrappolati dentro un MMORPG diventato reale e devono costruire una società funzionante. Punta su strategia, politica ed economia più che sull'azione. Lento e cerebrale, ricompensa chi apprezza il world-building dettagliato e la pianificazione.",
+  "paprika": {
+    "hook": "Fantascienza onirica di Satoshi Kon: una macchina permette di entrare nei sogni, finché qualcuno la ruba e i confini tra sogno e veglia collassano. Visivamente straordinario, ipnotico, con un montaggio vertiginoso. Ha ispirato il cinema occidentale. Per chi cerca un'esperienza visiva più che una trama lineare.",
     "tone": [
-      "isekai",
-      "strategico",
-      "cerebrale",
-      "lento"
+      "onirico",
+      "fantascienza",
+      "visionario",
+      "ipnotico"
     ],
-    "forWho": "Per chi preferisce strategia e politica all'azione."
+    "forWho": "Per chi vuole un'esperienza visiva fuori dal comune."
+  },
+  "summer-wars": {
+    "hook": "Avventura tra realtà e mondo digitale: uno studente timido finge di essere il fidanzato di una compagna durante una grande riunione di famiglia, mentre un'intelligenza artificiale minaccia il mondo online. Mescola commedia familiare e thriller tecnologico. Diretto da Hosoda, energico, visivamente brillante e coinvolgente.",
+    "tone": [
+      "avventura",
+      "familiare",
+      "sci-fi",
+      "energico"
+    ],
+    "forWho": "Per chi cerca un film d'avventura corale e ottimista."
+  },
+  "the-girl-who-leapt-through-time": {
+    "hook": "Dramma fantascientifico: una studentessa scopre di poter saltare indietro nel tempo e all'inizio usa il potere per piccolezze quotidiane, prima di capirne le conseguenze. Storia di crescita garbata e nostalgica, con un nucleo emotivo sincero. Regia di Hosoda, leggera ma toccante.",
+    "tone": [
+      "sci-fi",
+      "crescita",
+      "nostalgico",
+      "garbato"
+    ],
+    "forWho": "Per chi vuole una storia di formazione tenera e riflessiva."
+  },
+  "5-centimeters-per-second": {
+    "hook": "Dramma romantico: tre episodi seguono negli anni due amici d'infanzia separati dalla distanza e dal tempo. Riflessione delicata e malinconica sull'amore che svanisce e sulla nostalgia. Animazione di Shinkai magnifica, ma il ritmo è lento e il tono volutamente amaro.",
+    "tone": [
+      "romantico",
+      "malinconico",
+      "lento",
+      "intimo"
+    ],
+    "forWho": "Per chi accetta una storia d'amore agrodolce e contemplativa."
+  },
+  "castle-in-the-sky": {
+    "hook": "Avventura fantasy che ha inaugurato lo Studio Ghibli: una ragazza con un misterioso cristallo e un ragazzo minatore, inseguiti da pirati e militari, cercano Laputa, la leggendaria città volante. Immaginazione pura, ritmo d'avventura e senso di meraviglia: uno dei Miyazaki più amati.",
+    "tone": [
+      "Avventura",
+      "Meraviglia"
+    ],
+    "forWho": null
+  },
+  "kikis-delivery-service": {
+    "hook": "Una giovane strega lascia casa per l'anno di indipendenza che la tradizione richiede e avvia un servizio di consegne in una città di mare. Racconto gentile su crescita, autonomia e blocchi creativi. Miyazaki nella sua versione più dolce e rassicurante.",
+    "tone": [
+      "Dolce",
+      "Crescita"
+    ],
+    "forWho": null
+  },
+  "porco-rosso": {
+    "hook": "Miyazaki adulto e insolito: un asso dell'aviazione trasformato in maiale fa il cacciatore di taglie sull'Adriatico tra le due guerre. Romantico, malinconico e pieno di volo, sul senso dell'onore, la disillusione e la libertà.",
+    "tone": [
+      "Malinconico",
+      "Romantico"
+    ],
+    "forWho": null
+  },
+  "ponyo": {
+    "hook": "Fiaba marina liberamente ispirata alla Sirenetta: una pesciolina magica vuole diventare umana per restare con un bambino. Animazione disegnata a mano travolgente, pensata per i più piccoli ma con tutta la forza visiva di Miyazaki.",
+    "tone": [
+      "Fiabesco",
+      "Per tutti"
+    ],
+    "forWho": null
+  },
+  "the-wind-rises": {
+    "hook": "L'ultimo Miyazaki 'classico', biografia romanzata del progettista degli aerei Zero. Film adulto e malinconico sul sogno di creare qualcosa di bello in un'epoca che lo piega alla guerra. Niente magia: solo Storia ed emozione.",
+    "tone": [
+      "Adulto",
+      "Malinconico"
+    ],
+    "forWho": null
+  },
+  "the-boy-and-the-heron": {
+    "hook": "Il ritorno di Miyazaki dopo dieci anni, premiato con l'Oscar: un ragazzo segnato dal lutto segue un airone parlante in un mondo altro. Onirico, denso e personale — meno lineare dei classici, ma un viaggio visivo e simbolico potentissimo.",
+    "tone": [
+      "Onirico",
+      "Simbolico"
+    ],
+    "forWho": null
+  },
+  "the-tale-of-the-princess-kaguya": {
+    "hook": "Capolavoro di Isao Takahata, dallo stile ad acquerello inimitabile: la fiaba popolare della principessa nata da un bambù, cresciuta tra ricchezza e rimpianto. Commovente e visivamente rivoluzionario, sul prezzo di una vita non scelta.",
+    "tone": [
+      "Commovente",
+      "Poetico"
+    ],
+    "forWho": null
+  },
+  "whisper-of-the-heart": {
+    "hook": "Slice of life romantico dello Studio Ghibli: una ragazza divoratrice di libri scopre che i prestiti che ama portano tutti lo stesso nome. Racconto delicato di adolescenza, primi amori e del coraggio di inseguire una vocazione.",
+    "tone": [
+      "Delicato",
+      "Romantico"
+    ],
+    "forWho": null
+  },
+  "gundam-iron-blooded-orphans": {
+    "hook": "Dramma mecha fantascientifico: un gruppo di ragazzi soldato sfruttati si ribella e prende il controllo del proprio destino, scortando una giovane idealista verso la Terra. Toni cupi e maturi su guerra, sfruttamento e legami tra emarginati. Capitolo accessibile e autoconclusivo del franchise Gundam.",
+    "tone": [
+      "mecha",
+      "fantascienza",
+      "cupo",
+      "maturo"
+    ],
+    "forWho": "Per chi vuole un Gundam cupo su ragazzi soldato."
+  },
+  "eureka-seven": {
+    "hook": "Avventura mecha fantascientifica: un ragazzo di provincia insegue il sogno di unirsi a un gruppo di piloti ribelli e si lega a una ragazza enigmatica. Lungo racconto di formazione che unisce azione aerea, romanticismo e crescita. Ritmo disteso, ma un percorso emotivo molto curato.",
+    "tone": [
+      "mecha",
+      "avventura",
+      "romantico",
+      "formazione"
+    ],
+    "forWho": "Per chi vuole un lungo racconto di crescita con i mecha."
+  },
+  "ergo-proxy": {
+    "hook": "Fantascienza distopica e cerebrale: in una cupola dove l'umanità sopravvive accanto ad androidi, un'investigatrice indaga su una serie di omicidi e su un virus che rende coscienti le macchine. Tono cupo e filosofico, denso di simbolismo. Per chi cerca un mistero che richiede attenzione e riflessione.",
+    "tone": [
+      "fantascienza",
+      "distopico",
+      "cerebrale",
+      "cupo"
+    ],
+    "forWho": "Per chi ama la fantascienza filosofica che fa pensare."
+  },
+  "vivy-fluorite-eyes-song": {
+    "hook": "Fantascienza sull'intelligenza artificiale, scritta dall'autore di Re:Zero: la prima IA autonoma, una cantante androide, riceve la missione di impedire una guerra tra umani e macchine cent'anni dopo. Animazione spettacolare e domande grosse su coscienza e libero arbitrio.",
+    "tone": [
+      "Spettacolare",
+      "IA"
+    ],
+    "forWho": null
+  },
+  "from-the-new-world": {
+    "hook": "Fantascienza distopica disturbante: mille anni nel futuro, in una società 'pacifica' dove gli umani hanno poteri psichici, un gruppo di ragazzi scopre la verità marcia su cui regge il loro mondo. Parte lenta e poi non ti molla più: tra le sci-fi più ambiziose e inquietanti.",
+    "tone": [
+      "Distopico",
+      "Inquietante"
+    ],
+    "forWho": null
+  },
+  "gundam-witch-from-mercury": {
+    "hook": "Il Gundam moderno che ha riportato il franchise al successo: una scuola-corporazione nello spazio, duelli di mobile suit e una protagonista fuori posto. Politica, intrighi e mecha spettacolari, accessibile anche a chi non ha mai visto un Gundam.",
+    "tone": [
+      "Mecha",
+      "Intrighi"
+    ],
+    "forWho": null
+  },
+  "toradora": {
+    "hook": "Commedia romantica scolastica: due studenti dall'aspetto ingannevole stringono un'alleanza per aiutarsi a vicenda con le rispettive cotte. Inizia come commedia leggera e diventa un dramma sentimentale sincero e ben costruito. Tra i romance più amati. Per chi cerca una storia d'amore che cresce con i personaggi.",
+    "tone": [
+      "romantico",
+      "commedia",
+      "scolastico",
+      "emotivo"
+    ],
+    "forWho": "Per chi vuole una commedia romantica che si trasforma in qualcosa di profondo."
+  },
+  "clannad": {
+    "hook": "Dramma sentimentale scolastico: un ragazzo disilluso ritrova un senso alla propria vita legandosi a una compagna fragile e alle persone attorno a lei. Mescola commedia, romanticismo e momenti commoventi. Prima parte di una storia più ampia. Per chi cerca un anime che intreccia leggerezza ed emozione.",
+    "tone": [
+      "drammatico",
+      "romantico",
+      "emotivo",
+      "scolastico"
+    ],
+    "forWho": "Per chi vuole un romance lento che pone le basi di una storia toccante."
+  },
+  "honey-and-clover": {
+    "hook": "Dramma sentimentale tra giovani adulti: alcuni studenti d'arte squattrinati condividono casa, sogni e amori non corrisposti, mentre cercano la propria strada. Tono agrodolce, tra commedia e malinconia, sulla difficoltà di crescere. Per chi cerca un racconto sincero sull'incertezza dei vent'anni.",
+    "tone": [
+      "drammatico",
+      "agrodolce",
+      "romantico",
+      "introspettivo"
+    ],
+    "forWho": "Per chi vuole un anime maturo sui dubbi e gli amori della giovinezza adulta."
+  },
+  "konosuba": {
+    "hook": "Commedia fantasy isekai: un ragazzo muore e rinasce in un mondo da videogioco, ma sceglie come unico potere una dea inutile e si ritrova un gruppo di compagni disastrosi. Parodia spassosa dei cliche del genere, costruita su personaggi pessimi e situazioni assurde. Leggera e molto divertente.",
+    "tone": [
+      "comico",
+      "fantasy",
+      "parodico",
+      "leggero"
+    ],
+    "forWho": "Per chi vuole una parodia divertente dell'isekai."
+  },
+  "tokyo-ghoul": {
+    "hook": "Dark fantasy urbano: a Tokyo esseri chiamati ghoul si nutrono di umani, finché uno studente normale si ritrova sospeso tra le due nature. Esplora identità, mostruosità e il prezzo della sopravvivenza. Cupo e violento, con buona prima stagione. Le stagioni successive divergono molto dal manga.",
+    "tone": [
+      "dark",
+      "horror",
+      "drammatico",
+      "cupo"
+    ],
+    "forWho": "Per chi cerca un horror urbano su identità e mostruosità."
+  },
+  "another": {
+    "hook": "Horror misterioso in ambiente scolastico: un trasferito percepisce qualcosa di sbagliato nella nuova classe, legato a una ragazza che gli altri sembrano ignorare. Atmosfera gelida e tesa, costruita su una maledizione e una serie di morti. Per chi ama l'horror d'atmosfera con un enigma da risolvere.",
+    "tone": [
+      "horror",
+      "mistero",
+      "atmosferico",
+      "teso"
+    ],
+    "forWho": "Per chi vuole un horror d'atmosfera con un enigma centrale."
+  },
+  "shiki": {
+    "hook": "Horror lento e d'atmosfera: in un villaggio isolato, durante un'estate torrida, iniziano morti inspiegabili che coincidono con l'arrivo di una famiglia misteriosa. Più che spaventare, costruisce tensione morale e dilemmi sul bene e il male. Ritmo lento iniziale, ma cresce molto. Per chi cerca un horror riflessivo.",
+    "tone": [
+      "horror",
+      "atmosferico",
+      "lento",
+      "morale"
+    ],
+    "forWho": "Per chi vuole un horror lento che diventa un dilemma morale."
+  },
+  "higurashi": {
+    "hook": "Horror e mistero in un villaggio rurale: durante un'estate apparentemente serena, una serie di morti svela che gli amici del protagonista nascondono qualcosa. Narrato per archi che si ripetono e si chiariscono a poco a poco. Violento e angosciante. L'animazione datata premia chi resta per la trama.",
+    "tone": [
+      "horror",
+      "mistero",
+      "angosciante",
+      "violento"
+    ],
+    "forWho": "Per chi ama i misteri che si svelano pezzo dopo pezzo."
+  },
+  "my-dress-up-darling": {
+    "hook": "Commedia romantica moderna amatissima: un timido artigiano di bambole tradizionali e una ragazza popolare ossessionata dal cosplay finiscono a creare costumi insieme. Leggera, calda e con un'animazione curatissima, sul trovare chi accetta la tua passione.",
+    "tone": [
+      "Calorosa",
+      "Cosplay"
+    ],
+    "forWho": null
+  },
+  "skip-and-loafer": {
+    "hook": "Slice of life romantico delicato: una ragazza di provincia, secchiona e impacciata, si trasferisce a Tokyo per il liceo e fa amicizia con un compagno carismatico. Tenero e realistico su adolescenza, ansia sociale e amicizia.",
+    "tone": [
+      "Tenero",
+      "Realistico"
+    ],
+    "forWho": null
+  },
+  "komi-cant-communicate": {
+    "hook": "Commedia scolastica dal cuore grande: una ragazza bellissima e ammiratissima nasconde un'ansia sociale che le impedisce di parlare. Con l'aiuto di un compagno qualunque si pone l'obiettivo di farsi cento amici. Tenera e divertente.",
+    "tone": [
+      "Dolce",
+      "Spassoso"
+    ],
+    "forWho": null
+  },
+  "asobi-asobase": {
+    "hook": "Commedia demenziale pura: tre compagne di classe passano il tempo in giochi idioti che degenerano sempre. Facce assurde e tempi comici perfetti la rendono una delle commedie più folli e citate degli ultimi anni.",
+    "tone": [
+      "Demenziale",
+      "Assurdo"
+    ],
+    "forWho": null
+  },
+  "dark-gathering": {
+    "hook": "Horror soprannaturale: uno studente capace di vedere gli spiriti e una bambina dotata danno la caccia ai fantasmi per ritrovare una persona scomparsa. Atmosfere inquietanti e spettri ben più cattivi della media del genere.",
+    "tone": [
+      "Soprannaturale",
+      "Inquietante"
+    ],
+    "forWho": null
+  },
+  "paranoia-agent": {
+    "hook": "Thriller psicologico a episodi di Satoshi Kon: un ragazzino con una mazza da baseball aggredisce le persone, e due detective indagano. In realtà è un ritratto inquietante della società giapponese, della pressione e della fuga dalla responsabilità. Cupo e stratificato. Per chi apprezza storie ambigue e adulte.",
+    "tone": [
+      "psicologico",
+      "inquietante",
+      "sociale",
+      "stratificato"
+    ],
+    "forWho": "Per chi ama le storie ambigue che parlano di società."
+  },
+  "terror-in-resonance": {
+    "hook": "Thriller psicologico di Shinichiro Watanabe: due ragazzi misteriosi mettono in ginocchio Tokyo con attentati annunciati da enigmi. Atmosfera tesa e malinconica, colonna sonora magnifica, su trauma, vendetta e società.",
+    "tone": [
+      "Teso",
+      "Malinconico"
+    ],
+    "forWho": null
+  },
+  "the-tatami-galaxy": {
+    "hook": "Mindfuck surreale di Masaaki Yuasa: uno studente rivive lo stesso anno di università in infinite versioni alternative, cercando la 'vita da sogno'. Dialoghi a raffica, stile visivo unico, una riflessione vertiginosa sulle scelte e i rimpianti.",
+    "tone": [
+      "Surreale",
+      "Cerebrale"
+    ],
+    "forWho": null
+  },
+  "id-invaded": {
+    "hook": "Fantascienza-giallo concettuale: un detective entra nei mondi mentali ricostruiti dagli istinti omicidi dei serial killer per risolverne i casi. Premessa cervellotica e struttura a enigma, per chi ama incastrare i pezzi.",
+    "tone": [
+      "Giallo",
+      "Concettuale"
+    ],
+    "forWho": null
   }
 }

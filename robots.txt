@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Sostituire TUODOMINIO con il dominio reale al lancio
+# (la sitemap si genera con: SITE_URL=https://TUODOMINIO npm run prerender)
+Sitemap: https://TUODOMINIO/sitemap.xml

@@ -15,16 +15,22 @@ const MIME = {
   '.webmanifest': 'application/manifest+json', '.ico': 'image/x-icon',
 };
 
+const send = (res, data, ext) => {
+  res.writeHead(200, { 'Content-Type': MIME[ext] || 'application/octet-stream', 'Cache-Control': 'no-cache' });
+  res.end(data);
+};
+
 createServer(async (req, res) => {
-  try {
-    let path = decodeURIComponent(req.url.split('?')[0]);
-    if (path === '/' || path === '') path = '/index.html';
-    const file = join(ROOT, path);
-    const data = await readFile(file);
-    res.writeHead(200, { 'Content-Type': MIME[extname(file)] || 'application/octet-stream', 'Cache-Control': 'no-cache' });
-    res.end(data);
-  } catch (e) {
-    res.writeHead(404, { 'Content-Type': 'text/plain' });
-    res.end('404');
+  let path = decodeURIComponent(req.url.split('?')[0]);
+  if (path === '/' || path === '') path = '/index.html';
+  // 1. file esatto
+  try { const data = await readFile(join(ROOT, path)); return send(res, data, extname(path)); } catch (e) {}
+  // 2. route senza estensione → prova la versione prerenderizzata (path/index.html)
+  if (!extname(path)) {
+    try { const data = await readFile(join(ROOT, path, 'index.html')); return send(res, data, '.html'); } catch (e) {}
+    // 3. fallback SPA: serve la index.html principale (il router gestisce la route)
+    try { const data = await readFile(join(ROOT, 'index.html')); return send(res, data, '.html'); } catch (e) {}
   }
+  res.writeHead(404, { 'Content-Type': 'text/plain' });
+  res.end('404');
 }).listen(PORT, () => console.log(`GUARDALO → http://localhost:${PORT}`));

@@ -142,18 +142,12 @@
   "tokyo-revengers": [
     "Si guarda in ordine d'uscita. Mix di delinquenti e viaggi nel tempo: la prima stagione parte forte, le successive dividono."
   ],
-  "clannad": [
-    "Clannad è il preludio: il capolavoro vero è la seconda parte, Clannad ~After Story~. Non fermarti alla prima."
-  ],
   "clannad-after-story": [
     "È il seguito di Clannad: guarda prima la serie base. Qui arriva la mazzata emotiva per cui è famoso."
   ],
   "madoka-magica": [
     "Non farti ingannare dall'estetica da maghette: vira nel dark presto.",
     "C'è una trilogia di film: i primi due riassumono la serie, il terzo (Rebellion) la continua. Vedili dopo."
-  ],
-  "higurashi": [
-    "Esistono la versione 2006 e il remake 2020 (Gou/Sotsu). Per la storia classica parti dalla 2006."
   ],
   "fruits-basket-2019": [
     "Guarda il reboot del 2019 (questo): adatta tutto il manga fino al finale. La serie del 2001 si ferma a metà e fa storia sua."
@@ -165,15 +159,6 @@
   "tensura": [
     "Isekai comfort sullo slime: stagioni 1-2 più un film canonico (Scarlet Bond). Ordine d'uscita."
   ],
-  "konosuba": [
-    "Parodia dell'isekai: l'animazione 'sgangherata' è una scelta comica voluta. Stagioni + film + spin-off, in ordine d'uscita."
-  ],
-  "no-game-no-life": [
-    "Isekai di giochi mentali, esteticamente sgargiante. C'è un film prequel (Zero), ottimo, vedibile anche prima della serie."
-  ],
-  "log-horizon": [
-    "Isekai 'intelligente': più strategia, economia e politica che combattimento. Tre stagioni."
-  ],
   "psycho-pass": [
     "Guarda la stagione 1 (la migliore, scritta da Urobuchi). Le successive calano ma restano godibili. Esistono anche dei film."
   ],
@@ -183,32 +168,11 @@
   "legend-of-the-galactic-heroes": [
     "Mostro sacro: 110 episodi di pura politica e guerra spaziale. C'è un remake recente (Die Neue These) con animazione più moderna, se l'originale ti pesa."
   ],
-  "macross-frontier": [
-    "Capitolo a sé della saga Macross: si guarda da solo. Idol, triangoli amorosi e mecha, il marchio di fabbrica."
-  ],
-  "gundam-iron-blooded-orphans": [
-    "Gundam autoconclusivo e accessibile: non serve aver visto nessun altro Gundam. Due stagioni."
-  ],
-  "darling-in-the-franxx": [
-    "Parte fortissimo e poi divide parecchio il pubblico nel finale: sappilo prima. Mecha + adolescenti + simbolismo."
-  ],
   "yu-yu-hakusho": [
     "Battle shōnen anni '90 di Togashi (stesso autore di Hunter x Hunter): invecchiato benissimo."
   ],
-  "rurouni-kenshin": [
-    "Classico samurai. Gli archi filler centrali sono saltabili; l'OVA 'Trust & Betrayal' è un capolavoro a parte, cupissimo."
-  ],
-  "soul-eater": [
-    "L'anime supera il manga e si inventa un finale tutto suo (nel manga la storia prosegue diversamente). Stile visivo pazzesco."
-  ],
   "dr-stone": [
     "Shōnen 'scientifico': impari roba vera divertendoti. Più stagioni, ordine d'uscita."
-  ],
-  "tokyo-ghoul": [
-    "Guarda la stagione 1, ottima. Le successive (√A e :re) divergono molto dal manga e dividono: in alternativa, recupera il manga."
-  ],
-  "another": [
-    "Horror con un mistero da risolvere; un episodio in particolare è leggendario tra i fan. Autoconclusivo."
   ],
   "haikyuu": [
     "Lo standard d'oro dello sport anime: anche se odi la pallavolo, ti ritrovi a urlare. Concluso con un film finale."
@@ -233,5 +197,23 @@
   ],
   "weathering-with-you": [
     "Film di Makoto Shinkai, dopo Your Name: stessa estetica mozzafiato. Standalone."
+  ],
+  "gundam-iron-blooded-orphans": [
+    "Gundam autoconclusivo e accessibile: non serve aver visto nessun altro Gundam. Due stagioni."
+  ],
+  "clannad": [
+    "Clannad è il preludio: il capolavoro vero è la seconda parte, Clannad ~After Story~. Non fermarti alla prima."
+  ],
+  "konosuba": [
+    "Parodia dell'isekai: l'animazione 'sgangherata' è una scelta comica voluta. Stagioni + film + spin-off, in ordine d'uscita."
+  ],
+  "tokyo-ghoul": [
+    "Guarda la stagione 1, ottima. Le successive (√A e :re) divergono molto dal manga e dividono: in alternativa, recupera il manga."
+  ],
+  "another": [
+    "Horror con un mistero da risolvere; un episodio in particolare è leggendario tra i fan. Autoconclusivo."
+  ],
+  "higurashi": [
+    "Esistono la versione 2006 e il remake 2020 (Gou/Sotsu). Per la storia classica parti dalla 2006."
   ]
 }

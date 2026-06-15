@@ -49,6 +49,75 @@
   const BANDS = ['cortissimo', 'corto', 'medio', 'lungo', 'lunghissimo'];
   const bandIndex = b => Math.max(0, BANDS.indexOf(b));
 
+  // ── categorie di genere "pulite" (mostrate in home, in quest'ordine) ─────────
+  // i percorsi "meta" (da-zero, canone, chicche) e quelli poco amati (sport, slice)
+  // NON entrano nella griglia generi — restano raggiungibili da ricerca/Esplora.
+  const GENRE_IDS = ['battle-shonen', 'seinen-e-maturo', 'isekai-e-fantasy', 'sci-fi-e-mecha',
+    'mindfuck', 'horror-e-disagio', 'romance', 'commedia', 'cinema-dautore'];
+  const GENRE_PATHS = GENRE_IDS.map(id => PATHS.find(p => p.id === id)).filter(Boolean);
+  // generi AniList che "qualificano" un titolo della lista per una categoria.
+  // Un titolo inList con quel genere compare in cima ("Dalla tua lista") di quella categoria,
+  // anche in più categorie (i titoli multi-genere non stanno in una sola). null = solo curato.
+  // NB: Action/Comedy/Drama sono troppo larghi (allagano) → quei generi restano curati (null).
+  const GENRE_TAGS = {
+    'battle-shonen': null,
+    'seinen-e-maturo': null,
+    'isekai-e-fantasy': null,
+    'sci-fi-e-mecha': ['Sci-Fi', 'Mecha'],
+    'mindfuck': ['Psychological', 'Thriller'],
+    'horror-e-disagio': ['Horror'],
+    'romance': ['Romance'],
+    'commedia': null,
+    'cinema-dautore': '__movie__',
+  };
+  const matchesGenreCat = (t, id) => {
+    const tags = GENRE_TAGS[id];
+    if (!tags) return false;
+    if (tags === '__movie__') return t.format === 'MOVIE';
+    return (t.genres || []).some(g => tags.includes(g));
+  };
+  // percorsi "tematici" (non di genere): journey curati che possono riusare gli stessi titoli.
+  // META_IDS = quelli a livelli (progressione); gli altri percorsi sono liste piatte come i generi.
+  const META_IDS = ['da-zero-a-otaku', 'il-canone', 'chicche-e-deep-cut'];
+  const PERCORSI_IDS = ['da-zero-a-otaku', 'capolavori', 'azione', 'antieroi', 'il-canone', 'chicche-e-deep-cut'];
+  const PERCORSI_PATHS = PERCORSI_IDS.map(id => PATHS.find(p => p.id === id)).filter(Boolean);
+  // titoli di un percorso, deduplicati nell'ordine dei livelli
+  const pathTitles = p => {
+    const seen = new Set(), out = [];
+    (p.levels || []).forEach(l => (l.titles || []).forEach(id => {
+      if (seen.has(id)) return; seen.add(id);
+      const t = BY_ID.get(id); if (t) out.push(t);
+    }));
+    return out;
+  };
+  // ordinamento "dal migliore": prima i TOP della classifica utente, poi voto utente, poi AniList
+  const rankSort = (a, b) =>
+    (b.top ? 1 : 0) - (a.top ? 1 : 0) ||
+    (b.userRating || 0) - (a.userRating || 0) ||
+    (b.score10 || 0) - (a.score10 || 0);
+  const TOPS = TITLES.filter(t => t.top).sort(rankSort);
+
+  // etichetta lunghezza: i film e i one-shot non dicono "Cortissimo" ma cosa sono
+  const lenLabel = t => t.format === 'MOVIE' ? 'Film'
+    : ((t.sagaEpisodes || t.episodes || 0) <= 1 ? 'Episodio unico' : t.lengthLabel);
+  const lenHint = t => t.format === 'MOVIE' ? 'un film, una sera' : t.lengthHint;
+
+  // ── collezioni "non di genere" (in cima alla home come categorie) ────────────
+  // REGOLA: le liste personalizzate contengono SOLO i titoli della lista
+  // principale dell'utente (t.inList), mai gli extra aggiunti in curatela.
+  const COLLECTIONS = [
+    { id: 'top', title: 'I Migliori', icon: 'ri-vip-crown-2-fill', accent: '#d9a743',
+      blurb: 'I titoli imprescindibili: quelli da cui partire, di ogni genere.',
+      get: () => TOPS },
+    { id: 'una-sera', title: 'Da vedere in una sera', icon: 'ri-moon-clear-line', accent: '#4f86a6',
+      blurb: 'Film e serie brevi: poche ore e sei a posto.',
+      get: () => TITLES.filter(t => t.inList && (t.format === 'MOVIE' || t.lengthBand === 'cortissimo' || t.lengthBand === 'corto')).sort(rankSort) },
+    { id: 'appena-usciti', title: 'Appena usciti', icon: 'ri-fire-line', accent: '#cf6a3a',
+      blurb: 'Il meglio delle ultime stagioni, dal più forte.',
+      get: () => TITLES.filter(t => t.inList && (t.year || 0) >= 2024).sort(rankSort) },
+  ];
+  const COLL_BY_ID = new Map(COLLECTIONS.map(c => [c.id, c]));
+
   // ── util ───────────────────────────────────────────────────────────────────
   const $  = (s, r = document) => r.querySelector(s);
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c =>
@@ -74,8 +143,41 @@
       this.bindChrome();
       this.initFirebase();
       const attr = $('#footAttr'); if (attr) attr.textContent = DATA.attribution || '';
-      window.addEventListener('hashchange', () => this.route());
+      window.addEventListener('popstate', () => this.route());
+      // intercetta i click sui link interni (URL path-based, niente reload)
+      document.addEventListener('click', e => {
+        if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+        const a = e.target.closest('a');
+        if (!a) return;
+        const href = a.getAttribute('href');
+        if (!href || !href.startsWith('/') || href.startsWith('//') || a.target === '_blank' || a.hasAttribute('download')) return;
+        e.preventDefault();
+        this.go(href);
+      });
+      this.initCookies();
       this.route();
+    }
+    // consenso cookie (GDPR): mostra il banner finché non c'è una scelta salvata
+    initCookies() {
+      let choice = null;
+      try { choice = localStorage.getItem('guardalo_cookie'); } catch (e) {}
+      const bar = $('#cookieBar');
+      if (!bar) return;
+      const decide = v => { try { localStorage.setItem('guardalo_cookie', v); } catch (e) {} bar.classList.remove('show'); setTimeout(() => bar.hidden = true, 250);
+        if (v === 'all') this.loadAds(); };
+      if (!choice) { bar.hidden = false; requestAnimationFrame(() => bar.classList.add('show')); }
+      else if (choice === 'all') this.loadAds();
+      $('#cookieAccept')?.addEventListener('click', () => decide('all'));
+      $('#cookieReject')?.addEventListener('click', () => decide('necessary'));
+    }
+    // carica gli annunci solo dopo consenso (placeholder: incolla qui lo script AdSense)
+    loadAds() {
+      // window.adsbygoogle = window.adsbygoogle || []; (...) — abilitare al lancio con il publisher id
+    }
+    // navigazione interna via History API
+    go(path) {
+      if (path !== location.pathname) { history.pushState(null, '', path); this.route(); }
+      else window.scrollTo(0, 0);
     }
 
     // ── persistenza ──────────────────────────────────────────────────────────
@@ -123,7 +225,7 @@
         const l = c.querySelector('.js-later'); if (l) l.classList.toggle('on', this.isLater(id));
       });
       // progressi percorsi / contatori, se in vista
-      const route = (location.hash.slice(1) || '/');
+      const route = location.pathname || '/';
       if (route === '/' || route.startsWith('/p/') || route === '/lista') this.route();
     }
 
@@ -213,21 +315,99 @@
 
     // ── ROUTER ─────────────────────────────────────────────────────────────────
     route() {
-      const hash = location.hash.slice(1) || '/';
-      const [_, seg, arg] = hash.split('/');
+      const path = decodeURIComponent(location.pathname || '/');
+      const [_, seg, arg] = path.split('/');
       let html, active = 'home';
-      if (seg === 'p' && arg) { html = this.viewPath(arg); active = 'home'; }
+      if (seg === 'p' && arg) { html = this.viewPath(arg); active = META_IDS.includes(arg) || PERCORSI_IDS.includes(arg) ? 'percorsi' : 'generi'; }
+      else if (seg === 'c' && arg) { html = this.viewCollection(arg); active = 'home'; }
       else if (seg === 't' && arg) { html = this.viewTitle(arg); active = ''; }
+      else if (seg === 'generi') { html = this.viewGeneri(); active = 'generi'; }
+      else if (seg === 'percorsi') { html = this.viewPercorsi(); active = 'percorsi'; }
       else if (seg === 'esplora') { html = this.viewEsplora(); active = 'esplora'; }
       else if (seg === 'tempo' && arg) { html = this.viewTempo(arg); active = 'esplora'; }
       else if (seg === 'lista') { html = this.viewLista(); active = 'lista'; }
+      else if (seg === 'info') { html = this.viewInfo(); active = ''; }
+      else if (seg === 'privacy') { html = this.viewPrivacy(); active = ''; }
+      else if (seg === 'cookie') { html = this.viewCookie(); active = ''; }
       else { html = this.viewHome(); active = 'home'; }
 
       const app = $('#app');
       app.innerHTML = html;
       document.querySelectorAll('.side-nav a').forEach(a => a.classList.toggle('active', a.dataset.route === active));
       window.scrollTo(0, 0);
+      this.setMeta(seg, arg);
       this.afterRender(seg);
+    }
+    // ── SEO: titolo, meta description, Open Graph, JSON-LD per route ──────────────
+    setMetaTag(name, content, prop) {
+      const sel = prop ? `meta[property="${name}"]` : `meta[name="${name}"]`;
+      let el = document.head.querySelector(sel);
+      if (!el) { el = document.createElement('meta'); el.setAttribute(prop ? 'property' : 'name', name); document.head.appendChild(el); }
+      el.setAttribute('content', content || '');
+    }
+    setMeta(seg, arg) {
+      const BASE = 'GUARDALO';
+      let title, desc, img;
+      if (seg === 't' && arg && BY_ID.get(arg)) {
+        const t = BY_ID.get(arg);
+        title = `${t.title}${t.year ? ` (${t.year})` : ''} — dove vederlo e da dove iniziare · ${BASE}`;
+        desc = (t.hook || `${t.title}: scheda spoiler-free, dove vederlo, quanto dura.`).slice(0, 158);
+        img = cover(t);
+      } else if (seg === 'p' && arg && PATHS.find(p => p.id === arg)) {
+        const p = PATHS.find(p => p.id === arg);
+        title = `${p.title} — i migliori anime del genere · ${BASE}`;
+        desc = (p.about || p.blurb || p.tagline || '').slice(0, 158);
+      } else if (seg === 'c' && arg && COLL_BY_ID.get(arg)) {
+        const c = COLL_BY_ID.get(arg);
+        title = `${c.title} · ${BASE}`;
+        desc = (c.blurb || '').slice(0, 158);
+      } else if (seg === 'esplora') {
+        title = `Esplora tutti gli anime · ${BASE}`;
+        desc = 'Tutti gli anime della guida, dal migliore: filtra per genere e per quanto tempo hai.';
+      } else if (seg === 'generi') {
+        title = `Generi · ${BASE}`;
+        desc = 'Tutti i generi: azione, mindfuck, horror, sci-fi, isekai e altro. I migliori anime di ogni categoria.';
+      } else if (seg === 'percorsi') {
+        title = `Percorsi · ${BASE}`;
+        desc = 'Viaggi tematici curati: da dove iniziare, solo capolavori, antieroi e altri percorsi.';
+      } else if (seg === 'info') {
+        title = `Chi sono · ${BASE}`;
+        desc = 'GUARDALO è una guida agli anime creata da Francesco Spidah. Selezione, testi e percorsi sono curatela personale.';
+      } else if (seg === 'privacy') {
+        title = `Privacy Policy · ${BASE}`;
+        desc = 'Come GUARDALO tratta i tuoi dati: navigazione anonima, login opzionale, pubblicità.';
+      } else if (seg === 'cookie') {
+        title = `Cookie Policy · ${BASE}`;
+        desc = 'I cookie usati da GUARDALO e come gestire il consenso.';
+      }
+      if (!title) {
+        title = `${BASE} — La guida agli anime`;
+        desc = 'I migliori anime di ogni genere, scelti e spiegati: perché guardarli, da dove iniziare, dove vederli.';
+      }
+      document.title = title;
+      this.setMetaTag('description', desc);
+      this.setMetaTag('og:title', title, true);
+      this.setMetaTag('og:description', desc, true);
+      if (img) this.setMetaTag('og:image', img, true);
+
+      // dati strutturati (rich snippet) sulla scheda titolo
+      const old = document.getElementById('ld-json');
+      if (old) old.remove();
+      if (seg === 't' && arg && BY_ID.get(arg)) {
+        const t = BY_ID.get(arg);
+        const ld = {
+          '@context': 'https://schema.org', '@type': t.typeLabel === 'Film' ? 'Movie' : 'TVSeries',
+          name: t.title, image: cover(t) || undefined,
+          description: t.hook || undefined,
+          ...(t.year ? { datePublished: String(t.year) } : {}),
+          genre: (t.genres || []).map(itGenre),
+          ...(t.studios && t.studios.length ? { productionCompany: t.studios.map(s => ({ '@type': 'Organization', name: s })) } : {}),
+          ...(t.score10 ? { aggregateRating: { '@type': 'AggregateRating', ratingValue: t.score10, bestRating: 10, worstRating: 1, ratingCount: Math.max(1, t.popularity || 1) } } : {}),
+        };
+        const s = document.createElement('script');
+        s.type = 'application/ld+json'; s.id = 'ld-json'; s.textContent = JSON.stringify(ld);
+        document.head.appendChild(s);
+      }
     }
     afterRender(seg) {
       const howClose = document.getElementById('howClose');
@@ -238,7 +418,28 @@
       const pick = document.getElementById('pickFromList');
       if (pick) pick.addEventListener('click', () => {
         const ids = Object.keys(this.toWatch);
-        if (ids.length) location.hash = '#/t/' + ids[Math.floor(Math.random() * ids.length)];
+        if (ids.length) this.go('/t/' + ids[Math.floor(Math.random() * ids.length)]);
+      });
+      const heroSearch = document.getElementById('heroSearch');
+      if (heroSearch) heroSearch.addEventListener('click', () => this.openSearch());
+      // filtro per tempo dentro la pagina categoria (client-side)
+      const cf = document.getElementById('catFilter');
+      if (cf) cf.addEventListener('click', e => {
+        const b = e.target.closest('.cf-chip');
+        if (!b) return;
+        cf.querySelectorAll('.cf-chip').forEach(c => c.classList.toggle('on', c === b));
+        const sel = b.dataset.band;
+        const map = { sera: ['cortissimo', 'corto'], medio: ['medio'], maratona: ['lungo', 'lunghissimo'] };
+        document.querySelectorAll('.grid > .card[data-band]').forEach(card => {
+          const show = sel === 'all' || (map[sel] && map[sel].includes(card.dataset.band));
+          card.style.display = show ? '' : 'none';
+        });
+        // nasconde le sezioni rimaste vuote
+        document.querySelectorAll('.grid').forEach(g => {
+          const any = [...g.querySelectorAll('.card[data-band]')].some(c => c.style.display !== 'none');
+          const sec = g.closest('section.wrap');
+          if (sec && !sec.querySelector('.cat-filter')) sec.style.display = any ? '' : 'none';
+        });
       });
     }
 
@@ -247,10 +448,10 @@
       const idx = bandIndex(t.lengthBand);
       const bars = BANDS.map((b, i) =>
         `<span class="ls-bar ${i <= idx ? 'on' : ''} ls-${t.lengthBand}"></span>`).join('');
-      if (compact) return `<span class="lchip ls-${t.lengthBand}" title="${esc(t.lengthLabel)} · ${esc(t.lengthHint)}"><i class="ri-time-line"></i>${esc(t.lengthLabel)}</span>`;
+      if (compact) return `<span class="lchip ls-${t.lengthBand}" title="${esc(lenLabel(t))} · ${esc(lenHint(t))}"><i class="ri-time-line"></i>${esc(lenLabel(t))}</span>`;
       return `<div class="lscale">
         <div class="ls-bars ls-${t.lengthBand}">${bars}</div>
-        <div class="ls-text"><b>${esc(t.lengthLabel)}</b><span>${esc(t.lengthHint)}</span></div>
+        <div class="ls-text"><b>${esc(lenLabel(t))}</b><span>${esc(lenHint(t))}</span></div>
       </div>`;
     }
     statusBadge(t) {
@@ -263,19 +464,22 @@
       const w = this.isWatched(t.id), l = this.isLater(t.id);
       const why = opts.why ? `<span class="card-why">${esc(opts.why)}</span>` : '';
       const col = t.coverColor ? `style="--cc:${esc(t.coverColor)}"` : '';
-      return `<a class="card ${w ? 'is-watched' : ''} ${l ? 'is-later' : ''}" data-card="${esc(t.id)}" href="#/t/${esc(t.id)}" ${col}>
+      const rank = opts.rank ? `<span class="card-rank">${opts.rank}</span>` : '';
+      const topBadge = t.top ? `<span class="card-top" title="Imperdibile"><i class="ri-vip-crown-fill"></i></span>` : '';
+      return `<a class="card ${w ? 'is-watched' : ''} ${l ? 'is-later' : ''} ${t.top ? 'is-top' : ''}" data-card="${esc(t.id)}" data-band="${esc(t.lengthBand)}" href="/t/${esc(t.id)}" ${col}>
         <div class="card-poster">
           <img src="${esc(thumb(cover(t)))}" alt="${esc(t.title)}" loading="lazy" onload="this.classList.add('ld')" onerror="this.classList.add('ld')">
+          ${rank}${topBadge}
           <div class="card-marks">
             <button class="cm js-watch ${w ? 'on' : ''}" data-id="${esc(t.id)}" title="Visto" aria-label="Segna come visto"><i class="ri-check-line"></i></button>
             <button class="cm js-later ${l ? 'on' : ''}" data-id="${esc(t.id)}" title="Da vedere" aria-label="Aggiungi a Da vedere"><i class="ri-bookmark-line"></i></button>
           </div>
           ${w ? '<span class="card-seen"><i class="ri-check-double-line"></i> Visto</span>' : ''}
-          <span class="lchip ls-${t.lengthBand}" title="${esc(t.lengthLabel)} · ${esc(t.lengthHint)}"><i class="ri-time-line"></i>${esc(t.lengthLabel)}</span>
+          <span class="lchip ls-${t.lengthBand}" title="${esc(lenLabel(t))} · ${esc(lenHint(t))}"><i class="ri-time-line"></i>${esc(lenLabel(t))}</span>
         </div>
         <div class="card-body">
           <div class="card-title">${esc(t.title)}</div>
-          <div class="card-len ls-${t.lengthBand}"><i class="ri-time-line"></i>${esc(t.lengthLabel)}<span class="card-len-hint">· ${esc(t.lengthHint)}</span></div>
+          <div class="card-len ls-${t.lengthBand}"><i class="ri-time-line"></i>${esc(lenLabel(t))}<span class="card-len-hint">· ${esc(lenHint(t))}</span></div>
           <div class="card-meta">${esc(t.year || '')} · ${esc(t.typeLabel)}${t.score10 ? ` · <span class="card-score"><i class="ri-star-fill"></i>${t.score10}</span>` : ''}</div>
           ${why}
         </div>
@@ -317,116 +521,153 @@
       }
       return null;
     }
-    viewHome() {
-      const visible = PATHS;
-      const cards = visible.map(p => {
-        const pr = this.pathProgress(p);
-        const tag = p.audience === 'principiante' ? 'Per iniziare' : p.audience === 'esperto' ? 'Per esperti' : 'Per tutti';
-        const covers = this.pathCovers(p, 5).map(t => this.miniCover(t, true)).join('');
-        const progHtml = pr.done > 0
-          ? `<span class="pp-bar"><span style="width:${pr.pct}%"></span></span>${pr.done}/${pr.total}`
-          : `<span class="path-start">Inizia <i class="ri-arrow-right-line"></i></span>`;
-        return `<a class="path-card" href="#/p/${esc(p.id)}" style="--accent:${esc(p.accent)}">
-          <div class="path-hero-img">
-            <div class="path-montage">${covers}</div>
-            <span class="path-grad"></span>
-            <span class="path-ic-wrap"><i class="${esc(p.icon)}"></i></span>
-            <span class="path-aud">${tag}</span>
-            <h3 class="path-name">${esc(p.title)}</h3>
+    collectionCard(c) {
+      const list = c.get();
+      const covers = list.slice(0, 5).map(t => this.miniCover(t, true)).join('');
+      return `<a class="path-card ${c.id === 'top' ? 'is-topcat' : ''}" href="/c/${esc(c.id)}" style="--accent:${esc(c.accent)}">
+        <div class="path-hero-img">
+          <div class="path-montage">${covers}</div>
+          <span class="path-grad"></span>
+          <span class="path-ic-wrap"><i class="${esc(c.icon)}"></i></span>
+          <h3 class="path-name">${esc(c.title)}</h3>
+        </div>
+        <div class="path-card-body">
+          <p class="path-blurb">${esc(c.blurb)}</p>
+          <div class="path-foot">
+            <span class="path-levels"><i class="ri-film-line"></i> ${list.length} titoli</span>
+            <span class="path-prog"><span class="path-start">Apri <i class="ri-arrow-right-line"></i></span></span>
           </div>
-          <div class="path-card-body">
-            <p class="path-blurb">${esc(p.blurb || p.tagline)}</p>
-            <div class="path-foot">
-              <span class="path-levels"><i class="ri-film-line"></i> ${pr.total} titoli</span>
-              <span class="path-prog">${progHtml}</span>
-            </div>
+        </div>
+      </a>`;
+    }
+    // tile di un percorso/genere (montaggio copertine)
+    pathTile(p) {
+      const pr = this.pathProgress(p);
+      const covers = this.pathCovers(p, 5).map(t => this.miniCover(t, true)).join('');
+      const progHtml = pr.done > 0
+        ? `<span class="pp-bar"><span style="width:${pr.pct}%"></span></span>${pr.done}/${pr.total}`
+        : `<span class="path-start">Apri <i class="ri-arrow-right-line"></i></span>`;
+      return `<a class="path-card" href="/p/${esc(p.id)}" style="--accent:${esc(p.accent)}">
+        <div class="path-hero-img">
+          <div class="path-montage">${covers}</div>
+          <span class="path-grad"></span>
+          <span class="path-ic-wrap"><i class="${esc(p.icon)}"></i></span>
+          <h3 class="path-name">${esc(p.title)}</h3>
+        </div>
+        <div class="path-card-body">
+          <p class="path-blurb">${esc(p.blurb || p.tagline)}</p>
+          <div class="path-foot">
+            <span class="path-levels"><i class="ri-film-line"></i> ${pr.total} titoli</span>
+            <span class="path-prog">${progHtml}</span>
+          </div>
+        </div>
+      </a>`;
+    }
+    viewHome() {
+      const collTiles = COLLECTIONS.map(c => this.collectionCard(c)).join('');
+      const heroCovers = [...TITLES].filter(t => t.top && t.coverImage).sort(rankSort).slice(0, 8)
+        .map(t => `<span class="hh-cv" style="--cc:${esc(t.coverColor || '#1c1812')}"><img src="${esc(thumb(t.coverImage))}" alt="" loading="eager" onload="this.classList.add('ld')" onerror="this.classList.add('ld')"></span>`).join('');
+      const montage = titles => titles.filter(t => t && t.coverImage).slice(0, 7)
+        .map(t => `<span class="ft-cv" style="--cc:${esc(t.coverColor || '#1c1812')}"><img src="${esc(thumbS(t.coverImage))}" alt="" loading="lazy" onload="this.classList.add('ld')" onerror="this.classList.add('ld')"></span>`).join('');
+      const feat = (href, ic, title, sub, cta, accent, covers) => `
+        <a class="feat-card" href="${href}" style="--accent:${esc(accent)}">
+          <div class="feat-bg"><div class="feat-montage">${covers}</div><span class="feat-veil"></span></div>
+          <span class="feat-ic"><i class="${ic}"></i></span>
+          <div class="feat-body">
+            <h3 class="feat-title">${title}</h3>
+            <p class="feat-sub">${sub}</p>
+            <span class="feat-go">${cta} <i class="ri-arrow-right-line"></i></span>
           </div>
         </a>`;
-      }).join('');
-
-      const byScore = [...TITLES].sort((a, b) => (b.score10 || 0) - (a.score10 || 0));
-
-      // percorso in evidenza
-      const featured = PATHS.find(p => p.id === 'da-zero-a-otaku') || PATHS[0];
-      const fart = this.pathCovers(featured, 6).map(t => this.miniCover(t, true)).join('');
-
-      // da dove vuoi partire
-      const doors = [
-        ['#/p/da-zero-a-otaku', 'ri-seedling-line', 'Parto da zero', 'Mai visto un anime: guidami dai primi titoli.'],
-        ['#/p/seinen-e-maturo', 'ri-goblet-2-line', 'Voglio roba adulta', 'Storie mature, complesse, senza compromessi.'],
-        ['#/tempo/sera', 'ri-time-line', 'Ho poco tempo', 'Episodi brevi, film, serie compatte.'],
-      ].map(([href, ic, t, s]) => `<a class="door" href="${href}"><i class="${ic}"></i><div><b>${t}</b><span>${s}</span></div></a>`).join('');
-
-      // i tuoi percorsi (in corso)
-      const inProgress = PATHS.map(p => ({ p, pr: this.pathProgress(p) }))
-        .filter(x => x.pr.done > 0 && x.pr.done < x.pr.total)
-        .sort((a, b) => b.pr.pct - a.pr.pct).slice(0, 2);
-      const yourPaths = inProgress.length ? `
-        <section class="home-sec">
-          <h2 class="home-h">I tuoi percorsi</h2>
-          ${inProgress.map(({ p, pr }) => { const nx = this.nextInPath(p); return `
-          <a class="cont-card" href="#/p/${esc(p.id)}" style="--accent:${esc(p.accent)}">
-            <span class="cont-ring" style="background:conic-gradient(var(--accent) ${pr.pct * 3.6}deg, var(--line-2) 0)"><b>${pr.pct}%</b></span>
-            <div class="cont-info">
-              <b class="cont-name">${esc(p.title)}</b>
-              <span class="cont-sub">${pr.done} / ${pr.total} opere${nx ? ` · prossima: <em>${esc(nx.title)}</em>` : ''}</span>
-              <span class="cont-bar"><span style="width:${pr.pct}%"></span></span>
-            </div>
-            <span class="cont-btn">Riprendi</span>
-          </a>`; }).join('')}
-        </section>` : '';
-
-      // colonna destra: il verdetto + da non perdere
-      const vlabel = s => s >= 8.7 ? ['Capolavoro', 'cap'] : s >= 8.3 ? ['Ottimo', 'ott'] : ['Notevole', 'not'];
-      const firstSentence = t => { let h = (t.hook || '').split('. ')[0] || ''; if (h.length > 92) h = h.slice(0, 90) + '…'; return esc(h); };
-      const verdictHtml = byScore.slice(0, 4).map(t => { const [v, c] = vlabel(t.score10 || 0); return `
-        <a class="rail-item" href="#/t/${esc(t.id)}">
-          <img src="${esc(thumbS(cover(t)))}" alt="" loading="lazy" onload="this.classList.add('ld')">
-          <div class="rail-item-txt"><b>${esc(t.title)}</b><span class="verdict v-${c}">${v}</span><span class="rail-note">${firstSentence(t)}</span></div>
-        </a>`; }).join('');
-      const missHtml = byScore.slice(4, 11).map(t => `
-        <a class="rail-mini" href="#/t/${esc(t.id)}">
-          <img src="${esc(thumbS(cover(t)))}" alt="" loading="lazy" onload="this.classList.add('ld')">
-          <div><b>${esc(t.title)}</b><span>${(t.genres || []).slice(0, 2).map(g => esc(itGenre(g))).join(', ')}</span></div>
-        </a>`).join('');
-
+      const genreSample = GENRE_PATHS.map(p => pathTitles(p)[0]).filter(Boolean);
+      const percorsoSample = PERCORSI_PATHS.map(p => pathTitles(p)[0]).filter(Boolean);
+      const esploraSample = [...TITLES].filter(t => !t.top).sort(rankSort).slice(0, 7);
       return `
-      <div class="home-grid">
-        <div class="home-main">
-          <a class="featured" href="#/p/${esc(featured.id)}" style="--accent:${esc(featured.accent)}">
-            <div class="featured-art">${fart}<span class="featured-veil"></span></div>
-            <div class="featured-body">
-              <span class="featured-kicker">Percorso in evidenza</span>
-              <h1 class="featured-title">${esc(featured.title)}</h1>
-              <p class="featured-blurb">${esc(featured.blurb || '')}</p>
-              <span class="featured-btn">Inizia il percorso <i class="ri-arrow-right-line"></i></span>
+      <div class="wrap home2">
+        <section class="home-hero">
+          <div class="home-hero-bg">${heroCovers}<span class="home-hero-veil"></span></div>
+          <div class="home-hero-in">
+            <span class="hh-kicker"><i class="ri-sparkling-2-fill"></i> La guida agli anime</span>
+            <h1 class="hh-title">I migliori anime di ogni genere, scelti e spiegati.</h1>
+            <p class="hh-sub">Perché guardarli, da dove iniziare, quanto durano e dove vederli. Niente liste a caso.</p>
+            <div class="hh-cta">
+              <button class="hh-btn primary" id="heroSearch"><i class="ri-search-line"></i> Cerca un anime</button>
+              <a class="hh-btn ghost" href="/generi"><i class="ri-shapes-line"></i> Sfoglia i generi</a>
             </div>
-          </a>
+          </div>
+        </section>
 
-          <section class="home-sec">
-            <h2 class="home-h">Da dove vuoi partire?</h2>
-            <div class="doors">${doors}</div>
-          </section>
+        <section class="home-sec">
+          <div class="home-h-row"><h2 class="home-h">Da dove vuoi partire</h2></div>
+          <div class="feat-grid">
+            ${feat('/generi', 'ri-shapes-line', 'Generi', `${GENRE_PATHS.length} categorie: azione, mindfuck, horror, sci-fi, isekai…`, 'Vedi i generi', '#d8472b', montage(genreSample))}
+            ${feat('/percorsi', 'ri-route-line', 'Percorsi', `${PERCORSI_PATHS.length} viaggi tematici: da zero, capolavori, antieroi…`, 'Vedi i percorsi', '#c9a227', montage(percorsoSample))}
+            ${feat('/esplora', 'ri-compass-3-line', 'Esplora tutto', `Tutti i ${TITLES.length} titoli, dal migliore e filtrabili`, 'Apri il catalogo', '#2f8f9e', montage(esploraSample))}
+          </div>
+        </section>
 
-          ${yourPaths}
-
-          <section class="home-sec">
-            <div class="home-h-row"><h2 class="home-h">Scegli un percorso</h2><span class="home-count">${PATHS.length} percorsi</span></div>
-            <div class="paths-grid">${cards}</div>
-          </section>
-        </div>
-
-        <aside class="home-rail">
-          <section class="rail-sec">
-            <h3 class="rail-h"><i class="ri-medal-line"></i> Il verdetto</h3>
-            ${verdictHtml}
-          </section>
-          <section class="rail-sec">
-            <h3 class="rail-h"><i class="ri-star-line"></i> Da non perdere</h3>
-            <div class="rail-minis">${missHtml}</div>
-          </section>
-        </aside>
+        <section class="home-sec">
+          <div class="home-h-row"><h2 class="home-h">In evidenza</h2></div>
+          <div class="paths-grid">${collTiles}</div>
+        </section>
       </div>`;
+    }
+    // ── VISTA: GENERI (griglia categorie) ────────────────────────────────────────
+    viewGeneri() {
+      return `<section class="wrap sec-page">
+        <div class="sec-page-head"><h1>Generi</h1><p>${GENRE_PATHS.length} categorie, ognuna una lista ordinata dal migliore.</p></div>
+        <div class="paths-grid">${GENRE_PATHS.map(p => this.pathTile(p)).join('')}</div>
+      </section>`;
+    }
+    // ── VISTA: PERCORSI (griglia percorsi tematici) ──────────────────────────────
+    viewPercorsi() {
+      return `<section class="wrap sec-page">
+        <div class="sec-page-head"><h1>Percorsi</h1><p>Viaggi tematici curati: dove iniziare, i capolavori, gli antieroi e altro.</p></div>
+        <div class="paths-grid">${PERCORSI_PATHS.map(p => this.pathTile(p)).join('')}</div>
+      </section>`;
+    }
+    // ── PAGINE STATICHE (doc) ────────────────────────────────────────────────────
+    docPage(title, sub, html) {
+      return `<section class="wrap doc">
+        <a class="back" href="/"><i class="ri-arrow-left-line"></i> Home</a>
+        <h1 class="doc-h1">${esc(title)}</h1>
+        ${sub ? `<p class="doc-sub">${esc(sub)}</p>` : ''}
+        <div class="doc-body">${html}</div>
+      </section>`;
+    }
+    viewInfo() {
+      return this.docPage('Chi sono', 'La persona dietro GUARDALO.', `
+        <p>GUARDALO è una <b>guida agli anime</b>, non un catalogo: ogni titolo è scelto e spiegato per dirti <i>perché</i> guardarlo, da dove iniziare, quanto ti impegna e dove vederlo. Niente liste a caso, niente spoiler.</p>
+        <p>L'ho creata io, <b>Francesco Spidah</b>: selezione, testi e percorsi sono curatela personale. L'obiettivo è far trovare a chiunque l'anime giusto senza perdere ore tra mille schede uguali.</p>
+        <h2>I dati</h2>
+        <p>Informazioni e copertine provengono da <a href="https://anilist.co" target="_blank" rel="noopener">AniList</a> (usate secondo le loro condizioni). I voti uniscono il dato AniList alla mia selezione editoriale. I titoli e i marchi appartengono ai rispettivi proprietari.</p>
+        <h2>Contatti</h2>
+        <p>Per segnalazioni, errori o collaborazioni: <a href="mailto:magistaf@gmail.com">magistaf@gmail.com</a>.</p>
+        <p class="doc-sign">— Francesco Spidah</p>`);
+    }
+    viewPrivacy() {
+      return this.docPage('Privacy Policy', 'Ultimo aggiornamento: giugno 2026. Modello da personalizzare.', `
+        <p><i>Questo è un testo base: adattalo ai servizi che attiverai davvero (analytics, pubblicità) e ai tuoi dati reali prima del lancio.</i></p>
+        <h2>Titolare</h2>
+        <p>Il titolare del trattamento è <b>Francesco Spidah</b> (contatto: <a href="mailto:magistaf@gmail.com">magistaf@gmail.com</a>).</p>
+        <h2>Dati raccolti</h2>
+        <p><b>Navigazione anonima:</b> nessun account richiesto. Le tue preferenze (titoli visti/da vedere, tema) sono salvate <b>solo nel tuo browser</b> (localStorage) e non vengono inviate a noi.</p>
+        <p><b>Account opzionale (Google):</b> se accedi per sincronizzare i progressi, usiamo Firebase Authentication e Firestore (Google) per salvare la tua lista. Vengono trattati id utente ed email.</p>
+        <p><b>Pubblicità e statistiche:</b> se attive, fornitori terzi (es. Google AdSense) possono usare cookie per mostrare annunci pertinenti. Vedi la <a href="/cookie">Cookie Policy</a>.</p>
+        <h2>I tuoi diritti (GDPR)</h2>
+        <p>Puoi chiedere accesso, rettifica o cancellazione dei tuoi dati scrivendo al contatto sopra. Puoi cancellare i dati locali svuotando i dati del sito dal browser.</p>
+        <h2>Terze parti</h2>
+        <p>AniList (dati anime), Google Firebase (login/sync opzionale), Google AdSense (pubblicità, se attiva). Ognuno tratta i dati secondo la propria informativa.</p>`);
+    }
+    viewCookie() {
+      return this.docPage('Cookie Policy', 'Ultimo aggiornamento: giugno 2026. Modello da personalizzare.', `
+        <p><i>Adatta questo testo ai servizi realmente attivi al lancio.</i></p>
+        <h2>Cosa usiamo</h2>
+        <p><b>Tecnici / necessari:</b> il sito salva localmente (localStorage) le tue preferenze: titoli visti/da vedere, tema chiaro/scuro, consenso ai cookie. Non servono per profilarti e non si possono disattivare.</p>
+        <p><b>Funzionali (opzionali):</b> se accedi con Google, Firebase usa cookie/token per tenerti autenticato.</p>
+        <p><b>Pubblicità (opzionali):</b> se attivi Google AdSense, vengono usati cookie di terze parti per annunci e misurazione. Sono soggetti al tuo consenso tramite il banner.</p>
+        <h2>Gestire il consenso</h2>
+        <p>Puoi accettare o rifiutare i cookie non essenziali dal banner alla prima visita. Puoi cambiare idea cancellando i dati del sito dal browser (il banner ricomparirà).</p>`);
     }
 
     // ── VISTA: PERCORSO ──────────────────────────────────────────────────────────
@@ -434,6 +675,67 @@
       const p = PATHS.find(x => x.id === id);
       if (!p) return this.notFound();
       const pr = this.pathProgress(p);
+      const banner = this.pathCovers(p, 8).map(t =>
+        `<span class="phb" style="--cc:${esc(t.coverColor || '#222')}"><img src="${esc(thumbS(t.coverImage))}" alt="" loading="lazy" onload="this.classList.add('ld')" onerror="this.classList.add('ld')"></span>`).join('');
+      const hero = `
+      <section class="path-hero" style="--accent:${esc(p.accent)}">
+        <div class="path-hero-bg">${banner}<span class="path-hero-veil"></span></div>
+        <div class="wrap path-hero-content">
+          <a class="back" href="/"><i class="ri-arrow-left-line"></i> Home</a>
+          <div class="path-hero-in">
+            <span class="path-hero-ic-wrap"><i class="${esc(p.icon)}"></i></span>
+            <div class="path-hero-txt">
+              <h1 class="path-hero-name">${esc(p.title)}</h1>
+              <p class="path-hero-blurb">${esc(p.blurb || p.tagline)}</p>
+              <div class="path-hero-meta">
+                <span class="pp-bar lg"><span style="width:${pr.pct}%"></span></span>
+                <span>${pr.done} di ${pr.total} visti · dal migliore</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>`;
+
+      // generi e percorsi tematici (non a livelli): scheda + "Dalla tua lista" + "Consigliati"
+      if (!META_IDS.includes(id)) {
+        const isGenre = GENRE_IDS.includes(id);
+        // membri = titoli curati nel percorso + (per i generi) titoli della lista che combaciano col genere
+        const memberMap = new Map(pathTitles(p).map(t => [t.id, t]));
+        if (isGenre) TITLES.forEach(t => { if (t.inList && matchesGenreCat(t, id)) memberMap.set(t.id, t); });
+        const members = [...memberMap.values()];
+        const fromList = members.filter(t => t.inList).sort(rankSort);
+        const consigliati = members.filter(t => !t.inList).sort(rankSort);
+        const scheda = `
+        <section class="wrap cat-intro-wrap">
+          <div class="cat-intro" style="--accent:${esc(p.accent)}">
+            <span class="cat-intro-ic"><i class="${esc(p.icon)}"></i></span>
+            <div class="cat-intro-txt">
+              <p class="cat-about">${esc(p.about || p.blurb || p.tagline || '')}</p>
+              ${p.curiosita ? `<p class="cat-curio"><b><i class="ri-lightbulb-flash-line"></i> Lo sapevi?</b> ${esc(p.curiosita)}</p>` : ''}
+            </div>
+          </div>
+        </section>`;
+        const filterBar = `
+        <section class="wrap">
+          <div class="cat-filter" id="catFilter">
+            <span class="cf-lbl">Quanto tempo hai?</span>
+            <button class="cf-chip on" data-band="all">Tutti</button>
+            <button class="cf-chip" data-band="sera">Una sera</button>
+            <button class="cf-chip" data-band="medio">Qualche settimana</button>
+            <button class="cf-chip" data-band="maratona">Maratona</button>
+          </div>
+        </section>`;
+        const sec = (title, ic, list) => list.length ? `
+          <section class="wrap">
+            <div class="sec-head sub"><h2><i class="${ic}"></i> ${title}</h2><span class="sec-count">${list.length}</span></div>
+            <div class="grid">${list.map(t => this.card(t)).join('')}</div>
+          </section>` : '';
+        const body = sec('Imperdibili', 'ri-vip-crown-line', fromList)
+          + sec('Consigliati', 'ri-thumb-up-line', consigliati);
+        return hero + scheda + filterBar + body;
+      }
+
+      // percorsi "meta" (da-zero, canone, chicche, ecc.): restano a livelli per ora
       const levels = p.levels.map((lv, i) => {
         const ids = lv.titles || [];
         const done = ids.filter(x => this.isWatched(x)).length;
@@ -453,30 +755,33 @@
           </div>
         </article>`;
       }).join('');
+      return hero + `<section class="wrap levels" style="--accent:${esc(p.accent)}">${levels}</section>`;
+    }
 
-      const aud = p.audience === 'principiante' ? 'Per iniziare' : p.audience === 'esperto' ? 'Per esperti' : 'Per tutti';
-      const banner = this.pathCovers(p, 8).map(t =>
+    // ── VISTA: COLLEZIONE (TOP, Una sera, Appena usciti) ─────────────────────────
+    viewCollection(id) {
+      const c = COLL_BY_ID.get(id);
+      if (!c) return this.notFound();
+      const list = c.get();
+      const banner = list.slice(0, 8).map(t =>
         `<span class="phb" style="--cc:${esc(t.coverColor || '#222')}"><img src="${esc(thumbS(t.coverImage))}" alt="" loading="lazy" onload="this.classList.add('ld')" onerror="this.classList.add('ld')"></span>`).join('');
+      const grid = list.map(t => this.card(t)).join('');
       return `
-      <section class="path-hero" style="--accent:${esc(p.accent)}">
+      <section class="path-hero" style="--accent:${esc(c.accent)}">
         <div class="path-hero-bg">${banner}<span class="path-hero-veil"></span></div>
         <div class="wrap path-hero-content">
-          <a class="back" href="#/"><i class="ri-arrow-left-line"></i> Tutti i percorsi</a>
+          <a class="back" href="/"><i class="ri-arrow-left-line"></i> Home</a>
           <div class="path-hero-in">
-            <span class="path-hero-ic-wrap"><i class="${esc(p.icon)}"></i></span>
+            <span class="path-hero-ic-wrap"><i class="${esc(c.icon)}"></i></span>
             <div class="path-hero-txt">
-              <span class="path-hero-aud">${aud}</span>
-              <h1 class="path-hero-name">${esc(p.title)}</h1>
-              <p class="path-hero-blurb">${esc(p.blurb || p.tagline)}</p>
-              <div class="path-hero-meta">
-                <span class="pp-bar lg"><span style="width:${pr.pct}%"></span></span>
-                <span>${pr.done} di ${pr.total} visti</span>
-              </div>
+              <h1 class="path-hero-name">${esc(c.title)}</h1>
+              <p class="path-hero-blurb">${esc(c.blurb)}</p>
+              <div class="path-hero-meta"><span>${list.length} titoli · dal migliore</span></div>
             </div>
           </div>
         </div>
       </section>
-      <section class="wrap levels" style="--accent:${esc(p.accent)}">${levels}</section>`;
+      <section class="wrap"><div class="grid">${grid}</div></section>`;
     }
 
     // ── VISTA: TITOLO ────────────────────────────────────────────────────────────
@@ -504,12 +809,17 @@
         </div>` : '';
 
       const streaming = (t.streaming || []);
+      const jwUrl = `https://www.justwatch.com/it/cerca?q=${encodeURIComponent(t.title)}`;
+      // Affiliazione: sostituisci AMAZON_TAG con il tuo id Amazon Associates al lancio.
+      const azUrl = `https://www.amazon.it/s?k=${encodeURIComponent(t.title + ' anime')}&tag=AMAZON_TAG`;
       const streamHtml = `
         <div class="t-sec">
           <h3 class="t-sec-h"><i class="ri-play-circle-line"></i> Dove vederlo <span class="legal-pill">solo legale</span></h3>
           ${streaming.length
-            ? `<div class="streams">${streaming.map(s => `<a class="stream" href="${esc(s.url)}" target="_blank" rel="noopener nofollow"><i class="ri-external-link-line"></i> ${esc(s.name)}</a>`).join('')}</div>`
-            : `<p class="muted-line">Nessuna piattaforma legale segnalata da AniList. <a href="https://www.justwatch.com/it/cerca?q=${encodeURIComponent(t.title)}" target="_blank" rel="noopener nofollow">Cerca su JustWatch →</a></p>`}
+            ? `<div class="streams">${streaming.map(s => `<a class="stream" href="${esc(s.url)}" target="_blank" rel="noopener nofollow"><i class="ri-external-link-line"></i> ${esc(s.name)}</a>`).join('')}</div>
+               <p class="muted-line">Le piattaforme possono variare per regione. <a href="${esc(jwUrl)}" target="_blank" rel="noopener nofollow">Verifica la disponibilità in Italia (JustWatch) →</a></p>`
+            : `<p class="muted-line">Nessuna piattaforma segnalata da AniList per questa regione. <a href="${esc(jwUrl)}" target="_blank" rel="noopener nofollow">Cerca dove vederlo in Italia (JustWatch) →</a></p>`}
+          <p class="muted-line shop-line"><i class="ri-shopping-bag-line"></i> Manga, Blu-ray e gadget: <a href="${esc(azUrl)}" target="_blank" rel="noopener sponsored nofollow">cerca «${esc(t.title)}» su Amazon →</a></p>
         </div>`;
 
       const recs = this.recsSections(t);
@@ -590,49 +900,27 @@
         </div>` : '').join('');
     }
 
-    // ── VISTA: ESPLORA (editoriale, a scaffali) ─────────────────────────────────
+    // ── VISTA: ESPLORA (pulita: tempo + generi + tutto dal migliore) ─────────────
     viewEsplora() {
-      const byScore = [...TITLES].sort((a, b) => (b.score10 || 0) - (a.score10 || 0));
-      const tonight = byScore.filter(t => ['cortissimo', 'corto'].includes(t.lengthBand) && t.typeLabel !== 'Film').slice(0, 16);
-      const films = byScore.filter(t => t.typeLabel === 'Film').slice(0, 16);
-      const masterpieces = byScore.filter(t => (t.score10 || 0) >= 8.4).slice(0, 16);
-      const marathon = byScore.filter(t => ['lungo', 'lunghissimo'].includes(t.lengthBand)).slice(0, 16);
-      const hidden = byScore.filter(t => (t.score10 || 0) >= 7.6 && (t.popularity || 0) < 100000).slice(0, 16);
-      const fresh = byScore.filter(t => (t.year || 0) >= 2022).slice(0, 16);
-      const later = Object.keys(this.toWatch).map(id => BY_ID.get(id)).filter(Boolean);
-
-      const shelf = (title, sub, ic, list) => list.length ? `
-        <section class="shelf">
-          <div class="shelf-head"><h2><i class="${ic}"></i> ${title}</h2>${sub ? `<p>${sub}</p>` : ''}</div>
-          <div class="row-scroll">${list.map(t => this.card(t)).join('')}</div>
-        </section>` : '';
-
-      const moodShelves = MOOD_SHELVES.map(m => {
-        const list = byScore.filter(t => (t.genres || []).includes(m.key)).slice(0, 16);
-        return shelf(m.label, '', m.icon, list);
-      }).join('');
-
+      const all = [...TITLES].sort(rankSort);
+      const genreChips = GENRE_PATHS.map(p =>
+        `<a class="genre-chip" href="/p/${esc(p.id)}" style="--accent:${esc(p.accent)}"><i class="${esc(p.icon)}"></i>${esc(p.title)}</a>`).join('');
       return `
       <section class="wrap esplora-head">
         <h1>Esplora</h1>
-        <p>Niente griglie piatte coi filtri. Scaffali per umore, tempo e voglia del momento. <button class="link-btn" id="esploraSearch">o cerca un titolo →</button></p>
+        <p>Tutti i titoli, dal migliore. Salta a un genere o scegli quanto tempo hai. <button class="link-btn" id="esploraSearch">o cerca un titolo →</button></p>
         <div class="time-chips">
           <span class="time-chips-lbl">Quanto tempo hai?</span>
-          <a class="time-chip" href="#/tempo/sera">Una sera</a>
-          <a class="time-chip" href="#/tempo/weekend">Un weekend</a>
-          <a class="time-chip" href="#/tempo/maratona">Maratona</a>
+          <a class="time-chip" href="/tempo/sera">Una sera</a>
+          <a class="time-chip" href="/tempo/weekend">Un weekend</a>
+          <a class="time-chip" href="/tempo/maratona">Maratona</a>
         </div>
+        <div class="genre-chips">${genreChips}</div>
       </section>
-      <div class="wrap">
-        ${later.length >= 3 ? shelf('La tua lista', 'Quello che hai segnato da vedere', 'ri-bookmark-line', later.slice(0, 16)) : ''}
-        ${shelf('Capolavori assoluti', 'I voti più alti, quelli che non si discutono', 'ri-trophy-line', masterpieces)}
-        ${shelf('Stasera senza impegni', 'Corti che valgono una serata e bona lì', 'ri-moon-clear-line', tonight)}
-        ${shelf('Film da una sera', 'Una storia intera in un colpo solo', 'ri-film-line', films)}
-        ${shelf('Appena usciti', 'Il meglio delle ultime stagioni', 'ri-fire-line', fresh)}
-        ${shelf('Se hai mesi da buttare', 'Saghe in cui perderti per un pezzo', 'ri-calendar-todo-line', marathon)}
-        ${shelf('Deep cut', 'Gemme che la massa si è persa', 'ri-treasure-map-line', hidden)}
-        ${moodShelves}
-      </div>`;
+      <section class="wrap">
+        <div class="sec-head sub"><h2><i class="ri-trophy-line"></i> Tutti, dal migliore</h2><span class="sec-count">${all.length} titoli</span></div>
+        <div class="grid">${all.map(t => this.card(t)).join('')}</div>
+      </section>`;
     }
 
     // ── VISTA: LA MIA LISTA ──────────────────────────────────────────────────────
@@ -643,7 +931,7 @@
       const hours = watched.reduce((s, t) => s + (t.coreMinutes || 0), 0) / 60;
 
       const grid = list => `<div class="grid">${list.map(t => this.card(t)).join('')}</div>`;
-      const empty = (ic, msg) => `<div class="empty"><i class="${ic}"></i><p>${msg}</p><a class="btn-ghost" href="#/">Vai ai percorsi</a></div>`;
+      const empty = (ic, msg) => `<div class="empty"><i class="${ic}"></i><p>${msg}</p><a class="btn-ghost" href="/">Vai ai percorsi</a></div>`;
 
       return `
       <section class="wrap">
@@ -672,10 +960,10 @@
       if (!m) return this.notFound();
       const list = TITLES.filter(t => m.bands.includes(t.lengthBand)).sort((a, b) => (b.score10 || 0) - (a.score10 || 0));
       const chips = Object.entries(map).map(([k, v]) =>
-        `<a class="time-chip ${k === band ? 'on' : ''}" href="#/tempo/${k}">${esc(v.label)}</a>`).join('');
+        `<a class="time-chip ${k === band ? 'on' : ''}" href="/tempo/${k}">${esc(v.label)}</a>`).join('');
       return `
       <section class="wrap esplora-head">
-        <a class="back" href="#/esplora"><i class="ri-arrow-left-line"></i> Esplora</a>
+        <a class="back" href="/esplora"><i class="ri-arrow-left-line"></i> Esplora</a>
         <h1>Quanto tempo hai?</h1>
         <div class="time-chips">${chips}</div>
         <p>${esc(m.sub)} · ${list.length} titoli, dal più votato.</p>
@@ -684,13 +972,13 @@
     }
 
     notFound() {
-      return `<section class="wrap empty big"><i class="ri-compass-3-line"></i><h2>Non trovato</h2><p>Questa pagina non esiste.</p><a class="btn-ghost" href="#/">Torna ai percorsi</a></section>`;
+      return `<section class="wrap empty big"><i class="ri-compass-3-line"></i><h2>Non trovato</h2><p>Questa pagina non esiste.</p><a class="btn-ghost" href="/">Torna ai percorsi</a></section>`;
     }
 
     // ── RICERCA ──────────────────────────────────────────────────────────────────
     surprise() {
       const t = TITLES[Math.floor(Math.random() * TITLES.length)];
-      if (t) { this.closeSearch(); location.hash = '#/t/' + t.id; this.toast('🎲 ' + t.title, 'ok'); }
+      if (t) { this.closeSearch(); this.go('/t/' + t.id); this.toast('🎲 ' + t.title, 'ok'); }
     }
     searchKey(e) {
       const items = [...document.querySelectorAll('#searchResults .sr-item')];
@@ -719,9 +1007,9 @@
         (t.director || '').toLowerCase().includes(q)
       ).slice(0, 24);
       box.innerHTML = hits.length
-        ? hits.map(t => `<a class="sr-item" href="#/t/${esc(t.id)}" data-srclose>
+        ? hits.map(t => `<a class="sr-item" href="/t/${esc(t.id)}" data-srclose>
             <img src="${esc(thumbS(cover(t)))}" alt="" loading="lazy">
-            <div><b>${esc(t.title)}</b><span>${esc(t.year || '')} · ${esc(t.typeLabel)} · <span class="sr-len ls-${t.lengthBand}">${esc(t.lengthLabel)}</span></span></div>
+            <div><b>${esc(t.title)}</b><span>${esc(t.year || '')} · ${esc(t.typeLabel)} · <span class="sr-len ls-${t.lengthBand}">${esc(lenLabel(t))}</span></span></div>
           </a>`).join('')
         : `<p class="sr-hint">Nessun titolo per “${esc(q)}”.</p>`;
       box.querySelectorAll('[data-srclose]').forEach(a => a.addEventListener('click', () => this.closeSearch()));

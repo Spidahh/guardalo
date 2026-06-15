@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <base href="/">
     <title>GUARDALO — La guida agli anime</title>
     <meta name="description" content="I migliori anime di ogni genere, scelti e spiegati senza fronzoli: perché guardarli, da dove iniziare, quanto ti impegnano e dove vederli. Niente liste a caso.">
 
@@ -18,14 +19,14 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="GUARDALO — La guida agli anime">
     <meta property="og:description" content="I migliori anime di ogni genere, scelti e spiegati senza fronzoli: perché guardarli, da dove iniziare, dove vederli.">
-    <meta property="og:image" content="icon.svg">
+    <meta property="og:image" content="/icon.svg">
     <meta name="twitter:card" content="summary">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=10.20">
+    <link rel="stylesheet" href="css/style.css?v=10.34">
 
     <script>
         try { document.documentElement.dataset.theme = localStorage.getItem('guardalo_theme') || 'dark'; }
@@ -38,15 +39,17 @@
 
         <!-- SIDEBAR -->
         <aside class="sidebar" id="sidebar">
-            <a class="side-brand" href="#/" aria-label="GUARDALO — home">
+            <a class="side-brand" href="/" aria-label="GUARDALO — home">
                 <span class="brand-mark">G</span>
                 <span class="side-brand-txt"><b>GUARDALO</b><small>guida con anima</small></span>
             </a>
 
             <nav class="side-nav">
-                <a href="#/" data-route="home"><i class="ri-route-line"></i><span>Percorsi</span></a>
-                <a href="#/esplora" data-route="esplora"><i class="ri-compass-3-line"></i><span>Esplora</span></a>
-                <a href="#/lista" data-route="lista"><i class="ri-bookmark-line"></i><span>La mia lista</span></a>
+                <a href="/" data-route="home"><i class="ri-home-5-line"></i><span>Home</span></a>
+                <a href="/generi" data-route="generi"><i class="ri-shapes-line"></i><span>Generi</span></a>
+                <a href="/percorsi" data-route="percorsi"><i class="ri-route-line"></i><span>Percorsi</span></a>
+                <a href="/esplora" data-route="esplora"><i class="ri-compass-3-line"></i><span>Esplora</span></a>
+                <a href="/lista" data-route="lista"><i class="ri-bookmark-line"></i><span>La mia lista</span></a>
             </nav>
 
             <div class="side-foot">
@@ -71,8 +74,19 @@
             <main id="app" class="app"></main>
 
             <footer class="foot">
-                <p class="foot-quote">«La guida giusta non ti dice cosa amare, ma perché vale la pena guardare.»</p>
-                <p class="foot-attr"><span id="footAttr"></span> · Una guida, non un catalogo</p>
+                <div class="foot-in">
+                    <div class="foot-brand">
+                        <span class="foot-logo">GUARDALO</span>
+                        <span class="foot-tag">Anime scelti e spiegati, senza perdere tempo.</span>
+                    </div>
+                    <nav class="foot-links">
+                        <a href="/info">Chi sono</a>
+                        <a href="/privacy">Privacy</a>
+                        <a href="/cookie">Cookie</a>
+                        <a href="https://anilist.co" target="_blank" rel="noopener">AniList</a>
+                    </nav>
+                </div>
+                <p class="foot-legal">© 2026 <b>Francesco Spidah</b> — testi e selezione editoriale. <span id="footAttr"></span>. Tutti i titoli e i marchi appartengono ai rispettivi proprietari.</p>
             </footer>
         </div>
     </div>
@@ -104,16 +118,25 @@
 
     <div id="toasts" class="toasts"></div>
 
+    <!-- BANNER COOKIE (GDPR) -->
+    <div id="cookieBar" class="cookie-bar" hidden>
+        <p class="cookie-txt">Usiamo cookie tecnici (necessari) e, con il tuo consenso, cookie di terze parti per pubblicità e statistiche. <a href="/cookie">Dettagli</a>.</p>
+        <div class="cookie-act">
+            <button id="cookieReject" class="cookie-btn ghost">Solo necessari</button>
+            <button id="cookieAccept" class="cookie-btn primary">Accetta tutti</button>
+        </div>
+    </div>
+
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
     <script src="js/firebase-config.js"></script>
     <script src="js/data.js"></script>
-    <script src="js/app.js?v=10.20"></script>
+    <script src="js/app.js?v=10.34"></script>
 
     <script>
         if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
+            window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(() => {}));
         }
     </script>
 </body>

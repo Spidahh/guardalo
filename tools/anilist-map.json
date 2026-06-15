@@ -42,16 +42,14 @@
     "score": 111
   },
   "hunter-x-hunter": {
-    "anilistId": 136,
+    "anilistId": 11061,
     "title": "HUNTER x HUNTER",
-    "matched": "Hunter x Hunter",
-    "score": 99
+    "manual": true
   },
   "jojo-s-bizarre-adventure": {
-    "anilistId": 666,
+    "anilistId": 14719,
     "title": "JoJo's Bizarre Adventure",
-    "matched": "JoJo's Bizarre Adventure",
-    "score": 96
+    "manual": true
   },
   "naruto": {
     "anilistId": 20,
@@ -576,12 +574,6 @@
     "title": "Sentence to be hero",
     "manual": true
   },
-  "k-on": {
-    "anilistId": 5680,
-    "title": "K-On!",
-    "matched": "K-ON!",
-    "score": 111
-  },
   "violet-evergarden": {
     "anilistId": 21827,
     "title": "Violet Evergarden",
@@ -612,17 +604,6 @@
     "matched": "MUSHI-SHI",
     "score": 111
   },
-  "natsume-yuujinchou": {
-    "anilistId": 432,
-    "title": "Natsume's Book of Friends",
-    "manual": true
-  },
-  "non-non-biyori": {
-    "anilistId": 17549,
-    "title": "Non Non Biyori",
-    "matched": "Non Non Biyori",
-    "score": 111
-  },
   "laid-back-camp": {
     "anilistId": 98444,
     "title": "Laid-Back Camp",
@@ -633,18 +614,6 @@
     "anilistId": 21519,
     "title": "Your Name.",
     "matched": "Your Name.",
-    "score": 111
-  },
-  "toradora": {
-    "anilistId": 4224,
-    "title": "Toradora!",
-    "matched": "Toradora!",
-    "score": 111
-  },
-  "clannad": {
-    "anilistId": 2167,
-    "title": "Clannad",
-    "matched": "Clannad",
     "score": 111
   },
   "clannad-after-story": {
@@ -695,12 +664,6 @@
     "matched": "Maquia: When the Promised Flower Blooms",
     "score": 111
   },
-  "honey-and-clover": {
-    "anilistId": 16,
-    "title": "Honey and Clover",
-    "matched": "Honey and Clover",
-    "score": 111
-  },
   "haikyuu": {
     "anilistId": 20464,
     "title": "Haikyuu!!",
@@ -719,28 +682,10 @@
     "matched": "Slam Dunk",
     "score": 111
   },
-  "kuroko-no-basket": {
-    "anilistId": 11771,
-    "title": "Kuroko's Basketball",
-    "matched": "Kuroko's Basketball",
-    "score": 111
-  },
   "ping-pong-the-animation": {
     "anilistId": 20607,
     "title": "Ping Pong the Animation",
     "matched": "Ping Pong the Animation",
-    "score": 111
-  },
-  "megalo-box": {
-    "anilistId": 100298,
-    "title": "Megalo Box",
-    "matched": "Megalobox",
-    "score": 111
-  },
-  "yuri-on-ice": {
-    "anilistId": 21709,
-    "title": "Yuri!!! on Ice",
-    "matched": "Yuri!!! on ICE",
     "score": 111
   },
   "blue-lock": {
@@ -759,12 +704,6 @@
     "anilistId": 918,
     "title": "Gintama",
     "matched": "Gintama",
-    "score": 111
-  },
-  "konosuba": {
-    "anilistId": 21202,
-    "title": "KonoSuba",
-    "matched": "KONOSUBA -God's blessing on this wonderful world!",
     "score": 111
   },
   "grand-blue": {
@@ -809,30 +748,6 @@
     "matched": "PSYCHO-PASS",
     "score": 111
   },
-  "gundam-iron-blooded-orphans": {
-    "anilistId": 21268,
-    "title": "Mobile Suit Gundam: Iron-Blooded Orphans",
-    "matched": "Mobile Suit GUNDAM Iron Blooded Orphans",
-    "score": 111
-  },
-  "macross-frontier": {
-    "anilistId": 3572,
-    "title": "Macross Frontier",
-    "matched": "Macross Frontier",
-    "score": 111
-  },
-  "darling-in-the-franxx": {
-    "anilistId": 99423,
-    "title": "Darling in the FranXX",
-    "matched": "DARLING in the FRANXX",
-    "score": 111
-  },
-  "eureka-seven": {
-    "anilistId": 237,
-    "title": "Eureka Seven",
-    "matched": "Eureka Seven",
-    "score": 111
-  },
   "planetes": {
     "anilistId": 329,
     "title": "Planetes",
@@ -851,18 +766,6 @@
     "matched": "Serial Experiments Lain",
     "score": 111
   },
-  "texhnolyze": {
-    "anilistId": 26,
-    "title": "Texhnolyze",
-    "matched": "Texhnolyze",
-    "score": 111
-  },
-  "ergo-proxy": {
-    "anilistId": 790,
-    "title": "Ergo Proxy",
-    "matched": "Ergo Proxy",
-    "score": 111
-  },
   "madoka-magica": {
     "anilistId": 9756,
     "title": "Puella Magi Madoka Magica",
@@ -875,64 +778,10 @@
     "matched": "Perfect Blue",
     "score": 107
   },
-  "paprika": {
-    "anilistId": 1943,
-    "title": "Paprika",
-    "matched": "Paprika",
-    "score": 111
-  },
-  "paranoia-agent": {
-    "anilistId": 323,
-    "title": "Paranoia Agent",
-    "matched": "Paranoia Agent",
-    "score": 111
-  },
   "welcome-to-the-nhk": {
     "anilistId": 1210,
     "title": "Welcome to the NHK",
     "matched": "Welcome to the N-H-K",
-    "score": 111
-  },
-  "higurashi": {
-    "anilistId": 934,
-    "title": "Higurashi When They Cry",
-    "matched": "When They Cry",
-    "score": 111
-  },
-  "tokyo-ghoul": {
-    "anilistId": 20605,
-    "title": "Tokyo Ghoul",
-    "matched": "Tokyo Ghoul",
-    "score": 111
-  },
-  "another": {
-    "anilistId": 11111,
-    "title": "Another",
-    "matched": "Another",
-    "score": 111
-  },
-  "shiki": {
-    "anilistId": 7724,
-    "title": "Shiki",
-    "matched": "Shiki",
-    "score": 111
-  },
-  "elfen-lied": {
-    "anilistId": 226,
-    "title": "Elfen Lied",
-    "matched": "Elfen Lied",
-    "score": 111
-  },
-  "junji-ito-collection": {
-    "anilistId": 99940,
-    "title": "Junji Ito Collection",
-    "matched": "Junji Ito Collection",
-    "score": 111
-  },
-  "uzumaki": {
-    "anilistId": 111314,
-    "title": "Uzumaki",
-    "matched": "Uzumaki",
     "score": 111
   },
   "yu-yu-hakusho": {
@@ -941,52 +790,10 @@
     "matched": "Yu Yu Hakusho: Ghostfiles",
     "score": 111
   },
-  "rurouni-kenshin": {
-    "anilistId": 45,
-    "title": "Rurouni Kenshin",
-    "matched": "Rurouni Kenshin",
-    "score": 111
-  },
-  "fist-of-the-north-star": {
-    "anilistId": 967,
-    "title": "Fist of the North Star",
-    "matched": "Fist of the North Star",
-    "score": 111
-  },
-  "soul-eater": {
-    "anilistId": 3588,
-    "title": "Soul Eater",
-    "matched": "Soul Eater",
-    "score": 111
-  },
   "dr-stone": {
     "anilistId": 105333,
     "title": "Dr. Stone",
     "matched": "Dr. STONE",
-    "score": 111
-  },
-  "fire-force": {
-    "anilistId": 105310,
-    "title": "Fire Force",
-    "matched": "Fire Force",
-    "score": 111
-  },
-  "blue-exorcist": {
-    "anilistId": 9919,
-    "title": "Blue Exorcist",
-    "matched": "Blue Exorcist",
-    "score": 111
-  },
-  "black-lagoon": {
-    "anilistId": 889,
-    "title": "Black Lagoon",
-    "matched": "Black Lagoon",
-    "score": 111
-  },
-  "magi": {
-    "anilistId": 14513,
-    "title": "Magi: The Labyrinth of Magic",
-    "matched": "Magi: The Labyrinth of Magic",
     "score": 111
   },
   "dororo": {
@@ -1007,12 +814,6 @@
     "matched": "That Time I Got Reincarnated as a Slime",
     "score": 111
   },
-  "goblin-slayer": {
-    "anilistId": 101165,
-    "title": "Goblin Slayer",
-    "matched": "GOBLIN SLAYER",
-    "score": 111
-  },
   "the-apothecary-diaries": {
     "anilistId": 161645,
     "title": "The Apothecary Diaries",
@@ -1025,28 +826,10 @@
     "matched": "Delicious in Dungeon",
     "score": 111
   },
-  "no-game-no-life": {
-    "anilistId": 19815,
-    "title": "No Game No Life",
-    "matched": "No Game, No Life",
-    "score": 111
-  },
-  "log-horizon": {
-    "anilistId": 17265,
-    "title": "Log Horizon",
-    "matched": "Log Horizon",
-    "score": 111
-  },
   "weathering-with-you": {
     "anilistId": 106286,
     "title": "Weathering with You",
     "matched": "Weathering With You",
-    "score": 111
-  },
-  "5-centimeters-per-second": {
-    "anilistId": 1689,
-    "title": "5 Centimeters per Second",
-    "matched": "5 Centimeters per Second",
     "score": 111
   },
   "millennium-actress": {
@@ -1065,18 +848,6 @@
     "anilistId": 12355,
     "title": "Wolf Children",
     "matched": "Wolf Children",
-    "score": 111
-  },
-  "summer-wars": {
-    "anilistId": 5681,
-    "title": "Summer Wars",
-    "matched": "Summer Wars",
-    "score": 111
-  },
-  "the-girl-who-leapt-through-time": {
-    "anilistId": 2236,
-    "title": "The Girl Who Leapt Through Time",
-    "matched": "The Girl Who Leapt Through Time",
     "score": 111
   },
   "grave-of-the-fireflies": {
@@ -1109,22 +880,220 @@
     "matched": "Redline",
     "score": 111
   },
-  "dorohedoro": {
-    "anilistId": 105228,
-    "title": "Dorohedoro",
-    "matched": "Dorohedoro",
-    "score": 111
-  },
   "banana-fish": {
     "anilistId": 100388,
     "title": "Banana Fish",
     "matched": "BANANA FISH",
     "score": 111
   },
-  "oshi-no-ko": {
-    "anilistId": 150672,
-    "title": "Oshi no Ko",
-    "matched": "Oshi No Ko",
+  "paprika": {
+    "anilistId": 1943,
+    "title": "Paprika",
+    "matched": "Paprika",
+    "score": 111
+  },
+  "summer-wars": {
+    "anilistId": 5681,
+    "title": "Summer Wars",
+    "matched": "Summer Wars",
+    "score": 111
+  },
+  "the-girl-who-leapt-through-time": {
+    "anilistId": 2236,
+    "title": "The Girl Who Leapt Through Time",
+    "matched": "The Girl Who Leapt Through Time",
+    "score": 111
+  },
+  "5-centimeters-per-second": {
+    "anilistId": 1689,
+    "title": "5 Centimeters per Second",
+    "matched": "5 Centimeters per Second",
+    "score": 111
+  },
+  "castle-in-the-sky": {
+    "anilistId": 513,
+    "title": "Castle in the Sky",
+    "matched": "Castle in the Sky",
+    "score": 111
+  },
+  "kikis-delivery-service": {
+    "anilistId": 512,
+    "title": "Kiki's Delivery Service",
+    "matched": "Kiki's Delivery Service",
+    "score": 111
+  },
+  "porco-rosso": {
+    "anilistId": 416,
+    "title": "Porco Rosso",
+    "matched": "Porco Rosso",
+    "score": 111
+  },
+  "ponyo": {
+    "anilistId": 2890,
+    "title": "Ponyo",
+    "matched": "Ponyo",
+    "score": 111
+  },
+  "the-wind-rises": {
+    "anilistId": 16662,
+    "title": "The Wind Rises",
+    "matched": "The Wind Rises",
+    "score": 111
+  },
+  "the-boy-and-the-heron": {
+    "anilistId": 109979,
+    "title": "The Boy and the Heron",
+    "matched": "The Boy and the Heron",
+    "score": 111
+  },
+  "the-tale-of-the-princess-kaguya": {
+    "anilistId": 16664,
+    "title": "The Tale of the Princess Kaguya",
+    "matched": "The Tale of The Princess Kaguya",
+    "score": 111
+  },
+  "whisper-of-the-heart": {
+    "anilistId": 585,
+    "title": "Whisper of the Heart",
+    "matched": "Whisper of the Heart",
+    "score": 111
+  },
+  "gundam-iron-blooded-orphans": {
+    "anilistId": 21268,
+    "title": "Mobile Suit Gundam: Iron-Blooded Orphans",
+    "matched": "Mobile Suit GUNDAM Iron Blooded Orphans",
+    "score": 111
+  },
+  "eureka-seven": {
+    "anilistId": 237,
+    "title": "Eureka Seven",
+    "matched": "Eureka Seven",
+    "score": 111
+  },
+  "ergo-proxy": {
+    "anilistId": 790,
+    "title": "Ergo Proxy",
+    "matched": "Ergo Proxy",
+    "score": 111
+  },
+  "vivy-fluorite-eyes-song": {
+    "anilistId": 128546,
+    "title": "Vivy: Fluorite Eye's Song",
+    "matched": "Vivy -Fluorite Eye's Song-",
+    "score": 111
+  },
+  "from-the-new-world": {
+    "anilistId": 13125,
+    "title": "From the New World",
+    "matched": "From the New World",
+    "score": 111
+  },
+  "gundam-witch-from-mercury": {
+    "anilistId": 139274,
+    "title": "Mobile Suit Gundam: The Witch from Mercury",
+    "matched": "Mobile Suit Gundam: The Witch from Mercury",
+    "score": 111
+  },
+  "toradora": {
+    "anilistId": 4224,
+    "title": "Toradora!",
+    "matched": "Toradora!",
+    "score": 111
+  },
+  "clannad": {
+    "anilistId": 2167,
+    "title": "Clannad",
+    "matched": "Clannad",
+    "score": 111
+  },
+  "honey-and-clover": {
+    "anilistId": 16,
+    "title": "Honey and Clover",
+    "matched": "Honey and Clover",
+    "score": 111
+  },
+  "konosuba": {
+    "anilistId": 21202,
+    "title": "KonoSuba",
+    "matched": "KONOSUBA -God's blessing on this wonderful world!",
+    "score": 111
+  },
+  "tokyo-ghoul": {
+    "anilistId": 20605,
+    "title": "Tokyo Ghoul",
+    "matched": "Tokyo Ghoul",
+    "score": 111
+  },
+  "another": {
+    "anilistId": 11111,
+    "title": "Another",
+    "matched": "Another",
+    "score": 111
+  },
+  "shiki": {
+    "anilistId": 7724,
+    "title": "Shiki",
+    "matched": "Shiki",
+    "score": 111
+  },
+  "higurashi": {
+    "anilistId": 934,
+    "title": "Higurashi When They Cry",
+    "matched": "When They Cry",
+    "score": 111
+  },
+  "my-dress-up-darling": {
+    "anilistId": 132405,
+    "title": "My Dress-Up Darling",
+    "matched": "My Dress-Up Darling",
+    "score": 111
+  },
+  "skip-and-loafer": {
+    "anilistId": 141911,
+    "title": "Skip and Loafer",
+    "matched": "Skip and Loafer",
+    "score": 111
+  },
+  "komi-cant-communicate": {
+    "anilistId": 133965,
+    "title": "Komi Can't Communicate",
+    "matched": "Komi Can’t Communicate",
+    "score": 111
+  },
+  "asobi-asobase": {
+    "anilistId": 101001,
+    "title": "Asobi Asobase",
+    "matched": "Asobi Asobase - workshop of fun -",
+    "score": 111
+  },
+  "dark-gathering": {
+    "anilistId": 152802,
+    "title": "Dark Gathering",
+    "matched": "Dark Gathering",
+    "score": 111
+  },
+  "paranoia-agent": {
+    "anilistId": 323,
+    "title": "Paranoia Agent",
+    "matched": "Paranoia Agent",
+    "score": 111
+  },
+  "terror-in-resonance": {
+    "anilistId": 20661,
+    "title": "Terror in Resonance",
+    "matched": "Terror in Resonance",
+    "score": 111
+  },
+  "the-tatami-galaxy": {
+    "anilistId": 7785,
+    "title": "The Tatami Galaxy",
+    "matched": "The Tatami Galaxy",
+    "score": 111
+  },
+  "id-invaded": {
+    "anilistId": 110350,
+    "title": "ID:INVADED",
+    "matched": "ID: INVADED",
     "score": 111
   }
 }

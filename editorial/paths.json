@@ -9,7 +9,7 @@
     "levels": [
       {
         "title": "I primi anime",
-        "why": "Titoli moderni e facili da amare: il modo migliore per capire perché gli anime appassionano.",
+        "why": "Moderni e facili da amare: il modo migliore per capire perché gli anime appassionano.",
         "titles": [
           "death-note",
           "fullmetal-alchemist-brotherhood",
@@ -19,22 +19,13 @@
       },
       {
         "title": "Apri gli orizzonti",
-        "why": "Generi e toni diversi, per scoprire quanto è varia la roba: fantascienza, avventura, dramma.",
+        "why": "Toni e generi diversi, per scoprire quanto è varia la roba.",
         "titles": [
           "steins-gate",
+          "cyberpunk-edgerunners",
           "hunter-x-hunter",
-          "your-name",
-          "spy-x-family"
-        ]
-      },
-      {
-        "title": "Trova il tuo genere",
-        "why": "Un titolo forte per ciascun grande filone: serve a capire cosa ti piace prima di approfondire.",
-        "titles": [
-          "haikyuu",
-          "frieren",
           "jujutsu-kaisen",
-          "kaguya-sama-love-is-war"
+          "dan-da-dan"
         ]
       },
       {
@@ -44,17 +35,19 @@
           "cowboy-bebop",
           "neon-genesis-evangelion",
           "akira",
-          "la-citta-incantata"
+          "dragon-ball",
+          "naruto"
         ]
       },
       {
         "title": "Le opere più impegnative",
-        "why": "Anime densi e adulti: ora che hai le basi, puoi affrontarli e apprezzarli davvero.",
+        "why": "Ora che hai le basi, puoi affrontarle e apprezzarle davvero.",
         "titles": [
           "monster",
           "vinland-saga",
-          "made-in-abyss",
-          "berserk"
+          "berserk",
+          "one-piece",
+          "made-in-abyss"
         ]
       }
     ],
@@ -80,8 +73,8 @@
         ],
         "bonus": [
           "legend-of-the-galactic-heroes",
-          "fist-of-the-north-star",
-          "yu-yu-hakusho"
+          "yu-yu-hakusho",
+          "trigun"
         ]
       },
       {
@@ -132,12 +125,13 @@
           "fullmetal-alchemist-brotherhood",
           "hunter-x-hunter",
           "dragon-ball",
-          "naruto"
+          "naruto",
+          "one-piece"
         ],
         "bonus": [
           "bleach",
           "yu-yu-hakusho",
-          "rurouni-kenshin"
+          "saint-seiya"
         ]
       },
       {
@@ -147,12 +141,17 @@
           "jujutsu-kaisen",
           "demon-slayer",
           "my-hero-academia",
-          "chainsaw-man"
+          "chainsaw-man",
+          "dan-da-dan"
         ],
         "bonus": [
           "dr-stone",
-          "fire-force",
           "black-clover",
+          "kaiju-no-8",
+          "gachiakuta",
+          "akame-ga-kill",
+          "burn-the-witch",
+          "my-hero-academia-vigilantes",
           "solo-leveling"
         ]
       },
@@ -162,20 +161,23 @@
         "titles": [
           "mob-psycho-100",
           "jojo-s-bizarre-adventure",
-          "gurren-lagann",
           "kill-la-kill"
         ],
         "bonus": [
-          "soul-eater",
-          "one-punch-man"
+          "one-punch-man",
+          "devil-may-cry",
+          "bna-brand-new-animal",
+          "gurren-lagann"
         ]
       }
     ],
-    "blurb": "Combattimenti, poteri che crescono, tornei: lo shōnen d'azione."
+    "blurb": "Combattimenti, poteri che crescono, tornei: lo shōnen d'azione.",
+    "about": "Combattimenti spettacolari, poteri che crescono e protagonisti che non mollano mai. Lo shōnen d'azione è il genere-porta degli anime: quello che ha cresciuto mezzo mondo.",
+    "curiosita": "«Shōnen» significa «ragazzo»: nasce sulle riviste per ragazzi, ma oggi questi titoli li guardano tutti, a qualsiasi età."
   },
   {
     "id": "seinen-e-maturo",
-    "title": "Seinen & Roba Adulta",
+    "title": "Seinen e Roba Adulta",
     "tagline": "Niente urletti e amicizia: crimine, guerra, vendetta, ambiguità morale. Anime scritti per chi è cresciuto.",
     "audience": "esperto",
     "icon": "ri-goblet-2-line",
@@ -186,7 +188,6 @@
         "why": "Thriller adulti con personaggi ambigui e poste in gioco serie.",
         "titles": [
           "monster",
-          "black-lagoon",
           "91-days",
           "banana-fish"
         ],
@@ -210,16 +211,18 @@
         "why": "Fantasy adulto e violento, magnifico da vedere e duro da reggere.",
         "titles": [
           "berserk",
-          "dorohedoro",
           "dororo",
           "claymore"
         ],
         "bonus": [
-          "drifters"
+          "drifters",
+          "daemons-of-the-shadow-realm"
         ]
       }
     ],
-    "blurb": "Anime per adulti: temi pesanti, violenza, niente buonismo."
+    "blurb": "Anime per adulti: temi pesanti, violenza, niente buonismo.",
+    "about": "Storie adulte: crimine, guerra, vendetta, ambiguità morale. Niente buonismo, personaggi che cambiano davvero e poste in gioco serie.",
+    "curiosita": "«Seinen» è la categoria editoriale pensata per il pubblico adulto: stessa intensità dello shōnen, ma temi più pesanti e meno filtri."
   },
   {
     "id": "mindfuck",
@@ -235,7 +238,6 @@
         "titles": [
           "death-note",
           "steins-gate",
-          "code-geass",
           "erased"
         ],
         "bonus": [
@@ -247,38 +249,36 @@
         "title": "Niente è come sembra",
         "why": "Storie costruite sull'inganno e sul dubbio: ogni dettaglio conta.",
         "titles": [
-          "monster",
           "madoka-magica",
-          "psycho-pass",
           "summer-time-rendering"
         ],
         "bonus": [
           "death-parade",
-          "future-diary"
+          "future-diary",
+          "terror-in-resonance",
+          "id-invaded"
         ]
       },
       {
         "title": "Domande esistenziali",
         "why": "Fantascienza e astrazione che mettono in discussione coscienza e identità.",
         "titles": [
-          "neon-genesis-evangelion",
-          "ghost-in-the-shell",
-          "perfect-blue",
           "serial-experiments-lain"
         ],
         "bonus": [
-          "paranoia-agent",
-          "paprika",
           "pluto",
-          "texhnolyze"
+          "paranoia-agent",
+          "the-tatami-galaxy"
         ]
       }
     ],
-    "blurb": "Thriller psicologici che ti incasinano la testa."
+    "blurb": "Thriller psicologici che ti incasinano la testa.",
+    "about": "Thriller psicologici, inganni e paradossi che ti lasciano a fissare il soffitto. Storie che da premesse semplici diventano congegni perfetti.",
+    "curiosita": "Spesso partono lentissimi e «normali» apposta: è la quiete prima che tutto si ribalti. Fidati e arriva alla svolta."
   },
   {
     "id": "isekai-e-fantasy",
-    "title": "Isekai & Fantasy",
+    "title": "Isekai e Fantasy",
     "tagline": "Tizio qualunque sbatte la testa e si risveglia in un altro mondo. Genere inflazionato? Sì. Ci sono perle? Pure. Più il fantasy vero.",
     "audience": "tutti",
     "icon": "ri-door-open-line",
@@ -290,12 +290,16 @@
         "titles": [
           "mushoku-tensei",
           "re-zero-starting-life-in-another-world",
-          "konosuba",
           "overlord"
         ],
         "bonus": [
           "tensura",
-          "the-eminence-in-shadow"
+          "the-eminence-in-shadow",
+          "failure-frame-i-became-the-strongest",
+          "reincarnated-as-a-sword",
+          "handyman-saitou-in-another-world",
+          "the-world-s-finest-assassin-gets-reincarnated-in-another-world-as-an-aristocrat",
+          "release-that-witch"
         ]
       },
       {
@@ -305,10 +309,15 @@
           "frieren",
           "made-in-abyss",
           "dungeon-meshi",
-          "magi"
+          "ranking-of-kings"
         ],
         "bonus": [
           "the-apothecary-diaries",
+          "fate-franchise-completo",
+          "grimgar-of-fantasy-and-ash",
+          "wistoria-wand-and-sword",
+          "petals-of-reincarnation",
+          "sentence-to-be-hero",
           "dororo"
         ]
       },
@@ -317,23 +326,23 @@
         "why": "Fantasy moderno tra gilde, dungeon e mondi-videogioco.",
         "titles": [
           "tower-of-god",
-          "no-game-no-life",
-          "log-horizon",
           "solo-leveling"
         ],
         "bonus": [
           "sword-art-online",
-          "goblin-slayer",
           "the-rising-of-the-shield-hero",
-          "gate"
+          "gate",
+          "shangri-la-frontier"
         ]
       }
     ],
-    "blurb": "Catapultato in un altro mondo: magia e avventura."
+    "blurb": "Catapultato in un altro mondo: magia e avventura.",
+    "about": "Mondi inventati, magia e avventura: dal classico «trasportato in un altro mondo» (isekai) al fantasy costruito con cura, dove ogni episodio allarga la mappa.",
+    "curiosita": "«Isekai» vuol dire letteralmente «altro mondo». Il filone è esploso a tal punto che alcuni concorsi per autori esordienti l'hanno vietato per un periodo."
   },
   {
     "id": "sci-fi-e-mecha",
-    "title": "Sci-Fi & Mecha",
+    "title": "Sci-Fi e Mecha",
     "tagline": "Cyberpunk, robot giganti, futuri marci e domande grosse. La fantascienza animata, da quella spettacolare a quella che ti fa pensare.",
     "audience": "tutti",
     "icon": "ri-robot-line",
@@ -345,12 +354,12 @@
         "titles": [
           "ghost-in-the-shell",
           "cyberpunk-edgerunners",
-          "akira",
           "psycho-pass"
         ],
         "bonus": [
+          "lazarus",
           "ergo-proxy",
-          "lazarus"
+          "vivy-fluorite-eyes-song"
         ]
       },
       {
@@ -359,35 +368,35 @@
         "titles": [
           "neon-genesis-evangelion",
           "code-geass",
-          "gurren-lagann",
-          "gundam-iron-blooded-orphans"
+          "gurren-lagann"
         ],
         "bonus": [
-          "macross-frontier",
+          "86-eighty-six",
+          "promare",
+          "gundam-iron-blooded-orphans",
           "eureka-seven",
-          "darling-in-the-franxx"
+          "gundam-witch-from-mercury"
         ]
       },
       {
         "title": "Fantascienza riflessiva",
         "why": "Sci-fi adulta su tempo, spazio, politica e coscienza.",
         "titles": [
-          "steins-gate",
           "planetes",
-          "legend-of-the-galactic-heroes",
-          "pluto"
+          "legend-of-the-galactic-heroes"
         ],
         "bonus": [
-          "serial-experiments-lain",
-          "texhnolyze"
+          "from-the-new-world"
         ]
       }
     ],
-    "blurb": "Fantascienza e robot giganti: futuro, tecnologia, cyberpunk."
+    "blurb": "Fantascienza e robot giganti: futuro, tecnologia, cyberpunk.",
+    "about": "Futuro, tecnologia e domande grosse: cyberpunk marcio, robot giganti pilotati e fantascienza che fa pensare quanto fa spettacolo.",
+    "curiosita": "«Mecha» viene da «mechanical»: i robot giganti sono un sottogenere a sé, e i migliori non parlano di robot ma delle persone che ci stanno dentro."
   },
   {
     "id": "horror-e-disagio",
-    "title": "Horror & Disagio",
+    "title": "Horror e Disagio",
     "tagline": "Mostri, gore e incubi che ti restano addosso. Niente lieto fine garantito. Se reggi lo stomaco, qui c'è il meglio del marcio.",
     "audience": "esperto",
     "icon": "ri-skull-2-line",
@@ -398,45 +407,42 @@
         "why": "L'orrore in forma ancora accessibile: capisci dove sa spingersi il genere.",
         "titles": [
           "parasyte-the-maxim",
-          "tokyo-ghoul",
-          "another",
           "ajin-demi-human"
         ],
         "bonus": [
           "deadman-wonderland",
-          "hell-s-paradise-jigokuraku"
+          "hell-s-paradise-jigokuraku",
+          "tokyo-ghoul",
+          "another",
+          "dark-gathering"
         ]
       },
       {
         "title": "Violenza e dannazione",
         "why": "Dark e azione brutale, splendidi da vedere e spietati nei contenuti.",
         "titles": [
-          "berserk",
           "hellsing-ultimate",
-          "devilman-crybaby",
-          "chainsaw-man"
+          "devilman-crybaby"
         ],
         "bonus": [
-          "elfen-lied",
-          "claymore"
+          "terra-formars"
         ]
       },
       {
         "title": "Horror puro",
         "why": "Atmosfere malate e body horror: le opere più disturbanti, per stomaci forti.",
         "titles": [
-          "shiki",
-          "junji-ito-collection",
-          "uzumaki",
           "gantz"
         ],
         "bonus": [
-          "higurashi",
-          "terra-formars"
+          "shiki",
+          "higurashi"
         ]
       }
     ],
-    "blurb": "Mostri, sangue e incubi: roba che mette a disagio."
+    "blurb": "Mostri, sangue e incubi: roba che mette a disagio.",
+    "about": "Mostri, gore e incubi che restano addosso. Niente lieto fine garantito: se reggi lo stomaco, qui c'è il meglio del marcio.",
+    "curiosita": "L'horror animato può spingersi dove il live-action non arriva: nessun limite di effetti speciali, solo l'immaginazione di chi disegna."
   },
   {
     "id": "romance",
@@ -450,10 +456,8 @@
         "title": "Storie che commuovono",
         "why": "Drammi romantici intensi, capaci di farti piangere.",
         "titles": [
-          "your-name",
           "your-lie-in-april",
-          "a-silent-voice",
-          "toradora"
+          "fruits-basket-2019"
         ],
         "bonus": [
           "clannad"
@@ -468,7 +472,9 @@
           "bunny-girl-senpai"
         ],
         "bonus": [
-          "spy-x-family"
+          "toradora",
+          "my-dress-up-darling",
+          "skip-and-loafer"
         ]
       },
       {
@@ -477,15 +483,17 @@
         "titles": [
           "nana",
           "clannad-after-story",
-          "honey-and-clover",
           "maquia"
         ],
         "bonus": [
+          "honey-and-clover",
           "banana-fish"
         ]
       }
     ],
-    "blurb": "Storie d'amore: ti fanno piangere o sorridere come un cretino."
+    "blurb": "Storie d'amore: ti fanno piangere o sorridere come un cretino.",
+    "about": "Storie di cuore che funzionano davvero: dal dramma che ti spezza alla commedia romantica che ti fa sorridere come un cretino.",
+    "curiosita": "La confessione d'amore («kokuhaku») è quasi un rito codificato: c'è un intero filone che ruota attorno a quel singolo momento."
   },
   {
     "id": "slice-of-life",
@@ -499,10 +507,8 @@
         "title": "Quotidianità che scalda",
         "why": "Giornate normali rese belle: comfort puro, zero ansia.",
         "titles": [
-          "k-on",
           "barakamon",
-          "laid-back-camp",
-          "non-non-biyori"
+          "laid-back-camp"
         ]
       },
       {
@@ -511,8 +517,7 @@
         "titles": [
           "violet-evergarden",
           "march-comes-in-like-a-lion",
-          "mushishi",
-          "natsume-yuujinchou"
+          "mushishi"
         ]
       }
     ],
@@ -536,7 +541,9 @@
           "saiki-k"
         ],
         "bonus": [
-          "hinamatsuri"
+          "hinamatsuri",
+          "konosuba",
+          "asobi-asobase"
         ]
       },
       {
@@ -544,16 +551,18 @@
         "why": "Si ride, ma ci sono anche personaggi ed emozione.",
         "titles": [
           "daily-lives-of-high-school-boys",
-          "great-teacher-onizuka",
-          "konosuba"
+          "great-teacher-onizuka"
         ],
         "bonus": [
           "spy-x-family",
+          "komi-cant-communicate",
           "kaguya-sama-love-is-war"
         ]
       }
     ],
-    "blurb": "Anime fatti apposta per farti ridere."
+    "blurb": "Anime fatti apposta per farti ridere.",
+    "about": "Anime fatti apposta per farti ridere: demenziale, assurdo, surreale. Quando vuoi solo divertirti senza pensare a niente.",
+    "curiosita": "Molta comicità si gioca su «boke» e «tsukkomi»: chi spara l'assurdità e chi lo rimprovera. Una struttura comica vecchia come il teatro giapponese."
   },
   {
     "id": "sport",
@@ -569,7 +578,6 @@
         "titles": [
           "haikyuu",
           "hajime-no-ippo",
-          "kuroko-no-basket",
           "blue-lock"
         ],
         "bonus": [
@@ -581,9 +589,7 @@
         "why": "Quando lo sport diventa regia e storia umana.",
         "titles": [
           "ping-pong-the-animation",
-          "megalo-box",
-          "run-with-the-wind",
-          "yuri-on-ice"
+          "run-with-the-wind"
         ]
       }
     ],
@@ -608,7 +614,15 @@
         ],
         "bonus": [
           "nausicaa",
-          "grave-of-the-fireflies"
+          "grave-of-the-fireflies",
+          "castle-in-the-sky",
+          "kikis-delivery-service",
+          "porco-rosso",
+          "ponyo",
+          "the-wind-rises",
+          "the-boy-and-the-heron",
+          "the-tale-of-the-princess-kaguya",
+          "whisper-of-the-heart"
         ]
       },
       {
@@ -630,16 +644,18 @@
           "wolf-children"
         ],
         "bonus": [
-          "paprika",
           "tokyo-godfathers",
-          "summer-wars",
-          "the-girl-who-leapt-through-time",
           "a-silent-voice",
-          "redline"
+          "redline",
+          "paprika",
+          "summer-wars",
+          "the-girl-who-leapt-through-time"
         ]
       }
     ],
-    "blurb": "I film dei grandi registi: Ghibli, Shinkai, Miyazaki e co."
+    "blurb": "I film dei grandi registi: Ghibli, Shinkai, Miyazaki e co.",
+    "about": "I film che hanno fatto conoscere l'animazione giapponese al mondo: Ghibli, Miyazaki, Satoshi Kon, Shinkai. Da vedere grandi, su uno schermo che se lo merita.",
+    "curiosita": "Lo Studio Ghibli ha vinto l'Oscar con «La città incantata», e Miyazaki ne ha vinto un secondo a 82 anni con «Il ragazzo e l'airone»."
   },
   {
     "id": "chicche-e-deep-cut",
@@ -660,7 +676,7 @@
         ],
         "bonus": [
           "planetes",
-          "megalo-box"
+          "to-be-hero-x"
         ]
       },
       {
@@ -669,12 +685,12 @@
         "titles": [
           "wolf-s-rain",
           "akudama-drive",
-          "gangsta",
-          "texhnolyze"
+          "gangsta"
         ],
         "bonus": [
-          "ergo-proxy",
-          "abenobashi-magical-shopping-street"
+          "abenobashi-magical-shopping-street",
+          "welcome-to-the-nhk",
+          "flcl"
         ]
       },
       {
@@ -683,7 +699,6 @@
         "titles": [
           "golden-kamuy",
           "mushishi",
-          "paranoia-agent",
           "dororo"
         ],
         "bonus": [
@@ -693,5 +708,104 @@
       }
     ],
     "blurb": "Roba di nicchia che quasi nessuno conosce: per intenditori."
+  },
+  {
+    "id": "capolavori",
+    "title": "Solo Capolavori",
+    "audience": "tutti",
+    "icon": "ri-medal-line",
+    "accent": "#c9a227",
+    "tagline": "Se devi vedere qualcosa, parti da qui.",
+    "blurb": "I voti più alti e le pietre miliari del medium.",
+    "about": "Le opere che non si discutono: i voti più alti e le pietre miliari. Se hai poco tempo e vuoi andare sul sicuro, qualsiasi titolo qui dentro vale la visione.",
+    "curiosita": "Molti di questi sono nelle classifiche \"migliori anime di sempre\" da anni — non è hype passeggero, è roba che regge il tempo.",
+    "levels": [
+      {
+        "title": "Capolavori",
+        "why": "",
+        "titles": [
+          "fullmetal-alchemist-brotherhood",
+          "steins-gate",
+          "monster",
+          "attack-on-titan",
+          "vinland-saga",
+          "cowboy-bebop",
+          "hunter-x-hunter",
+          "one-piece",
+          "code-geass",
+          "gurren-lagann",
+          "neon-genesis-evangelion",
+          "death-note",
+          "berserk",
+          "cyberpunk-edgerunners",
+          "made-in-abyss",
+          "perfect-blue",
+          "the-tatami-galaxy"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "azione",
+    "title": "Azione Adrenalinica",
+    "audience": "tutti",
+    "icon": "ri-sword-line",
+    "accent": "#d8472b",
+    "tagline": "Zero tempi morti.",
+    "blurb": "Scontri, inseguimenti e animazione che spacca.",
+    "about": "Solo adrenalina: combattimenti spettacolari, ritmo serrato e animazione che lascia a bocca aperta. Quando vuoi qualcosa che parte subito e non ti molla.",
+    "curiosita": "I picchi di animazione di questi titoli (i cosiddetti \"sakuga\") vengono studiati fotogramma per fotogramma dagli appassionati.",
+    "levels": [
+      {
+        "title": "Azione",
+        "why": "",
+        "titles": [
+          "demon-slayer",
+          "jujutsu-kaisen",
+          "chainsaw-man",
+          "dan-da-dan",
+          "cyberpunk-edgerunners",
+          "mob-psycho-100",
+          "gurren-lagann",
+          "kill-la-kill",
+          "jojo-s-bizarre-adventure",
+          "hellsing-ultimate",
+          "one-punch-man",
+          "kaiju-no-8",
+          "promare"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "antieroi",
+    "title": "Antieroi & Vendetta",
+    "audience": "esperto",
+    "icon": "ri-knife-blood-line",
+    "accent": "#7a2e2e",
+    "tagline": "Niente buoni contro cattivi.",
+    "blurb": "Protagonisti ambigui e scelte sporche.",
+    "about": "Protagonisti che non sono eroi: vendetta, ambiguità morale, mezzi discutibili per fini discutibili. Storie dove il \"giusto\" e lo \"sbagliato\" si confondono.",
+    "curiosita": "È spesso roba \"seinen\", pensata per un pubblico adulto: i migliori antieroi ti fanno tifare per gente che non dovresti.",
+    "levels": [
+      {
+        "title": "Antieroi",
+        "why": "",
+        "titles": [
+          "death-note",
+          "code-geass",
+          "berserk",
+          "vinland-saga",
+          "monster",
+          "banana-fish",
+          "91-days",
+          "devilman-crybaby",
+          "hellsing-ultimate",
+          "akame-ga-kill",
+          "gangsta",
+          "akudama-drive"
+        ]
+      }
+    ]
   }
 ]

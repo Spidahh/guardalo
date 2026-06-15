@@ -9,6 +9,8 @@
     "fetch": "node tools/build.mjs fetch",
     "gen": "node tools/build.mjs gen",
     "build": "node tools/build.mjs all",
+    "prerender": "node tools/prerender.mjs",
+    "build:site": "node tools/build.mjs gen && node tools/prerender.mjs",
     "report": "node tools/build.mjs report",
     "serve": "node tools/serve.mjs"
   }

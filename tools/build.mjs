@@ -31,6 +31,7 @@ const EDIT_DIR    = join(ROOT, 'editorial');
 const EDIT_TITLES = join(EDIT_DIR, 'titles.json');
 const EDIT_PATHS  = join(EDIT_DIR, 'paths.json');
 const EDIT_TIPS   = join(EDIT_DIR, 'tips.json');
+const EDIT_RANK   = join(EDIT_DIR, 'user-ranking.json'); // {slug:{rating,top}} — la classifica dell'utente
 const OUT_JS      = join(ROOT, 'js', 'data.js');
 const OUT_JSON    = join(ROOT, 'dist', 'data.json');
 
@@ -48,10 +49,11 @@ const c = {
 const MANUAL_MAP = {
     'demon-slayer': 101922,          // ricerca prendeva "Onigiri"
     'future-diary': 10620,           // ricerca prendeva l'OVA "Ura Mirai Nikki"
+    'hunter-x-hunter': 11061,        // versione 2011 (non l'originale 1999)
+    'jojo-s-bizarre-adventure': 14719, // serie TV 2012 (non l'OVA 1993)
     'fate-franchise-completo': 10087,// porta d'accesso: Fate/Zero (2011)
     'la-citta-incantata': 199,       // Spirited Away (titolo IT non trovato)
     'sentence-to-be-hero': 167152,   // Sentenced to Be a Hero (2026)
-    'natsume-yuujinchou': 432,       // ricerca prendeva uno special collaborativo
 };
 
 // titoli da NON includere: animazione occidentale, non presente/affidabile su AniList.
@@ -249,6 +251,7 @@ const MEDIA_FIELDS = `
   title { romaji english native }
   format status episodes duration seasonYear
   startDate { year }
+  nextAiringEpisode { episode }
   genres
   averageScore popularity source
   coverImage { extraLarge large color }
@@ -278,6 +281,13 @@ async function fetchByIds(ids) {
 
 function durOf(node) {
     return node.duration || DUR_FALLBACK[node.format] || 24;
+}
+// numero di episodi: usa il dato AniList; per le serie ancora in onda (episodes null)
+// stima dal prossimo episodio in palinsesto (nextAiringEpisode) — sempre dato reale.
+function epsOf(node) {
+    if (node.episodes) return node.episodes;
+    if (node.nextAiringEpisode?.episode) return Math.max(1, node.nextAiringEpisode.episode - 1);
+    return CORE_FORMATS.has(node.format) ? 12 : 1;
 }
 
 async function cmdFetch() {
@@ -343,12 +353,13 @@ async function cmdFetch() {
         const m = universe.get(v.anilistId);
         if (!m) { console.log(c.err(`  ✗ id ${v.anilistId} (${sl}) non trovato`)); continue; }
 
-        // timeline principale della saga
+        // timeline principale della saga.
+        // anno mancante (stagioni non ancora uscite) → in fondo, così la radice è la più vecchia.
         const chain = CORE_FORMATS.has(m.format) ? chainComponent(m.id) : [m];
-        chain.sort((a, b) => (a.startDate?.year || 0) - (b.startDate?.year || 0) || a.id - b.id);
-        const coreMinutes = chain.reduce((sum, e) => sum + (e.episodes || 1) * durOf(e), 0);
+        chain.sort((a, b) => (a.startDate?.year || 9999) - (b.startDate?.year || 9999) || a.id - b.id);
+        const coreMinutes = chain.reduce((sum, e) => sum + epsOf(e) * durOf(e), 0);
         const band = bandFor(coreMinutes);
-        const totalEps = chain.reduce((s, e) => s + (e.episodes || 0), 0);
+        const totalEps = chain.reduce((s, e) => s + epsOf(e), 0);
 
         // "da dove iniziare" = primo elemento della catena (più vecchio, senza prequel interno)
         const root = chain[0];
@@ -359,7 +370,9 @@ async function cmdFetch() {
         // struttura: tappe principali + extra (film/OVA collegati al seed)
         const structure = chain.map(e => ({
             name: e.title.english || e.title.romaji,
-            episodes: e.format === 'MOVIE' ? 'Film' : `${e.episodes || '?'} ep`,
+            episodes: e.format === 'MOVIE' ? 'Film'
+                : (e.episodes ? `${e.episodes} ep`
+                    : (e.nextAiringEpisode?.episode ? `${e.nextAiringEpisode.episode - 1}+ ep` : '? ep')),
             year: e.startDate?.year || null,
             main: true,
         }));
@@ -462,6 +475,7 @@ async function cmdGen() {
     const titlesEd = existsSync(EDIT_TITLES) ? JSON.parse(await readFile(EDIT_TITLES, 'utf8')) : {};
     const paths    = existsSync(EDIT_PATHS)  ? JSON.parse(await readFile(EDIT_PATHS, 'utf8'))  : [];
     const tipsEd   = existsSync(EDIT_TIPS)   ? JSON.parse(await readFile(EDIT_TIPS, 'utf8'))   : {};
+    const rankEd   = existsSync(EDIT_RANK)   ? JSON.parse(await readFile(EDIT_RANK, 'utf8'))   : {};
 
     // mappe di cross-link
     const byAnilist = new Map();         // anilistId → slug
@@ -521,7 +535,11 @@ async function cmdGen() {
         const { _recAnilistIds, _relAnilistIds, ...clean } = r;
         return {
             ...clean,
+            title: ed.titleOverride || r.title,   // permette di forzare un titolo (es. inglese vs romaji)
             streaming,
+            inList: !!rankEd[r.id],   // true = è nella lista principale dell'utente (GitHub)
+            top: !!(rankEd[r.id] && rankEd[r.id].top),
+            userRating: rankEd[r.id] ? (rankEd[r.id].rating ?? null) : null,
             hook: ed.hook || null,
             tone: ed.tone || [],
             forWho: ed.forWho || null,
