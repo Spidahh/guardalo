@@ -42,8 +42,9 @@
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c =>
     ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const cover = t => t.coverImage || '';
-  // variante leggera (AniList ~24KB invece di ~80KB) per card e mini-cover
-  const thumb = u => (u || '').replace('/cover/large/', '/cover/medium/');
+  // varianti leggere AniList: medium ~24KB (poster card), small ~6KB (mini-strisce)
+  const thumb  = u => (u || '').replace('/cover/large/', '/cover/medium/');
+  const thumbS = u => (u || '').replace('/cover/large/', '/cover/small/');
 
   // ════════════════════════════════════════════════════════════════════════
   class Guardalo {
@@ -281,8 +282,9 @@
       }
       return out;
     }
-    miniCover(t) {
-      return `<span class="mc" style="--cc:${esc(t.coverColor || '#2a2419')}"><img src="${esc(thumb(t.coverImage))}" alt="" loading="lazy" onload="this.classList.add('ld')" onerror="this.classList.add('ld')"></span>`;
+    miniCover(t, small) {
+      const u = small ? thumbS(t.coverImage) : thumb(t.coverImage);
+      return `<span class="mc" style="--cc:${esc(t.coverColor || '#2a2419')}"><img src="${esc(u)}" alt="" loading="lazy" onload="this.classList.add('ld')" onerror="this.classList.add('ld')"></span>`;
     }
     viewHome() {
       const aud = this.homeAudience;
@@ -303,7 +305,7 @@
       const cards = visible.map(p => {
         const pr = this.pathProgress(p);
         const tag = p.audience === 'principiante' ? 'Per iniziare' : p.audience === 'esperto' ? 'Per esperti' : 'Per tutti';
-        const covers = this.pathCovers(p, 4).map(t => this.miniCover(t)).join('');
+        const covers = this.pathCovers(p, 4).map(t => this.miniCover(t, true)).join('');
         return `<a class="path-card" href="#/p/${esc(p.id)}" style="--accent:${esc(p.accent)}">
           <div class="path-covers">${covers}<span class="path-covers-veil"></span><i class="${esc(p.icon)} path-ic"></i></div>
           <div class="path-card-main">
