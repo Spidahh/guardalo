@@ -7,12 +7,12 @@
 
 ## 1. Riepilogo
 
-- **190 titoli** totali: **97 tuoi** ● + **93 aggiunti** ○ · 94 con tuo voto
+- **189 titoli** totali: **97 tuoi** ● + **92 aggiunti** ○ · 94 con tuo voto
 - Fasce (somma su tutti i generi/percorsi): **106 Essenziali** · 167 Consigliati · 92 Da scoprire
 - **18 generi** (in griglia) · **6 percorsi** · 2 generi fuori griglia (slice-of-life, sport)
-- Per formato: Serie: 149 · Film: 30 · ONA: 8 · OVA: 3
-- Per stato: Concluso: 187 · In corso: 3
-- Per durata: Corto: 77 · Medio: 49 · Cortissimo: 33 · Lungo: 20 · Lunghissimo: 11
+- Per formato: Serie: 148 · Film: 30 · ONA: 8 · OVA: 3
+- Per stato: Concluso: 186 · In corso: 3
+- Per durata: Corto: 77 · Medio: 49 · Cortissimo: 33 · Lungo: 20 · Lunghissimo: 10
 
 ## 2. Dove sta cosa (mappa dei file)
 
@@ -617,7 +617,7 @@ Dopo aver toccato un file ✅: `npm run gen` (rigenera i dati) → bumpa `?v=` i
 96. ● **Daemons of the Shadow Realm** (2026) · Serie · AniList 7.8 · `daemons-of-the-shadow-realm`
 97. ● **Petals of Reincarnation** (2026) · Serie · AniList 6 · `petals-of-reincarnation`
 
-### ○ Gli 93 aggiunti da Claude (extra AniList ≥8.0, non in lista)
+### ○ Gli 92 aggiunti da Claude (extra AniList ≥8.0, non in lista)
 1. ○ **A Silent Voice** (2016) · Film · AniList 8.8 · `a-silent-voice`
 2. ○ **Clannad: After Story** (2008) · Serie · AniList 8.8 · `clannad-after-story`
 3. ○ **Legend of the Galactic Heroes** (1988) · OVA · AniList 8.8 · `legend-of-the-galactic-heroes`
@@ -708,15 +708,13 @@ Dopo aver toccato un file ✅: `npm run gen` (rigenera i dati) → bumpa `?v=` i
 88. ○ **Another** (2012) · Serie · AniList 7.1 · `another`
 89. ○ **UFO Robo Grendizer** (1975) · Serie · AniList 7.1 · `ufo-robot-grendizer`
 90. ○ **Mazinger Z** (1972) · Serie · AniList 6.8 · `mazinger-z`
-91. ○ **Great Mazinger** (1974) · Serie · AniList 6.8 · `great-mazinger`
-92. ○ **Getter Robo** (1974) · Serie · AniList 6.4 · `getter-robo`
-93. ○ **Future Robot Daltanious** (1979) · Serie · AniList 6.4 · `daltanious`
+91. ○ **Getter Robo** (1974) · Serie · AniList 6.4 · `getter-robo`
+92. ○ **Future Robot Daltanious** (1979) · Serie · AniList 6.4 · `daltanious`
 
 ## 7. Controllo automatico
 
-- **Titoli in NESSUN genere né percorso** (solo ricerca/Esplora): 2
+- **Titoli in NESSUN genere né percorso** (solo ricerca/Esplora): 1
   - ○ **The Apothecary Diaries** (2023) · Serie · AniList 8.8 · `the-apothecary-diaries`
-  - ○ **Great Mazinger** (1974) · Serie · AniList 6.8 · `great-mazinger`
 - **Titoli in 4+ categorie** (molto trasversali): 27
   - Berserk → in 7 categorie `berserk`
   - Vinland Saga → in 7 categorie `vinland-saga`
@@ -737,4 +735,4 @@ Dopo aver toccato un file ✅: `npm run gen` (rigenera i dati) → bumpa `?v=` i
 - **Titoli senza scheda editoriale (hook)**: nessuno ✓
 - **Titoli senza copertina**: nessuno ✓
 
-*Generato il 2026-06-17 — 190 titoli, 18 generi, 6 percorsi.*
+*Generato il 2026-06-17 — 189 titoli, 18 generi, 6 percorsi.*

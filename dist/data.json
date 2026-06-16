@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-16T22:04:11.471Z",
+  "generatedAt": "2026-06-16T22:55:13.754Z",
   "attribution": "Dati e immagini da AniList (anilist.co)",
-  "count": 190,
+  "count": 189,
   "titles": [
     {
       "id": "attack-on-titan",
@@ -2917,10 +2917,6 @@
           },
           {
             "id": "getter-robo",
-            "why": "Stesso studio (Toei Animation)"
-          },
-          {
-            "id": "great-mazinger",
             "why": "Stesso studio (Toei Animation)"
           }
         ],
@@ -7194,10 +7190,6 @@
           {
             "id": "getter-robo",
             "why": "Stesso autore (Gou Nagai)"
-          },
-          {
-            "id": "great-mazinger",
-            "why": "Stesso autore (Gou Nagai)"
           }
         ],
         "affin": [
@@ -7448,10 +7440,6 @@
           },
           {
             "id": "getter-robo",
-            "why": "Stesso studio (Toei Animation)"
-          },
-          {
-            "id": "great-mazinger",
             "why": "Stesso studio (Toei Animation)"
           }
         ],
@@ -14734,10 +14722,6 @@
           {
             "id": "getter-robo",
             "why": "Stesso studio (Toei Animation)"
-          },
-          {
-            "id": "great-mazinger",
-            "why": "Stesso studio (Toei Animation)"
           }
         ],
         "autore": [],
@@ -22003,10 +21987,6 @@
           },
           {
             "id": "getter-robo",
-            "why": "Stesso studio (Toei Animation)"
-          },
-          {
-            "id": "great-mazinger",
             "why": "Stesso studio (Toei Animation)"
           }
         ],
@@ -34697,12 +34677,7 @@
             "why": "Chi ha amato questo ha amato anche"
           }
         ],
-        "saga": [
-          {
-            "id": "great-mazinger",
-            "why": "Seguito"
-          }
-        ],
+        "saga": [],
         "studio": [
           {
             "id": "one-piece",
@@ -34885,12 +34860,7 @@
             "why": "Chi ha amato questo ha amato anche"
           }
         ],
-        "saga": [
-          {
-            "id": "great-mazinger",
-            "why": "Capitolo precedente"
-          }
-        ],
+        "saga": [],
         "studio": [
           {
             "id": "one-piece",
@@ -35062,10 +35032,6 @@
         "simili": [
           {
             "id": "mazinger-z",
-            "why": "Chi ha amato questo ha amato anche"
-          },
-          {
-            "id": "great-mazinger",
             "why": "Chi ha amato questo ha amato anche"
           },
           {
@@ -35443,182 +35409,6 @@
       }
     },
     {
-      "id": "great-mazinger",
-      "title": "Great Mazinger",
-      "titleRomaji": "Great Mazinger",
-      "titleNative": "グレートマジンガー",
-      "year": 1974,
-      "format": "TV",
-      "typeLabel": "Serie",
-      "statusLabel": "Concluso",
-      "episodes": 56,
-      "sagaEpisodes": 245,
-      "coreMinutes": 6102,
-      "lengthBand": "lunghissimo",
-      "lengthLabel": "Lunghissimo",
-      "lengthHint": "mesi",
-      "genres": [
-        "Mecha"
-      ],
-      "tags": [
-        "Super Robot",
-        "Lost Civilization",
-        "War",
-        "Gods",
-        "Proxy Battle",
-        "Episodic",
-        "Cyborg",
-        "Male Protagonist"
-      ],
-      "studios": [
-        "Toei Animation"
-      ],
-      "director": null,
-      "creator": "Gou Nagai",
-      "sourceLabel": "Manga",
-      "score10": 6.8,
-      "popularity": 2544,
-      "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b5658-Bm8Dw0Mcd5Aj.jpg",
-      "coverColor": "#f1ae5d",
-      "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n5658-x7yNZw90eD6i.jpg",
-      "streaming": [],
-      "startFrom": "Mazinger Z",
-      "structure": [
-        {
-          "name": "Mazinger Z",
-          "episodes": "92 ep",
-          "year": 1972,
-          "main": true
-        },
-        {
-          "name": "Great Mazinger",
-          "episodes": "56 ep",
-          "year": 1974,
-          "main": true
-        },
-        {
-          "name": "UFO Robo Grendizer",
-          "episodes": "74 ep",
-          "year": 1975,
-          "main": true
-        },
-        {
-          "name": "GOD MAZINGER",
-          "episodes": "23 ep",
-          "year": 1984,
-          "main": true
-        },
-        {
-          "name": "Great Mazinger vs. Getter Robo G: Kuuchuu Dai-Gekitotsu",
-          "episodes": "Film",
-          "year": 1975,
-          "main": false
-        }
-      ],
-      "inList": false,
-      "userRating": null,
-      "hook": "Il seguito diretto di Mazinga Z (1974): nuovo pilota, robot più potente, contro l'Impero delle Tenebre. Più della stessa cosa, per gli affezionati del super robot classico.",
-      "tone": [
-        "storico",
-        "mecha",
-        "azione"
-      ],
-      "forWho": "Per chi ha amato Mazinga Z e ne vuole ancora.",
-      "tips": [],
-      "recommendations": {
-        "simili": [
-          {
-            "id": "getter-robo",
-            "why": "Chi ha amato questo ha amato anche"
-          }
-        ],
-        "saga": [
-          {
-            "id": "mazinger-z",
-            "why": "Capitolo precedente"
-          },
-          {
-            "id": "ufo-robot-grendizer",
-            "why": "Seguito"
-          }
-        ],
-        "studio": [
-          {
-            "id": "one-piece",
-            "why": "Stesso studio (Toei Animation)"
-          },
-          {
-            "id": "dragon-ball",
-            "why": "Stesso studio (Toei Animation)"
-          },
-          {
-            "id": "slam-dunk",
-            "why": "Stesso studio (Toei Animation)"
-          },
-          {
-            "id": "saint-seiya",
-            "why": "Stesso studio (Toei Animation)"
-          }
-        ],
-        "autore": [
-          {
-            "id": "devilman-crybaby",
-            "why": "Stesso autore (Gou Nagai)"
-          }
-        ],
-        "affin": [
-          {
-            "id": "daltanious",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "gurren-lagann",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "promare",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "berserk",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "cyberpunk-edgerunners",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "fullmetal-alchemist-brotherhood",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "neon-genesis-evangelion",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "code-geass",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "death-parade",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "deca-dence",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "devil-may-cry",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "drifters",
-            "why": "Atmosfera e temi affini"
-          }
-        ]
-      }
-    },
-    {
       "id": "daltanious",
       "title": "Future Robot Daltanious",
       "titleRomaji": "Mirai Robo Daltanias",
@@ -35699,10 +35489,6 @@
             "why": "Atmosfera e temi affini"
           },
           {
-            "id": "great-mazinger",
-            "why": "Atmosfera e temi affini"
-          },
-          {
             "id": "neon-genesis-evangelion",
             "why": "Atmosfera e temi affini"
           },
@@ -35736,6 +35522,10 @@
           },
           {
             "id": "mobile-suit-gundam",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "attack-on-titan",
             "why": "Atmosfera e temi affini"
           }
         ]

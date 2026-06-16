@@ -1,32 +1,47 @@
 {
   "mazinger-z": {
     "hook": "Il robot gigante pilotato che ha inventato il genere (1972): un ragazzo prende i comandi di Mazinga Z per difendere il mondo dalle armate del dottor Inferno. Datatissimo nell'animazione, ma è la radice di tutto il mecha moderno. Vale soprattutto come pezzo di storia.",
-    "tone": ["storico", "mecha", "azione"],
+    "tone": [
+      "storico",
+      "mecha",
+      "azione"
+    ],
     "forWho": "Per chi vuole vedere dove è nato il genere dei robot."
   },
   "ufo-robot-grendizer": {
     "hook": "Goldrake: l'alieno Actarus pilota un gigante d'acciaio per difendere la Terra dagli invasori di Vega. In Italia, nel 1978, fu un fenomeno generazionale. Animazione d'epoca: il valore è soprattutto storico e nostalgico.",
-    "tone": ["storico", "mecha", "nostalgia"],
+    "tone": [
+      "storico",
+      "mecha",
+      "nostalgia"
+    ],
     "forWho": "Per chi è cresciuto con Goldrake o vuole capire quel mito."
   },
   "getter-robo": {
     "hook": "Tre piloti, un robot che si combina in tre forme diverse: Getter Robo (1974) inventa il sottogenere dei robot componibili. Grezzo e datato, ma seminale per tutto ciò che è venuto dopo.",
-    "tone": ["storico", "mecha", "azione"],
+    "tone": [
+      "storico",
+      "mecha",
+      "azione"
+    ],
     "forWho": "Per appassionati di super robot e di storia del genere."
   },
   "mobile-suit-gundam": {
     "hook": "Il capostipite del «real robot» (1979): niente supereroi, ma una guerra spaziale dove i mecha sono armi e i piloti sono ragazzi gettati nel conflitto. Ha fondato un franchise sterminato e cambiato per sempre la fantascienza animata.",
-    "tone": ["mecha", "guerra", "storico"],
+    "tone": [
+      "mecha",
+      "guerra",
+      "storico"
+    ],
     "forWho": "Per chi vuole le radici del mecha 'serio' e adulto."
-  },
-  "great-mazinger": {
-    "hook": "Il seguito diretto di Mazinga Z (1974): nuovo pilota, robot più potente, contro l'Impero delle Tenebre. Più della stessa cosa, per gli affezionati del super robot classico.",
-    "tone": ["storico", "mecha", "azione"],
-    "forWho": "Per chi ha amato Mazinga Z e ne vuole ancora."
   },
   "daltanious": {
     "hook": "Daltanious (1979): la Terra è invasa dall'impero di Zaal e l'orfano Kento pilota un gigante nato dalla fusione di un leone robot, un caccia e un androide. Super robot componibile classico, arrivato in Italia nei primi anni '80. Animazione d'epoca: vale per la nostalgia e la storia del genere.",
-    "tone": ["storico", "mecha", "nostalgia"],
+    "tone": [
+      "storico",
+      "mecha",
+      "nostalgia"
+    ],
     "forWho": "Per chi è cresciuto coi super robot in TV o ne studia le origini."
   },
   "attack-on-titan": {
