@@ -57,29 +57,10 @@
   const tierOf = (pid, slug) => (TIERS[pid] && TIERS[pid][slug]) || 'd';
   // immagine HERO di ogni categoria/percorso (editorial/categories.json → hero): scelta a mano, UNICA.
   const HERO_OF = CAT.hero || {};
-  // membri di una categoria/percorso: per i generi = lista curata (CAT_MEMBERS) + extra non-inList; altrimenti i titoli del percorso
-  const catTitles = (p) => {
-    if (p && CAT_MEMBERS[p.id]) {
-      const map = new Map();
-      CAT_MEMBERS[p.id].forEach(id => { const t = BY_ID.get(id); if (t) map.set(id, t); });
-      (pathTitles(p) || []).forEach(t => { if (t && !t.inList) map.set(t.id, t); });
-      return [...map.values()];
-    }
-    return pathTitles(p) || [];
-  };
-  // percorsi "tematici" (non di genere): journey curati che possono riusare gli stessi titoli.
-  // Tutti i percorsi sono liste curate ordinate dal migliore (niente livelli/progressione).
+  // titoli di una sezione (genere o percorso): la lista curata in categories.members. FONTE UNICA.
+  const catTitles = (p) => p ? (CAT_MEMBERS[p.id] || []).map(id => BY_ID.get(id)).filter(Boolean) : [];
   const PERCORSI_IDS = CAT.percorsoOrder || [];
   const PERCORSI_PATHS = PERCORSI_IDS.map(id => PATHS.find(p => p.id === id)).filter(Boolean);
-  // titoli di un percorso, deduplicati nell'ordine dei livelli
-  const pathTitles = p => {
-    const seen = new Set(), out = [];
-    (p.levels || []).forEach(l => (l.titles || []).forEach(id => {
-      if (seen.has(id)) return; seen.add(id);
-      const t = BY_ID.get(id); if (t) out.push(t);
-    }));
-    return out;
-  };
   // ordinamento "dal migliore": prima il tuo voto, poi il voto AniList
   const rankSort = (a, b) =>
     (b.userRating || 0) - (a.userRating || 0) ||

@@ -27,17 +27,8 @@ if (!GENRE_IDS.length || !Object.keys(CAT_MEMBERS).length)
   throw new Error('inventario: manca data.categories — esegui prima `npm run gen`');
 
 const pathById = new Map(PATHS.map(p => [p.id, p]));
-const pathTitles = p => { const s = new Set(), o = []; (p?.levels || []).forEach(l => (l.titles || []).forEach(id => { if (!s.has(id)) { s.add(id); const t = BY.get(id); if (t) o.push(t); } })); return o; };
-// stessa logica di catTitles() in app.js: generi = CAT_MEMBERS + extra non-inList dai levels
-const members = id => {
-  if (CAT_MEMBERS[id]) {
-    const m = new Map();
-    CAT_MEMBERS[id].forEach(s => { const t = BY.get(s); if (t) m.set(s, t); });
-    pathTitles(pathById.get(id)).forEach(t => { if (t && !t.inList) m.set(t.id, t); });
-    return [...m.values()];
-  }
-  return pathTitles(pathById.get(id));
-};
+// titoli di una sezione: la lista curata in categories.members. FONTE UNICA.
+const members = id => (CAT_MEMBERS[id] || []).map(s => BY.get(s)).filter(Boolean);
 
 const TIER = CAT.tiers || {};
 const tierOf = (id, slug) => (TIER[id] && TIER[id][slug]) || 'd';

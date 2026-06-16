@@ -35,16 +35,8 @@ const CAT = data.categories || {};
 const GENRE_IDS = CAT.genreOrder || [];
 const CAT_MEMBERS = CAT.members || {};
 if (!GENRE_IDS.length || !Object.keys(CAT_MEMBERS).length) throw new Error('prerender: manca data.categories — esegui `npm run gen`');
-const pathTitles = p => { const seen = new Set(), out = []; (p.levels || []).forEach(l => (l.titles || []).forEach(id => { if (!seen.has(id)) { seen.add(id); const t = BY_ID.get(id); if (t) out.push(t); } })); return out; };
-// titoli di un percorso/genere — stessa logica di catTitles() in js/app.js: per i generi = membri
-// curati CAT_MEMBERS + eventuali titoli non-inList nei levels; per i percorsi = i levels.
-const sectionTitles = p => {
-  if (!CAT_MEMBERS[p.id]) return pathTitles(p);
-  const map = new Map();
-  CAT_MEMBERS[p.id].forEach(s => { const t = BY_ID.get(s); if (t) map.set(s, t); });
-  pathTitles(p).forEach(t => { if (t && !t.inList) map.set(t.id, t); });
-  return [...map.values()];
-};
+// titoli di una sezione (genere o percorso): la lista curata in categories.members. FONTE UNICA.
+const sectionTitles = p => (CAT_MEMBERS[p.id] || []).map(s => BY_ID.get(s)).filter(Boolean);
 
 const tmpl = await readFile(join(ROOT, 'index.html'), 'utf8');
 

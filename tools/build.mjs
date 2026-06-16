@@ -558,7 +558,9 @@ async function cmdGen() {
             if (!seenStream.has(k)) { seenStream.add(k); streaming.push(s); }
         }
 
-        const { _recAnilistIds, _relAnilistIds, ...clean } = r;
+        // campi che il sito non usa: tolti dall'output (idMal, durationAvg, status/source grezzi,
+        // provenance, anilistId — quest'ultimo serve solo qui per i cross-link). Restano in sources/anime.json.
+        const { _recAnilistIds, _relAnilistIds, idMal, durationAvg, status, source, provenance, anilistId, ...clean } = r;
         return {
             ...clean,
             title: ed.titleOverride || r.title,   // permette di forzare un titolo (es. inglese vs romaji)
@@ -573,15 +575,14 @@ async function cmdGen() {
                 simili: simili.slice(0, 12), saga: saga.slice(0, 12), studio: studio.slice(0, 12),
                 autore: autore.slice(0, 12), affin: affin.slice(0, 12),
             },
-            editorial: !!ed.hook,
         };
     });
 
-    const coverage = titles.filter(t => t.editorial).length;
-    // i "bonus" si fondono nei titoli del livello: niente distinzione obbligatori/facoltativi
-    const mergedPaths = paths.map(p => ({
+    const coverage = titles.filter(t => t.hook).length;
+    // percorsi/generi: solo i meta (i titoli stanno in categories.members). `audience` è morto → tolto.
+    const mergedPaths = paths.map(({ audience, ...p }) => ({
         ...p,
-        levels: p.levels.map(l => ({ title: l.title, why: l.why, titles: [...(l.titles || []), ...(l.bonus || [])] })),
+        levels: (p.levels || []).map(l => ({ titles: [...(l.titles || []), ...(l.bonus || [])] })),
     }));
     const { _nota, ...categories } = catEd;   // tassonomia (generi/percorsi/membri/hero) — fonte unica
     const { _nota: _n2, ...home } = homeEd;   // contenuti home + liste tempo

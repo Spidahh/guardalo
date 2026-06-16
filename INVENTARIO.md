@@ -737,4 +737,4 @@ Dopo aver toccato un file ✅: `npm run gen` (rigenera i dati) → bumpa `?v=` i
 - **Titoli senza scheda editoriale (hook)**: nessuno ✓
 - **Titoli senza copertina**: nessuno ✓
 
-*Generato il 2026-06-16 — 190 titoli, 18 generi, 6 percorsi.*
+*Generato il 2026-06-17 — 190 titoli, 18 generi, 6 percorsi.*
