@@ -859,3 +859,60 @@ a.bento-tile, button.bento-tile { cursor: pointer; }
 .qgrid .path-card .path-blurb { font-size: 14px; }
 /* card genere/percorso (non minuscole, ma nemmeno giganti) */
 .paths-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+
+/* ── ADMIN: pannello di gestione (solo admin) ─────────────────────────────── */
+.admin-gate { text-align: center; padding: 56px 20px; }
+.admin-gate-ic { font-size: 40px; color: var(--ink-faint); }
+.admin-gate h1 { margin: 10px 0; }
+.admin { padding-bottom: 48px; }
+.admin-bar { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 22px; }
+.admin-bar h1 { margin: 0; font-size: 26px; display: flex; align-items: center; gap: 8px; }
+.admin-bar h1 i { color: var(--accent); }
+.admin-tabs { display: flex; gap: 4px; background: var(--surface); padding: 4px; border-radius: 11px; }
+.atab { padding: 8px 16px; border-radius: 8px; font-weight: 600; color: var(--ink-soft); font-size: 14px; }
+.atab.on { background: var(--bg); color: var(--ink); box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+.admin-bar-r { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+.admin-dirty { font-size: 12px; color: var(--accent); font-weight: 600; }
+.admin-pick { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 14px; }
+.admin-pick select { padding: 8px 12px; border-radius: 9px; border: 1px solid var(--line-2); background: var(--surface); color: var(--ink); font-size: 15px; font-weight: 600; }
+.admin-count { font-size: 13px; color: var(--ink-soft); }
+.admin-addrow { position: relative; margin-bottom: 14px; }
+.admin-addrow input, .admin-addtitle input { width: 100%; padding: 11px 14px; border-radius: 10px; border: 1px solid var(--line-2); background: var(--surface); color: var(--ink); font-size: 15px; }
+.admin-sug { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.admin-sug button { padding: 6px 11px; border-radius: 8px; background: var(--surface); border: 1px solid var(--line); font-size: 13px; color: var(--ink); }
+.admin-sug button:hover { border-color: var(--accent); color: var(--accent); }
+.admin-sug button span { color: var(--ink-faint); }
+.admin-hint { color: var(--ink-soft); font-size: 14px; line-height: 1.5; }
+.admin-hint code { background: var(--surface); padding: 2px 6px; border-radius: 5px; font-size: 12px; }
+.admin-members { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.admin-members li { display: flex; align-items: center; gap: 12px; padding: 7px 10px; border-radius: 10px; background: var(--surface); }
+.amr-pos { width: 22px; text-align: center; color: var(--ink-faint); font-size: 13px; font-weight: 700; }
+.admin-members img { width: 34px; height: 48px; object-fit: cover; border-radius: 4px; background: var(--bg); }
+.amr-t { flex: 1; font-weight: 600; font-size: 14px; display: flex; align-items: center; gap: 7px; }
+.amr-top { color: var(--gold); }
+.amr-extra { font-size: 11px; color: var(--ink-faint); font-weight: 500; background: var(--bg); padding: 1px 6px; border-radius: 5px; }
+.amr-act { display: flex; gap: 3px; }
+.amr-act button { width: 30px; height: 30px; border-radius: 7px; color: var(--ink-soft); display: grid; place-items: center; font-size: 17px; }
+.amr-act button:hover { background: var(--bg); color: var(--ink); }
+.amr-act button.on { color: var(--accent); background: var(--accent-soft); }
+.amr-empty { justify-content: center; color: var(--ink-faint); }
+.admin-editor { margin-top: 16px; }
+.admin-te-head { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+.admin-te-head img { width: 50px; height: 70px; object-fit: cover; border-radius: 6px; }
+.admin-te-head h3 { margin: 0; }
+.admin-te-head span { font-size: 13px; color: var(--ink-soft); }
+.admin-te-row { display: flex; gap: 22px; flex-wrap: wrap; align-items: center; margin-bottom: 16px; padding: 14px; background: var(--surface); border-radius: 11px; }
+.aswitch { display: flex; align-items: center; gap: 7px; font-weight: 600; font-size: 14px; cursor: pointer; }
+.arate input { width: 72px; padding: 6px 9px; border-radius: 8px; border: 1px solid var(--line-2); background: var(--bg); color: var(--ink); margin-left: 4px; }
+.admin-te-lbl { display: block; font-size: 13px; color: var(--ink-soft); margin-bottom: 8px; }
+.agchips { display: flex; flex-wrap: wrap; gap: 6px; }
+.agchip { padding: 6px 12px; border-radius: 8px; background: var(--surface); border: 1px solid var(--line); font-size: 13px; font-weight: 600; color: var(--ink-soft); }
+.agchip.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+.admin-addtitle { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0; }
+.admin-addtitle input[type=text], .admin-addtitle > input:first-child { flex: 1; min-width: 150px; }
+.admin-addtitle input[type=number] { flex: 0 0 110px; width: 110px; }
+.admin-pend { list-style: none; margin: 12px 0; padding: 0; display: flex; flex-direction: column; gap: 6px; max-width: 520px; }
+.admin-pend li { display: flex; align-items: center; justify-content: space-between; padding: 9px 13px; border-radius: 9px; background: var(--surface); font-weight: 600; font-size: 14px; }
+.admin-pend button { color: var(--ink-faint); }
+.admin-pend button:hover { color: var(--accent); }
+#sideAdmin i { color: var(--accent); }

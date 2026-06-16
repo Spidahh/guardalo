@@ -244,6 +244,9 @@
         chip.hidden = true; login.hidden = false; logout.hidden = true;
       }
       if (badge) badge.hidden = !this.isAdmin;
+      const adminLink = $('#sideAdmin'); if (adminLink) adminLink.hidden = !this.isAdmin;
+      // se sono sul pannello quando l'auth si risolve, ridisegno (gate → pannello)
+      if (location.pathname === '/admin') this.route();
     }
 
     // ── CHROME (nav, tema, ricerca, login) ────────────────────────────────────
@@ -324,6 +327,7 @@
       else if (seg === 'esplora') { html = this.viewEsplora(); active = 'esplora'; }
       else if (seg === 'tempo' && arg) { html = this.viewTempo(arg); active = 'tempo-' + arg; }
       else if (seg === 'lista') { html = this.viewLista(); active = 'lista'; }
+      else if (seg === 'admin') { html = this.viewAdmin(); active = 'admin'; }
       else if (seg === 'info') { html = this.viewInfo(); active = ''; }
       else if (seg === 'privacy') { html = this.viewPrivacy(); active = ''; }
       else if (seg === 'cookie') { html = this.viewCookie(); active = ''; }
@@ -404,6 +408,7 @@
       }
     }
     afterRender(seg) {
+      if (seg === 'admin') { this.afterRenderAdmin(); return; }
       const howClose = document.getElementById('howClose');
       if (howClose) howClose.addEventListener('click', () => {
         try { localStorage.setItem('guardalo_intro', '1'); } catch (e) {}
@@ -921,6 +926,204 @@
         <p>${esc(m.sub)} · ${list.length} titoli, dal più votato.</p>
       </section>
       <section class="wrap"><div class="grid">${list.map(t => this.card(t)).join('')}</div></section>`;
+    }
+
+    // ════════════════════════════════════════════════════════════════════════
+    // ADMIN — pannello di gestione (solo magistaf@gmail.com). Le modifiche sono
+    // in memoria con anteprima dal vivo; "Esporta" scarica i file da committare.
+    // ════════════════════════════════════════════════════════════════════════
+    viewAdmin() {
+      if (!this.isAdmin) {
+        return `<section class="wrap admin-gate">
+          <span class="admin-gate-ic"><i class="ri-lock-2-line"></i></span>
+          <h1>Pannello riservato</h1>
+          ${this.user
+            ? `<p>Sei loggato come <b>${esc(this.user.email)}</b>, che non è l'account amministratore.</p>`
+            : `<p>Accedi con l'account amministratore per gestire generi, titoli e liste.</p>
+               <button class="btn-red" id="adminLoginBtn"><i class="ri-google-fill"></i> Accedi</button>`}
+        </section>`;
+      }
+      const tab = this.adminTab || 'generi';
+      return `<section class="wrap admin">
+        <div class="admin-bar">
+          <h1><i class="ri-tools-fill"></i> Gestione</h1>
+          <div class="admin-tabs">
+            <button class="atab ${tab === 'generi' ? 'on' : ''}" data-atab="generi">Generi</button>
+            <button class="atab ${tab === 'titoli' ? 'on' : ''}" data-atab="titoli">Titoli</button>
+            <button class="atab ${tab === 'aggiungi' ? 'on' : ''}" data-atab="aggiungi">Aggiungi</button>
+          </div>
+          <div class="admin-bar-r">
+            ${this.adminDirty ? '<span class="admin-dirty">modifiche non esportate</span>' : ''}
+            <button class="btn-red" data-aact="export"><i class="ri-download-2-line"></i> Esporta</button>
+          </div>
+        </div>
+        <div id="adminBody">${this.adminBody(tab)}</div>
+      </section>`;
+    }
+    adminBody(tab) {
+      if (tab === 'titoli') return this.adminTitoli();
+      if (tab === 'aggiungi') return this.adminAggiungi();
+      return this.adminGeneri();
+    }
+    adminMembersArr(id) {
+      const cat = window.GUARDALO.categories || {};
+      return (cat.members && cat.members[id]) || null;   // editiamo solo i generi (i percorsi stanno in paths.json)
+    }
+    adminGeneri() {
+      const cat = window.GUARDALO.categories || {};
+      const ids = cat.genreOrder || [];
+      const sel = this.adminGen && ids.includes(this.adminGen) ? this.adminGen : ids[0];
+      this.adminGen = sel;
+      const nameOf = id => (PATHS.find(p => p.id === id) || {}).title || id;
+      const opts = ids.map(id => `<option value="${esc(id)}" ${id === sel ? 'selected' : ''}>${esc(nameOf(id))}</option>`).join('');
+      const mem = (cat.members[sel] || []).map(s => BY_ID.get(s)).filter(Boolean);
+      const hero = (cat.hero || {})[sel] || '';
+      const rows = mem.map((t, i) => `
+        <li>
+          <span class="amr-pos">${i + 1}</span>
+          <img src="${esc(thumbS(t.coverImage))}" alt="" loading="lazy">
+          <span class="amr-t">${esc(t.title)} ${t.top ? '<i class="ri-vip-crown-2-fill amr-top" title="top"></i>' : ''}${t.inList ? '' : '<span class="amr-extra">aggiunto</span>'}</span>
+          <span class="amr-act">
+            <button data-aact="up" data-slug="${esc(t.id)}" title="Su"><i class="ri-arrow-up-s-line"></i></button>
+            <button data-aact="down" data-slug="${esc(t.id)}" title="Giù"><i class="ri-arrow-down-s-line"></i></button>
+            <button data-aact="hero" data-slug="${esc(t.id)}" class="${hero === t.id ? 'on' : ''}" title="Immagine hero del genere"><i class="ri-image-line"></i></button>
+            <button data-aact="rm" data-slug="${esc(t.id)}" title="Togli dal genere"><i class="ri-close-line"></i></button>
+          </span>
+        </li>`).join('');
+      return `
+        <div class="admin-pick">
+          <label>Genere: <select id="adminGenSel">${opts}</select></label>
+          <span class="admin-count">${mem.length} titoli · hero: <b>${esc(hero ? (BY_ID.get(hero)?.title || hero) : '—')}</b></span>
+        </div>
+        <div class="admin-addrow">
+          <input id="adminAddMember" placeholder="Aggiungi un titolo a «${esc(nameOf(sel))}»…" autocomplete="off">
+          <div id="adminAddSug" class="admin-sug"></div>
+        </div>
+        <ol class="admin-members">${rows || '<li class="amr-empty">Nessun titolo in questo genere.</li>'}</ol>`;
+    }
+    adminMemberSug(q) {
+      if (!q) return '';
+      const inGen = new Set((window.GUARDALO.categories.members[this.adminGen]) || []);
+      const hits = TITLES.filter(t => !inGen.has(t.id) && (t.title.toLowerCase().includes(q) || (t.titleRomaji || '').toLowerCase().includes(q))).slice(0, 7);
+      return hits.map(t => `<button data-aact="addmem" data-slug="${esc(t.id)}">${esc(t.title)}${t.year ? ` <span>(${t.year})</span>` : ''}</button>`).join('') || '<span class="admin-hint">nessun risultato</span>';
+    }
+    adminTitoli() {
+      const sel = this.adminTitle ? BY_ID.get(this.adminTitle) : null;
+      return `
+        <div class="admin-addrow">
+          <input id="adminTSearch" placeholder="Cerca un titolo da modificare…" value="${esc(this.adminTQ || '')}" autocomplete="off">
+          <div id="adminTList" class="admin-sug">${this.adminTitleList((this.adminTQ || '').toLowerCase().trim())}</div>
+        </div>
+        <div id="adminTEditor" class="admin-editor">${sel ? this.adminTitleEditor(sel) : '<p class="admin-hint">Cerca e scegli un titolo per modificarne top, voto e generi.</p>'}</div>`;
+    }
+    adminTitleList(q) {
+      if (!q) return '';
+      const hits = TITLES.filter(t => t.title.toLowerCase().includes(q) || (t.titleRomaji || '').toLowerCase().includes(q)).slice(0, 8);
+      return hits.map(t => `<button data-aact="pick" data-slug="${esc(t.id)}">${esc(t.title)} ${t.top ? '★' : ''}${t.inList ? '' : ' <span>aggiunto</span>'}</button>`).join('') || '<span class="admin-hint">nessun risultato</span>';
+    }
+    adminTitleEditor(t) {
+      const cat = window.GUARDALO.categories || {};
+      const genres = (cat.genreOrder || []).map(g => {
+        const inIt = ((cat.members[g]) || []).includes(t.id);
+        return `<button class="agchip ${inIt ? 'on' : ''}" data-aact="togglegen" data-gen="${esc(g)}" data-slug="${esc(t.id)}">${esc((PATHS.find(p => p.id === g) || {}).title || g)}</button>`;
+      }).join('');
+      return `
+        <div class="admin-te-head">
+          <img src="${esc(thumbS(t.coverImage))}" alt="" loading="lazy">
+          <div><h3>${esc(t.title)}</h3><span>${t.year || ''} · ${esc(t.typeLabel)} · AniList ${t.score10 || '—'}</span></div>
+        </div>
+        <div class="admin-te-row">
+          <label class="aswitch"><input type="checkbox" data-aact="inlist" data-slug="${esc(t.id)}" ${t.inList ? 'checked' : ''}> Nella tua lista</label>
+          <label class="aswitch"><input type="checkbox" data-aact="top" data-slug="${esc(t.id)}" ${t.top ? 'checked' : ''}> Top ★</label>
+          <label class="arate">Tuo voto <input type="number" min="0" max="10" step="0.1" value="${t.userRating ?? ''}" data-aact="rate" data-slug="${esc(t.id)}" placeholder="—"></label>
+        </div>
+        <div class="admin-te-genres"><span class="admin-te-lbl">Generi (clicca per aggiungere/togliere):</span><div class="agchips">${genres}</div></div>`;
+    }
+    adminAggiungi() {
+      const pend = (this.adminPending || []).map((p, i) => `<li>${esc(p.title)}${p.year ? ` (${p.year})` : ''} <button data-aact="rmpend" data-i="${i}"><i class="ri-close-line"></i></button></li>`).join('');
+      const has = this.adminPending && this.adminPending.length;
+      return `
+        <p class="admin-hint">Per aggiungere un titolo <b>con lo stesso criterio di adesso</b> (fatti reali da AniList, niente inventato) si aggiunge al seed e si rilancia la build. Qui prepari la coda; l'export crea il file da usare.</p>
+        <div class="admin-addtitle">
+          <input id="adminNewTitle" placeholder="Titolo (es. Frieren)" autocomplete="off">
+          <input id="adminNewYear" type="number" placeholder="Anno" min="1960" max="2030">
+          <button class="btn-red" data-aact="addpend"><i class="ri-add-line"></i> In coda</button>
+        </div>
+        <ul class="admin-pend">${pend || '<li class="amr-empty">Nessun titolo in coda.</li>'}</ul>
+        ${has ? `<p class="admin-hint">Dopo l'export: aggiungi le voci a <code>tools/seed-titles.json</code>, poi <code>npm run map &amp;&amp; npm run fetch &amp;&amp; npm run gen</code>, infine scrivi la scheda in <code>editorial/titles.json</code>.</p>` : ''}`;
+    }
+    // ── azioni admin (delega eventi, agganciata in afterRender) ──────────────
+    afterRenderAdmin() {
+      const sec = document.querySelector('.admin') || document.querySelector('.admin-gate');
+      if (!sec) return;
+      const lg = document.getElementById('adminLoginBtn');
+      if (lg) lg.addEventListener('click', () => $('#loginModal').classList.add('open'));
+      sec.addEventListener('click', e => this.adminClick(e));
+      sec.addEventListener('input', e => this.adminInput(e));
+      sec.addEventListener('change', e => this.adminChange(e));
+    }
+    adminRerender() {
+      const body = document.getElementById('adminBody');
+      if (body) body.innerHTML = this.adminBody(this.adminTab || 'generi');
+      const bar = document.querySelector('.admin-bar-r');
+      if (bar && !bar.querySelector('.admin-dirty') && this.adminDirty)
+        bar.insertAdjacentHTML('afterbegin', '<span class="admin-dirty">modifiche non esportate</span>');
+    }
+    adminClick(e) {
+      const tab = e.target.closest('[data-atab]');
+      if (tab) { this.adminTab = tab.dataset.atab; const app = $('#app'); app.innerHTML = this.viewAdmin(); this.afterRenderAdmin(); return; }
+      const a = e.target.closest('[data-aact]');
+      if (!a) return;
+      const act = a.dataset.aact, slug = a.dataset.slug, gen = this.adminGen;
+      const arr = this.adminMembersArr(gen);
+      if (act === 'export') return this.adminExport();
+      else if (act === 'rm' && arr) { const i = arr.indexOf(slug); if (i >= 0) arr.splice(i, 1); }
+      else if ((act === 'up' || act === 'down') && arr) { const i = arr.indexOf(slug), j = i + (act === 'up' ? -1 : 1); if (i >= 0 && j >= 0 && j < arr.length) [arr[i], arr[j]] = [arr[j], arr[i]]; }
+      else if (act === 'hero') { (window.GUARDALO.categories.hero = window.GUARDALO.categories.hero || {})[gen] = slug; }
+      else if (act === 'addmem' && arr) { if (!arr.includes(slug)) arr.push(slug); }
+      else if (act === 'pick') { this.adminTitle = slug; }
+      else if (act === 'togglegen') { const ar = this.adminMembersArr(a.dataset.gen); if (ar) { const i = ar.indexOf(slug); if (i >= 0) ar.splice(i, 1); else ar.push(slug); } }
+      else if (act === 'addpend') { const ti = document.getElementById('adminNewTitle'), yi = document.getElementById('adminNewYear'); const title = (ti.value || '').trim(); if (!title) return; (this.adminPending = this.adminPending || []).push({ title, year: yi.value ? +yi.value : null }); }
+      else if (act === 'rmpend') { this.adminPending.splice(+a.dataset.i, 1); }
+      else return;
+      if (act !== 'export' && act !== 'pick') this.adminDirty = true;
+      this.adminRerender();
+    }
+    adminInput(e) {
+      const el = e.target;
+      if (el.id === 'adminAddMember') { const s = document.getElementById('adminAddSug'); if (s) s.innerHTML = this.adminMemberSug(el.value.toLowerCase().trim()); }
+      else if (el.id === 'adminTSearch') { this.adminTQ = el.value; const l = document.getElementById('adminTList'); if (l) l.innerHTML = this.adminTitleList(el.value.toLowerCase().trim()); }
+    }
+    adminChange(e) {
+      const el = e.target;
+      if (el.id === 'adminGenSel') { this.adminGen = el.value; this.adminRerender(); return; }
+      const act = el.dataset && el.dataset.aact, t = BY_ID.get(el.dataset && el.dataset.slug);
+      if (!t) return;
+      if (act === 'inlist') { t.inList = el.checked; if (!el.checked) { t.top = false; } }
+      else if (act === 'top') { t.top = el.checked; if (el.checked) t.inList = true; }
+      else if (act === 'rate') { const v = parseFloat(el.value); t.userRating = isNaN(v) ? null : v; if (!isNaN(v)) t.inList = true; }
+      else return;
+      this.adminDirty = true;
+      this.adminRerender();
+    }
+    adminExport() {
+      const cat = window.GUARDALO.categories || {};
+      const categories = { _nota: 'Tassonomia editabile: ordine generi/percorsi in griglia, appartenenza titoli ai generi (members), immagine hero. Letto da js/app.js e dai tool via dist/data.json. Dopo modifiche: npm run gen.', genreOrder: cat.genreOrder, percorsoOrder: cat.percorsoOrder, hero: cat.hero, members: cat.members };
+      const ranking = {};
+      TITLES.filter(t => t.inList).sort((a, b) => (b.userRating || 0) - (a.userRating || 0)).forEach(t => { ranking[t.id] = { rating: t.userRating ?? null, top: !!t.top }; });
+      this.adminDownload('categories.json', JSON.stringify(categories, null, 2));
+      this.adminDownload('user-ranking.json', JSON.stringify(ranking, null, 2));
+      let extra = '';
+      if (this.adminPending && this.adminPending.length) { this.adminDownload('seed-da-aggiungere.json', JSON.stringify(this.adminPending, null, 2)); extra = ' + seed-da-aggiungere.json'; }
+      this.adminDirty = false;
+      this.adminRerender();
+      this.toast(`✓ Scaricati categories.json e user-ranking.json${extra}. Mettili in editorial/ e fai npm run gen.`, 'ok');
+    }
+    adminDownload(name, text) {
+      const blob = new Blob([text + '\n'], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href = url; a.download = name; document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1500);
     }
 
     notFound() {
