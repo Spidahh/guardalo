@@ -28,7 +28,7 @@ const data = JSON.parse(await readFile(join(ROOT, 'dist', 'data.json'), 'utf8'))
 const TITLES = data.titles, PATHS = data.paths;
 const BY_ID = new Map(TITLES.map(t => [t.id, t]));
 const itGenre = g => ({ Action: 'Azione', Adventure: 'Avventura', Comedy: 'Commedia', Drama: 'Drammatico', Fantasy: 'Fantasy', Horror: 'Horror', Mecha: 'Mecha', Music: 'Musicale', Mystery: 'Mistero', Psychological: 'Psicologico', Romance: 'Romantico', 'Sci-Fi': 'Fantascienza', 'Slice of Life': 'Slice of Life', Sports: 'Sport', Supernatural: 'Soprannaturale', Thriller: 'Thriller' }[g] || g);
-const rankSort = (a, b) => (b.top ? 1 : 0) - (a.top ? 1 : 0) || (b.userRating || 0) - (a.userRating || 0) || (b.score10 || 0) - (a.score10 || 0);
+const rankSort = (a, b) => (b.userRating || 0) - (a.userRating || 0) || (b.score10 || 0) - (a.score10 || 0);
 // FONTE UNICA: la tassonomia (generi mostrati + appartenenza titoli→genere) sta in
 // editorial/categories.json, già inclusa in dist/data.json da `npm run gen`. Niente duplicati.
 const CAT = data.categories || {};

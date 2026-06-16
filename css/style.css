@@ -916,3 +916,22 @@ a.bento-tile, button.bento-tile { cursor: pointer; }
 .admin-pend button { color: var(--ink-faint); }
 .admin-pend button:hover { color: var(--accent); }
 #sideAdmin i { color: var(--accent); }
+
+/* fasce per-genere nel pannello (E/C/D) */
+.amr-tier { display: flex; gap: 3px; }
+.atier { width: 30px; height: 28px; border-radius: 7px; font-size: 12px; font-weight: 700; color: var(--ink-faint); border: 1px solid var(--line); background: var(--bg); }
+.atier:hover { color: var(--ink); border-color: var(--line-2); }
+.atier-e.on { background: var(--gold); border-color: var(--gold); color: #1b1712; }
+.atier-c.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+.atier-d.on { background: var(--surface-2); border-color: var(--line-2); color: var(--ink); }
+.amr-hero, .amr-rm { width: 30px; height: 30px; border-radius: 7px; color: var(--ink-soft); display: grid; place-items: center; font-size: 16px; }
+.amr-hero:hover, .amr-rm:hover { background: var(--bg); color: var(--ink); }
+.amr-hero.on { color: var(--accent); background: var(--accent-soft); }
+.amr-rm:hover { color: var(--accent); }
+.admin-members li { border-left: 3px solid transparent; }
+.tr-e { border-left-color: var(--gold); }
+.tr-c { border-left-color: var(--accent); }
+.tr-d { border-left-color: var(--line-2); }
+.admin-count .t-e { color: var(--gold); }
+.admin-count .t-c { color: var(--accent); }
+.admin-count .t-d { color: var(--ink-faint); }

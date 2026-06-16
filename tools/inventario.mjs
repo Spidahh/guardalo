@@ -39,10 +39,14 @@ const members = id => {
   return pathTitles(pathById.get(id));
 };
 
-const rankSort = (a, b) => (b.top ? 1 : 0) - (a.top ? 1 : 0) || (b.userRating || 0) - (a.userRating || 0) || (b.score10 || 0) - (a.score10 || 0);
-const mark = t => `${t.top ? '★' : ' '}${t.inList ? '●' : '○'}`;
-const line = t => `${mark(t)} **${t.title}**${t.year ? ` (${t.year})` : ''} · ${t.typeLabel}${t.userRating != null ? ` · tuo voto ${t.userRating}` : ''}${t.score10 ? ` · AniList ${t.score10}` : ''} · \`${t.id}\``;
-const tally = arr => `${arr.length} titoli — ${arr.filter(t => t.inList).length} tuoi ● / ${arr.filter(t => !t.inList).length} aggiunti ○ / ${arr.filter(t => t.top).length} top ★`;
+const TIER = CAT.tiers || {};
+const tierOf = (id, slug) => (TIER[id] && TIER[id][slug]) || 'd';
+const TL = { e: 'Essenziale', c: 'Consigliato', d: 'Da scoprire' };
+const rankSort = (a, b) => (b.userRating || 0) - (a.userRating || 0) || (b.score10 || 0) - (a.score10 || 0);
+const mark = t => t.inList ? '●' : '○';
+const line = (t, tag) => `${tag ? `[${tag}] ` : ''}${mark(t)} **${t.title}**${t.year ? ` (${t.year})` : ''} · ${t.typeLabel}${t.userRating != null ? ` · tuo voto ${t.userRating}` : ''}${t.score10 ? ` · AniList ${t.score10}` : ''} · \`${t.id}\``;
+const tierTally = (id, arr) => { const c = { e: 0, c: 0, d: 0 }; arr.forEach(t => c[tierOf(id, t.id)]++); return `${arr.length} titoli — ${c.e} Essenziali / ${c.c} Consigliati / ${c.d} Da scoprire`; };
+const tally = arr => `${arr.length} titoli — ${arr.filter(t => t.inList).length} tuoi ● / ${arr.filter(t => !t.inList).length} aggiunti ○`;
 const counts = (arr, f) => arr.reduce((m, t) => (m[f(t)] = (m[f(t)] || 0) + 1, m), {});
 const tbl = obj => Object.entries(obj).sort((a, b) => b[1] - a[1]).map(([k, v]) => `${k}: ${v}`).join(' · ');
 
@@ -65,14 +69,15 @@ w('');
 w('> Documento **rigenerato** da `tools/inventario.mjs` (`npm run inventario`). NON modificarlo a mano:');
 w('> cambia i dati nei file sorgente (vedi §2) e rilancia il comando. Riflette sempre lo stato reale.');
 w('');
-w('**Legenda:** ★ = top · ● = tuo (in lista, da `user-ranking.json`) · ○ = aggiunto da Claude (extra AniList).');
+w('**Legenda:** ● = tuo (in lista) · ○ = aggiunto (extra AniList) · `[Essenziale/Consigliato/Da scoprire]` = fascia in quel genere.');
 w('');
 
 // 1. RIEPILOGO
 w('## 1. Riepilogo');
 w('');
-w(`- **${TITLES.length} titoli** totali: **${mine.length} tuoi** ● + **${extra.length} aggiunti** ○`);
-w(`- **${TITLES.filter(t => t.top).length} top** ★ · ${TITLES.filter(t => t.userRating != null).length} con tuo voto`);
+w(`- **${TITLES.length} titoli** totali: **${mine.length} tuoi** ● + **${extra.length} aggiunti** ○ · ${TITLES.filter(t => t.userRating != null).length} con tuo voto`);
+const tierTot = { e: 0, c: 0, d: 0 }; [...GENRE_IDS, ...PERCORSI_IDS].forEach(id => Object.values(TIER[id] || {}).forEach(v => tierTot[v]++));
+w(`- Fasce (somma su tutti i generi/percorsi): **${tierTot.e} Essenziali** · ${tierTot.c} Consigliati · ${tierTot.d} Da scoprire`);
 w(`- **${GENRE_IDS.length} generi** (in griglia) · **${PERCORSI_IDS.length} percorsi** · 2 generi fuori griglia (slice-of-life, sport)`);
 w(`- Per formato: ${tbl(counts(TITLES, t => t.typeLabel))}`);
 w(`- Per stato: ${tbl(counts(TITLES, t => t.statusLabel))}`);
@@ -85,13 +90,11 @@ w('');
 w('| Cosa | File | Si modifica a mano? |');
 w('|---|---|---|');
 w('| Fatti dei titoli (titolo, anno, generi, studio, durata, voto AniList, immagini…) | `sources/anime.json` | ❌ generato da AniList (`npm run fetch`) |');
-w('| **La tua lista**: quali sono tuoi, il tuo voto, il flag top | `editorial/user-ranking.json` | ✅ |');
+w('| **La tua lista**: quali sono tuoi + il tuo voto | `editorial/user-ranking.json` | ✅ (o dal pannello /admin) |');
 w('| Testi delle schede (hook, tono, "per chi è") | `editorial/titles.json` | ✅ |');
 w('| Dritte per la visione | `editorial/tips.json` | ✅ |');
 w('| **Percorsi** (titoli dentro ogni percorso) | `editorial/paths.json` | ✅ |');
-w('| **Appartenenza ai generi** (CAT_MEMBERS) | `js/app.js` | ✅ |');
-w('| Immagine hero di ogni genere/percorso (HERO_OF) | `js/app.js` | ✅ |');
-w('| Ordine/elenco generi in griglia (GENRE_IDS) e percorsi (PERCORSI_IDS) | `js/app.js` | ✅ |');
+w('| **Generi**: ordine, appartenenza titoli, **fasce E/C/D**, immagine hero | `editorial/categories.json` | ✅ (o dal pannello /admin) |');
 w('| Dataset finale che il sito legge | `js/data.js` + `dist/data.json` | ❌ generato (`npm run gen`) |');
 w('');
 w('Dopo aver toccato un file ✅: `npm run gen` (rigenera i dati) → bumpa `?v=` in `index.html` → `npm run inventario`.');
@@ -100,14 +103,16 @@ w('');
 // 3. GENERI
 w('## 3. Generi (18) — cosa c\'è dentro');
 w('');
+const TO = { e: 0, c: 1, d: 2 };
+const byTier = id => (a, b) => (TO[tierOf(id, a.id)] - TO[tierOf(id, b.id)]) || rankSort(a, b);
 for (const id of GENRE_IDS) {
   const p = pathById.get(id); if (!p) continue;
-  const list = members(id).sort(rankSort);
+  const list = members(id).sort(byTier(id));
   const hero = HERO_OF[id] ? (BY.get(HERO_OF[id])?.title || HERO_OF[id]) : '—';
   w(`### ${p.title}  \`${id}\``);
-  w(`*hero: ${hero}* · ${tally(list)}`);
+  w(`*hero: ${hero}* · ${tierTally(id, list)}`);
   w('');
-  list.forEach((t, i) => w(`${i + 1}. ${line(t)}`));
+  list.forEach(t => w(`- ${line(t, TL[tierOf(id, t.id)])}`));
   w('');
 }
 
@@ -116,13 +121,13 @@ w('## 4. Percorsi (6) — cosa c\'è dentro');
 w('');
 for (const id of PERCORSI_IDS) {
   const p = pathById.get(id); if (!p) continue;
-  const list = members(id).sort(rankSort);
+  const list = members(id).sort(byTier(id));
   const hero = HERO_OF[id] ? (BY.get(HERO_OF[id])?.title || HERO_OF[id]) : '—';
   w(`### ${p.title}  \`${id}\``);
   w(`*hero: ${hero}* · ${p.about ? p.about.slice(0, 90) + '…' : ''}`);
-  w(`${tally(list)}`);
+  w(`${tierTally(id, list)}`);
   w('');
-  list.forEach((t, i) => w(`${i + 1}. ${line(t)}`));
+  list.forEach(t => w(`- ${line(t, TL[tierOf(id, t.id)])}`));
   w('');
 }
 
@@ -131,9 +136,9 @@ w('## 5. Generi fuori griglia (raggiungibili solo da ricerca/URL)');
 w('');
 for (const id of ['slice-of-life', 'sport']) {
   const p = pathById.get(id); if (!p) continue;
-  const list = members(id).sort(rankSort);
-  w(`### ${p.title}  \`${id}\` — ${tally(list)}`);
-  list.forEach((t, i) => w(`${i + 1}. ${line(t)}`));
+  const list = members(id).sort(byTier(id));
+  w(`### ${p.title}  \`${id}\` — ${tierTally(id, list)}`);
+  list.forEach(t => w(`- ${line(t, TL[tierOf(id, t.id)])}`));
   w('');
 }
 

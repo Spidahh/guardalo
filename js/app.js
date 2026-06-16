@@ -46,9 +46,10 @@
   const GENRE_PATHS = GENRE_IDS.map(id => PATHS.find(p => p.id === id)).filter(Boolean);
   // Categorizzazione PRECISA della lista (i generi AniList sono troppo larghi e sbagliano:
   // es. Shangri-La ha tag Sci-Fi ma è isekai). Un titolo può stare in più categorie.
-  const FORCE_TOP = new Set(['jujutsu-kaisen']);
-  const isTopT = t => !!(t && (t.top || FORCE_TOP.has(t.id)));
   const CAT_MEMBERS = CAT.members || {};
+  // fasce per-genere: tiers[pathId][slug] = 'e' Essenziale | 'c' Consigliato | 'd' Da scoprire (default).
+  const TIERS = CAT.tiers || {};
+  const tierOf = (pid, slug) => (TIERS[pid] && TIERS[pid][slug]) || 'd';
   // immagine HERO di ogni categoria/percorso (editorial/categories.json → hero): scelta a mano, UNICA.
   const HERO_OF = CAT.hero || {};
   // membri di una categoria/percorso: per i generi = lista curata (CAT_MEMBERS) + extra non-inList; altrimenti i titoli del percorso
@@ -74,9 +75,8 @@
     }));
     return out;
   };
-  // ordinamento "dal migliore": prima i TOP della classifica utente, poi voto utente, poi AniList
+  // ordinamento "dal migliore": prima il tuo voto, poi il voto AniList
   const rankSort = (a, b) =>
-    (b.top ? 1 : 0) - (a.top ? 1 : 0) ||
     (b.userRating || 0) - (a.userRating || 0) ||
     (b.score10 || 0) - (a.score10 || 0);
 
@@ -464,11 +464,10 @@
       const why = opts.why ? `<span class="card-why">${esc(opts.why)}</span>` : '';
       const col = t.coverColor ? `style="--cc:${esc(t.coverColor)}"` : '';
       const rank = opts.rank ? `<span class="card-rank">${opts.rank}</span>` : '';
-      const topBadge = t.top ? `<span class="card-top" title="Imperdibile"><i class="ri-vip-crown-fill"></i></span>` : '';
-      return `<a class="card ${w ? 'is-watched' : ''} ${l ? 'is-later' : ''} ${t.top ? 'is-top' : ''}" data-card="${esc(t.id)}" data-band="${esc(t.lengthBand)}" href="/t/${esc(t.id)}" ${col}>
+      return `<a class="card ${w ? 'is-watched' : ''} ${l ? 'is-later' : ''}" data-card="${esc(t.id)}" data-band="${esc(t.lengthBand)}" href="/t/${esc(t.id)}" ${col}>
         <div class="card-poster">
           <img src="${esc(thumb(cover(t)))}" alt="${esc(t.title)}" loading="lazy" onload="this.classList.add('ld')" onerror="this.classList.add('ld')">
-          ${rank}${topBadge}
+          ${rank}
           <div class="card-marks">
             <button class="cm js-watch ${w ? 'on' : ''}" data-id="${esc(t.id)}" title="Visto" aria-label="Segna come visto"><i class="ri-check-line"></i></button>
             <button class="cm js-later ${l ? 'on' : ''}" data-id="${esc(t.id)}" title="Da vedere" aria-label="Aggiungi a Da vedere"><i class="ri-bookmark-line"></i></button>
@@ -542,7 +541,7 @@
             <div class="path-foot"><span class="path-start">Apri <i class="ri-arrow-right-line"></i></span></div>
           </div>
         </a>`;
-      const heroImg = [...TITLES].filter(t => t.top && t.bannerImage).sort(rankSort)[0] || [...TITLES].filter(t => t.top && t.coverImage).sort(rankSort)[0];
+      const heroImg = [...TITLES].filter(t => t.inList && t.bannerImage).sort(rankSort)[0] || [...TITLES].filter(t => t.bannerImage).sort(rankSort)[0];
       const genreBrowse = GENRE_PATHS.map(p => this.pathTile(p)).join('');
       const percorsiBrowse = PERCORSI_PATHS.map(p => this.pathTile(p)).join('');
       const facts = pickN(FACTS, 3);
@@ -691,22 +690,14 @@
         </div>
       </section>`;
 
-      // ogni percorso/genere: scheda introduttiva + Top + Da vedere + Consigliati
+      // ogni percorso/genere: scheda introduttiva + le 3 fasce (per-genere, da categories.json)
       {
-        // membri = titoli curati nel percorso + (per i generi) titoli della lista che combaciano col genere
         const members = catTitles(p);
-        const top = members.filter(t => t.inList && isTopT(t)).sort(rankSort);
-        const daVedere = members.filter(t => t.inList && !isTopT(t)).sort(rankSort);
-        const noPersonal = !top.length && !daVedere.length; // categoria interamente curata (es. classici)
-        const consigliati = members.filter(t => !t.inList).sort(rankSort).slice(0, noPersonal ? 24 : 6);
-        // se una categoria non ha "Essenziali" (nessun top globale) ma ha titoli in lista, promuovo
-        // i migliori (per voto/rank) DI quella categoria così apre comunque con una guida, dai titoli già presenti.
-        let essenziali = top, altriInList = daVedere;
-        if (!top.length && daVedere.length) {
-          const n = Math.min(4, daVedere.length);
-          essenziali = daVedere.slice(0, n);
-          altriInList = daVedere.slice(n);
-        }
+        const inTier = code => members.filter(t => tierOf(p.id, t.id) === code).sort(rankSort);
+        const essenziali = inTier('e');
+        const altriInList = inTier('c');
+        const consigliati = inTier('d');
+        const noPersonal = !essenziali.length && !altriInList.length; // solo "Da scoprire" → vetrina "I classici"
         const scheda = `
         <section class="wrap cat-intro-wrap">
           <div class="cat-intro" style="--accent:${esc(p.accent)}">
@@ -976,25 +967,28 @@
       this.adminGen = sel;
       const nameOf = id => (PATHS.find(p => p.id === id) || {}).title || id;
       const opts = ids.map(id => `<option value="${esc(id)}" ${id === sel ? 'selected' : ''}>${esc(nameOf(id))}</option>`).join('');
-      const mem = (cat.members[sel] || []).map(s => BY_ID.get(s)).filter(Boolean);
+      const tOrder = { e: 0, c: 1, d: 2 }, tLabel = { e: 'Essenziale', c: 'Consigliato', d: 'Da scoprire' };
+      const mem = (cat.members[sel] || []).map(s => BY_ID.get(s)).filter(Boolean)
+        .sort((a, b) => (tOrder[tierOf(sel, a.id)] - tOrder[tierOf(sel, b.id)]) || rankSort(a, b));
       const hero = (cat.hero || {})[sel] || '';
-      const rows = mem.map((t, i) => `
-        <li>
-          <span class="amr-pos">${i + 1}</span>
+      const cnt = { e: 0, c: 0, d: 0 }; mem.forEach(t => cnt[tierOf(sel, t.id)]++);
+      this._admCnt = cnt;
+      const tierBtns = t => ['e', 'c', 'd'].map(code =>
+        `<button data-aact="tier" data-tier="${code}" data-slug="${esc(t.id)}" class="atier atier-${code} ${tierOf(sel, t.id) === code ? 'on' : ''}" title="${tLabel[code]}">${code.toUpperCase()}</button>`).join('');
+      const rows = mem.map(t => `
+        <li class="tr-${tierOf(sel, t.id)}">
           <img src="${esc(thumbS(t.coverImage))}" alt="" loading="lazy">
-          <span class="amr-t">${esc(t.title)} ${t.top ? '<i class="ri-vip-crown-2-fill amr-top" title="top"></i>' : ''}${t.inList ? '' : '<span class="amr-extra">aggiunto</span>'}</span>
-          <span class="amr-act">
-            <button data-aact="up" data-slug="${esc(t.id)}" title="Su"><i class="ri-arrow-up-s-line"></i></button>
-            <button data-aact="down" data-slug="${esc(t.id)}" title="Giù"><i class="ri-arrow-down-s-line"></i></button>
-            <button data-aact="hero" data-slug="${esc(t.id)}" class="${hero === t.id ? 'on' : ''}" title="Immagine hero del genere"><i class="ri-image-line"></i></button>
-            <button data-aact="rm" data-slug="${esc(t.id)}" title="Togli dal genere"><i class="ri-close-line"></i></button>
-          </span>
+          <span class="amr-t">${esc(t.title)}${t.inList ? '' : '<span class="amr-extra">aggiunto</span>'}</span>
+          <span class="amr-tier">${tierBtns(t)}</span>
+          <button data-aact="hero" data-slug="${esc(t.id)}" class="amr-hero ${hero === t.id ? 'on' : ''}" title="Immagine hero del genere"><i class="ri-image-line"></i></button>
+          <button data-aact="rm" data-slug="${esc(t.id)}" class="amr-rm" title="Togli dal genere"><i class="ri-close-line"></i></button>
         </li>`).join('');
       return `
         <div class="admin-pick">
           <label>Genere: <select id="adminGenSel">${opts}</select></label>
-          <span class="admin-count">${mem.length} titoli · hero: <b>${esc(hero ? (BY_ID.get(hero)?.title || hero) : '—')}</b></span>
+          <span class="admin-count">${mem.length} titoli · <b class="t-e">${this._admCnt.e} Essenziali</b> · <b class="t-c">${this._admCnt.c} Consigliati</b> · <b class="t-d">${this._admCnt.d} Da scoprire</b> · hero: <b>${esc(hero ? (BY_ID.get(hero)?.title || hero) : '—')}</b></span>
         </div>
+        <p class="admin-hint">Clicca <b>E</b>/<b>C</b>/<b>D</b> per mettere ogni titolo in Essenziali, Consigliati o Da scoprire <i>in questo genere</i>. <i class="ri-image-line"></i> = immagine hero.</p>
         <div class="admin-addrow">
           <input id="adminAddMember" placeholder="Aggiungi un titolo a «${esc(nameOf(sel))}»…" autocomplete="off">
           <div id="adminAddSug" class="admin-sug"></div>
@@ -1019,7 +1013,7 @@
     adminTitleList(q) {
       if (!q) return '';
       const hits = TITLES.filter(t => t.title.toLowerCase().includes(q) || (t.titleRomaji || '').toLowerCase().includes(q)).slice(0, 8);
-      return hits.map(t => `<button data-aact="pick" data-slug="${esc(t.id)}">${esc(t.title)} ${t.top ? '★' : ''}${t.inList ? '' : ' <span>aggiunto</span>'}</button>`).join('') || '<span class="admin-hint">nessun risultato</span>';
+      return hits.map(t => `<button data-aact="pick" data-slug="${esc(t.id)}">${esc(t.title)}${t.inList ? '' : ' <span>aggiunto</span>'}</button>`).join('') || '<span class="admin-hint">nessun risultato</span>';
     }
     adminTitleEditor(t) {
       const cat = window.GUARDALO.categories || {};
@@ -1034,10 +1028,9 @@
         </div>
         <div class="admin-te-row">
           <label class="aswitch"><input type="checkbox" data-aact="inlist" data-slug="${esc(t.id)}" ${t.inList ? 'checked' : ''}> Nella tua lista</label>
-          <label class="aswitch"><input type="checkbox" data-aact="top" data-slug="${esc(t.id)}" ${t.top ? 'checked' : ''}> Top ★</label>
           <label class="arate">Tuo voto <input type="number" min="0" max="10" step="0.1" value="${t.userRating ?? ''}" data-aact="rate" data-slug="${esc(t.id)}" placeholder="—"></label>
         </div>
-        <div class="admin-te-genres"><span class="admin-te-lbl">Generi (clicca per aggiungere/togliere):</span><div class="agchips">${genres}</div></div>`;
+        <div class="admin-te-genres"><span class="admin-te-lbl">Generi (clicca per aggiungere/togliere — la fascia E/C/D si imposta nel tab «Generi»):</span><div class="agchips">${genres}</div></div>`;
     }
     adminAggiungi() {
       const pend = (this.adminPending || []).map((p, i) => `<li>${esc(p.title)}${p.year ? ` (${p.year})` : ''} <button data-aact="rmpend" data-i="${i}"><i class="ri-close-line"></i></button></li>`).join('');
@@ -1076,13 +1069,14 @@
       if (!a) return;
       const act = a.dataset.aact, slug = a.dataset.slug, gen = this.adminGen;
       const arr = this.adminMembersArr(gen);
+      const tiersOf = g => { const T = (window.GUARDALO.categories.tiers = window.GUARDALO.categories.tiers || {}); return (T[g] = T[g] || {}); };
       if (act === 'export') return this.adminExport();
-      else if (act === 'rm' && arr) { const i = arr.indexOf(slug); if (i >= 0) arr.splice(i, 1); }
-      else if ((act === 'up' || act === 'down') && arr) { const i = arr.indexOf(slug), j = i + (act === 'up' ? -1 : 1); if (i >= 0 && j >= 0 && j < arr.length) [arr[i], arr[j]] = [arr[j], arr[i]]; }
+      else if (act === 'rm' && arr) { const i = arr.indexOf(slug); if (i >= 0) arr.splice(i, 1); delete tiersOf(gen)[slug]; }
+      else if (act === 'tier') { tiersOf(gen)[slug] = a.dataset.tier; }
       else if (act === 'hero') { (window.GUARDALO.categories.hero = window.GUARDALO.categories.hero || {})[gen] = slug; }
-      else if (act === 'addmem' && arr) { if (!arr.includes(slug)) arr.push(slug); }
+      else if (act === 'addmem' && arr) { if (!arr.includes(slug)) arr.push(slug); tiersOf(gen)[slug] = 'd'; }
       else if (act === 'pick') { this.adminTitle = slug; }
-      else if (act === 'togglegen') { const ar = this.adminMembersArr(a.dataset.gen); if (ar) { const i = ar.indexOf(slug); if (i >= 0) ar.splice(i, 1); else ar.push(slug); } }
+      else if (act === 'togglegen') { const g = a.dataset.gen, ar = this.adminMembersArr(g); if (ar) { const i = ar.indexOf(slug); if (i >= 0) { ar.splice(i, 1); delete tiersOf(g)[slug]; } else { ar.push(slug); tiersOf(g)[slug] = 'd'; } } }
       else if (act === 'addpend') { const ti = document.getElementById('adminNewTitle'), yi = document.getElementById('adminNewYear'); const title = (ti.value || '').trim(); if (!title) return; (this.adminPending = this.adminPending || []).push({ title, year: yi.value ? +yi.value : null }); }
       else if (act === 'rmpend') { this.adminPending.splice(+a.dataset.i, 1); }
       else return;
@@ -1099,8 +1093,7 @@
       if (el.id === 'adminGenSel') { this.adminGen = el.value; this.adminRerender(); return; }
       const act = el.dataset && el.dataset.aact, t = BY_ID.get(el.dataset && el.dataset.slug);
       if (!t) return;
-      if (act === 'inlist') { t.inList = el.checked; if (!el.checked) { t.top = false; } }
-      else if (act === 'top') { t.top = el.checked; if (el.checked) t.inList = true; }
+      if (act === 'inlist') { t.inList = el.checked; }
       else if (act === 'rate') { const v = parseFloat(el.value); t.userRating = isNaN(v) ? null : v; if (!isNaN(v)) t.inList = true; }
       else return;
       this.adminDirty = true;
@@ -1108,9 +1101,9 @@
     }
     adminExport() {
       const cat = window.GUARDALO.categories || {};
-      const categories = { _nota: 'Tassonomia editabile: ordine generi/percorsi in griglia, appartenenza titoli ai generi (members), immagine hero. Letto da js/app.js e dai tool via dist/data.json. Dopo modifiche: npm run gen.', genreOrder: cat.genreOrder, percorsoOrder: cat.percorsoOrder, hero: cat.hero, members: cat.members };
+      const categories = { _nota: 'Tassonomia editabile. genreOrder/percorsoOrder = ordine in griglia; members = titoli di ogni genere; hero = immagine; tiers[id] = fascia di ogni titolo in quel genere/percorso (e=Essenziale, c=Consigliato, d=Da scoprire). Dopo modifiche: npm run gen.', genreOrder: cat.genreOrder, percorsoOrder: cat.percorsoOrder, hero: cat.hero, members: cat.members, tiers: cat.tiers || {} };
       const ranking = {};
-      TITLES.filter(t => t.inList).sort((a, b) => (b.userRating || 0) - (a.userRating || 0)).forEach(t => { ranking[t.id] = { rating: t.userRating ?? null, top: !!t.top }; });
+      TITLES.filter(t => t.inList).sort((a, b) => (b.userRating || 0) - (a.userRating || 0)).forEach(t => { ranking[t.id] = { rating: t.userRating ?? null }; });
       this.adminDownload('categories.json', JSON.stringify(categories, null, 2));
       this.adminDownload('user-ranking.json', JSON.stringify(ranking, null, 2));
       let extra = '';

@@ -561,8 +561,7 @@ async function cmdGen() {
             ...clean,
             title: ed.titleOverride || r.title,   // permette di forzare un titolo (es. inglese vs romaji)
             streaming,
-            inList: !!rankEd[r.id],   // true = è nella lista principale dell'utente (GitHub)
-            top: !!(rankEd[r.id] && rankEd[r.id].top),
+            inList: !!rankEd[r.id],   // true = è nella tua lista personale (da user-ranking.json)
             userRating: rankEd[r.id] ? (rankEd[r.id].rating ?? null) : null,
             hook: ed.hook || null,
             tone: ed.tone || [],
