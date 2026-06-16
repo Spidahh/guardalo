@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T21:47:43.579Z",
+  "generatedAt": "2026-06-16T21:58:55.356Z",
   "attribution": "Dati e immagini da AniList (anilist.co)",
   "count": 190,
   "titles": [
@@ -41711,5 +41711,78 @@
         "run-with-the-wind": "d"
       }
     }
+  },
+  "home": {
+    "hero": {
+      "kicker": "Guida agli anime · non un catalogo",
+      "title": "Cosa guardare, da dove iniziare, dove vederlo.",
+      "sub": "Anime scelti e spiegati uno per uno: atmosfera, durata reale e la piattaforma giusta. Senza spoiler, senza perdere tempo.",
+      "ctaText": "Sfoglia il catalogo",
+      "ctaLink": "/esplora"
+    },
+    "tiles": [
+      {
+        "icon": "ri-seedling-line",
+        "title": "Parto da zero",
+        "sub": "Guida passo passo per scoprire gli anime.",
+        "link": "/p/da-zero-a-otaku",
+        "heroSlug": "hunter-x-hunter"
+      },
+      {
+        "icon": "ri-skull-line",
+        "title": "Voglio roba adulta",
+        "sub": "Storie mature, complesse, senza compromessi.",
+        "link": "/p/seinen-e-maturo",
+        "heroSlug": "attack-on-titan"
+      },
+      {
+        "icon": "ri-time-line",
+        "title": "Ho poco tempo",
+        "sub": "Episodi brevi, film e serie compatte.",
+        "link": "/tempo/sera",
+        "heroSlug": "promare"
+      }
+    ],
+    "facts": [
+      "In Giappone «anime» indica qualsiasi cartone animato, anche straniero: è solo fuori dal Giappone che la parola è diventata sinonimo di animazione giapponese.",
+      "«Shōnen» e «seinen» non descrivono la storia ma il pubblico della rivista su cui esce: ragazzi il primo, adulti il secondo. Per questo un seinen può essere più crudo a parità di azione.",
+      "La lunghezza di una serie non si misura in stagioni ma in episodi per minuti: un film robusto può pesare quanto un corto di dodici puntate. Per questo qui trovi le fasce di tempo reali.",
+      "Gli isekai — storie di chi finisce catapultato in un altro mondo — sono diventati così tanti che alcuni concorsi giapponesi per esordienti li hanno vietati per un periodo.",
+      "Lo studio di animazione conta quanto il regista: lo stesso soggetto cambia faccia a seconda di chi lo disegna. Per questo in ogni scheda trovi lo studio e chi l’ha diretto.",
+      "Un «mecha» è un robot gigante pilotato; un «super robot» è il filone classico anni ’70 — Mazinga, Goldrake — da cui tutto è partito. Due cose diverse, spesso confuse.",
+      "Quasi ogni anime nasce da un manga o da una light novel: l’adattamento può tagliare, aggiungere o cambiare il finale. Quando capita, nelle dritte della scheda te lo segnaliamo.",
+      "Molte serie aprono lente e «normali» di proposito: costruiscono la quiete prima della svolta. È una scelta di scrittura, non un difetto di ritmo."
+    ],
+    "tempo": [
+      {
+        "key": "sera",
+        "label": "Una sera",
+        "sub": "Si comincia e si finisce stasera",
+        "icon": "ri-moon-clear-line",
+        "bands": [
+          "cortissimo",
+          "corto"
+        ]
+      },
+      {
+        "key": "weekend",
+        "label": "Un weekend",
+        "sub": "Una manciata di episodi da goderti con calma",
+        "icon": "ri-calendar-2-line",
+        "bands": [
+          "medio"
+        ]
+      },
+      {
+        "key": "maratona",
+        "label": "Maratona",
+        "sub": "Roba in cui perderti per un bel pezzo",
+        "icon": "ri-fire-line",
+        "bands": [
+          "lungo",
+          "lunghissimo"
+        ]
+      }
+    ]
   }
 }

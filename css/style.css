@@ -935,3 +935,21 @@ a.bento-tile, button.bento-tile { cursor: pointer; }
 .admin-count .t-e { color: var(--gold); }
 .admin-count .t-c { color: var(--accent); }
 .admin-count .t-d { color: var(--ink-faint); }
+
+/* tab HOME del pannello */
+.ah-h { font-size: 15px; font-weight: 700; margin: 22px 0 10px; display: flex; align-items: center; gap: 12px; }
+.ah-add { font-size: 12px; font-weight: 600; color: var(--accent); padding: 4px 10px; border-radius: 7px; border: 1px solid var(--accent-soft); }
+.ah-add:hover { background: var(--accent-soft); }
+.ah-field { display: flex; flex-direction: column; gap: 4px; margin-bottom: 10px; }
+.ah-field span { font-size: 12px; color: var(--ink-soft); font-weight: 600; }
+.ah-field input, .ah-field textarea { padding: 9px 12px; border-radius: 9px; border: 1px solid var(--line-2); background: var(--surface); color: var(--ink); font: inherit; font-size: 14px; resize: vertical; }
+.ah-two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.ah-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 14px; }
+.ah-card { background: var(--surface); border-radius: 11px; padding: 12px; }
+.ah-card .ah-field { margin-bottom: 7px; }
+.ah-card .ah-field input, .ah-card .ah-field textarea { background: var(--bg); }
+.ah-key { display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+.ah-del { margin-top: 4px; font-size: 12px; width: auto; padding: 4px 8px; }
+.ah-facts { display: flex; flex-direction: column; gap: 8px; }
+.ah-row { display: flex; gap: 8px; align-items: flex-start; }
+.ah-row textarea { flex: 1; padding: 9px 12px; border-radius: 9px; border: 1px solid var(--line-2); background: var(--surface); color: var(--ink); font: inherit; font-size: 14px; resize: vertical; }

@@ -12,6 +12,11 @@
   const BY_ID  = new Map(TITLES.map(t => [t.id, t]));
   // tassonomia (fonte unica: editorial/categories.json → dist data). Ordine generi/percorsi, membri, hero.
   const CAT    = DATA.categories || {};
+  // contenuti home + liste tempo (editorial/home.json → dist data).
+  const HOME   = DATA.home || {};
+  // liste "Quanto tempo hai?" — fonte UNICA (prima erano duplicate/incoerenti in 3 punti).
+  const TEMPO  = HOME.tempo || [];
+  const tempoBands = key => (TEMPO.find(t => t.key === key) || {}).bands || [];
 
   // ── tassonomia generi (EN grezzo → IT) ────────────────────────────────────
   const GENRE_IT = {
@@ -86,17 +91,8 @@
   const lenHint = t => t.format === 'MOVIE' ? 'un film, una sera' : t.lengthHint;
 
 
-  // ── "Lo sapevi?" — curiosità/info utili, scritte bene (soggetto chiaro, niente ripetizioni) ──
-  const FACTS = [
-    'In Giappone «anime» indica qualsiasi cartone animato, anche straniero: è solo fuori dal Giappone che la parola è diventata sinonimo di animazione giapponese.',
-    '«Shōnen» e «seinen» non descrivono la storia ma il pubblico della rivista su cui esce: ragazzi il primo, adulti il secondo. Per questo un seinen può essere più crudo a parità di azione.',
-    'La lunghezza di una serie non si misura in stagioni ma in episodi per minuti: un film robusto può pesare quanto un corto di dodici puntate. Per questo qui trovi le fasce di tempo reali.',
-    'Gli isekai — storie di chi finisce catapultato in un altro mondo — sono diventati così tanti che alcuni concorsi giapponesi per esordienti li hanno vietati per un periodo.',
-    'Lo studio di animazione conta quanto il regista: lo stesso soggetto cambia faccia a seconda di chi lo disegna. Per questo in ogni scheda trovi lo studio e chi l’ha diretto.',
-    'Un «mecha» è un robot gigante pilotato; un «super robot» è il filone classico anni ’70 — Mazinga, Goldrake — da cui tutto è partito. Due cose diverse, spesso confuse.',
-    'Quasi ogni anime nasce da un manga o da una light novel: l’adattamento può tagliare, aggiungere o cambiare il finale. Quando capita, nelle dritte della scheda te lo segnaliamo.',
-    'Molte serie aprono lente e «normali» di proposito: costruiscono la quiete prima della svolta. È una scelta di scrittura, non un difetto di ritmo.',
-  ];
+  // ── "Lo sapevi?" — curiosità (da editorial/home.json) ──
+  const FACTS = HOME.facts || [];
   // pesca n elementi diversi a caso (varietà a ogni visita, senza dipendere dalla data)
   const pickN = (arr, n) => { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1));[a[i], a[j]] = [a[j], a[i]]; } return a.slice(0, n); };
 
@@ -428,9 +424,9 @@
         if (!b) return;
         cf.querySelectorAll('.cf-chip').forEach(c => c.classList.toggle('on', c === b));
         const sel = b.dataset.band;
-        const map = { sera: ['cortissimo', 'corto'], medio: ['medio'], maratona: ['lungo', 'lunghissimo'] };
+        const bands = tempoBands(sel);
         document.querySelectorAll('.grid > .card[data-band]').forEach(card => {
-          const show = sel === 'all' || (map[sel] && map[sel].includes(card.dataset.band));
+          const show = sel === 'all' || bands.includes(card.dataset.band);
           card.style.display = show ? '' : 'none';
         });
         // nasconde le sezioni rimaste vuote
@@ -545,6 +541,9 @@
       const genreBrowse = GENRE_PATHS.map(p => this.pathTile(p)).join('');
       const percorsiBrowse = PERCORSI_PATHS.map(p => this.pathTile(p)).join('');
       const facts = pickN(FACTS, 3);
+      const H = HOME.hero || {};
+      const tempo = HOME.tempo || [];
+      const tiles = HOME.tiles || [];
       return `
       <div class="wrap">
         <div class="home-grid">
@@ -553,11 +552,11 @@
               ${heroImg ? `<div class="home-hero-art"><img src="${esc(heroImg.bannerImage || cover(heroImg))}" alt="" loading="eager" onload="this.classList.add('ld')" onerror="this.classList.add('ld')"></div>` : ''}
               <span class="home-hero-veil"></span>
               <div class="home-hero-in">
-                <span class="hh-kicker">Guida agli anime · non un catalogo</span>
-                <h1 class="hh-title">Cosa guardare, da dove iniziare, dove vederlo.</h1>
-                <p class="hh-sub">Anime scelti e spiegati uno per uno: atmosfera, durata reale e la piattaforma giusta. Senza spoiler, senza perdere tempo.</p>
+                <span class="hh-kicker">${esc(H.kicker || '')}</span>
+                <h1 class="hh-title">${esc(H.title || '')}</h1>
+                <p class="hh-sub">${esc(H.sub || '')}</p>
                 <div class="hh-cta">
-                  <a class="btn-red" href="/esplora"><i class="ri-compass-3-line"></i> Sfoglia il catalogo</a>
+                  <a class="btn-red" href="${esc(H.ctaLink || '/esplora')}"><i class="ri-compass-3-line"></i> ${esc(H.ctaText || 'Sfoglia il catalogo')}</a>
                   <button class="hh-btn ghost js-surprise"><i class="ri-shuffle-line"></i> Sorprendimi</button>
                 </div>
               </div>
@@ -568,9 +567,7 @@
               <div class="rail-h-row"><h3 class="rail-h"><i class="ri-compass-3-line"></i> Aiutami a scegliere</h3></div>
               <p class="rail-q">Quanto tempo hai?</p>
               <div class="rail-times">
-                <a href="/tempo/sera"><i class="ri-moon-clear-line"></i> Una sera</a>
-                <a href="/tempo/weekend"><i class="ri-calendar-2-line"></i> Un weekend</a>
-                <a href="/tempo/maratona"><i class="ri-fire-line"></i> Una maratona</a>
+                ${tempo.map(t => `<a href="/tempo/${esc(t.key)}"><i class="${esc(t.icon)}"></i> ${esc(t.label)}</a>`).join('')}
               </div>
             </section>
             <section class="rail-sec">
@@ -583,9 +580,7 @@
         <section class="home-sec home-full">
           <div class="sec-divider"><span class="sd-label"><i class="ri-compass-3-line"></i> Da dove vuoi partire</span><span class="sd-line"></span></div>
           <div class="qgrid">
-            ${feat('/p/da-zero-a-otaku', 'ri-seedling-line', 'Parto da zero', 'Guida passo passo per scoprire gli anime.', bnr('hunter-x-hunter'))}
-            ${feat('/p/seinen-e-maturo', 'ri-skull-line', 'Voglio roba adulta', 'Storie mature, complesse, senza compromessi.', bnr('attack-on-titan'))}
-            ${feat('/tempo/sera', 'ri-time-line', 'Ho poco tempo', 'Episodi brevi, film e serie compatte.', bnr('promare'))}
+            ${tiles.map(t => feat(esc(t.link), esc(t.icon), esc(t.title), esc(t.sub), bnr(t.heroSlug))).join('')}
           </div>
         </section>
 
@@ -713,9 +708,7 @@
           <div class="cat-filter" id="catFilter">
             <span class="cf-lbl">Quanto tempo hai?</span>
             <button class="cf-chip on" data-band="all">Tutti</button>
-            <button class="cf-chip" data-band="sera">Una sera</button>
-            <button class="cf-chip" data-band="medio">Qualche settimana</button>
-            <button class="cf-chip" data-band="maratona">Maratona</button>
+            ${TEMPO.map(t => `<button class="cf-chip" data-band="${esc(t.key)}">${esc(t.label)}</button>`).join('')}
           </div>
         </section>`;
         const sec = (label, ic, list) => list.length ? `
@@ -859,9 +852,7 @@
         <p>Tutti i titoli, dal migliore. Salta a un genere o scegli quanto tempo hai. <button class="link-btn" id="esploraSearch">o cerca un titolo →</button></p>
         <div class="time-chips">
           <span class="time-chips-lbl">Quanto tempo hai?</span>
-          <a class="time-chip" href="/tempo/sera">Una sera</a>
-          <a class="time-chip" href="/tempo/weekend">Un weekend</a>
-          <a class="time-chip" href="/tempo/maratona">Maratona</a>
+          ${TEMPO.map(t => `<a class="time-chip" href="/tempo/${esc(t.key)}">${esc(t.label)}</a>`).join('')}
         </div>
         <div class="genre-chips">${genreChips}</div>
         ${this.factBox()}
@@ -899,16 +890,11 @@
 
     // ── VISTA: QUANTO TEMPO HAI ──────────────────────────────────────────────────
     viewTempo(band) {
-      const map = {
-        sera: { label: 'Una sera', sub: 'Si comincia e si finisce stasera', bands: ['cortissimo', 'corto'] },
-        weekend: { label: 'Un weekend', sub: 'Una manciata di episodi da goderti con calma', bands: ['medio'] },
-        maratona: { label: 'Maratona', sub: 'Roba in cui perderti per un bel pezzo', bands: ['lungo', 'lunghissimo'] },
-      };
-      const m = map[band];
+      const m = TEMPO.find(t => t.key === band);
       if (!m) return this.notFound();
-      const list = TITLES.filter(t => m.bands.includes(t.lengthBand)).sort((a, b) => (b.score10 || 0) - (a.score10 || 0));
-      const chips = Object.entries(map).map(([k, v]) =>
-        `<a class="time-chip ${k === band ? 'on' : ''}" href="/tempo/${k}">${esc(v.label)}</a>`).join('');
+      const list = TITLES.filter(t => (m.bands || []).includes(t.lengthBand)).sort((a, b) => (b.score10 || 0) - (a.score10 || 0));
+      const chips = TEMPO.map(v =>
+        `<a class="time-chip ${v.key === band ? 'on' : ''}" href="/tempo/${esc(v.key)}">${esc(v.label)}</a>`).join('');
       return `
       <section class="wrap esplora-head">
         <a class="back" href="/esplora"><i class="ri-arrow-left-line"></i> Esplora</a>
@@ -941,6 +927,7 @@
           <div class="admin-tabs">
             <button class="atab ${tab === 'generi' ? 'on' : ''}" data-atab="generi">Generi e percorsi</button>
             <button class="atab ${tab === 'titoli' ? 'on' : ''}" data-atab="titoli">Titoli</button>
+            <button class="atab ${tab === 'home' ? 'on' : ''}" data-atab="home">Home</button>
             <button class="atab ${tab === 'aggiungi' ? 'on' : ''}" data-atab="aggiungi">Aggiungi</button>
           </div>
           <div class="admin-bar-r">
@@ -954,11 +941,47 @@
     adminBody(tab) {
       if (tab === 'titoli') return this.adminTitoli();
       if (tab === 'aggiungi') return this.adminAggiungi();
+      if (tab === 'home') return this.adminHome();
       return this.adminGeneri();
     }
     adminMembersArr(id) {
       const cat = window.GUARDALO.categories || {};
-      return (cat.members && cat.members[id]) || null;   // editiamo solo i generi (i percorsi stanno in paths.json)
+      return (cat.members && cat.members[id]) || null;   // membri di generi E percorsi (fonte unica)
+    }
+    // ── tab HOME: hero, scorciatoie, "Lo sapevi", liste tempo (editorial/home.json) ──
+    adminHome() {
+      const h = window.GUARDALO.home || (window.GUARDALO.home = {});
+      const hero = h.hero || (h.hero = {});
+      const f = (path, val, label, ta) => `<label class="ah-field"><span>${esc(label)}</span>${ta ? `<textarea data-hset="${path}" rows="2">${esc(val || '')}</textarea>` : `<input data-hset="${path}" value="${esc(val || '')}" autocomplete="off">`}</label>`;
+      const tiles = (h.tiles || []).map((t, i) => `<div class="ah-card">
+        ${f(`tiles.${i}.title`, t.title, 'Titolo')}${f(`tiles.${i}.sub`, t.sub, 'Sottotitolo')}
+        ${f(`tiles.${i}.link`, t.link, 'Link (es. /p/seinen-e-maturo, /tempo/sera)')}${f(`tiles.${i}.icon`, t.icon, 'Icona (es. ri-skull-line)')}
+        ${f(`tiles.${i}.heroSlug`, t.heroSlug, 'Immagine: slug di un titolo')}
+        <button class="amr-rm ah-del" data-aact="rmtile" data-i="${i}"><i class="ri-close-line"></i> togli scorciatoia</button>
+      </div>`).join('');
+      const facts = (h.facts || []).map((x, i) => `<div class="ah-row"><textarea data-hset="facts.${i}" rows="2">${esc(x)}</textarea><button class="amr-rm" data-aact="rmfact" data-i="${i}"><i class="ri-close-line"></i></button></div>`).join('');
+      const tempo = (h.tempo || []).map((t, i) => `<div class="ah-card"><span class="ah-key">${esc(t.key)}</span>
+        ${f(`tempo.${i}.label`, t.label, 'Etichetta')}${f(`tempo.${i}.sub`, t.sub, 'Sottotitolo')}
+        ${f(`tempo.${i}.bands`, (t.bands || []).join(', '), 'Fasce: cortissimo, corto, medio, lungo, lunghissimo')}</div>`).join('');
+      return `
+        <h3 class="ah-h">Hero (testa della home)</h3>
+        ${f('hero.kicker', hero.kicker, 'Sopra-titolo')}${f('hero.title', hero.title, 'Titolo grande', true)}${f('hero.sub', hero.sub, 'Sottotitolo', true)}
+        <div class="ah-two">${f('hero.ctaText', hero.ctaText, 'Bottone: testo')}${f('hero.ctaLink', hero.ctaLink, 'Bottone: link')}</div>
+        <h3 class="ah-h">Scorciatoie «Da dove vuoi partire» <button class="ah-add" data-aact="addtile"><i class="ri-add-line"></i> aggiungi</button></h3>
+        <div class="ah-grid">${tiles}</div>
+        <h3 class="ah-h">«Lo sapevi?» (${(h.facts || []).length} curiosità) <button class="ah-add" data-aact="addfact"><i class="ri-add-line"></i> aggiungi</button></h3>
+        <div class="ah-facts">${facts}</div>
+        <h3 class="ah-h">«Quanto tempo hai?»</h3>
+        <div class="ah-grid">${tempo}</div>`;
+    }
+    adminHomeSet(path, value) {
+      const h = window.GUARDALO.home || (window.GUARDALO.home = {});
+      const parts = path.split('.');
+      let o = h;
+      for (let i = 0; i < parts.length - 1; i++) { const k = parts[i]; o = o[k] = o[k] || (/^\d+$/.test(parts[i + 1]) ? [] : {}); }
+      if (path.endsWith('.bands')) value = value.split(',').map(s => s.trim()).filter(Boolean);
+      o[parts[parts.length - 1]] = value;
+      this.adminDirty = true;
     }
     adminGeneri() {
       const cat = window.GUARDALO.categories || {};
@@ -1081,12 +1104,17 @@
       else if (act === 'togglegen') { const g = a.dataset.gen, ar = this.adminMembersArr(g); if (ar) { const i = ar.indexOf(slug); if (i >= 0) { ar.splice(i, 1); delete tiersOf(g)[slug]; } else { ar.push(slug); tiersOf(g)[slug] = 'd'; } } }
       else if (act === 'addpend') { const ti = document.getElementById('adminNewTitle'), yi = document.getElementById('adminNewYear'); const title = (ti.value || '').trim(); if (!title) return; (this.adminPending = this.adminPending || []).push({ title, year: yi.value ? +yi.value : null }); }
       else if (act === 'rmpend') { this.adminPending.splice(+a.dataset.i, 1); }
+      else if (act === 'addtile') { const h = window.GUARDALO.home; (h.tiles = h.tiles || []).push({ icon: 'ri-star-line', title: 'Nuova scorciatoia', sub: '', link: '/', heroSlug: '' }); }
+      else if (act === 'rmtile') { window.GUARDALO.home.tiles.splice(+a.dataset.i, 1); }
+      else if (act === 'addfact') { const h = window.GUARDALO.home; (h.facts = h.facts || []).push('Nuova curiosità…'); }
+      else if (act === 'rmfact') { window.GUARDALO.home.facts.splice(+a.dataset.i, 1); }
       else return;
       if (act !== 'export' && act !== 'pick') this.adminDirty = true;
       this.adminRerender();
     }
     adminInput(e) {
       const el = e.target;
+      if (el.dataset && el.dataset.hset) { this.adminHomeSet(el.dataset.hset, el.value); return; }   // campo home: non ri-renderizzo (tengo il focus)
       if (el.id === 'adminAddMember') { const s = document.getElementById('adminAddSug'); if (s) s.innerHTML = this.adminMemberSug(el.value.toLowerCase().trim()); }
       else if (el.id === 'adminTSearch') { this.adminTQ = el.value; const l = document.getElementById('adminTList'); if (l) l.innerHTML = this.adminTitleList(el.value.toLowerCase().trim()); }
     }
@@ -1108,11 +1136,13 @@
       TITLES.filter(t => t.inList).sort((a, b) => (b.userRating || 0) - (a.userRating || 0)).forEach(t => { ranking[t.id] = { rating: t.userRating ?? null }; });
       this.adminDownload('categories.json', JSON.stringify(categories, null, 2));
       this.adminDownload('user-ranking.json', JSON.stringify(ranking, null, 2));
+      const home = window.GUARDALO.home || {};
+      this.adminDownload('home.json', JSON.stringify({ _nota: 'Contenuti home + liste tempo. Dopo modifiche: npm run gen.', ...home }, null, 2));
       let extra = '';
       if (this.adminPending && this.adminPending.length) { this.adminDownload('seed-da-aggiungere.json', JSON.stringify(this.adminPending, null, 2)); extra = ' + seed-da-aggiungere.json'; }
       this.adminDirty = false;
       this.adminRerender();
-      this.toast(`✓ Scaricati categories.json e user-ranking.json${extra}. Mettili in editorial/ e fai npm run gen.`, 'ok');
+      this.toast(`✓ Scaricati categories.json, user-ranking.json e home.json${extra}. Mettili in editorial/ e fai npm run gen.`, 'ok');
     }
     adminDownload(name, text) {
       const blob = new Blob([text + '\n'], { type: 'application/json' });
