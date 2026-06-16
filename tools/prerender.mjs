@@ -29,29 +29,12 @@ const TITLES = data.titles, PATHS = data.paths;
 const BY_ID = new Map(TITLES.map(t => [t.id, t]));
 const itGenre = g => ({ Action: 'Azione', Adventure: 'Avventura', Comedy: 'Commedia', Drama: 'Drammatico', Fantasy: 'Fantasy', Horror: 'Horror', Mecha: 'Mecha', Music: 'Musicale', Mystery: 'Mistero', Psychological: 'Psicologico', Romance: 'Romantico', 'Sci-Fi': 'Fantascienza', 'Slice of Life': 'Slice of Life', Sports: 'Sport', Supernatural: 'Soprannaturale', Thriller: 'Thriller' }[g] || g);
 const rankSort = (a, b) => (b.top ? 1 : 0) - (a.top ? 1 : 0) || (b.userRating || 0) - (a.userRating || 0) || (b.score10 || 0) - (a.score10 || 0);
-// FONTE UNICA: GENRE_IDS (generi mostrati) e CAT_MEMBERS (appartenenza titoli→genere) vivono in
-// js/app.js. Li leggiamo da lì a build-time, così le pagine SEO restano sempre allineate all'app —
-// niente liste duplicate da tenere in sync a mano.
-function extractConst(src, name) {
-  const at = src.indexOf('const ' + name + ' =');
-  if (at < 0) return null;
-  let i = src.indexOf('=', at) + 1;
-  while (i < src.length && src[i] !== '{' && src[i] !== '[') i++;
-  const open = src[i], close = open === '{' ? '}' : ']';
-  let depth = 0, str = null;
-  for (let j = i; j < src.length; j++) {
-    const ch = src[j], prev = src[j - 1];
-    if (str) { if (ch === str && prev !== '\\') str = null; continue; }
-    if (ch === '"' || ch === "'" || ch === '`') { str = ch; continue; }
-    if (ch === open) depth++;
-    else if (ch === close && --depth === 0) return eval('(' + src.slice(i, j + 1) + ')');
-  }
-  return null;
-}
-const appSrc = await readFile(join(ROOT, 'js', 'app.js'), 'utf8');
-const GENRE_IDS = extractConst(appSrc, 'GENRE_IDS');
-const CAT_MEMBERS = extractConst(appSrc, 'CAT_MEMBERS');
-if (!GENRE_IDS || !CAT_MEMBERS) throw new Error('prerender: impossibile leggere GENRE_IDS/CAT_MEMBERS da js/app.js');
+// FONTE UNICA: la tassonomia (generi mostrati + appartenenza titoli→genere) sta in
+// editorial/categories.json, già inclusa in dist/data.json da `npm run gen`. Niente duplicati.
+const CAT = data.categories || {};
+const GENRE_IDS = CAT.genreOrder || [];
+const CAT_MEMBERS = CAT.members || {};
+if (!GENRE_IDS.length || !Object.keys(CAT_MEMBERS).length) throw new Error('prerender: manca data.categories — esegui `npm run gen`');
 const pathTitles = p => { const seen = new Set(), out = []; (p.levels || []).forEach(l => (l.titles || []).forEach(id => { if (!seen.has(id)) { seen.add(id); const t = BY_ID.get(id); if (t) out.push(t); } })); return out; };
 // titoli di un percorso/genere — stessa logica di catTitles() in js/app.js: per i generi = membri
 // curati CAT_MEMBERS + eventuali titoli non-inList nei levels; per i percorsi = i levels.

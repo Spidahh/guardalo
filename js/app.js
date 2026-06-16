@@ -10,6 +10,8 @@
   const TITLES = DATA.titles || [];
   const PATHS  = DATA.paths || [];
   const BY_ID  = new Map(TITLES.map(t => [t.id, t]));
+  // tassonomia (fonte unica: editorial/categories.json → dist data). Ordine generi/percorsi, membri, hero.
+  const CAT    = DATA.categories || {};
 
   // ── tassonomia generi (EN grezzo → IT) ────────────────────────────────────
   const GENRE_IT = {
@@ -40,48 +42,15 @@
   // ── categorie di genere "pulite" (mostrate in home, in quest'ordine) ─────────
   // i percorsi "meta" (da-zero, canone, chicche) e quelli poco amati (sport, slice)
   // NON entrano nella griglia generi — restano raggiungibili da ricerca/Esplora.
-  const GENRE_IDS = ['battle-shonen', 'seinen-e-maturo', 'isekai', 'fantasy', 'sci-fi', 'mecha', 'super-robot',
-    'mindfuck', 'horror-e-disagio', 'sopravvivenza', 'storici', 'vendetta', 'viaggi-nel-tempo',
-    'crimine', 'supereroi', 'romance', 'commedia', 'cinema-dautore'];
+  const GENRE_IDS = CAT.genreOrder || [];
   const GENRE_PATHS = GENRE_IDS.map(id => PATHS.find(p => p.id === id)).filter(Boolean);
   // Categorizzazione PRECISA della lista (i generi AniList sono troppo larghi e sbagliano:
   // es. Shangri-La ha tag Sci-Fi ma è isekai). Un titolo può stare in più categorie.
   const FORCE_TOP = new Set(['jujutsu-kaisen']);
   const isTopT = t => !!(t && (t.top || FORCE_TOP.has(t.id)));
-  const CAT_MEMBERS = {
-    'battle-shonen': ['jujutsu-kaisen', 'hunter-x-hunter', 'naruto', 'bleach', 'one-piece', 'jojo-s-bizarre-adventure', 'fullmetal-alchemist-brotherhood', 'dragon-ball', 'demon-slayer', 'my-hero-academia', 'black-clover', 'kaiju-no-8', 'solo-leveling', 'mob-psycho-100', 'one-punch-man', 'gurren-lagann', 'kill-la-kill', 'tower-of-god', 'saint-seiya', 'akame-ga-kill', 'hell-s-paradise-jigokuraku', 'gachiakuta', 'my-hero-academia-vigilantes', 'to-be-hero-x', 'darwin-s-game'],
-    'seinen-e-maturo': ['berserk', 'vinland-saga', 'monster', 'attack-on-titan', 'cyberpunk-edgerunners', 'cowboy-bebop', 'kingdom', '91-days', 'golden-kamuy', 'gangsta', 'samurai-champloo', 'chainsaw-man', '86-eighty-six', 'akudama-drive', 'devilman-crybaby', 'hellsing-ultimate', 'gantz', 'deadman-wonderland', 'tokyo-revengers', 'trigun', 'wolf-s-rain', 'death-parade'],
-    'isekai': ['re-zero-starting-life-in-another-world', 'overlord', 'sword-art-online', 'the-rising-of-the-shield-hero', 'shangri-la-frontier', 'solo-leveling', 'gate', 'grimgar-of-fantasy-and-ash', 'the-eminence-in-shadow', 'reincarnated-as-a-sword', 'the-world-s-finest-assassin-gets-reincarnated-in-another-world-as-an-aristocrat', 'failure-frame-i-became-the-strongest', 'handyman-saitou-in-another-world', 'drifters', 'release-that-witch', 'petals-of-reincarnation', 'sentence-to-be-hero'],
-    'fantasy': ['frieren', 'fullmetal-alchemist-brotherhood', 'hunter-x-hunter', 'made-in-abyss', 'claymore', 'ranking-of-kings', 'berserk', 'devil-may-cry', 'burn-the-witch', 'bna-brand-new-animal', 'daemons-of-the-shadow-realm', 'wistoria-wand-and-sword', 'fate-franchise-completo', 'demon-slayer', 'black-clover', 'tower-of-god'],
-    'sci-fi': ['steins-gate', 'cyberpunk-edgerunners', 'cowboy-bebop', 'ghost-in-the-shell', 'akira', 'parasyte-the-maxim', 'heavenly-delusion', 'dan-da-dan', 'deca-dence', 'terra-formars', 'lazarus', 'wolf-s-rain', 'trigun', 'akudama-drive'],
-    'mecha': ['neon-genesis-evangelion', 'gurren-lagann', 'code-geass', '86-eighty-six', 'pluto', 'promare', 'flcl'],
-    'super-robot': ['mazinger-z', 'ufo-robot-grendizer', 'getter-robo', 'mobile-suit-gundam', 'great-mazinger', 'daltanious'],
-    'sopravvivenza': ['future-diary', 'darwin-s-game', 'the-promised-neverland', 'akudama-drive', 'deadman-wonderland', 'gantz'],
-    'storici': ['vinland-saga', 'kingdom', 'golden-kamuy', 'samurai-champloo', '91-days'],
-    'vendetta': ['berserk', 'vinland-saga', '91-days', 'claymore', 'akame-ga-kill', 'hell-s-paradise-jigokuraku'],
-    'viaggi-nel-tempo': ['steins-gate', 'erased', 're-zero-starting-life-in-another-world', 'summer-time-rendering', 'tokyo-revengers'],
-    'crimine': ['91-days', 'gangsta', 'cowboy-bebop', 'akudama-drive'],
-    'supereroi': ['my-hero-academia', 'my-hero-academia-vigilantes', 'one-punch-man', 'to-be-hero-x'],
-    'mindfuck': ['death-note', 'steins-gate', 'monster', 'neon-genesis-evangelion', 'code-geass', 'erased', 'the-promised-neverland', 'summer-time-rendering', 'death-parade', 'future-diary', 'parasyte-the-maxim', 'pluto', 're-zero-starting-life-in-another-world', 'ajin-demi-human', 'heavenly-delusion'],
-    'horror-e-disagio': ['berserk', 'chainsaw-man', 'devilman-crybaby', 'parasyte-the-maxim', 'the-promised-neverland', 'made-in-abyss', 'hellsing-ultimate', 'claymore', 'gantz', 'terra-formars', 'ajin-demi-human', 'deadman-wonderland', 'future-diary', 'akame-ga-kill', 'summer-time-rendering', 'hell-s-paradise-jigokuraku'],
-    'romance': ['sword-art-online', 're-zero-starting-life-in-another-world', 'tokyo-revengers', 'dan-da-dan'],
-    'commedia': ['spy-x-family', 'one-punch-man', 'mob-psycho-100', 'dan-da-dan', 'the-eminence-in-shadow', 'handyman-saitou-in-another-world', 'kill-la-kill', 'abenobashi-magical-shopping-street', 'golden-kamuy'],
-    'cinema-dautore': ['akira', 'ghost-in-the-shell', 'principessa-mononoke', 'la-citta-incantata', 'promare'],
-  };
-  // immagine HERO di ogni categoria/percorso: scelta a mano, UNICA (niente doppioni tra categorie)
-  // e rappresentativa. Tutti questi titoli hanno un bannerImage orizzontale vero (no copertine stirate).
-  const HERO_OF = {
-    // generi
-    'battle-shonen': 'jujutsu-kaisen', 'seinen-e-maturo': 'monster', 'isekai': 're-zero-starting-life-in-another-world',
-    'fantasy': 'frieren', 'sci-fi': 'cyberpunk-edgerunners', 'mecha': 'neon-genesis-evangelion',
-    'super-robot': 'mazinger-z', 'mindfuck': 'death-note', 'horror-e-disagio': 'chainsaw-man',
-    'sopravvivenza': 'the-promised-neverland', 'storici': 'vinland-saga', 'vendetta': 'berserk',
-    'viaggi-nel-tempo': 'steins-gate', 'crimine': '91-days', 'supereroi': 'my-hero-academia',
-    'romance': 'sword-art-online', 'commedia': 'spy-x-family', 'cinema-dautore': 'akira',
-    // percorsi
-    'da-zero-a-otaku': 'fullmetal-alchemist-brotherhood', 'capolavori': 'cowboy-bebop', 'azione': 'demon-slayer',
-    'antieroi': 'code-geass', 'il-canone': 'ghost-in-the-shell', 'chicche-e-deep-cut': 'heavenly-delusion',
-  };
+  const CAT_MEMBERS = CAT.members || {};
+  // immagine HERO di ogni categoria/percorso (editorial/categories.json → hero): scelta a mano, UNICA.
+  const HERO_OF = CAT.hero || {};
   // membri di una categoria/percorso: per i generi = lista curata (CAT_MEMBERS) + extra non-inList; altrimenti i titoli del percorso
   const catTitles = (p) => {
     if (p && CAT_MEMBERS[p.id]) {
@@ -94,7 +63,7 @@
   };
   // percorsi "tematici" (non di genere): journey curati che possono riusare gli stessi titoli.
   // Tutti i percorsi sono liste curate ordinate dal migliore (niente livelli/progressione).
-  const PERCORSI_IDS = ['da-zero-a-otaku', 'capolavori', 'azione', 'antieroi', 'il-canone', 'chicche-e-deep-cut'];
+  const PERCORSI_IDS = CAT.percorsoOrder || [];
   const PERCORSI_PATHS = PERCORSI_IDS.map(id => PATHS.find(p => p.id === id)).filter(Boolean);
   // titoli di un percorso, deduplicati nell'ordine dei livelli
   const pathTitles = p => {

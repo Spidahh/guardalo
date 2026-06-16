@@ -32,6 +32,7 @@ const EDIT_TITLES = join(EDIT_DIR, 'titles.json');
 const EDIT_PATHS  = join(EDIT_DIR, 'paths.json');
 const EDIT_TIPS   = join(EDIT_DIR, 'tips.json');
 const EDIT_RANK   = join(EDIT_DIR, 'user-ranking.json'); // {slug:{rating,top}} — la classifica dell'utente
+const EDIT_CAT    = join(EDIT_DIR, 'categories.json');   // tassonomia: ordine generi/percorsi, membri, hero
 const OUT_JS      = join(ROOT, 'js', 'data.js');
 const OUT_JSON    = join(ROOT, 'dist', 'data.json');
 
@@ -498,6 +499,7 @@ async function cmdGen() {
     const paths    = existsSync(EDIT_PATHS)  ? JSON.parse(await readFile(EDIT_PATHS, 'utf8'))  : [];
     const tipsEd   = existsSync(EDIT_TIPS)   ? JSON.parse(await readFile(EDIT_TIPS, 'utf8'))   : {};
     const rankEd   = existsSync(EDIT_RANK)   ? JSON.parse(await readFile(EDIT_RANK, 'utf8'))   : {};
+    const catEd    = existsSync(EDIT_CAT)    ? JSON.parse(await readFile(EDIT_CAT, 'utf8'))    : {};
 
     // mappe di cross-link
     const byAnilist = new Map();         // anilistId → slug
@@ -580,12 +582,14 @@ async function cmdGen() {
         ...p,
         levels: p.levels.map(l => ({ title: l.title, why: l.why, titles: [...(l.titles || []), ...(l.bonus || [])] })),
     }));
+    const { _nota, ...categories } = catEd;   // tassonomia (generi/percorsi/membri/hero) — fonte unica
     const payload = {
         generatedAt: new Date().toISOString(),
         attribution: 'Dati e immagini da AniList (anilist.co)',
         count: titles.length,
         titles,
         paths: mergedPaths,
+        categories,
     };
 
     // js/data.js — globale (zero build, funziona ovunque incluso file://)

@@ -14,34 +14,17 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
-// estrae una const oggetto/array letterale da js/app.js (fonte unica della tassonomia)
-function extractConst(src, name) {
-  const at = src.indexOf('const ' + name + ' =');
-  if (at < 0) return null;
-  let i = src.indexOf('=', at) + 1;
-  while (i < src.length && src[i] !== '{' && src[i] !== '[') i++;
-  const open = src[i], close = open === '{' ? '}' : ']';
-  let depth = 0, str = null;
-  for (let j = i; j < src.length; j++) {
-    const ch = src[j], prev = src[j - 1];
-    if (str) { if (ch === str && prev !== '\\') str = null; continue; }
-    if (ch === '"' || ch === "'" || ch === '`') { str = ch; continue; }
-    if (ch === open) depth++;
-    else if (ch === close && --depth === 0) return eval('(' + src.slice(i, j + 1) + ')');
-  }
-  return null;
-}
-
 const data = JSON.parse(await readFile(join(ROOT, 'dist', 'data.json'), 'utf8'));
 const TITLES = data.titles, PATHS = data.paths;
 const BY = new Map(TITLES.map(t => [t.id, t]));
-const appSrc = await readFile(join(ROOT, 'js', 'app.js'), 'utf8');
-const CAT_MEMBERS = extractConst(appSrc, 'CAT_MEMBERS');
-const HERO_OF     = extractConst(appSrc, 'HERO_OF');
-const GENRE_IDS   = extractConst(appSrc, 'GENRE_IDS');
-const PERCORSI_IDS = extractConst(appSrc, 'PERCORSI_IDS');
-if (!CAT_MEMBERS || !HERO_OF || !GENRE_IDS || !PERCORSI_IDS)
-  throw new Error('inventario: non riesco a leggere CAT_MEMBERS/HERO_OF/GENRE_IDS/PERCORSI_IDS da js/app.js');
+// tassonomia: fonte unica editorial/categories.json, già in dist/data.json (npm run gen)
+const CAT = data.categories || {};
+const CAT_MEMBERS = CAT.members || {};
+const HERO_OF     = CAT.hero || {};
+const GENRE_IDS   = CAT.genreOrder || [];
+const PERCORSI_IDS = CAT.percorsoOrder || [];
+if (!GENRE_IDS.length || !Object.keys(CAT_MEMBERS).length)
+  throw new Error('inventario: manca data.categories — esegui prima `npm run gen`');
 
 const pathById = new Map(PATHS.map(p => [p.id, p]));
 const pathTitles = p => { const s = new Set(), o = []; (p?.levels || []).forEach(l => (l.titles || []).forEach(id => { if (!s.has(id)) { s.add(id); const t = BY.get(id); if (t) o.push(t); } })); return o; };

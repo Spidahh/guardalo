@@ -93,7 +93,7 @@ Dopo aver toccato un file ✅: `npm run gen` (rigenera i dati) → bumpa `?v=` i
 25.  ○ **Dororo** (2019) · Serie · AniList 8.1 · `dororo`
 
 ### Isekai  `isekai`
-*hero: Re:ZERO -Starting Life in Another World-* · 17 titoli — 17 tuoi ● / 0 aggiunti ○ / 0 top ★
+*hero: Re:ZERO -Starting Life in Another World-* · 19 titoli — 17 tuoi ● / 2 aggiunti ○ / 0 top ★
 
 1.  ● **Solo Leveling** (2024) · Serie · tuo voto 9 · AniList 8.1 · `solo-leveling`
 2.  ● **Sentenced to Be a Hero** (2026) · Serie · tuo voto 9 · AniList 8.1 · `sentence-to-be-hero`
@@ -110,11 +110,13 @@ Dopo aver toccato un file ✅: `npm run gen` (rigenera i dati) → bumpa `?v=` i
 13.  ● **The Eminence in Shadow** (2022) · Serie · tuo voto 7 · AniList 8.1 · `the-eminence-in-shadow`
 14.  ● **DRIFTERS** (2016) · Serie · tuo voto 7 · AniList 7.5 · `drifters`
 15.  ● **The World's Finest Assassin Gets Reincarnated in Another World as an Aristocrat** (2021) · Serie · tuo voto 7 · AniList 7.2 · `the-world-s-finest-assassin-gets-reincarnated-in-another-world-as-an-aristocrat`
-16.  ● **Release that Witch** (2026) · ONA · AniList 8 · `release-that-witch`
-17.  ● **Petals of Reincarnation** (2026) · Serie · AniList 6 · `petals-of-reincarnation`
+16.  ○ **Mushoku Tensei: Jobless Reincarnation** (2021) · Serie · AniList 8.2 · `mushoku-tensei`
+17.  ● **Release that Witch** (2026) · ONA · AniList 8 · `release-that-witch`
+18.  ○ **That Time I Got Reincarnated as a Slime** (2018) · Serie · AniList 8 · `tensura`
+19.  ● **Petals of Reincarnation** (2026) · Serie · AniList 6 · `petals-of-reincarnation`
 
 ### Fantasy  `fantasy`
-*hero: Frieren: Beyond Journey’s End* · 16 titoli — 16 tuoi ● / 0 aggiunti ○ / 3 top ★
+*hero: Frieren: Beyond Journey’s End* · 17 titoli — 16 tuoi ● / 1 aggiunti ○ / 3 top ★
 
 1. ★● **Fullmetal Alchemist: Brotherhood** (2009) · Serie · tuo voto 10 · AniList 9 · `fullmetal-alchemist-brotherhood`
 2. ★● **Berserk** (1997) · Serie · tuo voto 10 · AniList 8.4 · `berserk`
@@ -131,10 +133,11 @@ Dopo aver toccato un file ✅: `npm run gen` (rigenera i dati) → bumpa `?v=` i
 13.  ● **Tower of God** (2020) · Serie · tuo voto 7 · AniList 7.4 · `tower-of-god`
 14.  ● **BNA** (2020) · ONA · tuo voto 7 · AniList 7.2 · `bna-brand-new-animal`
 15.  ● **BURN THE WITCH** (2020) · ONA · tuo voto 7 · AniList 7 · `burn-the-witch`
-16.  ● **Daemons of the Shadow Realm** (2026) · Serie · AniList 7.8 · `daemons-of-the-shadow-realm`
+16.  ○ **Delicious in Dungeon** (2024) · Serie · AniList 8.5 · `dungeon-meshi`
+17.  ● **Daemons of the Shadow Realm** (2026) · Serie · AniList 7.8 · `daemons-of-the-shadow-realm`
 
 ### Fantascienza  `sci-fi`
-*hero: Cyberpunk: Edgerunners* · 14 titoli — 14 tuoi ● / 0 aggiunti ○ / 2 top ★
+*hero: Cyberpunk: Edgerunners* · 18 titoli — 14 tuoi ● / 4 aggiunti ○ / 2 top ★
 
 1. ★● **Steins;Gate** (2011) · Serie · tuo voto 9 · AniList 8.9 · `steins-gate`
 2. ★● **Cyberpunk: Edgerunners** (2022) · ONA · tuo voto 9 · AniList 8.5 · `cyberpunk-edgerunners`
@@ -150,9 +153,13 @@ Dopo aver toccato un file ✅: `npm run gen` (rigenera i dati) → bumpa `?v=` i
 12.  ● **LAZARUS** (2025) · Serie · tuo voto 8 · AniList 7 · `lazarus`
 13.  ● **DECA-DENCE** (2020) · Serie · tuo voto 7 · AniList 7.1 · `deca-dence`
 14.  ● **Terra Formars** (2014) · Serie · tuo voto 7 · AniList 6.5 · `terra-formars`
+15.  ○ **Vivy -Fluorite Eye's Song-** (2021) · Serie · AniList 8.2 · `vivy-fluorite-eyes-song`
+16.  ○ **PSYCHO-PASS** (2012) · Serie · AniList 8.1 · `psycho-pass`
+17.  ○ **From the New World** (2012) · Serie · AniList 8 · `from-the-new-world`
+18.  ○ **Ergo Proxy** (2006) · Serie · AniList 7.6 · `ergo-proxy`
 
 ### Mecha  `mecha`
-*hero: Neon Genesis Evangelion* · 7 titoli — 7 tuoi ● / 0 aggiunti ○ / 2 top ★
+*hero: Neon Genesis Evangelion* · 10 titoli — 7 tuoi ● / 3 aggiunti ○ / 2 top ★
 
 1. ★● **Gurren Lagann** (2007) · Serie · tuo voto 9 · AniList 8.5 · `gurren-lagann`
 2. ★● **Neon Genesis Evangelion** (1995) · Serie · tuo voto 9 · AniList 8.3 · `neon-genesis-evangelion`
@@ -161,6 +168,9 @@ Dopo aver toccato un file ✅: `npm run gen` (rigenera i dati) → bumpa `?v=` i
 5.  ● **86 EIGHTY-SIX** (2021) · Serie · tuo voto 8 · AniList 8.3 · `86-eighty-six`
 6.  ● **FLCL** (2000) · OVA · tuo voto 8 · AniList 7.9 · `flcl`
 7.  ● **Promare** (2019) · Film · tuo voto 8 · AniList 7.7 · `promare`
+8.  ○ **Mobile Suit GUNDAM Iron Blooded Orphans** (2015) · Serie · AniList 7.8 · `gundam-iron-blooded-orphans`
+9.  ○ **Eureka Seven** (2005) · Serie · AniList 7.8 · `eureka-seven`
+10.  ○ **Mobile Suit Gundam: The Witch from Mercury** (2022) · Serie · AniList 7.8 · `gundam-witch-from-mercury`
 
 ### Super Robot Classici  `super-robot`
 *hero: Mazinger Z* · 6 titoli — 0 tuoi ● / 6 aggiunti ○ / 0 top ★
@@ -173,7 +183,7 @@ Dopo aver toccato un file ✅: `npm run gen` (rigenera i dati) → bumpa `?v=` i
 6.  ○ **Future Robot Daltanious** (1979) · Serie · AniList 6.4 · `daltanious`
 
 ### Mindfuck  `mindfuck`
-*hero: Death Note* · 21 titoli — 15 tuoi ● / 6 aggiunti ○ / 4 top ★
+*hero: Death Note* · 22 titoli — 15 tuoi ● / 7 aggiunti ○ / 4 top ★
 
 1. ★● **Steins;Gate** (2011) · Serie · tuo voto 9 · AniList 8.9 · `steins-gate`
 2. ★● **Death Note** (2006) · Serie · tuo voto 9 · AniList 8.4 · `death-note`
@@ -195,10 +205,11 @@ Dopo aver toccato un file ✅: `npm run gen` (rigenera i dati) → bumpa `?v=` i
 18.  ○ **Serial Experiments Lain** (1998) · Serie · AniList 8 · `serial-experiments-lain`
 19.  ○ **Terror in Resonance** (2014) · Serie · AniList 7.8 · `terror-in-resonance`
 20.  ○ **ID: INVADED** (2020) · Serie · AniList 7.7 · `id-invaded`
-21.  ○ **Paranoia Agent** (2004) · Serie · AniList 7.6 · `paranoia-agent`
+21.  ○ **Ergo Proxy** (2006) · Serie · AniList 7.6 · `ergo-proxy`
+22.  ○ **Paranoia Agent** (2004) · Serie · AniList 7.6 · `paranoia-agent`
 
 ### Horror e Disagio  `horror-e-disagio`
-*hero: Chainsaw Man* · 21 titoli — 16 tuoi ● / 5 aggiunti ○ / 2 top ★
+*hero: Chainsaw Man* · 22 titoli — 16 tuoi ● / 6 aggiunti ○ / 2 top ★
 
 1. ★● **Berserk** (1997) · Serie · tuo voto 10 · AniList 8.4 · `berserk`
 2. ★● **Summer Time Rendering** (2022) · Serie · tuo voto 9 · AniList 8.3 · `summer-time-rendering`
@@ -216,11 +227,12 @@ Dopo aver toccato un file ✅: `npm run gen` (rigenera i dati) → bumpa `?v=` i
 14.  ● **AJIN: Demi-Human** (2016) · Serie · tuo voto 7 · AniList 7.1 · `ajin-demi-human`
 15.  ● **Deadman Wonderland** (2011) · Serie · tuo voto 7 · AniList 6.7 · `deadman-wonderland`
 16.  ● **Terra Formars** (2014) · Serie · tuo voto 7 · AniList 6.5 · `terra-formars`
-17.  ○ **Tokyo Ghoul** (2014) · Serie · AniList 7.6 · `tokyo-ghoul`
-18.  ○ **Dark Gathering** (2023) · Serie · AniList 7.5 · `dark-gathering`
-19.  ○ **Shiki** (2010) · Serie · AniList 7.5 · `shiki`
-20.  ○ **When They Cry** (2006) · Serie · AniList 7.5 · `higurashi`
-21.  ○ **Another** (2012) · Serie · AniList 7.1 · `another`
+17.  ○ **From the New World** (2012) · Serie · AniList 8 · `from-the-new-world`
+18.  ○ **Tokyo Ghoul** (2014) · Serie · AniList 7.6 · `tokyo-ghoul`
+19.  ○ **Dark Gathering** (2023) · Serie · AniList 7.5 · `dark-gathering`
+20.  ○ **Shiki** (2010) · Serie · AniList 7.5 · `shiki`
+21.  ○ **When They Cry** (2006) · Serie · AniList 7.5 · `higurashi`
+22.  ○ **Another** (2012) · Serie · AniList 7.1 · `another`
 
 ### Sopravvivenza  `sopravvivenza`
 *hero: The Promised Neverland* · 6 titoli — 6 tuoi ● / 0 aggiunti ○ / 0 top ★
@@ -261,12 +273,13 @@ Dopo aver toccato un file ✅: `npm run gen` (rigenera i dati) → bumpa `?v=` i
 5.  ● **Tokyo Revengers** (2021) · Serie · tuo voto 7 · AniList 7.7 · `tokyo-revengers`
 
 ### Crimine e Gangster  `crimine`
-*hero: 91 Days* · 4 titoli — 4 tuoi ● / 0 aggiunti ○ / 0 top ★
+*hero: 91 Days* · 5 titoli — 4 tuoi ● / 1 aggiunti ○ / 0 top ★
 
 1.  ● **Cowboy Bebop** (1998) · Serie · tuo voto 9 · AniList 8.6 · `cowboy-bebop`
 2.  ● **GANGSTA.** (2015) · Serie · tuo voto 9 · AniList 7.1 · `gangsta`
 3.  ● **91 Days** (2016) · Serie · tuo voto 8 · AniList 7.6 · `91-days`
 4.  ● **Akudama Drive** (2020) · Serie · tuo voto 8 · AniList 7.5 · `akudama-drive`
+5.  ○ **PSYCHO-PASS** (2012) · Serie · AniList 8.1 · `psycho-pass`
 
 ### Supereroi  `supereroi`
 *hero: My Hero Academia* · 4 titoli — 4 tuoi ● / 0 aggiunti ○ / 0 top ★
@@ -702,18 +715,8 @@ Dopo aver toccato un file ✅: `npm run gen` (rigenera i dati) → bumpa `?v=` i
 
 ## 7. Controllo automatico
 
-- **Titoli in NESSUN genere né percorso** (solo ricerca/Esplora): 11
+- **Titoli in NESSUN genere né percorso** (solo ricerca/Esplora): 1
   -  ○ **The Apothecary Diaries** (2023) · Serie · AniList 8.8 · `the-apothecary-diaries`
-  -  ○ **Delicious in Dungeon** (2024) · Serie · AniList 8.5 · `dungeon-meshi`
-  -  ○ **Mushoku Tensei: Jobless Reincarnation** (2021) · Serie · AniList 8.2 · `mushoku-tensei`
-  -  ○ **Vivy -Fluorite Eye's Song-** (2021) · Serie · AniList 8.2 · `vivy-fluorite-eyes-song`
-  -  ○ **PSYCHO-PASS** (2012) · Serie · AniList 8.1 · `psycho-pass`
-  -  ○ **That Time I Got Reincarnated as a Slime** (2018) · Serie · AniList 8 · `tensura`
-  -  ○ **From the New World** (2012) · Serie · AniList 8 · `from-the-new-world`
-  -  ○ **Mobile Suit GUNDAM Iron Blooded Orphans** (2015) · Serie · AniList 7.8 · `gundam-iron-blooded-orphans`
-  -  ○ **Eureka Seven** (2005) · Serie · AniList 7.8 · `eureka-seven`
-  -  ○ **Mobile Suit Gundam: The Witch from Mercury** (2022) · Serie · AniList 7.8 · `gundam-witch-from-mercury`
-  -  ○ **Ergo Proxy** (2006) · Serie · AniList 7.6 · `ergo-proxy`
 - **Titoli in 4+ categorie** (molto trasversali): 27
   - Berserk → in 7 categorie `berserk`
   - Vinland Saga → in 7 categorie `vinland-saga`
@@ -730,7 +733,7 @@ Dopo aver toccato un file ✅: `npm run gen` (rigenera i dati) → bumpa `?v=` i
   - Neon Genesis Evangelion → in 5 categorie `neon-genesis-evangelion`
   - Code Geass: Lelouch of the Rebellion → in 5 categorie `code-geass`
   - DAN DA DAN → in 5 categorie `dan-da-dan`
-- **Generi con meno di 5 titoli**: crimine (4), supereroi (4)
+- **Generi con meno di 5 titoli**: supereroi (4)
 - **Titoli senza scheda editoriale (hook)**: nessuno ✓
 - **Titoli senza copertina**: nessuno ✓
 
