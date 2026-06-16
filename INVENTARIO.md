@@ -8,7 +8,7 @@
 ## 1. Riepilogo
 
 - **190 titoli** totali: **97 tuoi** ● + **93 aggiunti** ○ · 94 con tuo voto
-- Fasce (somma su tutti i generi/percorsi): **97 Essenziali** · 171 Consigliati · 31 Da scoprire
+- Fasce (somma su tutti i generi/percorsi): **106 Essenziali** · 167 Consigliati · 27 Da scoprire
 - **18 generi** (in griglia) · **6 percorsi** · 2 generi fuori griglia (slice-of-life, sport)
 - Per formato: Serie: 149 · Film: 30 · ONA: 8 · OVA: 3
 - Per stato: Concluso: 187 · In corso: 3
@@ -31,19 +31,18 @@ Dopo aver toccato un file ✅: `npm run gen` (rigenera i dati) → bumpa `?v=` i
 ## 3. Generi (18) — cosa c'è dentro
 
 ### Battle Shōnen  `battle-shonen`
-*hero: JUJUTSU KAISEN* · 27 titoli — 8 Essenziali / 17 Consigliati / 2 Da scoprire
+*hero: JUJUTSU KAISEN* · 26 titoli — 8 Essenziali / 12 Consigliati / 6 Da scoprire
 
-- [Essenziale] ● **Fullmetal Alchemist: Brotherhood** (2009) · Serie · tuo voto 10 · AniList 9 · `fullmetal-alchemist-brotherhood`
 - [Essenziale] ● **ONE PIECE** (1999) · Serie · tuo voto 10 · AniList 8.7 · `one-piece`
 - [Essenziale] ● **Naruto** (2002) · Serie · tuo voto 10 · AniList 8 · `naruto`
 - [Essenziale] ● **JoJo's Bizarre Adventure (TV)** (2012) · Serie · tuo voto 10 · AniList 7.7 · `jojo-s-bizarre-adventure`
 - [Essenziale] ● **Hunter x Hunter (2011)** (2011) · Serie · tuo voto 9 · AniList 8.9 · `hunter-x-hunter`
-- [Essenziale] ● **Gurren Lagann** (2007) · Serie · tuo voto 9 · AniList 8.5 · `gurren-lagann`
 - [Essenziale] ● **JUJUTSU KAISEN** (2020) · Serie · tuo voto 9 · AniList 8.4 · `jujutsu-kaisen`
+- [Essenziale] ● **Demon Slayer: Kimetsu no Yaiba** (2019) · Serie · tuo voto 9 · AniList 8.3 · `demon-slayer`
+- [Essenziale] ● **Solo Leveling** (2024) · Serie · tuo voto 9 · AniList 8.1 · `solo-leveling`
 - [Essenziale] ● **Bleach** (2004) · Serie · tuo voto 9 · AniList 7.9 · `bleach`
+- [Consigliato] ● **Fullmetal Alchemist: Brotherhood** (2009) · Serie · tuo voto 10 · AniList 9 · `fullmetal-alchemist-brotherhood`
 - [Consigliato] ● **Mob Psycho 100** (2016) · Serie · tuo voto 9 · AniList 8.4 · `mob-psycho-100`
-- [Consigliato] ● **Demon Slayer: Kimetsu no Yaiba** (2019) · Serie · tuo voto 9 · AniList 8.3 · `demon-slayer`
-- [Consigliato] ● **Solo Leveling** (2024) · Serie · tuo voto 9 · AniList 8.1 · `solo-leveling`
 - [Consigliato] ● **Hell’s Paradise** (2023) · Serie · tuo voto 9 · AniList 8 · `hell-s-paradise-jigokuraku`
 - [Consigliato] ● **Kill la Kill** (2013) · Serie · tuo voto 9 · AniList 7.9 · `kill-la-kill`
 - [Consigliato] ● **Dragon Ball** (1986) · Serie · tuo voto 9 · AniList 7.8 · `dragon-ball`
@@ -54,22 +53,24 @@ Dopo aver toccato un file ✅: `npm run gen` (rigenera i dati) → bumpa `?v=` i
 - [Consigliato] ● **My Hero Academia** (2016) · Serie · tuo voto 8 · AniList 7.7 · `my-hero-academia`
 - [Consigliato] ● **Saint Seiya: Knights of the Zodiac** (1986) · Serie · tuo voto 8 · AniList 7.3 · `saint-seiya`
 - [Consigliato] ● **Akame ga Kill!** (2014) · Serie · tuo voto 8 · AniList 7.3 · `akame-ga-kill`
-- [Consigliato] ● **To Be Hero X** (2025) · ONA · tuo voto 7 · AniList 8.5 · `to-be-hero-x`
-- [Consigliato] ● **My Hero Academia: Vigilantes** (2025) · Serie · tuo voto 7 · AniList 7.6 · `my-hero-academia-vigilantes`
-- [Consigliato] ● **Tower of God** (2020) · Serie · tuo voto 7 · AniList 7.4 · `tower-of-god`
-- [Consigliato] ● **Darwin's Game** (2020) · Serie · tuo voto 7 · AniList 7 · `darwin-s-game`
+- [Da scoprire] ● **Gurren Lagann** (2007) · Serie · tuo voto 9 · AniList 8.5 · `gurren-lagann`
+- [Da scoprire] ● **To Be Hero X** (2025) · ONA · tuo voto 7 · AniList 8.5 · `to-be-hero-x`
+- [Da scoprire] ● **My Hero Academia: Vigilantes** (2025) · Serie · tuo voto 7 · AniList 7.6 · `my-hero-academia-vigilantes`
+- [Da scoprire] ● **Tower of God** (2020) · Serie · tuo voto 7 · AniList 7.4 · `tower-of-god`
 - [Da scoprire] ○ **Yu Yu Hakusho: Ghostfiles** (1992) · Serie · AniList 8.3 · `yu-yu-hakusho`
 - [Da scoprire] ○ **Dr. STONE** (2019) · Serie · AniList 8.1 · `dr-stone`
 
 ### Seinen e Roba Adulta  `seinen-e-maturo`
-*hero: Monster* · 25 titoli — 3 Essenziali / 19 Consigliati / 3 Da scoprire
+*hero: Monster* · 27 titoli — 5 Essenziali / 19 Consigliati / 3 Da scoprire
 
-- [Essenziale] ● **Attack on Titan** (2013) · Serie · tuo voto 10 · AniList 8.5 · `attack-on-titan`
 - [Essenziale] ● **Berserk** (1997) · Serie · tuo voto 10 · AniList 8.4 · `berserk`
+- [Essenziale] ● **Vinland Saga** (2019) · Serie · tuo voto 9 · AniList 8.7 · `vinland-saga`
+- [Essenziale] ● **Cowboy Bebop** (1998) · Serie · tuo voto 9 · AniList 8.6 · `cowboy-bebop`
 - [Essenziale] ● **Cyberpunk: Edgerunners** (2022) · ONA · tuo voto 9 · AniList 8.5 · `cyberpunk-edgerunners`
-- [Consigliato] ● **Vinland Saga** (2019) · Serie · tuo voto 9 · AniList 8.7 · `vinland-saga`
-- [Consigliato] ● **Cowboy Bebop** (1998) · Serie · tuo voto 9 · AniList 8.6 · `cowboy-bebop`
+- [Essenziale] ● **Made in Abyss** (2017) · Serie · tuo voto 9 · AniList 8.5 · `made-in-abyss`
+- [Consigliato] ● **Attack on Titan** (2013) · Serie · tuo voto 10 · AniList 8.5 · `attack-on-titan`
 - [Consigliato] ● **Samurai Champloo** (2004) · Serie · tuo voto 9 · AniList 8.4 · `samurai-champloo`
+- [Consigliato] ● **Sentenced to Be a Hero** (2026) · Serie · tuo voto 9 · AniList 8.1 · `sentence-to-be-hero`
 - [Consigliato] ● **Kingdom** (2012) · Serie · tuo voto 9 · AniList 7.4 · `kingdom`
 - [Consigliato] ● **GANGSTA.** (2015) · Serie · tuo voto 9 · AniList 7.1 · `gangsta`
 - [Consigliato] ● **Monster** (2004) · Serie · tuo voto 8 · AniList 8.8 · `monster`
@@ -91,12 +92,12 @@ Dopo aver toccato un file ✅: `npm run gen` (rigenera i dati) → bumpa `?v=` i
 - [Da scoprire] ○ **Dororo** (2019) · Serie · AniList 8.1 · `dororo`
 
 ### Isekai  `isekai`
-*hero: Re:ZERO -Starting Life in Another World-* · 19 titoli — 4 Essenziali / 13 Consigliati / 2 Da scoprire
+*hero: Re:ZERO -Starting Life in Another World-* · 20 titoli — 3 Essenziali / 17 Consigliati / 0 Da scoprire
 
 - [Essenziale] ● **Solo Leveling** (2024) · Serie · tuo voto 9 · AniList 8.1 · `solo-leveling`
-- [Essenziale] ● **Sentenced to Be a Hero** (2026) · Serie · tuo voto 9 · AniList 8.1 · `sentence-to-be-hero`
 - [Essenziale] ● **Shangri-La Frontier** (2023) · Serie · tuo voto 9 · AniList 8 · `shangri-la-frontier`
 - [Essenziale] ● **Grimgar of Fantasy and Ash** (2016) · Serie · tuo voto 9 · AniList 7.4 · `grimgar-of-fantasy-and-ash`
+- [Consigliato] ● **Sentenced to Be a Hero** (2026) · Serie · tuo voto 9 · AniList 8.1 · `sentence-to-be-hero`
 - [Consigliato] ● **Re:ZERO -Starting Life in Another World-** (2016) · Serie · tuo voto 8 · AniList 8.1 · `re-zero-starting-life-in-another-world`
 - [Consigliato] ● **Overlord** (2015) · Serie · tuo voto 8 · AniList 7.7 · `overlord`
 - [Consigliato] ● **The Rising of the Shield Hero** (2019) · Serie · tuo voto 8 · AniList 7.7 · `the-rising-of-the-shield-hero`
@@ -107,20 +108,21 @@ Dopo aver toccato un file ✅: `npm run gen` (rigenera i dati) → bumpa `?v=` i
 - [Consigliato] ● **Failure Frame: I Became the Strongest and Annihilated Everything with Low-Level Spells** (2024) · Serie · tuo voto 8 · AniList 6.3 · `failure-frame-i-became-the-strongest`
 - [Consigliato] ● **The Eminence in Shadow** (2022) · Serie · tuo voto 7 · AniList 8.1 · `the-eminence-in-shadow`
 - [Consigliato] ● **DRIFTERS** (2016) · Serie · tuo voto 7 · AniList 7.5 · `drifters`
+- [Consigliato] ● **Tower of God** (2020) · Serie · tuo voto 7 · AniList 7.4 · `tower-of-god`
 - [Consigliato] ● **The World's Finest Assassin Gets Reincarnated in Another World as an Aristocrat** (2021) · Serie · tuo voto 7 · AniList 7.2 · `the-world-s-finest-assassin-gets-reincarnated-in-another-world-as-an-aristocrat`
+- [Consigliato] ○ **Mushoku Tensei: Jobless Reincarnation** (2021) · Serie · AniList 8.2 · `mushoku-tensei`
 - [Consigliato] ● **Release that Witch** (2026) · ONA · AniList 8 · `release-that-witch`
+- [Consigliato] ○ **That Time I Got Reincarnated as a Slime** (2018) · Serie · AniList 8 · `tensura`
 - [Consigliato] ● **Petals of Reincarnation** (2026) · Serie · AniList 6 · `petals-of-reincarnation`
-- [Da scoprire] ○ **Mushoku Tensei: Jobless Reincarnation** (2021) · Serie · AniList 8.2 · `mushoku-tensei`
-- [Da scoprire] ○ **That Time I Got Reincarnated as a Slime** (2018) · Serie · AniList 8 · `tensura`
 
 ### Fantasy  `fantasy`
-*hero: Frieren: Beyond Journey’s End* · 17 titoli — 3 Essenziali / 13 Consigliati / 1 Da scoprire
+*hero: Frieren: Beyond Journey’s End* · 17 titoli — 5 Essenziali / 11 Consigliati / 1 Da scoprire
 
 - [Essenziale] ● **Fullmetal Alchemist: Brotherhood** (2009) · Serie · tuo voto 10 · AniList 9 · `fullmetal-alchemist-brotherhood`
 - [Essenziale] ● **Berserk** (1997) · Serie · tuo voto 10 · AniList 8.4 · `berserk`
 - [Essenziale] ● **Hunter x Hunter (2011)** (2011) · Serie · tuo voto 9 · AniList 8.9 · `hunter-x-hunter`
-- [Consigliato] ● **Made in Abyss** (2017) · Serie · tuo voto 9 · AniList 8.5 · `made-in-abyss`
-- [Consigliato] ● **Demon Slayer: Kimetsu no Yaiba** (2019) · Serie · tuo voto 9 · AniList 8.3 · `demon-slayer`
+- [Essenziale] ● **Made in Abyss** (2017) · Serie · tuo voto 9 · AniList 8.5 · `made-in-abyss`
+- [Essenziale] ● **Demon Slayer: Kimetsu no Yaiba** (2019) · Serie · tuo voto 9 · AniList 8.3 · `demon-slayer`
 - [Consigliato] ● **Ranking of Kings** (2021) · Serie · tuo voto 8 · AniList 8.3 · `ranking-of-kings`
 - [Consigliato] ● **Fate/Zero** (2011) · Serie · tuo voto 8 · AniList 8.1 · `fate-franchise-completo`
 - [Consigliato] ● **Black Clover** (2017) · Serie · tuo voto 8 · AniList 7.9 · `black-clover`
@@ -135,14 +137,14 @@ Dopo aver toccato un file ✅: `npm run gen` (rigenera i dati) → bumpa `?v=` i
 - [Da scoprire] ○ **Delicious in Dungeon** (2024) · Serie · AniList 8.5 · `dungeon-meshi`
 
 ### Fantascienza  `sci-fi`
-*hero: Cyberpunk: Edgerunners* · 18 titoli — 2 Essenziali / 12 Consigliati / 4 Da scoprire
+*hero: Cyberpunk: Edgerunners* · 18 titoli — 4 Essenziali / 10 Consigliati / 4 Da scoprire
 
 - [Essenziale] ● **Steins;Gate** (2011) · Serie · tuo voto 9 · AniList 8.9 · `steins-gate`
 - [Essenziale] ● **Cyberpunk: Edgerunners** (2022) · ONA · tuo voto 9 · AniList 8.5 · `cyberpunk-edgerunners`
+- [Essenziale] ● **DAN DA DAN** (2024) · Serie · tuo voto 9 · AniList 8.3 · `dan-da-dan`
+- [Essenziale] ● **Ghost in the Shell** (1995) · Film · tuo voto 9 · AniList 8 · `ghost-in-the-shell`
 - [Consigliato] ● **Cowboy Bebop** (1998) · Serie · tuo voto 9 · AniList 8.6 · `cowboy-bebop`
-- [Consigliato] ● **DAN DA DAN** (2024) · Serie · tuo voto 9 · AniList 8.3 · `dan-da-dan`
 - [Consigliato] ● **Heavenly Delusion** (2023) · Serie · tuo voto 9 · AniList 8.1 · `heavenly-delusion`
-- [Consigliato] ● **Ghost in the Shell** (1995) · Film · tuo voto 9 · AniList 8 · `ghost-in-the-shell`
 - [Consigliato] ● **Akira** (1988) · Film · tuo voto 9 · AniList 7.9 · `akira`
 - [Consigliato] ● **Parasyte -the maxim-** (2014) · Serie · tuo voto 8 · AniList 8.1 · `parasyte-the-maxim`
 - [Consigliato] ● **Trigun** (1998) · Serie · tuo voto 8 · AniList 8 · `trigun`
@@ -171,14 +173,13 @@ Dopo aver toccato un file ✅: `npm run gen` (rigenera i dati) → bumpa `?v=` i
 - [Da scoprire] ○ **Mobile Suit Gundam: The Witch from Mercury** (2022) · Serie · AniList 7.8 · `gundam-witch-from-mercury`
 
 ### Super Robot Classici  `super-robot`
-*hero: Mazinger Z* · 6 titoli — 0 Essenziali / 0 Consigliati / 6 Da scoprire
+*hero: Mazinger Z* · 5 titoli — 3 Essenziali / 2 Consigliati / 0 Da scoprire
 
-- [Da scoprire] ○ **Mobile Suit Gundam** (1979) · Serie · AniList 7.7 · `mobile-suit-gundam`
-- [Da scoprire] ○ **UFO Robo Grendizer** (1975) · Serie · AniList 7.1 · `ufo-robot-grendizer`
-- [Da scoprire] ○ **Mazinger Z** (1972) · Serie · AniList 6.8 · `mazinger-z`
-- [Da scoprire] ○ **Great Mazinger** (1974) · Serie · AniList 6.8 · `great-mazinger`
-- [Da scoprire] ○ **Getter Robo** (1974) · Serie · AniList 6.4 · `getter-robo`
-- [Da scoprire] ○ **Future Robot Daltanious** (1979) · Serie · AniList 6.4 · `daltanious`
+- [Essenziale] ○ **UFO Robo Grendizer** (1975) · Serie · AniList 7.1 · `ufo-robot-grendizer`
+- [Essenziale] ○ **Mazinger Z** (1972) · Serie · AniList 6.8 · `mazinger-z`
+- [Essenziale] ○ **Future Robot Daltanious** (1979) · Serie · AniList 6.4 · `daltanious`
+- [Consigliato] ○ **Mobile Suit Gundam** (1979) · Serie · AniList 7.7 · `mobile-suit-gundam`
+- [Consigliato] ○ **Getter Robo** (1974) · Serie · AniList 6.4 · `getter-robo`
 
 ### Mindfuck  `mindfuck`
 *hero: Death Note* · 22 titoli — 4 Essenziali / 11 Consigliati / 7 Da scoprire
@@ -207,17 +208,17 @@ Dopo aver toccato un file ✅: `npm run gen` (rigenera i dati) → bumpa `?v=` i
 - [Da scoprire] ○ **Paranoia Agent** (2004) · Serie · AniList 7.6 · `paranoia-agent`
 
 ### Horror e Disagio  `horror-e-disagio`
-*hero: Chainsaw Man* · 22 titoli — 2 Essenziali / 14 Consigliati / 6 Da scoprire
+*hero: Chainsaw Man* · 22 titoli — 5 Essenziali / 11 Consigliati / 6 Da scoprire
 
 - [Essenziale] ● **Berserk** (1997) · Serie · tuo voto 10 · AniList 8.4 · `berserk`
 - [Essenziale] ● **Summer Time Rendering** (2022) · Serie · tuo voto 9 · AniList 8.3 · `summer-time-rendering`
+- [Essenziale] ● **Hell’s Paradise** (2023) · Serie · tuo voto 9 · AniList 8 · `hell-s-paradise-jigokuraku`
+- [Essenziale] ● **Parasyte -the maxim-** (2014) · Serie · tuo voto 8 · AniList 8.1 · `parasyte-the-maxim`
+- [Essenziale] ● **Devilman Crybaby** (2018) · ONA · tuo voto 8 · AniList 7.6 · `devilman-crybaby`
 - [Consigliato] ● **Made in Abyss** (2017) · Serie · tuo voto 9 · AniList 8.5 · `made-in-abyss`
-- [Consigliato] ● **Hell’s Paradise** (2023) · Serie · tuo voto 9 · AniList 8 · `hell-s-paradise-jigokuraku`
 - [Consigliato] ● **The Future Diary** (2011) · Serie · tuo voto 9 · AniList 6.9 · `future-diary`
 - [Consigliato] ● **The Promised Neverland** (2019) · Serie · tuo voto 8 · AniList 8.4 · `the-promised-neverland`
 - [Consigliato] ● **Chainsaw Man** (2022) · Serie · tuo voto 8 · AniList 8.3 · `chainsaw-man`
-- [Consigliato] ● **Parasyte -the maxim-** (2014) · Serie · tuo voto 8 · AniList 8.1 · `parasyte-the-maxim`
-- [Consigliato] ● **Devilman Crybaby** (2018) · ONA · tuo voto 8 · AniList 7.6 · `devilman-crybaby`
 - [Consigliato] ● **Akame ga Kill!** (2014) · Serie · tuo voto 8 · AniList 7.3 · `akame-ga-kill`
 - [Consigliato] ● **Gantz** (2004) · Serie · tuo voto 8 · AniList 6.4 · `gantz`
 - [Consigliato] ● **Hellsing Ultimate** (2006) · OVA · tuo voto 7 · AniList 8.1 · `hellsing-ultimate`
@@ -243,21 +244,21 @@ Dopo aver toccato un file ✅: `npm run gen` (rigenera i dati) → bumpa `?v=` i
 - [Consigliato] ● **Deadman Wonderland** (2011) · Serie · tuo voto 7 · AniList 6.7 · `deadman-wonderland`
 
 ### Storico  `storici`
-*hero: Vinland Saga* · 5 titoli — 4 Essenziali / 1 Consigliati / 0 Da scoprire
+*hero: Vinland Saga* · 5 titoli — 3 Essenziali / 2 Consigliati / 0 Da scoprire
 
 - [Essenziale] ● **Vinland Saga** (2019) · Serie · tuo voto 9 · AniList 8.7 · `vinland-saga`
 - [Essenziale] ● **Samurai Champloo** (2004) · Serie · tuo voto 9 · AniList 8.4 · `samurai-champloo`
 - [Essenziale] ● **Kingdom** (2012) · Serie · tuo voto 9 · AniList 7.4 · `kingdom`
-- [Essenziale] ● **Golden Kamuy** (2018) · Serie · tuo voto 8 · AniList 7.7 · `golden-kamuy`
+- [Consigliato] ● **Golden Kamuy** (2018) · Serie · tuo voto 8 · AniList 7.7 · `golden-kamuy`
 - [Consigliato] ● **91 Days** (2016) · Serie · tuo voto 8 · AniList 7.6 · `91-days`
 
 ### Vendetta  `vendetta`
-*hero: Berserk* · 6 titoli — 1 Essenziali / 5 Consigliati / 0 Da scoprire
+*hero: Berserk* · 6 titoli — 3 Essenziali / 3 Consigliati / 0 Da scoprire
 
 - [Essenziale] ● **Berserk** (1997) · Serie · tuo voto 10 · AniList 8.4 · `berserk`
-- [Consigliato] ● **Vinland Saga** (2019) · Serie · tuo voto 9 · AniList 8.7 · `vinland-saga`
+- [Essenziale] ● **Vinland Saga** (2019) · Serie · tuo voto 9 · AniList 8.7 · `vinland-saga`
+- [Essenziale] ● **91 Days** (2016) · Serie · tuo voto 8 · AniList 7.6 · `91-days`
 - [Consigliato] ● **Hell’s Paradise** (2023) · Serie · tuo voto 9 · AniList 8 · `hell-s-paradise-jigokuraku`
-- [Consigliato] ● **91 Days** (2016) · Serie · tuo voto 8 · AniList 7.6 · `91-days`
 - [Consigliato] ● **Akame ga Kill!** (2014) · Serie · tuo voto 8 · AniList 7.3 · `akame-ga-kill`
 - [Consigliato] ● **Claymore** (2007) · Serie · tuo voto 7 · AniList 7.4 · `claymore`
 
@@ -280,20 +281,20 @@ Dopo aver toccato un file ✅: `npm run gen` (rigenera i dati) → bumpa `?v=` i
 - [Da scoprire] ○ **PSYCHO-PASS** (2012) · Serie · AniList 8.1 · `psycho-pass`
 
 ### Supereroi  `supereroi`
-*hero: My Hero Academia* · 4 titoli — 4 Essenziali / 0 Consigliati / 0 Da scoprire
+*hero: My Hero Academia* · 4 titoli — 2 Essenziali / 2 Consigliati / 0 Da scoprire
 
 - [Essenziale] ● **One-Punch Man** (2015) · Serie · tuo voto 8 · AniList 8.3 · `one-punch-man`
 - [Essenziale] ● **My Hero Academia** (2016) · Serie · tuo voto 8 · AniList 7.7 · `my-hero-academia`
-- [Essenziale] ● **To Be Hero X** (2025) · ONA · tuo voto 7 · AniList 8.5 · `to-be-hero-x`
-- [Essenziale] ● **My Hero Academia: Vigilantes** (2025) · Serie · tuo voto 7 · AniList 7.6 · `my-hero-academia-vigilantes`
+- [Consigliato] ● **To Be Hero X** (2025) · ONA · tuo voto 7 · AniList 8.5 · `to-be-hero-x`
+- [Consigliato] ● **My Hero Academia: Vigilantes** (2025) · Serie · tuo voto 7 · AniList 7.6 · `my-hero-academia-vigilantes`
 
 ### Romance  `romance`
-*hero: Sword Art Online* · 18 titoli — 4 Essenziali / 0 Consigliati / 14 Da scoprire
+*hero: Sword Art Online* · 18 titoli — 3 Essenziali / 1 Consigliati / 14 Da scoprire
 
 - [Essenziale] ● **DAN DA DAN** (2024) · Serie · tuo voto 9 · AniList 8.3 · `dan-da-dan`
 - [Essenziale] ● **Re:ZERO -Starting Life in Another World-** (2016) · Serie · tuo voto 8 · AniList 8.1 · `re-zero-starting-life-in-another-world`
 - [Essenziale] ● **Sword Art Online** (2012) · Serie · tuo voto 8 · AniList 7 · `sword-art-online`
-- [Essenziale] ● **Tokyo Revengers** (2021) · Serie · tuo voto 7 · AniList 7.7 · `tokyo-revengers`
+- [Consigliato] ● **Tokyo Revengers** (2021) · Serie · tuo voto 7 · AniList 7.7 · `tokyo-revengers`
 - [Da scoprire] ○ **Clannad: After Story** (2008) · Serie · AniList 8.8 · `clannad-after-story`
 - [Da scoprire] ○ **NANA** (2006) · Serie · AniList 8.5 · `nana`
 - [Da scoprire] ○ **Your lie in April** (2014) · Serie · AniList 8.4 · `your-lie-in-april`
@@ -713,8 +714,9 @@ Dopo aver toccato un file ✅: `npm run gen` (rigenera i dati) → bumpa `?v=` i
 
 ## 7. Controllo automatico
 
-- **Titoli in NESSUN genere né percorso** (solo ricerca/Esplora): 1
+- **Titoli in NESSUN genere né percorso** (solo ricerca/Esplora): 2
   - ○ **The Apothecary Diaries** (2023) · Serie · AniList 8.8 · `the-apothecary-diaries`
+  - ○ **Great Mazinger** (1974) · Serie · AniList 6.8 · `great-mazinger`
 - **Titoli in 4+ categorie** (molto trasversali): 27
   - Berserk → in 7 categorie `berserk`
   - Vinland Saga → in 7 categorie `vinland-saga`
@@ -722,6 +724,7 @@ Dopo aver toccato un file ✅: `npm run gen` (rigenera i dati) → bumpa `?v=` i
   - 91 Days → in 6 categorie `91-days`
   - Akudama Drive → in 6 categorie `akudama-drive`
   - Cowboy Bebop → in 6 categorie `cowboy-bebop`
+  - Made in Abyss → in 6 categorie `made-in-abyss`
   - Monster → in 6 categorie `monster`
   - Cyberpunk: Edgerunners → in 5 categorie `cyberpunk-edgerunners`
   - Death Note → in 5 categorie `death-note`
@@ -730,7 +733,6 @@ Dopo aver toccato un file ✅: `npm run gen` (rigenera i dati) → bumpa `?v=` i
   - Hunter x Hunter (2011) → in 5 categorie `hunter-x-hunter`
   - Neon Genesis Evangelion → in 5 categorie `neon-genesis-evangelion`
   - Code Geass: Lelouch of the Rebellion → in 5 categorie `code-geass`
-  - DAN DA DAN → in 5 categorie `dan-da-dan`
 - **Generi con meno di 5 titoli**: supereroi (4)
 - **Titoli senza scheda editoriale (hook)**: nessuno ✓
 - **Titoli senza copertina**: nessuno ✓

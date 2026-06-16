@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T21:05:04.775Z",
+  "generatedAt": "2026-06-16T21:34:05.541Z",
   "attribution": "Dati e immagini da AniList (anilist.co)",
   "count": 190,
   "titles": [
@@ -41347,8 +41347,7 @@
         "hell-s-paradise-jigokuraku",
         "gachiakuta",
         "my-hero-academia-vigilantes",
-        "to-be-hero-x",
-        "darwin-s-game"
+        "to-be-hero-x"
       ],
       "seinen-e-maturo": [
         "berserk",
@@ -41372,7 +41371,9 @@
         "tokyo-revengers",
         "trigun",
         "wolf-s-rain",
-        "death-parade"
+        "death-parade",
+        "sentence-to-be-hero",
+        "made-in-abyss"
       ],
       "isekai": [
         "re-zero-starting-life-in-another-world",
@@ -41393,7 +41394,8 @@
         "petals-of-reincarnation",
         "sentence-to-be-hero",
         "mushoku-tensei",
-        "tensura"
+        "tensura",
+        "tower-of-god"
       ],
       "fantasy": [
         "frieren",
@@ -41451,7 +41453,6 @@
         "ufo-robot-grendizer",
         "getter-robo",
         "mobile-suit-gundam",
-        "great-mazinger",
         "daltanious"
       ],
       "sopravvivenza": [
@@ -41567,33 +41568,32 @@
         "bleach": "e",
         "one-piece": "e",
         "jojo-s-bizarre-adventure": "e",
-        "fullmetal-alchemist-brotherhood": "e",
-        "gurren-lagann": "e",
+        "fullmetal-alchemist-brotherhood": "c",
+        "gurren-lagann": "d",
         "dragon-ball": "c",
-        "demon-slayer": "c",
+        "demon-slayer": "e",
         "my-hero-academia": "c",
         "black-clover": "c",
         "kaiju-no-8": "c",
-        "solo-leveling": "c",
+        "solo-leveling": "e",
         "mob-psycho-100": "c",
         "one-punch-man": "c",
         "kill-la-kill": "c",
-        "tower-of-god": "c",
+        "tower-of-god": "d",
         "saint-seiya": "c",
         "akame-ga-kill": "c",
         "hell-s-paradise-jigokuraku": "c",
         "gachiakuta": "c",
-        "my-hero-academia-vigilantes": "c",
-        "to-be-hero-x": "c",
-        "darwin-s-game": "c"
+        "my-hero-academia-vigilantes": "d",
+        "to-be-hero-x": "d"
       },
       "seinen-e-maturo": {
         "berserk": "e",
-        "attack-on-titan": "e",
+        "attack-on-titan": "c",
         "cyberpunk-edgerunners": "e",
-        "vinland-saga": "c",
+        "vinland-saga": "e",
         "monster": "c",
-        "cowboy-bebop": "c",
+        "cowboy-bebop": "e",
         "kingdom": "c",
         "91-days": "c",
         "golden-kamuy": "c",
@@ -41609,13 +41609,15 @@
         "tokyo-revengers": "c",
         "trigun": "c",
         "wolf-s-rain": "c",
-        "death-parade": "c"
+        "death-parade": "c",
+        "sentence-to-be-hero": "c",
+        "made-in-abyss": "e"
       },
       "isekai": {
         "shangri-la-frontier": "e",
         "solo-leveling": "e",
         "grimgar-of-fantasy-and-ash": "e",
-        "sentence-to-be-hero": "e",
+        "sentence-to-be-hero": "c",
         "re-zero-starting-life-in-another-world": "c",
         "overlord": "c",
         "sword-art-online": "c",
@@ -41629,15 +41631,16 @@
         "drifters": "c",
         "release-that-witch": "c",
         "petals-of-reincarnation": "c",
-        "mushoku-tensei": "d",
-        "tensura": "d"
+        "mushoku-tensei": "c",
+        "tensura": "c",
+        "tower-of-god": "c"
       },
       "fantasy": {
         "fullmetal-alchemist-brotherhood": "e",
         "hunter-x-hunter": "e",
         "berserk": "e",
         "frieren": "c",
-        "made-in-abyss": "c",
+        "made-in-abyss": "e",
         "claymore": "c",
         "ranking-of-kings": "c",
         "devil-may-cry": "c",
@@ -41646,7 +41649,7 @@
         "daemons-of-the-shadow-realm": "c",
         "wistoria-wand-and-sword": "c",
         "fate-franchise-completo": "c",
-        "demon-slayer": "c",
+        "demon-slayer": "e",
         "black-clover": "c",
         "tower-of-god": "c",
         "dungeon-meshi": "d"
@@ -41655,11 +41658,11 @@
         "steins-gate": "e",
         "cyberpunk-edgerunners": "e",
         "cowboy-bebop": "c",
-        "ghost-in-the-shell": "c",
+        "ghost-in-the-shell": "e",
         "akira": "c",
         "parasyte-the-maxim": "c",
         "heavenly-delusion": "c",
-        "dan-da-dan": "c",
+        "dan-da-dan": "e",
         "deca-dence": "c",
         "terra-formars": "c",
         "lazarus": "c",
@@ -41684,12 +41687,11 @@
         "gundam-witch-from-mercury": "d"
       },
       "super-robot": {
-        "mazinger-z": "d",
-        "ufo-robot-grendizer": "d",
-        "getter-robo": "d",
-        "mobile-suit-gundam": "d",
-        "great-mazinger": "d",
-        "daltanious": "d"
+        "mazinger-z": "e",
+        "ufo-robot-grendizer": "e",
+        "getter-robo": "c",
+        "mobile-suit-gundam": "c",
+        "daltanious": "e"
       },
       "mindfuck": {
         "death-note": "e",
@@ -41713,8 +41715,8 @@
         "berserk": "e",
         "summer-time-rendering": "e",
         "chainsaw-man": "c",
-        "devilman-crybaby": "c",
-        "parasyte-the-maxim": "c",
+        "devilman-crybaby": "e",
+        "parasyte-the-maxim": "e",
         "the-promised-neverland": "c",
         "made-in-abyss": "c",
         "hellsing-ultimate": "c",
@@ -41725,7 +41727,7 @@
         "deadman-wonderland": "c",
         "future-diary": "c",
         "akame-ga-kill": "c",
-        "hell-s-paradise-jigokuraku": "c",
+        "hell-s-paradise-jigokuraku": "e",
         "from-the-new-world": "d"
       },
       "sopravvivenza": {
@@ -41739,14 +41741,14 @@
       "storici": {
         "vinland-saga": "e",
         "kingdom": "e",
-        "golden-kamuy": "e",
+        "golden-kamuy": "c",
         "samurai-champloo": "e",
         "91-days": "c"
       },
       "vendetta": {
         "berserk": "e",
-        "vinland-saga": "c",
-        "91-days": "c",
+        "vinland-saga": "e",
+        "91-days": "e",
         "claymore": "c",
         "akame-ga-kill": "c",
         "hell-s-paradise-jigokuraku": "c"
@@ -41767,14 +41769,14 @@
       },
       "supereroi": {
         "my-hero-academia": "e",
-        "my-hero-academia-vigilantes": "e",
+        "my-hero-academia-vigilantes": "c",
         "one-punch-man": "e",
-        "to-be-hero-x": "e"
+        "to-be-hero-x": "c"
       },
       "romance": {
         "sword-art-online": "e",
         "re-zero-starting-life-in-another-world": "e",
-        "tokyo-revengers": "e",
+        "tokyo-revengers": "c",
         "dan-da-dan": "e"
       },
       "commedia": {

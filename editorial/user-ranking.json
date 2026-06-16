@@ -5,6 +5,18 @@
   "berserk": {
     "rating": 10
   },
+  "fullmetal-alchemist-brotherhood": {
+    "rating": 10
+  },
+  "jojo-s-bizarre-adventure": {
+    "rating": 10
+  },
+  "naruto": {
+    "rating": 10
+  },
+  "one-piece": {
+    "rating": 10
+  },
   "bleach": {
     "rating": 9
   },
@@ -14,31 +26,88 @@
   "death-note": {
     "rating": 9
   },
-  "fullmetal-alchemist-brotherhood": {
-    "rating": 10
-  },
   "gurren-lagann": {
     "rating": 9
   },
   "hunter-x-hunter": {
     "rating": 9
   },
-  "jojo-s-bizarre-adventure": {
-    "rating": 10
-  },
-  "naruto": {
-    "rating": 10
-  },
   "neon-genesis-evangelion": {
     "rating": 9
-  },
-  "one-piece": {
-    "rating": 10
   },
   "steins-gate": {
     "rating": 9
   },
   "summer-time-rendering": {
+    "rating": 9
+  },
+  "akira": {
+    "rating": 9
+  },
+  "cowboy-bebop": {
+    "rating": 9
+  },
+  "dan-da-dan": {
+    "rating": 9
+  },
+  "demon-slayer": {
+    "rating": 9
+  },
+  "dragon-ball": {
+    "rating": 9
+  },
+  "future-diary": {
+    "rating": 9
+  },
+  "gangsta": {
+    "rating": 9
+  },
+  "ghost-in-the-shell": {
+    "rating": 9
+  },
+  "grimgar-of-fantasy-and-ash": {
+    "rating": 9
+  },
+  "heavenly-delusion": {
+    "rating": 9
+  },
+  "hell-s-paradise-jigokuraku": {
+    "rating": 9
+  },
+  "jujutsu-kaisen": {
+    "rating": 9
+  },
+  "kill-la-kill": {
+    "rating": 9
+  },
+  "kingdom": {
+    "rating": 9
+  },
+  "made-in-abyss": {
+    "rating": 9
+  },
+  "mob-psycho-100": {
+    "rating": 9
+  },
+  "principessa-mononoke": {
+    "rating": 9
+  },
+  "samurai-champloo": {
+    "rating": 9
+  },
+  "shangri-la-frontier": {
+    "rating": 9
+  },
+  "solo-leveling": {
+    "rating": 9
+  },
+  "vinland-saga": {
+    "rating": 9
+  },
+  "la-citta-incantata": {
+    "rating": 9
+  },
+  "sentence-to-be-hero": {
     "rating": 9
   },
   "91-days": {
@@ -47,14 +116,8 @@
   "abenobashi-magical-shopping-street": {
     "rating": 8
   },
-  "ajin-demi-human": {
-    "rating": 7
-  },
   "akame-ga-kill": {
     "rating": 8
-  },
-  "akira": {
-    "rating": 9
   },
   "akudama-drive": {
     "rating": 8
@@ -62,41 +125,11 @@
   "black-clover": {
     "rating": 8
   },
-  "bna-brand-new-animal": {
-    "rating": 7
-  },
-  "burn-the-witch": {
-    "rating": 7
-  },
   "chainsaw-man": {
     "rating": 8
   },
-  "claymore": {
-    "rating": 7
-  },
   "code-geass": {
     "rating": 8
-  },
-  "cowboy-bebop": {
-    "rating": 9
-  },
-  "dan-da-dan": {
-    "rating": 9
-  },
-  "darwin-s-game": {
-    "rating": 7
-  },
-  "deadman-wonderland": {
-    "rating": 7
-  },
-  "death-parade": {
-    "rating": 7
-  },
-  "deca-dence": {
-    "rating": 7
-  },
-  "demon-slayer": {
-    "rating": 9
   },
   "devil-may-cry": {
     "rating": 8
@@ -104,17 +137,8 @@
   "devilman-crybaby": {
     "rating": 8
   },
-  "dragon-ball": {
-    "rating": 9
-  },
-  "drifters": {
-    "rating": 7
-  },
   "86-eighty-six": {
     "rating": 8
-  },
-  "erased": {
-    "rating": 7
   },
   "failure-frame-i-became-the-strongest": {
     "rating": 8
@@ -122,17 +146,8 @@
   "flcl": {
     "rating": 8
   },
-  "frieren": {
-    "rating": 7
-  },
-  "future-diary": {
-    "rating": 9
-  },
   "gachiakuta": {
     "rating": 8
-  },
-  "gangsta": {
-    "rating": 9
   },
   "gantz": {
     "rating": 8
@@ -140,56 +155,23 @@
   "gate": {
     "rating": 8
   },
-  "ghost-in-the-shell": {
-    "rating": 9
-  },
   "golden-kamuy": {
     "rating": 8
-  },
-  "grimgar-of-fantasy-and-ash": {
-    "rating": 9
   },
   "handyman-saitou-in-another-world": {
     "rating": 8
   },
-  "heavenly-delusion": {
-    "rating": 9
-  },
-  "hell-s-paradise-jigokuraku": {
-    "rating": 9
-  },
-  "hellsing-ultimate": {
-    "rating": 7
-  },
-  "jujutsu-kaisen": {
-    "rating": 9
-  },
   "kaiju-no-8": {
     "rating": 8
   },
-  "kill-la-kill": {
-    "rating": 9
-  },
-  "kingdom": {
-    "rating": 9
-  },
   "lazarus": {
     "rating": 8
-  },
-  "made-in-abyss": {
-    "rating": 9
-  },
-  "mob-psycho-100": {
-    "rating": 9
   },
   "monster": {
     "rating": 8
   },
   "my-hero-academia": {
     "rating": 8
-  },
-  "my-hero-academia-vigilantes": {
-    "rating": 7
   },
   "one-punch-man": {
     "rating": 8
@@ -202,9 +184,6 @@
   },
   "pluto": {
     "rating": 8
-  },
-  "principessa-mononoke": {
-    "rating": 9
   },
   "promare": {
     "rating": 8
@@ -221,32 +200,71 @@
   "saint-seiya": {
     "rating": 8
   },
-  "samurai-champloo": {
-    "rating": 9
-  },
-  "shangri-la-frontier": {
-    "rating": 9
-  },
-  "solo-leveling": {
-    "rating": 9
-  },
-  "spy-x-family": {
-    "rating": 7
-  },
   "sword-art-online": {
     "rating": 8
-  },
-  "terra-formars": {
-    "rating": 7
-  },
-  "the-eminence-in-shadow": {
-    "rating": 7
   },
   "the-promised-neverland": {
     "rating": 8
   },
   "the-rising-of-the-shield-hero": {
     "rating": 8
+  },
+  "trigun": {
+    "rating": 8
+  },
+  "wolf-s-rain": {
+    "rating": 8
+  },
+  "fate-franchise-completo": {
+    "rating": 8
+  },
+  "ajin-demi-human": {
+    "rating": 7
+  },
+  "bna-brand-new-animal": {
+    "rating": 7
+  },
+  "burn-the-witch": {
+    "rating": 7
+  },
+  "claymore": {
+    "rating": 7
+  },
+  "darwin-s-game": {
+    "rating": 7
+  },
+  "deadman-wonderland": {
+    "rating": 7
+  },
+  "death-parade": {
+    "rating": 7
+  },
+  "deca-dence": {
+    "rating": 7
+  },
+  "drifters": {
+    "rating": 7
+  },
+  "erased": {
+    "rating": 7
+  },
+  "frieren": {
+    "rating": 7
+  },
+  "hellsing-ultimate": {
+    "rating": 7
+  },
+  "my-hero-academia-vigilantes": {
+    "rating": 7
+  },
+  "spy-x-family": {
+    "rating": 7
+  },
+  "terra-formars": {
+    "rating": 7
+  },
+  "the-eminence-in-shadow": {
+    "rating": 7
   },
   "the-world-s-finest-assassin-gets-reincarnated-in-another-world-as-an-aristocrat": {
     "rating": 7
@@ -260,17 +278,8 @@
   "tower-of-god": {
     "rating": 7
   },
-  "trigun": {
-    "rating": 8
-  },
-  "vinland-saga": {
-    "rating": 9
-  },
   "wistoria-wand-and-sword": {
     "rating": 7
-  },
-  "wolf-s-rain": {
-    "rating": 8
   },
   "daemons-of-the-shadow-realm": {
     "rating": null
@@ -280,14 +289,5 @@
   },
   "petals-of-reincarnation": {
     "rating": null
-  },
-  "fate-franchise-completo": {
-    "rating": 8
-  },
-  "la-citta-incantata": {
-    "rating": 9
-  },
-  "sentence-to-be-hero": {
-    "rating": 9
   }
 }
