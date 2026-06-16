@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // ─────────────────────────────────────────────────────────────────────────
-// GUARDALO — pipeline dati v10 (guida a livelli, solo anime)
+// GUARDALO — pipeline dati v10 (guida agli anime: percorsi e generi curati)
 //
 //   node tools/build.mjs map     → cerca su AniList l'id di ogni titolo seed
 //   node tools/build.mjs fetch   → scarica i dati reali + chiude le saghe + calcola lunghezze

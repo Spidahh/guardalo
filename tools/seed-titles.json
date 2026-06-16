@@ -918,5 +918,35 @@
     "id": "id-invaded",
     "title": "ID:INVADED",
     "year": 2020
+  },
+  {
+    "id": "mazinger-z",
+    "title": "Mazinger Z",
+    "year": 1972
+  },
+  {
+    "id": "ufo-robot-grendizer",
+    "title": "UFO Robo Grendizer",
+    "year": 1975
+  },
+  {
+    "id": "getter-robo",
+    "title": "Getter Robo",
+    "year": 1974
+  },
+  {
+    "id": "mobile-suit-gundam",
+    "title": "Mobile Suit Gundam",
+    "year": 1979
+  },
+  {
+    "id": "daltanious",
+    "title": "Mirai Robo Daltanious",
+    "year": 1979
+  },
+  {
+    "id": "great-mazinger",
+    "title": "Great Mazinger",
+    "year": 1974
   }
 ]

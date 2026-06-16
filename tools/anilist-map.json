@@ -1095,5 +1095,35 @@
     "title": "ID:INVADED",
     "matched": "ID: INVADED",
     "score": 111
+  },
+  "mazinger-z": {
+    "anilistId": 2253,
+    "title": "Mazinger Z",
+    "matched": "Mazinger Z",
+    "score": 111
+  },
+  "ufo-robot-grendizer": {
+    "anilistId": 1985,
+    "title": "UFO Robo Grendizer",
+    "matched": "UFO Robo Grendizer",
+    "score": 111
+  },
+  "getter-robo": {
+    "anilistId": 3579,
+    "title": "Getter Robo",
+    "matched": "Getter Robo",
+    "score": 111
+  },
+  "mobile-suit-gundam": {
+    "anilistId": 80,
+    "title": "Mobile Suit Gundam",
+    "matched": "Mobile Suit Gundam",
+    "score": 111
+  },
+  "great-mazinger": {
+    "anilistId": 5658,
+    "title": "Great Mazinger",
+    "matched": "Great Mazinger",
+    "score": 111
   }
 }

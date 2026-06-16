@@ -1,7 +1,7 @@
 # GUARDALO
 
 **Una guida, non un catalogo.** Un tutor che accompagna chi guarda anime attraverso
-**percorsi curati a livelli** — dai primi passi ai capolavori più densi. Schede senza
+**percorsi e generi curati** — dai primi passi ai capolavori più densi. Schede senza
 spoiler, durata reale calcolata, dove vederlo (solo legale), motore di consigli.
 
 Sito statico (vanilla JS, zero build) · dati reali da **AniList** · hosting **Vercel** ·
@@ -18,7 +18,7 @@ tools/seed-titles.json        ← lista curata dei titoli (id, titolo, anno)
         ▼
 sources/anime.json            ← solo FATTI verificati (mai a mano), con provenienza
 editorial/titles.json         ← schede spoiler-free (curatela umana)
-editorial/paths.json          ← i percorsi a livelli (curatela umana)
+editorial/paths.json          ← i percorsi curati (curatela umana)
         │  node tools/build.mjs gen     (merge + motore consigli)
         ▼
 js/data.js  +  dist/data.json ← dataset finale che il sito legge a runtime

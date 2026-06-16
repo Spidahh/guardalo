@@ -26,11 +26,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=10.34">
+    <link rel="stylesheet" href="css/style.css?v=10.57">
 
     <script>
-        try { document.documentElement.dataset.theme = localStorage.getItem('guardalo_theme') || 'dark'; }
-        catch (e) { document.documentElement.dataset.theme = 'dark'; }
+        try { document.documentElement.dataset.theme = localStorage.getItem('guardalo_theme') || 'light'; }
+        catch (e) { document.documentElement.dataset.theme = 'light'; }
     </script>
 </head>
 <body>
@@ -40,8 +40,8 @@
         <!-- SIDEBAR -->
         <aside class="sidebar" id="sidebar">
             <a class="side-brand" href="/" aria-label="GUARDALO — home">
-                <span class="brand-mark">G</span>
-                <span class="side-brand-txt"><b>GUARDALO</b><small>guida con anima</small></span>
+                <span class="brand-word">GUARDALO</span>
+                <span class="brand-tag">Guida agli anime</span>
             </a>
 
             <nav class="side-nav">
@@ -131,12 +131,14 @@
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
     <script src="js/firebase-config.js"></script>
-    <script src="js/data.js"></script>
-    <script src="js/app.js?v=10.34"></script>
+    <script src="js/data.js?v=10.57"></script>
+    <script src="js/app.js?v=10.57"></script>
 
     <script>
+        // Nessun service worker di caching: serviva versioni vecchie in cache (disastro stale).
+        // sw.js è un kill-switch; qui disinstalliamo eventuali SW residui dai browser.
         if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(() => {}));
+            navigator.serviceWorker.getRegistrations().then(rs => rs.forEach(r => r.unregister()));
         }
     </script>
 </body>

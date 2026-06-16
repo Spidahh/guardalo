@@ -52,8 +52,9 @@
   // ── categorie di genere "pulite" (mostrate in home, in quest'ordine) ─────────
   // i percorsi "meta" (da-zero, canone, chicche) e quelli poco amati (sport, slice)
   // NON entrano nella griglia generi — restano raggiungibili da ricerca/Esplora.
-  const GENRE_IDS = ['battle-shonen', 'seinen-e-maturo', 'isekai-e-fantasy', 'sci-fi-e-mecha',
-    'mindfuck', 'horror-e-disagio', 'romance', 'commedia', 'cinema-dautore'];
+  const GENRE_IDS = ['battle-shonen', 'seinen-e-maturo', 'isekai', 'fantasy', 'sci-fi', 'mecha', 'super-robot',
+    'mindfuck', 'horror-e-disagio', 'sopravvivenza', 'storici', 'vendetta', 'viaggi-nel-tempo',
+    'crimine', 'supereroi', 'romance', 'commedia', 'cinema-dautore'];
   const GENRE_PATHS = GENRE_IDS.map(id => PATHS.find(p => p.id === id)).filter(Boolean);
   // generi AniList che "qualificano" un titolo della lista per una categoria.
   // Un titolo inList con quel genere compare in cima ("Dalla tua lista") di quella categoria,
@@ -76,9 +77,43 @@
     if (tags === '__movie__') return t.format === 'MOVIE';
     return (t.genres || []).some(g => tags.includes(g));
   };
+  // Categorizzazione PRECISA della lista (i generi AniList sono troppo larghi e sbagliano:
+  // es. Shangri-La ha tag Sci-Fi ma è isekai). Un titolo può stare in più categorie.
+  const FORCE_TOP = new Set(['jujutsu-kaisen']);
+  const isTopT = t => !!(t && (t.top || FORCE_TOP.has(t.id)));
+  const CAT_MEMBERS = {
+    'battle-shonen': ['jujutsu-kaisen', 'hunter-x-hunter', 'naruto', 'bleach', 'one-piece', 'jojo-s-bizarre-adventure', 'fullmetal-alchemist-brotherhood', 'dragon-ball', 'demon-slayer', 'my-hero-academia', 'black-clover', 'kaiju-no-8', 'solo-leveling', 'mob-psycho-100', 'one-punch-man', 'gurren-lagann', 'kill-la-kill', 'tower-of-god', 'saint-seiya', 'akame-ga-kill', 'hell-s-paradise-jigokuraku', 'gachiakuta', 'my-hero-academia-vigilantes', 'to-be-hero-x', 'darwin-s-game'],
+    'seinen-e-maturo': ['berserk', 'vinland-saga', 'monster', 'attack-on-titan', 'cyberpunk-edgerunners', 'cowboy-bebop', 'kingdom', '91-days', 'golden-kamuy', 'gangsta', 'samurai-champloo', 'chainsaw-man', '86-eighty-six', 'akudama-drive', 'devilman-crybaby', 'hellsing-ultimate', 'gantz', 'deadman-wonderland', 'tokyo-revengers', 'trigun', 'wolf-s-rain', 'death-parade'],
+    'isekai': ['re-zero-starting-life-in-another-world', 'overlord', 'sword-art-online', 'the-rising-of-the-shield-hero', 'shangri-la-frontier', 'solo-leveling', 'gate', 'grimgar-of-fantasy-and-ash', 'the-eminence-in-shadow', 'reincarnated-as-a-sword', 'the-world-s-finest-assassin-gets-reincarnated-in-another-world-as-an-aristocrat', 'failure-frame-i-became-the-strongest', 'handyman-saitou-in-another-world', 'drifters', 'release-that-witch', 'petals-of-reincarnation', 'sentence-to-be-hero'],
+    'fantasy': ['frieren', 'fullmetal-alchemist-brotherhood', 'hunter-x-hunter', 'made-in-abyss', 'claymore', 'ranking-of-kings', 'berserk', 'devil-may-cry', 'burn-the-witch', 'bna-brand-new-animal', 'daemons-of-the-shadow-realm', 'wistoria-wand-and-sword', 'fate-franchise-completo', 'demon-slayer', 'black-clover', 'tower-of-god'],
+    'sci-fi': ['steins-gate', 'cyberpunk-edgerunners', 'cowboy-bebop', 'ghost-in-the-shell', 'akira', 'parasyte-the-maxim', 'heavenly-delusion', 'dan-da-dan', 'deca-dence', 'terra-formars', 'lazarus', 'wolf-s-rain', 'trigun', 'akudama-drive'],
+    'mecha': ['neon-genesis-evangelion', 'gurren-lagann', 'code-geass', '86-eighty-six', 'pluto', 'promare', 'flcl'],
+    'super-robot': ['mazinger-z', 'ufo-robot-grendizer', 'getter-robo', 'mobile-suit-gundam', 'great-mazinger'],
+    'sopravvivenza': ['future-diary', 'darwin-s-game', 'the-promised-neverland', 'akudama-drive', 'deadman-wonderland', 'gantz'],
+    'storici': ['vinland-saga', 'kingdom', 'golden-kamuy', 'samurai-champloo', '91-days'],
+    'vendetta': ['berserk', 'vinland-saga', '91-days', 'claymore', 'akame-ga-kill', 'hell-s-paradise-jigokuraku'],
+    'viaggi-nel-tempo': ['steins-gate', 'erased', 're-zero-starting-life-in-another-world', 'summer-time-rendering', 'tokyo-revengers'],
+    'crimine': ['91-days', 'gangsta', 'cowboy-bebop', 'akudama-drive'],
+    'supereroi': ['my-hero-academia', 'my-hero-academia-vigilantes', 'one-punch-man', 'to-be-hero-x'],
+    'mindfuck': ['death-note', 'steins-gate', 'monster', 'neon-genesis-evangelion', 'code-geass', 'erased', 'the-promised-neverland', 'summer-time-rendering', 'death-parade', 'future-diary', 'parasyte-the-maxim', 'pluto', 're-zero-starting-life-in-another-world', 'ajin-demi-human', 'heavenly-delusion'],
+    'horror-e-disagio': ['berserk', 'chainsaw-man', 'devilman-crybaby', 'parasyte-the-maxim', 'the-promised-neverland', 'made-in-abyss', 'hellsing-ultimate', 'claymore', 'gantz', 'terra-formars', 'ajin-demi-human', 'deadman-wonderland', 'future-diary', 'akame-ga-kill', 'summer-time-rendering', 'hell-s-paradise-jigokuraku'],
+    'romance': ['sword-art-online', 're-zero-starting-life-in-another-world', 'tokyo-revengers', 'dan-da-dan'],
+    'commedia': ['spy-x-family', 'one-punch-man', 'mob-psycho-100', 'dan-da-dan', 'the-eminence-in-shadow', 'handyman-saitou-in-another-world', 'kill-la-kill', 'abenobashi-magical-shopping-street', 'golden-kamuy'],
+    'cinema-dautore': ['akira', 'ghost-in-the-shell', 'principessa-mononoke', 'la-citta-incantata', 'promare'],
+  };
+  // membri di una categoria/percorso: per i generi = lista curata (CAT_MEMBERS) + extra non-inList; altrimenti i titoli del percorso
+  const catTitles = (p) => {
+    if (p && CAT_MEMBERS[p.id]) {
+      const map = new Map();
+      CAT_MEMBERS[p.id].forEach(id => { const t = BY_ID.get(id); if (t) map.set(id, t); });
+      (pathTitles(p) || []).forEach(t => { if (t && !t.inList) map.set(t.id, t); });
+      return [...map.values()];
+    }
+    return pathTitles(p) || [];
+  };
   // percorsi "tematici" (non di genere): journey curati che possono riusare gli stessi titoli.
-  // META_IDS = quelli a livelli (progressione); gli altri percorsi sono liste piatte come i generi.
-  const META_IDS = ['da-zero-a-otaku', 'il-canone', 'chicche-e-deep-cut'];
+  // Tutti i percorsi sono liste curate ordinate dal migliore (niente livelli/progressione).
+  const META_IDS = [];
   const PERCORSI_IDS = ['da-zero-a-otaku', 'capolavori', 'azione', 'antieroi', 'il-canone', 'chicche-e-deep-cut'];
   const PERCORSI_PATHS = PERCORSI_IDS.map(id => PATHS.find(p => p.id === id)).filter(Boolean);
   // titoli di un percorso, deduplicati nell'ordine dei livelli
@@ -96,6 +131,9 @@
     (b.userRating || 0) - (a.userRating || 0) ||
     (b.score10 || 0) - (a.score10 || 0);
   const TOPS = TITLES.filter(t => t.top).sort(rankSort);
+  // badge editoriale per voto (stile "Verdetto": Capolavoro / Ottimo / Notevole)
+  const verdictLabel = s => s >= 8.6 ? ['Capolavoro', 'cap'] : s >= 8.2 ? ['Ottimo', 'ott'] : ['Notevole', 'not'];
+  const hookFirst = (h, n = 84) => { let s = (h || '').split('. ')[0] || ''; return s.length > n ? s.slice(0, n - 1) + '…' : s; };
 
   // etichetta lunghezza: i film e i one-shot non dicono "Cortissimo" ma cosa sono
   const lenLabel = t => t.format === 'MOVIE' ? 'Film'
@@ -291,6 +329,8 @@
 
       // delega azioni "visto / da vedere"
       document.addEventListener('click', e => {
+        if (e.target.closest('.js-surprise')) { e.preventDefault(); this.surprise(); return; }
+        if (e.target.closest('.js-search')) { e.preventDefault(); this.openSearch(); return; }
         const b = e.target.closest('.js-watch, .js-later');
         if (b) { e.preventDefault(); e.stopPropagation(); this.toggle(b.dataset.id, b.classList.contains('js-watch') ? 'watched' : 'toWatch'); }
       });
@@ -523,92 +563,110 @@
     }
     collectionCard(c) {
       const list = c.get();
-      const covers = list.slice(0, 5).map(t => this.miniCover(t, true)).join('');
+      const hero = list[0];
       return `<a class="path-card ${c.id === 'top' ? 'is-topcat' : ''}" href="/c/${esc(c.id)}" style="--accent:${esc(c.accent)}">
         <div class="path-hero-img">
-          <div class="path-montage">${covers}</div>
-          <span class="path-grad"></span>
-          <span class="path-ic-wrap"><i class="${esc(c.icon)}"></i></span>
-          <h3 class="path-name">${esc(c.title)}</h3>
+          ${hero ? `<img class="path-1img" src="${esc(hero.bannerImage || cover(hero))}" alt="" loading="lazy" onload="this.classList.add('ld')" onerror="this.classList.add('ld')">` : ''}
         </div>
         <div class="path-card-body">
+          <div class="path-head"><span class="path-ic-wrap"><i class="${esc(c.icon)}"></i></span><h3 class="path-name">${esc(c.title)}</h3></div>
           <p class="path-blurb">${esc(c.blurb)}</p>
           <div class="path-foot">
             <span class="path-levels"><i class="ri-film-line"></i> ${list.length} titoli</span>
-            <span class="path-prog"><span class="path-start">Apri <i class="ri-arrow-right-line"></i></span></span>
+            <span class="path-start">Apri <i class="ri-arrow-right-line"></i></span>
           </div>
         </div>
       </a>`;
     }
-    // tile di un percorso/genere (montaggio copertine)
+    // tile di un percorso/genere
     pathTile(p) {
-      const pr = this.pathProgress(p);
-      const covers = this.pathCovers(p, 5).map(t => this.miniCover(t, true)).join('');
-      const progHtml = pr.done > 0
-        ? `<span class="pp-bar"><span style="width:${pr.pct}%"></span></span>${pr.done}/${pr.total}`
-        : `<span class="path-start">Apri <i class="ri-arrow-right-line"></i></span>`;
+      const mem = catTitles(p);
+      const hero = mem.find(t => t.bannerImage || t.coverImage) || this.pathCovers(p, 1)[0];
       return `<a class="path-card" href="/p/${esc(p.id)}" style="--accent:${esc(p.accent)}">
         <div class="path-hero-img">
-          <div class="path-montage">${covers}</div>
-          <span class="path-grad"></span>
-          <span class="path-ic-wrap"><i class="${esc(p.icon)}"></i></span>
-          <h3 class="path-name">${esc(p.title)}</h3>
+          ${hero ? `<img class="path-1img" src="${esc(hero.bannerImage || cover(hero))}" alt="" loading="lazy" onload="this.classList.add('ld')" onerror="this.classList.add('ld')">` : ''}
         </div>
         <div class="path-card-body">
+          <div class="path-head"><span class="path-ic-wrap"><i class="${esc(p.icon)}"></i></span><h3 class="path-name">${esc(p.title)}</h3></div>
           <p class="path-blurb">${esc(p.blurb || p.tagline)}</p>
           <div class="path-foot">
-            <span class="path-levels"><i class="ri-film-line"></i> ${pr.total} titoli</span>
-            <span class="path-prog">${progHtml}</span>
+            <span class="path-levels"><i class="ri-film-line"></i> ${mem.length} titoli</span>
+            <span class="path-start">Apri <i class="ri-arrow-right-line"></i></span>
           </div>
         </div>
       </a>`;
     }
     viewHome() {
-      const collTiles = COLLECTIONS.map(c => this.collectionCard(c)).join('');
-      const heroCovers = [...TITLES].filter(t => t.top && t.coverImage).sort(rankSort).slice(0, 8)
-        .map(t => `<span class="hh-cv" style="--cc:${esc(t.coverColor || '#1c1812')}"><img src="${esc(thumb(t.coverImage))}" alt="" loading="eager" onload="this.classList.add('ld')" onerror="this.classList.add('ld')"></span>`).join('');
-      const montage = titles => titles.filter(t => t && t.coverImage).slice(0, 7)
-        .map(t => `<span class="ft-cv" style="--cc:${esc(t.coverColor || '#1c1812')}"><img src="${esc(thumbS(t.coverImage))}" alt="" loading="lazy" onload="this.classList.add('ld')" onerror="this.classList.add('ld')"></span>`).join('');
-      const feat = (href, ic, title, sub, cta, accent, covers) => `
-        <a class="feat-card" href="${href}" style="--accent:${esc(accent)}">
-          <div class="feat-bg"><div class="feat-montage">${covers}</div><span class="feat-veil"></span></div>
-          <span class="feat-ic"><i class="${ic}"></i></span>
-          <div class="feat-body">
-            <h3 class="feat-title">${title}</h3>
-            <p class="feat-sub">${sub}</p>
-            <span class="feat-go">${cta} <i class="ri-arrow-right-line"></i></span>
+      const bannerOf = t => t ? (t.bannerImage || cover(t)) : '';
+      const imgOfPath = id => { const p = PATHS.find(x => x.id === id); return bannerOf(p && pathTitles(p)[0]); };
+      const seraColl = COLLECTIONS.find(c => c.id === 'una-sera');
+      const seraImg = bannerOf(seraColl && seraColl.get()[0]) || imgOfPath('da-zero-a-otaku');
+      const feat = (href, ic, title, sub, img) => `
+        <a class="path-card" href="${href}" style="--accent:var(--red)">
+          <div class="path-hero-img">${img ? `<img class="path-1img" src="${esc(img)}" alt="" loading="lazy" onload="this.classList.add('ld')" onerror="this.classList.add('ld')">` : ''}</div>
+          <div class="path-card-body">
+            <div class="path-head"><span class="path-ic-wrap"><i class="${ic}"></i></span><h3 class="path-name">${title}</h3></div>
+            <p class="path-blurb">${sub}</p>
+            <div class="path-foot"><span class="path-start">Apri <i class="ri-arrow-right-line"></i></span></div>
           </div>
         </a>`;
-      const genreSample = GENRE_PATHS.map(p => pathTitles(p)[0]).filter(Boolean);
-      const percorsoSample = PERCORSI_PATHS.map(p => pathTitles(p)[0]).filter(Boolean);
-      const esploraSample = [...TITLES].filter(t => !t.top).sort(rankSort).slice(0, 7);
+      const heroImg = [...TITLES].filter(t => t.top && t.bannerImage).sort(rankSort)[0] || [...TITLES].filter(t => t.top && t.coverImage).sort(rankSort)[0];
+      const genreBrowse = GENRE_PATHS.map(p => this.pathTile(p)).join('');
+      const percorsiBrowse = PERCORSI_PATHS.map(p => this.pathTile(p)).join('');
+      const facts = PATHS.filter(p => p.curiosita).map(p => p.curiosita).slice(0, 3);
       return `
-      <div class="wrap home2">
-        <section class="home-hero">
-          <div class="home-hero-bg">${heroCovers}<span class="home-hero-veil"></span></div>
-          <div class="home-hero-in">
-            <span class="hh-kicker"><i class="ri-sparkling-2-fill"></i> La guida agli anime</span>
-            <h1 class="hh-title">I migliori anime di ogni genere, scelti e spiegati.</h1>
-            <p class="hh-sub">Perché guardarli, da dove iniziare, quanto durano e dove vederli. Niente liste a caso.</p>
-            <div class="hh-cta">
-              <button class="hh-btn primary" id="heroSearch"><i class="ri-search-line"></i> Cerca un anime</button>
-              <a class="hh-btn ghost" href="/generi"><i class="ri-shapes-line"></i> Sfoglia i generi</a>
-            </div>
+      <div class="wrap">
+        <div class="home-grid">
+          <div class="home-main">
+            <section class="home-hero">
+              ${heroImg ? `<div class="home-hero-art"><img src="${esc(heroImg.bannerImage || cover(heroImg))}" alt="" loading="eager" onload="this.classList.add('ld')" onerror="this.classList.add('ld')"></div>` : ''}
+              <span class="home-hero-veil"></span>
+              <div class="home-hero-in">
+                <span class="hh-kicker">Guida agli anime · non un catalogo</span>
+                <h1 class="hh-title">Cosa guardare, da dove iniziare, dove vederlo.</h1>
+                <p class="hh-sub">Anime scelti e spiegati uno per uno: atmosfera, durata reale e la piattaforma giusta. Senza spoiler, senza perdere tempo.</p>
+                <div class="hh-cta">
+                  <a class="btn-red" href="/esplora"><i class="ri-compass-3-line"></i> Sfoglia il catalogo</a>
+                  <button class="hh-btn ghost js-surprise"><i class="ri-shuffle-line"></i> Sorprendimi</button>
+                </div>
+              </div>
+            </section>
+          </div>
+          <aside class="home-rail">
+            <section class="rail-sec rail-tool">
+              <div class="rail-h-row"><h3 class="rail-h"><i class="ri-compass-3-line"></i> Aiutami a scegliere</h3></div>
+              <p class="rail-q">Quanto tempo hai?</p>
+              <div class="rail-times">
+                <a href="/tempo/sera"><i class="ri-moon-clear-line"></i> Una sera</a>
+                <a href="/tempo/medio"><i class="ri-calendar-2-line"></i> Un weekend</a>
+                <a href="/tempo/maratona"><i class="ri-fire-line"></i> Una maratona</a>
+              </div>
+              <button class="btn-red js-surprise rail-surprise"><i class="ri-shuffle-line"></i> Sorprendimi</button>
+            </section>
+            <section class="rail-sec">
+              <div class="rail-h-row"><h3 class="rail-h"><i class="ri-lightbulb-flash-line"></i> Lo sapevi?</h3></div>
+              <div class="rail-facts">${facts.map(f => `<p class="rail-fact">${esc(f)}</p>`).join('')}</div>
+            </section>
+          </aside>
+        </div>
+
+        <section class="home-sec home-full">
+          <div class="sec-divider"><span class="sd-label"><i class="ri-compass-3-line"></i> Da dove vuoi partire</span><span class="sd-line"></span></div>
+          <div class="qgrid">
+            ${feat('/p/da-zero-a-otaku', 'ri-seedling-line', 'Parto da zero', 'Guida passo passo per scoprire gli anime.', imgOfPath('da-zero-a-otaku'))}
+            ${feat('/p/seinen-e-maturo', 'ri-skull-line', 'Voglio roba adulta', 'Storie mature, complesse, senza compromessi.', imgOfPath('seinen-e-maturo'))}
+            ${feat('/tempo/sera', 'ri-time-line', 'Ho poco tempo', 'Episodi brevi, film e serie compatte.', seraImg)}
           </div>
         </section>
 
-        <section class="home-sec">
-          <div class="home-h-row"><h2 class="home-h">Da dove vuoi partire</h2></div>
-          <div class="feat-grid">
-            ${feat('/generi', 'ri-shapes-line', 'Generi', `${GENRE_PATHS.length} categorie: azione, mindfuck, horror, sci-fi, isekai…`, 'Vedi i generi', '#d8472b', montage(genreSample))}
-            ${feat('/percorsi', 'ri-route-line', 'Percorsi', `${PERCORSI_PATHS.length} viaggi tematici: da zero, capolavori, antieroi…`, 'Vedi i percorsi', '#c9a227', montage(percorsoSample))}
-            ${feat('/esplora', 'ri-compass-3-line', 'Esplora tutto', `Tutti i ${TITLES.length} titoli, dal migliore e filtrabili`, 'Apri il catalogo', '#2f8f9e', montage(esploraSample))}
-          </div>
+        <section class="home-sec home-full">
+          <div class="sec-divider"><span class="sd-label"><i class="ri-shapes-line"></i> Sfoglia per genere</span><span class="sd-line"></span><a class="sd-count sd-link" href="/generi">Tutti i generi <i class="ri-arrow-right-line"></i></a></div>
+          <div class="paths-grid">${genreBrowse}</div>
         </section>
 
-        <section class="home-sec">
-          <div class="home-h-row"><h2 class="home-h">In evidenza</h2></div>
-          <div class="paths-grid">${collTiles}</div>
+        <section class="home-sec home-full">
+          <div class="sec-divider"><span class="sd-label"><i class="ri-route-line"></i> Percorsi guidati</span><span class="sd-line"></span><a class="sd-count sd-link" href="/percorsi">Tutti i percorsi <i class="ri-arrow-right-line"></i></a></div>
+          <div class="paths-grid">${percorsiBrowse}</div>
         </section>
       </div>`;
     }
@@ -688,23 +746,22 @@
               <h1 class="path-hero-name">${esc(p.title)}</h1>
               <p class="path-hero-blurb">${esc(p.blurb || p.tagline)}</p>
               <div class="path-hero-meta">
-                <span class="pp-bar lg"><span style="width:${pr.pct}%"></span></span>
-                <span>${pr.done} di ${pr.total} visti · dal migliore</span>
+                <span>${catTitles(p).length} titoli · ordinati dal migliore</span>
               </div>
             </div>
           </div>
         </div>
       </section>`;
 
-      // generi e percorsi tematici (non a livelli): scheda + "Dalla tua lista" + "Consigliati"
+      // ogni percorso/genere: scheda introduttiva + Top + Da vedere + Consigliati
       if (!META_IDS.includes(id)) {
         const isGenre = GENRE_IDS.includes(id);
         // membri = titoli curati nel percorso + (per i generi) titoli della lista che combaciano col genere
-        const memberMap = new Map(pathTitles(p).map(t => [t.id, t]));
-        if (isGenre) TITLES.forEach(t => { if (t.inList && matchesGenreCat(t, id)) memberMap.set(t.id, t); });
-        const members = [...memberMap.values()];
-        const fromList = members.filter(t => t.inList).sort(rankSort);
-        const consigliati = members.filter(t => !t.inList).sort(rankSort);
+        const members = catTitles(p);
+        const top = members.filter(t => t.inList && isTopT(t)).sort(rankSort);
+        const daVedere = members.filter(t => t.inList && !isTopT(t)).sort(rankSort);
+        const noPersonal = !top.length && !daVedere.length; // categoria interamente curata (es. classici)
+        const consigliati = members.filter(t => !t.inList).sort(rankSort).slice(0, noPersonal ? 24 : 6);
         const scheda = `
         <section class="wrap cat-intro-wrap">
           <div class="cat-intro" style="--accent:${esc(p.accent)}">
@@ -725,37 +782,19 @@
             <button class="cf-chip" data-band="maratona">Maratona</button>
           </div>
         </section>`;
-        const sec = (title, ic, list) => list.length ? `
+        const sec = (label, ic, list) => list.length ? `
           <section class="wrap">
-            <div class="sec-head sub"><h2><i class="${ic}"></i> ${title}</h2><span class="sec-count">${list.length}</span></div>
+            <div class="sec-divider"><span class="sd-label"><i class="${ic}"></i> ${label}</span><span class="sd-line"></span><span class="sd-count">${list.length} titoli</span></div>
             <div class="grid">${list.map(t => this.card(t)).join('')}</div>
           </section>` : '';
-        const body = sec('Imperdibili', 'ri-vip-crown-line', fromList)
-          + sec('Consigliati', 'ri-thumb-up-line', consigliati);
+        const body = noPersonal
+          ? sec('I classici', 'ri-medal-line', consigliati)
+          : sec('Essenziali', 'ri-vip-crown-fill', top)
+            + sec('Consigliati', 'ri-bookmark-3-line', daVedere)
+            + sec('Da scoprire', 'ri-compass-3-line', consigliati);
         return hero + scheda + filterBar + body;
       }
-
-      // percorsi "meta" (da-zero, canone, chicche, ecc.): restano a livelli per ora
-      const levels = p.levels.map((lv, i) => {
-        const ids = lv.titles || [];
-        const done = ids.filter(x => this.isWatched(x)).length;
-        const state = done === ids.length && ids.length ? 'done' : done > 0 ? 'doing' : 'todo';
-        const stLabel = state === 'done' ? 'Completato' : state === 'doing' ? 'In corso' : 'Da iniziare';
-        const cards = ids.map(x => this.card(BY_ID.get(x))).join('');
-        return `
-        <article class="level lv-${state}">
-          <div class="lv-rail"><span class="lv-num">${i + 1}</span></div>
-          <div class="lv-body">
-            <div class="lv-head">
-              <h3 class="lv-title">${esc(lv.title)}</h3>
-              <span class="lv-state lv-state-${state}">${stLabel} · ${done}/${ids.length}</span>
-            </div>
-            <p class="lv-why">${esc(lv.why)}</p>
-            <div class="lv-cards">${cards}</div>
-          </div>
-        </article>`;
-      }).join('');
-      return hero + `<section class="wrap levels" style="--accent:${esc(p.accent)}">${levels}</section>`;
+      return hero;
     }
 
     // ── VISTA: COLLEZIONE (TOP, Una sera, Appena usciti) ─────────────────────────
