@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T21:34:05.541Z",
+  "generatedAt": "2026-06-16T21:47:43.579Z",
   "attribution": "Dati e immagini da AniList (anilist.co)",
   "count": 190,
   "titles": [
@@ -40500,51 +40500,7 @@
       "audience": "principiante",
       "icon": "ri-compass-3-line",
       "accent": "#c8643c",
-      "levels": [
-        {
-          "title": "I primi anime",
-          "why": "Moderni e facili da amare: il modo migliore per capire perché gli anime appassionano.",
-          "titles": [
-            "death-note",
-            "fullmetal-alchemist-brotherhood",
-            "demon-slayer",
-            "attack-on-titan"
-          ]
-        },
-        {
-          "title": "Apri gli orizzonti",
-          "why": "Toni e generi diversi, per scoprire quanto è varia la roba.",
-          "titles": [
-            "steins-gate",
-            "cyberpunk-edgerunners",
-            "hunter-x-hunter",
-            "jujutsu-kaisen",
-            "dan-da-dan"
-          ]
-        },
-        {
-          "title": "I classici da conoscere",
-          "why": "Le opere che hanno definito il medium: datate, ma ancora fondamentali.",
-          "titles": [
-            "cowboy-bebop",
-            "neon-genesis-evangelion",
-            "akira",
-            "dragon-ball",
-            "naruto"
-          ]
-        },
-        {
-          "title": "Le opere più impegnative",
-          "why": "Ora che hai le basi, puoi affrontarle e apprezzarle davvero.",
-          "titles": [
-            "monster",
-            "vinland-saga",
-            "berserk",
-            "one-piece",
-            "made-in-abyss"
-          ]
-        }
-      ],
+      "levels": [],
       "blurb": "Mai visto un anime? Si parte da qui, dal niente assoluto."
     },
     {
@@ -40554,48 +40510,7 @@
       "audience": "tutti",
       "icon": "ri-ancient-pavilion-line",
       "accent": "#b8902f",
-      "levels": [
-        {
-          "title": "I fondatori (anni '80-'90)",
-          "why": "Le opere che hanno creato il linguaggio degli anime moderni.",
-          "titles": [
-            "akira",
-            "neon-genesis-evangelion",
-            "ghost-in-the-shell",
-            "cowboy-bebop",
-            "dragon-ball",
-            "legend-of-the-galactic-heroes",
-            "yu-yu-hakusho",
-            "trigun"
-          ]
-        },
-        {
-          "title": "L'epoca d'oro (anni 2000)",
-          "why": "Il decennio in cui gli anime hanno conquistato il mondo con storie ambiziose.",
-          "titles": [
-            "death-note",
-            "fullmetal-alchemist-brotherhood",
-            "code-geass",
-            "monster",
-            "gurren-lagann",
-            "clannad-after-story",
-            "samurai-champloo"
-          ]
-        },
-        {
-          "title": "I moderni imprescindibili (2010+)",
-          "why": "I capolavori recenti già destinati a diventare classici.",
-          "titles": [
-            "attack-on-titan",
-            "steins-gate",
-            "hunter-x-hunter",
-            "madoka-magica",
-            "vinland-saga",
-            "frieren",
-            "made-in-abyss"
-          ]
-        }
-      ],
+      "levels": [],
       "blurb": "Le opere che tutti danno per viste: colma le lacune."
     },
     {
@@ -40605,54 +40520,7 @@
       "audience": "principiante",
       "icon": "ri-sword-line",
       "accent": "#cf4434",
-      "levels": [
-        {
-          "title": "I pilastri del genere",
-          "why": "Le grandi saghe d'azione che hanno definito lo shōnen.",
-          "titles": [
-            "fullmetal-alchemist-brotherhood",
-            "hunter-x-hunter",
-            "dragon-ball",
-            "naruto",
-            "one-piece",
-            "bleach",
-            "yu-yu-hakusho",
-            "saint-seiya"
-          ]
-        },
-        {
-          "title": "I successi moderni",
-          "why": "Gli shōnen di oggi: animazione spettacolare e ritmo serrato.",
-          "titles": [
-            "jujutsu-kaisen",
-            "demon-slayer",
-            "my-hero-academia",
-            "chainsaw-man",
-            "dan-da-dan",
-            "dr-stone",
-            "black-clover",
-            "kaiju-no-8",
-            "gachiakuta",
-            "akame-ga-kill",
-            "burn-the-witch",
-            "my-hero-academia-vigilantes",
-            "solo-leveling"
-          ]
-        },
-        {
-          "title": "Azione d'autore",
-          "why": "Quando il combattimento diventa regia: tra le migliori animazioni in circolazione.",
-          "titles": [
-            "mob-psycho-100",
-            "jojo-s-bizarre-adventure",
-            "kill-la-kill",
-            "one-punch-man",
-            "devil-may-cry",
-            "bna-brand-new-animal",
-            "gurren-lagann"
-          ]
-        }
-      ],
+      "levels": [],
       "blurb": "Combattimenti, poteri che crescono, tornei: lo shōnen d'azione.",
       "about": "Combattimenti spettacolari, poteri che crescono e protagonisti che non mollano mai. Lo shōnen d'azione è il genere-porta degli anime: quello che ha cresciuto mezzo mondo.",
       "curiosita": "«Shōnen» significa «ragazzo»: nasce sulle riviste per ragazzi, ma oggi questi titoli li guardano tutti, a qualsiasi età."
@@ -40664,40 +40532,7 @@
       "audience": "esperto",
       "icon": "ri-goblet-2-line",
       "accent": "#6e4630",
-      "levels": [
-        {
-          "title": "Crimine e tensione",
-          "why": "Thriller adulti con personaggi ambigui e poste in gioco serie.",
-          "titles": [
-            "monster",
-            "91-days",
-            "banana-fish",
-            "gangsta",
-            "darwin-s-game"
-          ]
-        },
-        {
-          "title": "Guerra e storia",
-          "why": "Epica storica e militare, con personaggi che cambiano davvero.",
-          "titles": [
-            "vinland-saga",
-            "kingdom",
-            "golden-kamuy",
-            "legend-of-the-galactic-heroes"
-          ]
-        },
-        {
-          "title": "Dark fantasy brutale",
-          "why": "Fantasy adulto e violento, magnifico da vedere e duro da reggere.",
-          "titles": [
-            "berserk",
-            "dororo",
-            "claymore",
-            "drifters",
-            "daemons-of-the-shadow-realm"
-          ]
-        }
-      ],
+      "levels": [],
       "blurb": "Anime per adulti: temi pesanti, violenza, niente buonismo.",
       "about": "Storie adulte: crimine, guerra, vendetta, ambiguità morale. Niente buonismo, personaggi che cambiano davvero e poste in gioco serie.",
       "curiosita": "«Seinen» è la categoria editoriale pensata per il pubblico adulto: stessa intensità dello shōnen, ma temi più pesanti e meno filtri."
@@ -40709,41 +40544,7 @@
       "audience": "tutti",
       "icon": "ri-brain-line",
       "accent": "#6b5ca5",
-      "levels": [
-        {
-          "title": "La tensione monta",
-          "why": "Trame che da premesse semplici diventano congegni perfetti.",
-          "titles": [
-            "death-note",
-            "steins-gate",
-            "erased",
-            "the-promised-neverland",
-            "tokyo-revengers"
-          ]
-        },
-        {
-          "title": "Niente è come sembra",
-          "why": "Storie costruite sull'inganno e sul dubbio: ogni dettaglio conta.",
-          "titles": [
-            "madoka-magica",
-            "summer-time-rendering",
-            "death-parade",
-            "future-diary",
-            "terror-in-resonance",
-            "id-invaded"
-          ]
-        },
-        {
-          "title": "Domande esistenziali",
-          "why": "Fantascienza e astrazione che mettono in discussione coscienza e identità.",
-          "titles": [
-            "serial-experiments-lain",
-            "pluto",
-            "paranoia-agent",
-            "the-tatami-galaxy"
-          ]
-        }
-      ],
+      "levels": [],
       "blurb": "Thriller psicologici che ti incasinano la testa.",
       "about": "Thriller psicologici, inganni e colpi di scena. Storie che da premesse semplici diventano congegni perfetti, costruite per spiazzarti.",
       "curiosita": "Spesso partono lentissimi e «normali» apposta: è la quiete prima che tutto si ribalti. Fidati e arriva alla svolta."
@@ -40755,39 +40556,7 @@
       "audience": "esperto",
       "icon": "ri-skull-2-line",
       "accent": "#8c3b3b",
-      "levels": [
-        {
-          "title": "I primi horror",
-          "why": "L'orrore in forma ancora accessibile: capisci dove sa spingersi il genere.",
-          "titles": [
-            "parasyte-the-maxim",
-            "ajin-demi-human",
-            "deadman-wonderland",
-            "hell-s-paradise-jigokuraku",
-            "tokyo-ghoul",
-            "another",
-            "dark-gathering"
-          ]
-        },
-        {
-          "title": "Violenza e dannazione",
-          "why": "Dark e azione brutale, splendidi da vedere e spietati nei contenuti.",
-          "titles": [
-            "hellsing-ultimate",
-            "devilman-crybaby",
-            "terra-formars"
-          ]
-        },
-        {
-          "title": "Horror puro",
-          "why": "Atmosfere malate e body horror: le opere più disturbanti, per stomaci forti.",
-          "titles": [
-            "gantz",
-            "shiki",
-            "higurashi"
-          ]
-        }
-      ],
+      "levels": [],
       "blurb": "Mostri, sangue e incubi: roba che mette a disagio.",
       "about": "Mostri, gore e atmosfere che restano addosso. Niente lieto fine garantito: qui c'è il meglio dell'horror animato, se reggi lo stomaco.",
       "curiosita": "L'horror animato può spingersi dove il live-action non arriva: nessun limite di effetti speciali, solo l'immaginazione di chi disegna."
@@ -40799,40 +40568,7 @@
       "audience": "tutti",
       "icon": "ri-heart-3-line",
       "accent": "#c44f72",
-      "levels": [
-        {
-          "title": "Storie che commuovono",
-          "why": "Drammi romantici intensi, capaci di farti piangere.",
-          "titles": [
-            "your-lie-in-april",
-            "fruits-basket-2019",
-            "clannad"
-          ]
-        },
-        {
-          "title": "Commedie romantiche",
-          "why": "L'amore con leggerezza e ironia, ma con personaggi veri.",
-          "titles": [
-            "kaguya-sama-love-is-war",
-            "horimiya",
-            "bunny-girl-senpai",
-            "toradora",
-            "my-dress-up-darling",
-            "skip-and-loafer"
-          ]
-        },
-        {
-          "title": "Amori adulti",
-          "why": "Romanticismo più maturo e complesso, con legami che lasciano il segno.",
-          "titles": [
-            "nana",
-            "clannad-after-story",
-            "maquia",
-            "honey-and-clover",
-            "banana-fish"
-          ]
-        }
-      ],
+      "levels": [],
       "blurb": "Storie d'amore, dal dramma alla commedia romantica.",
       "about": "Storie d'amore che funzionano davvero: dal dramma sentimentale che colpisce alla commedia romantica leggera.",
       "curiosita": "La confessione d'amore («kokuhaku») è quasi un rito codificato: c'è un intero filone che ruota attorno a quel singolo momento."
@@ -40844,25 +40580,7 @@
       "audience": "tutti",
       "icon": "ri-cup-line",
       "accent": "#6fa05f",
-      "levels": [
-        {
-          "title": "Quotidianità che scalda",
-          "why": "Giornate normali rese belle: comfort puro, zero ansia.",
-          "titles": [
-            "barakamon",
-            "laid-back-camp"
-          ]
-        },
-        {
-          "title": "Bellezza malinconica",
-          "why": "Slice of life più profondo: solitudine, tempo che passa, piccole epifanie.",
-          "titles": [
-            "violet-evergarden",
-            "march-comes-in-like-a-lion",
-            "mushishi"
-          ]
-        }
-      ],
+      "levels": [],
       "blurb": "Vita quotidiana e ritmi lenti: l'anime-coccola, niente ansia."
     },
     {
@@ -40872,32 +40590,7 @@
       "audience": "tutti",
       "icon": "ri-emotion-laugh-line",
       "accent": "#e0a82e",
-      "levels": [
-        {
-          "title": "Da ridere a crepapelle",
-          "why": "Tempi comici da maestri e assurdità a raffica.",
-          "titles": [
-            "gintama",
-            "nichijou",
-            "grand-blue",
-            "saiki-k",
-            "hinamatsuri",
-            "konosuba",
-            "asobi-asobase"
-          ]
-        },
-        {
-          "title": "Commedia con cuore",
-          "why": "Si ride, ma ci sono anche personaggi ed emozione.",
-          "titles": [
-            "daily-lives-of-high-school-boys",
-            "great-teacher-onizuka",
-            "spy-x-family",
-            "komi-cant-communicate",
-            "kaguya-sama-love-is-war"
-          ]
-        }
-      ],
+      "levels": [],
       "blurb": "Anime fatti apposta per farti ridere.",
       "about": "Anime fatti apposta per farti ridere: demenziale, assurdo, surreale. Quando vuoi solo divertirti senza pensare a niente.",
       "curiosita": "Molta comicità si gioca su «boke» e «tsukkomi»: chi spara l'assurdità e chi lo rimprovera. Una struttura comica vecchia come il teatro giapponese."
@@ -40909,26 +40602,7 @@
       "audience": "tutti",
       "icon": "ri-run-line",
       "accent": "#2e8b6e",
-      "levels": [
-        {
-          "title": "Adrenalina sportiva",
-          "why": "Le partite più tese dell'animazione, anche se lo sport non ti interessa.",
-          "titles": [
-            "haikyuu",
-            "hajime-no-ippo",
-            "blue-lock",
-            "slam-dunk"
-          ]
-        },
-        {
-          "title": "Lo sport come dramma",
-          "why": "Quando lo sport diventa regia e storia umana.",
-          "titles": [
-            "ping-pong-the-animation",
-            "run-with-the-wind"
-          ]
-        }
-      ],
+      "levels": [],
       "blurb": "Squadre, rivalità e partite all'ultimo respiro."
     },
     {
@@ -40938,53 +40612,7 @@
       "audience": "tutti",
       "icon": "ri-film-line",
       "accent": "#8a5aa8",
-      "levels": [
-        {
-          "title": "Studio Ghibli",
-          "why": "I film che hanno reso l'animazione giapponese rispettata ovunque.",
-          "titles": [
-            "la-citta-incantata",
-            "principessa-mononoke",
-            "my-neighbor-totoro",
-            "howls-moving-castle",
-            "nausicaa",
-            "grave-of-the-fireflies",
-            "castle-in-the-sky",
-            "kikis-delivery-service",
-            "porco-rosso",
-            "ponyo",
-            "the-wind-rises",
-            "the-boy-and-the-heron",
-            "the-tale-of-the-princess-kaguya",
-            "whisper-of-the-heart"
-          ]
-        },
-        {
-          "title": "Makoto Shinkai",
-          "why": "Il regista dei drammi romantici dalla fotografia mozzafiato.",
-          "titles": [
-            "your-name",
-            "weathering-with-you",
-            "5-centimeters-per-second"
-          ]
-        },
-        {
-          "title": "Maestri e film-culto",
-          "why": "Satoshi Kon, Hosoda e altri capolavori d'autore.",
-          "titles": [
-            "perfect-blue",
-            "akira",
-            "millennium-actress",
-            "wolf-children",
-            "tokyo-godfathers",
-            "a-silent-voice",
-            "redline",
-            "paprika",
-            "summer-wars",
-            "the-girl-who-leapt-through-time"
-          ]
-        }
-      ],
+      "levels": [],
       "blurb": "I film dei grandi registi: Ghibli, Shinkai, Miyazaki e co.",
       "about": "I film che hanno fatto conoscere l'animazione giapponese al mondo: Ghibli, Miyazaki, Satoshi Kon, Shinkai. Da vedere grandi, su uno schermo che se lo merita.",
       "curiosita": "Lo Studio Ghibli ha vinto l'Oscar con «La città incantata», e Miyazaki ne ha vinto un secondo a 82 anni con «Il ragazzo e l'airone»."
@@ -40996,43 +40624,7 @@
       "audience": "esperto",
       "icon": "ri-treasure-map-line",
       "accent": "#5b7a52",
-      "levels": [
-        {
-          "title": "Gemme sottovalutate",
-          "why": "Opere ottime di cui si parla troppo poco.",
-          "titles": [
-            "death-parade",
-            "91-days",
-            "deca-dence",
-            "heavenly-delusion",
-            "planetes",
-            "to-be-hero-x"
-          ]
-        },
-        {
-          "title": "Cult di nicchia",
-          "why": "Identità fortissima e pubblico piccolo: strane e memorabili.",
-          "titles": [
-            "wolf-s-rain",
-            "akudama-drive",
-            "gangsta",
-            "abenobashi-magical-shopping-street",
-            "welcome-to-the-nhk",
-            "flcl"
-          ]
-        },
-        {
-          "title": "Classici da riscoprire",
-          "why": "Perle messe in ombra ingiustamente dal tempo.",
-          "titles": [
-            "golden-kamuy",
-            "mushishi",
-            "dororo",
-            "claymore",
-            "banana-fish"
-          ]
-        }
-      ],
+      "levels": [],
       "blurb": "Roba di nicchia che quasi nessuno conosce: per intenditori."
     },
     {
@@ -41045,31 +40637,7 @@
       "blurb": "I voti più alti e le pietre miliari del medium.",
       "about": "Le opere che non si discutono: i voti più alti e le pietre miliari. Se hai poco tempo e vuoi andare sul sicuro, qualsiasi titolo qui dentro vale la visione.",
       "curiosita": "Molti di questi sono nelle classifiche \"migliori anime di sempre\" da anni — non è hype passeggero, è roba che regge il tempo.",
-      "levels": [
-        {
-          "title": "Capolavori",
-          "why": "",
-          "titles": [
-            "fullmetal-alchemist-brotherhood",
-            "steins-gate",
-            "monster",
-            "attack-on-titan",
-            "vinland-saga",
-            "cowboy-bebop",
-            "hunter-x-hunter",
-            "one-piece",
-            "code-geass",
-            "gurren-lagann",
-            "neon-genesis-evangelion",
-            "death-note",
-            "berserk",
-            "cyberpunk-edgerunners",
-            "made-in-abyss",
-            "perfect-blue",
-            "the-tatami-galaxy"
-          ]
-        }
-      ]
+      "levels": []
     },
     {
       "id": "azione",
@@ -41081,27 +40649,7 @@
       "blurb": "Scontri, inseguimenti e animazione che spacca.",
       "about": "Solo adrenalina: combattimenti spettacolari, ritmo serrato e animazione che lascia a bocca aperta. Quando vuoi qualcosa che parte subito e non ti molla.",
       "curiosita": "I picchi di animazione di questi titoli (i cosiddetti \"sakuga\") vengono studiati fotogramma per fotogramma dagli appassionati.",
-      "levels": [
-        {
-          "title": "Azione",
-          "why": "",
-          "titles": [
-            "demon-slayer",
-            "jujutsu-kaisen",
-            "chainsaw-man",
-            "dan-da-dan",
-            "cyberpunk-edgerunners",
-            "mob-psycho-100",
-            "gurren-lagann",
-            "kill-la-kill",
-            "jojo-s-bizarre-adventure",
-            "hellsing-ultimate",
-            "one-punch-man",
-            "kaiju-no-8",
-            "promare"
-          ]
-        }
-      ]
+      "levels": []
     },
     {
       "id": "antieroi",
@@ -41113,26 +40661,7 @@
       "blurb": "Protagonisti ambigui e scelte sporche.",
       "about": "Protagonisti che non sono eroi: vendetta, ambiguità morale, mezzi discutibili per fini discutibili. Storie dove il \"giusto\" e lo \"sbagliato\" si confondono.",
       "curiosita": "È spesso roba \"seinen\", pensata per un pubblico adulto: i migliori antieroi ti fanno tifare per gente che non dovresti.",
-      "levels": [
-        {
-          "title": "Antieroi",
-          "why": "",
-          "titles": [
-            "death-note",
-            "code-geass",
-            "berserk",
-            "vinland-saga",
-            "monster",
-            "banana-fish",
-            "91-days",
-            "devilman-crybaby",
-            "hellsing-ultimate",
-            "akame-ga-kill",
-            "gangsta",
-            "akudama-drive"
-          ]
-        }
-      ]
+      "levels": []
     },
     {
       "id": "isekai",
@@ -41347,7 +40876,9 @@
         "hell-s-paradise-jigokuraku",
         "gachiakuta",
         "my-hero-academia-vigilantes",
-        "to-be-hero-x"
+        "to-be-hero-x",
+        "yu-yu-hakusho",
+        "dr-stone"
       ],
       "seinen-e-maturo": [
         "berserk",
@@ -41373,7 +40904,10 @@
         "wolf-s-rain",
         "death-parade",
         "sentence-to-be-hero",
-        "made-in-abyss"
+        "made-in-abyss",
+        "banana-fish",
+        "legend-of-the-galactic-heroes",
+        "dororo"
       ],
       "isekai": [
         "re-zero-starting-life-in-another-world",
@@ -41455,6 +40989,54 @@
         "mobile-suit-gundam",
         "daltanious"
       ],
+      "mindfuck": [
+        "death-note",
+        "steins-gate",
+        "monster",
+        "neon-genesis-evangelion",
+        "code-geass",
+        "erased",
+        "the-promised-neverland",
+        "summer-time-rendering",
+        "death-parade",
+        "future-diary",
+        "parasyte-the-maxim",
+        "pluto",
+        "re-zero-starting-life-in-another-world",
+        "ajin-demi-human",
+        "heavenly-delusion",
+        "ergo-proxy",
+        "madoka-magica",
+        "terror-in-resonance",
+        "id-invaded",
+        "serial-experiments-lain",
+        "paranoia-agent",
+        "the-tatami-galaxy"
+      ],
+      "horror-e-disagio": [
+        "berserk",
+        "chainsaw-man",
+        "devilman-crybaby",
+        "parasyte-the-maxim",
+        "the-promised-neverland",
+        "made-in-abyss",
+        "hellsing-ultimate",
+        "claymore",
+        "gantz",
+        "terra-formars",
+        "ajin-demi-human",
+        "deadman-wonderland",
+        "future-diary",
+        "akame-ga-kill",
+        "summer-time-rendering",
+        "hell-s-paradise-jigokuraku",
+        "from-the-new-world",
+        "tokyo-ghoul",
+        "another",
+        "dark-gathering",
+        "shiki",
+        "higurashi"
+      ],
       "sopravvivenza": [
         "future-diary",
         "darwin-s-game",
@@ -41498,48 +41080,25 @@
         "one-punch-man",
         "to-be-hero-x"
       ],
-      "mindfuck": [
-        "death-note",
-        "steins-gate",
-        "monster",
-        "neon-genesis-evangelion",
-        "code-geass",
-        "erased",
-        "the-promised-neverland",
-        "summer-time-rendering",
-        "death-parade",
-        "future-diary",
-        "parasyte-the-maxim",
-        "pluto",
-        "re-zero-starting-life-in-another-world",
-        "ajin-demi-human",
-        "heavenly-delusion",
-        "ergo-proxy"
-      ],
-      "horror-e-disagio": [
-        "berserk",
-        "chainsaw-man",
-        "devilman-crybaby",
-        "parasyte-the-maxim",
-        "the-promised-neverland",
-        "made-in-abyss",
-        "hellsing-ultimate",
-        "claymore",
-        "gantz",
-        "terra-formars",
-        "ajin-demi-human",
-        "deadman-wonderland",
-        "future-diary",
-        "akame-ga-kill",
-        "summer-time-rendering",
-        "hell-s-paradise-jigokuraku",
-        "from-the-new-world"
-      ],
       "romance": [
         "sword-art-online",
         "re-zero-starting-life-in-another-world",
         "tokyo-revengers",
-        "dan-da-dan"
+        "dan-da-dan",
+        "your-lie-in-april",
+        "fruits-basket-2019",
+        "clannad",
+        "kaguya-sama-love-is-war",
+        "horimiya",
+        "bunny-girl-senpai",
+        "toradora",
+        "my-dress-up-darling",
+        "skip-and-loafer",
+        "nana",
+        "clannad-after-story",
+        "maquia",
+        "honey-and-clover",
+        "banana-fish"
       ],
       "commedia": [
         "spy-x-family",
@@ -41550,14 +41109,176 @@
         "handyman-saitou-in-another-world",
         "kill-la-kill",
         "abenobashi-magical-shopping-street",
-        "golden-kamuy"
+        "golden-kamuy",
+        "gintama",
+        "nichijou",
+        "grand-blue",
+        "saiki-k",
+        "hinamatsuri",
+        "konosuba",
+        "asobi-asobase",
+        "daily-lives-of-high-school-boys",
+        "great-teacher-onizuka",
+        "komi-cant-communicate",
+        "kaguya-sama-love-is-war"
       ],
       "cinema-dautore": [
         "akira",
         "ghost-in-the-shell",
         "principessa-mononoke",
         "la-citta-incantata",
+        "promare",
+        "my-neighbor-totoro",
+        "howls-moving-castle",
+        "nausicaa",
+        "grave-of-the-fireflies",
+        "castle-in-the-sky",
+        "kikis-delivery-service",
+        "porco-rosso",
+        "ponyo",
+        "the-wind-rises",
+        "the-boy-and-the-heron",
+        "the-tale-of-the-princess-kaguya",
+        "whisper-of-the-heart",
+        "your-name",
+        "weathering-with-you",
+        "5-centimeters-per-second",
+        "perfect-blue",
+        "millennium-actress",
+        "wolf-children",
+        "tokyo-godfathers",
+        "a-silent-voice",
+        "redline",
+        "paprika",
+        "summer-wars",
+        "the-girl-who-leapt-through-time"
+      ],
+      "da-zero-a-otaku": [
+        "death-note",
+        "fullmetal-alchemist-brotherhood",
+        "demon-slayer",
+        "attack-on-titan",
+        "steins-gate",
+        "cyberpunk-edgerunners",
+        "hunter-x-hunter",
+        "jujutsu-kaisen",
+        "dan-da-dan",
+        "cowboy-bebop",
+        "neon-genesis-evangelion",
+        "akira",
+        "dragon-ball",
+        "naruto",
+        "monster",
+        "vinland-saga",
+        "berserk",
+        "one-piece",
+        "made-in-abyss"
+      ],
+      "capolavori": [
+        "fullmetal-alchemist-brotherhood",
+        "steins-gate",
+        "monster",
+        "attack-on-titan",
+        "vinland-saga",
+        "cowboy-bebop",
+        "hunter-x-hunter",
+        "one-piece",
+        "code-geass",
+        "gurren-lagann",
+        "neon-genesis-evangelion",
+        "death-note",
+        "berserk",
+        "cyberpunk-edgerunners",
+        "made-in-abyss",
+        "perfect-blue",
+        "the-tatami-galaxy"
+      ],
+      "azione": [
+        "demon-slayer",
+        "jujutsu-kaisen",
+        "chainsaw-man",
+        "dan-da-dan",
+        "cyberpunk-edgerunners",
+        "mob-psycho-100",
+        "gurren-lagann",
+        "kill-la-kill",
+        "jojo-s-bizarre-adventure",
+        "hellsing-ultimate",
+        "one-punch-man",
+        "kaiju-no-8",
         "promare"
+      ],
+      "antieroi": [
+        "death-note",
+        "code-geass",
+        "berserk",
+        "vinland-saga",
+        "monster",
+        "banana-fish",
+        "91-days",
+        "devilman-crybaby",
+        "hellsing-ultimate",
+        "akame-ga-kill",
+        "gangsta",
+        "akudama-drive"
+      ],
+      "il-canone": [
+        "akira",
+        "neon-genesis-evangelion",
+        "ghost-in-the-shell",
+        "cowboy-bebop",
+        "dragon-ball",
+        "legend-of-the-galactic-heroes",
+        "yu-yu-hakusho",
+        "trigun",
+        "death-note",
+        "fullmetal-alchemist-brotherhood",
+        "code-geass",
+        "monster",
+        "gurren-lagann",
+        "clannad-after-story",
+        "samurai-champloo",
+        "attack-on-titan",
+        "steins-gate",
+        "hunter-x-hunter",
+        "madoka-magica",
+        "vinland-saga",
+        "frieren",
+        "made-in-abyss"
+      ],
+      "chicche-e-deep-cut": [
+        "death-parade",
+        "91-days",
+        "deca-dence",
+        "heavenly-delusion",
+        "planetes",
+        "to-be-hero-x",
+        "wolf-s-rain",
+        "akudama-drive",
+        "gangsta",
+        "abenobashi-magical-shopping-street",
+        "welcome-to-the-nhk",
+        "flcl",
+        "golden-kamuy",
+        "mushishi",
+        "dororo",
+        "claymore",
+        "banana-fish"
+      ],
+      "slice-of-life": [
+        "barakamon",
+        "laid-back-camp",
+        "violet-evergarden",
+        "march-comes-in-like-a-lion",
+        "mushishi"
+      ],
+      "sport": [
+        "haikyuu",
+        "hajime-no-ippo",
+        "blue-lock",
+        "slam-dunk",
+        "ping-pong-the-animation",
+        "run-with-the-wind"
       ]
     },
     "tiers": {
@@ -41569,7 +41290,6 @@
         "one-piece": "e",
         "jojo-s-bizarre-adventure": "e",
         "fullmetal-alchemist-brotherhood": "c",
-        "gurren-lagann": "d",
         "dragon-ball": "c",
         "demon-slayer": "e",
         "my-hero-academia": "c",
@@ -41578,6 +41298,7 @@
         "solo-leveling": "e",
         "mob-psycho-100": "c",
         "one-punch-man": "c",
+        "gurren-lagann": "d",
         "kill-la-kill": "c",
         "tower-of-god": "d",
         "saint-seiya": "c",
@@ -41585,14 +41306,16 @@
         "hell-s-paradise-jigokuraku": "c",
         "gachiakuta": "c",
         "my-hero-academia-vigilantes": "d",
-        "to-be-hero-x": "d"
+        "to-be-hero-x": "d",
+        "yu-yu-hakusho": "d",
+        "dr-stone": "d"
       },
       "seinen-e-maturo": {
         "berserk": "e",
-        "attack-on-titan": "c",
-        "cyberpunk-edgerunners": "e",
         "vinland-saga": "e",
         "monster": "c",
+        "attack-on-titan": "c",
+        "cyberpunk-edgerunners": "e",
         "cowboy-bebop": "e",
         "kingdom": "c",
         "91-days": "c",
@@ -41611,18 +41334,20 @@
         "wolf-s-rain": "c",
         "death-parade": "c",
         "sentence-to-be-hero": "c",
-        "made-in-abyss": "e"
+        "made-in-abyss": "e",
+        "banana-fish": "d",
+        "legend-of-the-galactic-heroes": "d",
+        "dororo": "d"
       },
       "isekai": {
-        "shangri-la-frontier": "e",
-        "solo-leveling": "e",
-        "grimgar-of-fantasy-and-ash": "e",
-        "sentence-to-be-hero": "c",
         "re-zero-starting-life-in-another-world": "c",
         "overlord": "c",
         "sword-art-online": "c",
         "the-rising-of-the-shield-hero": "c",
+        "shangri-la-frontier": "e",
+        "solo-leveling": "e",
         "gate": "c",
+        "grimgar-of-fantasy-and-ash": "e",
         "the-eminence-in-shadow": "c",
         "reincarnated-as-a-sword": "c",
         "the-world-s-finest-assassin-gets-reincarnated-in-another-world-as-an-aristocrat": "c",
@@ -41631,18 +41356,19 @@
         "drifters": "c",
         "release-that-witch": "c",
         "petals-of-reincarnation": "c",
+        "sentence-to-be-hero": "c",
         "mushoku-tensei": "c",
         "tensura": "c",
         "tower-of-god": "c"
       },
       "fantasy": {
+        "frieren": "c",
         "fullmetal-alchemist-brotherhood": "e",
         "hunter-x-hunter": "e",
-        "berserk": "e",
-        "frieren": "c",
         "made-in-abyss": "e",
         "claymore": "c",
         "ranking-of-kings": "c",
+        "berserk": "e",
         "devil-may-cry": "c",
         "burn-the-witch": "c",
         "bna-brand-new-animal": "c",
@@ -41696,12 +41422,12 @@
       "mindfuck": {
         "death-note": "e",
         "steins-gate": "e",
-        "neon-genesis-evangelion": "e",
-        "summer-time-rendering": "e",
         "monster": "c",
+        "neon-genesis-evangelion": "e",
         "code-geass": "c",
         "erased": "c",
         "the-promised-neverland": "c",
+        "summer-time-rendering": "e",
         "death-parade": "c",
         "future-diary": "c",
         "parasyte-the-maxim": "c",
@@ -41709,11 +41435,16 @@
         "re-zero-starting-life-in-another-world": "c",
         "ajin-demi-human": "c",
         "heavenly-delusion": "c",
-        "ergo-proxy": "d"
+        "ergo-proxy": "d",
+        "madoka-magica": "d",
+        "terror-in-resonance": "d",
+        "id-invaded": "d",
+        "serial-experiments-lain": "d",
+        "paranoia-agent": "d",
+        "the-tatami-galaxy": "d"
       },
       "horror-e-disagio": {
         "berserk": "e",
-        "summer-time-rendering": "e",
         "chainsaw-man": "c",
         "devilman-crybaby": "e",
         "parasyte-the-maxim": "e",
@@ -41727,16 +41458,22 @@
         "deadman-wonderland": "c",
         "future-diary": "c",
         "akame-ga-kill": "c",
+        "summer-time-rendering": "e",
         "hell-s-paradise-jigokuraku": "e",
-        "from-the-new-world": "d"
+        "from-the-new-world": "d",
+        "tokyo-ghoul": "d",
+        "another": "d",
+        "dark-gathering": "d",
+        "shiki": "d",
+        "higurashi": "d"
       },
       "sopravvivenza": {
         "future-diary": "e",
+        "darwin-s-game": "c",
         "the-promised-neverland": "e",
         "akudama-drive": "e",
-        "gantz": "e",
-        "darwin-s-game": "c",
-        "deadman-wonderland": "c"
+        "deadman-wonderland": "c",
+        "gantz": "e"
       },
       "storici": {
         "vinland-saga": "e",
@@ -41755,9 +41492,9 @@
       },
       "viaggi-nel-tempo": {
         "steins-gate": "e",
-        "summer-time-rendering": "e",
         "erased": "c",
         "re-zero-starting-life-in-another-world": "c",
+        "summer-time-rendering": "e",
         "tokyo-revengers": "c"
       },
       "crimine": {
@@ -41777,76 +41514,125 @@
         "sword-art-online": "e",
         "re-zero-starting-life-in-another-world": "e",
         "tokyo-revengers": "c",
-        "dan-da-dan": "e"
+        "dan-da-dan": "e",
+        "your-lie-in-april": "d",
+        "fruits-basket-2019": "d",
+        "clannad": "d",
+        "kaguya-sama-love-is-war": "d",
+        "horimiya": "d",
+        "bunny-girl-senpai": "d",
+        "toradora": "d",
+        "my-dress-up-darling": "d",
+        "skip-and-loafer": "d",
+        "nana": "d",
+        "clannad-after-story": "d",
+        "maquia": "d",
+        "honey-and-clover": "d",
+        "banana-fish": "d"
       },
       "commedia": {
+        "spy-x-family": "c",
         "one-punch-man": "e",
         "mob-psycho-100": "e",
         "dan-da-dan": "e",
-        "kill-la-kill": "e",
-        "spy-x-family": "c",
         "the-eminence-in-shadow": "c",
         "handyman-saitou-in-another-world": "c",
+        "kill-la-kill": "e",
         "abenobashi-magical-shopping-street": "c",
-        "golden-kamuy": "c"
+        "golden-kamuy": "c",
+        "gintama": "d",
+        "nichijou": "d",
+        "grand-blue": "d",
+        "saiki-k": "d",
+        "hinamatsuri": "d",
+        "konosuba": "d",
+        "asobi-asobase": "d",
+        "daily-lives-of-high-school-boys": "d",
+        "great-teacher-onizuka": "d",
+        "komi-cant-communicate": "d",
+        "kaguya-sama-love-is-war": "d"
       },
       "cinema-dautore": {
         "akira": "e",
         "ghost-in-the-shell": "e",
         "principessa-mononoke": "e",
         "la-citta-incantata": "e",
-        "promare": "c"
+        "promare": "c",
+        "my-neighbor-totoro": "d",
+        "howls-moving-castle": "d",
+        "nausicaa": "d",
+        "grave-of-the-fireflies": "d",
+        "castle-in-the-sky": "d",
+        "kikis-delivery-service": "d",
+        "porco-rosso": "d",
+        "ponyo": "d",
+        "the-wind-rises": "d",
+        "the-boy-and-the-heron": "d",
+        "the-tale-of-the-princess-kaguya": "d",
+        "whisper-of-the-heart": "d",
+        "your-name": "d",
+        "weathering-with-you": "d",
+        "5-centimeters-per-second": "d",
+        "perfect-blue": "d",
+        "millennium-actress": "d",
+        "wolf-children": "d",
+        "tokyo-godfathers": "d",
+        "a-silent-voice": "d",
+        "redline": "d",
+        "paprika": "d",
+        "summer-wars": "d",
+        "the-girl-who-leapt-through-time": "d"
       },
       "da-zero-a-otaku": {
         "death-note": "e",
         "fullmetal-alchemist-brotherhood": "e",
+        "demon-slayer": "c",
         "attack-on-titan": "e",
         "steins-gate": "e",
         "cyberpunk-edgerunners": "e",
         "hunter-x-hunter": "e",
         "jujutsu-kaisen": "e",
-        "neon-genesis-evangelion": "e",
-        "naruto": "e",
-        "berserk": "e",
-        "one-piece": "e",
-        "demon-slayer": "c",
         "dan-da-dan": "c",
         "cowboy-bebop": "c",
+        "neon-genesis-evangelion": "e",
         "akira": "c",
         "dragon-ball": "c",
+        "naruto": "e",
         "monster": "c",
         "vinland-saga": "c",
+        "berserk": "e",
+        "one-piece": "e",
         "made-in-abyss": "c"
       },
       "capolavori": {
         "fullmetal-alchemist-brotherhood": "e",
         "steins-gate": "e",
+        "monster": "c",
         "attack-on-titan": "e",
+        "vinland-saga": "c",
+        "cowboy-bebop": "c",
         "hunter-x-hunter": "e",
         "one-piece": "e",
+        "code-geass": "c",
         "gurren-lagann": "e",
         "neon-genesis-evangelion": "e",
         "death-note": "e",
         "berserk": "e",
         "cyberpunk-edgerunners": "e",
-        "monster": "c",
-        "vinland-saga": "c",
-        "cowboy-bebop": "c",
-        "code-geass": "c",
         "made-in-abyss": "c",
         "perfect-blue": "d",
         "the-tatami-galaxy": "d"
       },
       "azione": {
-        "jujutsu-kaisen": "e",
-        "cyberpunk-edgerunners": "e",
-        "gurren-lagann": "e",
-        "jojo-s-bizarre-adventure": "e",
         "demon-slayer": "c",
+        "jujutsu-kaisen": "e",
         "chainsaw-man": "c",
         "dan-da-dan": "c",
+        "cyberpunk-edgerunners": "e",
         "mob-psycho-100": "c",
+        "gurren-lagann": "e",
         "kill-la-kill": "c",
+        "jojo-s-bizarre-adventure": "e",
         "hellsing-ultimate": "c",
         "one-punch-man": "c",
         "kaiju-no-8": "c",
@@ -41854,59 +41640,59 @@
       },
       "antieroi": {
         "death-note": "e",
-        "berserk": "e",
         "code-geass": "c",
+        "berserk": "e",
         "vinland-saga": "c",
         "monster": "c",
+        "banana-fish": "d",
         "91-days": "c",
         "devilman-crybaby": "c",
         "hellsing-ultimate": "c",
         "akame-ga-kill": "c",
         "gangsta": "c",
-        "akudama-drive": "c",
-        "banana-fish": "d"
+        "akudama-drive": "c"
       },
       "il-canone": {
-        "neon-genesis-evangelion": "e",
-        "death-note": "e",
-        "fullmetal-alchemist-brotherhood": "e",
-        "gurren-lagann": "e",
-        "attack-on-titan": "e",
-        "steins-gate": "e",
-        "hunter-x-hunter": "e",
         "akira": "c",
+        "neon-genesis-evangelion": "e",
         "ghost-in-the-shell": "c",
         "cowboy-bebop": "c",
         "dragon-ball": "c",
-        "trigun": "c",
-        "code-geass": "c",
-        "monster": "c",
-        "samurai-champloo": "c",
-        "vinland-saga": "c",
-        "frieren": "c",
-        "made-in-abyss": "c",
         "legend-of-the-galactic-heroes": "d",
         "yu-yu-hakusho": "d",
+        "trigun": "c",
+        "death-note": "e",
+        "fullmetal-alchemist-brotherhood": "e",
+        "code-geass": "c",
+        "monster": "c",
+        "gurren-lagann": "e",
         "clannad-after-story": "d",
-        "madoka-magica": "d"
+        "samurai-champloo": "c",
+        "attack-on-titan": "e",
+        "steins-gate": "e",
+        "hunter-x-hunter": "e",
+        "madoka-magica": "d",
+        "vinland-saga": "c",
+        "frieren": "c",
+        "made-in-abyss": "c"
       },
       "chicche-e-deep-cut": {
-        "heavenly-delusion": "e",
-        "gangsta": "e",
-        "flcl": "e",
-        "golden-kamuy": "e",
         "death-parade": "c",
         "91-days": "c",
         "deca-dence": "c",
+        "heavenly-delusion": "e",
+        "planetes": "d",
         "to-be-hero-x": "c",
         "wolf-s-rain": "c",
         "akudama-drive": "c",
+        "gangsta": "e",
         "abenobashi-magical-shopping-street": "c",
-        "claymore": "c",
-        "planetes": "d",
         "welcome-to-the-nhk": "d",
+        "flcl": "e",
+        "golden-kamuy": "e",
         "mushishi": "d",
         "dororo": "d",
+        "claymore": "c",
         "banana-fish": "d"
       },
       "slice-of-life": {

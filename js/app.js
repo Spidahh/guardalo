@@ -939,7 +939,7 @@
         <div class="admin-bar">
           <h1><i class="ri-tools-fill"></i> Gestione</h1>
           <div class="admin-tabs">
-            <button class="atab ${tab === 'generi' ? 'on' : ''}" data-atab="generi">Generi</button>
+            <button class="atab ${tab === 'generi' ? 'on' : ''}" data-atab="generi">Generi e percorsi</button>
             <button class="atab ${tab === 'titoli' ? 'on' : ''}" data-atab="titoli">Titoli</button>
             <button class="atab ${tab === 'aggiungi' ? 'on' : ''}" data-atab="aggiungi">Aggiungi</button>
           </div>
@@ -962,11 +962,13 @@
     }
     adminGeneri() {
       const cat = window.GUARDALO.categories || {};
-      const ids = cat.genreOrder || [];
+      const genres = cat.genreOrder || [], percorsi = cat.percorsoOrder || [];
+      const ids = [...genres, ...percorsi];
       const sel = this.adminGen && ids.includes(this.adminGen) ? this.adminGen : ids[0];
       this.adminGen = sel;
       const nameOf = id => (PATHS.find(p => p.id === id) || {}).title || id;
-      const opts = ids.map(id => `<option value="${esc(id)}" ${id === sel ? 'selected' : ''}>${esc(nameOf(id))}</option>`).join('');
+      const optFor = id => `<option value="${esc(id)}" ${id === sel ? 'selected' : ''}>${esc(nameOf(id))}</option>`;
+      const opts = `<optgroup label="Generi">${genres.map(optFor).join('')}</optgroup><optgroup label="Percorsi">${percorsi.map(optFor).join('')}</optgroup>`;
       const tOrder = { e: 0, c: 1, d: 2 }, tLabel = { e: 'Essenziale', c: 'Consigliato', d: 'Da scoprire' };
       const mem = (cat.members[sel] || []).map(s => BY_ID.get(s)).filter(Boolean)
         .sort((a, b) => (tOrder[tierOf(sel, a.id)] - tOrder[tierOf(sel, b.id)]) || rankSort(a, b));
@@ -988,12 +990,12 @@
           <label>Genere: <select id="adminGenSel">${opts}</select></label>
           <span class="admin-count">${mem.length} titoli · <b class="t-e">${this._admCnt.e} Essenziali</b> · <b class="t-c">${this._admCnt.c} Consigliati</b> · <b class="t-d">${this._admCnt.d} Da scoprire</b> · hero: <b>${esc(hero ? (BY_ID.get(hero)?.title || hero) : '—')}</b></span>
         </div>
-        <p class="admin-hint">Clicca <b>E</b>/<b>C</b>/<b>D</b> per mettere ogni titolo in Essenziali, Consigliati o Da scoprire <i>in questo genere</i>. <i class="ri-image-line"></i> = immagine hero.</p>
+        <p class="admin-hint">Clicca <b>E</b>/<b>C</b>/<b>D</b> per mettere ogni titolo in Essenziali, Consigliati o Da scoprire <i>in questa sezione</i>. <i class="ri-image-line"></i> = immagine hero · <i class="ri-close-line"></i> = togli.</p>
         <div class="admin-addrow">
           <input id="adminAddMember" placeholder="Aggiungi un titolo a «${esc(nameOf(sel))}»…" autocomplete="off">
           <div id="adminAddSug" class="admin-sug"></div>
         </div>
-        <ol class="admin-members">${rows || '<li class="amr-empty">Nessun titolo in questo genere.</li>'}</ol>`;
+        <ol class="admin-members">${rows || '<li class="amr-empty">Nessun titolo in questa sezione.</li>'}</ol>`;
     }
     adminMemberSug(q) {
       if (!q) return '';
@@ -1017,10 +1019,9 @@
     }
     adminTitleEditor(t) {
       const cat = window.GUARDALO.categories || {};
-      const genres = (cat.genreOrder || []).map(g => {
-        const inIt = ((cat.members[g]) || []).includes(t.id);
-        return `<button class="agchip ${inIt ? 'on' : ''}" data-aact="togglegen" data-gen="${esc(g)}" data-slug="${esc(t.id)}">${esc((PATHS.find(p => p.id === g) || {}).title || g)}</button>`;
-      }).join('');
+      const chip = id => { const inIt = ((cat.members[id]) || []).includes(t.id); return `<button class="agchip ${inIt ? 'on' : ''}" data-aact="togglegen" data-gen="${esc(id)}" data-slug="${esc(t.id)}">${esc((PATHS.find(p => p.id === id) || {}).title || id)}</button>`; };
+      const genres = (cat.genreOrder || []).map(chip).join('');
+      const percorsi = (cat.percorsoOrder || []).map(chip).join('');
       return `
         <div class="admin-te-head">
           <img src="${esc(thumbS(t.coverImage))}" alt="" loading="lazy">
@@ -1030,7 +1031,8 @@
           <label class="aswitch"><input type="checkbox" data-aact="inlist" data-slug="${esc(t.id)}" ${t.inList ? 'checked' : ''}> Nella tua lista</label>
           <label class="arate">Tuo voto <input type="number" min="0" max="10" step="0.1" value="${t.userRating ?? ''}" data-aact="rate" data-slug="${esc(t.id)}" placeholder="—"></label>
         </div>
-        <div class="admin-te-genres"><span class="admin-te-lbl">Generi (clicca per aggiungere/togliere — la fascia E/C/D si imposta nel tab «Generi»):</span><div class="agchips">${genres}</div></div>`;
+        <div class="admin-te-genres"><span class="admin-te-lbl">Generi (clicca per aggiungere/togliere — la fascia E/C/D si imposta nel tab «Generi e percorsi»):</span><div class="agchips">${genres}</div></div>
+        <div class="admin-te-genres"><span class="admin-te-lbl">Percorsi:</span><div class="agchips">${percorsi}</div></div>`;
     }
     adminAggiungi() {
       const pend = (this.adminPending || []).map((p, i) => `<li>${esc(p.title)}${p.year ? ` (${p.year})` : ''} <button data-aact="rmpend" data-i="${i}"><i class="ri-close-line"></i></button></li>`).join('');

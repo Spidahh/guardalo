@@ -6,51 +6,7 @@
     "audience": "principiante",
     "icon": "ri-compass-3-line",
     "accent": "#c8643c",
-    "levels": [
-      {
-        "title": "I primi anime",
-        "why": "Moderni e facili da amare: il modo migliore per capire perché gli anime appassionano.",
-        "titles": [
-          "death-note",
-          "fullmetal-alchemist-brotherhood",
-          "demon-slayer",
-          "attack-on-titan"
-        ]
-      },
-      {
-        "title": "Apri gli orizzonti",
-        "why": "Toni e generi diversi, per scoprire quanto è varia la roba.",
-        "titles": [
-          "steins-gate",
-          "cyberpunk-edgerunners",
-          "hunter-x-hunter",
-          "jujutsu-kaisen",
-          "dan-da-dan"
-        ]
-      },
-      {
-        "title": "I classici da conoscere",
-        "why": "Le opere che hanno definito il medium: datate, ma ancora fondamentali.",
-        "titles": [
-          "cowboy-bebop",
-          "neon-genesis-evangelion",
-          "akira",
-          "dragon-ball",
-          "naruto"
-        ]
-      },
-      {
-        "title": "Le opere più impegnative",
-        "why": "Ora che hai le basi, puoi affrontarle e apprezzarle davvero.",
-        "titles": [
-          "monster",
-          "vinland-saga",
-          "berserk",
-          "one-piece",
-          "made-in-abyss"
-        ]
-      }
-    ],
+    "levels": [],
     "blurb": "Mai visto un anime? Si parte da qui, dal niente assoluto."
   },
   {
@@ -60,54 +16,7 @@
     "audience": "tutti",
     "icon": "ri-ancient-pavilion-line",
     "accent": "#b8902f",
-    "levels": [
-      {
-        "title": "I fondatori (anni '80-'90)",
-        "why": "Le opere che hanno creato il linguaggio degli anime moderni.",
-        "titles": [
-          "akira",
-          "neon-genesis-evangelion",
-          "ghost-in-the-shell",
-          "cowboy-bebop",
-          "dragon-ball"
-        ],
-        "bonus": [
-          "legend-of-the-galactic-heroes",
-          "yu-yu-hakusho",
-          "trigun"
-        ]
-      },
-      {
-        "title": "L'epoca d'oro (anni 2000)",
-        "why": "Il decennio in cui gli anime hanno conquistato il mondo con storie ambiziose.",
-        "titles": [
-          "death-note",
-          "fullmetal-alchemist-brotherhood",
-          "code-geass",
-          "monster",
-          "gurren-lagann"
-        ],
-        "bonus": [
-          "clannad-after-story",
-          "samurai-champloo"
-        ]
-      },
-      {
-        "title": "I moderni imprescindibili (2010+)",
-        "why": "I capolavori recenti già destinati a diventare classici.",
-        "titles": [
-          "attack-on-titan",
-          "steins-gate",
-          "hunter-x-hunter",
-          "madoka-magica",
-          "vinland-saga"
-        ],
-        "bonus": [
-          "frieren",
-          "made-in-abyss"
-        ]
-      }
-    ],
+    "levels": [],
     "blurb": "Le opere che tutti danno per viste: colma le lacune."
   },
   {
@@ -117,60 +26,7 @@
     "audience": "principiante",
     "icon": "ri-sword-line",
     "accent": "#cf4434",
-    "levels": [
-      {
-        "title": "I pilastri del genere",
-        "why": "Le grandi saghe d'azione che hanno definito lo shōnen.",
-        "titles": [
-          "fullmetal-alchemist-brotherhood",
-          "hunter-x-hunter",
-          "dragon-ball",
-          "naruto",
-          "one-piece"
-        ],
-        "bonus": [
-          "bleach",
-          "yu-yu-hakusho",
-          "saint-seiya"
-        ]
-      },
-      {
-        "title": "I successi moderni",
-        "why": "Gli shōnen di oggi: animazione spettacolare e ritmo serrato.",
-        "titles": [
-          "jujutsu-kaisen",
-          "demon-slayer",
-          "my-hero-academia",
-          "chainsaw-man",
-          "dan-da-dan"
-        ],
-        "bonus": [
-          "dr-stone",
-          "black-clover",
-          "kaiju-no-8",
-          "gachiakuta",
-          "akame-ga-kill",
-          "burn-the-witch",
-          "my-hero-academia-vigilantes",
-          "solo-leveling"
-        ]
-      },
-      {
-        "title": "Azione d'autore",
-        "why": "Quando il combattimento diventa regia: tra le migliori animazioni in circolazione.",
-        "titles": [
-          "mob-psycho-100",
-          "jojo-s-bizarre-adventure",
-          "kill-la-kill"
-        ],
-        "bonus": [
-          "one-punch-man",
-          "devil-may-cry",
-          "bna-brand-new-animal",
-          "gurren-lagann"
-        ]
-      }
-    ],
+    "levels": [],
     "blurb": "Combattimenti, poteri che crescono, tornei: lo shōnen d'azione.",
     "about": "Combattimenti spettacolari, poteri che crescono e protagonisti che non mollano mai. Lo shōnen d'azione è il genere-porta degli anime: quello che ha cresciuto mezzo mondo.",
     "curiosita": "«Shōnen» significa «ragazzo»: nasce sulle riviste per ragazzi, ma oggi questi titoli li guardano tutti, a qualsiasi età."
@@ -182,44 +38,7 @@
     "audience": "esperto",
     "icon": "ri-goblet-2-line",
     "accent": "#6e4630",
-    "levels": [
-      {
-        "title": "Crimine e tensione",
-        "why": "Thriller adulti con personaggi ambigui e poste in gioco serie.",
-        "titles": [
-          "monster",
-          "91-days",
-          "banana-fish"
-        ],
-        "bonus": [
-          "gangsta",
-          "darwin-s-game"
-        ]
-      },
-      {
-        "title": "Guerra e storia",
-        "why": "Epica storica e militare, con personaggi che cambiano davvero.",
-        "titles": [
-          "vinland-saga",
-          "kingdom",
-          "golden-kamuy",
-          "legend-of-the-galactic-heroes"
-        ]
-      },
-      {
-        "title": "Dark fantasy brutale",
-        "why": "Fantasy adulto e violento, magnifico da vedere e duro da reggere.",
-        "titles": [
-          "berserk",
-          "dororo",
-          "claymore"
-        ],
-        "bonus": [
-          "drifters",
-          "daemons-of-the-shadow-realm"
-        ]
-      }
-    ],
+    "levels": [],
     "blurb": "Anime per adulti: temi pesanti, violenza, niente buonismo.",
     "about": "Storie adulte: crimine, guerra, vendetta, ambiguità morale. Niente buonismo, personaggi che cambiano davvero e poste in gioco serie.",
     "curiosita": "«Seinen» è la categoria editoriale pensata per il pubblico adulto: stessa intensità dello shōnen, ma temi più pesanti e meno filtri."
@@ -231,47 +50,7 @@
     "audience": "tutti",
     "icon": "ri-brain-line",
     "accent": "#6b5ca5",
-    "levels": [
-      {
-        "title": "La tensione monta",
-        "why": "Trame che da premesse semplici diventano congegni perfetti.",
-        "titles": [
-          "death-note",
-          "steins-gate",
-          "erased"
-        ],
-        "bonus": [
-          "the-promised-neverland",
-          "tokyo-revengers"
-        ]
-      },
-      {
-        "title": "Niente è come sembra",
-        "why": "Storie costruite sull'inganno e sul dubbio: ogni dettaglio conta.",
-        "titles": [
-          "madoka-magica",
-          "summer-time-rendering"
-        ],
-        "bonus": [
-          "death-parade",
-          "future-diary",
-          "terror-in-resonance",
-          "id-invaded"
-        ]
-      },
-      {
-        "title": "Domande esistenziali",
-        "why": "Fantascienza e astrazione che mettono in discussione coscienza e identità.",
-        "titles": [
-          "serial-experiments-lain"
-        ],
-        "bonus": [
-          "pluto",
-          "paranoia-agent",
-          "the-tatami-galaxy"
-        ]
-      }
-    ],
+    "levels": [],
     "blurb": "Thriller psicologici che ti incasinano la testa.",
     "about": "Thriller psicologici, inganni e colpi di scena. Storie che da premesse semplici diventano congegni perfetti, costruite per spiazzarti.",
     "curiosita": "Spesso partono lentissimi e «normali» apposta: è la quiete prima che tutto si ribalti. Fidati e arriva alla svolta."
@@ -283,45 +62,7 @@
     "audience": "esperto",
     "icon": "ri-skull-2-line",
     "accent": "#8c3b3b",
-    "levels": [
-      {
-        "title": "I primi horror",
-        "why": "L'orrore in forma ancora accessibile: capisci dove sa spingersi il genere.",
-        "titles": [
-          "parasyte-the-maxim",
-          "ajin-demi-human"
-        ],
-        "bonus": [
-          "deadman-wonderland",
-          "hell-s-paradise-jigokuraku",
-          "tokyo-ghoul",
-          "another",
-          "dark-gathering"
-        ]
-      },
-      {
-        "title": "Violenza e dannazione",
-        "why": "Dark e azione brutale, splendidi da vedere e spietati nei contenuti.",
-        "titles": [
-          "hellsing-ultimate",
-          "devilman-crybaby"
-        ],
-        "bonus": [
-          "terra-formars"
-        ]
-      },
-      {
-        "title": "Horror puro",
-        "why": "Atmosfere malate e body horror: le opere più disturbanti, per stomaci forti.",
-        "titles": [
-          "gantz"
-        ],
-        "bonus": [
-          "shiki",
-          "higurashi"
-        ]
-      }
-    ],
+    "levels": [],
     "blurb": "Mostri, sangue e incubi: roba che mette a disagio.",
     "about": "Mostri, gore e atmosfere che restano addosso. Niente lieto fine garantito: qui c'è il meglio dell'horror animato, se reggi lo stomaco.",
     "curiosita": "L'horror animato può spingersi dove il live-action non arriva: nessun limite di effetti speciali, solo l'immaginazione di chi disegna."
@@ -333,46 +74,7 @@
     "audience": "tutti",
     "icon": "ri-heart-3-line",
     "accent": "#c44f72",
-    "levels": [
-      {
-        "title": "Storie che commuovono",
-        "why": "Drammi romantici intensi, capaci di farti piangere.",
-        "titles": [
-          "your-lie-in-april",
-          "fruits-basket-2019"
-        ],
-        "bonus": [
-          "clannad"
-        ]
-      },
-      {
-        "title": "Commedie romantiche",
-        "why": "L'amore con leggerezza e ironia, ma con personaggi veri.",
-        "titles": [
-          "kaguya-sama-love-is-war",
-          "horimiya",
-          "bunny-girl-senpai"
-        ],
-        "bonus": [
-          "toradora",
-          "my-dress-up-darling",
-          "skip-and-loafer"
-        ]
-      },
-      {
-        "title": "Amori adulti",
-        "why": "Romanticismo più maturo e complesso, con legami che lasciano il segno.",
-        "titles": [
-          "nana",
-          "clannad-after-story",
-          "maquia"
-        ],
-        "bonus": [
-          "honey-and-clover",
-          "banana-fish"
-        ]
-      }
-    ],
+    "levels": [],
     "blurb": "Storie d'amore, dal dramma alla commedia romantica.",
     "about": "Storie d'amore che funzionano davvero: dal dramma sentimentale che colpisce alla commedia romantica leggera.",
     "curiosita": "La confessione d'amore («kokuhaku») è quasi un rito codificato: c'è un intero filone che ruota attorno a quel singolo momento."
@@ -384,25 +86,7 @@
     "audience": "tutti",
     "icon": "ri-cup-line",
     "accent": "#6fa05f",
-    "levels": [
-      {
-        "title": "Quotidianità che scalda",
-        "why": "Giornate normali rese belle: comfort puro, zero ansia.",
-        "titles": [
-          "barakamon",
-          "laid-back-camp"
-        ]
-      },
-      {
-        "title": "Bellezza malinconica",
-        "why": "Slice of life più profondo: solitudine, tempo che passa, piccole epifanie.",
-        "titles": [
-          "violet-evergarden",
-          "march-comes-in-like-a-lion",
-          "mushishi"
-        ]
-      }
-    ],
+    "levels": [],
     "blurb": "Vita quotidiana e ritmi lenti: l'anime-coccola, niente ansia."
   },
   {
@@ -412,36 +96,7 @@
     "audience": "tutti",
     "icon": "ri-emotion-laugh-line",
     "accent": "#e0a82e",
-    "levels": [
-      {
-        "title": "Da ridere a crepapelle",
-        "why": "Tempi comici da maestri e assurdità a raffica.",
-        "titles": [
-          "gintama",
-          "nichijou",
-          "grand-blue",
-          "saiki-k"
-        ],
-        "bonus": [
-          "hinamatsuri",
-          "konosuba",
-          "asobi-asobase"
-        ]
-      },
-      {
-        "title": "Commedia con cuore",
-        "why": "Si ride, ma ci sono anche personaggi ed emozione.",
-        "titles": [
-          "daily-lives-of-high-school-boys",
-          "great-teacher-onizuka"
-        ],
-        "bonus": [
-          "spy-x-family",
-          "komi-cant-communicate",
-          "kaguya-sama-love-is-war"
-        ]
-      }
-    ],
+    "levels": [],
     "blurb": "Anime fatti apposta per farti ridere.",
     "about": "Anime fatti apposta per farti ridere: demenziale, assurdo, surreale. Quando vuoi solo divertirti senza pensare a niente.",
     "curiosita": "Molta comicità si gioca su «boke» e «tsukkomi»: chi spara l'assurdità e chi lo rimprovera. Una struttura comica vecchia come il teatro giapponese."
@@ -453,28 +108,7 @@
     "audience": "tutti",
     "icon": "ri-run-line",
     "accent": "#2e8b6e",
-    "levels": [
-      {
-        "title": "Adrenalina sportiva",
-        "why": "Le partite più tese dell'animazione, anche se lo sport non ti interessa.",
-        "titles": [
-          "haikyuu",
-          "hajime-no-ippo",
-          "blue-lock"
-        ],
-        "bonus": [
-          "slam-dunk"
-        ]
-      },
-      {
-        "title": "Lo sport come dramma",
-        "why": "Quando lo sport diventa regia e storia umana.",
-        "titles": [
-          "ping-pong-the-animation",
-          "run-with-the-wind"
-        ]
-      }
-    ],
+    "levels": [],
     "blurb": "Squadre, rivalità e partite all'ultimo respiro."
   },
   {
@@ -484,57 +118,7 @@
     "audience": "tutti",
     "icon": "ri-film-line",
     "accent": "#8a5aa8",
-    "levels": [
-      {
-        "title": "Studio Ghibli",
-        "why": "I film che hanno reso l'animazione giapponese rispettata ovunque.",
-        "titles": [
-          "la-citta-incantata",
-          "principessa-mononoke",
-          "my-neighbor-totoro",
-          "howls-moving-castle"
-        ],
-        "bonus": [
-          "nausicaa",
-          "grave-of-the-fireflies",
-          "castle-in-the-sky",
-          "kikis-delivery-service",
-          "porco-rosso",
-          "ponyo",
-          "the-wind-rises",
-          "the-boy-and-the-heron",
-          "the-tale-of-the-princess-kaguya",
-          "whisper-of-the-heart"
-        ]
-      },
-      {
-        "title": "Makoto Shinkai",
-        "why": "Il regista dei drammi romantici dalla fotografia mozzafiato.",
-        "titles": [
-          "your-name",
-          "weathering-with-you",
-          "5-centimeters-per-second"
-        ]
-      },
-      {
-        "title": "Maestri e film-culto",
-        "why": "Satoshi Kon, Hosoda e altri capolavori d'autore.",
-        "titles": [
-          "perfect-blue",
-          "akira",
-          "millennium-actress",
-          "wolf-children"
-        ],
-        "bonus": [
-          "tokyo-godfathers",
-          "a-silent-voice",
-          "redline",
-          "paprika",
-          "summer-wars",
-          "the-girl-who-leapt-through-time"
-        ]
-      }
-    ],
+    "levels": [],
     "blurb": "I film dei grandi registi: Ghibli, Shinkai, Miyazaki e co.",
     "about": "I film che hanno fatto conoscere l'animazione giapponese al mondo: Ghibli, Miyazaki, Satoshi Kon, Shinkai. Da vedere grandi, su uno schermo che se lo merita.",
     "curiosita": "Lo Studio Ghibli ha vinto l'Oscar con «La città incantata», e Miyazaki ne ha vinto un secondo a 82 anni con «Il ragazzo e l'airone»."
@@ -546,49 +130,7 @@
     "audience": "esperto",
     "icon": "ri-treasure-map-line",
     "accent": "#5b7a52",
-    "levels": [
-      {
-        "title": "Gemme sottovalutate",
-        "why": "Opere ottime di cui si parla troppo poco.",
-        "titles": [
-          "death-parade",
-          "91-days",
-          "deca-dence",
-          "heavenly-delusion"
-        ],
-        "bonus": [
-          "planetes",
-          "to-be-hero-x"
-        ]
-      },
-      {
-        "title": "Cult di nicchia",
-        "why": "Identità fortissima e pubblico piccolo: strane e memorabili.",
-        "titles": [
-          "wolf-s-rain",
-          "akudama-drive",
-          "gangsta"
-        ],
-        "bonus": [
-          "abenobashi-magical-shopping-street",
-          "welcome-to-the-nhk",
-          "flcl"
-        ]
-      },
-      {
-        "title": "Classici da riscoprire",
-        "why": "Perle messe in ombra ingiustamente dal tempo.",
-        "titles": [
-          "golden-kamuy",
-          "mushishi",
-          "dororo"
-        ],
-        "bonus": [
-          "claymore",
-          "banana-fish"
-        ]
-      }
-    ],
+    "levels": [],
     "blurb": "Roba di nicchia che quasi nessuno conosce: per intenditori."
   },
   {
@@ -601,31 +143,7 @@
     "blurb": "I voti più alti e le pietre miliari del medium.",
     "about": "Le opere che non si discutono: i voti più alti e le pietre miliari. Se hai poco tempo e vuoi andare sul sicuro, qualsiasi titolo qui dentro vale la visione.",
     "curiosita": "Molti di questi sono nelle classifiche \"migliori anime di sempre\" da anni — non è hype passeggero, è roba che regge il tempo.",
-    "levels": [
-      {
-        "title": "Capolavori",
-        "why": "",
-        "titles": [
-          "fullmetal-alchemist-brotherhood",
-          "steins-gate",
-          "monster",
-          "attack-on-titan",
-          "vinland-saga",
-          "cowboy-bebop",
-          "hunter-x-hunter",
-          "one-piece",
-          "code-geass",
-          "gurren-lagann",
-          "neon-genesis-evangelion",
-          "death-note",
-          "berserk",
-          "cyberpunk-edgerunners",
-          "made-in-abyss",
-          "perfect-blue",
-          "the-tatami-galaxy"
-        ]
-      }
-    ]
+    "levels": []
   },
   {
     "id": "azione",
@@ -637,27 +155,7 @@
     "blurb": "Scontri, inseguimenti e animazione che spacca.",
     "about": "Solo adrenalina: combattimenti spettacolari, ritmo serrato e animazione che lascia a bocca aperta. Quando vuoi qualcosa che parte subito e non ti molla.",
     "curiosita": "I picchi di animazione di questi titoli (i cosiddetti \"sakuga\") vengono studiati fotogramma per fotogramma dagli appassionati.",
-    "levels": [
-      {
-        "title": "Azione",
-        "why": "",
-        "titles": [
-          "demon-slayer",
-          "jujutsu-kaisen",
-          "chainsaw-man",
-          "dan-da-dan",
-          "cyberpunk-edgerunners",
-          "mob-psycho-100",
-          "gurren-lagann",
-          "kill-la-kill",
-          "jojo-s-bizarre-adventure",
-          "hellsing-ultimate",
-          "one-punch-man",
-          "kaiju-no-8",
-          "promare"
-        ]
-      }
-    ]
+    "levels": []
   },
   {
     "id": "antieroi",
@@ -669,26 +167,7 @@
     "blurb": "Protagonisti ambigui e scelte sporche.",
     "about": "Protagonisti che non sono eroi: vendetta, ambiguità morale, mezzi discutibili per fini discutibili. Storie dove il \"giusto\" e lo \"sbagliato\" si confondono.",
     "curiosita": "È spesso roba \"seinen\", pensata per un pubblico adulto: i migliori antieroi ti fanno tifare per gente che non dovresti.",
-    "levels": [
-      {
-        "title": "Antieroi",
-        "why": "",
-        "titles": [
-          "death-note",
-          "code-geass",
-          "berserk",
-          "vinland-saga",
-          "monster",
-          "banana-fish",
-          "91-days",
-          "devilman-crybaby",
-          "hellsing-ultimate",
-          "akame-ga-kill",
-          "gangsta",
-          "akudama-drive"
-        ]
-      }
-    ]
+    "levels": []
   },
   {
     "id": "isekai",

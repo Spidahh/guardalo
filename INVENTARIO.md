@@ -8,7 +8,7 @@
 ## 1. Riepilogo
 
 - **190 titoli** totali: **97 tuoi** ● + **93 aggiunti** ○ · 94 con tuo voto
-- Fasce (somma su tutti i generi/percorsi): **106 Essenziali** · 167 Consigliati · 27 Da scoprire
+- Fasce (somma su tutti i generi/percorsi): **106 Essenziali** · 167 Consigliati · 92 Da scoprire
 - **18 generi** (in griglia) · **6 percorsi** · 2 generi fuori griglia (slice-of-life, sport)
 - Per formato: Serie: 149 · Film: 30 · ONA: 8 · OVA: 3
 - Per stato: Concluso: 187 · In corso: 3
