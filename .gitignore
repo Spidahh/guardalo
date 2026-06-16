@@ -9,16 +9,16 @@ npm-debug.log*
 .DS_Store
 Thumbs.db
 
-# Pagine prerenderizzate per la SEO (generate da tools/prerender.mjs al deploy)
+# Pagine e file SEO generati da tools/prerender.mjs al deploy
 /t/
 /p/
-/c/
 /generi/
 /percorsi/
 /info/
 /privacy/
 /cookie/
 /sitemap.xml
+/robots.txt
 
 # File temporanei di lavoro
 _userlist.json

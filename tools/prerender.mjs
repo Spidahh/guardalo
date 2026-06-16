@@ -13,7 +13,12 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const SITE = (process.env.SITE_URL || 'https://guardalo.example').replace(/\/$/, '');
+// Dominio del sito: SITE_URL esplicito → dominio di produzione Vercel (auto in build) → placeholder.
+const SITE = (
+  process.env.SITE_URL ||
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL && 'https://' + process.env.VERCEL_PROJECT_PRODUCTION_URL) ||
+  'https://guardalo.example'
+).replace(/\/$/, '');
 
 const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c =>
   ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -24,11 +29,39 @@ const TITLES = data.titles, PATHS = data.paths;
 const BY_ID = new Map(TITLES.map(t => [t.id, t]));
 const itGenre = g => ({ Action: 'Azione', Adventure: 'Avventura', Comedy: 'Commedia', Drama: 'Drammatico', Fantasy: 'Fantasy', Horror: 'Horror', Mecha: 'Mecha', Music: 'Musicale', Mystery: 'Mistero', Psychological: 'Psicologico', Romance: 'Romantico', 'Sci-Fi': 'Fantascienza', 'Slice of Life': 'Slice of Life', Sports: 'Sport', Supernatural: 'Soprannaturale', Thriller: 'Thriller' }[g] || g);
 const rankSort = (a, b) => (b.top ? 1 : 0) - (a.top ? 1 : 0) || (b.userRating || 0) - (a.userRating || 0) || (b.score10 || 0) - (a.score10 || 0);
-// Generi mostrati nell'indice /generi — stessa lista (e stesso ordine) di GENRE_IDS in js/app.js.
-const GENRE_IDS = ['battle-shonen', 'seinen-e-maturo', 'isekai', 'fantasy', 'sci-fi', 'mecha', 'super-robot',
-  'mindfuck', 'horror-e-disagio', 'sopravvivenza', 'storici', 'vendetta', 'viaggi-nel-tempo',
-  'crimine', 'supereroi', 'romance', 'commedia', 'cinema-dautore'];
+// FONTE UNICA: GENRE_IDS (generi mostrati) e CAT_MEMBERS (appartenenza titoli→genere) vivono in
+// js/app.js. Li leggiamo da lì a build-time, così le pagine SEO restano sempre allineate all'app —
+// niente liste duplicate da tenere in sync a mano.
+function extractConst(src, name) {
+  const at = src.indexOf('const ' + name + ' =');
+  if (at < 0) return null;
+  let i = src.indexOf('=', at) + 1;
+  while (i < src.length && src[i] !== '{' && src[i] !== '[') i++;
+  const open = src[i], close = open === '{' ? '}' : ']';
+  let depth = 0, str = null;
+  for (let j = i; j < src.length; j++) {
+    const ch = src[j], prev = src[j - 1];
+    if (str) { if (ch === str && prev !== '\\') str = null; continue; }
+    if (ch === '"' || ch === "'" || ch === '`') { str = ch; continue; }
+    if (ch === open) depth++;
+    else if (ch === close && --depth === 0) return eval('(' + src.slice(i, j + 1) + ')');
+  }
+  return null;
+}
+const appSrc = await readFile(join(ROOT, 'js', 'app.js'), 'utf8');
+const GENRE_IDS = extractConst(appSrc, 'GENRE_IDS');
+const CAT_MEMBERS = extractConst(appSrc, 'CAT_MEMBERS');
+if (!GENRE_IDS || !CAT_MEMBERS) throw new Error('prerender: impossibile leggere GENRE_IDS/CAT_MEMBERS da js/app.js');
 const pathTitles = p => { const seen = new Set(), out = []; (p.levels || []).forEach(l => (l.titles || []).forEach(id => { if (!seen.has(id)) { seen.add(id); const t = BY_ID.get(id); if (t) out.push(t); } })); return out; };
+// titoli di un percorso/genere — stessa logica di catTitles() in js/app.js: per i generi = membri
+// curati CAT_MEMBERS + eventuali titoli non-inList nei levels; per i percorsi = i levels.
+const sectionTitles = p => {
+  if (!CAT_MEMBERS[p.id]) return pathTitles(p);
+  const map = new Map();
+  CAT_MEMBERS[p.id].forEach(s => { const t = BY_ID.get(s); if (t) map.set(s, t); });
+  pathTitles(p).forEach(t => { if (t && !t.inList) map.set(t.id, t); });
+  return [...map.values()];
+};
 
 const tmpl = await readFile(join(ROOT, 'index.html'), 'utf8');
 
@@ -80,7 +113,7 @@ for (const t of TITLES) {
 
 // ── tutti i percorsi (generi + tematici + meta) ──────────────────────────
 for (const p of PATHS) {
-  const list = pathTitles(p).sort(rankSort);
+  const list = sectionTitles(p).sort(rankSort);
   const items = list.map(t => `<li><a href="/t/${t.id}">${esc(t.title)}</a>${t.year ? ` (${t.year})` : ''}${t.score10 ? ` — ${t.score10}/10` : ''}</li>`).join('');
   const content = `<section>
     <h1>${esc(p.title)}</h1>
@@ -123,6 +156,11 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://w
   + `\n</urlset>\n`;
 await writeFile(join(ROOT, 'sitemap.xml'), sitemap.replace('sitemap.org/schemas', 'sitemaps.org/schemas'), 'utf8');
 
+// ── robots.txt (generato col dominio reale, così la Sitemap punta giusto) ──
+const robots = `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`;
+await writeFile(join(ROOT, 'robots.txt'), robots, 'utf8');
+
+const placeholder = SITE === 'https://guardalo.example';
 console.log(`✓ prerender: ${TITLES.length} titoli + ${PATHS.length} percorsi/generi`);
-console.log(`✓ sitemap.xml: ${urls.length} URL  (SITE_URL = ${SITE})`);
-console.log(`  NB: imposta SITE_URL al dominio reale prima del deploy (ora: ${SITE}).`);
+console.log(`✓ sitemap.xml (${urls.length} URL) + robots.txt  ·  dominio = ${SITE}`);
+if (placeholder) console.log(`  NB: dominio placeholder. In locale passa SITE_URL; su Vercel è automatico (VERCEL_PROJECT_PRODUCTION_URL).`);
