@@ -353,7 +353,7 @@
       else if (seg === 'generi') { html = this.viewGeneri(); active = 'generi'; }
       else if (seg === 'percorsi') { html = this.viewPercorsi(); active = 'percorsi'; }
       else if (seg === 'esplora') { html = this.viewEsplora(); active = 'esplora'; }
-      else if (seg === 'tempo' && arg) { html = this.viewTempo(arg); active = 'esplora'; }
+      else if (seg === 'tempo' && arg) { html = this.viewTempo(arg); active = 'tempo-' + arg; }
       else if (seg === 'lista') { html = this.viewLista(); active = 'lista'; }
       else if (seg === 'info') { html = this.viewInfo(); active = ''; }
       else if (seg === 'privacy') { html = this.viewPrivacy(); active = ''; }
