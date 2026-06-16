@@ -1125,5 +1125,10 @@
     "title": "Great Mazinger",
     "matched": "Great Mazinger",
     "score": 111
+  },
+  "daltanious": {
+    "anilistId": 4411,
+    "title": "Mirai Robo Daltanious",
+    "manual": true
   }
 }

@@ -33172,5 +33172,136 @@
         "recommendations"
       ]
     }
+  },
+  {
+    "id": "daltanious",
+    "anilistId": 4411,
+    "idMal": 4411,
+    "title": "Future Robot Daltanious",
+    "titleRomaji": "Mirai Robo Daltanias",
+    "titleNative": "未来ロボ ダルタニアス",
+    "year": 1979,
+    "format": "TV",
+    "typeLabel": "Serie",
+    "status": "FINISHED",
+    "statusLabel": "Concluso",
+    "episodes": 47,
+    "durationAvg": 24,
+    "sagaEpisodes": 47,
+    "coreMinutes": 1128,
+    "lengthBand": "medio",
+    "lengthLabel": "Medio",
+    "lengthHint": "qualche settimana",
+    "genres": [
+      "Comedy",
+      "Mecha"
+    ],
+    "tags": [
+      "Episodic",
+      "Super Robot",
+      "Space",
+      "Aliens",
+      "Kaiju",
+      "Male Protagonist",
+      "War"
+    ],
+    "studios": [],
+    "director": "Tadao Nagahama",
+    "creator": "Saburou Yatsude",
+    "source": "ORIGINAL",
+    "sourceLabel": "Originale",
+    "score10": 6.4,
+    "popularity": 886,
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/4411.jpg",
+    "coverColor": "#e4861a",
+    "bannerImage": null,
+    "streaming": [],
+    "startFrom": null,
+    "structure": [
+      {
+        "name": "Future Robot Daltanious",
+        "episodes": "47 ep",
+        "year": 1979,
+        "main": true
+      }
+    ],
+    "_recAnilistIds": [
+      {
+        "id": 1069,
+        "rating": 5
+      },
+      {
+        "id": 1068,
+        "rating": 4
+      },
+      {
+        "id": 1448,
+        "rating": 4
+      },
+      {
+        "id": 3305,
+        "rating": 2
+      },
+      {
+        "id": 3579,
+        "rating": 2
+      },
+      {
+        "id": 2253,
+        "rating": 2
+      },
+      {
+        "id": 3609,
+        "rating": 2
+      },
+      {
+        "id": 5891,
+        "rating": 2
+      },
+      {
+        "id": 3399,
+        "rating": 2
+      },
+      {
+        "id": 4574,
+        "rating": 1
+      },
+      {
+        "id": 2128,
+        "rating": 1
+      },
+      {
+        "id": 4198,
+        "rating": 1
+      },
+      {
+        "id": 3361,
+        "rating": 1
+      },
+      {
+        "id": 4208,
+        "rating": 1
+      }
+    ],
+    "_relAnilistIds": [],
+    "provenance": {
+      "source": "AniList",
+      "anilistUrl": "https://anilist.co/anime/4411",
+      "durationEstimated": false,
+      "fetchedFields": [
+        "title",
+        "episodes",
+        "duration",
+        "status",
+        "genres",
+        "studios",
+        "staff",
+        "score",
+        "coverImage",
+        "externalLinks",
+        "relations",
+        "recommendations"
+      ]
+    }
   }
 ]

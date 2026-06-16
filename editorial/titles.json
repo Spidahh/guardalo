@@ -24,6 +24,11 @@
     "tone": ["storico", "mecha", "azione"],
     "forWho": "Per chi ha amato Mazinga Z e ne vuole ancora."
   },
+  "daltanious": {
+    "hook": "Daltanious (1979): la Terra è invasa dall'impero di Zaal e l'orfano Kento pilota un gigante nato dalla fusione di un leone robot, un caccia e un androide. Super robot componibile classico, arrivato in Italia nei primi anni '80. Animazione d'epoca: vale per la nostalgia e la storia del genere.",
+    "tone": ["storico", "mecha", "nostalgia"],
+    "forWho": "Per chi è cresciuto coi super robot in TV o ne studia le origini."
+  },
   "attack-on-titan": {
     "hook": "Dark fantasy d'azione: l'umanità sopravvive rinchiusa dietro mura altissime, assediata da giganti che divorano gli uomini. Inizia come horror di sopravvivenza e diventa una storia complessa su guerra, libertà e moralità. Uno dei fenomeni più importanti dell'animazione degli anni 2010, sempre più ambizioso.",
     "tone": [
@@ -916,7 +921,7 @@
     "forWho": "Per chi cerca un viaggio simbolico, lento e struggente."
   },
   "daemons-of-the-shadow-realm": {
-    "hook": "Fantasy soprannaturale d'avventura: in un villaggio di montagna sorvegliato da guardiani di pietra, un ragazzo vive accanto alla sorella gemella, tenuta prigioniera per un misterioso \"dovere\". Premessa intrigante carica di segreti, dall'autore di Fire Force. Animazione curata di bones; serie ancora in corso, da seguire mentre esce.",
+    "hook": "Fantasy soprannaturale d'avventura: in un villaggio di montagna sorvegliato da guardiani di pietra, un ragazzo vive accanto alla sorella gemella, tenuta prigioniera per un misterioso \"dovere\". Premessa intrigante carica di segreti, dall'autore di Fire Force. Animazione curata di bones.",
     "tone": [
       "fantasy",
       "soprannaturale",
@@ -936,7 +941,7 @@
     "forWho": "Per chi ama unire magia, progresso e gestione di un regno."
   },
   "petals-of-reincarnation": {
-    "hook": "Azione soprannaturale: un ragazzo convinto di non avere talento incontra una guerriera che attinge ai poteri delle vite passate, ma solo a un prezzo brutale. Premessa dark e violenta, con un protagonista comune trascinato in una lotta più grande di lui. Serie in corso dagli esiti ancora incerti.",
+    "hook": "Azione soprannaturale: un ragazzo convinto di non avere talento incontra una guerriera che attinge ai poteri delle vite passate, ma solo a un prezzo brutale. Premessa dark e violenta, con un protagonista comune trascinato in una lotta più grande di lui.",
     "tone": [
       "azione",
       "soprannaturale",

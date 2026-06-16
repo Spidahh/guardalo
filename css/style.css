@@ -41,6 +41,8 @@ html[data-theme="light"] {
 }
 
 * { box-sizing: border-box; }
+/* l'attributo hidden deve sempre vincere su display di .icon-btn/.user-chip ecc. */
+[hidden] { display: none !important; }
 html { scroll-behavior: smooth; }
 body {
   margin: 0; font-family: var(--sans); background: var(--bg); color: var(--ink);
@@ -224,9 +226,16 @@ em { font-style: italic; }
 .title-view { padding-bottom: 60px; }
 .t-banner { height: clamp(160px, 30vw, 300px); background-size: cover !important; background-position: center 22% !important; }
 .t-grid { display: grid; grid-template-columns: 260px 1fr; gap: 36px; margin-top: -90px; position: relative; }
-@media (max-width: 760px) { .t-grid { grid-template-columns: 1fr; margin-top: -70px; } }
+@media (max-width: 760px) { .t-grid { grid-template-columns: 1fr; margin-top: 0; } }
 .t-aside { position: sticky; top: 78px; align-self: start; }
-@media (max-width: 760px) { .t-aside { position: static; display: grid; grid-template-columns: 150px 1fr; gap: 16px; align-items: start; } }
+/* mobile: solo la cover scavalca il banner; crediti accanto sotto il banner; bottoni a tutta larghezza sotto */
+@media (max-width: 760px) {
+  .t-aside { position: static; display: grid; grid-template-columns: 140px 1fr;
+    grid-template-areas: "cover credits" "actions actions"; column-gap: 16px; align-items: start; }
+  .t-aside .t-cover { grid-area: cover; margin-top: -64px; }
+  .t-aside .t-credits { grid-area: credits; margin-top: 4px; }
+  .t-aside .t-actions { grid-area: actions; margin-top: 16px; }
+}
 .t-cover { width: 100%; border-radius: var(--r); box-shadow: var(--shadow-lg); border: 1px solid var(--line-2); aspect-ratio: 2/3; object-fit: cover; }
 .t-actions { display: flex; flex-direction: column; gap: 9px; margin-top: 14px; }
 .t-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; border-radius: 11px; border: none; cursor: pointer;
@@ -677,6 +686,12 @@ em { font-style: italic; }
 .cat-curio { margin: 10px 0 0; font-size: 14px; line-height: 1.55; color: var(--ink-soft); }
 .cat-curio b { color: var(--gold); font-weight: 700; }
 .cat-curio b i { margin-right: 4px; }
+/* box "Lo sapevi?" autonomo sulle pagine di navigazione (Generi/Percorsi/Esplora) */
+.page-fact { display: flex; gap: 10px; align-items: flex-start; margin: 4px 0 18px; padding: 12px 15px;
+  border: 1px solid var(--line); border-left: 3px solid var(--gold); border-radius: var(--r-sm);
+  background: var(--surface); color: var(--ink-soft); font-size: 14px; line-height: 1.55; max-width: 780px; }
+.page-fact > i { color: var(--gold); font-size: 17px; margin-top: 1px; flex: none; }
+.page-fact b { color: var(--ink); font-weight: 700; }
 @media (max-width: 560px) { .cat-intro-ic { display: none; } }
 
 /* filtro per tempo dentro la categoria */

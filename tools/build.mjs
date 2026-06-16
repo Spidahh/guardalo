@@ -54,6 +54,7 @@ const MANUAL_MAP = {
     'fate-franchise-completo': 10087,// porta d'accesso: Fate/Zero (2011)
     'la-citta-incantata': 199,       // Spirited Away (titolo IT non trovato)
     'sentence-to-be-hero': 167152,   // Sentenced to Be a Hero (2026)
+    'daltanious': 4411,              // romaji "Mirai Robo Daltanias" (la ricerca falliva su "Daltanious")
 };
 
 // titoli da NON includere: animazione occidentale, non presente/affidabile su AniList.
@@ -293,7 +294,18 @@ function epsOf(node) {
 async function cmdFetch() {
     if (!existsSync(MAP_JSON)) { console.log(c.err('Manca tools/anilist-map.json — esegui prima:  node tools/build.mjs map')); process.exit(1); }
     const map = JSON.parse(await readFile(MAP_JSON, 'utf8'));
-    const seedEntries = Object.entries(map).filter(([s, v]) => v.anilistId && !EXCLUDE.has(s));
+    // fetch mirato: `node build.mjs fetch <slug> [slug...]` scarica solo quei titoli e
+    // li unisce a sources/anime.json (gli altri restano intatti). Senza argomenti = tutti.
+    const onlySlugs = process.argv.slice(3).filter(a => !a.startsWith('--'));
+    const targeted = onlySlugs.length > 0;
+    let seedEntries = Object.entries(map).filter(([s, v]) => v.anilistId && !EXCLUDE.has(s));
+    if (targeted) {
+        seedEntries = seedEntries.filter(([s]) => onlySlugs.includes(s));
+        const missing = onlySlugs.filter(s => !seedEntries.some(([k]) => k === s));
+        if (missing.length) console.log(c.warn(`  ⚠ slug non in mappa: ${missing.join(', ')}`));
+        if (!seedEntries.length) { console.log(c.err('Nessuno slug valido da scaricare.')); process.exit(1); }
+        console.log(c.dim(`  fetch mirato: ${seedEntries.map(([s]) => s).join(', ')}`));
+    }
     const seedIds = seedEntries.map(([, v]) => v.anilistId);
     const idToSlug = {};
     seedEntries.forEach(([s, v]) => { idToSlug[v.anilistId] = s; });
@@ -463,8 +475,18 @@ async function cmdFetch() {
     console.log('');
 
     await mkdir(SRC_DIR, { recursive: true });
-    await writeFile(SRC_JSON, JSON.stringify(records, null, 2) + '\n', 'utf8');
-    console.log(c.ok(`\n✓ sources/anime.json scritto (${records.length} titoli, universo saghe: ${universe.size})\n`));
+    let finalRecords = records;
+    if (targeted && existsSync(SRC_JSON)) {
+        // merge: aggiorna i record esistenti, aggiunge i nuovi in coda, lascia il resto intatto
+        finalRecords = JSON.parse(await readFile(SRC_JSON, 'utf8'));
+        const idx = new Map(finalRecords.map((r, i) => [r.id, i]));
+        for (const r of records) {
+            if (idx.has(r.id)) finalRecords[idx.get(r.id)] = r;
+            else finalRecords.push(r);
+        }
+    }
+    await writeFile(SRC_JSON, JSON.stringify(finalRecords, null, 2) + '\n', 'utf8');
+    console.log(c.ok(`\n✓ sources/anime.json scritto (${finalRecords.length} titoli${targeted ? `, ${records.length} aggiornati` : ''}, universo saghe: ${universe.size})\n`));
 }
 
 // ════════════════════════════════════════════════════════════════════════════

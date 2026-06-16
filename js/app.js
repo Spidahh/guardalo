@@ -88,7 +88,7 @@
     'fantasy': ['frieren', 'fullmetal-alchemist-brotherhood', 'hunter-x-hunter', 'made-in-abyss', 'claymore', 'ranking-of-kings', 'berserk', 'devil-may-cry', 'burn-the-witch', 'bna-brand-new-animal', 'daemons-of-the-shadow-realm', 'wistoria-wand-and-sword', 'fate-franchise-completo', 'demon-slayer', 'black-clover', 'tower-of-god'],
     'sci-fi': ['steins-gate', 'cyberpunk-edgerunners', 'cowboy-bebop', 'ghost-in-the-shell', 'akira', 'parasyte-the-maxim', 'heavenly-delusion', 'dan-da-dan', 'deca-dence', 'terra-formars', 'lazarus', 'wolf-s-rain', 'trigun', 'akudama-drive'],
     'mecha': ['neon-genesis-evangelion', 'gurren-lagann', 'code-geass', '86-eighty-six', 'pluto', 'promare', 'flcl'],
-    'super-robot': ['mazinger-z', 'ufo-robot-grendizer', 'getter-robo', 'mobile-suit-gundam', 'great-mazinger'],
+    'super-robot': ['mazinger-z', 'ufo-robot-grendizer', 'getter-robo', 'mobile-suit-gundam', 'great-mazinger', 'daltanious'],
     'sopravvivenza': ['future-diary', 'darwin-s-game', 'the-promised-neverland', 'akudama-drive', 'deadman-wonderland', 'gantz'],
     'storici': ['vinland-saga', 'kingdom', 'golden-kamuy', 'samurai-champloo', '91-days'],
     'vendetta': ['berserk', 'vinland-saga', '91-days', 'claymore', 'akame-ga-kill', 'hell-s-paradise-jigokuraku'],
@@ -100,6 +100,20 @@
     'romance': ['sword-art-online', 're-zero-starting-life-in-another-world', 'tokyo-revengers', 'dan-da-dan'],
     'commedia': ['spy-x-family', 'one-punch-man', 'mob-psycho-100', 'dan-da-dan', 'the-eminence-in-shadow', 'handyman-saitou-in-another-world', 'kill-la-kill', 'abenobashi-magical-shopping-street', 'golden-kamuy'],
     'cinema-dautore': ['akira', 'ghost-in-the-shell', 'principessa-mononoke', 'la-citta-incantata', 'promare'],
+  };
+  // immagine HERO di ogni categoria/percorso: scelta a mano, UNICA (niente doppioni tra categorie)
+  // e rappresentativa. Tutti questi titoli hanno un bannerImage orizzontale vero (no copertine stirate).
+  const HERO_OF = {
+    // generi
+    'battle-shonen': 'jujutsu-kaisen', 'seinen-e-maturo': 'monster', 'isekai': 're-zero-starting-life-in-another-world',
+    'fantasy': 'frieren', 'sci-fi': 'cyberpunk-edgerunners', 'mecha': 'neon-genesis-evangelion',
+    'super-robot': 'mazinger-z', 'mindfuck': 'death-note', 'horror-e-disagio': 'chainsaw-man',
+    'sopravvivenza': 'the-promised-neverland', 'storici': 'vinland-saga', 'vendetta': 'berserk',
+    'viaggi-nel-tempo': 'steins-gate', 'crimine': '91-days', 'supereroi': 'my-hero-academia',
+    'romance': 'sword-art-online', 'commedia': 'spy-x-family', 'cinema-dautore': 'akira',
+    // percorsi
+    'da-zero-a-otaku': 'fullmetal-alchemist-brotherhood', 'capolavori': 'cowboy-bebop', 'azione': 'demon-slayer',
+    'antieroi': 'code-geass', 'il-canone': 'ghost-in-the-shell', 'chicche-e-deep-cut': 'heavenly-delusion',
   };
   // membri di una categoria/percorso: per i generi = lista curata (CAT_MEMBERS) + extra non-inList; altrimenti i titoli del percorso
   const catTitles = (p) => {
@@ -155,6 +169,20 @@
       get: () => TITLES.filter(t => t.inList && (t.year || 0) >= 2024).sort(rankSort) },
   ];
   const COLL_BY_ID = new Map(COLLECTIONS.map(c => [c.id, c]));
+
+  // ── "Lo sapevi?" — curiosità/info utili, scritte bene (soggetto chiaro, niente ripetizioni) ──
+  const FACTS = [
+    'In Giappone «anime» indica qualsiasi cartone animato, anche straniero: è solo fuori dal Giappone che la parola è diventata sinonimo di animazione giapponese.',
+    '«Shōnen» e «seinen» non descrivono la storia ma il pubblico della rivista su cui esce: ragazzi il primo, adulti il secondo. Per questo un seinen può essere più crudo a parità di azione.',
+    'La lunghezza di una serie non si misura in stagioni ma in episodi per minuti: un film robusto può pesare quanto un corto di dodici puntate. Per questo qui trovi le fasce di tempo reali.',
+    'Gli isekai — storie di chi finisce catapultato in un altro mondo — sono diventati così tanti che alcuni concorsi giapponesi per esordienti li hanno vietati per un periodo.',
+    'Lo studio di animazione conta quanto il regista: lo stesso soggetto cambia faccia a seconda di chi lo disegna. Per questo in ogni scheda trovi lo studio e chi l’ha diretto.',
+    'Un «mecha» è un robot gigante pilotato; un «super robot» è il filone classico anni ’70 — Mazinga, Goldrake — da cui tutto è partito. Due cose diverse, spesso confuse.',
+    'Quasi ogni anime nasce da un manga o da una light novel: l’adattamento può tagliare, aggiungere o cambiare il finale. Quando capita, nelle dritte della scheda te lo segnaliamo.',
+    'Molte serie aprono lente e «normali» di proposito: costruiscono la quiete prima della svolta. È una scelta di scrittura, non un difetto di ritmo.',
+  ];
+  // pesca n elementi diversi a caso (varietà a ogni visita, senza dipendere dalla data)
+  const pickN = (arr, n) => { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1));[a[i], a[j]] = [a[j], a[i]]; } return a.slice(0, n); };
 
   // ── util ───────────────────────────────────────────────────────────────────
   const $  = (s, r = document) => r.querySelector(s);
@@ -317,10 +345,26 @@
       $('#loginClose').addEventListener('click', () => $('#loginModal').classList.remove('open'));
       $('#loginModal').addEventListener('click', e => { if (e.target.id === 'loginModal') e.currentTarget.classList.remove('open'); });
       $('#googleLogin').addEventListener('click', () => {
-        if (window.auth) window.auth.signInWithPopup(new window.firebase.auth.GoogleAuthProvider())
-          .then(() => $('#loginModal').classList.remove('open')).catch(() => {});
+        if (!window.auth) { this.toast('Accesso non disponibile al momento.', 'muted'); return; }
+        window.auth.signInWithPopup(new window.firebase.auth.GoogleAuthProvider())
+          .then(res => {
+            $('#loginModal').classList.remove('open');
+            const n = (res.user && (res.user.displayName || res.user.email) || '').split(' ')[0];
+            this.toast('👋 Bentornato' + (n ? `, ${n}` : '') + '!', 'ok');
+          })
+          .catch(err => {
+            const code = (err && err.code) || '';
+            const msg = code === 'auth/popup-closed-by-user' || code === 'auth/cancelled-popup-request'
+                ? 'Accesso annullato.'
+              : code === 'auth/unauthorized-domain' ? 'Dominio non autorizzato per l’accesso.'
+              : code === 'auth/network-request-failed' ? 'Rete assente: accesso non riuscito.'
+              : 'Accesso non riuscito. Riprova.';
+            this.toast(msg, 'muted');
+          });
       });
-      $('#logoutBtn').addEventListener('click', () => { if (window.auth) window.auth.signOut(); });
+      $('#logoutBtn').addEventListener('click', () => {
+        if (window.auth) window.auth.signOut().then(() => this.toast('Sei uscito.', 'muted')).catch(() => {});
+      });
 
       // sidebar mobile
       const sb = document.getElementById('sidebar');
@@ -581,10 +625,12 @@
     // tile di un percorso/genere
     pathTile(p) {
       const mem = catTitles(p);
-      const hero = mem.find(t => t.bannerImage || t.coverImage) || this.pathCovers(p, 1)[0];
+      // hero curata (HERO_OF) → primo membro con banner orizzontale → copertina come ultima spiaggia
+      const hero = (HERO_OF[p.id] && BY_ID.get(HERO_OF[p.id])) || mem.find(t => t.bannerImage) || mem.find(t => t.coverImage) || this.pathCovers(p, 1)[0];
+      const heroImg = hero ? (hero.bannerImage || cover(hero)) : '';
       return `<a class="path-card" href="/p/${esc(p.id)}" style="--accent:${esc(p.accent)}">
         <div class="path-hero-img">
-          ${hero ? `<img class="path-1img" src="${esc(hero.bannerImage || cover(hero))}" alt="" loading="lazy" onload="this.classList.add('ld')" onerror="this.classList.add('ld')">` : ''}
+          ${heroImg ? `<img class="path-1img" src="${esc(heroImg)}" alt="" loading="lazy" onload="this.classList.add('ld')" onerror="this.classList.add('ld')">` : ''}
         </div>
         <div class="path-card-body">
           <div class="path-head"><span class="path-ic-wrap"><i class="${esc(p.icon)}"></i></span><h3 class="path-name">${esc(p.title)}</h3></div>
@@ -598,9 +644,7 @@
     }
     viewHome() {
       const bannerOf = t => t ? (t.bannerImage || cover(t)) : '';
-      const imgOfPath = id => { const p = PATHS.find(x => x.id === id); return bannerOf(p && pathTitles(p)[0]); };
-      const seraColl = COLLECTIONS.find(c => c.id === 'una-sera');
-      const seraImg = bannerOf(seraColl && seraColl.get()[0]) || imgOfPath('da-zero-a-otaku');
+      const bnr = id => bannerOf(BY_ID.get(id));   // banner di un titolo per id
       const feat = (href, ic, title, sub, img) => `
         <a class="path-card" href="${href}" style="--accent:var(--red)">
           <div class="path-hero-img">${img ? `<img class="path-1img" src="${esc(img)}" alt="" loading="lazy" onload="this.classList.add('ld')" onerror="this.classList.add('ld')">` : ''}</div>
@@ -613,7 +657,7 @@
       const heroImg = [...TITLES].filter(t => t.top && t.bannerImage).sort(rankSort)[0] || [...TITLES].filter(t => t.top && t.coverImage).sort(rankSort)[0];
       const genreBrowse = GENRE_PATHS.map(p => this.pathTile(p)).join('');
       const percorsiBrowse = PERCORSI_PATHS.map(p => this.pathTile(p)).join('');
-      const facts = PATHS.filter(p => p.curiosita).map(p => p.curiosita).slice(0, 3);
+      const facts = pickN(FACTS, 3);
       return `
       <div class="wrap">
         <div class="home-grid">
@@ -653,9 +697,9 @@
         <section class="home-sec home-full">
           <div class="sec-divider"><span class="sd-label"><i class="ri-compass-3-line"></i> Da dove vuoi partire</span><span class="sd-line"></span></div>
           <div class="qgrid">
-            ${feat('/p/da-zero-a-otaku', 'ri-seedling-line', 'Parto da zero', 'Guida passo passo per scoprire gli anime.', imgOfPath('da-zero-a-otaku'))}
-            ${feat('/p/seinen-e-maturo', 'ri-skull-line', 'Voglio roba adulta', 'Storie mature, complesse, senza compromessi.', imgOfPath('seinen-e-maturo'))}
-            ${feat('/tempo/sera', 'ri-time-line', 'Ho poco tempo', 'Episodi brevi, film e serie compatte.', seraImg)}
+            ${feat('/p/da-zero-a-otaku', 'ri-seedling-line', 'Parto da zero', 'Guida passo passo per scoprire gli anime.', bnr('hunter-x-hunter'))}
+            ${feat('/p/seinen-e-maturo', 'ri-skull-line', 'Voglio roba adulta', 'Storie mature, complesse, senza compromessi.', bnr('attack-on-titan'))}
+            ${feat('/tempo/sera', 'ri-time-line', 'Ho poco tempo', 'Episodi brevi, film e serie compatte.', bnr('promare'))}
           </div>
         </section>
 
@@ -670,10 +714,16 @@
         </section>
       </div>`;
     }
+    // box "Lo sapevi?" autonomo per le pagine di navigazione (una curiosità a caso)
+    factBox() {
+      const f = pickN(FACTS, 1)[0];
+      return `<div class="page-fact"><i class="ri-lightbulb-flash-line"></i><span><b>Lo sapevi?</b> ${esc(f)}</span></div>`;
+    }
     // ── VISTA: GENERI (griglia categorie) ────────────────────────────────────────
     viewGeneri() {
       return `<section class="wrap sec-page">
         <div class="sec-page-head"><h1>Generi</h1><p>${GENRE_PATHS.length} categorie, ognuna una lista ordinata dal migliore.</p></div>
+        ${this.factBox()}
         <div class="paths-grid">${GENRE_PATHS.map(p => this.pathTile(p)).join('')}</div>
       </section>`;
     }
@@ -681,6 +731,7 @@
     viewPercorsi() {
       return `<section class="wrap sec-page">
         <div class="sec-page-head"><h1>Percorsi</h1><p>Viaggi tematici curati: dove iniziare, i capolavori, gli antieroi e altro.</p></div>
+        ${this.factBox()}
         <div class="paths-grid">${PERCORSI_PATHS.map(p => this.pathTile(p)).join('')}</div>
       </section>`;
     }
@@ -762,6 +813,14 @@
         const daVedere = members.filter(t => t.inList && !isTopT(t)).sort(rankSort);
         const noPersonal = !top.length && !daVedere.length; // categoria interamente curata (es. classici)
         const consigliati = members.filter(t => !t.inList).sort(rankSort).slice(0, noPersonal ? 24 : 6);
+        // se una categoria non ha "Essenziali" (nessun top globale) ma ha titoli in lista, promuovo
+        // i migliori (per voto/rank) DI quella categoria così apre comunque con una guida, dai titoli già presenti.
+        let essenziali = top, altriInList = daVedere;
+        if (!top.length && daVedere.length) {
+          const n = Math.min(4, daVedere.length);
+          essenziali = daVedere.slice(0, n);
+          altriInList = daVedere.slice(n);
+        }
         const scheda = `
         <section class="wrap cat-intro-wrap">
           <div class="cat-intro" style="--accent:${esc(p.accent)}">
@@ -789,8 +848,8 @@
           </section>` : '';
         const body = noPersonal
           ? sec('I classici', 'ri-medal-line', consigliati)
-          : sec('Essenziali', 'ri-vip-crown-fill', top)
-            + sec('Consigliati', 'ri-bookmark-3-line', daVedere)
+          : sec('Essenziali', 'ri-vip-crown-fill', essenziali)
+            + sec('Consigliati', 'ri-bookmark-3-line', altriInList)
             + sec('Da scoprire', 'ri-compass-3-line', consigliati);
         return hero + scheda + filterBar + body;
       }
@@ -955,6 +1014,7 @@
           <a class="time-chip" href="/tempo/maratona">Maratona</a>
         </div>
         <div class="genre-chips">${genreChips}</div>
+        ${this.factBox()}
       </section>
       <section class="wrap">
         <div class="sec-head sub"><h2><i class="ri-trophy-line"></i> Tutti, dal migliore</h2><span class="sec-count">${all.length} titoli</span></div>
@@ -970,7 +1030,7 @@
       const hours = watched.reduce((s, t) => s + (t.coreMinutes || 0), 0) / 60;
 
       const grid = list => `<div class="grid">${list.map(t => this.card(t)).join('')}</div>`;
-      const empty = (ic, msg) => `<div class="empty"><i class="${ic}"></i><p>${msg}</p><a class="btn-ghost" href="/">Vai ai percorsi</a></div>`;
+      const empty = (ic, msg) => `<div class="empty"><i class="${ic}"></i><p>${msg}</p><a class="btn-ghost" href="/percorsi">Vai ai percorsi</a></div>`;
 
       return `
       <section class="wrap">
@@ -1011,7 +1071,7 @@
     }
 
     notFound() {
-      return `<section class="wrap empty big"><i class="ri-compass-3-line"></i><h2>Non trovato</h2><p>Questa pagina non esiste.</p><a class="btn-ghost" href="/">Torna ai percorsi</a></section>`;
+      return `<section class="wrap empty big"><i class="ri-compass-3-line"></i><h2>Non trovato</h2><p>Questa pagina non esiste.</p><a class="btn-ghost" href="/">Torna alla home</a></section>`;
     }
 
     // ── RICERCA ──────────────────────────────────────────────────────────────────

@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-16T16:02:56.039Z",
+  "generatedAt": "2026-06-16T16:43:55.059Z",
   "attribution": "Dati e immagini da AniList (anilist.co)",
-  "count": 189,
+  "count": 190,
   "titles": [
     {
       "id": "attack-on-titan",
@@ -3171,7 +3171,7 @@
       "forWho": "Per chi vuole imbarcarsi nella più grande avventura del genere.",
       "tips": [
         "1000+ episodi spaventano, ma esistono guide per saltare i filler e alleggerire.",
-        "È in arrivo anche un remake ('The One Piece'): se l'idea della maratona ti blocca, puoi aspettarlo."
+        "Esiste anche un remake in produzione ('The One Piece'): un'alternativa possibile se la maratona ti scoraggia."
       ],
       "recommendations": {
         "simili": [
@@ -9571,7 +9571,7 @@
       ],
       "forWho": "Per chi vuole un anime contemplativo che commuove.",
       "tips": [
-        "Fatto per essere assaporato con calma: la lentezza è il pregio, non un difetto. Seconda stagione in arrivo."
+        "Fatto per essere assaporato con calma: la lentezza è il pregio, non un difetto."
       ],
       "recommendations": {
         "simili": [
@@ -20334,7 +20334,7 @@
       "inList": true,
       "top": false,
       "userRating": null,
-      "hook": "Fantasy soprannaturale d'avventura: in un villaggio di montagna sorvegliato da guardiani di pietra, un ragazzo vive accanto alla sorella gemella, tenuta prigioniera per un misterioso \"dovere\". Premessa intrigante carica di segreti, dall'autore di Fire Force. Animazione curata di bones; serie ancora in corso, da seguire mentre esce.",
+      "hook": "Fantasy soprannaturale d'avventura: in un villaggio di montagna sorvegliato da guardiani di pietra, un ragazzo vive accanto alla sorella gemella, tenuta prigioniera per un misterioso \"dovere\". Premessa intrigante carica di segreti, dall'autore di Fire Force. Animazione curata di bones.",
       "tone": [
         "fantasy",
         "soprannaturale",
@@ -20671,7 +20671,7 @@
       "inList": true,
       "top": false,
       "userRating": null,
-      "hook": "Azione soprannaturale: un ragazzo convinto di non avere talento incontra una guerriera che attinge ai poteri delle vite passate, ma solo a un prezzo brutale. Premessa dark e violenta, con un protagonista comune trascinato in una lotta più grande di lui. Serie in corso dagli esiti ancora incerti.",
+      "hook": "Azione soprannaturale: un ragazzo convinto di non avere talento incontra una guerriera che attinge ai poteri delle vite passate, ma solo a un prezzo brutale. Premessa dark e violenta, con un protagonista comune trascinato in una lotta più grande di lui.",
       "tone": [
         "azione",
         "soprannaturale",
@@ -39752,6 +39752,10 @@
         ],
         "affin": [
           {
+            "id": "daltanious",
+            "why": "Atmosfera e temi affini"
+          },
+          {
             "id": "neon-genesis-evangelion",
             "why": "Atmosfera e temi affini"
           },
@@ -39927,6 +39931,10 @@
           },
           {
             "id": "ufo-robot-grendizer",
+            "why": "Chi ha amato questo ha amato anche"
+          },
+          {
+            "id": "daltanious",
             "why": "Chi ha amato questo ha amato anche"
           }
         ],
@@ -40473,6 +40481,10 @@
         ],
         "affin": [
           {
+            "id": "daltanious",
+            "why": "Atmosfera e temi affini"
+          },
+          {
             "id": "gurren-lagann",
             "why": "Atmosfera e temi affini"
           },
@@ -40515,9 +40527,154 @@
           {
             "id": "drifters",
             "why": "Atmosfera e temi affini"
+          }
+        ]
+      },
+      "editorial": true
+    },
+    {
+      "id": "daltanious",
+      "anilistId": 4411,
+      "idMal": 4411,
+      "title": "Future Robot Daltanious",
+      "titleRomaji": "Mirai Robo Daltanias",
+      "titleNative": "未来ロボ ダルタニアス",
+      "year": 1979,
+      "format": "TV",
+      "typeLabel": "Serie",
+      "status": "FINISHED",
+      "statusLabel": "Concluso",
+      "episodes": 47,
+      "durationAvg": 24,
+      "sagaEpisodes": 47,
+      "coreMinutes": 1128,
+      "lengthBand": "medio",
+      "lengthLabel": "Medio",
+      "lengthHint": "qualche settimana",
+      "genres": [
+        "Comedy",
+        "Mecha"
+      ],
+      "tags": [
+        "Episodic",
+        "Super Robot",
+        "Space",
+        "Aliens",
+        "Kaiju",
+        "Male Protagonist",
+        "War"
+      ],
+      "studios": [],
+      "director": "Tadao Nagahama",
+      "creator": "Saburou Yatsude",
+      "source": "ORIGINAL",
+      "sourceLabel": "Originale",
+      "score10": 6.4,
+      "popularity": 886,
+      "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/4411.jpg",
+      "coverColor": "#e4861a",
+      "bannerImage": null,
+      "streaming": [],
+      "startFrom": null,
+      "structure": [
+        {
+          "name": "Future Robot Daltanious",
+          "episodes": "47 ep",
+          "year": 1979,
+          "main": true
+        }
+      ],
+      "provenance": {
+        "source": "AniList",
+        "anilistUrl": "https://anilist.co/anime/4411",
+        "durationEstimated": false,
+        "fetchedFields": [
+          "title",
+          "episodes",
+          "duration",
+          "status",
+          "genres",
+          "studios",
+          "staff",
+          "score",
+          "coverImage",
+          "externalLinks",
+          "relations",
+          "recommendations"
+        ]
+      },
+      "inList": false,
+      "top": false,
+      "userRating": null,
+      "hook": "Daltanious (1979): la Terra è invasa dall'impero di Zaal e l'orfano Kento pilota un gigante nato dalla fusione di un leone robot, un caccia e un androide. Super robot componibile classico, arrivato in Italia nei primi anni '80. Animazione d'epoca: vale per la nostalgia e la storia del genere.",
+      "tone": [
+        "storico",
+        "mecha",
+        "nostalgia"
+      ],
+      "forWho": "Per chi è cresciuto coi super robot in TV o ne studia le origini.",
+      "tips": [],
+      "recommendations": {
+        "simili": [
+          {
+            "id": "getter-robo",
+            "why": "Chi ha amato questo ha amato anche"
           },
           {
-            "id": "86-eighty-six",
+            "id": "mazinger-z",
+            "why": "Chi ha amato questo ha amato anche"
+          }
+        ],
+        "saga": [],
+        "studio": [],
+        "autore": [],
+        "affin": [
+          {
+            "id": "ufo-robot-grendizer",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "gurren-lagann",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "great-mazinger",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "neon-genesis-evangelion",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "drifters",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "flcl",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "promare",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "saiki-k",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "redline",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "komi-cant-communicate",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "the-tatami-galaxy",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "mobile-suit-gundam",
             "why": "Atmosfera e temi affini"
           }
         ]
