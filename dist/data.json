@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T16:43:55.059Z",
+  "generatedAt": "2026-06-16T18:33:56.677Z",
   "attribution": "Dati e immagini da AniList (anilist.co)",
   "count": 190,
   "titles": [
@@ -40937,112 +40937,6 @@
       "blurb": "Thriller psicologici che ti incasinano la testa.",
       "about": "Thriller psicologici, inganni e colpi di scena. Storie che da premesse semplici diventano congegni perfetti, costruite per spiazzarti.",
       "curiosita": "Spesso partono lentissimi e «normali» apposta: è la quiete prima che tutto si ribalti. Fidati e arriva alla svolta."
-    },
-    {
-      "id": "isekai-e-fantasy",
-      "title": "Isekai e Fantasy",
-      "tagline": "Tizio qualunque sbatte la testa e si risveglia in un altro mondo. Genere inflazionato? Sì. Ci sono perle? Pure. Più il fantasy vero.",
-      "audience": "tutti",
-      "icon": "ri-door-open-line",
-      "accent": "#4a6fa5",
-      "levels": [
-        {
-          "title": "I migliori isekai",
-          "why": "Il meglio del 'trasportato in un altro mondo': chi ha definito il genere.",
-          "titles": [
-            "mushoku-tensei",
-            "re-zero-starting-life-in-another-world",
-            "overlord",
-            "tensura",
-            "the-eminence-in-shadow",
-            "failure-frame-i-became-the-strongest",
-            "reincarnated-as-a-sword",
-            "handyman-saitou-in-another-world",
-            "the-world-s-finest-assassin-gets-reincarnated-in-another-world-as-an-aristocrat",
-            "release-that-witch"
-          ]
-        },
-        {
-          "title": "Fantasy e avventura",
-          "why": "Mondi costruiti con cura, dove ogni episodio allarga la mappa.",
-          "titles": [
-            "frieren",
-            "made-in-abyss",
-            "dungeon-meshi",
-            "ranking-of-kings",
-            "the-apothecary-diaries",
-            "fate-franchise-completo",
-            "grimgar-of-fantasy-and-ash",
-            "wistoria-wand-and-sword",
-            "petals-of-reincarnation",
-            "sentence-to-be-hero",
-            "dororo"
-          ]
-        },
-        {
-          "title": "Mondi virtuali e giochi",
-          "why": "Fantasy moderno tra gilde, dungeon e mondi-videogioco.",
-          "titles": [
-            "tower-of-god",
-            "solo-leveling",
-            "sword-art-online",
-            "the-rising-of-the-shield-hero",
-            "gate",
-            "shangri-la-frontier"
-          ]
-        }
-      ],
-      "blurb": "Catapultato in un altro mondo: magia e avventura.",
-      "about": "Mondi inventati, magia e avventura: dal classico «trasportato in un altro mondo» (isekai) al fantasy costruito con cura, dove ogni episodio allarga la mappa.",
-      "curiosita": "«Isekai» vuol dire letteralmente «altro mondo». Il filone è esploso a tal punto che alcuni concorsi per autori esordienti l'hanno vietato per un periodo."
-    },
-    {
-      "id": "sci-fi-e-mecha",
-      "title": "Sci-Fi e Mecha",
-      "tagline": "Cyberpunk, robot giganti, futuri marci e domande grosse. La fantascienza animata, da quella spettacolare a quella che ti fa pensare.",
-      "audience": "tutti",
-      "icon": "ri-robot-line",
-      "accent": "#2f8f9e",
-      "levels": [
-        {
-          "title": "Cyberpunk e futuro",
-          "why": "Metropoli tecnologiche e distopie: l'estetica sci-fi più influente.",
-          "titles": [
-            "ghost-in-the-shell",
-            "cyberpunk-edgerunners",
-            "psycho-pass",
-            "lazarus",
-            "ergo-proxy",
-            "vivy-fluorite-eyes-song"
-          ]
-        },
-        {
-          "title": "Robot giganti (mecha)",
-          "why": "Battaglie di robot pilotati, ma i migliori parlano delle persone dentro.",
-          "titles": [
-            "neon-genesis-evangelion",
-            "code-geass",
-            "gurren-lagann",
-            "86-eighty-six",
-            "promare",
-            "gundam-iron-blooded-orphans",
-            "eureka-seven",
-            "gundam-witch-from-mercury"
-          ]
-        },
-        {
-          "title": "Fantascienza riflessiva",
-          "why": "Sci-fi adulta su tempo, spazio, politica e coscienza.",
-          "titles": [
-            "planetes",
-            "legend-of-the-galactic-heroes",
-            "from-the-new-world"
-          ]
-        }
-      ],
-      "blurb": "Fantascienza e robot giganti: futuro, tecnologia, cyberpunk.",
-      "about": "Futuro, tecnologia e domande grosse: cyberpunk marcio, robot giganti pilotati e fantascienza che fa pensare quanto fa spettacolo.",
-      "curiosita": "«Mecha» viene da «mechanical»: i robot giganti sono un sottogenere a sé, e i migliori non parlano di robot ma delle persone che ci stanno dentro."
     },
     {
       "id": "horror-e-disagio",

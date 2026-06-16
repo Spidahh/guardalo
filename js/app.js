@@ -33,18 +33,6 @@
     Supernatural: 'Spiriti, poteri, roba oltre il reale.', Thriller: 'Tensione costante, ti tiene sul filo.',
   };
 
-  // scaffali per mood nella vista Esplora (genere AniList → titolo scaffale)
-  const MOOD_SHELVES = [
-    { key: 'Action',        label: 'Botte da orbi',       icon: 'ri-sword-line' },
-    { key: 'Fantasy',       label: 'Spade & magia',       icon: 'ri-magic-line' },
-    { key: 'Sci-Fi',        label: 'Fantascienza',        icon: 'ri-rocket-line' },
-    { key: 'Psychological', label: 'Mindfuck',            icon: 'ri-brain-line' },
-    { key: 'Horror',        label: 'Roba disturbante',    icon: 'ri-skull-2-line' },
-    { key: 'Drama',         label: 'Per soffrire',        icon: 'ri-quill-pen-line' },
-    { key: 'Adventure',     label: 'Grandi avventure',    icon: 'ri-compass-3-line' },
-    { key: 'Comedy',        label: 'Due risate',          icon: 'ri-emotion-laugh-line' },
-  ];
-
   // ── fasce lunghezza ────────────────────────────────────────────────────────
   const BANDS = ['cortissimo', 'corto', 'medio', 'lungo', 'lunghissimo'];
   const bandIndex = b => Math.max(0, BANDS.indexOf(b));
@@ -56,27 +44,6 @@
     'mindfuck', 'horror-e-disagio', 'sopravvivenza', 'storici', 'vendetta', 'viaggi-nel-tempo',
     'crimine', 'supereroi', 'romance', 'commedia', 'cinema-dautore'];
   const GENRE_PATHS = GENRE_IDS.map(id => PATHS.find(p => p.id === id)).filter(Boolean);
-  // generi AniList che "qualificano" un titolo della lista per una categoria.
-  // Un titolo inList con quel genere compare in cima ("Dalla tua lista") di quella categoria,
-  // anche in più categorie (i titoli multi-genere non stanno in una sola). null = solo curato.
-  // NB: Action/Comedy/Drama sono troppo larghi (allagano) → quei generi restano curati (null).
-  const GENRE_TAGS = {
-    'battle-shonen': null,
-    'seinen-e-maturo': null,
-    'isekai-e-fantasy': null,
-    'sci-fi-e-mecha': ['Sci-Fi', 'Mecha'],
-    'mindfuck': ['Psychological', 'Thriller'],
-    'horror-e-disagio': ['Horror'],
-    'romance': ['Romance'],
-    'commedia': null,
-    'cinema-dautore': '__movie__',
-  };
-  const matchesGenreCat = (t, id) => {
-    const tags = GENRE_TAGS[id];
-    if (!tags) return false;
-    if (tags === '__movie__') return t.format === 'MOVIE';
-    return (t.genres || []).some(g => tags.includes(g));
-  };
   // Categorizzazione PRECISA della lista (i generi AniList sono troppo larghi e sbagliano:
   // es. Shangri-La ha tag Sci-Fi ma è isekai). Un titolo può stare in più categorie.
   const FORCE_TOP = new Set(['jujutsu-kaisen']);
@@ -127,7 +94,6 @@
   };
   // percorsi "tematici" (non di genere): journey curati che possono riusare gli stessi titoli.
   // Tutti i percorsi sono liste curate ordinate dal migliore (niente livelli/progressione).
-  const META_IDS = [];
   const PERCORSI_IDS = ['da-zero-a-otaku', 'capolavori', 'azione', 'antieroi', 'il-canone', 'chicche-e-deep-cut'];
   const PERCORSI_PATHS = PERCORSI_IDS.map(id => PATHS.find(p => p.id === id)).filter(Boolean);
   // titoli di un percorso, deduplicati nell'ordine dei livelli
@@ -144,31 +110,12 @@
     (b.top ? 1 : 0) - (a.top ? 1 : 0) ||
     (b.userRating || 0) - (a.userRating || 0) ||
     (b.score10 || 0) - (a.score10 || 0);
-  const TOPS = TITLES.filter(t => t.top).sort(rankSort);
-  // badge editoriale per voto (stile "Verdetto": Capolavoro / Ottimo / Notevole)
-  const verdictLabel = s => s >= 8.6 ? ['Capolavoro', 'cap'] : s >= 8.2 ? ['Ottimo', 'ott'] : ['Notevole', 'not'];
-  const hookFirst = (h, n = 84) => { let s = (h || '').split('. ')[0] || ''; return s.length > n ? s.slice(0, n - 1) + '…' : s; };
 
   // etichetta lunghezza: i film e i one-shot non dicono "Cortissimo" ma cosa sono
   const lenLabel = t => t.format === 'MOVIE' ? 'Film'
     : ((t.sagaEpisodes || t.episodes || 0) <= 1 ? 'Episodio unico' : t.lengthLabel);
   const lenHint = t => t.format === 'MOVIE' ? 'un film, una sera' : t.lengthHint;
 
-  // ── collezioni "non di genere" (in cima alla home come categorie) ────────────
-  // REGOLA: le liste personalizzate contengono SOLO i titoli della lista
-  // principale dell'utente (t.inList), mai gli extra aggiunti in curatela.
-  const COLLECTIONS = [
-    { id: 'top', title: 'I Migliori', icon: 'ri-vip-crown-2-fill', accent: '#d9a743',
-      blurb: 'I titoli imprescindibili: quelli da cui partire, di ogni genere.',
-      get: () => TOPS },
-    { id: 'una-sera', title: 'Da vedere in una sera', icon: 'ri-moon-clear-line', accent: '#4f86a6',
-      blurb: 'Film e serie brevi: poche ore e sei a posto.',
-      get: () => TITLES.filter(t => t.inList && (t.format === 'MOVIE' || t.lengthBand === 'cortissimo' || t.lengthBand === 'corto')).sort(rankSort) },
-    { id: 'appena-usciti', title: 'Appena usciti', icon: 'ri-fire-line', accent: '#cf6a3a',
-      blurb: 'Il meglio delle ultime stagioni, dal più forte.',
-      get: () => TITLES.filter(t => t.inList && (t.year || 0) >= 2024).sort(rankSort) },
-  ];
-  const COLL_BY_ID = new Map(COLLECTIONS.map(c => [c.id, c]));
 
   // ── "Lo sapevi?" — curiosità/info utili, scritte bene (soggetto chiaro, niente ripetizioni) ──
   const FACTS = [
@@ -200,7 +147,6 @@
       this.toWatch = {};
       this.user = null;
       this.isAdmin = false;
-      this.homeAudience = 'tutti';
       this.boot();
     }
 
@@ -402,8 +348,7 @@
       const path = decodeURIComponent(location.pathname || '/');
       const [_, seg, arg] = path.split('/');
       let html, active = 'home';
-      if (seg === 'p' && arg) { html = this.viewPath(arg); active = META_IDS.includes(arg) || PERCORSI_IDS.includes(arg) ? 'percorsi' : 'generi'; }
-      else if (seg === 'c' && arg) { html = this.viewCollection(arg); active = 'home'; }
+      if (seg === 'p' && arg) { html = this.viewPath(arg); active = PERCORSI_IDS.includes(arg) ? 'percorsi' : 'generi'; }
       else if (seg === 't' && arg) { html = this.viewTitle(arg); active = ''; }
       else if (seg === 'generi') { html = this.viewGeneri(); active = 'generi'; }
       else if (seg === 'percorsi') { html = this.viewPercorsi(); active = 'percorsi'; }
@@ -441,10 +386,6 @@
         const p = PATHS.find(p => p.id === arg);
         title = `${p.title} — i migliori anime del genere · ${BASE}`;
         desc = (p.about || p.blurb || p.tagline || '').slice(0, 158);
-      } else if (seg === 'c' && arg && COLL_BY_ID.get(arg)) {
-        const c = COLL_BY_ID.get(arg);
-        title = `${c.title} · ${BASE}`;
-        desc = (c.blurb || '').slice(0, 158);
       } else if (seg === 'esplora') {
         title = `Esplora tutti gli anime · ${BASE}`;
         desc = 'Tutti gli anime della guida, dal migliore: filtra per genere e per quanto tempo hai.';
@@ -595,33 +536,6 @@
       }
       return out;
     }
-    miniCover(t, small) {
-      const u = small ? thumbS(t.coverImage) : thumb(t.coverImage);
-      return `<span class="mc" style="--cc:${esc(t.coverColor || '#2a2419')}"><img src="${esc(u)}" alt="" loading="lazy" onload="this.classList.add('ld')" onerror="this.classList.add('ld')"></span>`;
-    }
-    nextInPath(p) {
-      for (const lv of p.levels) for (const id of (lv.titles || [])) {
-        if (!this.isWatched(id)) { const t = BY_ID.get(id); if (t) return t; }
-      }
-      return null;
-    }
-    collectionCard(c) {
-      const list = c.get();
-      const hero = list[0];
-      return `<a class="path-card ${c.id === 'top' ? 'is-topcat' : ''}" href="/c/${esc(c.id)}" style="--accent:${esc(c.accent)}">
-        <div class="path-hero-img">
-          ${hero ? `<img class="path-1img" src="${esc(hero.bannerImage || cover(hero))}" alt="" loading="lazy" onload="this.classList.add('ld')" onerror="this.classList.add('ld')">` : ''}
-        </div>
-        <div class="path-card-body">
-          <div class="path-head"><span class="path-ic-wrap"><i class="${esc(c.icon)}"></i></span><h3 class="path-name">${esc(c.title)}</h3></div>
-          <p class="path-blurb">${esc(c.blurb)}</p>
-          <div class="path-foot">
-            <span class="path-levels"><i class="ri-film-line"></i> ${list.length} titoli</span>
-            <span class="path-start">Apri <i class="ri-arrow-right-line"></i></span>
-          </div>
-        </div>
-      </a>`;
-    }
     // tile di un percorso/genere
     pathTile(p) {
       const mem = catTitles(p);
@@ -682,7 +596,7 @@
               <p class="rail-q">Quanto tempo hai?</p>
               <div class="rail-times">
                 <a href="/tempo/sera"><i class="ri-moon-clear-line"></i> Una sera</a>
-                <a href="/tempo/medio"><i class="ri-calendar-2-line"></i> Un weekend</a>
+                <a href="/tempo/weekend"><i class="ri-calendar-2-line"></i> Un weekend</a>
                 <a href="/tempo/maratona"><i class="ri-fire-line"></i> Una maratona</a>
               </div>
               <button class="btn-red js-surprise rail-surprise"><i class="ri-shuffle-line"></i> Sorprendimi</button>
@@ -805,8 +719,7 @@
       </section>`;
 
       // ogni percorso/genere: scheda introduttiva + Top + Da vedere + Consigliati
-      if (!META_IDS.includes(id)) {
-        const isGenre = GENRE_IDS.includes(id);
+      {
         // membri = titoli curati nel percorso + (per i generi) titoli della lista che combaciano col genere
         const members = catTitles(p);
         const top = members.filter(t => t.inList && isTopT(t)).sort(rankSort);
@@ -853,33 +766,6 @@
             + sec('Da scoprire', 'ri-compass-3-line', consigliati);
         return hero + scheda + filterBar + body;
       }
-      return hero;
-    }
-
-    // ── VISTA: COLLEZIONE (TOP, Una sera, Appena usciti) ─────────────────────────
-    viewCollection(id) {
-      const c = COLL_BY_ID.get(id);
-      if (!c) return this.notFound();
-      const list = c.get();
-      const banner = list.slice(0, 8).map(t =>
-        `<span class="phb" style="--cc:${esc(t.coverColor || '#222')}"><img src="${esc(thumbS(t.coverImage))}" alt="" loading="lazy" onload="this.classList.add('ld')" onerror="this.classList.add('ld')"></span>`).join('');
-      const grid = list.map(t => this.card(t)).join('');
-      return `
-      <section class="path-hero" style="--accent:${esc(c.accent)}">
-        <div class="path-hero-bg">${banner}<span class="path-hero-veil"></span></div>
-        <div class="wrap path-hero-content">
-          <a class="back" href="/"><i class="ri-arrow-left-line"></i> Home</a>
-          <div class="path-hero-in">
-            <span class="path-hero-ic-wrap"><i class="${esc(c.icon)}"></i></span>
-            <div class="path-hero-txt">
-              <h1 class="path-hero-name">${esc(c.title)}</h1>
-              <p class="path-hero-blurb">${esc(c.blurb)}</p>
-              <div class="path-hero-meta"><span>${list.length} titoli · dal migliore</span></div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="wrap"><div class="grid">${grid}</div></section>`;
     }
 
     // ── VISTA: TITOLO ────────────────────────────────────────────────────────────
@@ -1024,9 +910,8 @@
 
     // ── VISTA: LA MIA LISTA ──────────────────────────────────────────────────────
     viewLista() {
-      const order = ['cortissimo', 'corto', 'medio', 'lungo', 'lunghissimo'];
       const watched = Object.keys(this.watched).map(id => BY_ID.get(id)).filter(Boolean).sort((a, b) => (b.score10 || 0) - (a.score10 || 0));
-      const later = Object.keys(this.toWatch).map(id => BY_ID.get(id)).filter(Boolean).sort((a, b) => order.indexOf(a.lengthBand) - order.indexOf(b.lengthBand));
+      const later = Object.keys(this.toWatch).map(id => BY_ID.get(id)).filter(Boolean).sort((a, b) => BANDS.indexOf(a.lengthBand) - BANDS.indexOf(b.lengthBand));
       const hours = watched.reduce((s, t) => s + (t.coreMinutes || 0), 0) / 60;
 
       const grid = list => `<div class="grid">${list.map(t => this.card(t)).join('')}</div>`;
@@ -1124,11 +1009,6 @@
       setTimeout(() => { t.classList.remove('show'); setTimeout(() => t.remove(), 300); }, 2400);
     }
   }
-
-  // delega click "cerca" dentro Esplora (rendi dopo il render)
-  document.addEventListener('click', e => {
-    if (e.target.id === 'esploraSearch' || e.target.closest('#searchOpen')) {}
-  });
 
   document.addEventListener('DOMContentLoaded', () => {
     window.app = new Guardalo();

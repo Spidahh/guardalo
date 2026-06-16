@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // ─────────────────────────────────────────────────────────────────────────
-// GUARDALO — prerender SEO: genera HTML statico per titoli/categorie/collezioni
+// GUARDALO — prerender SEO: genera HTML statico per titoli/generi/percorsi
 // (meta + Open Graph + JSON-LD + contenuto leggibile) così i crawler e le
 // anteprime social vedono il contenuto senza eseguire JavaScript.
 // Genera anche sitemap.xml. Le pagine restano "app shell": al caricamento il
@@ -24,13 +24,11 @@ const TITLES = data.titles, PATHS = data.paths;
 const BY_ID = new Map(TITLES.map(t => [t.id, t]));
 const itGenre = g => ({ Action: 'Azione', Adventure: 'Avventura', Comedy: 'Commedia', Drama: 'Drammatico', Fantasy: 'Fantasy', Horror: 'Horror', Mecha: 'Mecha', Music: 'Musicale', Mystery: 'Mistero', Psychological: 'Psicologico', Romance: 'Romantico', 'Sci-Fi': 'Fantascienza', 'Slice of Life': 'Slice of Life', Sports: 'Sport', Supernatural: 'Soprannaturale', Thriller: 'Thriller' }[g] || g);
 const rankSort = (a, b) => (b.top ? 1 : 0) - (a.top ? 1 : 0) || (b.userRating || 0) - (a.userRating || 0) || (b.score10 || 0) - (a.score10 || 0);
-const GENRE_IDS = ['battle-shonen', 'seinen-e-maturo', 'isekai-e-fantasy', 'sci-fi-e-mecha', 'mindfuck', 'horror-e-disagio', 'romance', 'commedia', 'cinema-dautore'];
+// Generi mostrati nell'indice /generi — stessa lista (e stesso ordine) di GENRE_IDS in js/app.js.
+const GENRE_IDS = ['battle-shonen', 'seinen-e-maturo', 'isekai', 'fantasy', 'sci-fi', 'mecha', 'super-robot',
+  'mindfuck', 'horror-e-disagio', 'sopravvivenza', 'storici', 'vendetta', 'viaggi-nel-tempo',
+  'crimine', 'supereroi', 'romance', 'commedia', 'cinema-dautore'];
 const pathTitles = p => { const seen = new Set(), out = []; (p.levels || []).forEach(l => (l.titles || []).forEach(id => { if (!seen.has(id)) { seen.add(id); const t = BY_ID.get(id); if (t) out.push(t); } })); return out; };
-const COLLS = [
-  { id: 'top', title: 'I Migliori', blurb: 'La tua classifica: i titoli che valgono su tutto.', get: () => TITLES.filter(t => t.top).sort(rankSort) },
-  { id: 'una-sera', title: 'Da vedere in una sera', blurb: 'Film e serie brevi: poche ore e sei a posto.', get: () => TITLES.filter(t => t.inList && (t.format === 'MOVIE' || ['cortissimo', 'corto'].includes(t.lengthBand))).sort(rankSort) },
-  { id: 'appena-usciti', title: 'Appena usciti', blurb: 'Il meglio delle ultime stagioni, dal più forte.', get: () => TITLES.filter(t => t.inList && (t.year || 0) >= 2024).sort(rankSort) },
-];
 
 const tmpl = await readFile(join(ROOT, 'index.html'), 'utf8');
 
@@ -119,22 +117,12 @@ for (const [slug, h1, sub] of docs) {
   urls.push('/' + slug);
 }
 
-// ── collezioni ───────────────────────────────────────────────────────────
-for (const c of COLLS) {
-  const list = c.get();
-  const items = list.map(t => `<li><a href="/t/${t.id}">${esc(t.title)}</a>${t.year ? ` (${t.year})` : ''}</li>`).join('');
-  const content = `<section><h1>${esc(c.title)}</h1><p>${esc(c.blurb)}</p><ul>${items}</ul></section>`;
-  const url = `/c/${c.id}`;
-  await emit(url, page({ urlPath: url, title: `${c.title} · GUARDALO`, desc: clip(c.blurb), content }));
-  urls.push(url);
-}
-
 // ── sitemap.xml ──────────────────────────────────────────────────────────
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemap.org/schemas/sitemap/0.9">\n`
   + urls.map(u => `  <url><loc>${SITE}${u === '/' ? '/' : u}</loc></url>`).join('\n')
   + `\n</urlset>\n`;
 await writeFile(join(ROOT, 'sitemap.xml'), sitemap.replace('sitemap.org/schemas', 'sitemaps.org/schemas'), 'utf8');
 
-console.log(`✓ prerender: ${TITLES.length} titoli + ${GENRE_IDS.length} generi + ${COLLS.length} collezioni`);
+console.log(`✓ prerender: ${TITLES.length} titoli + ${PATHS.length} percorsi/generi`);
 console.log(`✓ sitemap.xml: ${urls.length} URL  (SITE_URL = ${SITE})`);
 console.log(`  NB: imposta SITE_URL al dominio reale prima del deploy (ora: ${SITE}).`);

@@ -36,7 +36,12 @@ npm run gen      # unisce fatti + editoriale → js/data.js
 npm run build    # map + fetch + gen (tutto)
 npm run report   # statistiche sul dataset
 npm run serve    # anteprima locale su http://localhost:4178
+npm run prerender   # genera le pagine SEO statiche (/t /p /generi …) + sitemap.xml
+npm run build:site  # gen + prerender (build completa per il deploy)
 ```
+
+> Le pagine prerenderizzate sono gitignorate: vanno (ri)generate al deploy.
+> Su Windows passa il dominio così: `$env:SITE_URL="https://tuodominio"; npm run prerender`.
 
 ### Aggiungere un titolo
 1. Aggiungi `{ "id": "slug-titolo", "title": "Titolo", "year": 2020 }` a `tools/seed-titles.json`.
@@ -81,7 +86,7 @@ chiamano mai le API.
 | Login/sync | Firebase Auth + Firestore (Spark) | €0 |
 
 ## TODO lancio
-- **AdSense**: inserire lo script publisher in `index.html` (cerca `<!-- AdSense -->`) e creare
-  `ads.txt` alla radice con il proprio publisher id. Nessun contenuto di pirateria → policy ok.
+- **AdSense**: inserire lo script publisher in `index.html` (cerca `<!-- AdSense -->`) e compilare
+  `ads.txt` alla radice (template già presente) con il proprio publisher id. Nessun contenuto di pirateria → policy ok.
 - Sostituire le icone `icon.svg` con un set PWA (192/512 px) se si vuole l'installazione.
 - Fase 2: serie/film live via TVmaze (riusare lo schema, aggiungere `tools/build-tv.mjs`).

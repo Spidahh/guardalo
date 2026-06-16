@@ -1,7 +1,7 @@
 {
   "name": "GUARDALO — La guida agli anime",
   "short_name": "GUARDALO",
-  "description": "Una guida, non un catalogo: percorsi curati a livelli per scoprire gli anime.",
+  "description": "I migliori anime di ogni genere, scelti e spiegati: perché guardarli, da dove iniziare e dove vederli.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
