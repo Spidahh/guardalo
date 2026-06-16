@@ -599,7 +599,6 @@
                 <a href="/tempo/weekend"><i class="ri-calendar-2-line"></i> Un weekend</a>
                 <a href="/tempo/maratona"><i class="ri-fire-line"></i> Una maratona</a>
               </div>
-              <button class="btn-red js-surprise rail-surprise"><i class="ri-shuffle-line"></i> Sorprendimi</button>
             </section>
             <section class="rail-sec">
               <div class="rail-h-row"><h3 class="rail-h"><i class="ri-lightbulb-flash-line"></i> Lo sapevi?</h3></div>

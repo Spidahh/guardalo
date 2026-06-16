@@ -785,7 +785,6 @@ html[data-theme="light"] { --red: #d6452b; }
 .rail-times a i { color: var(--gold); font-size: 18px; transition: color .15s; }
 .rail-times a:hover { border-color: var(--red); color: var(--red); }
 .rail-times a:hover i { color: var(--red); }
-.rail-surprise { width: 100%; justify-content: center; margin-top: 13px; font-size: 15px; padding: 13px 20px; }
 .rail-facts { display: flex; flex-direction: column; gap: 14px; }
 .rail-fact { position: relative; font-size: 14px; line-height: 1.55; color: var(--ink-soft); margin: 0; padding-left: 16px; }
 .rail-fact::before { content: ''; position: absolute; left: 0; top: 7px; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
