@@ -1008,11 +1008,22 @@
           <button data-aact="hero" data-slug="${esc(t.id)}" class="amr-hero ${hero === t.id ? 'on' : ''}" title="Immagine hero del genere"><i class="ri-image-line"></i></button>
           <button data-aact="rm" data-slug="${esc(t.id)}" class="amr-rm" title="Togli dal genere"><i class="ri-close-line"></i></button>
         </li>`).join('');
+      const path = PATHS.find(p => p.id === sel) || {};
+      const pf = (k, label, ta) => `<label class="ah-field"><span>${esc(label)}</span>${ta ? `<textarea data-pset="${k}" rows="2">${esc(path[k] || '')}</textarea>` : `<input data-pset="${k}" value="${esc(path[k] || '')}" autocomplete="off">`}</label>`;
+      const metaBlock = `<details class="admin-meta">
+        <summary><i class="ri-edit-2-line"></i> Testi e stile di «${esc(nameOf(sel))}»</summary>
+        <div class="ah-two">${pf('title', 'Titolo della sezione')}${pf('icon', 'Icona (es. ri-sword-line)')}</div>
+        ${pf('blurb', 'Frase breve (mostrata nella griglia)')}
+        ${pf('about', 'Descrizione (in cima alla pagina)', true)}
+        ${pf('curiosita', '«Lo sapevi?» della sezione', true)}
+        <div class="ah-two">${pf('accent', 'Colore accento (es. #b4542c)')}<label class="ah-field"><span>Anteprima colore</span><span class="ah-swatch" style="background:${esc(path.accent || '#ccc')}"></span></label></div>
+      </details>`;
       return `
         <div class="admin-pick">
-          <label>Genere: <select id="adminGenSel">${opts}</select></label>
+          <label>Sezione: <select id="adminGenSel">${opts}</select></label>
           <span class="admin-count">${mem.length} titoli · <b class="t-e">${this._admCnt.e} Essenziali</b> · <b class="t-c">${this._admCnt.c} Consigliati</b> · <b class="t-d">${this._admCnt.d} Da scoprire</b> · hero: <b>${esc(hero ? (BY_ID.get(hero)?.title || hero) : '—')}</b></span>
         </div>
+        ${metaBlock}
         <p class="admin-hint">Clicca <b>E</b>/<b>C</b>/<b>D</b> per mettere ogni titolo in Essenziali, Consigliati o Da scoprire <i>in questa sezione</i>. <i class="ri-image-line"></i> = immagine hero · <i class="ri-close-line"></i> = togli.</p>
         <div class="admin-addrow">
           <input id="adminAddMember" placeholder="Aggiungi un titolo a «${esc(nameOf(sel))}»…" autocomplete="off">
@@ -1115,6 +1126,7 @@
     adminInput(e) {
       const el = e.target;
       if (el.dataset && el.dataset.hset) { this.adminHomeSet(el.dataset.hset, el.value); return; }   // campo home: non ri-renderizzo (tengo il focus)
+      if (el.dataset && el.dataset.pset) { const p = PATHS.find(x => x.id === this.adminGen); if (p) { p[el.dataset.pset] = el.value; this.adminDirty = true; } return; }   // testo sezione
       if (el.id === 'adminAddMember') { const s = document.getElementById('adminAddSug'); if (s) s.innerHTML = this.adminMemberSug(el.value.toLowerCase().trim()); }
       else if (el.id === 'adminTSearch') { this.adminTQ = el.value; const l = document.getElementById('adminTList'); if (l) l.innerHTML = this.adminTitleList(el.value.toLowerCase().trim()); }
     }
@@ -1138,11 +1150,15 @@
       this.adminDownload('user-ranking.json', JSON.stringify(ranking, null, 2));
       const home = window.GUARDALO.home || {};
       this.adminDownload('home.json', JSON.stringify({ _nota: 'Contenuti home + liste tempo. Dopo modifiche: npm run gen.', ...home }, null, 2));
+      // paths.json — testi/stile delle sezioni (solo meta; i titoli stanno in categories.members)
+      const KEEP = ['id', 'title', 'tagline', 'icon', 'accent', 'blurb', 'about', 'curiosita'];
+      const pathsOut = (window.GUARDALO.paths || []).map(p => { const o = {}; KEEP.forEach(k => { if (p[k] != null) o[k] = p[k]; }); o.levels = []; return o; });
+      this.adminDownload('paths.json', JSON.stringify(pathsOut, null, 2));
       let extra = '';
       if (this.adminPending && this.adminPending.length) { this.adminDownload('seed-da-aggiungere.json', JSON.stringify(this.adminPending, null, 2)); extra = ' + seed-da-aggiungere.json'; }
       this.adminDirty = false;
       this.adminRerender();
-      this.toast(`✓ Scaricati categories.json, user-ranking.json e home.json${extra}. Mettili in editorial/ e fai npm run gen.`, 'ok');
+      this.toast(`✓ Scaricati categories.json, user-ranking.json, home.json e paths.json${extra}. Mettili in editorial/ e fai npm run gen.`, 'ok');
     }
     adminDownload(name, text) {
       const blob = new Blob([text + '\n'], { type: 'application/json' });

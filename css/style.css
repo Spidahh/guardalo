@@ -953,3 +953,11 @@ a.bento-tile, button.bento-tile { cursor: pointer; }
 .ah-facts { display: flex; flex-direction: column; gap: 8px; }
 .ah-row { display: flex; gap: 8px; align-items: flex-start; }
 .ah-row textarea { flex: 1; padding: 9px 12px; border-radius: 9px; border: 1px solid var(--line-2); background: var(--surface); color: var(--ink); font: inherit; font-size: 14px; resize: vertical; }
+
+/* blocco testi sezione (generi/percorsi) nel pannello */
+.admin-meta { background: var(--surface); border-radius: 11px; padding: 4px 14px; margin-bottom: 16px; }
+.admin-meta summary { cursor: pointer; font-weight: 600; font-size: 14px; padding: 9px 0; color: var(--accent); list-style: none; display: flex; align-items: center; gap: 7px; }
+.admin-meta summary::-webkit-details-marker { display: none; }
+.admin-meta[open] summary { border-bottom: 1px solid var(--line); margin-bottom: 12px; }
+.admin-meta .ah-field input, .admin-meta .ah-field textarea { background: var(--bg); }
+.ah-swatch { display: block; height: 38px; border-radius: 9px; border: 1px solid var(--line-2); }
