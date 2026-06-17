@@ -214,12 +214,10 @@
     }
     updateUserChrome() {
       const chip = $('#userChip'), login = $('#loginBtn'), logout = $('#logoutBtn'), badge = $('#adminBadge');
-      if (this.user) {
-        chip.hidden = false; chip.textContent = this.user.displayName || this.user.email;
-        login.hidden = true; logout.hidden = false;
-      } else {
-        chip.hidden = true; login.hidden = false; logout.hidden = true;
-      }
+      // null-guard: se un elemento manca NON deve far saltare le righe sotto (la voce «Gestione»).
+      if (chip) { chip.hidden = !this.user; if (this.user) chip.textContent = this.user.displayName || this.user.email; }
+      if (login) login.hidden = !!this.user;
+      if (logout) logout.hidden = !this.user;
       if (badge) badge.hidden = !this.isAdmin;
       const adminLink = $('#sideAdmin'); if (adminLink) adminLink.hidden = !this.isAdmin;
       const profLink = $('#sideProfile'); if (profLink) profLink.hidden = !this.user;
@@ -316,6 +314,9 @@
       const app = $('#app');
       app.innerHTML = html;
       document.querySelectorAll('.side-nav a').forEach(a => { const on = a.dataset.route === active; a.classList.toggle('active', on); on ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current'); });
+      // ribadisce la visibilità di Gestione/Profilo a ogni navigazione (robustezza)
+      const sa = $('#sideAdmin'); if (sa) sa.hidden = !this.isAdmin;
+      const sp = $('#sideProfile'); if (sp) sp.hidden = !this.user;
       window.scrollTo(0, 0);
       this.setMeta(seg, arg);
       this.afterRender(seg);
