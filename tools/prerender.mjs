@@ -37,6 +37,11 @@ const CAT_MEMBERS = CAT.members || {};
 if (!GENRE_IDS.length || !Object.keys(CAT_MEMBERS).length) throw new Error('prerender: manca data.categories — esegui `npm run gen`');
 // titoli di una sezione (genere o percorso): la lista curata in categories.members. FONTE UNICA.
 const sectionTitles = p => (CAT_MEMBERS[p.id] || []).map(s => BY_ID.get(s)).filter(Boolean);
+const HOME = data.home || {};
+const byId = new Map(PATHS.map(p => [p.id, p]));
+const sectionOf = id => GENRE_IDS.find(g => (CAT_MEMBERS[g] || []).includes(id)) || null;   // primo genere del titolo
+const crumb = items => ({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items.map((it, i) => ({ '@type': 'ListItem', position: i + 1, name: it.name, item: SITE + it.url })) });
+const WEBSITE = { '@context': 'https://schema.org', '@type': 'WebSite', name: 'GUARDALO', url: SITE + '/', description: 'I migliori anime di ogni genere, scelti e spiegati: perché guardarli, da dove iniziare e dove vederli.' };
 
 const tmpl = await readFile(join(ROOT, 'index.html'), 'utf8');
 
@@ -48,7 +53,8 @@ function page({ urlPath, title, desc, ogImage, jsonld, content }) {
   h = h.replace(/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${esc(desc)}">`);
   if (ogImage) h = h.replace(/<meta property="og:image" content="[^"]*">/, `<meta property="og:image" content="${esc(ogImage)}">`);
   const canon = `<link rel="canonical" href="${SITE}${urlPath}">`;
-  const ld = jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld)}</script>` : '';
+  const ldArr = jsonld ? (Array.isArray(jsonld) ? jsonld : [jsonld]) : [];
+  const ld = ldArr.map(o => `<script type="application/ld+json">${JSON.stringify(o)}</script>`).join('');
   h = h.replace('</head>', `${canon}${ld}\n</head>`);
   h = h.replace('<main id="app" class="app"></main>', `<main id="app" class="app">${content}</main>`);
   return h;
@@ -74,13 +80,15 @@ for (const t of TITLES) {
     ${tips ? `<h2>Dritte per la visione</h2><ul>${tips}</ul>` : ''}
     <p><a href="/">GUARDALO — la guida agli anime</a></p>
   </article>`;
-  const jsonld = {
+  const titleLD = {
     '@context': 'https://schema.org', '@type': t.typeLabel === 'Film' ? 'Movie' : 'TVSeries',
     name: t.title, image: t.coverImage || undefined, description: t.hook || undefined,
     ...(t.year ? { datePublished: String(t.year) } : {}), genre: (t.genres || []).map(itGenre),
     ...(t.studios && t.studios.length ? { productionCompany: t.studios.map(s => ({ '@type': 'Organization', name: s })) } : {}),
     ...(t.score10 ? { aggregateRating: { '@type': 'AggregateRating', ratingValue: t.score10, bestRating: 10, worstRating: 1, ratingCount: Math.max(1, t.popularity || 1) } } : {}),
   };
+  const sg = sectionOf(t.id);
+  const jsonld = [titleLD, crumb([{ name: 'Home', url: '/' }, ...(sg ? [{ name: byId.get(sg)?.title || sg, url: '/p/' + sg }] : []), { name: t.title, url: '/t/' + t.id }])];
   const url = `/t/${t.id}`;
   await emit(url, page({ urlPath: url, title: `${t.title}${t.year ? ` (${t.year})` : ''} — dove vederlo e da dove iniziare · GUARDALO`, desc: clip(t.hook || `${t.title}: scheda, dove vederlo, quanto dura.`), ogImage: t.coverImage, jsonld, content }));
   urls.push(url);
@@ -99,7 +107,8 @@ for (const p of PATHS) {
   </section>`;
   const url = `/p/${p.id}`;
   const isGenre = GENRE_IDS.includes(p.id);
-  await emit(url, page({ urlPath: url, title: `${p.title} — ${isGenre ? 'i migliori anime del genere' : 'percorso'} · GUARDALO`, desc: clip(p.about || p.blurb), content }));
+  const bc = crumb([{ name: 'Home', url: '/' }, { name: isGenre ? 'Generi' : 'Percorsi', url: isGenre ? '/generi' : '/percorsi' }, { name: p.title, url }]);
+  await emit(url, page({ urlPath: url, title: `${p.title} — ${isGenre ? 'i migliori anime del genere' : 'percorso'} · GUARDALO`, desc: clip(p.about || p.blurb), jsonld: bc, content }));
   urls.push(url);
 }
 
@@ -108,11 +117,23 @@ const indexPage = (slug, h1, sub, list) => {
   const items = list.map(p => `<li><a href="/p/${p.id}">${esc(p.title)}</a> — ${esc(p.blurb || p.tagline || '')}</li>`).join('');
   return page({ urlPath: `/${slug}`, title: `${h1} · GUARDALO`, desc: sub, content: `<section><h1>${esc(h1)}</h1><p>${esc(sub)}</p><ul>${items}</ul></section>` });
 };
-const GENRE_LIST = GENRE_IDS.map(id => PATHS.find(p => p.id === id)).filter(Boolean);
-const PERCORSI_LIST = ['da-zero-a-otaku', 'capolavori', 'azione', 'antieroi', 'il-canone', 'chicche-e-deep-cut'].map(id => PATHS.find(p => p.id === id)).filter(Boolean);
+const GENRE_LIST = GENRE_IDS.map(id => byId.get(id)).filter(Boolean);
+const PERCORSI_LIST = (CAT.percorsoOrder || []).map(id => byId.get(id)).filter(Boolean);
 await emit('/generi', indexPage('generi', 'Generi', 'Tutti i generi: azione, mindfuck, horror, sci-fi, isekai e altro.', GENRE_LIST));
 await emit('/percorsi', indexPage('percorsi', 'Percorsi', 'Viaggi tematici curati: da dove iniziare, i capolavori, gli antieroi e altro.', PERCORSI_LIST));
 urls.push('/generi', '/percorsi');
+
+// ── HOME (/) — prima NON era pre-renderizzata (i crawler la vedevano vuota) ──
+{
+  const secList = (label, list) => `<h2>${label}</h2><ul>${list.map(p => `<li><a href="/p/${p.id}">${esc(p.title)}</a>${p.blurb ? ` — ${esc(clip(p.blurb, 90))}` : ''}</li>`).join('')}</ul>`;
+  const homeContent = `<section>
+    <h1>${esc((HOME.hero && HOME.hero.title) || 'GUARDALO — la guida agli anime')}</h1>
+    <p>${esc((HOME.hero && HOME.hero.sub) || '')}</p>
+    ${secList('Generi', GENRE_LIST)}
+    ${secList('Percorsi', PERCORSI_LIST)}
+  </section>`;
+  await emit('/', page({ urlPath: '/', title: 'GUARDALO — La guida agli anime', desc: 'I migliori anime di ogni genere, scelti e spiegati senza fronzoli: perché guardarli, da dove iniziare, quanto ti impegnano e dove vederli. Niente liste a caso.', jsonld: WEBSITE, content: homeContent }));
+}
 
 // ── pagine statiche (Chi sono / Privacy / Cookie) ────────────────────────
 const docs = [
