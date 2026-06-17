@@ -56,7 +56,7 @@ function page({ urlPath, title, desc, ogImage, jsonld, content }) {
   const ldArr = jsonld ? (Array.isArray(jsonld) ? jsonld : [jsonld]) : [];
   const ld = ldArr.map(o => `<script type="application/ld+json">${JSON.stringify(o)}</script>`).join('');
   h = h.replace('</head>', `${canon}${ld}\n</head>`);
-  h = h.replace('<main id="app" class="app"></main>', `<main id="app" class="app">${content}</main>`);
+  h = h.replace(/<main id="app"[^>]*><\/main>/, `<main id="app" class="app" tabindex="-1">${content}</main>`);
   return h;
 }
 async function emit(urlPath, html) {
