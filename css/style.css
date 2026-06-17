@@ -1013,3 +1013,9 @@ a.bento-tile, button.bento-tile { cursor: pointer; }
 .user-chip { cursor: pointer; }
 .user-chip:hover { color: var(--accent); }
 @media (max-width: 560px) { .prof-stats { grid-template-columns: repeat(2, 1fr); } .pgen-name { width: 92px; } }
+
+/* bottone Gestione nella barra in alto (admin) — sempre visibile, secondo accesso al pannello */
+.topbar-admin { display: inline-flex; align-items: center; gap: 6px; padding: 8px 13px; border-radius: 10px; background: var(--accent); color: #fff; font-weight: 700; font-size: 14px; white-space: nowrap; }
+.topbar-admin:hover { filter: brightness(1.08); }
+.topbar-admin i { font-size: 17px; }
+@media (max-width: 560px) { .topbar-admin span { display: none; } .topbar-admin { padding: 8px; } }

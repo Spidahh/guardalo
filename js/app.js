@@ -220,6 +220,7 @@
       if (logout) logout.hidden = !this.user;
       if (badge) badge.hidden = !this.isAdmin;
       const adminLink = $('#sideAdmin'); if (adminLink) adminLink.hidden = !this.isAdmin;
+      const topAdmin = $('#topAdmin'); if (topAdmin) topAdmin.hidden = !this.isAdmin;
       const profLink = $('#sideProfile'); if (profLink) profLink.hidden = !this.user;
       // se sono su pannello/profilo quando l'auth si risolve, ridisegno (gate → contenuto)
       if (location.pathname === '/admin' || location.pathname === '/profilo') this.route();
@@ -316,6 +317,7 @@
       document.querySelectorAll('.side-nav a').forEach(a => { const on = a.dataset.route === active; a.classList.toggle('active', on); on ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current'); });
       // ribadisce la visibilità di Gestione/Profilo a ogni navigazione (robustezza)
       const sa = $('#sideAdmin'); if (sa) sa.hidden = !this.isAdmin;
+      const ta = $('#topAdmin'); if (ta) ta.hidden = !this.isAdmin;
       const sp = $('#sideProfile'); if (sp) sp.hidden = !this.user;
       window.scrollTo(0, 0);
       this.setMeta(seg, arg);
