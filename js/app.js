@@ -222,8 +222,9 @@
       }
       if (badge) badge.hidden = !this.isAdmin;
       const adminLink = $('#sideAdmin'); if (adminLink) adminLink.hidden = !this.isAdmin;
-      // se sono sul pannello quando l'auth si risolve, ridisegno (gate → pannello)
-      if (location.pathname === '/admin') this.route();
+      const profLink = $('#sideProfile'); if (profLink) profLink.hidden = !this.user;
+      // se sono su pannello/profilo quando l'auth si risolve, ridisegno (gate → contenuto)
+      if (location.pathname === '/admin' || location.pathname === '/profilo') this.route();
     }
 
     // ── CHROME (nav, tema, ricerca, login) ────────────────────────────────────
@@ -260,6 +261,7 @@
       $('#logoutBtn').addEventListener('click', () => {
         if (window.auth) window.auth.signOut().then(() => this.toast('Sei uscito.', 'muted')).catch(() => {});
       });
+      $('#userChip')?.addEventListener('click', () => this.go('/profilo'));
 
       // sidebar mobile
       const sb = document.getElementById('sidebar');
@@ -304,6 +306,7 @@
       else if (seg === 'esplora') { html = this.viewEsplora(); active = 'esplora'; }
       else if (seg === 'tempo' && arg) { html = this.viewTempo(arg); active = 'tempo-' + arg; }
       else if (seg === 'lista') { html = this.viewLista(); active = 'lista'; }
+      else if (seg === 'profilo') { html = this.viewProfilo(); active = 'profilo'; }
       else if (seg === 'admin') { html = this.viewAdmin(); active = 'admin'; }
       else if (seg === 'info') { html = this.viewInfo(); active = ''; }
       else if (seg === 'privacy') { html = this.viewPrivacy(); active = ''; }
@@ -386,6 +389,11 @@
     }
     afterRender(seg) {
       if (seg === 'admin') { this.afterRenderAdmin(); return; }
+      if (seg === 'profilo') {
+        document.getElementById('profLogin')?.addEventListener('click', () => $('#loginModal').classList.add('open'));
+        document.getElementById('profLogout')?.addEventListener('click', () => { if (window.auth) window.auth.signOut().then(() => { this.toast('Sei uscito.', 'muted'); this.go('/'); }).catch(() => {}); });
+        return;
+      }
       const howClose = document.getElementById('howClose');
       if (howClose) howClose.addEventListener('click', () => {
         try { localStorage.setItem('guardalo_intro', '1'); } catch (e) {}
@@ -533,7 +541,7 @@
               ${heroImg ? `<div class="home-hero-art"><img src="${esc(heroImg.bannerImage || cover(heroImg))}" alt="" loading="eager" onload="this.classList.add('ld')" onerror="this.classList.add('ld')"></div>` : ''}
               <span class="home-hero-veil"></span>
               <div class="home-hero-in">
-                <span class="hh-kicker">${esc(H.kicker || '')}</span>
+                <span class="hh-kicker">${this.user ? `<b>Ciao, ${esc((this.user.displayName || (this.user.email || '').split('@')[0]).split(' ')[0])}</b> · ` : ''}${esc(H.kicker || '')}</span>
                 <h1 class="hh-title">${esc(H.title || '')}</h1>
                 <p class="hh-sub">${esc(H.sub || '')}</p>
                 <div class="hh-cta">
@@ -866,6 +874,49 @@
         ${later.length ? grid(later) : empty('ri-bookmark-line', 'Niente ancora in lista. Sfoglia i percorsi e salva cosa ti incuriosisce.')}
         <div class="sec-head sub"><h2><i class="ri-check-double-line"></i> Visti</h2></div>
         ${watched.length ? grid(watched) : empty('ri-check-double-line', 'Segna i titoli che hai già visto.')}
+      </section>`;
+    }
+
+    // ── VISTA: PROFILO ───────────────────────────────────────────────────────────
+    viewProfilo() {
+      if (!this.user) {
+        return `<section class="wrap prof-gate">
+          <span class="prof-gate-ic"><i class="ri-user-3-line"></i></span>
+          <h1>Il tuo profilo</h1>
+          <p>Accedi per ritrovare la tua lista su ogni dispositivo e vedere le tue statistiche.</p>
+          <button class="btn-red" id="profLogin"><i class="ri-google-fill"></i> Accedi con Google</button>
+        </section>`;
+      }
+      const watched = Object.keys(this.watched).map(id => BY_ID.get(id)).filter(Boolean);
+      const later = Object.keys(this.toWatch).map(id => BY_ID.get(id)).filter(Boolean);
+      const hours = Math.round(watched.reduce((s, t) => s + (t.coreMinutes || 0), 0) / 60);
+      const gc = {};
+      watched.forEach(t => (t.genres || []).forEach(g => gc[g] = (gc[g] || 0) + 1));
+      const topG = Object.entries(gc).sort((a, b) => b[1] - a[1]).slice(0, 6);
+      const maxG = topG.length ? topG[0][1] : 1;
+      const name = this.user.displayName || (this.user.email || 'Tu').split('@')[0];
+      const photo = this.user.photoURL;
+      const avatar = photo ? `<img class="prof-avatar" src="${esc(photo)}" alt="" referrerpolicy="no-referrer" onerror="this.style.display='none'">` : `<span class="prof-avatar prof-avatar-ph">${esc((name[0] || 'U').toUpperCase())}</span>`;
+      const best = watched.slice().sort((a, b) => (b.score10 || 0) - (a.score10 || 0)).slice(0, 12);
+      return `
+      <section class="wrap profilo">
+        <div class="prof-head">
+          ${avatar}
+          <div class="prof-id"><h1>Ciao, ${esc(name)}</h1><span>${esc(this.user.email || '')}</span></div>
+          <button class="btn-ghost prof-logout" id="profLogout"><i class="ri-logout-box-r-line"></i> Esci</button>
+        </div>
+        <div class="prof-stats">
+          <div class="pstat"><b>${watched.length}</b><span>visti</span></div>
+          <div class="pstat"><b>${later.length}</b><span>da vedere</span></div>
+          <div class="pstat"><b>${hours}h</b><span>guardate</span></div>
+          <div class="pstat"><b>${Object.keys(gc).length}</b><span>generi</span></div>
+        </div>
+        ${topG.length ? `<div class="sec-head sub"><h2><i class="ri-shapes-line"></i> I tuoi generi preferiti</h2></div>
+          <div class="prof-genres">${topG.map(([g, n]) => `<div class="pgen"><span class="pgen-name">${esc(itGenre(g))}</span><span class="pgen-bar"><span style="width:${Math.round(n / maxG * 100)}%"></span></span><span class="pgen-n">${n}</span></div>`).join('')}</div>` : ''}
+        ${watched.length
+          ? `<div class="sec-head sub"><h2><i class="ri-check-double-line"></i> I tuoi visti, dal migliore</h2><a class="sec-count sd-link" href="/lista">tutta la lista <i class="ri-arrow-right-line"></i></a></div>
+             <div class="grid">${best.map(t => this.card(t)).join('')}</div>`
+          : `<div class="empty"><i class="ri-compass-3-line"></i><p>Non hai ancora segnato titoli come visti. Esplora e segna cosa hai guardato!</p><a class="btn-ghost" href="/esplora">Esplora</a></div>`}
       </section>`;
     }
 

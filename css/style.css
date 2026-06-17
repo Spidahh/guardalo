@@ -987,3 +987,29 @@ a.bento-tile, button.bento-tile { cursor: pointer; }
 .admin-pend li img { width: 28px; height: 40px; object-fit: cover; border-radius: 3px; }
 .admin-pend li > span { flex: 1; display: flex; align-items: center; gap: 8px; }
 .apend-id { font-size: 11px; color: var(--ink-faint); font-weight: 500; }
+
+/* ── PROFILO UTENTE ─────────────────────────────────────────────────────── */
+.prof-gate { text-align: center; padding: 56px 20px; }
+.prof-gate-ic { font-size: 42px; color: var(--ink-faint); }
+.prof-gate h1 { margin: 10px 0; }
+.profilo { padding-bottom: 40px; }
+.prof-head { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 22px; }
+.prof-avatar { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.prof-avatar-ph { display: grid; place-items: center; background: var(--accent); color: #fff; font-size: 28px; font-weight: 700; }
+.prof-id { flex: 1; min-width: 160px; }
+.prof-id h1 { margin: 0; font-size: 26px; }
+.prof-id span { color: var(--ink-soft); font-size: 14px; }
+.prof-logout { white-space: nowrap; }
+.prof-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px; }
+.pstat { background: var(--surface); border-radius: 12px; padding: 16px; text-align: center; }
+.pstat b { display: block; font-size: 28px; font-weight: 800; line-height: 1.1; }
+.pstat span { font-size: 13px; color: var(--ink-soft); }
+.prof-genres { display: flex; flex-direction: column; gap: 9px; max-width: 540px; margin-bottom: 8px; }
+.pgen { display: flex; align-items: center; gap: 12px; }
+.pgen-name { width: 130px; font-weight: 600; font-size: 14px; }
+.pgen-bar { flex: 1; height: 9px; background: var(--surface-2); border-radius: 5px; overflow: hidden; }
+.pgen-bar span { display: block; height: 100%; background: var(--accent); border-radius: 5px; }
+.pgen-n { width: 24px; text-align: right; color: var(--ink-soft); font-size: 13px; }
+.user-chip { cursor: pointer; }
+.user-chip:hover { color: var(--accent); }
+@media (max-width: 560px) { .prof-stats { grid-template-columns: repeat(2, 1fr); } .pgen-name { width: 92px; } }
