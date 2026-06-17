@@ -970,3 +970,13 @@ a.bento-tile, button.bento-tile { cursor: pointer; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
 }
+
+/* controlli struttura (riordina/nuova/elimina sezione) nel pannello */
+.admin-struct { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
+.admin-struct-lbl { font-size: 12px; color: var(--ink-soft); font-weight: 600; margin-right: 4px; }
+.admin-struct > button { padding: 6px 11px; border-radius: 8px; font-size: 13px; color: var(--ink-soft); border: 1px solid var(--line); background: var(--surface); display: inline-flex; align-items: center; gap: 5px; }
+.admin-struct > button:hover { border-color: var(--accent); color: var(--accent); }
+.admin-struct-del { margin-left: auto; }
+.admin-newsec { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; padding: 12px; background: var(--surface); border-radius: 10px; }
+.admin-newsec input { flex: 1; min-width: 180px; padding: 9px 12px; border-radius: 9px; border: 1px solid var(--line-2); background: var(--bg); color: var(--ink); }
+.admin-newsec select { padding: 9px 12px; border-radius: 9px; border: 1px solid var(--line-2); background: var(--bg); color: var(--ink); }

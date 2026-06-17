@@ -1004,6 +1004,18 @@
           <label>Sezione: <select id="adminGenSel">${opts}</select></label>
           <span class="admin-count">${mem.length} titoli · <b class="t-e">${this._admCnt.e} Essenziali</b> · <b class="t-c">${this._admCnt.c} Consigliati</b> · <b class="t-d">${this._admCnt.d} Da scoprire</b> · hero: <b>${esc(hero ? (BY_ID.get(hero)?.title || hero) : '—')}</b></span>
         </div>
+        <div class="admin-struct">
+          <span class="admin-struct-lbl">Struttura:</span>
+          <button data-aact="secup" title="Sposta su nella griglia"><i class="ri-arrow-up-line"></i></button>
+          <button data-aact="secdown" title="Sposta giù nella griglia"><i class="ri-arrow-down-line"></i></button>
+          <button class="ah-add" data-aact="secnew"><i class="ri-add-line"></i> Nuova sezione</button>
+          <button class="amr-rm admin-struct-del" data-aact="secdel"><i class="ri-delete-bin-line"></i> Elimina «${esc(nameOf(sel))}»</button>
+        </div>
+        ${this.adminNewSec ? `<div class="admin-newsec">
+          <input id="adminNewSecTitle" placeholder="Nome della nuova sezione (es. Sportivo)" autocomplete="off">
+          <select id="adminNewSecKind"><option value="genere">Genere</option><option value="percorso">Percorso</option></select>
+          <button class="btn-red" data-aact="seccreate">Crea</button>
+        </div>` : ''}
         ${metaBlock}
         <p class="admin-hint">Clicca <b>E</b>/<b>C</b>/<b>D</b> per mettere ogni titolo in Essenziali, Consigliati o Da scoprire <i>in questa sezione</i>. <i class="ri-image-line"></i> = immagine hero · <i class="ri-close-line"></i> = togli.</p>
         <div class="admin-addrow">
@@ -1100,6 +1112,27 @@
       else if (act === 'rmtile') { window.GUARDALO.home.tiles.splice(+a.dataset.i, 1); }
       else if (act === 'addfact') { const h = window.GUARDALO.home; (h.facts = h.facts || []).push('Nuova curiosità…'); }
       else if (act === 'rmfact') { window.GUARDALO.home.facts.splice(+a.dataset.i, 1); }
+      else if (act === 'secup' || act === 'secdown') { const c = window.GUARDALO.categories; const ord = c.genreOrder.includes(gen) ? c.genreOrder : c.percorsoOrder; const i = ord.indexOf(gen), j = i + (act === 'secup' ? -1 : 1); if (i >= 0 && j >= 0 && j < ord.length) [ord[i], ord[j]] = [ord[j], ord[i]]; }
+      else if (act === 'secnew') { this.adminNewSec = !this.adminNewSec; this.adminDirty = false; }
+      else if (act === 'seccreate') {
+        const ti = document.getElementById('adminNewSecTitle'), kind = document.getElementById('adminNewSecKind').value;
+        const title = (ti.value || '').trim();
+        const id = title.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+        const c = window.GUARDALO.categories;
+        if (!id || c.members[id]) { this.toast('Nome non valido o sezione già esistente.', 'muted'); return; }
+        (kind === 'genere' ? c.genreOrder : c.percorsoOrder).push(id);
+        c.members[id] = []; (c.tiers = c.tiers || {})[id] = {};
+        PATHS.push({ id, title, blurb: '', about: '', curiosita: '', icon: 'ri-shapes-line', accent: '#b4542c', levels: [] });
+        this.adminGen = id; this.adminNewSec = false; this.toast('Sezione «' + title + '» creata. Ricarica per vederla nelle griglie.', 'ok');
+      }
+      else if (act === 'secdel') {
+        const c = window.GUARDALO.categories, name = (PATHS.find(p => p.id === gen) || {}).title || gen;
+        if (!confirm('Eliminare la sezione «' + name + '»? I titoli restano nel catalogo, ma la sezione sparisce.')) return;
+        [c.genreOrder, c.percorsoOrder].forEach(ord => { const i = ord.indexOf(gen); if (i >= 0) ord.splice(i, 1); });
+        delete c.members[gen]; if (c.tiers) delete c.tiers[gen]; if (c.hero) delete c.hero[gen];
+        const pi = PATHS.findIndex(p => p.id === gen); if (pi >= 0) PATHS.splice(pi, 1);
+        this.adminGen = null; this.toast('Sezione eliminata.', 'muted');
+      }
       else return;
       if (act !== 'export' && act !== 'pick') this.adminDirty = true;
       this.adminRerender();
