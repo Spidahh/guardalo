@@ -312,7 +312,7 @@
 
       const app = $('#app');
       app.innerHTML = html;
-      document.querySelectorAll('.side-nav a').forEach(a => a.classList.toggle('active', a.dataset.route === active));
+      document.querySelectorAll('.side-nav a').forEach(a => { const on = a.dataset.route === active; a.classList.toggle('active', on); on ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current'); });
       window.scrollTo(0, 0);
       this.setMeta(seg, arg);
       this.afterRender(seg);
