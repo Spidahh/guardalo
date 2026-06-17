@@ -1,6 +1,6 @@
 {
   "name": "guardalo",
-  "version": "12.20.0",
+  "version": "12.21.0",
   "description": "GUARDALO — guida agli anime: percorsi e generi curati, schede senza fronzoli. Dati reali da AniList, hosting statico gratuito.",
   "type": "module",
   "private": true,
