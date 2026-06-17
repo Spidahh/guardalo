@@ -1062,17 +1062,24 @@
         <div class="admin-te-genres"><span class="admin-te-lbl">Percorsi:</span><div class="agchips">${percorsi}</div></div>`;
     }
     adminAggiungi() {
-      const pend = (this.adminPending || []).map((p, i) => `<li>${esc(p.title)}${p.year ? ` (${p.year})` : ''} <button data-aact="rmpend" data-i="${i}"><i class="ri-close-line"></i></button></li>`).join('');
+      const pend = (this.adminPending || []).map((p, i) => `<li>${p.coverImage ? `<img src="${esc(p.coverImage)}" alt="">` : ''}<span>${esc(p.title)}${p.year ? ` (${p.year})` : ''}${p.anilistId ? ` <span class="apend-id">AniList #${p.anilistId}</span>` : ''}</span> <button data-aact="rmpend" data-i="${i}"><i class="ri-close-line"></i></button></li>`).join('');
       const has = this.adminPending && this.adminPending.length;
       return `
-        <p class="admin-hint">Per aggiungere un titolo <b>con lo stesso criterio di adesso</b> (fatti reali da AniList, niente inventato) si aggiunge al seed e si rilancia la build. Qui prepari la coda; l'export crea il file da usare.</p>
-        <div class="admin-addtitle">
-          <input id="adminNewTitle" placeholder="Titolo (es. Frieren)" autocomplete="off">
-          <input id="adminNewYear" type="number" placeholder="Anno" min="1960" max="2030">
-          <button class="btn-red" data-aact="addpend"><i class="ri-add-line"></i> In coda</button>
+        <p class="admin-hint">Cerca il titolo su <b>AniList</b> (dati reali, stesso criterio di adesso), aggiungilo alla coda, poi esporta.</p>
+        <div class="admin-addrow">
+          <input id="adminAniSearch" placeholder="Cerca un anime su AniList… (es. Frieren)" autocomplete="off">
+          <div id="adminAniSug" class="admin-sug ani-sug"></div>
         </div>
         <ul class="admin-pend">${pend || '<li class="amr-empty">Nessun titolo in coda.</li>'}</ul>
-        ${has ? `<p class="admin-hint">Dopo l'export: aggiungi le voci a <code>tools/seed-titles.json</code>, poi <code>npm run map &amp;&amp; npm run fetch &amp;&amp; npm run gen</code>, infine scrivi la scheda in <code>editorial/titles.json</code>.</p>` : ''}`;
+        ${has ? `<p class="admin-hint">Dopo l'export (<code>seed-da-aggiungere.json</code>): metti gli id in <code>tools/seed-titles.json</code> + <code>MANUAL_MAP</code>, poi <code>npm run fetch &amp;&amp; npm run gen</code>, infine la scheda in <code>editorial/titles.json</code>.</p>` : ''}`;
+    }
+    async adminAniSearch(q) {
+      const query = `query($s:String){Page(perPage:7){media(search:$s,type:ANIME,sort:SEARCH_MATCH){id title{english romaji} startDate{year} format coverImage{medium}}}}`;
+      try {
+        const res = await fetch('https://graphql.anilist.co', { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify({ query, variables: { s: q } }) });
+        const j = await res.json();
+        return (j.data && j.data.Page ? j.data.Page.media : []).map(m => ({ anilistId: m.id, title: m.title.english || m.title.romaji, year: (m.startDate && m.startDate.year) || null, format: m.format, coverImage: (m.coverImage && m.coverImage.medium) || null }));
+      } catch (e) { return null; }
     }
     // ── azioni admin (delega eventi, agganciata in afterRender) ──────────────
     afterRenderAdmin() {
@@ -1108,6 +1115,7 @@
       else if (act === 'togglegen') { const g = a.dataset.gen, ar = this.adminMembersArr(g); if (ar) { const i = ar.indexOf(slug); if (i >= 0) { ar.splice(i, 1); delete tiersOf(g)[slug]; } else { ar.push(slug); tiersOf(g)[slug] = 'd'; } } }
       else if (act === 'addpend') { const ti = document.getElementById('adminNewTitle'), yi = document.getElementById('adminNewYear'); const title = (ti.value || '').trim(); if (!title) return; (this.adminPending = this.adminPending || []).push({ title, year: yi.value ? +yi.value : null }); }
       else if (act === 'rmpend') { this.adminPending.splice(+a.dataset.i, 1); }
+      else if (act === 'addani') { const m = (this._aniResults || [])[+a.dataset.i]; if (m && !(this.adminPending || []).some(p => p.anilistId === m.anilistId)) { (this.adminPending = this.adminPending || []).push(m); this.toast('«' + m.title + '» in coda.', 'ok'); } }
       else if (act === 'addtile') { const h = window.GUARDALO.home; (h.tiles = h.tiles || []).push({ icon: 'ri-star-line', title: 'Nuova scorciatoia', sub: '', link: '/', heroSlug: '' }); }
       else if (act === 'rmtile') { window.GUARDALO.home.tiles.splice(+a.dataset.i, 1); }
       else if (act === 'addfact') { const h = window.GUARDALO.home; (h.facts = h.facts || []).push('Nuova curiosità…'); }
@@ -1143,6 +1151,18 @@
       if (el.dataset && el.dataset.pset) { const p = PATHS.find(x => x.id === this.adminGen); if (p) { p[el.dataset.pset] = el.value; this.adminDirty = true; } return; }   // testo sezione
       if (el.id === 'adminAddMember') { const s = document.getElementById('adminAddSug'); if (s) s.innerHTML = this.adminMemberSug(el.value.toLowerCase().trim()); }
       else if (el.id === 'adminTSearch') { this.adminTQ = el.value; const l = document.getElementById('adminTList'); if (l) l.innerHTML = this.adminTitleList(el.value.toLowerCase().trim()); }
+      else if (el.id === 'adminAniSearch') {
+        const q = el.value.trim(); clearTimeout(this._aniT);
+        const sug = document.getElementById('adminAniSug');
+        if (!q) { if (sug) sug.innerHTML = ''; return; }
+        if (sug) sug.innerHTML = '<span class="admin-hint">cerco su AniList…</span>';
+        this._aniT = setTimeout(async () => {
+          const res = await this.adminAniSearch(q); this._aniResults = res || [];
+          const s2 = document.getElementById('adminAniSug'); if (!s2) return;
+          s2.innerHTML = res === null ? '<span class="admin-hint">errore di rete</span>'
+            : (res.length ? res.map((m, i) => `<button data-aact="addani" data-i="${i}">${m.coverImage ? `<img src="${esc(m.coverImage)}" alt="">` : ''}${esc(m.title)}${m.year ? ` <span>(${m.year})</span>` : ''}</button>`).join('') : '<span class="admin-hint">nessun risultato</span>');
+        }, 400);
+      }
     }
     adminChange(e) {
       const el = e.target;

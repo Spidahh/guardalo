@@ -980,3 +980,10 @@ a.bento-tile, button.bento-tile { cursor: pointer; }
 .admin-newsec { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; padding: 12px; background: var(--surface); border-radius: 10px; }
 .admin-newsec input { flex: 1; min-width: 180px; padding: 9px 12px; border-radius: 9px; border: 1px solid var(--line-2); background: var(--bg); color: var(--ink); }
 .admin-newsec select { padding: 9px 12px; border-radius: 9px; border: 1px solid var(--line-2); background: var(--bg); color: var(--ink); }
+
+/* ricerca AniList dal vivo (tab Aggiungi) */
+.ani-sug button { display: inline-flex; align-items: center; gap: 7px; padding: 5px 9px; }
+.ani-sug button img { width: 24px; height: 34px; object-fit: cover; border-radius: 3px; }
+.admin-pend li img { width: 28px; height: 40px; object-fit: cover; border-radius: 3px; }
+.admin-pend li > span { flex: 1; display: flex; align-items: center; gap: 8px; }
+.apend-id { font-size: 11px; color: var(--ink-faint); font-weight: 500; }
