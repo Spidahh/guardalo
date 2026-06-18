@@ -832,16 +832,11 @@
           ${structInner}` : '';
 
       const streaming = (t.streaming || []);
-      const jwUrl = `https://www.justwatch.com/it/cerca?q=${encodeURIComponent(t.title)}`;
-      // Affiliazione: sostituisci AMAZON_TAG con il tuo id Amazon Associates al lancio.
-      const azUrl = `https://www.amazon.it/s?k=${encodeURIComponent(t.title + ' anime')}&tag=AMAZON_TAG`;
       const streamBody = `
           <p class="t-legal"><span class="legal-pill">solo legale</span></p>
           ${streaming.length
-            ? `<div class="streams">${streaming.map(s => `<a class="stream" href="${esc(s.url)}" target="_blank" rel="noopener nofollow"><i class="ri-external-link-line"></i> ${esc(s.name)}</a>`).join('')}</div>
-               <p class="muted-line">Le piattaforme possono variare per regione. <a href="${esc(jwUrl)}" target="_blank" rel="noopener nofollow">Verifica la disponibilità in Italia (JustWatch) →</a></p>`
-            : `<p class="muted-line">Nessuna piattaforma segnalata da AniList per questa regione. <a href="${esc(jwUrl)}" target="_blank" rel="noopener nofollow">Cerca dove vederlo in Italia (JustWatch) →</a></p>`}
-          <p class="muted-line shop-line"><i class="ri-shopping-bag-line"></i> Manga, Blu-ray e gadget: <a href="${esc(azUrl)}" target="_blank" rel="noopener sponsored nofollow">cerca «${esc(t.title)}» su Amazon →</a></p>`;
+            ? `<div class="streams">${streaming.map(s => `<a class="stream" href="${esc(s.url)}" target="_blank" rel="noopener nofollow"><i class="ri-external-link-line"></i> ${esc(s.name)}</a>`).join('')}</div>`
+            : `<p class="muted-line">Nessuna piattaforma in streaming segnalata al momento.</p>`}`;
 
       const recs = this.recsSections(t);
 
