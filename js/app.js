@@ -271,6 +271,8 @@
       document.addEventListener('click', e => {
         if (e.target.closest('.js-surprise')) { e.preventDefault(); this.surprise(); return; }
         if (e.target.closest('.js-search')) { e.preventDefault(); this.openSearch(); return; }
+        const sh = e.target.closest('.js-share');
+        if (sh) { e.preventDefault(); this.share(sh.dataset.title, sh.dataset.id); return; }
         const b = e.target.closest('.js-watch, .js-later');
         if (b) { e.preventDefault(); e.stopPropagation(); this.toggle(b.dataset.id, b.classList.contains('js-watch') ? 'watched' : 'toWatch'); }
       });
@@ -279,8 +281,11 @@
         if (e.key === 'Escape') { this.closeSearch(); $('#loginModal').classList.remove('open'); }
         if (e.key === '/' && !/^(INPUT|TEXTAREA)$/.test(document.activeElement.tagName)) { e.preventDefault(); this.openSearch(); }
       });
+      const toTop = document.getElementById('toTop');
+      toTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
       window.addEventListener('scroll', () => {
         document.querySelector('.nav')?.classList.toggle('scrolled', window.scrollY > 6);
+        toTop?.classList.toggle('show', window.scrollY > 600);
       }, { passive: true });
     }
     toggleTheme() {
@@ -289,6 +294,15 @@
       const meta = document.querySelector('meta[name="theme-color"]');
       if (meta) meta.content = next === 'light' ? '#f6f1e7' : '#17140f';
       try { localStorage.setItem('guardalo_theme', next); } catch (e) {}
+    }
+    async share(title, id) {
+      const url = location.origin + '/t/' + id;
+      const data = { title: 'GUARDALO — ' + title, text: `${title} — perché guardarlo, da dove iniziare e dove vederlo, su GUARDALO.`, url };
+      try {
+        if (navigator.share) { await navigator.share(data); return; }
+        await navigator.clipboard.writeText(url);
+        this.toast('Link copiato negli appunti.', 'ok');
+      } catch (e) { /* condivisione annullata: nessun messaggio */ }
     }
     openSearch() { const o = $('#searchOverlay'); o.hidden = false; requestAnimationFrame(() => o.classList.add('open')); $('#searchInput').focus(); this.renderSearch(''); }
     closeSearch() { const o = $('#searchOverlay'); o.classList.remove('open'); setTimeout(() => o.hidden = true, 200); $('#searchInput').value = ''; }
@@ -725,7 +739,7 @@
       const w = this.isWatched(id), l = this.isLater(id);
 
       const genres = (t.genres || []).map(g => `<a class="g-chip" href="/cerca/genere/${encodeURIComponent(g)}" title="${esc(GENRE_GLOSS[g] || 'Vedi tutti i ' + itGenre(g))}">${esc(itGenre(g))}</a>`).join('');
-      const tone = (t.tone || []).map(x => `<span class="t-chip">${esc(x)}</span>`).join('');
+      const tone = (t.tone || []).map(x => `<a class="t-chip" href="/cerca/tono/${encodeURIComponent(x)}" title="Altri titoli con atmosfera «${esc(x)}»">${esc(x)}</a>`).join('');
       const tipsHtml = (t.tips && t.tips.length) ? `
             <div class="t-tips">
               <span class="t-tips-h"><i class="ri-lightbulb-flash-line"></i> Dritte per la visione</span>
@@ -780,6 +794,7 @@
             <div class="t-actions">
               <button class="t-btn js-watch ${w ? 'on' : ''}" data-id="${esc(t.id)}"><i class="ri-check-double-line"></i> ${w ? 'Visto' : 'Segna visto'}</button>
               <button class="t-btn ghost js-later ${l ? 'on' : ''}" data-id="${esc(t.id)}"><i class="ri-bookmark-line"></i> ${l ? 'In lista' : 'Da vedere'}</button>
+              <button class="t-btn ghost js-share" data-id="${esc(t.id)}" data-title="${esc(t.title)}"><i class="ri-share-forward-line"></i> Condividi</button>
             </div>
             <div class="t-credits">${credits}</div>
           </aside>
@@ -804,11 +819,11 @@
               ${t.forWho ? `<p class="t-forwho">${esc(t.forWho)}</p>` : ''}
             </div>
 
+            ${streamHtml}
             ${tipsHtml}
 
             <div class="t-genres">${genres}</div>
             ${structHtml}
-            ${streamHtml}
             ${recs}
           </div>
         </div>
@@ -865,6 +880,7 @@
         regista: { label: 'Regia di',   show: v => v, match: t => t.director === value },
         autore:  { label: 'Opera di',   show: v => v, match: t => t.creator === value },
         tag:     { label: 'Tema',       show: v => v, match: t => (t.tags || []).includes(value) },
+        tono:    { label: 'Atmosfera',  show: v => v, match: t => (t.tone || []).includes(value) },
         genere:  { label: 'Genere',     show: v => itGenre(v), match: t => (t.genres || []).includes(value) },
       };
       const f = FIELDS[field];
