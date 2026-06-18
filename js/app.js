@@ -186,9 +186,18 @@
         const w = c.querySelector('.js-watch'); if (w) w.classList.toggle('on', this.isWatched(id));
         const l = c.querySelector('.js-later'); if (l) l.classList.toggle('on', this.isLater(id));
       });
-      // progressi percorsi / contatori, se in vista
-      const route = location.pathname || '/';
-      if (route === '/' || route.startsWith('/p/') || route === '/lista') this.route();
+      // su home e pagine genere bastano le spunte: NON ri-renderizzare (niente salto in cima)
+      // su /lista la composizione delle liste cambia: ri-renderizza ma conserva ordine/filtro e scroll
+      if ((location.pathname || '/') === '/lista') {
+        const sort = this.listSort, gen = this.listGenre, y = window.scrollY;
+        this.route();
+        this.listSort = sort; this.listGenre = gen;
+        const lc = document.getElementById('listControls');
+        if (lc) lc.querySelectorAll('.lc-btn').forEach(b => b.classList.toggle('on', b.dataset.sort === sort));
+        const sel = document.getElementById('listGenre'); if (sel) sel.value = gen;
+        if (sort !== 'durata' || gen) this.renderLaterGrid();
+        window.scrollTo(0, y);
+      }
     }
 
     // ── FIREBASE ──────────────────────────────────────────────────────────────
@@ -331,7 +340,7 @@
       const path = decodeURIComponent(location.pathname || '/');
       const [_, seg, arg, arg2] = path.split('/');
       let html, active = 'home';
-      if (seg === 'p' && arg) { html = this.viewPath(arg); active = PERCORSI_IDS.includes(arg) ? 'percorsi' : 'generi'; }
+      if (seg === 'p' && arg) { html = this.viewPath(arg); active = PERCORSI_IDS.includes(arg) ? 'percorsi' : (GENRE_IDS.includes(arg) ? 'generi' : ''); }
       else if (seg === 'cerca' && arg) { html = this.viewFacet(arg, arg2 || ''); active = 'esplora'; }
       else if (seg === 't' && arg) { html = this.viewTitle(arg); active = ''; }
       else if (seg === 'generi') { html = this.viewGeneri(); active = 'generi'; }

@@ -1220,3 +1220,6 @@ a.g-chip:hover { border-color: var(--accent); color: var(--accent); }
 }
 
 .foot-ver { display: inline-block; margin-left: 4px; padding: 1px 7px; border-radius: 6px; background: var(--surface-2, rgba(0,0,0,.05)); color: var(--ink-faint); font-size: 11px; font-weight: 700; letter-spacing: .02em; }
+
+/* card desktop: la durata era ripetuta (chip sul poster + riga nel corpo) → tengo solo la riga */
+@media (min-width: 861px) { .card-poster .lchip { display: none; } }

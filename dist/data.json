@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-18T07:44:11.453Z",
+  "generatedAt": "2026-06-18T10:41:40.434Z",
   "attribution": "Dati e immagini da AniList (anilist.co)",
   "count": 189,
   "titles": [
@@ -36064,7 +36064,8 @@
         "kingdom",
         "golden-kamuy",
         "samurai-champloo",
-        "91-days"
+        "91-days",
+        "the-apothecary-diaries"
       ],
       "vendetta": [
         "berserk",
@@ -36494,7 +36495,8 @@
         "kingdom": "e",
         "golden-kamuy": "c",
         "samurai-champloo": "e",
-        "91-days": "c"
+        "91-days": "c",
+        "the-apothecary-diaries": "c"
       },
       "vendetta": {
         "berserk": "e",
@@ -36788,7 +36790,7 @@
       },
       {
         "key": "maratona",
-        "label": "Maratona",
+        "label": "Una maratona",
         "sub": "Roba in cui perderti per un bel pezzo",
         "icon": "ri-fire-line",
         "bands": [
