@@ -272,7 +272,17 @@ a.t-chip:hover { background: var(--accent); color: #fff; }
 .se-list { display: flex; flex-wrap: wrap; gap: 7px; }
 .t-startfrom { margin: 0 0 14px; font-size: 14.5px; color: var(--ink); }
 .t-startfrom b { color: var(--accent); }
-.t-watch .t-tips { margin-top: 16px; }
+/* "Buono a sapersi" dentro "Di cosa parla": sotto-sezione piatta, non box-in-box */
+.t-hook .t-tips { margin: 15px 0 0; background: none; border: none; border-top: 1px solid var(--line); border-radius: 0; padding: 14px 0 0; }
+/* Film/OVA tanti → menù a scomparsa (collassato di default) */
+.extra-fold { margin-top: 14px; }
+.extra-fold > summary { cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 13px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+.extra-fold > summary::-webkit-details-marker { display: none; }
+.extra-fold > summary .se-h { margin: 0; }
+.extra-fold > summary::after { content: 'mostra'; font-size: 11px; font-weight: 700; color: var(--accent); white-space: nowrap; }
+.extra-fold[open] > summary::after { content: 'nascondi'; }
+.extra-fold[open] > summary { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+.extra-fold .se-list { margin-top: 10px; }
 .se-chip { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; color: var(--ink-soft); background: var(--surface); border: 1px solid var(--line); padding: 5px 11px; border-radius: 999px; text-decoration: none; transition: .12s; }
 a.se-chip:hover { border-color: var(--accent); color: var(--accent); }
 .se-chip .ri-external-link-line { font-size: 11px; opacity: .6; }
@@ -1191,3 +1201,5 @@ a.g-chip:hover { border-color: var(--accent); color: var(--accent); }
   .hm-box-name { font-size: 13px; font-weight: 700; line-height: 1.18; }
   .hm-box-n { position: absolute; top: 11px; right: 12px; font-size: 11px; font-weight: 600; color: var(--ink-faint); }
 }
+
+.foot-ver { display: inline-block; margin-left: 4px; padding: 1px 7px; border-radius: 6px; background: var(--surface-2, rgba(0,0,0,.05)); color: var(--ink-faint); font-size: 11px; font-weight: 700; letter-spacing: .02em; }

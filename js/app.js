@@ -812,21 +812,26 @@
           ? `<a class="${cls}" href="/t/${esc(m.id)}">${inner}</a>`
           : `<a class="${cls} is-ext" href="https://anilist.co/search/anime?search=${encodeURIComponent(name)}" target="_blank" rel="noopener nofollow">${inner} <i class="ri-external-link-line"></i></a>`;
       };
-      // SEZIONE UNICA "Come guardarlo": da dove iniziare + struttura + film/OVA raggruppati + dritte
+      // film/OVA/speciali: se pochi mostrali, se tanti (One Piece = 42) collassali in un menù a scomparsa
+      const extraPills = extras.map(s => relAnchor(s.name, esc(s.name), 'se-chip')).join('');
+      const extrasHtml = !extras.length ? '' : (extras.length > 6
+        ? `<details class="extra-fold"><summary><span class="se-h"><i class="ri-film-line"></i> Film, OVA e speciali <b>(${extras.length})</b></span></summary><div class="se-list">${extraPills}</div></details>`
+        : `<div class="struct-extra"><span class="se-h"><i class="ri-film-line"></i> Film, OVA e speciali (${extras.length})</span><div class="se-list">${extraPills}</div></div>`);
+      // "Come guardarlo": da dove iniziare + struttura + film/OVA (raggruppati)
       const structInner = struct.length ? `
           ${mainSteps.length ? `<ol class="struct">${mainSteps.map(s => `<li>${relAnchor(s.name, `<span class="st-name">${esc(s.name)}</span><span class="st-ep">${esc(s.episodes)}${s.year ? ` · ${s.year}` : ''}</span>`, 'st-row')}</li>`).join('')}</ol>` : ''}
-          ${extras.length ? `<div class="struct-extra"><span class="se-h"><i class="ri-film-line"></i> Film, OVA e speciali (${extras.length})</span><div class="se-list">${extras.map(s => relAnchor(s.name, esc(s.name), 'se-chip')).join('')}</div></div>` : ''}` : '';
+          ${extrasHtml}` : '';
+      // "Buono a sapersi" (note pratiche) va DENTRO il box "Di cosa parla", non come box a sé
       const tipsInner = (t.tips && t.tips.length) ? `
           <div class="t-tips">
             <span class="t-tips-h"><i class="ri-lightbulb-flash-line"></i> Buono a sapersi</span>
             <ul>${t.tips.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
           </div>` : '';
-      const watchHtml = (struct.length || (t.tips && t.tips.length) || t.startFrom) ? `
+      const watchHtml = (struct.length || t.startFrom) ? `
         <div class="t-sec t-watch">
           <h3 class="t-sec-h"><i class="ri-stairs-line"></i> Come guardarlo</h3>
           ${t.startFrom ? `<p class="t-startfrom"><b>Da dove iniziare:</b> <em>${esc(t.startFrom)}</em></p>` : ''}
           ${structInner}
-          ${tipsInner}
         </div>` : '';
 
       const streaming = (t.streaming || []);
@@ -891,6 +896,7 @@
               <span class="t-hook-h"><i class="ri-file-text-line"></i> Di cosa parla</span>
               <p>${esc(t.hook || 'Scheda in arrivo.')}</p>
               ${t.forWho ? `<p class="t-forwho"><b>Per chi è:</b> ${esc(t.forWho)}</p>` : ''}
+              ${tipsInner}
             </div>
 
             ${watchHtml}
