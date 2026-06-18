@@ -463,6 +463,9 @@
         this.listGenre = e.target.value;
         this.renderLaterGrid();
       });
+      // Esplora: pannello filtri (genere · durata · tipo · ordina)
+      document.getElementById('esploraFilters')?.addEventListener('change', () => this.applyEsploraFilters());
+      document.getElementById('esploraSearch')?.addEventListener('click', () => this.openSearch());
       const heroSearch = document.getElementById('heroSearch');
       if (heroSearch) heroSearch.addEventListener('click', () => this.openSearch());
       // filtro per tempo dentro la pagina categoria (client-side)
@@ -808,16 +811,11 @@
       if (!t) return this.notFound();
       const w = this.isWatched(id), l = this.isLater(id);
 
-      const genres = (t.genres || []).map(g => `<a class="g-chip" href="/cerca/genere/${encodeURIComponent(g)}" title="${esc(GENRE_GLOSS[g] || 'Vedi tutti i ' + itGenre(g))}">${esc(itGenre(g))}</a>`).join('');
-      // i toni che ripetono un genere (es. genere "Azione" + tono "azione") NON si mostrano: niente doppioni
-      const genreKeys = new Set((t.genres || []).flatMap(g => [itGenre(g).toLowerCase().trim(), String(g).toLowerCase().trim()]));
-      const toneSeen = new Set();
-      const toneList = (t.tone || []).filter(x => {
-        const k = String(x).toLowerCase().trim();
-        if (genreKeys.has(k) || toneSeen.has(k)) return false;
-        toneSeen.add(k); return true;
-      });
-      const tone = toneList.map(x => `<a class="t-chip" href="/cerca/tono/${encodeURIComponent(x)}" title="Altri titoli con atmosfera «${esc(x)}»">${esc(x)}</a>`).join('');
+      // GENERI = le categorie del SITO a cui appartiene il titolo (coerenti con la navigazione),
+      // non i generi grezzi AniList. Linkano alla pagina della categoria.
+      let siteSecs = GENRE_IDS.filter(sid => (CAT_MEMBERS[sid] || []).includes(t.id));
+      if (!siteSecs.length) siteSecs = PERCORSI_IDS.filter(sid => (CAT_MEMBERS[sid] || []).includes(t.id));
+      const genres = siteSecs.map(sid => { const p = PATHS.find(x => x.id === sid); return p ? `<a class="g-chip" href="/p/${esc(sid)}">${esc(p.title)}</a>` : ''; }).join('');
       const struct = (t.structure || []);
       const mainSteps = struct.filter(s => s.main);
       const extras = struct.filter(s => !s.main);
@@ -896,7 +894,7 @@
               <span class="t-year">${esc(t.year || '')}</span>
             </div>
 
-            ${(genres || tone) ? `<div class="t-tags">${genres}${tone}</div>` : ''}
+            ${genres ? `<div class="t-tags">${genres}</div>` : ''}
 
             ${this.tFold('about', 'ri-file-text-line', 'Di cosa parla', `
               <p>${esc(t.hook || 'Scheda in arrivo.')}</p>
@@ -944,25 +942,52 @@
       return `<div class="grid" id="esploraGrid">${list.slice(0, ESPLORA_PAGE).map(t => this.card(t)).join('')}</div>
         ${list.length > ESPLORA_PAGE ? `<div class="more-wrap"><button class="btn-ghost js-more" id="esploraMore"><i class="ri-add-line"></i> Mostra altri ${list.length - ESPLORA_PAGE} titoli</button></div>` : ''}`;
     }
-    // ── VISTA: ESPLORA (pulita: tempo + generi + tutto dal migliore) ─────────────
+    // filtra+ordina la lista Esplora secondo i menù
+    esploraList() {
+      const f = this.esploraFilters || {};
+      let list = [...TITLES];
+      if (f.genre) list = list.filter(t => (CAT_MEMBERS[f.genre] || []).includes(t.id));
+      if (f.durata) { const bands = tempoBands(f.durata); list = list.filter(t => bands.includes(t.lengthBand)); }
+      if (f.tipo) list = list.filter(t => (f.tipo === 'film' ? /film|movie/i.test(t.typeLabel || '') : !/film|movie/i.test(t.typeLabel || '')));
+      if (f.sort === 'voto') list.sort((a, b) => (b.score10 || 0) - (a.score10 || 0));
+      else if (f.sort === 'recenti') list.sort((a, b) => (b.year || 0) - (a.year || 0));
+      else if (f.sort === 'az') list.sort((a, b) => a.title.localeCompare(b.title));
+      else list.sort(rankSort);
+      return list;
+    }
+    applyEsploraFilters() {
+      this.esploraFilters = {
+        genre: document.getElementById('efGenre')?.value || '',
+        durata: document.getElementById('efDurata')?.value || '',
+        tipo: document.getElementById('efTipo')?.value || '',
+        sort: document.getElementById('efSort')?.value || 'best',
+      };
+      const list = this.esploraList();
+      const box = document.getElementById('esploraResults');
+      if (box) box.innerHTML = this.pagedGrid(list);
+      const cnt = document.getElementById('esploraCount');
+      if (cnt) cnt.textContent = `${list.length} ${list.length === 1 ? 'titolo' : 'titoli'}`;
+    }
+    // ── VISTA: ESPLORA (con pannello filtri: genere · durata · tipo · ordina) ─────
     viewEsplora() {
-      const all = [...TITLES].sort(rankSort);
-      const genreChips = GENRE_PATHS.map(p =>
-        `<a class="genre-chip" href="/p/${esc(p.id)}" style="--accent:${esc(p.accent)}"><i class="${esc(p.icon)}"></i>${esc(p.title)}</a>`).join('');
+      this.esploraFilters = { genre: '', durata: '', tipo: '', sort: 'best' };
+      const list = this.esploraList();
+      const genreOpts = GENRE_PATHS.map(p => `<option value="${esc(p.id)}">${esc(p.title)}</option>`).join('');
+      const durataOpts = TEMPO.map(t => `<option value="${esc(t.key)}">${esc(t.label)}</option>`).join('');
       return `
       <section class="wrap esplora-head">
         <h1>Esplora</h1>
-        <p>Tutti i titoli, dal migliore. Salta a un genere o scegli quanto tempo hai. <button class="link-btn" id="esploraSearch">o cerca un titolo →</button></p>
-        <div class="time-chips">
-          <span class="time-chips-lbl">Quanto tempo hai?</span>
-          ${TEMPO.map(t => `<a class="time-chip" href="/tempo/${esc(t.key)}">${esc(t.label)}</a>`).join('')}
+        <p>Tutti i titoli. Filtra per trovare quello giusto. <button class="link-btn" id="esploraSearch">o cerca un titolo →</button></p>
+        <div class="esplora-filters" id="esploraFilters">
+          <select id="efGenre" aria-label="Genere"><option value="">Tutti i generi</option>${genreOpts}</select>
+          <select id="efDurata" aria-label="Durata"><option value="">Qualsiasi durata</option>${durataOpts}</select>
+          <select id="efTipo" aria-label="Tipo"><option value="">Serie e film</option><option value="serie">Solo serie</option><option value="film">Solo film</option></select>
+          <select id="efSort" aria-label="Ordina"><option value="best">Dal migliore</option><option value="voto">Voto più alto</option><option value="recenti">Più recenti</option><option value="az">A-Z</option></select>
         </div>
-        <div class="genre-chips">${genreChips}</div>
-        ${this.factBox()}
       </section>
       <section class="wrap">
-        <div class="sec-head sub"><h2><i class="ri-trophy-line"></i> Tutti, dal migliore</h2><span class="sec-count">${all.length} titoli</span></div>
-        ${this.pagedGrid(all)}
+        <div class="sec-head sub"><h2><i class="ri-trophy-line"></i> Risultati</h2><span class="sec-count" id="esploraCount">${list.length} titoli</span></div>
+        <div id="esploraResults">${this.pagedGrid(list)}</div>
       </section>`;
     }
 

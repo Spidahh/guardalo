@@ -1223,3 +1223,9 @@ a.g-chip:hover { border-color: var(--accent); color: var(--accent); }
 
 /* card desktop: la durata era ripetuta (chip sul poster + riga nel corpo) → tengo solo la riga */
 @media (min-width: 861px) { .card-poster .lchip { display: none; } }
+
+/* ── ESPLORA: pannello filtri compatto ─────────────────────────────────── */
+.esplora-filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 4px; }
+.esplora-filters select { padding: 10px 13px; border: 1px solid var(--line-2); border-radius: 10px; background: var(--surface); color: var(--ink); font-size: 13.5px; font-weight: 600; font-family: inherit; cursor: pointer; }
+.esplora-filters select:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+@media (max-width: 860px) { .esplora-filters { gap: 7px; } .esplora-filters select { flex: 1 1 45%; min-width: 0; font-size: 13px; padding: 10px 11px; } }

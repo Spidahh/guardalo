@@ -51,7 +51,7 @@
     "capolavori": "cowboy-bebop",
     "azione": "demon-slayer",
     "antieroi": "code-geass",
-    "il-canone": "ghost-in-the-shell",
+    "il-canone": "attack-on-titan",
     "chicche-e-deep-cut": "heavenly-delusion"
   },
   "members": {
@@ -157,8 +157,6 @@
       "steins-gate",
       "cyberpunk-edgerunners",
       "cowboy-bebop",
-      "ghost-in-the-shell",
-      "akira",
       "parasyte-the-maxim",
       "heavenly-delusion",
       "dan-da-dan",
@@ -179,7 +177,6 @@
       "code-geass",
       "86-eighty-six",
       "pluto",
-      "promare",
       "flcl",
       "gundam-iron-blooded-orphans",
       "eureka-seven",
@@ -300,7 +297,6 @@
       "skip-and-loafer",
       "nana",
       "clannad-after-story",
-      "maquia",
       "honey-and-clover",
       "banana-fish"
     ],
@@ -355,7 +351,8 @@
       "redline",
       "paprika",
       "summer-wars",
-      "the-girl-who-leapt-through-time"
+      "the-girl-who-leapt-through-time",
+      "maquia"
     ],
     "da-zero-a-otaku": [
       "death-note",
@@ -369,7 +366,6 @@
       "dan-da-dan",
       "cowboy-bebop",
       "neon-genesis-evangelion",
-      "akira",
       "dragon-ball",
       "naruto",
       "monster",
@@ -394,7 +390,6 @@
       "berserk",
       "cyberpunk-edgerunners",
       "made-in-abyss",
-      "perfect-blue",
       "the-tatami-galaxy"
     ],
     "azione": [
@@ -409,8 +404,7 @@
       "jojo-s-bizarre-adventure",
       "hellsing-ultimate",
       "one-punch-man",
-      "kaiju-no-8",
-      "promare"
+      "kaiju-no-8"
     ],
     "antieroi": [
       "death-note",
@@ -427,9 +421,7 @@
       "akudama-drive"
     ],
     "il-canone": [
-      "akira",
       "neon-genesis-evangelion",
-      "ghost-in-the-shell",
       "cowboy-bebop",
       "dragon-ball",
       "legend-of-the-galactic-heroes",
@@ -588,8 +580,6 @@
       "steins-gate": "e",
       "cyberpunk-edgerunners": "e",
       "cowboy-bebop": "c",
-      "ghost-in-the-shell": "e",
-      "akira": "c",
       "parasyte-the-maxim": "c",
       "heavenly-delusion": "c",
       "dan-da-dan": "e",
@@ -610,7 +600,6 @@
       "code-geass": "c",
       "86-eighty-six": "c",
       "pluto": "c",
-      "promare": "c",
       "flcl": "c",
       "gundam-iron-blooded-orphans": "d",
       "eureka-seven": "d",
@@ -731,7 +720,6 @@
       "skip-and-loafer": "d",
       "nana": "d",
       "clannad-after-story": "d",
-      "maquia": "d",
       "honey-and-clover": "d",
       "banana-fish": "d"
     },
@@ -786,7 +774,8 @@
       "redline": "d",
       "paprika": "d",
       "summer-wars": "d",
-      "the-girl-who-leapt-through-time": "d"
+      "the-girl-who-leapt-through-time": "d",
+      "maquia": "c"
     },
     "da-zero-a-otaku": {
       "death-note": "e",
@@ -800,7 +789,6 @@
       "dan-da-dan": "c",
       "cowboy-bebop": "c",
       "neon-genesis-evangelion": "e",
-      "akira": "c",
       "dragon-ball": "c",
       "naruto": "e",
       "monster": "c",
@@ -825,7 +813,6 @@
       "berserk": "e",
       "cyberpunk-edgerunners": "e",
       "made-in-abyss": "c",
-      "perfect-blue": "d",
       "the-tatami-galaxy": "d"
     },
     "azione": {
@@ -840,8 +827,7 @@
       "jojo-s-bizarre-adventure": "e",
       "hellsing-ultimate": "c",
       "one-punch-man": "c",
-      "kaiju-no-8": "c",
-      "promare": "c"
+      "kaiju-no-8": "c"
     },
     "antieroi": {
       "death-note": "e",
@@ -858,9 +844,7 @@
       "akudama-drive": "c"
     },
     "il-canone": {
-      "akira": "c",
       "neon-genesis-evangelion": "e",
-      "ghost-in-the-shell": "c",
       "cowboy-bebop": "c",
       "dragon-ball": "c",
       "legend-of-the-galactic-heroes": "d",
