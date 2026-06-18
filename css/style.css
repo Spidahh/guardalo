@@ -1065,6 +1065,20 @@ a.g-chip:hover { border-color: var(--accent); color: var(--accent); }
   .paths-grid .path-card .path-foot { margin-top: 0; font-size: 10.5px; }
   .paths-grid .path-card .path-start { display: none; }           /* "Apri →" superfluo */
   .qgrid { grid-template-columns: 1fr 1fr; }
+
+  /* PAGINA GENERE/PERCORSO aperto: intestazione minima, niente banner/intro/filtro-tempo */
+  .path-hero { padding: 8px 0 12px; min-height: 0; display: block; background: linear-gradient(180deg, var(--accent-soft), transparent); }
+  .path-hero-bg { display: none; }                  /* via il mosaico di copertine */
+  .path-hero-content { padding-top: 4px; }
+  .path-hero .back { font-size: 13px; }
+  .path-hero-in { gap: 11px; align-items: center; margin-top: 6px; }
+  .path-hero-ic-wrap { width: 38px !important; height: 38px !important; font-size: 19px !important; border-radius: 10px; }
+  .path-hero-name { font-size: 23px; margin: 0 0 2px; }
+  .path-hero-blurb { display: none; }               /* descrizione lunga via */
+  .path-hero-meta { font-size: 12px; }
+  .cat-intro-wrap { display: none; }                /* via box about + "Lo sapevi?" */
+  .cat-filter { display: none; }                    /* via "Quanto tempo hai?" */
+  .path-hero + .wrap .sec-divider:first-child, .sec-divider { margin-top: 16px; }
 }
 
 /* ── BARRA DI NAVIGAZIONE MOBILE (in basso, app-like) ──────────────────── */
