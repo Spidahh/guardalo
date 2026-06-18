@@ -1049,18 +1049,22 @@ a.g-chip:hover { border-color: var(--accent); color: var(--accent); }
   .sec-divider { gap: 8px; margin: 20px 0 10px; }
   .sd-label { font-size: 16px; font-weight: 800; padding-left: 10px; border-left: 4px solid currentColor; }
   .sd-line { display: none; }
-  /* card genere/percorso: RIGA compatta (miniatura piccola a sinistra) — niente più banner enormi */
-  .paths-grid { grid-template-columns: 1fr; gap: 8px; }
-  .paths-grid .path-card { flex-direction: row; align-items: stretch; border-radius: 12px; overflow: hidden; }
-  .paths-grid .path-card .path-hero-img { width: 78px; min-width: 78px; height: auto; }
-  .paths-grid .path-card .path-1img { object-position: 50% 30%; }
-  .paths-grid .path-card .path-card-body { border-top: none; border-left: 3px solid var(--accent); padding: 9px 13px; gap: 3px; justify-content: center; }
-  .paths-grid .path-card .path-head { gap: 8px; }
-  .paths-grid .path-card .path-ic-wrap { width: 26px; height: 26px; font-size: 14px; border-radius: 8px; }
-  .paths-grid .path-card .path-name { font-size: 15.5px; line-height: 1.12; }
-  .paths-grid .path-card .path-blurb { font-size: 11.5px; line-height: 1.32; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-  .paths-grid .path-card .path-foot { margin-top: 1px; font-size: 11px; }
-  .qgrid { grid-template-columns: 1fr; }
+  /* GENERI/PERCORSI: SOLO TESTO, niente immagini — box compatti 2 colonne (come la home) */
+  .page-fact { display: none; }                    /* "Lo sapevi?" via dal mobile */
+  .sec-page-head { margin-bottom: 14px; }
+  .sec-page-head h1 { font-size: 28px; }
+  .sec-page-head p { font-size: 13px; }
+  .paths-grid { grid-template-columns: 1fr 1fr; gap: 7px; }
+  .paths-grid .path-card { flex-direction: column; align-items: stretch; border-radius: 11px; border-left: 3px solid var(--accent); min-height: 0; overflow: hidden; }
+  .paths-grid .path-card .path-hero-img { display: none; }        /* NIENTE immagine */
+  .paths-grid .path-card .path-card-body { border-top: none; padding: 9px 11px; gap: 4px; }
+  .paths-grid .path-card .path-head { gap: 7px; align-items: center; }
+  .paths-grid .path-card .path-ic-wrap { position: static; width: 24px; height: 24px; font-size: 13px; border-radius: 7px; flex-shrink: 0; }
+  .paths-grid .path-card .path-name { font-size: 13px; line-height: 1.12; }
+  .paths-grid .path-card .path-blurb { display: none; }           /* solo il nome */
+  .paths-grid .path-card .path-foot { margin-top: 0; font-size: 10.5px; }
+  .paths-grid .path-card .path-start { display: none; }           /* "Apri →" superfluo */
+  .qgrid { grid-template-columns: 1fr 1fr; }
 }
 
 /* ── BARRA DI NAVIGAZIONE MOBILE (in basso, app-like) ──────────────────── */
