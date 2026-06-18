@@ -805,11 +805,19 @@
       const struct = (t.structure || []);
       const mainSteps = struct.filter(s => s.main);
       const extras = struct.filter(s => !s.main);
+      // ogni voce (stagione/film/OVA) è cliccabile: al titolo se è nel sito, altrimenti ricerca su AniList
+      const relAnchor = (name, inner, cls) => {
+        const m = TITLES.find(x => x.title === name || x.titleNative === name);
+        if (m && m.id === t.id) return `<span class="${cls} is-self">${inner}</span>`;   // la serie stessa: non linkare
+        return m
+          ? `<a class="${cls}" href="/t/${esc(m.id)}">${inner}</a>`
+          : `<a class="${cls} is-ext" href="https://anilist.co/search/anime?search=${encodeURIComponent(name)}" target="_blank" rel="noopener nofollow">${inner} <i class="ri-external-link-line"></i></a>`;
+      };
       const structHtml = struct.length ? `
         <div class="t-sec">
           <h3 class="t-sec-h"><i class="ri-stairs-line"></i> ${t.startFrom ? `Da dove iniziare: <em>${esc(t.startFrom)}</em>` : 'Struttura'}</h3>
-          <ol class="struct">${mainSteps.map(s => `<li><span class="st-name">${esc(s.name)}</span><span class="st-ep">${esc(s.episodes)}${s.year ? ` · ${s.year}` : ''}</span></li>`).join('')}</ol>
-          ${extras.length ? `<div class="struct-extra"><span class="se-h">Extra (film/OVA collegati)</span>${extras.map(s => `<span class="se-chip">${esc(s.name)}</span>`).join('')}</div>` : ''}
+          <ol class="struct">${mainSteps.map(s => `<li>${relAnchor(s.name, `<span class="st-name">${esc(s.name)}</span><span class="st-ep">${esc(s.episodes)}${s.year ? ` · ${s.year}` : ''}</span>`, 'st-row')}</li>`).join('')}</ol>
+          ${extras.length ? `<div class="struct-extra"><span class="se-h">Extra (film/OVA collegati)</span>${extras.map(s => relAnchor(s.name, esc(s.name), 'se-chip')).join('')}</div>` : ''}
         </div>` : '';
 
       const streaming = (t.streaming || []);
