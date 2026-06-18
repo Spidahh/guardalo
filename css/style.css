@@ -1064,3 +1064,7 @@ a.g-chip:hover { border-color: var(--accent); color: var(--accent); }
 /* PERCORSI: allinea i titoli (riserva 2 righe) cosi le card sono pari e i testi allineati */
 .paths-grid .path-name { min-height: 2.2em; display: flex; align-items: flex-end; }
 .paths-grid .path-blurb { -webkit-line-clamp: 2; min-height: 2.7em; }
+
+/* etichetta categoria-sito (curata) piena, generi AniList bordati */
+.g-chip-site { background: var(--accent); color: #fff; border-color: var(--accent); }
+a.g-chip-site:hover { background: color-mix(in srgb, var(--accent) 88%, #000); color: #fff; }
