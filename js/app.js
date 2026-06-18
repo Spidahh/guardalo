@@ -546,7 +546,7 @@
         </div>
         <div class="card-body">
           ${ess}
-          <div class="card-title">${esc(t.title)}</div>
+          <div class="card-title" title="${esc(t.title)}">${esc(t.title)}</div>
           <div class="card-sub">
             <div class="card-len ls-${t.lengthBand}"><i class="ri-time-line"></i>${esc(lenLabel(t))}<span class="card-len-hint">· ${esc(lenHint(t))}</span></div>
             <div class="card-meta">${esc(t.year || '')} · ${esc(t.typeLabel)}${t.score10 ? ` · <span class="card-score"><i class="ri-star-fill"></i>${t.score10}</span>` : ''}</div>
@@ -877,7 +877,7 @@
       const recs = this.recsSections(t);
 
       // dati cliccabili → portano alla ricerca correlata (/cerca/<campo>/<valore>)
-      const fLink = (field, val) => `<a class="cr-link" href="/cerca/${field}/${encodeURIComponent(val)}">${esc(val)}</a>`;
+      const fLink = (field, val) => `<a class="cr-link" href="/cerca/${field}/${encodeURIComponent(val)}" title="Vedi altri titoli">${esc(val)}</a>`;
       const credits = [
         t.studios?.length ? ['Studio', t.studios.map(s => fLink('studio', s)).join(', ')] : null,
         t.director ? ['Regia', fLink('regista', t.director)] : null,
@@ -897,7 +897,7 @@
             <img class="t-cover" src="${esc(cover(t))}" alt="${esc(t.title)}">
             <div class="t-actions">
               <button class="t-btn js-watch ${w ? 'on' : ''}" data-id="${esc(t.id)}"><i class="ri-check-double-line"></i> ${w ? 'Visto' : 'Segna visto'}</button>
-              <button class="t-btn ghost js-later ${l ? 'on' : ''}" data-id="${esc(t.id)}"><i class="ri-bookmark-line"></i> ${l ? 'In lista' : 'Da vedere'}</button>
+              <button class="t-btn ghost js-later ${l ? 'on' : ''}" data-id="${esc(t.id)}"><i class="ri-bookmark-line"></i> ${l ? 'Salvato' : 'Da vedere'}</button>
               <button class="t-btn ghost js-share" data-id="${esc(t.id)}" data-title="${esc(t.title)}"><i class="ri-share-forward-line"></i> Condividi</button>
             </div>
             ${credits ? this.tFold('credits', 'ri-information-line', 'Scheda tecnica', `<div class="t-credits">${credits}</div>`, false) : ''}
@@ -1028,7 +1028,7 @@
       const head = `<section class="wrap esplora-head">
         <a class="back" href="javascript:history.back()"><i class="ri-arrow-left-line"></i> Indietro</a>
         <h1><span class="facet-kind">${esc(f.label)}</span> ${esc(f.show(value))}</h1>
-        <p>${list.length ? `${list.length} ${list.length === 1 ? 'titolo' : 'titoli'} nel catalogo, dal migliore.` : 'Nessun titolo trovato per questo.'}</p>
+        <p>${list.length ? `${list.length} ${list.length === 1 ? 'titolo' : 'titoli'}, dal migliore.` : 'Nessun titolo trovato per questo.'}</p>
       </section>`;
       return head + (list.length ? `<section class="wrap">${this.pagedGrid(list)}</section>` : '');
     }
@@ -1058,6 +1058,16 @@
       const watched = Object.keys(this.watched).map(id => BY_ID.get(id)).filter(Boolean).sort((a, b) => (b.score10 || 0) - (a.score10 || 0));
       const later = this.laterSort(Object.keys(this.toWatch).map(id => BY_ID.get(id)).filter(Boolean), 'durata');
       const hours = watched.reduce((s, t) => s + (t.coreMinutes || 0), 0) / 60;
+
+      // lista del tutto vuota → un solo messaggio accogliente (niente due box vuoti + zeri)
+      if (!watched.length && !later.length) {
+        return `<section class="wrap"><div class="empty big">
+          <i class="ri-bookmark-line"></i>
+          <h2>La tua lista è vuota</h2>
+          <p>Salva i titoli che vuoi vedere (segnalibro 🔖) e segna quelli già visti (✓). Li ritrovi qui, sincronizzati se accedi.</p>
+          <a class="btn-red" href="/generi"><i class="ri-shapes-line"></i> Sfoglia i generi</a>
+        </div></section>`;
+      }
 
       const grid = list => `<div class="grid">${list.map(t => this.card(t)).join('')}</div>`;
       const empty = (ic, msg) => `<div class="empty"><i class="${ic}"></i><p>${msg}</p><a class="btn-ghost" href="/percorsi">Vai ai percorsi</a></div>`;
@@ -1489,7 +1499,7 @@
       this.searchSel = -1;
       q = (q || '').toLowerCase().trim();
       if (!q) {
-        box.innerHTML = `<p class="sr-hint">Cerca per titolo, studio, genere o atmosfera.<span class="sr-kbd"> Premi <kbd>/</kbd> per riaprire.</span></p>`;
+        box.innerHTML = `<p class="sr-hint">Cerca per titolo, studio, regista, genere o atmosfera.<span class="sr-kbd"> Premi <kbd>/</kbd> per riaprire.</span></p>`;
         return;
       }
       const hits = TITLES.filter(t =>

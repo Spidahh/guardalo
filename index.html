@@ -26,7 +26,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=11.01">
+    <link rel="stylesheet" href="css/style.css?v=11.02">
 
     <script>
         try { document.documentElement.dataset.theme = localStorage.getItem('guardalo_theme') || 'light'; }
@@ -81,7 +81,7 @@
         <div class="content">
             <div class="topbar">
                 <button class="brand-mobile" id="sideToggle" aria-label="Menu"><i class="ri-menu-line"></i></button>
-                <button id="searchOpen" class="topbar-search"><i class="ri-search-line"></i><span>Cerca anime, film, registi, temi…</span></button>
+                <button id="searchOpen" class="topbar-search"><i class="ri-search-line"></i><span>Cerca anime, studio, regista…</span></button>
                 <button id="randomBtn" class="icon-btn" title="Sorprendimi — un titolo a caso" aria-label="Titolo a caso"><i class="ri-dice-line"></i></button>
                 <a href="/admin" id="topAdmin" class="topbar-admin" title="Pannello di gestione (admin)" hidden><i class="ri-tools-fill"></i><span>Gestione</span></a>
             </div>
@@ -106,7 +106,7 @@
                         <a href="https://anilist.co" target="_blank" rel="noopener">AniList</a>
                     </nav>
                 </div>
-                <p class="foot-legal">© 2026 <b>Francesco Spidah</b> — testi e selezione editoriale. <span id="footAttr"></span>. Tutti i titoli e i marchi appartengono ai rispettivi proprietari. <span class="foot-ver">v12.49</span></p>
+                <p class="foot-legal">© 2026 <b>Francesco Spidah</b> — testi e selezione editoriale. <span id="footAttr"></span>. Tutti i titoli e i marchi appartengono ai rispettivi proprietari. <span class="foot-ver">v12.50</span></p>
             </footer>
         </div>
     </div>
@@ -128,7 +128,7 @@
         <div class="search-panel">
             <div class="search-bar">
                 <i class="ri-search-line"></i>
-                <input id="searchInput" type="text" placeholder="Cerca un titolo, uno studio, un'atmosfera…" autocomplete="off">
+                <input id="searchInput" type="text" placeholder="Cerca anime, studio, regista, genere…" autocomplete="off">
                 <button id="searchClose" class="icon-btn" aria-label="Chiudi"><i class="ri-close-line"></i></button>
             </div>
             <div id="searchResults" class="search-results"></div>
@@ -163,8 +163,8 @@
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
     <script src="js/firebase-config.js"></script>
-    <script src="js/data.js?v=11.00"></script>
-    <script src="js/app.js?v=11.01"></script>
+    <script src="js/data.js?v=11.01"></script>
+    <script src="js/app.js?v=11.02"></script>
 
     <script>
         // Nessun service worker di caching: serviva versioni vecchie in cache (disastro stale).
