@@ -26,7 +26,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=10.78">
+    <link rel="stylesheet" href="css/style.css?v=10.79">
 
     <script>
         try { document.documentElement.dataset.theme = localStorage.getItem('guardalo_theme') || 'light'; }
@@ -111,6 +111,15 @@
         </div>
     </div>
 
+    <!-- BARRA NAVIGAZIONE MOBILE (solo telefono) -->
+    <nav class="bottom-nav" aria-label="Navigazione principale">
+        <a href="/" data-route="home"><i class="ri-home-5-line"></i><span>Home</span></a>
+        <a href="/generi" data-route="generi"><i class="ri-shapes-line"></i><span>Generi</span></a>
+        <a href="/percorsi" data-route="percorsi"><i class="ri-route-line"></i><span>Percorsi</span></a>
+        <a href="/esplora" data-route="esplora"><i class="ri-compass-3-line"></i><span>Esplora</span></a>
+        <a href="/lista" data-route="lista"><i class="ri-bookmark-line"></i><span>Lista</span></a>
+    </nav>
+
     <!-- OVERLAY RICERCA -->
     <div id="searchOverlay" class="search-overlay" role="dialog" aria-modal="true" aria-label="Cerca un anime" hidden>
         <div class="search-panel">
@@ -152,7 +161,7 @@
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
     <script src="js/firebase-config.js"></script>
     <script src="js/data.js?v=10.74"></script>
-    <script src="js/app.js?v=10.80"></script>
+    <script src="js/app.js?v=10.81"></script>
 
     <script>
         // Nessun service worker di caching: serviva versioni vecchie in cache (disastro stale).

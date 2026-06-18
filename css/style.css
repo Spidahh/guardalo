@@ -1052,3 +1052,14 @@ a.g-chip:hover { border-color: var(--accent); color: var(--accent); }
   .paths-grid { grid-template-columns: 1fr; gap: 10px; }
   .qgrid { grid-template-columns: 1fr; }
 }
+
+/* ── BARRA DI NAVIGAZIONE MOBILE (in basso, app-like) ──────────────────── */
+.bottom-nav { display: none; }
+@media (max-width: 600px) {
+  .bottom-nav { display: grid; grid-template-columns: repeat(5, 1fr); position: fixed; left: 0; right: 0; bottom: 0; z-index: 200; background: var(--surface); border-top: 1px solid var(--line-2); padding: 7px 2px calc(7px + env(safe-area-inset-bottom, 0px)); box-shadow: 0 -3px 14px rgba(0,0,0,.07); }
+  .bottom-nav a { display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 3px 2px; color: var(--ink-soft); font-size: 10px; font-weight: 600; border-radius: 8px; }
+  .bottom-nav a i { font-size: 22px; line-height: 1; }
+  .bottom-nav a.active { color: var(--accent); }
+  .bottom-nav a.active i { transform: translateY(-1px); }
+  .content { padding-bottom: 74px; }
+}

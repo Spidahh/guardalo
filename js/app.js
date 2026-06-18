@@ -315,7 +315,7 @@
 
       const app = $('#app');
       app.innerHTML = html;
-      document.querySelectorAll('.side-nav a').forEach(a => { const on = a.dataset.route === active; a.classList.toggle('active', on); on ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current'); });
+      document.querySelectorAll('.side-nav a, .bottom-nav a').forEach(a => { const on = a.dataset.route === active; a.classList.toggle('active', on); on ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current'); });
       // ribadisce la visibilità di Gestione/Profilo a ogni navigazione (robustezza)
       const sa = $('#sideAdmin'); if (sa) sa.hidden = !this.isAdmin;
       const ta = $('#topAdmin'); if (ta) ta.hidden = !this.isAdmin;
