@@ -918,10 +918,15 @@
         </div>` : '').join('');
     }
 
+    // griglia paginata riusabile: primi ESPLORA_PAGE + bottone "Mostra altri"
+    pagedGrid(list) {
+      this.esploraAll = list;
+      return `<div class="grid" id="esploraGrid">${list.slice(0, ESPLORA_PAGE).map(t => this.card(t)).join('')}</div>
+        ${list.length > ESPLORA_PAGE ? `<div class="more-wrap"><button class="btn-ghost js-more" id="esploraMore"><i class="ri-add-line"></i> Mostra altri ${list.length - ESPLORA_PAGE} titoli</button></div>` : ''}`;
+    }
     // ── VISTA: ESPLORA (pulita: tempo + generi + tutto dal migliore) ─────────────
     viewEsplora() {
       const all = [...TITLES].sort(rankSort);
-      this.esploraAll = all;
       const genreChips = GENRE_PATHS.map(p =>
         `<a class="genre-chip" href="/p/${esc(p.id)}" style="--accent:${esc(p.accent)}"><i class="${esc(p.icon)}"></i>${esc(p.title)}</a>`).join('');
       return `
@@ -937,8 +942,7 @@
       </section>
       <section class="wrap">
         <div class="sec-head sub"><h2><i class="ri-trophy-line"></i> Tutti, dal migliore</h2><span class="sec-count">${all.length} titoli</span></div>
-        <div class="grid" id="esploraGrid">${all.slice(0, ESPLORA_PAGE).map(t => this.card(t)).join('')}</div>
-        ${all.length > ESPLORA_PAGE ? `<div class="more-wrap"><button class="btn-ghost js-more" id="esploraMore"><i class="ri-add-line"></i> Mostra altri ${all.length - ESPLORA_PAGE} titoli</button></div>` : ''}
+        ${this.pagedGrid(all)}
       </section>`;
     }
 
@@ -960,7 +964,7 @@
         <h1><span class="facet-kind">${esc(f.label)}</span> ${esc(f.show(value))}</h1>
         <p>${list.length ? `${list.length} ${list.length === 1 ? 'titolo' : 'titoli'} nel catalogo, dal migliore.` : 'Nessun titolo trovato per questo.'}</p>
       </section>`;
-      return head + (list.length ? `<section class="wrap"><div class="grid">${list.map(t => this.card(t)).join('')}</div></section>` : '');
+      return head + (list.length ? `<section class="wrap">${this.pagedGrid(list)}</section>` : '');
     }
 
     // ── VISTA: LA MIA LISTA ──────────────────────────────────────────────────────
