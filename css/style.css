@@ -165,8 +165,8 @@ em { font-style: italic; }
 
 /* ── VISTA TITOLO ─────────────────────────────────────────────────────────── */
 .title-view { padding-bottom: 60px; }
-.t-banner { height: clamp(160px, 30vw, 300px); background-size: cover !important; background-position: center 22% !important; }
-.t-grid { display: grid; grid-template-columns: 260px 1fr; gap: 36px; margin-top: -90px; position: relative; }
+.t-banner { height: clamp(140px, 19vw, 220px); background-size: cover !important; background-position: center 22% !important; }
+.t-grid { display: grid; grid-template-columns: 215px 1fr; gap: 32px; margin-top: -70px; position: relative; }
 @media (max-width: 860px) { .t-grid { grid-template-columns: 1fr; margin-top: 0; } }
 .t-aside { position: sticky; top: 78px; align-self: start; }
 /* MOBILE: scheda a FISARMONICA, compatta — header affiancato, sezioni richiudibili */
