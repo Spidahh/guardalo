@@ -149,6 +149,7 @@ em { font-style: italic; }
   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .card-meta { font-size: 11.5px; color: var(--ink-faint); font-weight: 500; }
 .card-score { color: var(--gold); font-weight: 700; }
+.card-sub { display: contents; }   /* su desktop trasparente; su mobile diventa una riga sola */
 .card-why { display: block; margin-top: 6px; font-size: 11px; color: var(--accent); font-weight: 600; line-height: 1.3;
   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 
@@ -1065,17 +1066,23 @@ a.g-chip:hover { border-color: var(--accent); color: var(--accent); }
 /* ── MOBILE: tutto a ELENCO compatto (≤860px = quando la sidebar è a scomparsa) ── */
 @media (max-width: 860px) {
   .grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 8px; }
-  .card { display: grid; grid-template-columns: 48px 1fr; align-items: center; gap: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 8px 12px 8px 8px; }
-  .card-poster { aspect-ratio: 2/3; width: 48px; height: auto; border-radius: 7px; }
+  /* card = box pulito: copertina | (titolo + una riga dati) */
+  .card { display: grid; grid-template-columns: 46px 1fr; align-items: center; gap: 11px; background: var(--surface); border: 1px solid var(--line-2); border-radius: 12px; padding: 9px 12px 9px 9px; }
+  .card-poster { aspect-ratio: 2/3; width: 46px; height: auto; border-radius: 7px; }
   .card:hover .card-poster img { transform: none; }
   .card-poster .card-marks, .card-poster .card-seen, .card-poster .lchip, .card-rank { display: none; }
-  .card-body { padding: 0; min-width: 0; }
-  .card-title { font-size: 14.5px; font-weight: 700; line-height: 1.22; white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-  .card-len { font-size: 11px; margin: 2px 0 0; }
+  .card-body { padding: 0; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+  .card-ess { font-size: 9.5px; margin: 0; letter-spacing: .03em; }
+  .card-title { font-size: 14px; font-weight: 700; line-height: 1.2; white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .card-sub { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 6px; }
+  .card-len { font-size: 11px; margin: 0; display: inline-flex; align-items: center; gap: 3px; }
   .card-len-hint { display: none; }
-  .card-meta { font-size: 11.5px; margin-top: 1px; }
+  .card-meta { font-size: 11.5px; margin: 0; }
+  .card-sub .card-meta::before { content: '·'; margin-right: 5px; color: var(--ink-faint); }
   .card.is-watched { opacity: .6; }
   .card.is-watched .card-poster img { filter: none; }
+  /* Esplora: via il muro di chip-generi e il filtro tempo (i Generi sono nella barra) */
+  .esplora-head .genre-chips, .esplora-head .time-chips { display: none; }
   /* fasce: titolo grande con barra colorata a sinistra (oro/accent/neutro) */
   .sec-divider { gap: 8px; margin: 20px 0 10px; }
   .sd-label { font-size: 16px; font-weight: 800; padding-left: 10px; border-left: 4px solid currentColor; }
