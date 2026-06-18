@@ -148,10 +148,12 @@
         const r = JSON.parse(localStorage.getItem('guardalo_v10') || '{}');
         this.watched = r.watched || {};
         this.toWatch = r.toWatch || {};
+        this.dataTs = r.updatedAt || 0;
       } catch (e) {}
     }
     save() {
-      const payload = { watched: this.watched, toWatch: this.toWatch };
+      this.dataTs = Date.now();
+      const payload = { watched: this.watched, toWatch: this.toWatch, updatedAt: this.dataTs };
       if (this.user && window.db) {
         window.db.collection('users').doc(this.user.uid).set({ guardalo: payload }, { merge: true }).catch(() => {});
       }
@@ -214,14 +216,22 @@
       } catch (e) {}
     }
     loadCloud() {
+      if (!window.db || !this.user) return;
       window.db.collection('users').doc(this.user.uid).get().then(doc => {
         const g = (doc.exists && doc.data().guardalo) || null;
-        if (g) {
-          // unione: locale + cloud (non perdere progressi fatti da sloggati)
-          this.watched = Object.assign({}, this.watched, g.watched || {});
-          this.toWatch = Object.assign({}, this.toWatch, g.toWatch || {});
+        const localTs = this.dataTs || 0;
+        const cloudTs = (g && g.updatedAt) || 0;
+        const localEmpty = !Object.keys(this.watched).length && !Object.keys(this.toWatch).length;
+        if (g && (cloudTs > localTs || localEmpty)) {
+          // il cloud è più recente (o il locale è vuoto): adotto il cloud → le cancellazioni si propagano
+          this.watched = g.watched || {};
+          this.toWatch = g.toWatch || {};
+          this.dataTs = cloudTs;
+          try { localStorage.setItem('guardalo_v10', JSON.stringify({ watched: this.watched, toWatch: this.toWatch, updatedAt: cloudTs })); } catch (e) {}
+        } else {
+          // il locale è più recente (o cloud assente): lo salvo sul cloud
+          this.save();
         }
-        this.save();
         this.route();
       }).catch(() => {});
     }
@@ -241,18 +251,18 @@
 
     // ── CHROME (nav, tema, ricerca, login) ────────────────────────────────────
     bindChrome() {
-      $('#themeToggle').addEventListener('click', () => this.toggleTheme());
-      $('#searchOpen').addEventListener('click', () => this.openSearch());
-      $('#searchClose').addEventListener('click', () => this.closeSearch());
-      $('#searchOverlay').addEventListener('click', e => { if (e.target.id === 'searchOverlay') this.closeSearch(); });
-      $('#searchInput').addEventListener('input', e => this.renderSearch(e.target.value));
-      $('#searchInput').addEventListener('keydown', e => this.searchKey(e));
-      $('#randomBtn').addEventListener('click', () => this.surprise());
+      $('#themeToggle')?.addEventListener('click', () => this.toggleTheme());
+      $('#searchOpen')?.addEventListener('click', () => this.openSearch());
+      $('#searchClose')?.addEventListener('click', () => this.closeSearch());
+      $('#searchOverlay')?.addEventListener('click', e => { if (e.target.id === 'searchOverlay') this.closeSearch(); });
+      $('#searchInput')?.addEventListener('input', e => this.renderSearch(e.target.value));
+      $('#searchInput')?.addEventListener('keydown', e => this.searchKey(e));
+      $('#randomBtn')?.addEventListener('click', () => this.surprise());
 
-      $('#loginBtn').addEventListener('click', () => $('#loginModal').classList.add('open'));
-      $('#loginClose').addEventListener('click', () => $('#loginModal').classList.remove('open'));
-      $('#loginModal').addEventListener('click', e => { if (e.target.id === 'loginModal') e.currentTarget.classList.remove('open'); });
-      $('#googleLogin').addEventListener('click', () => {
+      $('#loginBtn')?.addEventListener('click', () => $('#loginModal')?.classList.add('open'));
+      $('#loginClose')?.addEventListener('click', () => $('#loginModal')?.classList.remove('open'));
+      $('#loginModal')?.addEventListener('click', e => { if (e.target.id === 'loginModal') e.currentTarget.classList.remove('open'); });
+      $('#googleLogin')?.addEventListener('click', () => {
         if (!window.auth) { this.toast('Accesso non disponibile al momento.', 'muted'); return; }
         window.auth.signInWithPopup(new window.firebase.auth.GoogleAuthProvider())
           .then(res => {
@@ -270,7 +280,7 @@
             this.toast(msg, 'muted');
           });
       });
-      $('#logoutBtn').addEventListener('click', () => {
+      $('#logoutBtn')?.addEventListener('click', () => {
         if (window.auth) window.auth.signOut().then(() => this.toast('Sei uscito.', 'muted')).catch(() => {});
       });
       $('#userChip')?.addEventListener('click', () => this.go('/profilo'));
@@ -313,11 +323,16 @@
     async share(title, id) {
       const url = location.origin + '/t/' + id;
       const data = { title: 'GUARDALO — ' + title, text: `${title} — perché guardarlo, da dove iniziare e dove vederlo, su GUARDALO.`, url };
+      if (navigator.share) {
+        try { await navigator.share(data); } catch (e) { /* annullato dall'utente: nessun messaggio */ }
+        return;
+      }
       try {
-        if (navigator.share) { await navigator.share(data); return; }
         await navigator.clipboard.writeText(url);
         this.toast('Link copiato negli appunti.', 'ok');
-      } catch (e) { /* condivisione annullata: nessun messaggio */ }
+      } catch (e) {
+        this.toast('Copia il link dalla barra degli indirizzi.', 'muted');
+      }
     }
     loadMore() {
       const grid = document.getElementById('esploraGrid');
