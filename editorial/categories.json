@@ -112,7 +112,8 @@
       "sentence-to-be-hero",
       "banana-fish",
       "legend-of-the-galactic-heroes",
-      "dororo"
+      "dororo",
+      "welcome-to-the-nhk"
     ],
     "isekai": [
       "shangri-la-frontier",
@@ -171,7 +172,8 @@
       "vivy-fluorite-eyes-song",
       "psycho-pass",
       "ergo-proxy",
-      "from-the-new-world"
+      "from-the-new-world",
+      "planetes"
     ],
     "mecha": [
       "neon-genesis-evangelion",
@@ -535,7 +537,8 @@
       "sentence-to-be-hero": "c",
       "banana-fish": "d",
       "legend-of-the-galactic-heroes": "d",
-      "dororo": "d"
+      "dororo": "d",
+      "welcome-to-the-nhk": "c"
     },
     "isekai": {
       "shangri-la-frontier": "e",
@@ -594,7 +597,8 @@
       "vivy-fluorite-eyes-song": "d",
       "psycho-pass": "d",
       "ergo-proxy": "d",
-      "from-the-new-world": "d"
+      "from-the-new-world": "d",
+      "planetes": "c"
     },
     "mecha": {
       "neon-genesis-evangelion": "e",
