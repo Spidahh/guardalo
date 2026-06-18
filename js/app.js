@@ -801,12 +801,6 @@
 
       const genres = (t.genres || []).map(g => `<a class="g-chip" href="/cerca/genere/${encodeURIComponent(g)}" title="${esc(GENRE_GLOSS[g] || 'Vedi tutti i ' + itGenre(g))}">${esc(itGenre(g))}</a>`).join('');
       const tone = (t.tone || []).map(x => `<a class="t-chip" href="/cerca/tono/${encodeURIComponent(x)}" title="Altri titoli con atmosfera «${esc(x)}»">${esc(x)}</a>`).join('');
-      const tipsHtml = (t.tips && t.tips.length) ? `
-            <div class="t-tips">
-              <span class="t-tips-h"><i class="ri-lightbulb-flash-line"></i> Dritte per la visione</span>
-              <ul>${t.tips.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
-            </div>` : '';
-
       const struct = (t.structure || []);
       const mainSteps = struct.filter(s => s.main);
       const extras = struct.filter(s => !s.main);
@@ -818,11 +812,21 @@
           ? `<a class="${cls}" href="/t/${esc(m.id)}">${inner}</a>`
           : `<a class="${cls} is-ext" href="https://anilist.co/search/anime?search=${encodeURIComponent(name)}" target="_blank" rel="noopener nofollow">${inner} <i class="ri-external-link-line"></i></a>`;
       };
-      const structHtml = struct.length ? `
-        <div class="t-sec">
-          <h3 class="t-sec-h"><i class="ri-stairs-line"></i> ${t.startFrom ? `Da dove iniziare: <em>${esc(t.startFrom)}</em>` : 'Struttura'}</h3>
-          <ol class="struct">${mainSteps.map(s => `<li>${relAnchor(s.name, `<span class="st-name">${esc(s.name)}</span><span class="st-ep">${esc(s.episodes)}${s.year ? ` · ${s.year}` : ''}</span>`, 'st-row')}</li>`).join('')}</ol>
-          ${extras.length ? `<div class="struct-extra"><span class="se-h">Extra (film/OVA collegati)</span>${extras.map(s => relAnchor(s.name, esc(s.name), 'se-chip')).join('')}</div>` : ''}
+      // SEZIONE UNICA "Come guardarlo": da dove iniziare + struttura + film/OVA raggruppati + dritte
+      const structInner = struct.length ? `
+          ${mainSteps.length ? `<ol class="struct">${mainSteps.map(s => `<li>${relAnchor(s.name, `<span class="st-name">${esc(s.name)}</span><span class="st-ep">${esc(s.episodes)}${s.year ? ` · ${s.year}` : ''}</span>`, 'st-row')}</li>`).join('')}</ol>` : ''}
+          ${extras.length ? `<div class="struct-extra"><span class="se-h"><i class="ri-film-line"></i> Film, OVA e speciali (${extras.length})</span><div class="se-list">${extras.map(s => relAnchor(s.name, esc(s.name), 'se-chip')).join('')}</div></div>` : ''}` : '';
+      const tipsInner = (t.tips && t.tips.length) ? `
+          <div class="t-tips">
+            <span class="t-tips-h"><i class="ri-lightbulb-flash-line"></i> Buono a sapersi</span>
+            <ul>${t.tips.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+          </div>` : '';
+      const watchHtml = (struct.length || (t.tips && t.tips.length) || t.startFrom) ? `
+        <div class="t-sec t-watch">
+          <h3 class="t-sec-h"><i class="ri-stairs-line"></i> Come guardarlo</h3>
+          ${t.startFrom ? `<p class="t-startfrom"><b>Da dove iniziare:</b> <em>${esc(t.startFrom)}</em></p>` : ''}
+          ${structInner}
+          ${tipsInner}
         </div>` : '';
 
       const streaming = (t.streaming || []);
@@ -880,19 +884,17 @@
               <span class="t-year">${esc(t.year || '')}</span>
             </div>
 
+            ${genres ? `<div class="t-genres">${genres}</div>` : ''}
             ${tone ? `<div class="t-tone">${tone}</div>` : ''}
 
             <div class="t-hook">
-              <span class="t-hook-h"><i class="ri-quote-text"></i> Cosa sapere prima di iniziare</span>
+              <span class="t-hook-h"><i class="ri-file-text-line"></i> Di cosa parla</span>
               <p>${esc(t.hook || 'Scheda in arrivo.')}</p>
-              ${t.forWho ? `<p class="t-forwho">${esc(t.forWho)}</p>` : ''}
+              ${t.forWho ? `<p class="t-forwho"><b>Per chi è:</b> ${esc(t.forWho)}</p>` : ''}
             </div>
 
+            ${watchHtml}
             ${streamHtml}
-            ${tipsHtml}
-
-            <div class="t-genres">${genres}</div>
-            ${structHtml}
             ${recs}
           </div>
         </div>

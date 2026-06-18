@@ -199,10 +199,16 @@ em { font-style: italic; }
   .t-grid .t-title   { grid-column: 2; grid-row: 2; align-self: start; font-size: 21px; margin: 0 0 3px; line-height: 1.12; }
   .t-grid .t-native  { grid-column: 2; grid-row: 3; font-size: 12.5px; margin: 0 0 7px; }
   .t-grid .t-badges  { grid-column: 2; grid-row: 4; align-self: start; gap: 8px 12px; margin: 0; padding: 0; border: none; }
-  /* tutto il resto a piena larghezza, denso */
+  /* tutto il resto a piena larghezza, denso, in ordine logico */
   .t-grid .t-tone, .t-grid .t-actions, .t-grid .t-hook, .t-grid .t-credits,
-  .t-grid .t-tips, .t-grid .t-genres, .t-grid .t-sec { grid-column: 1 / -1; }
-  .t-grid .t-tone    { margin: 12px 0 0; }
+  .t-grid .t-genres, .t-grid .t-sec { grid-column: 1 / -1; }
+  .t-grid .t-actions { order: 1; }
+  .t-grid .t-genres  { order: 2; }
+  .t-grid .t-tone    { order: 2; }
+  .t-grid .t-hook    { order: 3; }
+  .t-grid .t-credits { order: 4; }   /* scheda tecnica subito dopo la trama */
+  .t-grid .t-sec     { order: 5; }   /* Come guardarlo · Dove vederlo · Simili */
+  .t-grid .t-tone    { margin: 10px 0 0; }
   .t-grid .t-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 14px 0 4px; }
   .t-grid .t-actions .js-share { grid-column: 1 / -1; }
   .t-grid .t-hook    { padding: 13px 15px; margin: 16px 0 0; }
@@ -261,8 +267,12 @@ a.t-chip:hover { background: var(--accent); color: #fff; }
 .st-row:hover { background: var(--accent-soft); }
 .st-row .ri-external-link-line { color: var(--ink-faint); font-size: 13px; flex-shrink: 0; }
 .st-name { flex: 1; font-weight: 600; font-size: 14.5px; } .st-ep { font-size: 12.5px; color: var(--ink-faint); white-space: nowrap; }
-.struct-extra { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 7px; align-items: center; }
-.se-h { font-size: 12px; color: var(--ink-faint); font-weight: 700; margin-right: 4px; }
+.struct-extra { margin-top: 14px; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+.se-h { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; color: var(--ink-faint); font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
+.se-list { display: flex; flex-wrap: wrap; gap: 7px; }
+.t-startfrom { margin: 0 0 14px; font-size: 14.5px; color: var(--ink); }
+.t-startfrom b { color: var(--accent); }
+.t-watch .t-tips { margin-top: 16px; }
 .se-chip { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; color: var(--ink-soft); background: var(--surface); border: 1px solid var(--line); padding: 5px 11px; border-radius: 999px; text-decoration: none; transition: .12s; }
 a.se-chip:hover { border-color: var(--accent); color: var(--accent); }
 .se-chip .ri-external-link-line { font-size: 11px; opacity: .6; }
