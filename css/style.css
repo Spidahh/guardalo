@@ -1049,3 +1049,18 @@ a.g-chip:hover { border-color: var(--accent); color: var(--accent); }
   /* l hint da tastiera "/" è inutile sul telefono */
   .sr-kbd { display: none; }
 }
+
+/* ── GENERI: card pulite e uniformi (icona accent + nome + numero), niente immagini ──── */
+.genre-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(205px, 1fr)); gap: 12px; padding-bottom: 30px; }
+.genre-card { display: flex; align-items: center; gap: 13px; padding: 13px 15px; border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 13px; background: var(--surface); color: var(--ink); text-decoration: none; transition: transform .14s, box-shadow .18s, border-color .15s; }
+.genre-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: var(--shadow); }
+.genre-card-ic { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 11px; background: color-mix(in srgb, var(--accent) 15%, transparent); color: var(--accent); font-size: 20px; flex-shrink: 0; }
+.genre-card-txt { display: flex; flex-direction: column; gap: 1px; min-width: 0; flex: 1; }
+.genre-card-name { font-family: var(--serif); font-weight: 600; font-size: 15.5px; line-height: 1.15; }
+.genre-card-n { font-size: 11.5px; color: var(--ink-faint); font-weight: 600; }
+.genre-card-arr { color: var(--ink-faint); font-size: 20px; flex-shrink: 0; transition: .15s; }
+.genre-card:hover .genre-card-arr { transform: translateX(2px); color: var(--accent); }
+@media (max-width: 600px) { .genre-grid { grid-template-columns: 1fr 1fr; gap: 8px; } .genre-card { padding: 11px 12px; gap: 10px; } .genre-card-ic { width: 34px; height: 34px; font-size: 17px; } .genre-card-name { font-size: 13.5px; } .genre-card-arr { display: none; } }
+/* PERCORSI: allinea i titoli (riserva 2 righe) cosi le card sono pari e i testi allineati */
+.paths-grid .path-name { min-height: 2.2em; display: flex; align-items: flex-end; }
+.paths-grid .path-blurb { -webkit-line-clamp: 2; min-height: 2.7em; }

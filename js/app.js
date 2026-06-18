@@ -588,9 +588,17 @@
       return out;
     }
     // tile di un percorso/genere
-    pathTile(p) {
+    pathTile(p, opts = {}) {
       const mem = catTitles(p);
-      // hero curata (HERO_OF) → primo membro con banner orizzontale → copertina come ultima spiaggia
+      // GENERI: card pulita e uniforme, SENZA immagine (icona accent + nome + numero). Niente crop a caso.
+      if (opts.genre) {
+        return `<a class="genre-card" href="/p/${esc(p.id)}" style="--accent:${esc(p.accent)}">
+          <span class="genre-card-ic"><i class="${esc(p.icon)}"></i></span>
+          <span class="genre-card-txt"><span class="genre-card-name">${esc(p.title)}</span><span class="genre-card-n">${mem.length} titoli</span></span>
+          <i class="ri-arrow-right-s-line genre-card-arr"></i>
+        </a>`;
+      }
+      // PERCORSI: card con immagine + descrizione (viaggi tematici curati)
       const hero = (HERO_OF[p.id] && BY_ID.get(HERO_OF[p.id])) || mem.find(t => t.bannerImage) || mem.find(t => t.coverImage) || this.pathCovers(p, 1)[0];
       const heroImg = hero ? (hero.bannerImage || cover(hero)) : '';
       return `<a class="path-card" href="/p/${esc(p.id)}" style="--accent:${esc(p.accent)}">
@@ -620,7 +628,7 @@
           </div>
         </a>`;
       const heroImg = [...TITLES].filter(t => t.inList && t.bannerImage).sort(rankSort)[0] || [...TITLES].filter(t => t.bannerImage).sort(rankSort)[0];
-      const genreBrowse = GENRE_PATHS.map(p => this.pathTile(p)).join('');
+      const genreBrowse = GENRE_PATHS.map(p => this.pathTile(p, { genre: true })).join('');
       const percorsiBrowse = PERCORSI_PATHS.map(p => this.pathTile(p)).join('');
       const facts = pickN(FACTS, 3);
       const H = HOME.hero || {};
@@ -675,7 +683,7 @@
 
         <section class="home-sec home-full">
           <div class="sec-divider"><span class="sd-label"><i class="ri-shapes-line"></i> Sfoglia per genere</span><span class="sd-line"></span><a class="sd-count sd-link" href="/generi">Tutti i generi <i class="ri-arrow-right-line"></i></a></div>
-          <div class="paths-grid">${genreBrowse}</div>
+          <div class="genre-grid">${genreBrowse}</div>
         </section>
 
         <section class="home-sec home-full">
@@ -695,7 +703,7 @@
       return `<section class="wrap sec-page">
         <div class="sec-page-head"><h1>Generi</h1><p>${GENRE_PATHS.length} categorie, ognuna una lista ordinata dal migliore.</p></div>
         ${this.factBox()}
-        <div class="paths-grid">${GENRE_PATHS.map(p => this.pathTile(p)).join('')}</div>
+        <div class="genre-grid">${GENRE_PATHS.map(p => this.pathTile(p, { genre: true })).join('')}</div>
       </section>`;
     }
     // ── VISTA: PERCORSI (griglia percorsi tematici) ──────────────────────────────
