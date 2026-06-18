@@ -188,6 +188,11 @@
         const w = c.querySelector('.js-watch'); if (w) w.classList.toggle('on', this.isWatched(id));
         const l = c.querySelector('.js-later'); if (l) l.classList.toggle('on', this.isLater(id));
       });
+      // scheda titolo: i bottoni grandi non hanno data-card → aggiorno stato + etichetta a mano
+      const wb = document.querySelector(`.t-btn.js-watch[data-id="${CSS.escape(id)}"]`);
+      if (wb) { wb.classList.toggle('on', this.isWatched(id)); wb.innerHTML = `<i class="ri-check-double-line"></i> ${this.isWatched(id) ? 'Visto' : 'Segna visto'}`; }
+      const lb = document.querySelector(`.t-btn.js-later[data-id="${CSS.escape(id)}"]`);
+      if (lb) { lb.classList.toggle('on', this.isLater(id)); lb.innerHTML = `<i class="ri-bookmark-line"></i> ${this.isLater(id) ? 'Salvato' : 'Da vedere'}`; }
       // su home e pagine genere bastano le spunte: NON ri-renderizzare (niente salto in cima)
       // su /lista la composizione delle liste cambia: ri-renderizza ma conserva ordine/filtro e scroll
       if ((location.pathname || '/') === '/lista') {
@@ -368,7 +373,8 @@
       else if (seg === 'info') { html = this.viewInfo(); active = ''; }
       else if (seg === 'privacy') { html = this.viewPrivacy(); active = ''; }
       else if (seg === 'cookie') { html = this.viewCookie(); active = ''; }
-      else { html = this.viewHome(); active = 'home'; }
+      else if (!seg) { html = this.viewHome(); active = 'home'; }
+      else { html = this.notFound(); active = ''; }   // URL sconosciuta → "non trovato", non la home
 
       const app = $('#app');
       app.innerHTML = html;
@@ -826,11 +832,11 @@
       if (!t) return this.notFound();
       const w = this.isWatched(id), l = this.isLater(id);
 
-      // GENERI = le categorie del SITO a cui appartiene il titolo (coerenti con la navigazione),
-      // non i generi grezzi AniList. Linkano alla pagina della categoria.
-      let siteSecs = GENRE_IDS.filter(sid => (CAT_MEMBERS[sid] || []).includes(t.id));
-      if (!siteSecs.length) siteSecs = PERCORSI_IDS.filter(sid => (CAT_MEMBERS[sid] || []).includes(t.id));
-      const genres = siteSecs.map(sid => { const p = PATHS.find(x => x.id === sid); return p ? `<a class="g-chip" href="/p/${esc(sid)}">${esc(p.title)}</a>` : ''; }).join('');
+      // ETICHETTE = TUTTE le categorie del sito a cui appartiene il titolo (generi + percorsi + altre),
+      // coerenti con la navigazione e cliccabili. Generi prima, poi percorsi/altre.
+      const orderedSecs = [...GENRE_IDS, ...PERCORSI_IDS, ...Object.keys(CAT_MEMBERS).filter(s => !GENRE_IDS.includes(s) && !PERCORSI_IDS.includes(s))];
+      const siteSecs = orderedSecs.filter(sid => (CAT_MEMBERS[sid] || []).includes(t.id));
+      const genres = siteSecs.map(sid => { const p = PATHS.find(x => x.id === sid); return p ? `<a class="g-chip" href="/p/${esc(sid)}">${esc(p.title)}</a>` : ''; }).filter(Boolean).join('');
       const struct = (t.structure || []);
       const mainSteps = struct.filter(s => s.main);
       const extras = struct.filter(s => !s.main);
