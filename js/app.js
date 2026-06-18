@@ -296,9 +296,10 @@
     // ── ROUTER ─────────────────────────────────────────────────────────────────
     route() {
       const path = decodeURIComponent(location.pathname || '/');
-      const [_, seg, arg] = path.split('/');
+      const [_, seg, arg, arg2] = path.split('/');
       let html, active = 'home';
       if (seg === 'p' && arg) { html = this.viewPath(arg); active = PERCORSI_IDS.includes(arg) ? 'percorsi' : 'generi'; }
+      else if (seg === 'cerca' && arg) { html = this.viewFacet(arg, arg2 || ''); active = 'esplora'; }
       else if (seg === 't' && arg) { html = this.viewTitle(arg); active = ''; }
       else if (seg === 'generi') { html = this.viewGeneri(); active = 'generi'; }
       else if (seg === 'percorsi') { html = this.viewPercorsi(); active = 'percorsi'; }
@@ -703,16 +704,16 @@
             ${TEMPO.map(t => `<button class="cf-chip" data-band="${esc(t.key)}">${esc(t.label)}</button>`).join('')}
           </div>
         </section>`;
-        const sec = (label, ic, list) => list.length ? `
+        const sec = (label, ic, list, cls) => list.length ? `
           <section class="wrap">
-            <div class="sec-divider"><span class="sd-label"><i class="${ic}"></i> ${label}</span><span class="sd-line"></span><span class="sd-count">${list.length} titoli</span></div>
+            <div class="sec-divider ${cls || ''}"><span class="sd-label"><i class="${ic}"></i> ${label}</span><span class="sd-line"></span><span class="sd-count">${list.length} titoli</span></div>
             <div class="grid">${list.map(t => this.card(t)).join('')}</div>
           </section>` : '';
         const body = noPersonal
-          ? sec('I classici', 'ri-medal-line', consigliati)
-          : sec('Essenziali', 'ri-vip-crown-fill', essenziali)
-            + sec('Consigliati', 'ri-bookmark-3-line', altriInList)
-            + sec('Da scoprire', 'ri-compass-3-line', consigliati);
+          ? sec('I classici', 'ri-medal-line', consigliati, 'sd-e')
+          : sec('Essenziali', 'ri-vip-crown-fill', essenziali, 'sd-e')
+            + sec('Consigliati', 'ri-bookmark-3-line', altriInList, 'sd-c')
+            + sec('Da scoprire', 'ri-compass-3-line', consigliati, 'sd-d');
         return hero + scheda + filterBar + body;
       }
     }
@@ -723,7 +724,7 @@
       if (!t) return this.notFound();
       const w = this.isWatched(id), l = this.isLater(id);
 
-      const genres = (t.genres || []).map(g => `<span class="g-chip" title="${esc(GENRE_GLOSS[g] || '')}">${esc(itGenre(g))}</span>`).join('');
+      const genres = (t.genres || []).map(g => `<a class="g-chip" href="/cerca/genere/${encodeURIComponent(g)}" title="${esc(GENRE_GLOSS[g] || 'Vedi tutti i ' + itGenre(g))}">${esc(itGenre(g))}</a>`).join('');
       const tone = (t.tone || []).map(x => `<span class="t-chip">${esc(x)}</span>`).join('');
       const tipsHtml = (t.tips && t.tips.length) ? `
             <div class="t-tips">
@@ -757,12 +758,14 @@
 
       const recs = this.recsSections(t);
 
+      // dati cliccabili → portano alla ricerca correlata (/cerca/<campo>/<valore>)
+      const fLink = (field, val) => `<a class="cr-link" href="/cerca/${field}/${encodeURIComponent(val)}">${esc(val)}</a>`;
       const credits = [
-        t.studios?.length ? ['Studio', t.studios.join(', ')] : null,
-        t.director ? ['Regia', t.director] : null,
-        t.creator ? ['Opera originale', t.creator] : null,
-        t.sourceLabel ? ['Tratto da', t.sourceLabel] : null,
-      ].filter(Boolean).map(([k, v]) => `<div class="cr"><span>${k}</span><b>${esc(v)}</b></div>`).join('');
+        t.studios?.length ? ['Studio', t.studios.map(s => fLink('studio', s)).join(', ')] : null,
+        t.director ? ['Regia', fLink('regista', t.director)] : null,
+        t.creator ? ['Opera originale', fLink('autore', t.creator)] : null,
+        t.sourceLabel ? ['Tratto da', esc(t.sourceLabel)] : null,
+      ].filter(Boolean).map(([k, v]) => `<div class="cr"><span>${k}</span><b>${v}</b></div>`).join('');
 
       const banner = t.bannerImage
         ? `style="background-image:linear-gradient(180deg,rgba(0,0,0,.15),var(--surface) 92%),url('${esc(t.bannerImage)}')"`
@@ -853,6 +856,26 @@
         <div class="sec-head sub"><h2><i class="ri-trophy-line"></i> Tutti, dal migliore</h2><span class="sec-count">${all.length} titoli</span></div>
         <div class="grid">${all.map(t => this.card(t)).join('')}</div>
       </section>`;
+    }
+
+    // ── VISTA: RICERCA CORRELATA (studio/regista/autore/genere/tema cliccabili) ──
+    viewFacet(field, value) {
+      const FIELDS = {
+        studio:  { label: 'Studio',     show: v => v, match: t => (t.studios || []).includes(value) },
+        regista: { label: 'Regia di',   show: v => v, match: t => t.director === value },
+        autore:  { label: 'Opera di',   show: v => v, match: t => t.creator === value },
+        tag:     { label: 'Tema',       show: v => v, match: t => (t.tags || []).includes(value) },
+        genere:  { label: 'Genere',     show: v => itGenre(v), match: t => (t.genres || []).includes(value) },
+      };
+      const f = FIELDS[field];
+      if (!f || !value) return this.notFound();
+      const list = TITLES.filter(f.match).sort(rankSort);
+      const head = `<section class="wrap esplora-head">
+        <a class="back" href="javascript:history.back()"><i class="ri-arrow-left-line"></i> Indietro</a>
+        <h1><span class="facet-kind">${esc(f.label)}</span> ${esc(f.show(value))}</h1>
+        <p>${list.length ? `${list.length} ${list.length === 1 ? 'titolo' : 'titoli'} nel catalogo, dal migliore.` : 'Nessun titolo trovato per questo.'}</p>
+      </section>`;
+      return head + (list.length ? `<section class="wrap"><div class="grid">${list.map(t => this.card(t)).join('')}</div></section>` : '');
     }
 
     // ── VISTA: LA MIA LISTA ──────────────────────────────────────────────────────
