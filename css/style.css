@@ -208,6 +208,10 @@ em { font-style: italic; }
   .t-credits .cr:last-child { border-bottom: none; }
   .t-credits .cr span { flex-shrink: 0; }
   .t-credits .cr b { text-align: right; }
+  /* "Dove vederlo": bottoni uniformi a 2 colonne (niente più larghezze a caso) */
+  .t-grid .streams { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .t-grid .stream { justify-content: center; padding: 12px 10px; }
+  .t-grid .stream:hover { transform: none; }
 }
 .t-cover { width: 100%; border-radius: var(--r); box-shadow: var(--shadow-lg); border: 1px solid var(--line-2); aspect-ratio: 2/3; object-fit: cover; }
 .t-actions { display: flex; flex-direction: column; gap: 9px; margin-top: 14px; }
