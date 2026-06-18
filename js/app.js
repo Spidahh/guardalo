@@ -58,6 +58,7 @@
   // insieme globale degli "Essenziali": titoli marcati 'e' in almeno una sezione → badge sulle card.
   const ESSENTIAL_IDS = new Set();
   for (const pid in TIERS) { const m = TIERS[pid]; for (const id in m) { if (m[id] === 'e') ESSENTIAL_IDS.add(id); } }
+  const ESPLORA_PAGE = 24; // quanti titoli mostra Esplora prima di "Mostra altri"
   // immagine HERO di ogni categoria/percorso (editorial/categories.json → hero): scelta a mano, UNICA.
   const HERO_OF = CAT.hero || {};
   // titoli di una sezione (genere o percorso): la lista curata in categories.members. FONTE UNICA.
@@ -276,6 +277,8 @@
         if (e.target.closest('.js-search')) { e.preventDefault(); this.openSearch(); return; }
         const sh = e.target.closest('.js-share');
         if (sh) { e.preventDefault(); this.share(sh.dataset.title, sh.dataset.id); return; }
+        const more = e.target.closest('.js-more');
+        if (more) { e.preventDefault(); this.loadMore(); return; }
         const b = e.target.closest('.js-watch, .js-later');
         if (b) { e.preventDefault(); e.stopPropagation(); this.toggle(b.dataset.id, b.classList.contains('js-watch') ? 'watched' : 'toWatch'); }
       });
@@ -306,6 +309,19 @@
         await navigator.clipboard.writeText(url);
         this.toast('Link copiato negli appunti.', 'ok');
       } catch (e) { /* condivisione annullata: nessun messaggio */ }
+    }
+    loadMore() {
+      const grid = document.getElementById('esploraGrid');
+      const btn = document.getElementById('esploraMore');
+      if (!grid || !this.esploraAll) return;
+      const shown = grid.querySelectorAll('.card').length;
+      const next = this.esploraAll.slice(shown, shown + ESPLORA_PAGE);
+      grid.insertAdjacentHTML('beforeend', next.map(t => this.card(t)).join(''));
+      const remaining = this.esploraAll.length - (shown + next.length);
+      if (btn) {
+        if (remaining > 0) btn.innerHTML = `<i class="ri-add-line"></i> Mostra altri ${remaining} titoli`;
+        else btn.closest('.more-wrap')?.remove();
+      }
     }
     openSearch() { const o = $('#searchOverlay'); o.hidden = false; requestAnimationFrame(() => o.classList.add('open')); $('#searchInput').focus(); this.renderSearch(''); }
     closeSearch() { const o = $('#searchOverlay'); o.classList.remove('open'); setTimeout(() => o.hidden = true, 200); $('#searchInput').value = ''; }
@@ -872,6 +888,7 @@
     // ── VISTA: ESPLORA (pulita: tempo + generi + tutto dal migliore) ─────────────
     viewEsplora() {
       const all = [...TITLES].sort(rankSort);
+      this.esploraAll = all;
       const genreChips = GENRE_PATHS.map(p =>
         `<a class="genre-chip" href="/p/${esc(p.id)}" style="--accent:${esc(p.accent)}"><i class="${esc(p.icon)}"></i>${esc(p.title)}</a>`).join('');
       return `
@@ -887,7 +904,8 @@
       </section>
       <section class="wrap">
         <div class="sec-head sub"><h2><i class="ri-trophy-line"></i> Tutti, dal migliore</h2><span class="sec-count">${all.length} titoli</span></div>
-        <div class="grid">${all.map(t => this.card(t)).join('')}</div>
+        <div class="grid" id="esploraGrid">${all.slice(0, ESPLORA_PAGE).map(t => this.card(t)).join('')}</div>
+        ${all.length > ESPLORA_PAGE ? `<div class="more-wrap"><button class="btn-ghost js-more" id="esploraMore"><i class="ri-add-line"></i> Mostra altri ${all.length - ESPLORA_PAGE} titoli</button></div>` : ''}
       </section>`;
     }
 
