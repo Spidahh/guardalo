@@ -900,7 +900,7 @@
           <div class="t-main">
             <a class="back" href="javascript:history.back()"><i class="ri-arrow-left-line"></i> Indietro</a>
             <h1 class="t-title">${esc(t.title)}</h1>
-            ${t.titleNative ? `<p class="t-native">${esc(t.titleNative)}</p>` : ''}
+            ${(t.titleNative && t.titleNative.toLowerCase().replace(/\s+/g, '') !== t.title.toLowerCase().replace(/\s+/g, '')) ? `<p class="t-native">${esc(t.titleNative)}</p>` : ''}
 
             <div class="t-badges">
               ${this.lengthScale(t, false)}
@@ -1483,7 +1483,7 @@
       this.searchSel = -1;
       q = (q || '').toLowerCase().trim();
       if (!q) {
-        box.innerHTML = `<p class="sr-hint">Cerca per titolo, studio, genere o atmosfera. Premi <kbd>/</kbd> per riaprire.</p>`;
+        box.innerHTML = `<p class="sr-hint">Cerca per titolo, studio, genere o atmosfera.<span class="sr-kbd"> Premi <kbd>/</kbd> per riaprire.</span></p>`;
         return;
       }
       const hits = TITLES.filter(t =>

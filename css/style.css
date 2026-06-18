@@ -1229,3 +1229,19 @@ a.g-chip:hover { border-color: var(--accent); color: var(--accent); }
 .esplora-filters select { padding: 10px 13px; border: 1px solid var(--line-2); border-radius: 10px; background: var(--surface); color: var(--ink); font-size: 13.5px; font-weight: 600; font-family: inherit; cursor: pointer; }
 .esplora-filters select:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
 @media (max-width: 860px) { .esplora-filters { gap: 7px; } .esplora-filters select { flex: 1 1 45%; min-width: 0; font-size: 13px; padding: 10px 11px; } }
+
+/* ── RIFINITURE UX MOBILE (audit utente nuovo) ─────────────────────────── */
+@media (max-width: 860px) {
+  /* il banner cookie non deve coprire la barra di navigazione in basso */
+  .cookie-bar { left: 12px; right: 12px; bottom: calc(80px + env(safe-area-inset-bottom, 0px)); }
+  /* il menu (hamburger) non ripete le 5 voci della barra in basso */
+  .sidebar .side-nav a[data-route="home"],
+  .sidebar .side-nav a[data-route="generi"],
+  .sidebar .side-nav a[data-route="percorsi"],
+  .sidebar .side-nav a[data-route="esplora"],
+  .sidebar .side-nav a[data-route="lista"] { display: none; }
+  /* nel drawer mostra il nome GUARDALO (non solo il sottotitolo) */
+  .sidebar .brand-word { display: block; font-size: 20px; }
+  /* l hint da tastiera "/" è inutile sul telefono */
+  .sr-kbd { display: none; }
+}
