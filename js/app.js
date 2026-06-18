@@ -827,26 +827,21 @@
             <span class="t-tips-h"><i class="ri-lightbulb-flash-line"></i> Buono a sapersi</span>
             <ul>${t.tips.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
           </div>` : '';
-      const watchHtml = (struct.length || t.startFrom) ? `
-        <div class="t-sec t-watch">
-          <h3 class="t-sec-h"><i class="ri-stairs-line"></i> Come guardarlo</h3>
+      const watchBody = (struct.length || t.startFrom) ? `
           ${t.startFrom ? `<p class="t-startfrom"><b>Da dove iniziare:</b> <em>${esc(t.startFrom)}</em></p>` : ''}
-          ${structInner}
-        </div>` : '';
+          ${structInner}` : '';
 
       const streaming = (t.streaming || []);
       const jwUrl = `https://www.justwatch.com/it/cerca?q=${encodeURIComponent(t.title)}`;
       // Affiliazione: sostituisci AMAZON_TAG con il tuo id Amazon Associates al lancio.
       const azUrl = `https://www.amazon.it/s?k=${encodeURIComponent(t.title + ' anime')}&tag=AMAZON_TAG`;
-      const streamHtml = `
-        <div class="t-sec">
-          <h3 class="t-sec-h"><i class="ri-play-circle-line"></i> Dove vederlo <span class="legal-pill">solo legale</span></h3>
+      const streamBody = `
+          <p class="t-legal"><span class="legal-pill">solo legale</span></p>
           ${streaming.length
             ? `<div class="streams">${streaming.map(s => `<a class="stream" href="${esc(s.url)}" target="_blank" rel="noopener nofollow"><i class="ri-external-link-line"></i> ${esc(s.name)}</a>`).join('')}</div>
                <p class="muted-line">Le piattaforme possono variare per regione. <a href="${esc(jwUrl)}" target="_blank" rel="noopener nofollow">Verifica la disponibilità in Italia (JustWatch) →</a></p>`
             : `<p class="muted-line">Nessuna piattaforma segnalata da AniList per questa regione. <a href="${esc(jwUrl)}" target="_blank" rel="noopener nofollow">Cerca dove vederlo in Italia (JustWatch) →</a></p>`}
-          <p class="muted-line shop-line"><i class="ri-shopping-bag-line"></i> Manga, Blu-ray e gadget: <a href="${esc(azUrl)}" target="_blank" rel="noopener sponsored nofollow">cerca «${esc(t.title)}» su Amazon →</a></p>
-        </div>`;
+          <p class="muted-line shop-line"><i class="ri-shopping-bag-line"></i> Manga, Blu-ray e gadget: <a href="${esc(azUrl)}" target="_blank" rel="noopener sponsored nofollow">cerca «${esc(t.title)}» su Amazon →</a></p>`;
 
       const recs = this.recsSections(t);
 
@@ -874,7 +869,7 @@
               <button class="t-btn ghost js-later ${l ? 'on' : ''}" data-id="${esc(t.id)}"><i class="ri-bookmark-line"></i> ${l ? 'In lista' : 'Da vedere'}</button>
               <button class="t-btn ghost js-share" data-id="${esc(t.id)}" data-title="${esc(t.title)}"><i class="ri-share-forward-line"></i> Condividi</button>
             </div>
-            <div class="t-credits">${credits}</div>
+            ${credits ? this.tFold('credits', 'ri-information-line', 'Scheda tecnica', `<div class="t-credits">${credits}</div>`, false) : ''}
           </aside>
 
           <div class="t-main">
@@ -889,22 +884,25 @@
               <span class="t-year">${esc(t.year || '')}</span>
             </div>
 
-            ${genres ? `<div class="t-genres">${genres}</div>` : ''}
-            ${tone ? `<div class="t-tone">${tone}</div>` : ''}
+            ${(genres || tone) ? `<div class="t-tags">${genres}${tone}</div>` : ''}
 
-            <div class="t-hook">
-              <span class="t-hook-h"><i class="ri-file-text-line"></i> Di cosa parla</span>
+            ${this.tFold('about', 'ri-file-text-line', 'Di cosa parla', `
               <p>${esc(t.hook || 'Scheda in arrivo.')}</p>
               ${t.forWho ? `<p class="t-forwho"><b>Per chi è:</b> ${esc(t.forWho)}</p>` : ''}
-              ${tipsInner}
-            </div>
-
-            ${watchHtml}
-            ${streamHtml}
-            ${recs}
+              ${tipsInner}`, true)}
+            ${watchBody ? this.tFold('watch', 'ri-list-ordered', 'Come guardarlo', watchBody, false) : ''}
+            ${this.tFold('stream', 'ri-play-circle-line', 'Dove vederlo', streamBody, false)}
+            ${recs ? this.tFold('recs', 'ri-heart-3-line', 'Ti potrebbe piacere', recs, false) : ''}
           </div>
         </div>
       </article>`;
+    }
+    // sezione a fisarmonica (richiudibile su mobile, sempre aperta su desktop)
+    tFold(kind, icon, title, body, open) {
+      return `<details class="t-fold t-fold-${kind}"${open ? ' open' : ''}>
+          <summary class="t-fold-h"><i class="${icon}"></i> <span>${title}</span></summary>
+          <div class="t-fold-body">${body}</div>
+        </details>`;
     }
 
     recsSections(t) {

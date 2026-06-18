@@ -187,45 +187,62 @@ em { font-style: italic; }
 .t-grid { display: grid; grid-template-columns: 260px 1fr; gap: 36px; margin-top: -90px; position: relative; }
 @media (max-width: 860px) { .t-grid { grid-template-columns: 1fr; margin-top: 0; } }
 .t-aside { position: sticky; top: 78px; align-self: start; }
-/* MOBILE: scheda COMPATTA — header copertina+titolo affiancati, niente banner, dati stretti */
+/* MOBILE: scheda a FISARMONICA, compatta — header affiancato, sezioni richiudibili */
 @media (max-width: 860px) {
-  .title-view .t-banner { display: none; }                 /* via l'immagine tagliata in alto */
+  .title-view .t-banner { display: none; }
   .title-view { padding-top: 6px; }
-  .t-grid { display: grid; grid-template-columns: 104px 1fr; column-gap: 14px; margin-top: 0; align-items: start; }
+  .t-grid { display: grid; grid-template-columns: 100px 1fr; column-gap: 13px; row-gap: 0; margin-top: 0; align-items: start; }
   .t-aside, .t-main { display: contents; }
-  /* header: copertina a sx (righe 2-4), titolo+native+badge a dx */
-  .t-grid .back      { grid-column: 1 / -1; grid-row: 1; margin: 0 0 8px; font-size: 13px; }
-  .t-grid .t-cover   { grid-column: 1; grid-row: 2 / 5; width: 104px; align-self: start; margin: 0; box-shadow: var(--shadow); }
-  .t-grid .t-title   { grid-column: 2; grid-row: 2; align-self: start; font-size: 21px; margin: 0 0 3px; line-height: 1.12; }
-  .t-grid .t-native  { grid-column: 2; grid-row: 3; font-size: 12.5px; margin: 0 0 7px; }
-  .t-grid .t-badges  { grid-column: 2; grid-row: 4; align-self: start; gap: 8px 12px; margin: 0; padding: 0; border: none; }
-  /* tutto il resto a piena larghezza, denso, in ordine logico */
-  .t-grid .t-tone, .t-grid .t-actions, .t-grid .t-hook, .t-grid .t-credits,
-  .t-grid .t-genres, .t-grid .t-sec { grid-column: 1 / -1; }
-  .t-grid .t-actions { order: 1; }
-  .t-grid .t-genres  { order: 2; }
-  .t-grid .t-tone    { order: 2; }
-  .t-grid .t-hook    { order: 3; }
-  .t-grid .t-credits { order: 4; }   /* scheda tecnica subito dopo la trama */
-  .t-grid .t-sec     { order: 5; }   /* Come guardarlo · Dove vederlo · Simili */
-  .t-grid .t-tone    { margin: 10px 0 0; }
-  .t-grid .t-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 14px 0 4px; }
+  /* header: copertina a sx, titolo+native+badge a dx */
+  .t-grid .back     { grid-column: 1 / -1; grid-row: 1; margin: 0 0 8px; font-size: 13px; }
+  .t-grid .t-cover  { grid-column: 1; grid-row: 2 / 5; width: 100px; align-self: start; margin: 0; box-shadow: var(--shadow); }
+  .t-grid .t-title  { grid-column: 2; grid-row: 2; align-self: start; font-size: 20px; margin: 0 0 3px; line-height: 1.12; }
+  .t-grid .t-native { grid-column: 2; grid-row: 3; font-size: 12px; margin: 0 0 6px; }
+  .t-grid .t-badges { grid-column: 2; grid-row: 4; align-self: start; gap: 7px 11px; margin: 0; padding: 0; border: none; }
+  /* resto a piena larghezza, ordine logico */
+  .t-grid .t-actions, .t-grid .t-tags, .t-grid .t-fold { grid-column: 1 / -1; }
+  .t-grid .t-actions     { order: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin: 11px 0 7px; }
   .t-grid .t-actions .js-share { grid-column: 1 / -1; }
-  .t-grid .t-hook    { padding: 13px 15px; margin: 16px 0 0; }
-  .t-grid .t-hook p  { font-size: 15px; line-height: 1.5; }
-  .t-grid .t-genres  { margin: 16px 0 0; }
-  .t-grid .t-sec     { margin-top: 18px; }
-  .t-grid .t-sec-h   { font-size: 16px; margin: 0 0 10px; }
-  /* crediti come blocco-dati ordinato: etichetta a sx, valore a dx */
-  .t-credits { border: 1px solid var(--line); border-radius: 12px; padding: 2px 14px; gap: 0; margin: 16px 0 0; }
-  .t-credits .cr { flex-direction: row; align-items: baseline; justify-content: space-between; gap: 14px; padding: 9px 0; border-bottom: 1px solid var(--line); }
+  .t-grid .t-tags        { order: 2; margin: 0 0 6px; }
+  .t-grid .t-fold        { order: 5; }
+  .t-grid .t-fold-about  { order: 3; }
+  .t-grid .t-fold-credits{ order: 4; }
+  /* ACCORDION: ogni sezione un box richiudibile, stretto */
+  .t-fold { border: 1px solid var(--line); border-radius: 11px; background: var(--surface); margin: 0 0 7px; overflow: hidden; }
+  .t-fold > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 9px; padding: 12px 14px; font-family: var(--serif); font-weight: 600; font-size: 15.5px; color: var(--ink); }
+  .t-fold > summary::-webkit-details-marker { display: none; }
+  .t-fold > summary > i { color: var(--accent); font-size: 17px; }
+  .t-fold > summary::after { content: ''; width: 8px; height: 8px; margin-left: auto; border-right: 2px solid var(--ink-faint); border-bottom: 2px solid var(--ink-faint); transform: rotate(45deg); transition: transform .2s; flex-shrink: 0; }
+  .t-fold[open] > summary::after { transform: rotate(-135deg); }
+  .t-fold[open] > summary { padding-bottom: 2px; }
+  .t-fold-body { padding: 4px 14px 14px; }
+  .t-fold-body > p:first-child, .t-fold-body > .t-startfrom:first-child { margin-top: 0; }
+  .t-fold-body p { font-size: 14px; line-height: 1.5; margin: 0 0 8px; }
+  .t-fold-body .t-sec { margin-top: 16px; }
+  .t-fold-body .t-sec:first-child { margin-top: 0; }
+  .t-fold-body .t-sec-h { font-size: 14px; margin: 0 0 9px; }
+  /* tags (generi + toni insieme) */
+  .t-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  /* crediti compatti dentro il fold */
+  .t-credits { gap: 0; }
+  .t-credits .cr { flex-direction: row; align-items: baseline; justify-content: space-between; gap: 14px; padding: 8px 0; border-bottom: 1px solid var(--line); }
   .t-credits .cr:last-child { border-bottom: none; }
   .t-credits .cr span { flex-shrink: 0; }
   .t-credits .cr b { text-align: right; }
-  /* "Dove vederlo": bottoni uniformi a 2 colonne */
+  /* streaming a 2 colonne */
   .t-grid .streams { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
   .t-grid .stream { justify-content: center; padding: 11px 10px; font-size: 13.5px; }
   .t-grid .stream:hover { transform: none; }
+}
+/* DESKTOP: le sezioni a fisarmonica restano SEMPRE aperte e sembrano sezioni normali */
+@media (min-width: 861px) {
+  .t-fold { border: none; background: none; border-radius: 0; margin: 0; }
+  .t-fold > .t-fold-body { display: block !important; padding: 0; }
+  .t-fold > summary { list-style: none; cursor: default; display: flex; align-items: center; gap: 9px; font-family: var(--serif); font-weight: 600; font-size: 21px; margin: 30px 0 14px; color: var(--ink); }
+  .t-fold > summary::-webkit-details-marker, .t-fold > summary::after { display: none; }
+  .t-fold > summary > i { color: var(--accent); font-size: .85em; }
+  .t-aside .t-fold > summary { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-faint); margin: 18px 0 12px; }
+  .t-tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 14px 0 4px; }
 }
 .t-cover { width: 100%; border-radius: var(--r); box-shadow: var(--shadow-lg); border: 1px solid var(--line-2); aspect-ratio: 2/3; object-fit: cover; }
 .t-actions { display: flex; flex-direction: column; gap: 9px; margin-top: 14px; }
