@@ -26,18 +26,18 @@ html[data-theme="dark"] {
   --bg: #0e0d0b; --surface: #1a1712; --surface-2: #221d15;
   --line: rgba(214,190,140,.085); --line-2: rgba(214,190,140,.17);
   --ink: #ece4d3; --ink-soft: #a69d8b; --ink-faint: #736a5b;
-  --accent: #c2a368; --accent-soft: rgba(194,163,104,.13); --gold: #d8b878;
+  --accent: #7cc24a; --accent-soft: rgba(124,194,74,.14); --gold: #d8b878;
   --parch: #e7decb; --parch-ink: #211d14;
-  --hero-glow: radial-gradient(120% 90% at 50% -10%, rgba(194,163,104,.10), transparent 62%);
+  --hero-glow: radial-gradient(120% 90% at 50% -10%, rgba(124,194,74,.11), transparent 62%);
 }
 /* ── TEMA CHIARO (default) — editoriale: crema, bianco, rosso, nero serif ──── */
 html[data-theme="light"] {
   --bg: #f3efe6; --surface: #ffffff; --surface-2: #f6f2e9;
   --line: rgba(38,28,14,.10); --line-2: rgba(38,28,14,.17);
   --ink: #1b1712; --ink-soft: #6a6053; --ink-faint: #9b9080;
-  --accent: #b4542c; --accent-soft: rgba(180,84,44,.10); --gold: #9c7826;
+  --accent: #3f8f2e; --accent-soft: rgba(63,143,46,.11); --gold: #9c7826;
   --parch: #1b1712; --parch-ink: #ffffff;
-  --hero-glow: radial-gradient(120% 90% at 50% -10%, rgba(180,84,44,.06), transparent 62%);
+  --hero-glow: radial-gradient(120% 90% at 50% -10%, rgba(63,143,46,.07), transparent 62%);
 }
 
 * { box-sizing: border-box; }
