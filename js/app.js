@@ -305,7 +305,6 @@
       // delega azioni "visto / da vedere"
       document.addEventListener('click', e => {
         if (e.target.closest('.js-surprise')) { e.preventDefault(); this.surprise(); return; }
-        if (e.target.closest('.js-search')) { e.preventDefault(); this.openSearch(); return; }
         const sh = e.target.closest('.js-share');
         if (sh) { e.preventDefault(); this.share(sh.dataset.title, sh.dataset.id); return; }
         const more = e.target.closest('.js-more');
