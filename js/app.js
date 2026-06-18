@@ -590,13 +590,16 @@
       const mBox = p => `<a class="hm-box" href="/p/${esc(p.id)}" style="--accent:${esc(p.accent)}"><i class="${esc(p.icon)} hm-box-ic"></i><span class="hm-box-name">${esc(p.title)}</span><span class="hm-box-n">${catTitles(p).length}</span></a>`;
       return `
       <div class="wrap">
-        <!-- HOME MOBILE: solo box generi/percorsi, niente immagini né elenchi -->
+        <!-- HOME MOBILE: hero di benvenuto + box generi/percorsi -->
         <div class="home-m">
-          <div class="hm-greet">
-            <p class="hm-hi">${firstName ? `Ciao, ${firstName} 👋` : 'GUARDALO'}</p>
-            <p class="hm-title-sub">Da dove vuoi partire?</p>
+          <div class="hm-hero">
+            ${heroImg ? `<img class="hm-hero-img" src="${esc(heroImg.bannerImage || cover(heroImg))}" alt="" loading="eager" onload="this.classList.add('ld')" onerror="this.classList.add('ld')">` : ''}
+            <span class="hm-hero-veil"></span>
+            <div class="hm-hero-txt">
+              <p class="hm-hi">${firstName ? `Ciao, ${firstName} 👋` : 'Benvenuto su GUARDALO'}</p>
+              <h1 class="hm-hero-title">Da dove vuoi partire?</h1>
+            </div>
           </div>
-          <button class="hm-search js-search"><i class="ri-search-line"></i> Cerca un anime, regista, tema…</button>
           <div class="hm-quick">
             <a class="hm-quick-b" href="/esplora"><i class="ri-compass-3-line"></i> Esplora tutto</a>
             <button class="hm-quick-b ghost js-surprise"><i class="ri-shuffle-line"></i> Sorprendimi</button>
