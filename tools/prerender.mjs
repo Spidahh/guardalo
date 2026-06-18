@@ -11,6 +11,7 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 // Dominio del sito: SITE_URL esplicito → dominio di produzione Vercel (auto in build) → placeholder.
@@ -43,7 +44,15 @@ const sectionOf = id => GENRE_IDS.find(g => (CAT_MEMBERS[g] || []).includes(id))
 const crumb = items => ({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items.map((it, i) => ({ '@type': 'ListItem', position: i + 1, name: it.name, item: SITE + it.url })) });
 const WEBSITE = { '@context': 'https://schema.org', '@type': 'WebSite', name: 'GUARDALO', url: SITE + '/', description: 'I migliori anime di ogni genere, scelti e spiegati: perché guardarli, da dove iniziare e dove vederli.' };
 
-const tmpl = await readFile(join(ROOT, 'index.html'), 'utf8');
+// CACHE-BUSTING AUTOMATICO: i ?v= di css/app.js/data.js vengono dall'HASH del contenuto.
+// Così cambiano SOLO quando il file cambia davvero → niente più cache stale (e niente bump a mano).
+const hashOf = async f => createHash('sha1').update(await readFile(join(ROOT, f))).digest('hex').slice(0, 8);
+const ASSET_V = { 'css/style.css': await hashOf('css/style.css'), 'js/app.js': await hashOf('js/app.js'), 'js/data.js': await hashOf('js/data.js') };
+let tmpl = await readFile(join(ROOT, 'index.html'), 'utf8');
+for (const [file, v] of Object.entries(ASSET_V)) {
+  const esc = file.replace(/[.]/g, '\\$&');
+  tmpl = tmpl.replace(new RegExp(esc + '\\?v=[\\w.]+', 'g'), `${file}?v=${v}`);
+}
 
 function page({ urlPath, title, desc, ogImage, jsonld, content }) {
   let h = tmpl;
