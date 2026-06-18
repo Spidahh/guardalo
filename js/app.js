@@ -55,6 +55,9 @@
   // fasce per-genere: tiers[pathId][slug] = 'e' Essenziale | 'c' Consigliato | 'd' Da scoprire (default).
   const TIERS = CAT.tiers || {};
   const tierOf = (pid, slug) => (TIERS[pid] && TIERS[pid][slug]) || 'd';
+  // insieme globale degli "Essenziali": titoli marcati 'e' in almeno una sezione → badge sulle card.
+  const ESSENTIAL_IDS = new Set();
+  for (const pid in TIERS) { const m = TIERS[pid]; for (const id in m) { if (m[id] === 'e') ESSENTIAL_IDS.add(id); } }
   // immagine HERO di ogni categoria/percorso (editorial/categories.json → hero): scelta a mano, UNICA.
   const HERO_OF = CAT.hero || {};
   // titoli di una sezione (genere o percorso): la lista curata in categories.members. FONTE UNICA.
@@ -480,7 +483,8 @@
       const why = opts.why ? `<span class="card-why">${esc(opts.why)}</span>` : '';
       const col = t.coverColor ? `style="--cc:${esc(t.coverColor)}"` : '';
       const rank = opts.rank ? `<span class="card-rank">${opts.rank}</span>` : '';
-      return `<a class="card ${w ? 'is-watched' : ''} ${l ? 'is-later' : ''}" data-card="${esc(t.id)}" data-band="${esc(t.lengthBand)}" href="/t/${esc(t.id)}" ${col}>
+      const ess = (!opts.noEss && ESSENTIAL_IDS.has(t.id)) ? `<span class="card-ess"><i class="ri-vip-crown-fill"></i> Essenziale</span>` : '';
+      return `<a class="card ${w ? 'is-watched' : ''} ${l ? 'is-later' : ''} ${ess ? 'has-ess' : ''}" data-card="${esc(t.id)}" data-band="${esc(t.lengthBand)}" href="/t/${esc(t.id)}" ${col}>
         <div class="card-poster">
           <img src="${esc(thumb(cover(t)))}" alt="${esc(t.title)}" loading="lazy" onload="this.classList.add('ld')" onerror="this.classList.add('ld')">
           ${rank}
@@ -492,6 +496,7 @@
           <span class="lchip ls-${t.lengthBand}" title="${esc(lenLabel(t))} · ${esc(lenHint(t))}"><i class="ri-time-line"></i>${esc(lenLabel(t))}</span>
         </div>
         <div class="card-body">
+          ${ess}
           <div class="card-title">${esc(t.title)}</div>
           <div class="card-len ls-${t.lengthBand}"><i class="ri-time-line"></i>${esc(lenLabel(t))}<span class="card-len-hint">· ${esc(lenHint(t))}</span></div>
           <div class="card-meta">${esc(t.year || '')} · ${esc(t.typeLabel)}${t.score10 ? ` · <span class="card-score"><i class="ri-star-fill"></i>${t.score10}</span>` : ''}</div>
@@ -734,7 +739,7 @@
         const sec = (label, ic, list, cls) => list.length ? `
           <section class="wrap">
             <div class="sec-divider ${cls || ''}"><span class="sd-label"><i class="${ic}"></i> ${label}</span><span class="sd-line"></span><span class="sd-count">${list.length} titoli</span></div>
-            <div class="grid">${list.map(t => this.card(t)).join('')}</div>
+            <div class="grid">${list.map(t => this.card(t, { noEss: true })).join('')}</div>
           </section>` : '';
         const body = noPersonal
           ? sec('I classici', 'ri-medal-line', consigliati, 'sd-e')

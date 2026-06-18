@@ -1082,3 +1082,8 @@ a.g-chip:hover { border-color: var(--accent); color: var(--accent); }
 .empty.mini { padding: 26px 18px; margin-bottom: 8px; }
 .empty.mini i { font-size: 30px; }
 @media (max-width: 600px) { .list-controls { gap: 8px; } .lc-btn { padding: 7px 10px; } .lc-genre { flex: 1; min-width: 130px; } }
+
+/* ── BADGE "Essenziale" sulle card ─────────────────────────────────────── */
+.card-ess { display: inline-flex; align-items: center; gap: 4px; font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; color: var(--gold); margin-bottom: 3px; line-height: 1; }
+.card-ess i { font-size: 12px; }
+.card.is-watched .card-ess { opacity: .55; }
