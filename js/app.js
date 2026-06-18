@@ -422,6 +422,19 @@
         const ids = Object.keys(this.toWatch);
         if (ids.length) this.go('/t/' + ids[Math.floor(Math.random() * ids.length)]);
       });
+      // ordina / filtra "La mia lista" (Da vedere)
+      const lc = document.getElementById('listControls');
+      if (lc) lc.addEventListener('click', e => {
+        const b = e.target.closest('.lc-btn');
+        if (!b) return;
+        lc.querySelectorAll('.lc-btn').forEach(x => x.classList.toggle('on', x === b));
+        this.listSort = b.dataset.sort;
+        this.renderLaterGrid();
+      });
+      document.getElementById('listGenre')?.addEventListener('change', e => {
+        this.listGenre = e.target.value;
+        this.renderLaterGrid();
+      });
       const heroSearch = document.getElementById('heroSearch');
       if (heroSearch) heroSearch.addEventListener('click', () => this.openSearch());
       // filtro per tempo dentro la pagina categoria (client-side)
@@ -895,13 +908,44 @@
     }
 
     // ── VISTA: LA MIA LISTA ──────────────────────────────────────────────────────
+    laterSort(list, mode) {
+      const arr = [...list];
+      if (mode === 'voto') arr.sort((a, b) => (b.score10 || 0) - (a.score10 || 0));
+      else if (mode === 'az') arr.sort((a, b) => a.title.localeCompare(b.title));
+      else arr.sort((a, b) => BANDS.indexOf(a.lengthBand) - BANDS.indexOf(b.lengthBand));
+      return arr;
+    }
+    renderLaterGrid() {
+      const wrap = document.getElementById('laterGrid');
+      if (!wrap) return;
+      let list = Object.keys(this.toWatch).map(id => BY_ID.get(id)).filter(Boolean);
+      if (this.listGenre) list = list.filter(t => (t.genres || []).includes(this.listGenre));
+      list = this.laterSort(list, this.listSort || 'durata');
+      const cnt = document.getElementById('laterCount');
+      if (cnt) cnt.textContent = `${list.length} ${list.length === 1 ? 'titolo' : 'titoli'}`;
+      wrap.innerHTML = list.length
+        ? `<div class="grid">${list.map(t => this.card(t)).join('')}</div>`
+        : `<div class="empty mini"><i class="ri-filter-off-line"></i><p>Nessun titolo «da vedere» con questo filtro.</p></div>`;
+    }
     viewLista() {
+      this.listSort = 'durata'; this.listGenre = '';
       const watched = Object.keys(this.watched).map(id => BY_ID.get(id)).filter(Boolean).sort((a, b) => (b.score10 || 0) - (a.score10 || 0));
-      const later = Object.keys(this.toWatch).map(id => BY_ID.get(id)).filter(Boolean).sort((a, b) => BANDS.indexOf(a.lengthBand) - BANDS.indexOf(b.lengthBand));
+      const later = this.laterSort(Object.keys(this.toWatch).map(id => BY_ID.get(id)).filter(Boolean), 'durata');
       const hours = watched.reduce((s, t) => s + (t.coreMinutes || 0), 0) / 60;
 
       const grid = list => `<div class="grid">${list.map(t => this.card(t)).join('')}</div>`;
       const empty = (ic, msg) => `<div class="empty"><i class="${ic}"></i><p>${msg}</p><a class="btn-ghost" href="/percorsi">Vai ai percorsi</a></div>`;
+
+      const genreSet = [...new Set(later.flatMap(t => t.genres || []))].sort((a, b) => itGenre(a).localeCompare(itGenre(b)));
+      const controls = later.length > 1 ? `
+        <div class="list-controls" id="listControls">
+          <div class="lc-sort" role="group" aria-label="Ordina i titoli da vedere">
+            <button class="lc-btn on" data-sort="durata"><i class="ri-time-line"></i> Più corti</button>
+            <button class="lc-btn" data-sort="voto"><i class="ri-star-line"></i> Voto</button>
+            <button class="lc-btn" data-sort="az"><i class="ri-sort-asc"></i> A-Z</button>
+          </div>
+          ${genreSet.length > 1 ? `<select class="lc-genre" id="listGenre" aria-label="Filtra per genere"><option value="">Tutti i generi</option>${genreSet.map(g => `<option value="${esc(g)}">${esc(itGenre(g))}</option>`).join('')}</select>` : ''}
+        </div>` : '';
 
       return `
       <section class="wrap">
@@ -912,8 +956,9 @@
           <div class="ls-stat"><b>${later.length}</b><span>da vedere</span></div>
           <div class="ls-stat"><b>${Math.round(hours)}h</b><span>guardate</span></div>
         </div>
-        <div class="sec-head sub"><h2><i class="ri-bookmark-line"></i> Da vedere</h2>${later.length ? '<span class="sec-count">dai più corti</span>' : ''}</div>
-        ${later.length ? grid(later) : empty('ri-bookmark-line', 'Niente ancora in lista. Sfoglia i percorsi e salva cosa ti incuriosisce.')}
+        <div class="sec-head sub"><h2><i class="ri-bookmark-line"></i> Da vedere</h2>${later.length ? `<span class="sec-count" id="laterCount">${later.length} titoli</span>` : ''}</div>
+        ${controls}
+        ${later.length ? `<div id="laterGrid">${grid(later)}</div>` : empty('ri-bookmark-line', 'Niente ancora in lista. Sfoglia i percorsi e salva cosa ti incuriosisce.')}
         <div class="sec-head sub"><h2><i class="ri-check-double-line"></i> Visti</h2></div>
         ${watched.length ? grid(watched) : empty('ri-check-double-line', 'Segna i titoli che hai già visto.')}
       </section>`;
