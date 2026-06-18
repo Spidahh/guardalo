@@ -293,7 +293,7 @@ a.se-chip:hover { border-color: var(--accent); color: var(--accent); }
 .link-btn { background: none; border: none; color: var(--accent); font-weight: 700; cursor: pointer; font-family: var(--sans); font-size: 16px; padding: 0; }
 
 /* ── GRIGLIA generica / LISTA ─────────────────────────────────────────────── */
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(182px, 1fr)); gap: 18px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 14px; }
 .list-stats { display: flex; gap: 26px; padding: 4px 0 8px; }
 .ls-stat b { font-family: var(--serif); font-weight: 600; font-size: 30px; color: var(--accent); display: block; line-height: 1; }
 .ls-stat span { font-size: 13px; color: var(--ink-faint); }
@@ -395,19 +395,19 @@ a.se-chip:hover { border-color: var(--accent); color: var(--accent); }
 .sr-len.ls-lunghissimo { color: var(--len-lunghissimo); }
 
 /* ═══ v10.4 — card percorso cinematografiche (copertina di collezione) ═════ */
-.paths-grid { grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 20px; }
+.paths-grid { grid-template-columns: repeat(auto-fill, minmax(216px, 1fr)); gap: 16px; }
 .path-card { padding: 0; min-height: 0; border-radius: 18px; border-color: var(--line); }
 .path-card::before, .path-card::after { display: none !important; }
 .path-card:hover { transform: translateY(-5px); border-color: color-mix(in srgb, var(--accent) 60%, var(--line-2)); box-shadow: 0 26px 60px -28px color-mix(in srgb, var(--accent) 50%, #000); }
 
-.path-hero-img { position: relative; height: 188px; overflow: hidden; }
+.path-hero-img { position: relative; height: 142px; overflow: hidden; }
 .path-ic-wrap { position: absolute; top: 13px; left: 13px; width: 40px; height: 40px; border-radius: 12px; z-index: 2;
   display: grid; place-items: center; font-size: 21px; color: #fff;
   background: color-mix(in srgb, var(--accent) 88%, #000); box-shadow: 0 5px 16px rgba(0,0,0,.45); }
 .path-card .path-name { position: absolute; left: 17px; right: 17px; bottom: 13px; z-index: 2; margin: 0; color: #fff;
   font-family: var(--serif); font-weight: 600; font-size: 26px; line-height: 1.04; letter-spacing: -.01em;
   text-shadow: 0 2px 14px rgba(0,0,0,.55); }
-.path-card-body { padding: 15px 19px 18px; display: flex; flex-direction: column; }
+.path-card-body { padding: 12px 16px 14px; display: flex; flex-direction: column; }
 .path-card-body .path-foot { margin-top: auto; }
 .path-start { color: var(--accent); font-weight: 800; display: inline-flex; align-items: center; gap: 3px; }
 .path-card:hover .path-start i { transform: translateX(3px); transition: transform .2s; }
@@ -659,7 +659,7 @@ a.se-chip:hover { border-color: var(--accent); color: var(--accent); }
 @media (max-width: 620px) { .home-rail { flex-direction: column; } }
 
 /* ── v10.37: hero a UNA immagine cinematografica + quick-panel piatti ─────── */
-.home-hero { background: var(--surface); min-height: 360px; margin: 0; }
+.home-hero { background: var(--surface); min-height: 300px; margin: 0; }
 .home-grid { margin-bottom: 30px; }
 .home-rail { align-self: start; }
 .home-hero-art { position: absolute; inset: 0 0 0 36%; z-index: 0; }
@@ -716,7 +716,7 @@ html[data-theme="light"] { --red: #d6452b; }
   border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); transition: transform .16s ease, box-shadow .2s ease, border-color .15s; }
 .path-card:hover { transform: translateY(-4px); border-color: var(--line-2); box-shadow: var(--shadow-lg); }
 .path-card::before, .path-card::after { content: none !important; display: none !important; }
-.path-card .path-hero-img { height: 188px; }
+.path-card .path-hero-img { height: 142px; }
 .path-card .path-1img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; filter: none; opacity: 0; transition: opacity .5s ease, transform .45s ease; }
 .path-card .path-1img.ld { opacity: 1; }
 .path-card:hover .path-1img { transform: scale(1.05); }
@@ -734,11 +734,11 @@ html[data-theme="light"] { --red: #d6452b; }
 .qgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 @media (max-width: 720px) { .qgrid { grid-template-columns: 1fr; } }
 .qgrid .path-card { align-items: stretch; }
-.qgrid .path-card .path-hero-img { height: 160px; }
+.qgrid .path-card .path-hero-img { height: 124px; }
 .qgrid .path-card .path-name { font-size: 22px; }
 .qgrid .path-card .path-blurb { font-size: 14px; }
 /* card genere/percorso (non minuscole, ma nemmeno giganti) */
-.paths-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+.paths-grid { grid-template-columns: repeat(auto-fill, minmax(216px, 1fr)); gap: 16px; }
 
 /* ── ADMIN: pannello di gestione (solo admin) ─────────────────────────────── */
 .admin-gate { text-align: center; padding: 56px 20px; }
