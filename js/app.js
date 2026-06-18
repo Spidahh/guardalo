@@ -831,13 +831,11 @@
 
       // ETICHETTE = TUTTE le categorie del sito a cui appartiene il titolo (generi + percorsi + altre),
       // coerenti con la navigazione e cliccabili. Generi prima, poi percorsi/altre.
-      // GENERI = la categoria curata del SITO (se c'è, linka alla sua pagina) + i generi veri AniList
-      // (così sono RICCHI: One Piece = Azione, Avventura, Commedia, Drammatico, Fantasy, non solo "Battle Shōnen").
-      const siteSecs = GENRE_IDS.filter(sid => (CAT_MEMBERS[sid] || []).includes(t.id));
-      const siteChips = siteSecs.map(sid => { const p = PATHS.find(x => x.id === sid); return p ? `<a class="g-chip g-chip-site" href="/p/${esc(sid)}" title="Categoria del sito">${esc(p.title)}</a>` : ''; }).filter(Boolean);
-      const siteLabels = new Set(siteSecs.map(sid => ((PATHS.find(x => x.id === sid) || {}).title || '').toLowerCase()));
-      const aniChips = (t.genres || []).filter(g => !siteLabels.has(itGenre(g).toLowerCase())).map(g => `<a class="g-chip" href="/cerca/genere/${encodeURIComponent(g)}" title="Altri titoli del genere ${esc(itGenre(g))}">${esc(itGenre(g))}</a>`);
-      const genres = [...siteChips, ...aniChips].join('');
+      // GENERI = SOLO le categorie del sito a cui appartiene il titolo (i 18 generi + slice/sport),
+      // NON i percorsi/liste e NON i generi grezzi AniList. Scelta confermata da Francesco (lui ne aggiunge via SCHEMA).
+      const genreSecs = [...GENRE_IDS, ...Object.keys(CAT_MEMBERS).filter(s => !GENRE_IDS.includes(s) && !PERCORSI_IDS.includes(s))];
+      const siteSecs = genreSecs.filter(sid => (CAT_MEMBERS[sid] || []).includes(t.id));
+      const genres = siteSecs.map(sid => { const p = PATHS.find(x => x.id === sid); return p ? `<a class="g-chip" href="/p/${esc(sid)}">${esc(p.title)}</a>` : ''; }).filter(Boolean).join('');
       const struct = (t.structure || []);
       const mainSteps = struct.filter(s => s.main);
       const extras = struct.filter(s => !s.main);
