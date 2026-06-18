@@ -800,7 +800,15 @@
       const w = this.isWatched(id), l = this.isLater(id);
 
       const genres = (t.genres || []).map(g => `<a class="g-chip" href="/cerca/genere/${encodeURIComponent(g)}" title="${esc(GENRE_GLOSS[g] || 'Vedi tutti i ' + itGenre(g))}">${esc(itGenre(g))}</a>`).join('');
-      const tone = (t.tone || []).map(x => `<a class="t-chip" href="/cerca/tono/${encodeURIComponent(x)}" title="Altri titoli con atmosfera «${esc(x)}»">${esc(x)}</a>`).join('');
+      // i toni che ripetono un genere (es. genere "Azione" + tono "azione") NON si mostrano: niente doppioni
+      const genreKeys = new Set((t.genres || []).flatMap(g => [itGenre(g).toLowerCase().trim(), String(g).toLowerCase().trim()]));
+      const toneSeen = new Set();
+      const toneList = (t.tone || []).filter(x => {
+        const k = String(x).toLowerCase().trim();
+        if (genreKeys.has(k) || toneSeen.has(k)) return false;
+        toneSeen.add(k); return true;
+      });
+      const tone = toneList.map(x => `<a class="t-chip" href="/cerca/tono/${encodeURIComponent(x)}" title="Altri titoli con atmosfera «${esc(x)}»">${esc(x)}</a>`).join('');
       const struct = (t.structure || []);
       const mainSteps = struct.filter(s => s.main);
       const extras = struct.filter(s => !s.main);
