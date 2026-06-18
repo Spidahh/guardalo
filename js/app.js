@@ -653,36 +653,19 @@
         </div>
         <!-- HOME DESKTOP: invariata -->
         <div class="home-d">
-        <div class="home-grid">
-          <div class="home-main">
-            <section class="home-hero">
-              ${heroImg ? `<div class="home-hero-art"><img src="${esc(heroImg.bannerImage || cover(heroImg))}" alt="" loading="eager" onload="this.classList.add('ld')" onerror="this.classList.add('ld')"></div>` : ''}
-              <span class="home-hero-veil"></span>
-              <div class="home-hero-in">
-                <span class="hh-kicker">${this.user ? `<b>Ciao, ${esc((this.user.displayName || (this.user.email || '').split('@')[0]).split(' ')[0])}</b> · ` : ''}${esc(H.kicker || '')}</span>
-                <h1 class="hh-title">${esc(H.title || '')}</h1>
-                <p class="hh-sub">${esc(H.sub || '')}</p>
-                <div class="hh-cta">
-                  <a class="btn-red" href="${esc(H.ctaLink || '/esplora')}"><i class="ri-compass-3-line"></i> ${esc(H.ctaText || 'Sfoglia il catalogo')}</a>
-                  <button class="hh-btn ghost js-surprise"><i class="ri-shuffle-line"></i> Sorprendimi</button>
-                </div>
-              </div>
-            </section>
+        <section class="home-hero home-hero-full">
+          ${heroImg ? `<div class="home-hero-art"><img src="${esc(heroImg.bannerImage || cover(heroImg))}" alt="" loading="eager" onload="this.classList.add('ld')" onerror="this.classList.add('ld')"></div>` : ''}
+          <span class="home-hero-veil"></span>
+          <div class="home-hero-in">
+            ${this.user ? `<span class="hh-kicker">Ciao, ${esc((this.user.displayName || (this.user.email || '').split('@')[0]).split(' ')[0])} 👋</span>` : ''}
+            <h1 class="hh-title">${esc(H.title || '')}</h1>
+            <p class="hh-sub">${esc(H.sub || '')}</p>
+            <div class="hh-cta">
+              <a class="btn-red" href="${esc(H.ctaLink || '/esplora')}"><i class="ri-compass-3-line"></i> ${esc(H.ctaText || 'Esplora tutto')}</a>
+              <button class="hh-btn ghost js-surprise"><i class="ri-shuffle-line"></i> Sorprendimi</button>
+            </div>
           </div>
-          <aside class="home-rail">
-            <section class="rail-sec rail-tool">
-              <div class="rail-h-row"><h3 class="rail-h"><i class="ri-compass-3-line"></i> Aiutami a scegliere</h3></div>
-              <p class="rail-q">Quanto tempo hai?</p>
-              <div class="rail-times">
-                ${tempo.map(t => `<a href="/tempo/${esc(t.key)}"><i class="${esc(t.icon)}"></i> ${esc(t.label)}</a>`).join('')}
-              </div>
-            </section>
-            <section class="rail-sec">
-              <div class="rail-h-row"><h3 class="rail-h"><i class="ri-lightbulb-flash-line"></i> Lo sapevi?</h3></div>
-              <div class="rail-facts">${facts.map(f => `<p class="rail-fact">${esc(f)}</p>`).join('')}</div>
-            </section>
-          </aside>
-        </div>
+        </section>
 
         <section class="home-sec home-full">
           <div class="sec-divider"><span class="sd-label"><i class="ri-compass-3-line"></i> Da dove vuoi partire</span><span class="sd-line"></span></div>
@@ -841,8 +824,9 @@
 
       // ETICHETTE = TUTTE le categorie del sito a cui appartiene il titolo (generi + percorsi + altre),
       // coerenti con la navigazione e cliccabili. Generi prima, poi percorsi/altre.
-      const orderedSecs = [...GENRE_IDS, ...PERCORSI_IDS, ...Object.keys(CAT_MEMBERS).filter(s => !GENRE_IDS.includes(s) && !PERCORSI_IDS.includes(s))];
-      const siteSecs = orderedSecs.filter(sid => (CAT_MEMBERS[sid] || []).includes(t.id));
+      // SOLO i GENERI (categorie genere: i 18 + slice/sport), NON i percorsi/liste (Da Zero a Otaku, Capolavori…)
+      const genreSecs = [...GENRE_IDS, ...Object.keys(CAT_MEMBERS).filter(s => !GENRE_IDS.includes(s) && !PERCORSI_IDS.includes(s))];
+      const siteSecs = genreSecs.filter(sid => (CAT_MEMBERS[sid] || []).includes(t.id));
       const genres = siteSecs.map(sid => { const p = PATHS.find(x => x.id === sid); return p ? `<a class="g-chip" href="/p/${esc(sid)}">${esc(p.title)}</a>` : ''; }).filter(Boolean).join('');
       const struct = (t.structure || []);
       const mainSteps = struct.filter(s => s.main);
