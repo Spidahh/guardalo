@@ -154,10 +154,17 @@
     save() {
       this.dataTs = Date.now();
       const payload = { watched: this.watched, toWatch: this.toWatch, updatedAt: this.dataTs };
-      if (this.user && window.db) {
-        window.db.collection('users').doc(this.user.uid).set({ guardalo: payload }, { merge: true }).catch(() => {});
-      }
-      try { localStorage.setItem('guardalo_v10', JSON.stringify(payload)); } catch (e) {}
+      try { localStorage.setItem('guardalo_v10', JSON.stringify(payload)); } catch (e) {}   // locale: immediato
+      if (this.user && window.db) this.queueCloudSave();   // cloud: raggruppato (debounce 1.2s)
+    }
+    queueCloudSave() {
+      clearTimeout(this._cloudTimer);
+      this._cloudTimer = setTimeout(() => {
+        if (!this.user || !window.db) return;
+        window.db.collection('users').doc(this.user.uid)
+          .set({ guardalo: { watched: this.watched, toWatch: this.toWatch, updatedAt: this.dataTs } }, { merge: true })
+          .catch(() => { this.toast('Sincronizzazione non riuscita — riprova più tardi.', 'muted'); });
+      }, 1200);
     }
     isWatched(id) { return !!this.watched[id]; }
     isLater(id)   { return !!this.toWatch[id]; }
@@ -201,8 +208,8 @@
         this.listSort = sort; this.listGenre = gen;
         const lc = document.getElementById('listControls');
         if (lc) lc.querySelectorAll('.lc-btn').forEach(b => b.classList.toggle('on', b.dataset.sort === sort));
-        const sel = document.getElementById('listGenre'); if (sel) sel.value = gen;
-        if (sort !== 'durata' || gen) this.renderLaterGrid();
+        const sel = document.getElementById('listGenre'); if (sel) { sel.value = gen; if (sel.value !== gen) this.listGenre = ''; }
+        if (sort !== 'durata' || this.listGenre) this.renderLaterGrid();
         window.scrollTo(0, y);
       }
     }
@@ -529,7 +536,7 @@
     card(t, opts = {}) {
       if (!t) return '';
       const w = this.isWatched(t.id), l = this.isLater(t.id);
-      const why = opts.why ? `<span class="card-why">${esc(opts.why)}</span>` : '';
+      const why = opts.why ? `<span class="card-why" title="${esc(opts.why)}">${esc(opts.why)}</span>` : '';
       const col = t.coverColor ? `style="--cc:${esc(t.coverColor)}"` : '';
       const rank = opts.rank ? `<span class="card-rank">${opts.rank}</span>` : '';
       const ess = (!opts.noEss && ESSENTIAL_IDS.has(t.id)) ? `<span class="card-ess"><i class="ri-vip-crown-fill"></i> Essenziale</span>` : '';
@@ -549,7 +556,7 @@
           <div class="card-title" title="${esc(t.title)}">${esc(t.title)}</div>
           <div class="card-sub">
             <div class="card-len ls-${t.lengthBand}"><i class="ri-time-line"></i>${esc(lenLabel(t))}<span class="card-len-hint">· ${esc(lenHint(t))}</span></div>
-            <div class="card-meta">${esc(t.year || '')} · ${esc(t.typeLabel)}${t.score10 ? ` · <span class="card-score"><i class="ri-star-fill"></i>${t.score10}</span>` : ''}</div>
+            <div class="card-meta">${t.year ? esc(t.year) + ' · ' : ''}${esc(t.typeLabel)}${t.score10 ? ` · <span class="card-score"><i class="ri-star-fill"></i>${t.score10.toFixed(1)}</span>` : ''}</div>
           </div>
           ${why}
         </div>
@@ -911,7 +918,7 @@
             <div class="t-badges">
               ${this.lengthScale(t, false)}
               ${this.statusBadge(t)}
-              ${t.score10 ? `<span class="t-score"><i class="ri-star-fill"></i> ${t.score10}<span>/10</span></span>` : ''}
+              ${t.score10 ? `<span class="t-score"><i class="ri-star-fill"></i> ${t.score10.toFixed(1)}<span>/10</span></span>` : ''}
               <span class="t-year">${esc(t.year || '')}</span>
             </div>
 

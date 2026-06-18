@@ -359,8 +359,9 @@ a.se-chip:hover { border-color: var(--accent); color: var(--accent); }
 .btn-google:hover { border-color: var(--accent); } .btn-google i { color: var(--accent); font-size: 18px; }
 
 /* ── TOAST ────────────────────────────────────────────────────────────────── */
-.toasts { position: fixed; bottom: 22px; left: 50%; transform: translateX(-50%); z-index: 200; display: flex; flex-direction: column; gap: 8px; align-items: center; }
-.toast { padding: 12px 20px; border-radius: 999px; font-weight: 600; font-size: 14px; color: #fff; box-shadow: var(--shadow-lg); opacity: 0; transform: translateY(14px); transition: .3s; white-space: nowrap; }
+.toasts { position: fixed; bottom: 22px; left: 50%; transform: translateX(-50%); z-index: 250; display: flex; flex-direction: column; gap: 8px; align-items: center; width: max-content; max-width: calc(100vw - 32px); }
+.toast { padding: 12px 20px; border-radius: 18px; font-weight: 600; font-size: 14px; color: #fff; box-shadow: var(--shadow-lg); opacity: 0; transform: translateY(14px); transition: .3s; max-width: 100%; text-align: center; }
+@media (max-width: 860px) { .toasts { bottom: calc(86px + env(safe-area-inset-bottom, 0px)); } }
 .toast.show { opacity: 1; transform: none; }
 .toast-ok { background: var(--len-cortissimo); }
 .toast-later { background: var(--gold); color: #2a200a; }
@@ -559,7 +560,7 @@ a.se-chip:hover { border-color: var(--accent); color: var(--accent); }
 .foot { border-top: 1px solid var(--line); margin-top: 0; padding: 24px 28px 36px; text-align: center; }
 
 /* griglia home */
-.home-grid { display: grid; grid-template-columns: minmax(0, 1fr) 322px; gap: 30px; align-items: start; max-width: 1280px; }
+.home-grid { display: grid; grid-template-columns: minmax(0, 1fr) 322px; gap: 30px; align-items: start; }
 .home-main { display: flex; flex-direction: column; gap: 32px; min-width: 0; }
 
 /* percorso in evidenza */
@@ -756,7 +757,7 @@ a.se-chip:hover { border-color: var(--accent); color: var(--accent); }
 .sec-divider .sd-link:hover { color: var(--gold); }
 
 /* HOME a due colonne con barra destra */
-.home-grid { display: grid; grid-template-columns: minmax(0,1fr) 384px; gap: 28px; align-items: stretch; }
+.home-grid { display: grid; grid-template-columns: minmax(0,1fr) 384px; gap: 28px; align-items: start; }
 .home-main { min-width: 0; display: flex; flex-direction: column; }
 .home-main > .home-hero { flex: 1; }
 .home-rail { display: flex; flex-direction: column; gap: 18px; position: sticky; top: 14px; }
@@ -783,7 +784,7 @@ a.se-chip:hover { border-color: var(--accent); color: var(--accent); }
 /* ── v10.37: hero a UNA immagine cinematografica + quick-panel piatti ─────── */
 .home-hero { background: var(--surface); min-height: 360px; margin: 0; }
 .home-grid { margin-bottom: 30px; }
-.home-rail { align-self: stretch; }
+.home-rail { align-self: start; }
 .home-hero-art { position: absolute; inset: 0 0 0 36%; z-index: 0; }
 .home-hero-art img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 24%;
   opacity: 0; transition: opacity .9s ease; filter: saturate(1) contrast(1.02); }
