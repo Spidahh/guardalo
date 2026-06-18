@@ -585,8 +585,29 @@
       const H = HOME.hero || {};
       const tempo = HOME.tempo || [];
       const tiles = HOME.tiles || [];
+      const firstName = this.user ? esc((this.user.displayName || (this.user.email || '').split('@')[0]).split(' ')[0]) : '';
+      // box compatto solo-testo per la home MOBILE (niente immagini)
+      const mBox = p => `<a class="hm-box" href="/p/${esc(p.id)}" style="--accent:${esc(p.accent)}"><i class="${esc(p.icon)} hm-box-ic"></i><span class="hm-box-name">${esc(p.title)}</span><span class="hm-box-n">${catTitles(p).length}</span></a>`;
       return `
       <div class="wrap">
+        <!-- HOME MOBILE: solo box generi/percorsi, niente immagini né elenchi -->
+        <div class="home-m">
+          <div class="hm-greet">
+            <p class="hm-hi">${firstName ? `Ciao, ${firstName} 👋` : 'GUARDALO'}</p>
+            <p class="hm-title-sub">Da dove vuoi partire?</p>
+          </div>
+          <button class="hm-search js-search"><i class="ri-search-line"></i> Cerca un anime, regista, tema…</button>
+          <div class="hm-quick">
+            <a class="hm-quick-b" href="/esplora"><i class="ri-compass-3-line"></i> Esplora tutto</a>
+            <button class="hm-quick-b ghost js-surprise"><i class="ri-shuffle-line"></i> Sorprendimi</button>
+          </div>
+          <h2 class="hm-h"><i class="ri-shapes-line"></i> Generi</h2>
+          <div class="hm-boxes">${GENRE_PATHS.map(mBox).join('')}</div>
+          <h2 class="hm-h"><i class="ri-route-line"></i> Percorsi</h2>
+          <div class="hm-boxes">${PERCORSI_PATHS.map(mBox).join('')}</div>
+        </div>
+        <!-- HOME DESKTOP: invariata -->
+        <div class="home-d">
         <div class="home-grid">
           <div class="home-main">
             <section class="home-hero">
@@ -634,6 +655,7 @@
           <div class="sec-divider"><span class="sd-label"><i class="ri-route-line"></i> Percorsi guidati</span><span class="sd-line"></span><a class="sd-count sd-link" href="/percorsi">Tutti i percorsi <i class="ri-arrow-right-line"></i></a></div>
           <div class="paths-grid">${percorsiBrowse}</div>
         </section>
+        </div>
       </div>`;
     }
     // box "Lo sapevi?" autonomo per le pagine di navigazione (una curiosità a caso)

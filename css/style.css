@@ -1100,3 +1100,25 @@ a.g-chip:hover { border-color: var(--accent); color: var(--accent); }
 /* ── "Mostra altri" (paginazione Esplora) ──────────────────────────────── */
 .more-wrap { display: flex; justify-content: center; padding: 22px 0 8px; }
 .more-wrap .js-more { font-size: 14px; padding: 11px 22px; }
+
+/* ── HOME MOBILE: launcher a box, niente immagini (≤600px) ─────────────── */
+.home-m { display: none; }
+@media (max-width: 600px) {
+  .home-d { display: none; }
+  .home-m { display: block; padding-top: 6px; }
+  .hm-greet { margin-bottom: 14px; }
+  .hm-hi { font-size: 15px; font-weight: 600; color: var(--ink-soft); margin: 0 0 3px; }
+  .hm-title-sub { font-family: var(--serif); font-size: 27px; font-weight: 600; line-height: 1.08; margin: 0; color: var(--ink); }
+  .hm-search { display: flex; align-items: center; gap: 9px; width: 100%; padding: 13px 16px; border-radius: 13px; border: 1px solid var(--line-2); background: var(--surface); color: var(--ink-soft); font-size: 14px; font-weight: 500; font-family: inherit; cursor: pointer; margin-bottom: 10px; text-align: left; }
+  .hm-search i { font-size: 18px; }
+  .hm-quick { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 24px; }
+  .hm-quick-b { display: inline-flex; align-items: center; justify-content: center; gap: 7px; padding: 12px; border-radius: 11px; font-size: 13.5px; font-weight: 700; text-decoration: none; border: 1px solid var(--accent); background: var(--accent); color: #fff; cursor: pointer; font-family: inherit; }
+  .hm-quick-b.ghost { background: var(--surface); color: var(--ink); border-color: var(--line-2); }
+  .hm-h { display: flex; align-items: center; gap: 8px; font-family: var(--serif); font-size: 20px; font-weight: 600; margin: 0 0 11px; color: var(--ink); }
+  .hm-h i { color: var(--accent); font-size: 18px; }
+  .hm-boxes { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 26px; }
+  .hm-box { position: relative; display: flex; flex-direction: column; gap: 8px; padding: 13px 12px; border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 12px; background: var(--surface); color: var(--ink); text-decoration: none; min-height: 56px; }
+  .hm-box-ic { font-size: 19px; color: var(--accent); line-height: 1; }
+  .hm-box-name { font-size: 13px; font-weight: 700; line-height: 1.18; }
+  .hm-box-n { position: absolute; top: 11px; right: 12px; font-size: 11px; font-weight: 600; color: var(--ink-faint); }
+}
