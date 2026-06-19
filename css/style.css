@@ -134,7 +134,7 @@ em { font-style: italic; }
 .card-title { font-weight: 700; font-size: 14px; line-height: 1.25; margin-bottom: 3px;
   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
   min-height: 2.5em; }  /* riserva sempre 2 righe: i dati sotto restano allineati su tutte le card */
-.card-meta { font-size: 11.5px; color: var(--ink-faint); font-weight: 500; }
+.card-meta { font-size: 11.5px; color: var(--ink-faint); font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .card-score { color: var(--gold); font-weight: 700; }
 .card-sub { display: contents; }   /* su desktop trasparente; su mobile diventa una riga sola */
 .card-why { display: block; margin-top: 6px; font-size: 11px; color: var(--accent); font-weight: 600; line-height: 1.3;
@@ -375,9 +375,9 @@ a.se-chip:hover { border-color: var(--accent); color: var(--accent); }
 .row-scroll .lchip, .lv-cards .lchip { font-size: 9.5px; }
 
 /* lunghezza come TESTO colorato nella riga info di ogni card (chiara in ogni elenco) */
-.card-len { display: flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 800; margin: 2px 0 3px; line-height: 1.2; }
+.card-len { display: flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 800; margin: 2px 0 3px; line-height: 1.2; white-space: nowrap; }
 .card-len i { font-size: 13px; opacity: .9; }
-.card-len-hint { font-weight: 500; color: var(--ink-faint); font-size: 10.5px; }
+.card-len-hint { display: none; }  /* via il "· un impegno serio/qualche settimana": lunghezza variabile = sballava l'allineamento. Resta nella scheda. */
 .card-len.ls-cortissimo { color: var(--len-cortissimo); }
 .card-len.ls-corto { color: var(--len-corto); }
 .card-len.ls-medio { color: var(--len-medio); }
