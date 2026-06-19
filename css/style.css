@@ -9,11 +9,11 @@
   --sans: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 
   /* fasce lunghezza — semantica condivisa */
-  --len-cortissimo: #5fa06f;
-  --len-corto:      #5e9aa6;
-  --len-medio:      #c89a3c;
-  --len-lungo:      #d07a39;
-  --len-lunghissimo:#bd5340;
+  --len-cortissimo: #6aa35a;
+  --len-corto:      #3f9384;
+  --len-medio:      #3f86a8;
+  --len-lungo:      #4f6fa8;
+  --len-lunghissimo:#615fa0;
 
   --r: 11px; --r-sm: 7px; --r-lg: 16px;
   --shadow: 0 8px 30px -16px rgba(0,0,0,.62);
@@ -154,7 +154,7 @@ em { font-style: italic; }
 .status { display: inline-flex; align-items: center; gap: 5px; font-size: 12.5px; font-weight: 700; padding: 5px 11px; border-radius: 999px; }
 .status i { font-size: 14px; }
 .status-done { background: #5fa06f22; color: var(--len-cortissimo); }
-.status-airing { background: #d07a3922; color: var(--len-lungo); }
+.status-airing { background: rgba(156,120,38,.14); color: var(--gold); }
 .status-airing i { animation: spin 2.4s linear infinite; }
 .status-soon { background: var(--line); color: var(--ink-faint); }
 @keyframes spin { to { transform: rotate(360deg); } }
@@ -691,8 +691,8 @@ a.se-chip:hover { border-color: var(--accent); color: var(--accent); }
 .path-ic-wrap { background: rgba(14,12,9,.58); border: 1px solid var(--line-2); color: var(--gold); box-shadow: none; backdrop-filter: blur(6px); }
 
 /* ── v10.38: home densa — statistiche, card spotlight, bottoni rossi ──────── */
-html[data-theme="dark"] { --red: #e0563a; }
-html[data-theme="light"] { --red: #d6452b; }
+html[data-theme="dark"] { --red: #7cc24a; }
+html[data-theme="light"] { --red: #3f8f2e; }
 .btn-red { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 9px; border: 1px solid transparent;
   background: var(--red); color: #fff; font-weight: 700; font-size: 14.5px; cursor: pointer; font-family: var(--sans);
   box-shadow: 0 14px 28px -14px var(--red); transition: transform .12s ease, filter .15s; }
