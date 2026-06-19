@@ -538,8 +538,9 @@
       const why = opts.why ? `<span class="card-why" title="${esc(opts.why)}">${esc(opts.why)}</span>` : '';
       const col = t.coverColor ? `style="--cc:${esc(t.coverColor)}"` : '';
       const rank = opts.rank ? `<span class="card-rank">${opts.rank}</span>` : '';
-      const ess = (!opts.noEss && ESSENTIAL_IDS.has(t.id)) ? `<span class="card-ess"><i class="ri-vip-crown-fill"></i> Essenziale</span>` : '';
-      return `<a class="card ${w ? 'is-watched' : ''} ${l ? 'is-later' : ''} ${ess ? 'has-ess' : ''}" data-card="${esc(t.id)}" data-band="${esc(t.lengthBand)}" href="/t/${esc(t.id)}" ${col}>
+      const essMark = (!opts.noEss && ESSENTIAL_IDS.has(t.id));
+      const essTag = c => essMark ? `<span class="card-ess ${c}"><i class="ri-vip-crown-fill"></i> Essenziale</span>` : '';
+      return `<a class="card ${w ? 'is-watched' : ''} ${l ? 'is-later' : ''} ${essMark ? 'has-ess' : ''}" data-card="${esc(t.id)}" data-band="${esc(t.lengthBand)}" href="/t/${esc(t.id)}" ${col}>
         <div class="card-poster">
           <img src="${esc(thumb(cover(t)))}" alt="${esc(t.title)}" loading="lazy" onload="this.classList.add('ld')" onerror="this.classList.add('ld')">
           ${rank}
@@ -548,10 +549,11 @@
             <button class="cm js-later ${l ? 'on' : ''}" data-id="${esc(t.id)}" title="Da vedere" aria-label="Aggiungi a Da vedere"><i class="ri-bookmark-line"></i></button>
           </div>
           ${w ? '<span class="card-seen"><i class="ri-check-double-line"></i> Visto</span>' : ''}
+          ${essTag('card-ess-poster')}
           <span class="lchip ls-${t.lengthBand}" title="${esc(lenLabel(t))} · ${esc(lenHint(t))}"><i class="ri-time-line"></i>${esc(lenLabel(t))}</span>
         </div>
         <div class="card-body">
-          ${ess}
+          ${essTag('card-ess-body')}
           <div class="card-title" title="${esc(t.title)}">${esc(t.title)}</div>
           <div class="card-sub">
             <div class="card-len ls-${t.lengthBand}"><i class="ri-time-line"></i>${esc(lenLabel(t))}<span class="card-len-hint">· ${esc(lenHint(t))}</span></div>
