@@ -79,11 +79,8 @@
       "dragon-ball",
       "my-hero-academia",
       "saint-seiya",
-      "akame-ga-kill",
-      "to-be-hero-x",
       "yu-yu-hakusho",
       "wistoria-wand-and-sword",
-      "my-hero-academia-vigilantes",
       "tower-of-god"
     ],
     "seinen-e-maturo": [
@@ -149,8 +146,7 @@
       "sword-art-online",
       "failure-frame-i-became-the-strongest",
       "konosuba",
-      "the-wrong-way-to-use-healing-magic",
-      "abenobashi-magical-shopping-street"
+      "the-wrong-way-to-use-healing-magic"
     ],
     "fantasy": [
       "fullmetal-alchemist-brotherhood",
@@ -191,7 +187,6 @@
       "gate",
       "grimgar-of-fantasy-and-ash",
       "reincarnated-as-a-sword",
-      "akame-ga-kill",
       "saint-seiya",
       "handyman-saitou-in-another-world",
       "the-world-s-finest-assassin-gets-reincarnated-in-another-world-as-an-aristocrat",
@@ -405,12 +400,9 @@
       "komi-cant-communicate"
     ],
     "commedia": [
-      "mob-psycho-100",
       "one-punch-man",
       "dan-da-dan",
       "spy-x-family",
-      "the-eminence-in-shadow",
-      "handyman-saitou-in-another-world",
       "abenobashi-magical-shopping-street",
       "gintama",
       "great-teacher-onizuka",
@@ -627,11 +619,8 @@
       "dragon-ball": "c",
       "my-hero-academia": "c",
       "saint-seiya": "c",
-      "akame-ga-kill": "c",
-      "to-be-hero-x": "d",
       "yu-yu-hakusho": "d",
       "wistoria-wand-and-sword": "d",
-      "my-hero-academia-vigilantes": "d",
       "tower-of-god": "d"
     },
     "seinen-e-maturo": {
@@ -697,8 +686,7 @@
       "sword-art-online": "c",
       "failure-frame-i-became-the-strongest": "c",
       "konosuba": "d",
-      "the-wrong-way-to-use-healing-magic": "d",
-      "abenobashi-magical-shopping-street": "d"
+      "the-wrong-way-to-use-healing-magic": "d"
     },
     "fantasy": {
       "fullmetal-alchemist-brotherhood": "e",
@@ -739,7 +727,6 @@
       "gate": "d",
       "grimgar-of-fantasy-and-ash": "d",
       "reincarnated-as-a-sword": "d",
-      "akame-ga-kill": "d",
       "saint-seiya": "d",
       "handyman-saitou-in-another-world": "d",
       "the-world-s-finest-assassin-gets-reincarnated-in-another-world-as-an-aristocrat": "d",
@@ -953,12 +940,9 @@
       "komi-cant-communicate": "d"
     },
     "commedia": {
-      "mob-psycho-100": "e",
       "one-punch-man": "e",
       "dan-da-dan": "e",
       "spy-x-family": "c",
-      "the-eminence-in-shadow": "c",
-      "handyman-saitou-in-another-world": "c",
       "abenobashi-magical-shopping-street": "c",
       "gintama": "d",
       "great-teacher-onizuka": "d",

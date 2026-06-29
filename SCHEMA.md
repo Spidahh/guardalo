@@ -5,7 +5,7 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 
 ## GENERI (in ordine di griglia)
 
-### Battle Shōnen  (25)
+### Battle Shōnen  (22)
 - [E] Hunter x Hunter (2011)
 - [E] ONE PIECE
 - [E] JUJUTSU KAISEN
@@ -25,11 +25,8 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [C] Dragon Ball
 - [C] My Hero Academia
 - [C] Saint Seiya: Knights of the Zodiac
-- [C] Akame ga Kill!
-- [D] To Be Hero X
 - [D] Yu Yu Hakusho: Ghostfiles
 - [D] Wistoria: Wand and Sword
-- [D] My Hero Academia: Vigilantes
 - [D] Tower of God
 
 ### Seinen e Roba Adulta  (40)
@@ -74,7 +71,7 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [D] Tokyo Ghoul
 - [D] Terra Formars
 
-### Isekai  (22)
+### Isekai  (21)
 - [E] Solo Leveling
 - [E] Shangri-La Frontier
 - [E] Grimgar of Fantasy and Ash
@@ -96,9 +93,8 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [D] That Time I Got Reincarnated as a Slime
 - [D] KONOSUBA -God's blessing on this wonderful world!
 - [D] The Wrong Way to Use Healing Magic
-- [D] Magical Shopping Arcade Abenobashi
 
-### Fantasy  (43)
+### Fantasy  (42)
 - [E] Fullmetal Alchemist: Brotherhood
 - [E] Hunter x Hunter (2011)
 - [E] Made in Abyss
@@ -137,7 +133,6 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [D] Gate
 - [D] Grimgar of Fantasy and Ash
 - [D] Reincarnated as a Sword
-- [D] Akame ga Kill!
 - [D] Saint Seiya: Knights of the Zodiac
 - [D] Handyman Saitou in Another World
 - [D] The World's Finest Assassin Gets Reincarnated in Another World as an Aristocrat
@@ -350,13 +345,10 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [D] Honey and Clover
 - [D] Komi Can’t Communicate
 
-### Commedia  (18)
-- [E] Mob Psycho 100
+### Commedia  (15)
 - [E] One-Punch Man
 - [E] DAN DA DAN
 - [C] SPY x FAMILY
-- [C] The Eminence in Shadow
-- [C] Handyman Saitou in Another World
 - [C] Magical Shopping Arcade Abenobashi
 - [D] Gintama
 - [D] GTO: Great Teacher Onizuka
