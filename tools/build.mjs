@@ -57,6 +57,8 @@ const MANUAL_MAP = {
     'la-citta-incantata': 199,       // Spirited Away (titolo IT non trovato)
     'sentence-to-be-hero': 167152,   // Sentenced to Be a Hero (2026)
     'daltanious': 4411,              // romaji "Mirai Robo Daltanias" (la ricerca falliva su "Daltanious")
+    'nippon-sangoku': 206914,        // NIPPON SANGOKU: The Three Nations of the Crimson Sun (2026)
+    'the-wrong-way-to-use-healing-magic': 137908, // Chiyu Mahou no Machigatta Tsukaikata (2024)
 };
 
 // titoli da NON includere: animazione occidentale, non presente/affidabile su AniList.

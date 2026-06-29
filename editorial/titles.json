@@ -1836,5 +1836,25 @@
       "Concettuale"
     ],
     "forWho": null
+  },
+  "nippon-sangoku": {
+    "hook": "Fantascienza distopica e politica: dopo una guerra nucleare, una catastrofe e il malgoverno, la società giapponese crolla e il paese si spezza in tre nazioni che si contendono il dominio. Aoteru Misumi, ex funzionario agricolo, giura di riunificare il Giappone armato solo della sua intelligenza e della parola, scalando i ranghi fino a diventare leggenda. La nascita di uno stratega geniale, in un'ambientazione cupa e adulta.",
+    "tone": [
+      "distopico",
+      "politico",
+      "strategico",
+      "cupo"
+    ],
+    "forWho": "Per chi ama strateghi, intrighi e politica in un futuro post-apocalittico."
+  },
+  "the-wrong-way-to-use-healing-magic": {
+    "hook": "Fantasy isekai con una premessa ribaltata: tre studenti vengono evocati in un altro mondo, ma Usato ci finisce per sbaglio e scopre un talento raro per la magia curativa. Invece di restare nelle retrovie, allena le sue capacità di auto-guarigione fino a una resistenza e una forza assurde. Avventura leggera e d'azione, con un tocco ironico sul «modo sbagliato» di usare la magia di cura.",
+    "tone": [
+      "isekai",
+      "fantasy",
+      "action",
+      "leggero"
+    ],
+    "forWho": "Per chi vuole un isekai d'azione spensierato con una trovata diversa sul guaritore."
   }
 }

@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-29T08:30:05.639Z",
+  "generatedAt": "2026-06-29T08:33:07.935Z",
   "attribution": "Dati e immagini da AniList (anilist.co)",
-  "count": 188,
+  "count": 190,
   "titles": [
     {
       "id": "attack-on-titan",
@@ -228,6 +228,10 @@
             "why": "Atmosfera e temi affini"
           },
           {
+            "id": "nippon-sangoku",
+            "why": "Atmosfera e temi affini"
+          },
+          {
             "id": "summer-time-rendering",
             "why": "Atmosfera e temi affini"
           },
@@ -253,10 +257,6 @@
           },
           {
             "id": "wistoria-wand-and-sword",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "sentence-to-be-hero",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -2482,6 +2482,10 @@
             "why": "Atmosfera e temi affini"
           },
           {
+            "id": "nippon-sangoku",
+            "why": "Atmosfera e temi affini"
+          },
+          {
             "id": "cyberpunk-edgerunners",
             "why": "Atmosfera e temi affini"
           },
@@ -2495,10 +2499,6 @@
           },
           {
             "id": "parasyte-the-maxim",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "trigun",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -5488,6 +5488,10 @@
         "autore": [],
         "affin": [
           {
+            "id": "nippon-sangoku",
+            "why": "Atmosfera e temi affini"
+          },
+          {
             "id": "berserk",
             "why": "Atmosfera e temi affini"
           },
@@ -5529,10 +5533,6 @@
           },
           {
             "id": "neon-genesis-evangelion",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "one-piece",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -7025,6 +7025,10 @@
             "why": "Atmosfera e temi affini"
           },
           {
+            "id": "the-wrong-way-to-use-healing-magic",
+            "why": "Atmosfera e temi affini"
+          },
+          {
             "id": "attack-on-titan",
             "why": "Atmosfera e temi affini"
           },
@@ -7042,10 +7046,6 @@
           },
           {
             "id": "naruto",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "one-piece",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -7802,6 +7802,10 @@
         "autore": [],
         "affin": [
           {
+            "id": "nippon-sangoku",
+            "why": "Atmosfera e temi affini"
+          },
+          {
             "id": "fullmetal-alchemist-brotherhood",
             "why": "Atmosfera e temi affini"
           },
@@ -7843,10 +7847,6 @@
           },
           {
             "id": "golden-kamuy",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "kingdom",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -9432,7 +9432,7 @@
             "why": "Atmosfera e temi affini"
           },
           {
-            "id": "attack-on-titan",
+            "id": "the-wrong-way-to-use-healing-magic",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -9617,6 +9617,10 @@
             "why": "Atmosfera e temi affini"
           },
           {
+            "id": "nippon-sangoku",
+            "why": "Atmosfera e temi affini"
+          },
+          {
             "id": "death-note",
             "why": "Atmosfera e temi affini"
           },
@@ -9634,10 +9638,6 @@
           },
           {
             "id": "deca-dence",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "86-eighty-six",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -9760,6 +9760,10 @@
           },
           {
             "id": "dungeon-meshi",
+            "why": "Chi ha amato questo ha amato anche"
+          },
+          {
+            "id": "nippon-sangoku",
             "why": "Chi ha amato questo ha amato anche"
           },
           {
@@ -10112,6 +10116,10 @@
           {
             "id": "grimgar-of-fantasy-and-ash",
             "why": "Chi ha amato questo ha amato anche"
+          },
+          {
+            "id": "the-wrong-way-to-use-healing-magic",
+            "why": "Chi ha amato questo ha amato anche"
           }
         ],
         "saga": [],
@@ -10274,6 +10282,10 @@
           },
           {
             "id": "dan-da-dan",
+            "why": "Chi ha amato questo ha amato anche"
+          },
+          {
+            "id": "nippon-sangoku",
             "why": "Chi ha amato questo ha amato anche"
           }
         ],
@@ -11453,6 +11465,10 @@
           },
           {
             "id": "berserk",
+            "why": "Chi ha amato questo ha amato anche"
+          },
+          {
+            "id": "nippon-sangoku",
             "why": "Chi ha amato questo ha amato anche"
           },
           {
@@ -13844,15 +13860,15 @@
             "why": "Atmosfera e temi affini"
           },
           {
+            "id": "nippon-sangoku",
+            "why": "Atmosfera e temi affini"
+          },
+          {
             "id": "attack-on-titan",
             "why": "Atmosfera e temi affini"
           },
           {
             "id": "gurren-lagann",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "hunter-x-hunter",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -15072,6 +15088,10 @@
           },
           {
             "id": "overlord",
+            "why": "Chi ha amato questo ha amato anche"
+          },
+          {
+            "id": "the-wrong-way-to-use-healing-magic",
             "why": "Chi ha amato questo ha amato anche"
           },
           {
@@ -24070,15 +24090,15 @@
             "why": "Atmosfera e temi affini"
           },
           {
+            "id": "nippon-sangoku",
+            "why": "Atmosfera e temi affini"
+          },
+          {
             "id": "gurren-lagann",
             "why": "Atmosfera e temi affini"
           },
           {
             "id": "steins-gate",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "death-parade",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -24195,6 +24215,10 @@
             "why": "Atmosfera e temi affini"
           },
           {
+            "id": "nippon-sangoku",
+            "why": "Atmosfera e temi affini"
+          },
+          {
             "id": "gate",
             "why": "Atmosfera e temi affini"
           },
@@ -24216,10 +24240,6 @@
           },
           {
             "id": "gurren-lagann",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "steins-gate",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -27692,6 +27712,10 @@
             "why": "Atmosfera e temi affini"
           },
           {
+            "id": "nippon-sangoku",
+            "why": "Atmosfera e temi affini"
+          },
+          {
             "id": "berserk",
             "why": "Atmosfera e temi affini"
           },
@@ -27705,10 +27729,6 @@
           },
           {
             "id": "cowboy-bebop",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "deca-dence",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -30472,6 +30492,10 @@
             "why": "Atmosfera e temi affini"
           },
           {
+            "id": "nippon-sangoku",
+            "why": "Atmosfera e temi affini"
+          },
+          {
             "id": "legend-of-the-galactic-heroes",
             "why": "Atmosfera e temi affini"
           },
@@ -30509,10 +30533,6 @@
           },
           {
             "id": "cyberpunk-edgerunners",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "naruto",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -31034,6 +31054,10 @@
             "why": "Atmosfera e temi affini"
           },
           {
+            "id": "nippon-sangoku",
+            "why": "Atmosfera e temi affini"
+          },
+          {
             "id": "neon-genesis-evangelion",
             "why": "Atmosfera e temi affini"
           },
@@ -31055,10 +31079,6 @@
           },
           {
             "id": "flcl",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "planetes",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -35224,6 +35244,10 @@
             "why": "Atmosfera e temi affini"
           },
           {
+            "id": "nippon-sangoku",
+            "why": "Atmosfera e temi affini"
+          },
+          {
             "id": "fullmetal-alchemist-brotherhood",
             "why": "Atmosfera e temi affini"
           },
@@ -35261,10 +35285,6 @@
           },
           {
             "id": "violet-evergarden",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "mushoku-tensei",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -35388,6 +35408,321 @@
           },
           {
             "id": "attack-on-titan",
+            "why": "Atmosfera e temi affini"
+          }
+        ]
+      }
+    },
+    {
+      "id": "nippon-sangoku",
+      "title": "NIPPON SANGOKU: The Three Nations of the Crimson Sun",
+      "titleRomaji": "Nippon Sangoku",
+      "titleNative": "日本三國",
+      "year": 2026,
+      "format": "ONA",
+      "typeLabel": "ONA",
+      "statusLabel": "Concluso",
+      "episodes": 12,
+      "sagaEpisodes": 12,
+      "coreMinutes": 312,
+      "lengthBand": "corto",
+      "lengthLabel": "Corto",
+      "lengthHint": "un weekend",
+      "genres": [
+        "Action",
+        "Drama",
+        "Sci-Fi"
+      ],
+      "tags": [
+        "Politics",
+        "War",
+        "Military",
+        "Seinen",
+        "Dystopian",
+        "Revenge",
+        "Philosophy",
+        "Post-Apocalyptic"
+      ],
+      "studios": [
+        "Studio Kafka"
+      ],
+      "director": "Kazuaki Terasawa",
+      "creator": "Ikka Matsuki",
+      "sourceLabel": "Manga",
+      "score10": 8.4,
+      "popularity": 47486,
+      "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx206914-SHKX08LarRzB.jpg",
+      "coverColor": "#35c9e4",
+      "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/206914-owssGq2CGhRZ.jpg",
+      "streaming": [
+        {
+          "name": "Amazon Prime Video",
+          "url": "https://www.amazon.com/dp/B0GKZDKSJW"
+        },
+        {
+          "name": "Prime Video",
+          "url": "https://www.primevideo.com/detail/0LW570H4NYAE6XSCD8I7KZMVNH"
+        }
+      ],
+      "startFrom": null,
+      "structure": [
+        {
+          "name": "NIPPON SANGOKU: The Three Nations of the Crimson Sun",
+          "episodes": "12 ep",
+          "year": 2026,
+          "main": true
+        }
+      ],
+      "inList": false,
+      "userRating": null,
+      "hook": "Fantascienza distopica e politica: dopo una guerra nucleare, una catastrofe e il malgoverno, la società giapponese crolla e il paese si spezza in tre nazioni che si contendono il dominio. Aoteru Misumi, ex funzionario agricolo, giura di riunificare il Giappone armato solo della sua intelligenza e della parola, scalando i ranghi fino a diventare leggenda. La nascita di uno stratega geniale, in un'ambientazione cupa e adulta.",
+      "tone": [
+        "distopico",
+        "politico",
+        "strategico",
+        "cupo"
+      ],
+      "forWho": "Per chi ama strateghi, intrighi e politica in un futuro post-apocalittico.",
+      "tips": [],
+      "recommendations": {
+        "simili": [
+          {
+            "id": "golden-kamuy",
+            "why": "Chi ha amato questo ha amato anche"
+          },
+          {
+            "id": "heavenly-delusion",
+            "why": "Chi ha amato questo ha amato anche"
+          },
+          {
+            "id": "vinland-saga",
+            "why": "Chi ha amato questo ha amato anche"
+          },
+          {
+            "id": "kingdom",
+            "why": "Chi ha amato questo ha amato anche"
+          },
+          {
+            "id": "legend-of-the-galactic-heroes",
+            "why": "Chi ha amato questo ha amato anche"
+          },
+          {
+            "id": "86-eighty-six",
+            "why": "Chi ha amato questo ha amato anche"
+          },
+          {
+            "id": "code-geass",
+            "why": "Chi ha amato questo ha amato anche"
+          },
+          {
+            "id": "attack-on-titan",
+            "why": "Chi ha amato questo ha amato anche"
+          }
+        ],
+        "saga": [],
+        "studio": [],
+        "autore": [],
+        "affin": [
+          {
+            "id": "gundam-iron-blooded-orphans",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "fullmetal-alchemist-brotherhood",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "gurren-lagann",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "neon-genesis-evangelion",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "nausicaa",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "vivy-fluorite-eyes-song",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "berserk",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "akira",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "gachiakuta",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "parasyte-the-maxim",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "pluto",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "principessa-mononoke",
+            "why": "Atmosfera e temi affini"
+          }
+        ]
+      }
+    },
+    {
+      "id": "the-wrong-way-to-use-healing-magic",
+      "title": "The Wrong Way to Use Healing Magic",
+      "titleRomaji": "Chiyu Mahou no Machigatta Tsukaikata",
+      "titleNative": "治癒魔法の間違った使い方",
+      "year": 2024,
+      "format": "TV",
+      "typeLabel": "Serie",
+      "statusLabel": "Concluso",
+      "episodes": 13,
+      "sagaEpisodes": 25,
+      "coreMinutes": 600,
+      "lengthBand": "corto",
+      "lengthLabel": "Corto",
+      "lengthHint": "un weekend",
+      "genres": [
+        "Action",
+        "Fantasy"
+      ],
+      "tags": [
+        "Isekai",
+        "Magic",
+        "Demons",
+        "Male Protagonist",
+        "War",
+        "Cultivation",
+        "Creature Taming"
+      ],
+      "studios": [
+        "Shin-Ei Animation",
+        "Studio Add"
+      ],
+      "director": "Takahide Ogata",
+      "creator": "Kurokata",
+      "sourceLabel": "Light novel",
+      "score10": 7.5,
+      "popularity": 119657,
+      "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx137908-50af3lKVbst2.jpg",
+      "coverColor": "#78e435",
+      "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/137908-ZJ0tMykH623Z.jpg",
+      "streaming": [
+        {
+          "name": "Crunchyroll",
+          "url": "https://www.crunchyroll.com/series/G0XHWM1EK/the-wrong-way-to-use-healing-magic"
+        },
+        {
+          "name": "Bilibili TV",
+          "url": "https://www.bilibili.tv/en/media/2095912"
+        },
+        {
+          "name": "YouTube",
+          "url": "https://www.youtube.com/playlist?list=PLwLSw1_eDZl2qQ39Obr5X2J0fIATD9M2M"
+        },
+        {
+          "name": "Netflix",
+          "url": "https://www.netflix.com/title/81747942"
+        }
+      ],
+      "startFrom": "The Wrong Way to Use Healing Magic",
+      "structure": [
+        {
+          "name": "The Wrong Way to Use Healing Magic",
+          "episodes": "13 ep",
+          "year": 2024,
+          "main": true
+        },
+        {
+          "name": "The Wrong Way to Use Healing Magic Season 2",
+          "episodes": "? ep",
+          "year": null,
+          "main": true
+        }
+      ],
+      "inList": false,
+      "userRating": null,
+      "hook": "Fantasy isekai con una premessa ribaltata: tre studenti vengono evocati in un altro mondo, ma Usato ci finisce per sbaglio e scopre un talento raro per la magia curativa. Invece di restare nelle retrovie, allena le sue capacità di auto-guarigione fino a una resistenza e una forza assurde. Avventura leggera e d'azione, con un tocco ironico sul «modo sbagliato» di usare la magia di cura.",
+      "tone": [
+        "isekai",
+        "fantasy",
+        "action",
+        "leggero"
+      ],
+      "forWho": "Per chi vuole un isekai d'azione spensierato con una trovata diversa sul guaritore.",
+      "tips": [],
+      "recommendations": {
+        "simili": [
+          {
+            "id": "shangri-la-frontier",
+            "why": "Chi ha amato questo ha amato anche"
+          },
+          {
+            "id": "reincarnated-as-a-sword",
+            "why": "Chi ha amato questo ha amato anche"
+          },
+          {
+            "id": "handyman-saitou-in-another-world",
+            "why": "Chi ha amato questo ha amato anche"
+          }
+        ],
+        "saga": [],
+        "studio": [],
+        "autore": [],
+        "affin": [
+          {
+            "id": "black-clover",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "drifters",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "failure-frame-i-became-the-strongest",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "gate",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "grimgar-of-fantasy-and-ash",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "overlord",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "re-zero-starting-life-in-another-world",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "solo-leveling",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "the-eminence-in-shadow",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "the-rising-of-the-shield-hero",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "the-world-s-finest-assassin-gets-reincarnated-in-another-world-as-an-aristocrat",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "tower-of-god",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -35800,7 +36135,8 @@
         "planetes",
         "id-invaded",
         "tokyo-ghoul",
-        "terra-formars"
+        "terra-formars",
+        "nippon-sangoku"
       ],
       "isekai": [
         "solo-leveling",
@@ -35823,7 +36159,8 @@
         "sword-art-online",
         "failure-frame-i-became-the-strongest",
         "konosuba",
-        "abenobashi-magical-shopping-street"
+        "abenobashi-magical-shopping-street",
+        "the-wrong-way-to-use-healing-magic"
       ],
       "fantasy": [
         "fullmetal-alchemist-brotherhood",
@@ -35867,7 +36204,8 @@
         "saint-seiya",
         "handyman-saitou-in-another-world",
         "the-world-s-finest-assassin-gets-reincarnated-in-another-world-as-an-aristocrat",
-        "failure-frame-i-became-the-strongest"
+        "failure-frame-i-became-the-strongest",
+        "the-wrong-way-to-use-healing-magic"
       ],
       "sci-fi": [
         "steins-gate",
@@ -35905,7 +36243,8 @@
         "ergo-proxy",
         "mazinger-z",
         "gantz",
-        "getter-robo"
+        "getter-robo",
+        "nippon-sangoku"
       ],
       "mecha": [
         "gurren-lagann",
@@ -36027,7 +36366,8 @@
         "akame-ga-kill",
         "kill-la-kill",
         "the-rising-of-the-shield-hero",
-        "failure-frame-i-became-the-strongest"
+        "failure-frame-i-became-the-strongest",
+        "nippon-sangoku"
       ],
       "viaggi-nel-tempo": [
         "steins-gate",
@@ -36322,7 +36662,8 @@
         "planetes": "d",
         "id-invaded": "d",
         "tokyo-ghoul": "d",
-        "terra-formars": "d"
+        "terra-formars": "d",
+        "nippon-sangoku": "c"
       },
       "isekai": {
         "solo-leveling": "e",
@@ -36345,7 +36686,8 @@
         "sword-art-online": "c",
         "failure-frame-i-became-the-strongest": "c",
         "konosuba": "d",
-        "abenobashi-magical-shopping-street": "d"
+        "abenobashi-magical-shopping-street": "d",
+        "the-wrong-way-to-use-healing-magic": "d"
       },
       "fantasy": {
         "fullmetal-alchemist-brotherhood": "e",
@@ -36389,7 +36731,8 @@
         "saint-seiya": "d",
         "handyman-saitou-in-another-world": "d",
         "the-world-s-finest-assassin-gets-reincarnated-in-another-world-as-an-aristocrat": "d",
-        "failure-frame-i-became-the-strongest": "d"
+        "failure-frame-i-became-the-strongest": "d",
+        "the-wrong-way-to-use-healing-magic": "d"
       },
       "sci-fi": {
         "steins-gate": "e",
@@ -36427,7 +36770,8 @@
         "ergo-proxy": "d",
         "mazinger-z": "d",
         "gantz": "d",
-        "getter-robo": "d"
+        "getter-robo": "d",
+        "nippon-sangoku": "c"
       },
       "mecha": {
         "gurren-lagann": "e",
@@ -36549,7 +36893,8 @@
         "akame-ga-kill": "c",
         "kill-la-kill": "d",
         "the-rising-of-the-shield-hero": "d",
-        "failure-frame-i-became-the-strongest": "d"
+        "failure-frame-i-became-the-strongest": "d",
+        "nippon-sangoku": "d"
       },
       "viaggi-nel-tempo": {
         "steins-gate": "e",

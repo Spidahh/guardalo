@@ -32988,5 +32988,311 @@
         "recommendations"
       ]
     }
+  },
+  {
+    "id": "nippon-sangoku",
+    "anilistId": 206914,
+    "idMal": 63375,
+    "title": "NIPPON SANGOKU: The Three Nations of the Crimson Sun",
+    "titleRomaji": "Nippon Sangoku",
+    "titleNative": "日本三國",
+    "year": 2026,
+    "format": "ONA",
+    "typeLabel": "ONA",
+    "status": "FINISHED",
+    "statusLabel": "Concluso",
+    "episodes": 12,
+    "durationAvg": 26,
+    "sagaEpisodes": 12,
+    "coreMinutes": 312,
+    "lengthBand": "corto",
+    "lengthLabel": "Corto",
+    "lengthHint": "un weekend",
+    "genres": [
+      "Action",
+      "Drama",
+      "Sci-Fi"
+    ],
+    "tags": [
+      "Politics",
+      "War",
+      "Military",
+      "Seinen",
+      "Dystopian",
+      "Revenge",
+      "Philosophy",
+      "Post-Apocalyptic"
+    ],
+    "studios": [
+      "Studio Kafka"
+    ],
+    "director": "Kazuaki Terasawa",
+    "creator": "Ikka Matsuki",
+    "source": "MANGA",
+    "sourceLabel": "Manga",
+    "score10": 8.4,
+    "popularity": 47486,
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx206914-SHKX08LarRzB.jpg",
+    "coverColor": "#35c9e4",
+    "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/206914-owssGq2CGhRZ.jpg",
+    "streaming": [
+      {
+        "name": "Amazon Prime Video",
+        "url": "https://www.amazon.com/dp/B0GKZDKSJW"
+      },
+      {
+        "name": "Prime Video",
+        "url": "https://www.primevideo.com/detail/0LW570H4NYAE6XSCD8I7KZMVNH"
+      }
+    ],
+    "startFrom": null,
+    "structure": [
+      {
+        "name": "NIPPON SANGOKU: The Three Nations of the Crimson Sun",
+        "episodes": "12 ep",
+        "year": 2026,
+        "main": true
+      }
+    ],
+    "_recAnilistIds": [
+      {
+        "id": 99699,
+        "rating": 105
+      },
+      {
+        "id": 151514,
+        "rating": 83
+      },
+      {
+        "id": 162896,
+        "rating": 58
+      },
+      {
+        "id": 155783,
+        "rating": 43
+      },
+      {
+        "id": 138714,
+        "rating": 42
+      },
+      {
+        "id": 101348,
+        "rating": 34
+      },
+      {
+        "id": 12031,
+        "rating": 26
+      },
+      {
+        "id": 820,
+        "rating": 17
+      },
+      {
+        "id": 21823,
+        "rating": 16
+      },
+      {
+        "id": 142877,
+        "rating": 13
+      },
+      {
+        "id": 116589,
+        "rating": 10
+      },
+      {
+        "id": 1575,
+        "rating": 7
+      },
+      {
+        "id": 114124,
+        "rating": 5
+      },
+      {
+        "id": 16498,
+        "rating": 5
+      }
+    ],
+    "_relAnilistIds": [],
+    "provenance": {
+      "source": "AniList",
+      "anilistUrl": "https://anilist.co/anime/206914",
+      "durationEstimated": false,
+      "fetchedFields": [
+        "title",
+        "episodes",
+        "duration",
+        "status",
+        "genres",
+        "studios",
+        "staff",
+        "score",
+        "coverImage",
+        "externalLinks",
+        "relations",
+        "recommendations"
+      ]
+    }
+  },
+  {
+    "id": "the-wrong-way-to-use-healing-magic",
+    "anilistId": 137908,
+    "idMal": 49613,
+    "title": "The Wrong Way to Use Healing Magic",
+    "titleRomaji": "Chiyu Mahou no Machigatta Tsukaikata",
+    "titleNative": "治癒魔法の間違った使い方",
+    "year": 2024,
+    "format": "TV",
+    "typeLabel": "Serie",
+    "status": "FINISHED",
+    "statusLabel": "Concluso",
+    "episodes": 13,
+    "durationAvg": 24,
+    "sagaEpisodes": 25,
+    "coreMinutes": 600,
+    "lengthBand": "corto",
+    "lengthLabel": "Corto",
+    "lengthHint": "un weekend",
+    "genres": [
+      "Action",
+      "Fantasy"
+    ],
+    "tags": [
+      "Isekai",
+      "Magic",
+      "Demons",
+      "Male Protagonist",
+      "War",
+      "Cultivation",
+      "Creature Taming"
+    ],
+    "studios": [
+      "Shin-Ei Animation",
+      "Studio Add"
+    ],
+    "director": "Takahide Ogata",
+    "creator": "Kurokata",
+    "source": "LIGHT_NOVEL",
+    "sourceLabel": "Light novel",
+    "score10": 7.5,
+    "popularity": 119657,
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx137908-50af3lKVbst2.jpg",
+    "coverColor": "#78e435",
+    "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/137908-ZJ0tMykH623Z.jpg",
+    "streaming": [
+      {
+        "name": "Crunchyroll",
+        "url": "https://www.crunchyroll.com/series/G0XHWM1EK/the-wrong-way-to-use-healing-magic"
+      },
+      {
+        "name": "Bilibili TV",
+        "url": "https://www.bilibili.tv/en/media/2095912"
+      },
+      {
+        "name": "YouTube",
+        "url": "https://www.youtube.com/playlist?list=PLwLSw1_eDZl2qQ39Obr5X2J0fIATD9M2M"
+      },
+      {
+        "name": "Netflix",
+        "url": "https://www.netflix.com/title/81747942"
+      }
+    ],
+    "startFrom": "The Wrong Way to Use Healing Magic",
+    "structure": [
+      {
+        "name": "The Wrong Way to Use Healing Magic",
+        "episodes": "13 ep",
+        "year": 2024,
+        "main": true
+      },
+      {
+        "name": "The Wrong Way to Use Healing Magic Season 2",
+        "episodes": "? ep",
+        "year": null,
+        "main": true
+      }
+    ],
+    "_recAnilistIds": [
+      {
+        "id": 125206,
+        "rating": 65
+      },
+      {
+        "id": 139518,
+        "rating": 62
+      },
+      {
+        "id": 175872,
+        "rating": 57
+      },
+      {
+        "id": 186052,
+        "rating": 56
+      },
+      {
+        "id": 155418,
+        "rating": 53
+      },
+      {
+        "id": 151970,
+        "rating": 32
+      },
+      {
+        "id": 147642,
+        "rating": 22
+      },
+      {
+        "id": 174043,
+        "rating": 20
+      },
+      {
+        "id": 179955,
+        "rating": 19
+      },
+      {
+        "id": 177104,
+        "rating": 18
+      },
+      {
+        "id": 188487,
+        "rating": 16
+      },
+      {
+        "id": 143085,
+        "rating": 14
+      },
+      {
+        "id": 139587,
+        "rating": 9
+      },
+      {
+        "id": 144092,
+        "rating": 7
+      }
+    ],
+    "_relAnilistIds": [
+      {
+        "id": 179981,
+        "rel": "SEQUEL"
+      }
+    ],
+    "provenance": {
+      "source": "AniList",
+      "anilistUrl": "https://anilist.co/anime/137908",
+      "durationEstimated": false,
+      "fetchedFields": [
+        "title",
+        "episodes",
+        "duration",
+        "status",
+        "genres",
+        "studios",
+        "staff",
+        "score",
+        "coverImage",
+        "externalLinks",
+        "relations",
+        "recommendations"
+      ]
+    }
   }
 ]

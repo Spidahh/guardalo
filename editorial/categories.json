@@ -123,7 +123,8 @@
       "planetes",
       "id-invaded",
       "tokyo-ghoul",
-      "terra-formars"
+      "terra-formars",
+      "nippon-sangoku"
     ],
     "isekai": [
       "solo-leveling",
@@ -146,7 +147,8 @@
       "sword-art-online",
       "failure-frame-i-became-the-strongest",
       "konosuba",
-      "abenobashi-magical-shopping-street"
+      "abenobashi-magical-shopping-street",
+      "the-wrong-way-to-use-healing-magic"
     ],
     "fantasy": [
       "fullmetal-alchemist-brotherhood",
@@ -190,7 +192,8 @@
       "saint-seiya",
       "handyman-saitou-in-another-world",
       "the-world-s-finest-assassin-gets-reincarnated-in-another-world-as-an-aristocrat",
-      "failure-frame-i-became-the-strongest"
+      "failure-frame-i-became-the-strongest",
+      "the-wrong-way-to-use-healing-magic"
     ],
     "sci-fi": [
       "steins-gate",
@@ -228,7 +231,8 @@
       "ergo-proxy",
       "mazinger-z",
       "gantz",
-      "getter-robo"
+      "getter-robo",
+      "nippon-sangoku"
     ],
     "mecha": [
       "gurren-lagann",
@@ -350,7 +354,8 @@
       "akame-ga-kill",
       "kill-la-kill",
       "the-rising-of-the-shield-hero",
-      "failure-frame-i-became-the-strongest"
+      "failure-frame-i-became-the-strongest",
+      "nippon-sangoku"
     ],
     "viaggi-nel-tempo": [
       "steins-gate",
@@ -645,7 +650,8 @@
       "planetes": "d",
       "id-invaded": "d",
       "tokyo-ghoul": "d",
-      "terra-formars": "d"
+      "terra-formars": "d",
+      "nippon-sangoku": "c"
     },
     "isekai": {
       "solo-leveling": "e",
@@ -668,7 +674,8 @@
       "sword-art-online": "c",
       "failure-frame-i-became-the-strongest": "c",
       "konosuba": "d",
-      "abenobashi-magical-shopping-street": "d"
+      "abenobashi-magical-shopping-street": "d",
+      "the-wrong-way-to-use-healing-magic": "d"
     },
     "fantasy": {
       "fullmetal-alchemist-brotherhood": "e",
@@ -712,7 +719,8 @@
       "saint-seiya": "d",
       "handyman-saitou-in-another-world": "d",
       "the-world-s-finest-assassin-gets-reincarnated-in-another-world-as-an-aristocrat": "d",
-      "failure-frame-i-became-the-strongest": "d"
+      "failure-frame-i-became-the-strongest": "d",
+      "the-wrong-way-to-use-healing-magic": "d"
     },
     "sci-fi": {
       "steins-gate": "e",
@@ -750,7 +758,8 @@
       "ergo-proxy": "d",
       "mazinger-z": "d",
       "gantz": "d",
-      "getter-robo": "d"
+      "getter-robo": "d",
+      "nippon-sangoku": "c"
     },
     "mecha": {
       "gurren-lagann": "e",
@@ -872,7 +881,8 @@
       "akame-ga-kill": "c",
       "kill-la-kill": "d",
       "the-rising-of-the-shield-hero": "d",
-      "failure-frame-i-became-the-strongest": "d"
+      "failure-frame-i-became-the-strongest": "d",
+      "nippon-sangoku": "d"
     },
     "viaggi-nel-tempo": {
       "steins-gate": "e",

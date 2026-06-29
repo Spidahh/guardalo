@@ -1118,5 +1118,15 @@
     "anilistId": 4411,
     "title": "Mirai Robo Daltanious",
     "manual": true
+  },
+  "nippon-sangoku": {
+    "anilistId": 206914,
+    "title": "Nippon Sangoku",
+    "manual": true
+  },
+  "the-wrong-way-to-use-healing-magic": {
+    "anilistId": 137908,
+    "title": "The Wrong Way to Use Healing Magic",
+    "manual": true
   }
 }
