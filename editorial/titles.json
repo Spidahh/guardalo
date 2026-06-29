@@ -85,7 +85,7 @@
     "forWho": "Per chi vuole una storia breve, potente e visivamente travolgente."
   },
   "death-note": {
-    "hook": "Thriller psicologico sovrannaturale: uno studente geniale trova un quaderno che uccide chiunque vi scriva il nome e decide di ripulire il mondo dai criminali. Diventa una sfida intellettuale serratissima tra lui è un investigatore altrettanto brillante. Teso, cerebrale e ricco di dilemmi morali. Tra i più celebri di sempre.",
+    "hook": "Thriller psicologico sovrannaturale: uno studente geniale trova un quaderno che uccide chiunque vi scriva il nome e decide di ripulire il mondo dai criminali. Diventa una sfida intellettuale serratissima tra lui e un investigatore altrettanto brillante. Teso, cerebrale e ricco di dilemmi morali. Tra i più celebri di sempre.",
     "tone": [
       "thriller",
       "psicologico",
@@ -522,7 +522,7 @@
       "demenziale",
       "storico"
     ],
-    "forWho": "Per chi vuole un'avventura fuori dai cliche, tra gastronomia e sparatorie nel gelo."
+    "forWho": "Per chi vuole un'avventura fuori dai cliché, tra gastronomia e sparatorie nel gelo."
   },
   "grimgar-of-fantasy-and-ash": {
     "hook": "Fantasy di sopravvivenza intimo: un gruppo di ragazzi si risveglia in un mondo simile a un gioco di ruolo, costretti a fare i mercenari senza ricordi né poteri speciali. Anziché epica eroica, racconta la fatica, la paura e il valore della vita quotidiana, con un comparto visivo ad acquerello molto curato.",
@@ -706,7 +706,7 @@
     "forWho": "Per chi cerca fantascienza meditativa su cosa significhi essere umani."
   },
   "principessa-mononoke": {
-    "hook": "Fantasy epico dello Studio Ghibli: un giovane principe maledetto cerca una cura e si ritrova nel mezzo del conflitto tra una città industriale e gli spiriti della foresta. Grande affresco sul rapporto tra uomo e natura, senza eroi né cattivi netti. Animazione magnifica è una delle opere più ambiziose di Miyazaki.",
+    "hook": "Fantasy epico dello Studio Ghibli: un giovane principe maledetto cerca una cura e si ritrova nel mezzo del conflitto tra una città industriale e gli spiriti della foresta. Grande affresco sul rapporto tra uomo e natura, senza eroi né cattivi netti. Animazione magnifica ed è una delle opere più ambiziose di Miyazaki.",
     "tone": [
       "fantasy",
       "epico",
@@ -1186,7 +1186,7 @@
     "forWho": "Per chi vuole sport con uno stile visivo fuori dal comune."
   },
   "blue-lock": {
-    "hook": "Anime sportivo sul calcio: trecento attaccanti vengono rinchiusi in un programma estremo che premia solo l'egoismo, per creare il bomber che portera il Giappone al Mondiale. Toni competitivi è quasi battle royale, lontani dallo spirito di squadra tradizionale. Ritmo teso e provocatorio.",
+    "hook": "Anime sportivo sul calcio: trecento attaccanti vengono rinchiusi in un programma estremo che premia solo l'egoismo, per creare il bomber che porterà il Giappone al Mondiale. Toni competitivi e quasi battle royale, lontani dallo spirito di squadra tradizionale. Ritmo teso e provocatorio.",
     "tone": [
       "sportivo",
       "competitivo",
@@ -1206,7 +1206,7 @@
     "forWho": "Per chi vuole una storia di squadra che cresce con calma."
   },
   "gintama": {
-    "hook": "Commedia ambientata in un Giappone feudale alternativo invaso dagli alieni, dove un samurai squattrinato accetta qualsiasi lavoretto per sopravvivere. Soprattutto comicita demenziale e parodica, ma con archi narrativi seri e drammatici sorprendentemente forti. Lunghissimo: parte lento prima di ingranare.",
+    "hook": "Commedia ambientata in un Giappone feudale alternativo invaso dagli alieni, dove un samurai squattrinato accetta qualsiasi lavoretto per sopravvivere. Soprattutto comicità demenziale e parodica, ma con archi narrativi seri e drammatici sorprendentemente forti. Lunghissimo: parte lento prima di ingranare.",
     "tone": [
       "comico",
       "demenziale",
@@ -1216,7 +1216,7 @@
     "forWho": "Per chi vuole una commedia lunga che alterna risate e dramma."
   },
   "grand-blue": {
-    "hook": "Commedia sulla vita universitaria: un matricola arriva in una città di mare sognando una vita perfetta e finisce in un circolo di sub ossessionati da alcol e feste. Comicita sfrenata e demenziale, con poco vero immersionismo. Una delle commedie più sopra le righe degli ultimi anni.",
+    "hook": "Commedia sulla vita universitaria: un matricola arriva in una città di mare sognando una vita perfetta e finisce in un circolo di sub ossessionati da alcol e feste. Comicità sfrenata e demenziale, con poco vere immersioni. Una delle commedie più sopra le righe degli ultimi anni.",
     "tone": [
       "comico",
       "demenziale",
@@ -1233,7 +1233,7 @@
       "quotidiano",
       "brillante"
     ],
-    "forWho": "Per chi vuole comicita surreale e ritmo serrato."
+    "forWho": "Per chi vuole comicità surreale e ritmo serrato."
   },
   "saiki-k": {
     "hook": "Commedia sovrannaturale: un ragazzo dotato di ogni potere psichico desidera solo una vita normale, ma i compagni di classe stravaganti glielo impediscono. Episodi brevi e velocissimi, narrati dal suo punto di vista cinico e disilluso. Comicita basata sulla ripetizione e sul cast eccentrico.",
@@ -1568,66 +1568,74 @@
   "castle-in-the-sky": {
     "hook": "Avventura fantasy che ha inaugurato lo Studio Ghibli: una ragazza con un misterioso cristallo e un ragazzo minatore, inseguiti da pirati e militari, cercano Laputa, la leggendaria città volante. Immaginazione pura, ritmo d'avventura e senso di meraviglia: uno dei Miyazaki più amati.",
     "tone": [
-      "Avventura",
-      "Meraviglia"
+      "avventura",
+      "fantasy",
+      "fiabesco"
     ],
-    "forWho": null
+    "forWho": "Per chi vuole l'avventura Ghibli per eccellenza, adatta a tutti."
   },
   "kikis-delivery-service": {
     "hook": "Una giovane strega lascia casa per l'anno di indipendenza che la tradizione richiede e avvia un servizio di consegne in una città di mare. Racconto gentile su crescita, autonomia e blocchi creativi. Miyazaki nella sua versione più dolce e rassicurante.",
     "tone": [
-      "Dolce",
-      "Crescita"
+      "dolce",
+      "crescita",
+      "fiabesco"
     ],
-    "forWho": null
+    "forWho": "Per chi cerca un Ghibli gentile sulla crescita e l'indipendenza."
   },
   "porco-rosso": {
     "hook": "Miyazaki adulto e insolito: un asso dell'aviazione trasformato in maiale fa il cacciatore di taglie sull'Adriatico tra le due guerre. Romantico, malinconico e pieno di volo, sul senso dell'onore, la disillusione e la libertà.",
     "tone": [
-      "Malinconico",
-      "Romantico"
+      "malinconico",
+      "romantico",
+      "avventuroso"
     ],
-    "forWho": null
+    "forWho": "Per chi vuole un Miyazaki adulto, ironico e nostalgico."
   },
   "ponyo": {
     "hook": "Fiaba marina liberamente ispirata alla Sirenetta: una pesciolina magica vuole diventare umana per restare con un bambino. Animazione disegnata a mano travolgente, pensata per i più piccoli ma con tutta la forza visiva di Miyazaki.",
     "tone": [
-      "Fiabesco",
-      "Per tutti"
+      "fiabesco",
+      "tenero",
+      "marino"
     ],
-    "forWho": null
+    "forWho": "Per chi vuole una fiaba dolce da vedere anche coi più piccoli."
   },
   "the-wind-rises": {
     "hook": "L'ultimo Miyazaki 'classico', biografia romanzata del progettista degli aerei Zero. Film adulto e malinconico sul sogno di creare qualcosa di bello in un'epoca che lo piega alla guerra. Niente magia: solo Storia ed emozione.",
     "tone": [
-      "Adulto",
-      "Malinconico"
+      "adulto",
+      "malinconico",
+      "biografico"
     ],
-    "forWho": null
+    "forWho": "Per chi cerca un Ghibli maturo, lontano dal fantasy."
   },
   "the-boy-and-the-heron": {
     "hook": "Il ritorno di Miyazaki dopo dieci anni, premiato con l'Oscar: un ragazzo segnato dal lutto segue un airone parlante in un mondo altro. Onirico, denso e personale — meno lineare dei classici, ma un viaggio visivo e simbolico potentissimo.",
     "tone": [
-      "Onirico",
-      "Simbolico"
+      "onirico",
+      "simbolico",
+      "cupo"
     ],
-    "forWho": null
+    "forWho": "Per chi accetta un Miyazaki criptico e simbolico sul lutto."
   },
   "the-tale-of-the-princess-kaguya": {
     "hook": "Capolavoro di Isao Takahata, dallo stile ad acquerello inimitabile: la fiaba popolare della principessa nata da un bambù, cresciuta tra ricchezza e rimpianto. Commovente e visivamente rivoluzionario, sul prezzo di una vita non scelta.",
     "tone": [
-      "Commovente",
-      "Poetico"
+      "commovente",
+      "poetico",
+      "fiabesco"
     ],
-    "forWho": null
+    "forWho": "Per chi vuole un'opera d'arte commovente dallo stile unico."
   },
   "whisper-of-the-heart": {
     "hook": "Slice of life romantico dello Studio Ghibli: una ragazza divoratrice di libri scopre che i prestiti che ama portano tutti lo stesso nome. Racconto delicato di adolescenza, primi amori e del coraggio di inseguire una vocazione.",
     "tone": [
-      "Delicato",
-      "Romantico"
+      "delicato",
+      "romantico",
+      "scolastico"
     ],
-    "forWho": null
+    "forWho": "Per chi vuole un primo amore Ghibli, semplice e sincero."
   },
   "gundam-iron-blooded-orphans": {
     "hook": "Dramma mecha fantascientifico: un gruppo di ragazzi soldato sfruttati si ribella e prende il controllo del proprio destino, scortando una giovane idealista verso la Terra. Toni cupi e maturi su guerra, sfruttamento e legami tra emarginati. Capitolo accessibile e autoconclusivo del franchise Gundam.",
@@ -1662,26 +1670,29 @@
   "vivy-fluorite-eyes-song": {
     "hook": "Fantascienza sull'intelligenza artificiale, scritta dall'autore di Re:Zero: la prima IA autonoma, una cantante androide, riceve la missione di impedire una guerra tra umani e macchine cent'anni dopo. Animazione spettacolare e domande grosse su coscienza e libero arbitrio.",
     "tone": [
-      "Spettacolare",
-      "IA"
+      "fantascienza",
+      "spettacolare",
+      "drammatico"
     ],
-    "forWho": null
+    "forWho": "Per chi vuole fantascienza sull'IA con animazione e musica al top."
   },
   "from-the-new-world": {
     "hook": "Fantascienza distopica disturbante: mille anni nel futuro, in una società 'pacifica' dove gli umani hanno poteri psichici, un gruppo di ragazzi scopre la verità marcia su cui regge il loro mondo. Parte lenta e poi non ti molla più: tra le sci-fi più ambiziose e inquietanti.",
     "tone": [
-      "Distopico",
-      "Inquietante"
+      "distopico",
+      "inquietante",
+      "fantascienza"
     ],
-    "forWho": null
+    "forWho": "Per chi ama le distopie lente e inquietanti che svelano poco a poco."
   },
   "gundam-witch-from-mercury": {
     "hook": "Il Gundam moderno che ha riportato il franchise al successo: una scuola-corporazione nello spazio, duelli di mobile suit e una protagonista fuori posto. Politica, intrighi e mecha spettacolari, accessibile anche a chi non ha mai visto un Gundam.",
     "tone": [
-      "Mecha",
-      "Intrighi"
+      "mecha",
+      "intrighi",
+      "scolastico"
     ],
-    "forWho": null
+    "forWho": "Per chi vuole un Gundam moderno e accessibile, anche senza conoscere il franchise."
   },
   "toradora": {
     "hook": "Commedia romantica scolastica: due studenti dall'aspetto ingannevole stringono un'alleanza per aiutarsi a vicenda con le rispettive cotte. Inizia come commedia leggera e diventa un dramma sentimentale sincero e ben costruito. Tra i romance più amati. Per chi cerca una storia d'amore che cresce con i personaggi.",
@@ -1714,7 +1725,7 @@
     "forWho": "Per chi vuole un anime maturo sui dubbi e gli amori della giovinezza adulta."
   },
   "konosuba": {
-    "hook": "Commedia fantasy isekai: un ragazzo muore e rinasce in un mondo da videogioco, ma sceglie come unico potere una dea inutile e si ritrova un gruppo di compagni disastrosi. Parodia spassosa dei cliche del genere, costruita su personaggi pessimi e situazioni assurde. Leggera e molto divertente.",
+    "hook": "Commedia fantasy isekai: un ragazzo muore e rinasce in un mondo da videogioco, ma sceglie come unico potere una dea inutile e si ritrova un gruppo di compagni disastrosi. Parodia spassosa dei cliché del genere, costruita su personaggi pessimi e situazioni assurde. Leggera e molto divertente.",
     "tone": [
       "comico",
       "fantasy",
@@ -1766,42 +1777,47 @@
   "my-dress-up-darling": {
     "hook": "Commedia romantica moderna amatissima: un timido artigiano di bambole tradizionali e una ragazza popolare ossessionata dal cosplay finiscono a creare costumi insieme. Leggera, calda e con un'animazione curatissima, sul trovare chi accetta la tua passione.",
     "tone": [
-      "Calorosa",
-      "Cosplay"
+      "romantico",
+      "commedia",
+      "scolastico"
     ],
-    "forWho": null
+    "forWho": "Per chi vuole una commedia romantica moderna, leggera e calorosa."
   },
   "skip-and-loafer": {
     "hook": "Slice of life romantico delicato: una ragazza di provincia, secchiona e impacciata, si trasferisce a Tokyo per il liceo e fa amicizia con un compagno carismatico. Tenero e realistico su adolescenza, ansia sociale e amicizia.",
     "tone": [
-      "Tenero",
-      "Realistico"
+      "tenero",
+      "realistico",
+      "scolastico"
     ],
-    "forWho": null
+    "forWho": "Per chi cerca uno slice of life dolce e realistico sull'adolescenza."
   },
   "komi-cant-communicate": {
     "hook": "Commedia scolastica dal cuore grande: una ragazza bellissima e ammiratissima nasconde un'ansia sociale che le impedisce di parlare. Con l'aiuto di un compagno qualunque si pone l'obiettivo di farsi cento amici. Tenera e divertente.",
     "tone": [
-      "Dolce",
-      "Spassoso"
+      "dolce",
+      "comico",
+      "scolastico"
     ],
-    "forWho": null
+    "forWho": "Per chi vuole una commedia scolastica tenera sull'ansia sociale."
   },
   "asobi-asobase": {
     "hook": "Commedia demenziale pura: tre compagne di classe passano il tempo in giochi idioti che degenerano sempre. Facce assurde e tempi comici perfetti la rendono una delle commedie più folli e citate degli ultimi anni.",
     "tone": [
-      "Demenziale",
-      "Assurdo"
+      "demenziale",
+      "assurdo",
+      "comico"
     ],
-    "forWho": null
+    "forWho": "Per chi vuole comicità demenziale senza freni, solo per ridere."
   },
   "dark-gathering": {
     "hook": "Horror soprannaturale: uno studente capace di vedere gli spiriti e una bambina dotata danno la caccia ai fantasmi per ritrovare una persona scomparsa. Atmosfere inquietanti e spettri ben più cattivi della media del genere.",
     "tone": [
-      "Soprannaturale",
-      "Inquietante"
+      "soprannaturale",
+      "inquietante",
+      "horror"
     ],
-    "forWho": null
+    "forWho": "Per chi vuole un horror di fantasmi con una caccia ben costruita."
   },
   "paranoia-agent": {
     "hook": "Thriller psicologico a episodi di Satoshi Kon: un ragazzino con una mazza da baseball aggredisce le persone, e due detective indagano. In realtà è un ritratto inquietante della società giapponese, della pressione e della fuga dalla responsabilità. Cupo e stratificato. Per chi apprezza storie ambigue e adulte.",
@@ -1816,26 +1832,29 @@
   "terror-in-resonance": {
     "hook": "Thriller psicologico di Shinichiro Watanabe: due ragazzi misteriosi mettono in ginocchio Tokyo con attentati annunciati da enigmi. Atmosfera tesa e malinconica, colonna sonora magnifica, su trauma, vendetta e società.",
     "tone": [
-      "Teso",
-      "Malinconico"
+      "thriller",
+      "teso",
+      "malinconico"
     ],
-    "forWho": null
+    "forWho": "Per chi vuole un thriller breve, teso e dall'atmosfera curata."
   },
   "the-tatami-galaxy": {
     "hook": "Mindfuck surreale di Masaaki Yuasa: uno studente rivive lo stesso anno di università in infinite versioni alternative, cercando la 'vita da sogno'. Dialoghi a raffica, stile visivo unico, una riflessione vertiginosa sulle scelte e i rimpianti.",
     "tone": [
-      "Surreale",
-      "Cerebrale"
+      "surreale",
+      "cerebrale",
+      "frenetico"
     ],
-    "forWho": null
+    "forWho": "Per chi vuole un'opera verbosa e visionaria che ripaga l'attenzione."
   },
   "id-invaded": {
     "hook": "Fantascienza-giallo concettuale: un detective entra nei mondi mentali ricostruiti dagli istinti omicidi dei serial killer per risolverne i casi. Premessa cervellotica e struttura a enigma, per chi ama incastrare i pezzi.",
     "tone": [
-      "Giallo",
-      "Concettuale"
+      "fantascienza",
+      "giallo",
+      "concettuale"
     ],
-    "forWho": null
+    "forWho": "Per chi ama i gialli concettuali con un'idea originale al centro."
   },
   "nippon-sangoku": {
     "hook": "Fantascienza distopica e politica: dopo una guerra nucleare, una catastrofe e il malgoverno, la società giapponese crolla e il paese si spezza in tre nazioni che si contendono il dominio. Aoteru Misumi, ex funzionario agricolo, giura di riunificare il Giappone armato solo della sua intelligenza e della parola, scalando i ranghi fino a diventare leggenda. La nascita di uno stratega geniale, in un'ambientazione cupa e adulta.",

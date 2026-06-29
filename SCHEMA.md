@@ -334,17 +334,17 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [C] My Hero Academia: Vigilantes
 
 ### Romance  (14)
-- [E] Re:ZERO -Starting Life in Another World-
-- [D] Clannad: After Story
+- [E] Clannad: After Story
+- [E] Your lie in April
+- [E] Toradora!
+- [C] Kaguya-sama: Love is War
+- [C] Fruits Basket (2019)
+- [C] Re:ZERO -Starting Life in Another World-
+- [C] Horimiya
+- [C] Rascal Does Not Dream of Bunny Girl Senpai
 - [D] NANA
-- [D] Your lie in April
-- [D] Kaguya-sama: Love is War
-- [D] Fruits Basket (2019)
-- [D] Horimiya
-- [D] Rascal Does Not Dream of Bunny Girl Senpai
 - [D] Skip and Loafer
 - [D] My Dress-Up Darling
-- [D] Toradora!
 - [D] Clannad
 - [D] Honey and Clover
 - [D] Komi Can’t Communicate
@@ -499,8 +499,11 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 ## ALTRE LISTE (non in griglia)
 
 ### Slice of Life  (25)
+- [E] Violet Evergarden
+- [E] March comes in like a lion
 - [C] Clannad: After Story
 - [C] NANA
+- [C] MUSHI-SHI
 - [C] Your lie in April
 - [C] GTO: Great Teacher Onizuka
 - [C] Kaguya-sama: Love is War
@@ -509,12 +512,9 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [C] Fruits Basket (2019)
 - [C] Grand Blue Dreaming
 - [C] Welcome to the N-H-K
+- [C] Barakamon
 - [C] Horimiya
 - [C] Skip and Loafer
-- [D] Violet Evergarden
-- [D] MUSHI-SHI
-- [D] March comes in like a lion
-- [D] Barakamon
 - [D] Laid-Back Camp
 - [D] Daily Lives of High School Boys
 - [D] HINAMATSURI
@@ -526,12 +526,12 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [D] Komi Can’t Communicate
 
 ### Sport  (7)
-- [C] Grand Blue Dreaming
-- [D] Hajime no Ippo: The Fighting!
-- [D] Ping Pong the Animation
-- [D] HAIKYU!!
-- [D] Slam Dunk
+- [E] HAIKYU!!
+- [E] Slam Dunk
+- [C] Hajime no Ippo: The Fighting!
+- [C] Ping Pong the Animation
 - [D] Run with the Wind
+- [D] Grand Blue Dreaming
 - [D] BLUE LOCK
 
 ## FUORI DA TUTTO (orfani — da assegnare)
