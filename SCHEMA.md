@@ -39,16 +39,11 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [E] Made in Abyss
 - [E] Berserk
 - [C] Monster
-- [C] Ping Pong the Animation
 - [C] Attack on Titan
 - [C] Samurai Champloo
 - [C] PLUTO
-- [C] NIPPON SANGOKU: The Three Nations of the Crimson Sun
 - [C] Chainsaw Man
 - [C] 86 EIGHTY-SIX
-- [C] March comes in like a lion
-- [C] Welcome to the N-H-K
-- [C] Vivy -Fluorite Eye's Song-
 - [C] Hellsing Ultimate
 - [C] Sentenced to Be a Hero
 - [C] Heavenly Delusion
@@ -67,7 +62,12 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [C] Deadman Wonderland
 - [C] Gantz
 - [D] Legend of the Galactic Heroes
+- [D] Ping Pong the Animation
+- [D] NIPPON SANGOKU: The Three Nations of the Crimson Sun
 - [D] BANANA FISH
+- [D] March comes in like a lion
+- [D] Welcome to the N-H-K
+- [D] Vivy -Fluorite Eye's Song-
 - [D] Dororo
 - [D] Planetes
 - [D] ID: INVADED
@@ -78,12 +78,10 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [E] Solo Leveling
 - [E] Shangri-La Frontier
 - [E] Grimgar of Fantasy and Ash
-- [C] Mushoku Tensei: Jobless Reincarnation
 - [C] Re:ZERO -Starting Life in Another World-
 - [C] The Eminence in Shadow
 - [C] Sentenced to Be a Hero
 - [C] Release that Witch
-- [C] That Time I Got Reincarnated as a Slime
 - [C] Overlord
 - [C] The Rising of the Shield Hero
 - [C] DRIFTERS
@@ -94,6 +92,8 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [C] Handyman Saitou in Another World
 - [C] Sword Art Online
 - [C] Failure Frame: I Became the Strongest and Annihilated Everything with Low-Level Spells
+- [D] Mushoku Tensei: Jobless Reincarnation
+- [D] That Time I Got Reincarnated as a Slime
 - [D] KONOSUBA -God's blessing on this wonderful world!
 - [D] The Wrong Way to Use Healing Magic
 - [D] Magical Shopping Arcade Abenobashi
@@ -107,9 +107,7 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [C] Frieren: Beyond Journey’s End
 - [C] ONE PIECE
 - [C] Ranking of Kings
-- [C] Puella Magi Madoka Magica
 - [C] Gachiakuta
-- [C] Mushoku Tensei: Jobless Reincarnation
 - [C] Fate/Zero
 - [C] Re:ZERO -Starting Life in Another World-
 - [C] Solo Leveling
@@ -124,6 +122,8 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [C] BURN THE WITCH
 - [C] Devil May Cry
 - [D] Delicious in Dungeon
+- [D] Puella Magi Madoka Magica
+- [D] Mushoku Tensei: Jobless Reincarnation
 - [D] Naruto
 - [D] Shangri-La Frontier
 - [D] Release that Witch
@@ -147,28 +147,28 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [E] Steins;Gate
 - [E] Cyberpunk: Edgerunners
 - [E] DAN DA DAN
-- [C] Legend of the Galactic Heroes
 - [C] Cowboy Bebop
 - [C] Gurren Lagann
 - [C] Code Geass: Lelouch of the Rebellion
 - [C] Made in Abyss
 - [C] PLUTO
-- [C] NIPPON SANGOKU: The Three Nations of the Crimson Sun
 - [C] Neon Genesis Evangelion
 - [C] 86 EIGHTY-SIX
 - [C] Parasyte -the maxim-
 - [C] Heavenly Delusion
 - [C] Kaiju No. 8
-- [C] Dr. STONE
 - [C] Trigun
-- [C] Planetes
 - [C] Akudama Drive
 - [C] Wolf's Rain
 - [C] DECA-DENCE
 - [C] LAZARUS
 - [C] Terra Formars
+- [D] Legend of the Galactic Heroes
+- [D] NIPPON SANGOKU: The Three Nations of the Crimson Sun
 - [D] Vivy -Fluorite Eye's Song-
+- [D] Dr. STONE
 - [D] PSYCHO-PASS
+- [D] Planetes
 - [D] From the New World
 - [D] Serial Experiments Lain
 - [D] FLCL
@@ -199,11 +199,11 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [D] Getter Robo
 
 ### Super Robot Classici  (5)
-- [E] UFO Robo Grendizer
-- [E] Mazinger Z
-- [E] Future Robot Daltanious
-- [C] Mobile Suit Gundam
-- [C] Getter Robo
+- [D] Mobile Suit Gundam
+- [D] UFO Robo Grendizer
+- [D] Mazinger Z
+- [D] Future Robot Daltanious
+- [D] Getter Robo
 
 ### Mindfuck  (26)
 - [E] Steins;Gate
@@ -212,18 +212,18 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [E] Summer Time Rendering
 - [C] Monster
 - [C] Code Geass: Lelouch of the Rebellion
-- [C] MUSHI-SHI
 - [C] The Promised Neverland
 - [C] PLUTO
 - [C] ERASED
 - [C] Parasyte -the maxim-
 - [C] Re:ZERO -Starting Life in Another World-
 - [C] Heavenly Delusion
-- [C] PSYCHO-PASS
 - [C] Death Parade
 - [C] AJIN: Demi-Human
+- [D] MUSHI-SHI
 - [D] The Tatami Galaxy
 - [D] Puella Magi Madoka Magica
+- [D] PSYCHO-PASS
 - [D] Serial Experiments Lain
 - [D] From the New World
 - [D] Terror in Resonance
@@ -265,9 +265,9 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [E] Gantz
 - [C] Heavenly Delusion
 - [C] Parasyte -the maxim-
-- [C] Dr. STONE
 - [C] Darwin's Game
 - [C] Deadman Wonderland
+- [D] Dr. STONE
 - [D] Hell’s Paradise
 - [D] Golden Kamuy
 - [D] Tokyo Ghoul
@@ -280,11 +280,11 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [E] Vinland Saga
 - [E] Samurai Champloo
 - [E] Kingdom
-- [C] The Apothecary Diaries
-- [C] Gintama
-- [C] Dororo
 - [C] Golden Kamuy
 - [C] 91 Days
+- [D] The Apothecary Diaries
+- [D] Gintama
+- [D] Dororo
 - [D] Hell’s Paradise
 - [D] DRIFTERS
 
@@ -294,13 +294,13 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [E] 91 Days
 - [C] Attack on Titan
 - [C] Code Geass: Lelouch of the Rebellion
-- [C] BANANA FISH
 - [C] Gachiakuta
-- [C] Dororo
 - [C] Hell’s Paradise
 - [C] Claymore
 - [C] Akame ga Kill!
+- [D] BANANA FISH
 - [D] NIPPON SANGOKU: The Three Nations of the Crimson Sun
+- [D] Dororo
 - [D] Kill la Kill
 - [D] The Rising of the Shield Hero
 - [D] Failure Frame: I Became the Strongest and Annihilated Everything with Low-Level Spells
@@ -321,7 +321,7 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [C] Monster
 - [C] Cyberpunk: Edgerunners
 - [C] Death Note
-- [C] BANANA FISH
+- [D] BANANA FISH
 - [D] PSYCHO-PASS
 - [D] Trigun
 - [D] Tokyo Revengers
@@ -334,17 +334,17 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [C] My Hero Academia: Vigilantes
 
 ### Romance  (14)
-- [E] Clannad: After Story
-- [E] Your lie in April
-- [E] Toradora!
-- [C] Kaguya-sama: Love is War
-- [C] Fruits Basket (2019)
 - [C] Re:ZERO -Starting Life in Another World-
-- [C] Horimiya
-- [C] Rascal Does Not Dream of Bunny Girl Senpai
+- [D] Clannad: After Story
 - [D] NANA
+- [D] Your lie in April
+- [D] Kaguya-sama: Love is War
+- [D] Fruits Basket (2019)
+- [D] Horimiya
+- [D] Rascal Does Not Dream of Bunny Girl Senpai
 - [D] Skip and Loafer
 - [D] My Dress-Up Darling
+- [D] Toradora!
 - [D] Clannad
 - [D] Honey and Clover
 - [D] Komi Can’t Communicate
@@ -374,7 +374,6 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [E] Princess Mononoke
 - [E] Ghost in the Shell
 - [E] Akira
-- [C] Maquia: When the Promised Flower Blooms
 - [C] Promare
 - [D] A Silent Voice
 - [D] Your Name.
@@ -382,6 +381,7 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [D] Perfect Blue
 - [D] Grave of the Fireflies
 - [D] Wolf Children
+- [D] Maquia: When the Promised Flower Blooms
 - [D] My Neighbor Totoro
 - [D] Nausicaä of the Valley of the Wind
 - [D] Kiki's Delivery Service
@@ -403,19 +403,24 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 
 ## PERCORSI
 
-### Storie che ti spezzano  (15)
-- [E] Clannad: After Story
-- [E] Violet Evergarden
-- [E] Your lie in April
-- [E] Grave of the Fireflies
-- [C] Frieren: Beyond Journey’s End
-- [C] A Silent Voice
-- [C] Made in Abyss
-- [C] March comes in like a lion
-- [C] Wolf Children
+### Storie che ti spezzano  (20)
+- [E] Frieren: Beyond Journey’s End
+- [E] Vinland Saga
+- [E] Cyberpunk: Edgerunners
+- [E] Attack on Titan
+- [E] Made in Abyss
+- [C] Steins;Gate
+- [C] 86 EIGHTY-SIX
+- [D] Clannad: After Story
+- [D] A Silent Voice
 - [D] Your Name.
+- [D] Violet Evergarden
 - [D] NANA
+- [D] Your lie in April
 - [D] BANANA FISH
+- [D] Grave of the Fireflies
+- [D] March comes in like a lion
+- [D] Wolf Children
 - [D] Weathering With You
 - [D] The Tale of The Princess Kaguya
 - [D] 5 Centimeters per Second
@@ -426,13 +431,13 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [E] Code Geass: Lelouch of the Rebellion
 - [E] Death Note
 - [C] SPY x FAMILY
-- [C] Kaguya-sama: Love is War
 - [C] The Eminence in Shadow
-- [C] PSYCHO-PASS
 - [C] Overlord
 - [D] Hunter x Hunter (2011)
 - [D] Legend of the Galactic Heroes
 - [D] PLUTO
+- [D] Kaguya-sama: Love is War
+- [D] PSYCHO-PASS
 
 ### Spettacolo per gli occhi  (13)
 - [E] Cyberpunk: Edgerunners
@@ -499,22 +504,22 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 ## ALTRE LISTE (non in griglia)
 
 ### Slice of Life  (25)
-- [E] Violet Evergarden
-- [E] March comes in like a lion
-- [C] Clannad: After Story
-- [C] NANA
-- [C] MUSHI-SHI
-- [C] Your lie in April
-- [C] GTO: Great Teacher Onizuka
-- [C] Kaguya-sama: Love is War
-- [C] Nichijou - My Ordinary Life
-- [C] The Disastrous Life of Saiki K.
-- [C] Fruits Basket (2019)
-- [C] Grand Blue Dreaming
-- [C] Welcome to the N-H-K
-- [C] Barakamon
-- [C] Horimiya
-- [C] Skip and Loafer
+- [D] Clannad: After Story
+- [D] NANA
+- [D] Violet Evergarden
+- [D] MUSHI-SHI
+- [D] Your lie in April
+- [D] GTO: Great Teacher Onizuka
+- [D] Kaguya-sama: Love is War
+- [D] Nichijou - My Ordinary Life
+- [D] The Disastrous Life of Saiki K.
+- [D] March comes in like a lion
+- [D] Fruits Basket (2019)
+- [D] Grand Blue Dreaming
+- [D] Welcome to the N-H-K
+- [D] Barakamon
+- [D] Horimiya
+- [D] Skip and Loafer
 - [D] Laid-Back Camp
 - [D] Daily Lives of High School Boys
 - [D] HINAMATSURI
@@ -526,10 +531,10 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [D] Komi Can’t Communicate
 
 ### Sport  (7)
-- [E] HAIKYU!!
-- [E] Slam Dunk
-- [C] Hajime no Ippo: The Fighting!
-- [C] Ping Pong the Animation
+- [D] Hajime no Ippo: The Fighting!
+- [D] Ping Pong the Animation
+- [D] HAIKYU!!
+- [D] Slam Dunk
 - [D] Run with the Wind
 - [D] Grand Blue Dreaming
 - [D] BLUE LOCK
