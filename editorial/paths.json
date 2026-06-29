@@ -1,25 +1,5 @@
 [
   {
-    "id": "da-zero-a-otaku",
-    "title": "Da Zero a Otaku",
-    "tagline": "Mai visto un anime? Un percorso dai titoli più accessibili fino ai grandi classici, spiegati senza spoiler.",
-    "audience": "principiante",
-    "icon": "ri-compass-3-line",
-    "accent": "#45b4e0",
-    "levels": [],
-    "blurb": "Mai visto un anime? Si parte da qui, dal niente assoluto."
-  },
-  {
-    "id": "il-canone",
-    "title": "I Grandi Classici",
-    "tagline": "Le opere fondamentali che hanno definito gli anime, in ordine di epoca. Quelle che vale la pena conoscere.",
-    "audience": "tutti",
-    "icon": "ri-vip-crown-2-line",
-    "accent": "#2c5f86",
-    "levels": [],
-    "blurb": "Le opere che tutti danno per viste: colma le lacune."
-  },
-  {
     "id": "battle-shonen",
     "title": "Battle Shōnen",
     "tagline": "Combattimenti, poteri che crescono e rivalità: il genere d'azione più popolare e riconoscibile.",
@@ -134,23 +114,11 @@
     "blurb": "Roba di nicchia che quasi nessuno conosce: per intenditori."
   },
   {
-    "id": "capolavori",
-    "title": "Solo Capolavori",
-    "audience": "tutti",
-    "icon": "ri-medal-line",
-    "accent": "#1f93c8",
-    "tagline": "Se devi vedere qualcosa, parti da qui.",
-    "blurb": "I voti più alti e le pietre miliari del medium.",
-    "about": "Le opere che non si discutono: i voti più alti e le pietre miliari. Se hai poco tempo e vuoi andare sul sicuro, qualsiasi titolo qui dentro vale la visione.",
-    "curiosita": "Molti di questi sono nelle classifiche \"migliori anime di sempre\" da anni — non è hype passeggero, è roba che regge il tempo.",
-    "levels": []
-  },
-  {
     "id": "azione",
     "title": "Azione Adrenalinica",
     "audience": "tutti",
     "icon": "ri-fire-line",
-    "accent": "#1aa6b8",
+    "accent": "#5f8298",
     "tagline": "Zero tempi morti.",
     "blurb": "Scontri, inseguimenti e animazione che spacca.",
     "about": "Solo adrenalina: combattimenti spettacolari, ritmo serrato e animazione che lascia a bocca aperta. Quando vuoi qualcosa che parte subito e non ti molla.",
@@ -162,7 +130,7 @@
     "title": "Antieroi & Vendetta",
     "audience": "esperto",
     "icon": "ri-knife-blood-line",
-    "accent": "#5f8298",
+    "accent": "#2c5f86",
     "tagline": "Niente buoni contro cattivi.",
     "blurb": "Protagonisti ambigui e scelte sporche.",
     "about": "Protagonisti che non sono eroi: vendetta, ambiguità morale, mezzi discutibili per fini discutibili. Storie dove il \"giusto\" e lo \"sbagliato\" si confondono.",
@@ -299,6 +267,42 @@
     "blurb": "I robottoni storici: Mazinga, Goldrake, Gundam.",
     "about": "I super robot che hanno fondato il genere negli anni '70: Mazinga Z, Goldrake, Getter Robo, il primo Gundam. Le radici di tutto il mecha moderno.",
     "curiosita": "«Goldrake» (Grendizer) in Italia fu un fenomeno di costume nel 1978, al punto da far discutere persino in Parlamento sulla TV per ragazzi.",
+    "levels": []
+  },
+  {
+    "id": "storie-che-spezzano",
+    "title": "Storie che ti spezzano",
+    "audience": "tutti",
+    "icon": "ri-emotion-sad-line",
+    "accent": "#45b4e0",
+    "tagline": "Tieni i fazzoletti a portata.",
+    "blurb": "Anime che colpiscono dritti al cuore: drammi e addii che restano.",
+    "about": "Storie che non guardi, vivi. Drammi, perdite e legami che ti restano addosso per giorni. Se cerchi qualcosa che ti faccia sentire qualcosa di forte, parti da qui — ma preparati.",
+    "curiosita": "Molti spettatori citano proprio questi titoli come «l’anime che mi ha fatto piangere la prima volta».",
+    "levels": []
+  },
+  {
+    "id": "protagonisti-geniali",
+    "title": "Protagonisti geniali",
+    "audience": "tutti",
+    "icon": "ri-lightbulb-flash-line",
+    "accent": "#1f93c8",
+    "tagline": "Quando la testa conta più dei pugni.",
+    "blurb": "Menti brillanti, piani perfetti e duelli di intelligenza.",
+    "about": "Niente urla e raggi: qui si vince col cervello. Strateghi, manipolatori e geni che muovono gli altri come pedine. Per chi ama i piani elaborati e i colpi di scena calcolati.",
+    "curiosita": "In molti di questi il vero «combattimento» è una partita a scacchi tra due menti, a volte sullo stesso tavolo.",
+    "levels": []
+  },
+  {
+    "id": "spettacolo-occhi",
+    "title": "Spettacolo per gli occhi",
+    "audience": "tutti",
+    "icon": "ri-sparkling-2-line",
+    "accent": "#1aa6b8",
+    "tagline": "Animazione che fa cadere la mascella.",
+    "blurb": "I titoli con l’animazione più spettacolare in circolazione.",
+    "about": "Quando vuoi solo restare a bocca aperta. Studi come MAPPA, ufotable, Trigger e Wit qui danno il massimo: combattimenti, colori e regia che valgono da soli la visione.",
+    "curiosita": "Alcune di queste scene sono diventate virali da sole: gente che guarda l’episodio solo per «quel» momento.",
     "levels": []
   }
 ]

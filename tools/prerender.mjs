@@ -129,7 +129,7 @@ const indexPage = (slug, h1, sub, list) => {
 const GENRE_LIST = GENRE_IDS.map(id => byId.get(id)).filter(Boolean);
 const PERCORSI_LIST = (CAT.percorsoOrder || []).map(id => byId.get(id)).filter(Boolean);
 await emit('/generi', indexPage('generi', 'Generi', 'Tutti i generi: azione, mindfuck, horror, sci-fi, isekai e altro.', GENRE_LIST));
-await emit('/percorsi', indexPage('percorsi', 'Percorsi', 'Viaggi tematici curati: da dove iniziare, i capolavori, gli antieroi e altro.', PERCORSI_LIST));
+await emit('/percorsi', indexPage('percorsi', 'Percorsi', 'Viaggi tematici curati: storie che spezzano, protagonisti geniali, spettacolo visivo, antieroi e altro.', PERCORSI_LIST));
 urls.push('/generi', '/percorsi');
 
 // ── HOME (/) — prima NON era pre-renderizzata (i crawler la vedevano vuota) ──

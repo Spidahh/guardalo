@@ -420,7 +420,7 @@
         desc = 'Tutti i generi: azione, mindfuck, horror, sci-fi, isekai e altro. I migliori anime di ogni categoria.';
       } else if (seg === 'percorsi') {
         title = `Percorsi · ${BASE}`;
-        desc = 'Viaggi tematici curati: da dove iniziare, solo capolavori, antieroi e altri percorsi.';
+        desc = 'Viaggi tematici curati: storie che spezzano, protagonisti geniali, spettacolo visivo, antieroi e altro.';
       } else if (seg === 'info') {
         title = `Chi sono · ${BASE}`;
         desc = 'GUARDALO è una guida agli anime creata da Francesco Spidah. Selezione, testi e percorsi sono curatela personale.';
@@ -711,7 +711,7 @@
     // ── VISTA: PERCORSI (griglia percorsi tematici) ──────────────────────────────
     viewPercorsi() {
       return `<section class="wrap sec-page">
-        <div class="sec-page-head"><h1>Percorsi</h1><p>Viaggi tematici curati: dove iniziare, i capolavori, gli antieroi e altro.</p></div>
+        <div class="sec-page-head"><h1>Percorsi</h1><p>Viaggi tematici curati: storie che spezzano, protagonisti geniali, spettacolo visivo, antieroi e altro.</p></div>
         ${this.factBox()}
         <div class="paths-grid">${PERCORSI_PATHS.map(p => this.pathTile(p)).join('')}</div>
       </section>`;

@@ -9,11 +9,11 @@
   },
   "tiles": [
     {
-      "icon": "ri-seedling-line",
-      "title": "Parto da zero",
-      "sub": "Guida passo passo per scoprire gli anime.",
-      "link": "/p/da-zero-a-otaku",
-      "heroSlug": "hunter-x-hunter"
+      "icon": "ri-emotion-sad-line",
+      "title": "Voglio emozionarmi",
+      "sub": "Storie che colpiscono dritte al cuore.",
+      "link": "/p/storie-che-spezzano",
+      "heroSlug": "violet-evergarden"
     },
     {
       "icon": "ri-skull-line",

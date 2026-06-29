@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-29T08:15:34.730Z",
+  "generatedAt": "2026-06-29T08:23:09.731Z",
   "attribution": "Dati e immagini da AniList (anilist.co)",
   "count": 188,
   "titles": [
@@ -35396,24 +35396,6 @@
   ],
   "paths": [
     {
-      "id": "da-zero-a-otaku",
-      "title": "Da Zero a Otaku",
-      "tagline": "Mai visto un anime? Un percorso dai titoli più accessibili fino ai grandi classici, spiegati senza spoiler.",
-      "icon": "ri-compass-3-line",
-      "accent": "#45b4e0",
-      "levels": [],
-      "blurb": "Mai visto un anime? Si parte da qui, dal niente assoluto."
-    },
-    {
-      "id": "il-canone",
-      "title": "I Grandi Classici",
-      "tagline": "Le opere fondamentali che hanno definito gli anime, in ordine di epoca. Quelle che vale la pena conoscere.",
-      "icon": "ri-vip-crown-2-line",
-      "accent": "#2c5f86",
-      "levels": [],
-      "blurb": "Le opere che tutti danno per viste: colma le lacune."
-    },
-    {
       "id": "battle-shonen",
       "title": "Battle Shōnen",
       "tagline": "Combattimenti, poteri che crescono e rivalità: il genere d'azione più popolare e riconoscibile.",
@@ -35518,21 +35500,10 @@
       "blurb": "Roba di nicchia che quasi nessuno conosce: per intenditori."
     },
     {
-      "id": "capolavori",
-      "title": "Solo Capolavori",
-      "icon": "ri-medal-line",
-      "accent": "#1f93c8",
-      "tagline": "Se devi vedere qualcosa, parti da qui.",
-      "blurb": "I voti più alti e le pietre miliari del medium.",
-      "about": "Le opere che non si discutono: i voti più alti e le pietre miliari. Se hai poco tempo e vuoi andare sul sicuro, qualsiasi titolo qui dentro vale la visione.",
-      "curiosita": "Molti di questi sono nelle classifiche \"migliori anime di sempre\" da anni — non è hype passeggero, è roba che regge il tempo.",
-      "levels": []
-    },
-    {
       "id": "azione",
       "title": "Azione Adrenalinica",
       "icon": "ri-fire-line",
-      "accent": "#1aa6b8",
+      "accent": "#5f8298",
       "tagline": "Zero tempi morti.",
       "blurb": "Scontri, inseguimenti e animazione che spacca.",
       "about": "Solo adrenalina: combattimenti spettacolari, ritmo serrato e animazione che lascia a bocca aperta. Quando vuoi qualcosa che parte subito e non ti molla.",
@@ -35543,7 +35514,7 @@
       "id": "antieroi",
       "title": "Antieroi & Vendetta",
       "icon": "ri-knife-blood-line",
-      "accent": "#5f8298",
+      "accent": "#2c5f86",
       "tagline": "Niente buoni contro cattivi.",
       "blurb": "Protagonisti ambigui e scelte sporche.",
       "about": "Protagonisti che non sono eroi: vendetta, ambiguità morale, mezzi discutibili per fini discutibili. Storie dove il \"giusto\" e lo \"sbagliato\" si confondono.",
@@ -35670,6 +35641,39 @@
       "about": "I super robot che hanno fondato il genere negli anni '70: Mazinga Z, Goldrake, Getter Robo, il primo Gundam. Le radici di tutto il mecha moderno.",
       "curiosita": "«Goldrake» (Grendizer) in Italia fu un fenomeno di costume nel 1978, al punto da far discutere persino in Parlamento sulla TV per ragazzi.",
       "levels": []
+    },
+    {
+      "id": "storie-che-spezzano",
+      "title": "Storie che ti spezzano",
+      "icon": "ri-emotion-sad-line",
+      "accent": "#45b4e0",
+      "tagline": "Tieni i fazzoletti a portata.",
+      "blurb": "Anime che colpiscono dritti al cuore: drammi e addii che restano.",
+      "about": "Storie che non guardi, vivi. Drammi, perdite e legami che ti restano addosso per giorni. Se cerchi qualcosa che ti faccia sentire qualcosa di forte, parti da qui — ma preparati.",
+      "curiosita": "Molti spettatori citano proprio questi titoli come «l’anime che mi ha fatto piangere la prima volta».",
+      "levels": []
+    },
+    {
+      "id": "protagonisti-geniali",
+      "title": "Protagonisti geniali",
+      "icon": "ri-lightbulb-flash-line",
+      "accent": "#1f93c8",
+      "tagline": "Quando la testa conta più dei pugni.",
+      "blurb": "Menti brillanti, piani perfetti e duelli di intelligenza.",
+      "about": "Niente urla e raggi: qui si vince col cervello. Strateghi, manipolatori e geni che muovono gli altri come pedine. Per chi ama i piani elaborati e i colpi di scena calcolati.",
+      "curiosita": "In molti di questi il vero «combattimento» è una partita a scacchi tra due menti, a volte sullo stesso tavolo.",
+      "levels": []
+    },
+    {
+      "id": "spettacolo-occhi",
+      "title": "Spettacolo per gli occhi",
+      "icon": "ri-sparkling-2-line",
+      "accent": "#1aa6b8",
+      "tagline": "Animazione che fa cadere la mascella.",
+      "blurb": "I titoli con l’animazione più spettacolare in circolazione.",
+      "about": "Quando vuoi solo restare a bocca aperta. Studi come MAPPA, ufotable, Trigger e Wit qui danno il massimo: combattimenti, colori e regia che valgono da soli la visione.",
+      "curiosita": "Alcune di queste scene sono diventate virali da sole: gente che guarda l’episodio solo per «quel» momento.",
+      "levels": []
     }
   ],
   "categories": {
@@ -35694,11 +35698,11 @@
       "cinema-dautore"
     ],
     "percorsoOrder": [
-      "da-zero-a-otaku",
-      "capolavori",
+      "storie-che-spezzano",
+      "protagonisti-geniali",
+      "spettacolo-occhi",
       "azione",
       "antieroi",
-      "il-canone",
       "chicche-e-deep-cut"
     ],
     "hero": {
@@ -35720,14 +35724,14 @@
       "romance": "sword-art-online",
       "commedia": "spy-x-family",
       "cinema-dautore": "akira",
-      "da-zero-a-otaku": "fullmetal-alchemist-brotherhood",
-      "capolavori": "cowboy-bebop",
       "azione": "demon-slayer",
       "antieroi": "code-geass",
-      "il-canone": "attack-on-titan",
       "chicche-e-deep-cut": "heavenly-delusion",
       "slice-of-life": "violet-evergarden",
-      "sport": "haikyuu"
+      "sport": "haikyuu",
+      "storie-che-spezzano": "violet-evergarden",
+      "protagonisti-geniali": "death-note",
+      "spettacolo-occhi": "cyberpunk-edgerunners"
     },
     "members": {
       "battle-shonen": [
@@ -36178,44 +36182,6 @@
         "summer-wars",
         "5-centimeters-per-second"
       ],
-      "da-zero-a-otaku": [
-        "fullmetal-alchemist-brotherhood",
-        "steins-gate",
-        "hunter-x-hunter",
-        "one-piece",
-        "attack-on-titan",
-        "cyberpunk-edgerunners",
-        "death-note",
-        "jujutsu-kaisen",
-        "berserk",
-        "neon-genesis-evangelion",
-        "naruto",
-        "monster",
-        "vinland-saga",
-        "cowboy-bebop",
-        "made-in-abyss",
-        "demon-slayer",
-        "dan-da-dan",
-        "dragon-ball"
-      ],
-      "capolavori": [
-        "fullmetal-alchemist-brotherhood",
-        "steins-gate",
-        "hunter-x-hunter",
-        "one-piece",
-        "attack-on-titan",
-        "gurren-lagann",
-        "cyberpunk-edgerunners",
-        "death-note",
-        "berserk",
-        "neon-genesis-evangelion",
-        "monster",
-        "vinland-saga",
-        "cowboy-bebop",
-        "code-geass",
-        "made-in-abyss",
-        "the-tatami-galaxy"
-      ],
       "azione": [
         "cyberpunk-edgerunners",
         "gurren-lagann",
@@ -36243,28 +36209,6 @@
         "akame-ga-kill",
         "gangsta",
         "banana-fish"
-      ],
-      "il-canone": [
-        "fullmetal-alchemist-brotherhood",
-        "steins-gate",
-        "hunter-x-hunter",
-        "gurren-lagann",
-        "attack-on-titan",
-        "death-note",
-        "neon-genesis-evangelion",
-        "frieren",
-        "monster",
-        "vinland-saga",
-        "cowboy-bebop",
-        "code-geass",
-        "made-in-abyss",
-        "samurai-champloo",
-        "trigun",
-        "dragon-ball",
-        "legend-of-the-galactic-heroes",
-        "clannad-after-story",
-        "yu-yu-hakusho",
-        "madoka-magica"
       ],
       "chicche-e-deep-cut": [
         "heavenly-delusion",
@@ -36325,6 +36269,52 @@
         "slam-dunk",
         "run-with-the-wind",
         "blue-lock"
+      ],
+      "storie-che-spezzano": [
+        "clannad-after-story",
+        "violet-evergarden",
+        "grave-of-the-fireflies",
+        "your-lie-in-april",
+        "a-silent-voice",
+        "march-comes-in-like-a-lion",
+        "frieren",
+        "made-in-abyss",
+        "wolf-children",
+        "5-centimeters-per-second",
+        "your-name",
+        "weathering-with-you",
+        "nana",
+        "banana-fish",
+        "the-tale-of-the-princess-kaguya"
+      ],
+      "protagonisti-geniali": [
+        "death-note",
+        "code-geass",
+        "steins-gate",
+        "monster",
+        "spy-x-family",
+        "the-eminence-in-shadow",
+        "kaguya-sama-love-is-war",
+        "overlord",
+        "psycho-pass",
+        "pluto",
+        "hunter-x-hunter",
+        "legend-of-the-galactic-heroes"
+      ],
+      "spettacolo-occhi": [
+        "cyberpunk-edgerunners",
+        "demon-slayer",
+        "jujutsu-kaisen",
+        "mob-psycho-100",
+        "chainsaw-man",
+        "fate-franchise-completo",
+        "gurren-lagann",
+        "dan-da-dan",
+        "kill-la-kill",
+        "promare",
+        "redline",
+        "vivy-fluorite-eyes-song",
+        "akira"
       ]
     },
     "tiers": {
@@ -36776,44 +36766,6 @@
         "summer-wars": "d",
         "5-centimeters-per-second": "d"
       },
-      "da-zero-a-otaku": {
-        "fullmetal-alchemist-brotherhood": "e",
-        "steins-gate": "e",
-        "hunter-x-hunter": "e",
-        "one-piece": "e",
-        "attack-on-titan": "e",
-        "cyberpunk-edgerunners": "e",
-        "death-note": "e",
-        "jujutsu-kaisen": "e",
-        "berserk": "e",
-        "neon-genesis-evangelion": "e",
-        "naruto": "e",
-        "monster": "c",
-        "vinland-saga": "c",
-        "cowboy-bebop": "c",
-        "made-in-abyss": "c",
-        "demon-slayer": "c",
-        "dan-da-dan": "c",
-        "dragon-ball": "c"
-      },
-      "capolavori": {
-        "fullmetal-alchemist-brotherhood": "e",
-        "steins-gate": "e",
-        "hunter-x-hunter": "e",
-        "one-piece": "e",
-        "attack-on-titan": "e",
-        "gurren-lagann": "e",
-        "cyberpunk-edgerunners": "e",
-        "death-note": "e",
-        "berserk": "e",
-        "neon-genesis-evangelion": "e",
-        "monster": "c",
-        "vinland-saga": "c",
-        "cowboy-bebop": "c",
-        "code-geass": "c",
-        "made-in-abyss": "c",
-        "the-tatami-galaxy": "d"
-      },
       "azione": {
         "cyberpunk-edgerunners": "e",
         "gurren-lagann": "e",
@@ -36841,28 +36793,6 @@
         "akame-ga-kill": "c",
         "gangsta": "c",
         "banana-fish": "d"
-      },
-      "il-canone": {
-        "fullmetal-alchemist-brotherhood": "e",
-        "steins-gate": "e",
-        "hunter-x-hunter": "e",
-        "gurren-lagann": "e",
-        "attack-on-titan": "e",
-        "death-note": "e",
-        "neon-genesis-evangelion": "e",
-        "frieren": "c",
-        "monster": "c",
-        "vinland-saga": "c",
-        "cowboy-bebop": "c",
-        "code-geass": "c",
-        "made-in-abyss": "c",
-        "samurai-champloo": "c",
-        "trigun": "c",
-        "dragon-ball": "c",
-        "legend-of-the-galactic-heroes": "d",
-        "clannad-after-story": "d",
-        "yu-yu-hakusho": "d",
-        "madoka-magica": "d"
       },
       "chicche-e-deep-cut": {
         "heavenly-delusion": "e",
@@ -36923,6 +36853,52 @@
         "slam-dunk": "d",
         "run-with-the-wind": "d",
         "blue-lock": "d"
+      },
+      "storie-che-spezzano": {
+        "clannad-after-story": "e",
+        "violet-evergarden": "e",
+        "grave-of-the-fireflies": "e",
+        "your-lie-in-april": "e",
+        "a-silent-voice": "c",
+        "march-comes-in-like-a-lion": "c",
+        "frieren": "c",
+        "made-in-abyss": "c",
+        "wolf-children": "c",
+        "5-centimeters-per-second": "d",
+        "your-name": "d",
+        "weathering-with-you": "d",
+        "nana": "d",
+        "banana-fish": "d",
+        "the-tale-of-the-princess-kaguya": "d"
+      },
+      "protagonisti-geniali": {
+        "death-note": "e",
+        "code-geass": "e",
+        "steins-gate": "e",
+        "monster": "e",
+        "spy-x-family": "c",
+        "the-eminence-in-shadow": "c",
+        "kaguya-sama-love-is-war": "c",
+        "overlord": "c",
+        "psycho-pass": "c",
+        "pluto": "d",
+        "hunter-x-hunter": "d",
+        "legend-of-the-galactic-heroes": "d"
+      },
+      "spettacolo-occhi": {
+        "cyberpunk-edgerunners": "e",
+        "demon-slayer": "e",
+        "jujutsu-kaisen": "e",
+        "mob-psycho-100": "e",
+        "chainsaw-man": "c",
+        "fate-franchise-completo": "c",
+        "gurren-lagann": "c",
+        "dan-da-dan": "c",
+        "kill-la-kill": "c",
+        "promare": "d",
+        "redline": "d",
+        "vivy-fluorite-eyes-song": "d",
+        "akira": "d"
       }
     }
   },
@@ -36936,11 +36912,11 @@
     },
     "tiles": [
       {
-        "icon": "ri-seedling-line",
-        "title": "Parto da zero",
-        "sub": "Guida passo passo per scoprire gli anime.",
-        "link": "/p/da-zero-a-otaku",
-        "heroSlug": "hunter-x-hunter"
+        "icon": "ri-emotion-sad-line",
+        "title": "Voglio emozionarmi",
+        "sub": "Storie che colpiscono dritte al cuore.",
+        "link": "/p/storie-che-spezzano",
+        "heroSlug": "violet-evergarden"
       },
       {
         "icon": "ri-skull-line",
