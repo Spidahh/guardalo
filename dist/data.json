@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-22T10:36:37.488Z",
+  "generatedAt": "2026-06-29T08:15:34.730Z",
   "attribution": "Dati e immagini da AniList (anilist.co)",
-  "count": 189,
+  "count": 188,
   "titles": [
     {
       "id": "attack-on-titan",
@@ -18150,148 +18150,6 @@
       }
     },
     {
-      "id": "petals-of-reincarnation",
-      "title": "Petals of Reincarnation",
-      "titleRomaji": "Reincarnation no Kaben",
-      "titleNative": "リィンカーネーションの花弁",
-      "year": 2026,
-      "format": "TV",
-      "typeLabel": "Serie",
-      "statusLabel": "In corso",
-      "episodes": 13,
-      "sagaEpisodes": 13,
-      "coreMinutes": 312,
-      "lengthBand": "corto",
-      "lengthLabel": "Corto",
-      "lengthHint": "un weekend",
-      "genres": [
-        "Action",
-        "Supernatural"
-      ],
-      "tags": [
-        "Super Power",
-        "Male Protagonist",
-        "Shounen",
-        "Historical",
-        "Artificial Intelligence",
-        "Gender Bending"
-      ],
-      "studios": [
-        "BENTEN Film"
-      ],
-      "director": "Shun Kudou",
-      "creator": "Mikihisa Konishi",
-      "sourceLabel": "Manga",
-      "score10": 5.9,
-      "popularity": 29535,
-      "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx179950-g95odyBfYEbU.jpg",
-      "coverColor": "#0d8686",
-      "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/179950-j8dYIqYi8KLC.jpg",
-      "streaming": [
-        {
-          "name": "HIDIVE",
-          "url": "https://www.hidive.com/season/35228"
-        },
-        {
-          "name": "YouTube",
-          "url": "https://www.youtube.com/playlist?list=PLxSscENEp7JgAgNZonRZtMMkb823NExcD"
-        },
-        {
-          "name": "Bilibili TV",
-          "url": "https://www.bilibili.tv/en/media/2343947"
-        }
-      ],
-      "startFrom": null,
-      "structure": [
-        {
-          "name": "Petals of Reincarnation",
-          "episodes": "13 ep",
-          "year": 2026,
-          "main": true
-        }
-      ],
-      "inList": true,
-      "userRating": null,
-      "hook": "Azione soprannaturale: un ragazzo convinto di non avere talento incontra una guerriera che attinge ai poteri delle vite passate, ma solo a un prezzo brutale. Premessa dark e violenta, con un protagonista comune trascinato in una lotta più grande di lui.",
-      "tone": [
-        "azione",
-        "soprannaturale",
-        "dark",
-        "violento"
-      ],
-      "forWho": "Per chi vuole un'azione soprannaturale dai toni cupi.",
-      "tips": [],
-      "recommendations": {
-        "simili": [
-          {
-            "id": "drifters",
-            "why": "Chi ha amato questo ha amato anche"
-          },
-          {
-            "id": "fate-franchise-completo",
-            "why": "Chi ha amato questo ha amato anche"
-          },
-          {
-            "id": "future-diary",
-            "why": "Chi ha amato questo ha amato anche"
-          }
-        ],
-        "saga": [],
-        "studio": [],
-        "autore": [],
-        "affin": [
-          {
-            "id": "bleach",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "jojo-s-bizarre-adventure",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "naruto",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "deadman-wonderland",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "dragon-ball",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "jujutsu-kaisen",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "hunter-x-hunter",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "one-piece",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "summer-time-rendering",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "akira",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "black-clover",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "darwin-s-game",
-            "why": "Atmosfera e temi affini"
-          }
-        ]
-      }
-    },
-    {
       "id": "fate-franchise-completo",
       "title": "Fate/Zero",
       "titleRomaji": "Fate/Zero",
@@ -35902,8 +35760,7 @@
         "my-hero-academia-vigilantes",
         "tower-of-god",
         "darwin-s-game",
-        "deadman-wonderland",
-        "petals-of-reincarnation"
+        "deadman-wonderland"
       ],
       "seinen-e-maturo": [
         "vinland-saga",
@@ -35970,7 +35827,6 @@
         "handyman-saitou-in-another-world",
         "sword-art-online",
         "failure-frame-i-became-the-strongest",
-        "petals-of-reincarnation",
         "konosuba",
         "abenobashi-magical-shopping-street"
       ],
@@ -36197,8 +36053,7 @@
         "golden-kamuy",
         "91-days",
         "hell-s-paradise-jigokuraku",
-        "drifters",
-        "petals-of-reincarnation"
+        "drifters"
       ],
       "vendetta": [
         "vinland-saga",
@@ -36275,26 +36130,8 @@
         "mob-psycho-100",
         "one-punch-man",
         "dan-da-dan",
-        "kill-la-kill",
-        "one-piece",
-        "hajime-no-ippo",
-        "gurren-lagann",
-        "dungeon-meshi",
-        "the-tatami-galaxy",
-        "samurai-champloo",
-        "haikyuu",
         "spy-x-family",
-        "slam-dunk",
-        "yu-yu-hakusho",
-        "fruits-basket-2019",
-        "welcome-to-the-nhk",
         "the-eminence-in-shadow",
-        "laid-back-camp",
-        "horimiya",
-        "bunny-girl-senpai",
-        "dr-stone",
-        "skip-and-loafer",
-        "golden-kamuy",
         "handyman-saitou-in-another-world",
         "abenobashi-magical-shopping-street",
         "gintama",
@@ -36305,26 +36142,9 @@
         "grand-blue",
         "hinamatsuri",
         "daily-lives-of-high-school-boys",
-        "naruto",
-        "shangri-la-frontier",
-        "trigun",
-        "tensura",
-        "my-dress-up-darling",
         "konosuba",
         "asobi-asobase",
-        "black-clover",
-        "flcl",
-        "wistoria-wand-and-sword",
-        "dragon-ball",
-        "daemons-of-the-shadow-realm",
-        "toradora",
-        "my-hero-academia",
-        "clannad",
-        "komi-cant-communicate",
-        "honey-and-clover",
-        "drifters",
-        "bna-brand-new-animal",
-        "daltanious"
+        "komi-cant-communicate"
       ],
       "cinema-dautore": [
         "la-citta-incantata",
@@ -36538,8 +36358,7 @@
         "my-hero-academia-vigilantes": "d",
         "tower-of-god": "d",
         "darwin-s-game": "d",
-        "deadman-wonderland": "d",
-        "petals-of-reincarnation": "d"
+        "deadman-wonderland": "d"
       },
       "seinen-e-maturo": {
         "vinland-saga": "e",
@@ -36606,7 +36425,6 @@
         "handyman-saitou-in-another-world": "c",
         "sword-art-online": "c",
         "failure-frame-i-became-the-strongest": "c",
-        "petals-of-reincarnation": "c",
         "konosuba": "d",
         "abenobashi-magical-shopping-street": "d"
       },
@@ -36833,8 +36651,7 @@
         "golden-kamuy": "c",
         "91-days": "c",
         "hell-s-paradise-jigokuraku": "d",
-        "drifters": "d",
-        "petals-of-reincarnation": "d"
+        "drifters": "d"
       },
       "vendetta": {
         "vinland-saga": "e",
@@ -36911,26 +36728,8 @@
         "mob-psycho-100": "e",
         "one-punch-man": "e",
         "dan-da-dan": "e",
-        "kill-la-kill": "e",
-        "one-piece": "c",
-        "hajime-no-ippo": "c",
-        "gurren-lagann": "c",
-        "dungeon-meshi": "c",
-        "the-tatami-galaxy": "c",
-        "samurai-champloo": "c",
-        "haikyuu": "c",
         "spy-x-family": "c",
-        "slam-dunk": "c",
-        "yu-yu-hakusho": "c",
-        "fruits-basket-2019": "c",
-        "welcome-to-the-nhk": "c",
         "the-eminence-in-shadow": "c",
-        "laid-back-camp": "c",
-        "horimiya": "c",
-        "bunny-girl-senpai": "c",
-        "dr-stone": "c",
-        "skip-and-loafer": "c",
-        "golden-kamuy": "c",
         "handyman-saitou-in-another-world": "c",
         "abenobashi-magical-shopping-street": "c",
         "gintama": "d",
@@ -36941,26 +36740,9 @@
         "grand-blue": "d",
         "hinamatsuri": "d",
         "daily-lives-of-high-school-boys": "d",
-        "naruto": "d",
-        "shangri-la-frontier": "d",
-        "trigun": "d",
-        "tensura": "d",
-        "my-dress-up-darling": "d",
         "konosuba": "d",
         "asobi-asobase": "d",
-        "black-clover": "d",
-        "flcl": "d",
-        "wistoria-wand-and-sword": "d",
-        "dragon-ball": "d",
-        "daemons-of-the-shadow-realm": "d",
-        "toradora": "d",
-        "my-hero-academia": "d",
-        "clannad": "d",
-        "komi-cant-communicate": "d",
-        "honey-and-clover": "d",
-        "drifters": "d",
-        "bna-brand-new-animal": "d",
-        "daltanious": "d"
+        "komi-cant-communicate": "d"
       },
       "cinema-dautore": {
         "la-citta-incantata": "e",
