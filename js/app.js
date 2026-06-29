@@ -200,6 +200,9 @@
       if (wb) { wb.classList.toggle('on', this.isWatched(id)); wb.innerHTML = `<i class="ri-check-double-line"></i> ${this.isWatched(id) ? 'Visto' : 'Segna visto'}`; }
       const lb = document.querySelector(`.t-btn.js-later[data-id="${CSS.escape(id)}"]`);
       if (lb) { lb.classList.toggle('on', this.isLater(id)); lb.innerHTML = `<i class="ri-bookmark-line"></i> ${this.isLater(id) ? 'Salvato' : 'Da vedere'}`; }
+      // avanzamento percorso/genere: aggiorna la barra live quando segni un titolo visto
+      const pp = document.getElementById('pathProg');
+      if (pp && pp.dataset.pid) { const pg = PATHS.find(x => x.id === pp.dataset.pid); if (pg) pp.innerHTML = this.pathProgressBar(pg); }
       // su home e pagine genere bastano le spunte: NON ri-renderizzare (niente salto in cima)
       // su /lista la composizione delle liste cambia: ri-renderizza ma conserva ordine/filtro e scroll
       if ((location.pathname || '/') === '/lista') {
@@ -575,6 +578,19 @@
     pathCovers(p, n) {
       return catTitles(p).filter(t => t && t.coverImage).slice(0, n);
     }
+    // avanzamento dell'utente in un percorso/genere: quanti titoli ha già visto
+    pathProgress(p) {
+      const m = catTitles(p);
+      const done = m.filter(t => this.isWatched(t.id)).length;
+      return { total: m.length, done, pct: m.length ? Math.round(done / m.length * 100) : 0 };
+    }
+    pathProgressBar(p) {
+      const pr = this.pathProgress(p);
+      if (!pr.total) return '';
+      const full = pr.done === pr.total && pr.done > 0;
+      return `<div class="pp-bar"><span class="pp-fill" style="width:${pr.pct}%"></span></div>
+        <span class="pp-txt">${full ? '<i class="ri-check-double-line"></i> Completato!' : `${pr.done} di ${pr.total} visti`}</span>`;
+    }
     // tile di un percorso/genere
     pathTile(p, opts = {}) {
       const mem = catTitles(p);
@@ -763,6 +779,7 @@
               <div class="path-hero-meta">
                 <span>${catTitles(p).length} titoli · ordinati dal migliore</span>
               </div>
+              <div class="path-prog" id="pathProg" data-pid="${esc(p.id)}">${this.pathProgressBar(p)}</div>
             </div>
           </div>
         </div>

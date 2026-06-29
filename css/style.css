@@ -109,6 +109,13 @@ em { font-style: italic; }
 .path-hero-in { display: flex; gap: 20px; align-items: flex-start; margin-top: 8px; }
 .path-hero-name { font-family: var(--serif); font-weight: 600; font-size: clamp(28px, 5vw, 44px); margin: 0 0 8px; letter-spacing: -.01em; }
 .path-hero-meta { display: flex; align-items: center; gap: 12px; font-size: 13px; color: var(--ink-faint); font-weight: 600; flex-wrap: wrap; }
+/* avanzamento utente nel percorso/genere (titoli visti su totale) */
+.path-prog { display: flex; align-items: center; gap: 10px; margin-top: 9px; max-width: 340px; }
+.path-prog:empty { display: none; }
+.pp-bar { flex: 1; height: 6px; border-radius: 999px; background: color-mix(in srgb, var(--ink) 14%, transparent); overflow: hidden; }
+.pp-fill { display: block; height: 100%; border-radius: 999px; background: var(--accent); transition: width .35s ease; }
+.pp-txt { font-size: 12.5px; font-weight: 700; color: var(--ink-soft); white-space: nowrap; }
+.pp-txt i { color: var(--accent); margin-right: 2px; }
 
 /* ── LIVELLI (la progressione) ────────────────────────────────────────────── */
 .levels { padding: 14px 22px 60px; }
