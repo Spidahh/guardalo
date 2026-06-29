@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c1a24"/>
+      <stop offset="1" stop-color="#123243"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="0%" r="75%">
+      <stop offset="0" stop-color="#1593cc" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#1593cc" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect x="0" y="0" width="1200" height="8" fill="#1593cc"/>
+  <text x="600" y="250" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="132" font-weight="700" letter-spacing="2" fill="#eef4f8">GUARDALO</text>
+  <text x="600" y="320" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="600" letter-spacing="6" fill="#d99e12">LA GUIDA AGLI ANIME</text>
+  <text x="600" y="420" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="400" fill="#9fbac8">Cosa guardare, da dove iniziare, dove vederlo.</text>
+  <text x="600" y="470" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="400" fill="#9fbac8">Anime scelti e spiegati, senza perdere tempo.</text>
+  <text x="600" y="565" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="600" letter-spacing="1" fill="#45c2ee">guardalo.vercel.app</text>
+</svg>
