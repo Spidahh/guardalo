@@ -571,23 +571,9 @@
     }
 
     // ── VISTA: HOME (percorsi) ──────────────────────────────────────────────────
-    pathProgress(p) {
-      const ids = new Set();
-      p.levels.forEach(l => (l.titles || []).forEach(id => ids.add(id)));
-      const total = ids.size;
-      let done = 0; ids.forEach(id => { if (this.isWatched(id)) done++; });
-      return { total, done, pct: total ? Math.round(done / total * 100) : 0 };
-    }
-    // prime N copertine rappresentative di un percorso (per la card visiva)
+    // prime N copertine rappresentative di un percorso (per il banner): dai membri reali della sezione
     pathCovers(p, n) {
-      const seen = new Set(), out = [];
-      for (const lv of p.levels) for (const id of (lv.titles || [])) {
-        if (seen.has(id)) continue; seen.add(id);
-        const t = BY_ID.get(id);
-        if (t && t.coverImage) out.push(t);
-        if (out.length >= n) return out;
-      }
-      return out;
+      return catTitles(p).filter(t => t && t.coverImage).slice(0, n);
     }
     // tile di un percorso/genere
     pathTile(p, opts = {}) {
@@ -736,8 +722,7 @@
         <p class="doc-sign">— Francesco Spidah</p>`);
     }
     viewPrivacy() {
-      return this.docPage('Privacy Policy', 'Ultimo aggiornamento: giugno 2026. Modello da personalizzare.', `
-        <p><i>Questo è un testo base: adattalo ai servizi che attiverai davvero (analytics, pubblicità) e ai tuoi dati reali prima del lancio.</i></p>
+      return this.docPage('Privacy Policy', 'Ultimo aggiornamento: giugno 2026.', `
         <h2>Titolare</h2>
         <p>Il titolare del trattamento è <b>Francesco Spidah</b> (contatto: <a href="mailto:magistaf@gmail.com">magistaf@gmail.com</a>).</p>
         <h2>Dati raccolti</h2>
@@ -750,8 +735,7 @@
         <p>AniList (dati anime), Google Firebase (login/sync opzionale), Google AdSense (pubblicità, se attiva). Ognuno tratta i dati secondo la propria informativa.</p>`);
     }
     viewCookie() {
-      return this.docPage('Cookie Policy', 'Ultimo aggiornamento: giugno 2026. Modello da personalizzare.', `
-        <p><i>Adatta questo testo ai servizi realmente attivi al lancio.</i></p>
+      return this.docPage('Cookie Policy', 'Ultimo aggiornamento: giugno 2026.', `
         <h2>Cosa usiamo</h2>
         <p><b>Tecnici / necessari:</b> il sito salva localmente (localStorage) le tue preferenze: titoli visti/da vedere, tema chiaro/scuro, consenso ai cookie. Non servono per profilarti e non si possono disattivare.</p>
         <p><b>Funzionali (opzionali):</b> se accedi con Google, Firebase usa cookie/token per tenerti autenticato.</p>
@@ -764,7 +748,6 @@
     viewPath(id) {
       const p = PATHS.find(x => x.id === id);
       if (!p) return this.notFound();
-      const pr = this.pathProgress(p);
       const banner = this.pathCovers(p, 8).map(t =>
         `<span class="phb" style="--cc:${esc(t.coverColor || '#222')}"><img src="${esc(thumbS(t.coverImage))}" alt="" loading="lazy" onload="this.classList.add('ld')" onerror="this.classList.add('ld')"></span>`).join('');
       const hero = `
