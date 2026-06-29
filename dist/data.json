@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-29T08:33:07.935Z",
+  "generatedAt": "2026-06-29T08:34:19.952Z",
   "attribution": "Dati e immagini da AniList (anilist.co)",
   "count": 190,
   "titles": [
@@ -36056,7 +36056,7 @@
       "viaggi-nel-tempo": "steins-gate",
       "crimine": "91-days",
       "supereroi": "my-hero-academia",
-      "romance": "sword-art-online",
+      "romance": "your-lie-in-april",
       "commedia": "spy-x-family",
       "cinema-dautore": "akira",
       "azione": "demon-slayer",
@@ -36107,6 +36107,7 @@
         "attack-on-titan",
         "samurai-champloo",
         "pluto",
+        "nippon-sangoku",
         "chainsaw-man",
         "86-eighty-six",
         "march-comes-in-like-a-lion",
@@ -36135,8 +36136,7 @@
         "planetes",
         "id-invaded",
         "tokyo-ghoul",
-        "terra-formars",
-        "nippon-sangoku"
+        "terra-formars"
       ],
       "isekai": [
         "solo-leveling",
@@ -36159,8 +36159,8 @@
         "sword-art-online",
         "failure-frame-i-became-the-strongest",
         "konosuba",
-        "abenobashi-magical-shopping-street",
-        "the-wrong-way-to-use-healing-magic"
+        "the-wrong-way-to-use-healing-magic",
+        "abenobashi-magical-shopping-street"
       ],
       "fantasy": [
         "fullmetal-alchemist-brotherhood",
@@ -36197,6 +36197,7 @@
         "overlord",
         "the-rising-of-the-shield-hero",
         "drifters",
+        "the-wrong-way-to-use-healing-magic",
         "gate",
         "grimgar-of-fantasy-and-ash",
         "reincarnated-as-a-sword",
@@ -36204,8 +36205,7 @@
         "saint-seiya",
         "handyman-saitou-in-another-world",
         "the-world-s-finest-assassin-gets-reincarnated-in-another-world-as-an-aristocrat",
-        "failure-frame-i-became-the-strongest",
-        "the-wrong-way-to-use-healing-magic"
+        "failure-frame-i-became-the-strongest"
       ],
       "sci-fi": [
         "steins-gate",
@@ -36217,6 +36217,7 @@
         "code-geass",
         "made-in-abyss",
         "pluto",
+        "nippon-sangoku",
         "neon-genesis-evangelion",
         "86-eighty-six",
         "parasyte-the-maxim",
@@ -36243,8 +36244,7 @@
         "ergo-proxy",
         "mazinger-z",
         "gantz",
-        "getter-robo",
-        "nippon-sangoku"
+        "getter-robo"
       ],
       "mecha": [
         "gurren-lagann",
@@ -36259,8 +36259,8 @@
         "mobile-suit-gundam",
         "ufo-robot-grendizer",
         "mazinger-z",
-        "getter-robo",
-        "daltanious"
+        "daltanious",
+        "getter-robo"
       ],
       "super-robot": [
         "ufo-robot-grendizer",
@@ -36306,6 +36306,7 @@
         "monster",
         "made-in-abyss",
         "the-promised-neverland",
+        "jujutsu-kaisen",
         "chainsaw-man",
         "hellsing-ultimate",
         "claymore",
@@ -36316,11 +36317,10 @@
         "gantz",
         "from-the-new-world",
         "tokyo-ghoul",
+        "higurashi",
         "dark-gathering",
         "shiki",
-        "higurashi",
-        "another",
-        "jujutsu-kaisen"
+        "another"
       ],
       "sopravvivenza": [
         "the-promised-neverland",
@@ -36364,10 +36364,10 @@
         "hell-s-paradise-jigokuraku",
         "claymore",
         "akame-ga-kill",
+        "nippon-sangoku",
         "kill-la-kill",
         "the-rising-of-the-shield-hero",
-        "failure-frame-i-became-the-strongest",
-        "nippon-sangoku"
+        "failure-frame-i-became-the-strongest"
       ],
       "viaggi-nel-tempo": [
         "steins-gate",
@@ -36465,6 +36465,52 @@
         "summer-wars",
         "5-centimeters-per-second"
       ],
+      "storie-che-spezzano": [
+        "clannad-after-story",
+        "violet-evergarden",
+        "your-lie-in-april",
+        "grave-of-the-fireflies",
+        "frieren",
+        "a-silent-voice",
+        "made-in-abyss",
+        "march-comes-in-like-a-lion",
+        "wolf-children",
+        "your-name",
+        "nana",
+        "banana-fish",
+        "weathering-with-you",
+        "the-tale-of-the-princess-kaguya",
+        "5-centimeters-per-second"
+      ],
+      "protagonisti-geniali": [
+        "steins-gate",
+        "monster",
+        "code-geass",
+        "death-note",
+        "spy-x-family",
+        "kaguya-sama-love-is-war",
+        "the-eminence-in-shadow",
+        "psycho-pass",
+        "overlord",
+        "hunter-x-hunter",
+        "legend-of-the-galactic-heroes",
+        "pluto"
+      ],
+      "spettacolo-occhi": [
+        "cyberpunk-edgerunners",
+        "jujutsu-kaisen",
+        "mob-psycho-100",
+        "demon-slayer",
+        "gurren-lagann",
+        "chainsaw-man",
+        "dan-da-dan",
+        "fate-franchise-completo",
+        "kill-la-kill",
+        "vivy-fluorite-eyes-song",
+        "redline",
+        "akira",
+        "promare"
+      ],
       "azione": [
         "cyberpunk-edgerunners",
         "gurren-lagann",
@@ -36547,52 +36593,6 @@
         "slam-dunk",
         "run-with-the-wind",
         "blue-lock"
-      ],
-      "storie-che-spezzano": [
-        "clannad-after-story",
-        "violet-evergarden",
-        "grave-of-the-fireflies",
-        "your-lie-in-april",
-        "a-silent-voice",
-        "march-comes-in-like-a-lion",
-        "frieren",
-        "made-in-abyss",
-        "wolf-children",
-        "5-centimeters-per-second",
-        "your-name",
-        "weathering-with-you",
-        "nana",
-        "banana-fish",
-        "the-tale-of-the-princess-kaguya"
-      ],
-      "protagonisti-geniali": [
-        "death-note",
-        "code-geass",
-        "steins-gate",
-        "monster",
-        "spy-x-family",
-        "the-eminence-in-shadow",
-        "kaguya-sama-love-is-war",
-        "overlord",
-        "psycho-pass",
-        "pluto",
-        "hunter-x-hunter",
-        "legend-of-the-galactic-heroes"
-      ],
-      "spettacolo-occhi": [
-        "cyberpunk-edgerunners",
-        "demon-slayer",
-        "jujutsu-kaisen",
-        "mob-psycho-100",
-        "chainsaw-man",
-        "fate-franchise-completo",
-        "gurren-lagann",
-        "dan-da-dan",
-        "kill-la-kill",
-        "promare",
-        "redline",
-        "vivy-fluorite-eyes-song",
-        "akira"
       ]
     },
     "tiers": {
@@ -36634,6 +36634,7 @@
         "attack-on-titan": "c",
         "samurai-champloo": "c",
         "pluto": "c",
+        "nippon-sangoku": "c",
         "chainsaw-man": "c",
         "86-eighty-six": "c",
         "march-comes-in-like-a-lion": "c",
@@ -36662,8 +36663,7 @@
         "planetes": "d",
         "id-invaded": "d",
         "tokyo-ghoul": "d",
-        "terra-formars": "d",
-        "nippon-sangoku": "c"
+        "terra-formars": "d"
       },
       "isekai": {
         "solo-leveling": "e",
@@ -36686,8 +36686,8 @@
         "sword-art-online": "c",
         "failure-frame-i-became-the-strongest": "c",
         "konosuba": "d",
-        "abenobashi-magical-shopping-street": "d",
-        "the-wrong-way-to-use-healing-magic": "d"
+        "the-wrong-way-to-use-healing-magic": "d",
+        "abenobashi-magical-shopping-street": "d"
       },
       "fantasy": {
         "fullmetal-alchemist-brotherhood": "e",
@@ -36724,6 +36724,7 @@
         "overlord": "d",
         "the-rising-of-the-shield-hero": "d",
         "drifters": "d",
+        "the-wrong-way-to-use-healing-magic": "d",
         "gate": "d",
         "grimgar-of-fantasy-and-ash": "d",
         "reincarnated-as-a-sword": "d",
@@ -36731,8 +36732,7 @@
         "saint-seiya": "d",
         "handyman-saitou-in-another-world": "d",
         "the-world-s-finest-assassin-gets-reincarnated-in-another-world-as-an-aristocrat": "d",
-        "failure-frame-i-became-the-strongest": "d",
-        "the-wrong-way-to-use-healing-magic": "d"
+        "failure-frame-i-became-the-strongest": "d"
       },
       "sci-fi": {
         "steins-gate": "e",
@@ -36744,6 +36744,7 @@
         "code-geass": "c",
         "made-in-abyss": "c",
         "pluto": "c",
+        "nippon-sangoku": "c",
         "neon-genesis-evangelion": "c",
         "86-eighty-six": "c",
         "parasyte-the-maxim": "c",
@@ -36770,8 +36771,7 @@
         "ergo-proxy": "d",
         "mazinger-z": "d",
         "gantz": "d",
-        "getter-robo": "d",
-        "nippon-sangoku": "c"
+        "getter-robo": "d"
       },
       "mecha": {
         "gurren-lagann": "e",
@@ -36786,8 +36786,8 @@
         "mobile-suit-gundam": "d",
         "ufo-robot-grendizer": "d",
         "mazinger-z": "d",
-        "getter-robo": "d",
-        "daltanious": "d"
+        "daltanious": "d",
+        "getter-robo": "d"
       },
       "super-robot": {
         "ufo-robot-grendizer": "e",
@@ -36833,6 +36833,7 @@
         "monster": "c",
         "made-in-abyss": "c",
         "the-promised-neverland": "c",
+        "jujutsu-kaisen": "c",
         "chainsaw-man": "c",
         "hellsing-ultimate": "c",
         "claymore": "c",
@@ -36843,11 +36844,10 @@
         "gantz": "c",
         "from-the-new-world": "d",
         "tokyo-ghoul": "d",
+        "higurashi": "d",
         "dark-gathering": "d",
         "shiki": "d",
-        "higurashi": "d",
-        "another": "d",
-        "jujutsu-kaisen": "c"
+        "another": "d"
       },
       "sopravvivenza": {
         "the-promised-neverland": "e",
@@ -36891,10 +36891,10 @@
         "hell-s-paradise-jigokuraku": "c",
         "claymore": "c",
         "akame-ga-kill": "c",
+        "nippon-sangoku": "d",
         "kill-la-kill": "d",
         "the-rising-of-the-shield-hero": "d",
-        "failure-frame-i-became-the-strongest": "d",
-        "nippon-sangoku": "d"
+        "failure-frame-i-became-the-strongest": "d"
       },
       "viaggi-nel-tempo": {
         "steins-gate": "e",
@@ -36992,6 +36992,52 @@
         "summer-wars": "d",
         "5-centimeters-per-second": "d"
       },
+      "storie-che-spezzano": {
+        "clannad-after-story": "e",
+        "violet-evergarden": "e",
+        "your-lie-in-april": "e",
+        "grave-of-the-fireflies": "e",
+        "frieren": "c",
+        "a-silent-voice": "c",
+        "made-in-abyss": "c",
+        "march-comes-in-like-a-lion": "c",
+        "wolf-children": "c",
+        "your-name": "d",
+        "nana": "d",
+        "banana-fish": "d",
+        "weathering-with-you": "d",
+        "the-tale-of-the-princess-kaguya": "d",
+        "5-centimeters-per-second": "d"
+      },
+      "protagonisti-geniali": {
+        "steins-gate": "e",
+        "monster": "e",
+        "code-geass": "e",
+        "death-note": "e",
+        "spy-x-family": "c",
+        "kaguya-sama-love-is-war": "c",
+        "the-eminence-in-shadow": "c",
+        "psycho-pass": "c",
+        "overlord": "c",
+        "hunter-x-hunter": "d",
+        "legend-of-the-galactic-heroes": "d",
+        "pluto": "d"
+      },
+      "spettacolo-occhi": {
+        "cyberpunk-edgerunners": "e",
+        "jujutsu-kaisen": "e",
+        "mob-psycho-100": "e",
+        "demon-slayer": "e",
+        "gurren-lagann": "c",
+        "chainsaw-man": "c",
+        "dan-da-dan": "c",
+        "fate-franchise-completo": "c",
+        "kill-la-kill": "c",
+        "vivy-fluorite-eyes-song": "d",
+        "redline": "d",
+        "akira": "d",
+        "promare": "d"
+      },
       "azione": {
         "cyberpunk-edgerunners": "e",
         "gurren-lagann": "e",
@@ -37074,52 +37120,6 @@
         "slam-dunk": "d",
         "run-with-the-wind": "d",
         "blue-lock": "d"
-      },
-      "storie-che-spezzano": {
-        "clannad-after-story": "e",
-        "violet-evergarden": "e",
-        "grave-of-the-fireflies": "e",
-        "your-lie-in-april": "e",
-        "a-silent-voice": "c",
-        "march-comes-in-like-a-lion": "c",
-        "frieren": "c",
-        "made-in-abyss": "c",
-        "wolf-children": "c",
-        "5-centimeters-per-second": "d",
-        "your-name": "d",
-        "weathering-with-you": "d",
-        "nana": "d",
-        "banana-fish": "d",
-        "the-tale-of-the-princess-kaguya": "d"
-      },
-      "protagonisti-geniali": {
-        "death-note": "e",
-        "code-geass": "e",
-        "steins-gate": "e",
-        "monster": "e",
-        "spy-x-family": "c",
-        "the-eminence-in-shadow": "c",
-        "kaguya-sama-love-is-war": "c",
-        "overlord": "c",
-        "psycho-pass": "c",
-        "pluto": "d",
-        "hunter-x-hunter": "d",
-        "legend-of-the-galactic-heroes": "d"
-      },
-      "spettacolo-occhi": {
-        "cyberpunk-edgerunners": "e",
-        "demon-slayer": "e",
-        "jujutsu-kaisen": "e",
-        "mob-psycho-100": "e",
-        "chainsaw-man": "c",
-        "fate-franchise-completo": "c",
-        "gurren-lagann": "c",
-        "dan-da-dan": "c",
-        "kill-la-kill": "c",
-        "promare": "d",
-        "redline": "d",
-        "vivy-fluorite-eyes-song": "d",
-        "akira": "d"
       }
     }
   },

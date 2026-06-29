@@ -5,7 +5,7 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 
 ## GENERI (in ordine di griglia)
 
-### Battle Shōnen  (31)
+### Battle Shōnen  (25)
 - [E] Hunter x Hunter (2011)
 - [E] ONE PIECE
 - [E] JUJUTSU KAISEN
@@ -26,19 +26,13 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [C] My Hero Academia
 - [C] Saint Seiya: Knights of the Zodiac
 - [C] Akame ga Kill!
-- [D] Gurren Lagann
 - [D] To Be Hero X
 - [D] Yu Yu Hakusho: Ghostfiles
-- [D] Dr. STONE
-- [D] Shangri-La Frontier
 - [D] Wistoria: Wand and Sword
 - [D] My Hero Academia: Vigilantes
 - [D] Tower of God
-- [D] Darwin's Game
-- [D] Deadman Wonderland
-- [D] Petals of Reincarnation
 
-### Seinen e Roba Adulta  (43)
+### Seinen e Roba Adulta  (40)
 - [E] Vinland Saga
 - [E] Cowboy Bebop
 - [E] Cyberpunk: Edgerunners
@@ -49,18 +43,17 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [C] Attack on Titan
 - [C] Samurai Champloo
 - [C] PLUTO
+- [C] NIPPON SANGOKU: The Three Nations of the Crimson Sun
 - [C] Chainsaw Man
 - [C] 86 EIGHTY-SIX
 - [C] March comes in like a lion
 - [C] Welcome to the N-H-K
-- [C] Grand Blue Dreaming
 - [C] Vivy -Fluorite Eye's Song-
 - [C] Hellsing Ultimate
 - [C] Sentenced to Be a Hero
 - [C] Heavenly Delusion
 - [C] Parasyte -the maxim-
 - [C] Fate/Zero
-- [C] Skip and Loafer
 - [C] Trigun
 - [C] Death Parade
 - [C] Golden Kamuy
@@ -76,11 +69,9 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [D] Legend of the Galactic Heroes
 - [D] BANANA FISH
 - [D] Dororo
-- [D] HINAMATSURI
 - [D] Planetes
 - [D] ID: INVADED
 - [D] Tokyo Ghoul
-- [D] Handyman Saitou in Another World
 - [D] Terra Formars
 
 ### Isekai  (22)
@@ -103,11 +94,11 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [C] Handyman Saitou in Another World
 - [C] Sword Art Online
 - [C] Failure Frame: I Became the Strongest and Annihilated Everything with Low-Level Spells
-- [C] Petals of Reincarnation
 - [D] KONOSUBA -God's blessing on this wonderful world!
+- [D] The Wrong Way to Use Healing Magic
 - [D] Magical Shopping Arcade Abenobashi
 
-### Fantasy  (50)
+### Fantasy  (43)
 - [E] Fullmetal Alchemist: Brotherhood
 - [E] Hunter x Hunter (2011)
 - [E] Made in Abyss
@@ -115,10 +106,6 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [E] Demon Slayer: Kimetsu no Yaiba
 - [C] Frieren: Beyond Journey’s End
 - [C] ONE PIECE
-- [C] Attack on Titan
-- [C] Violet Evergarden
-- [C] MUSHI-SHI
-- [C] The Promised Neverland
 - [C] Ranking of Kings
 - [C] Puella Magi Madoka Magica
 - [C] Gachiakuta
@@ -145,21 +132,18 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [D] Dragon Ball
 - [D] Overlord
 - [D] The Rising of the Shield Hero
-- [D] My Hero Academia: Vigilantes
 - [D] DRIFTERS
+- [D] The Wrong Way to Use Healing Magic
 - [D] Gate
 - [D] Grimgar of Fantasy and Ash
 - [D] Reincarnated as a Sword
-- [D] Wolf's Rain
 - [D] Akame ga Kill!
 - [D] Saint Seiya: Knights of the Zodiac
 - [D] Handyman Saitou in Another World
 - [D] The World's Finest Assassin Gets Reincarnated in Another World as an Aristocrat
-- [D] Sword Art Online
-- [D] Magical Shopping Arcade Abenobashi
 - [D] Failure Frame: I Became the Strongest and Annihilated Everything with Low-Level Spells
 
-### Fantascienza  (44)
+### Fantascienza  (37)
 - [E] Steins;Gate
 - [E] Cyberpunk: Edgerunners
 - [E] DAN DA DAN
@@ -168,11 +152,10 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [C] Gurren Lagann
 - [C] Code Geass: Lelouch of the Rebellion
 - [C] Made in Abyss
-- [C] Gintama
 - [C] PLUTO
+- [C] NIPPON SANGOKU: The Three Nations of the Crimson Sun
 - [C] Neon Genesis Evangelion
 - [C] 86 EIGHTY-SIX
-- [C] One-Punch Man
 - [C] Parasyte -the maxim-
 - [C] Heavenly Delusion
 - [C] Kaiju No. 8
@@ -187,21 +170,15 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [D] Vivy -Fluorite Eye's Song-
 - [D] PSYCHO-PASS
 - [D] From the New World
-- [D] Shangri-La Frontier
-- [D] HINAMATSURI
 - [D] Serial Experiments Lain
 - [D] FLCL
-- [D] Dragon Ball
 - [D] Mobile Suit GUNDAM Iron Blooded Orphans
 - [D] Eureka Seven
 - [D] Mobile Suit Gundam: The Witch from Mercury
 - [D] ID: INVADED
 - [D] Mobile Suit Gundam
 - [D] Ergo Proxy
-- [D] Saint Seiya: Knights of the Zodiac
-- [D] Darwin's Game
 - [D] Mazinger Z
-- [D] Deadman Wonderland
 - [D] Gantz
 - [D] Getter Robo
 
@@ -218,8 +195,8 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [D] Mobile Suit Gundam
 - [D] UFO Robo Grendizer
 - [D] Mazinger Z
-- [D] Getter Robo
 - [D] Future Robot Daltanious
+- [D] Getter Robo
 
 ### Super Robot Classici  (5)
 - [E] UFO Robo Grendizer
@@ -228,28 +205,23 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [C] Mobile Suit Gundam
 - [C] Getter Robo
 
-### Mindfuck  (36)
+### Mindfuck  (26)
 - [E] Steins;Gate
 - [E] Death Note
 - [E] Neon Genesis Evangelion
 - [E] Summer Time Rendering
 - [C] Monster
 - [C] Code Geass: Lelouch of the Rebellion
-- [C] Cyberpunk: Edgerunners
 - [C] MUSHI-SHI
 - [C] The Promised Neverland
 - [C] PLUTO
-- [C] BANANA FISH
-- [C] Welcome to the N-H-K
 - [C] ERASED
 - [C] Parasyte -the maxim-
 - [C] Re:ZERO -Starting Life in Another World-
 - [C] Heavenly Delusion
-- [C] Rascal Does Not Dream of Bunny Girl Senpai
 - [C] PSYCHO-PASS
 - [C] Death Parade
 - [C] AJIN: Demi-Human
-- [C] The Future Diary
 - [D] The Tatami Galaxy
 - [D] Puella Magi Madoka Magica
 - [D] Serial Experiments Lain
@@ -259,14 +231,9 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [D] Ergo Proxy
 - [D] Paranoia Agent
 - [D] Devilman Crybaby
-- [D] Tokyo Ghoul
-- [D] Shiki
 - [D] When They Cry
-- [D] Akame ga Kill!
-- [D] Another
-- [D] Gantz
 
-### Horror e Disagio  (26)
+### Horror e Disagio  (23)
 - [E] Berserk
 - [E] Summer Time Rendering
 - [E] Parasyte -the maxim-
@@ -278,9 +245,7 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [C] JUJUTSU KAISEN
 - [C] Chainsaw Man
 - [C] Hellsing Ultimate
-- [C] Re:ZERO -Starting Life in Another World-
 - [C] Claymore
-- [C] Akame ga Kill!
 - [C] AJIN: Demi-Human
 - [C] The Future Diary
 - [C] Deadman Wonderland
@@ -288,39 +253,30 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [C] Gantz
 - [D] From the New World
 - [D] Tokyo Ghoul
+- [D] When They Cry
 - [D] Dark Gathering
 - [D] Shiki
-- [D] When They Cry
 - [D] Another
-- [D] Devil May Cry
 
-### Sopravvivenza  (24)
+### Sopravvivenza  (16)
 - [E] The Promised Neverland
 - [E] Akudama Drive
 - [E] The Future Diary
 - [E] Gantz
-- [C] Made in Abyss
-- [C] 86 EIGHTY-SIX
-- [C] Gachiakuta
 - [C] Heavenly Delusion
 - [C] Parasyte -the maxim-
-- [C] Solo Leveling
-- [C] Fate/Zero
 - [C] Dr. STONE
 - [C] Darwin's Game
 - [C] Deadman Wonderland
-- [D] Death Parade
 - [D] Hell’s Paradise
 - [D] Golden Kamuy
 - [D] Tokyo Ghoul
 - [D] Shiki
 - [D] Grimgar of Fantasy and Ash
-- [D] Wolf's Rain
 - [D] Another
 - [D] Terra Formars
-- [D] Failure Frame: I Became the Strongest and Annihilated Everything with Low-Level Spells
 
-### Storico  (11)
+### Storico  (10)
 - [E] Vinland Saga
 - [E] Samurai Champloo
 - [E] Kingdom
@@ -331,9 +287,8 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [C] 91 Days
 - [D] Hell’s Paradise
 - [D] DRIFTERS
-- [D] Petals of Reincarnation
 
-### Vendetta  (14)
+### Vendetta  (15)
 - [E] Vinland Saga
 - [E] Berserk
 - [E] 91 Days
@@ -345,6 +300,7 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [C] Hell’s Paradise
 - [C] Claymore
 - [C] Akame ga Kill!
+- [D] NIPPON SANGOKU: The Three Nations of the Crimson Sun
 - [D] Kill la Kill
 - [D] The Rising of the Shield Hero
 - [D] Failure Frame: I Became the Strongest and Annihilated Everything with Low-Level Spells
@@ -377,57 +333,28 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [C] To Be Hero X
 - [C] My Hero Academia: Vigilantes
 
-### Romance  (25)
-- [E] DAN DA DAN
+### Romance  (14)
 - [E] Re:ZERO -Starting Life in Another World-
-- [E] Sword Art Online
-- [C] Gurren Lagann
-- [C] The Tatami Galaxy
-- [C] Welcome to the N-H-K
-- [C] Tokyo Revengers
 - [D] Clannad: After Story
 - [D] NANA
 - [D] Your lie in April
-- [D] BANANA FISH
 - [D] Kaguya-sama: Love is War
 - [D] Fruits Basket (2019)
 - [D] Horimiya
 - [D] Rascal Does Not Dream of Bunny Girl Senpai
 - [D] Skip and Loafer
 - [D] My Dress-Up Darling
-- [D] Release that Witch
-- [D] Planetes
 - [D] Toradora!
-- [D] Eureka Seven
 - [D] Clannad
 - [D] Honey and Clover
 - [D] Komi Can’t Communicate
-- [D] The World's Finest Assassin Gets Reincarnated in Another World as an Aristocrat
 
-### Commedia  (53)
+### Commedia  (18)
 - [E] Mob Psycho 100
 - [E] One-Punch Man
 - [E] DAN DA DAN
-- [E] Kill la Kill
-- [C] ONE PIECE
-- [C] Hajime no Ippo: The Fighting!
-- [C] Gurren Lagann
-- [C] Delicious in Dungeon
-- [C] The Tatami Galaxy
-- [C] Samurai Champloo
-- [C] HAIKYU!!
 - [C] SPY x FAMILY
-- [C] Slam Dunk
-- [C] Yu Yu Hakusho: Ghostfiles
-- [C] Fruits Basket (2019)
-- [C] Welcome to the N-H-K
 - [C] The Eminence in Shadow
-- [C] Laid-Back Camp
-- [C] Horimiya
-- [C] Rascal Does Not Dream of Bunny Girl Senpai
-- [C] Dr. STONE
-- [C] Skip and Loafer
-- [C] Golden Kamuy
 - [C] Handyman Saitou in Another World
 - [C] Magical Shopping Arcade Abenobashi
 - [D] Gintama
@@ -438,26 +365,9 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [D] Grand Blue Dreaming
 - [D] HINAMATSURI
 - [D] Daily Lives of High School Boys
-- [D] Naruto
-- [D] Shangri-La Frontier
-- [D] Trigun
-- [D] That Time I Got Reincarnated as a Slime
-- [D] My Dress-Up Darling
 - [D] KONOSUBA -God's blessing on this wonderful world!
 - [D] Asobi Asobase - workshop of fun -
-- [D] Black Clover
-- [D] FLCL
-- [D] Wistoria: Wand and Sword
-- [D] Dragon Ball
-- [D] Daemons of the Shadow Realm
-- [D] Toradora!
-- [D] My Hero Academia
-- [D] Clannad
 - [D] Komi Can’t Communicate
-- [D] Honey and Clover
-- [D] DRIFTERS
-- [D] BNA
-- [D] Future Robot Daltanious
 
 ### Film d'Animazione  (30)
 - [E] Spirited Away
@@ -493,43 +403,51 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 
 ## PERCORSI
 
-### Da Zero a Otaku  (18)
-- [E] Fullmetal Alchemist: Brotherhood
-- [E] Steins;Gate
-- [E] Hunter x Hunter (2011)
-- [E] ONE PIECE
-- [E] Attack on Titan
-- [E] Cyberpunk: Edgerunners
-- [E] Death Note
-- [E] JUJUTSU KAISEN
-- [E] Berserk
-- [E] Neon Genesis Evangelion
-- [E] Naruto
-- [C] Monster
-- [C] Vinland Saga
-- [C] Cowboy Bebop
+### Storie che ti spezzano  (15)
+- [E] Clannad: After Story
+- [E] Violet Evergarden
+- [E] Your lie in April
+- [E] Grave of the Fireflies
+- [C] Frieren: Beyond Journey’s End
+- [C] A Silent Voice
 - [C] Made in Abyss
-- [C] Demon Slayer: Kimetsu no Yaiba
-- [C] DAN DA DAN
-- [C] Dragon Ball
+- [C] March comes in like a lion
+- [C] Wolf Children
+- [D] Your Name.
+- [D] NANA
+- [D] BANANA FISH
+- [D] Weathering With You
+- [D] The Tale of The Princess Kaguya
+- [D] 5 Centimeters per Second
 
-### Solo Capolavori  (16)
-- [E] Fullmetal Alchemist: Brotherhood
+### Protagonisti geniali  (12)
 - [E] Steins;Gate
-- [E] Hunter x Hunter (2011)
-- [E] ONE PIECE
-- [E] Attack on Titan
-- [E] Gurren Lagann
-- [E] Cyberpunk: Edgerunners
+- [E] Monster
+- [E] Code Geass: Lelouch of the Rebellion
 - [E] Death Note
-- [E] Berserk
-- [E] Neon Genesis Evangelion
-- [C] Monster
-- [C] Vinland Saga
-- [C] Cowboy Bebop
-- [C] Code Geass: Lelouch of the Rebellion
-- [C] Made in Abyss
-- [D] The Tatami Galaxy
+- [C] SPY x FAMILY
+- [C] Kaguya-sama: Love is War
+- [C] The Eminence in Shadow
+- [C] PSYCHO-PASS
+- [C] Overlord
+- [D] Hunter x Hunter (2011)
+- [D] Legend of the Galactic Heroes
+- [D] PLUTO
+
+### Spettacolo per gli occhi  (13)
+- [E] Cyberpunk: Edgerunners
+- [E] JUJUTSU KAISEN
+- [E] Mob Psycho 100
+- [E] Demon Slayer: Kimetsu no Yaiba
+- [C] Gurren Lagann
+- [C] Chainsaw Man
+- [C] DAN DA DAN
+- [C] Fate/Zero
+- [C] Kill la Kill
+- [D] Vivy -Fluorite Eye's Song-
+- [D] Redline
+- [D] Akira
+- [D] Promare
 
 ### Azione Adrenalinica  (12)
 - [E] Cyberpunk: Edgerunners
@@ -559,28 +477,6 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [C] GANGSTA.
 - [D] BANANA FISH
 
-### I Grandi Classici  (20)
-- [E] Fullmetal Alchemist: Brotherhood
-- [E] Steins;Gate
-- [E] Hunter x Hunter (2011)
-- [E] Gurren Lagann
-- [E] Attack on Titan
-- [E] Death Note
-- [E] Neon Genesis Evangelion
-- [C] Frieren: Beyond Journey’s End
-- [C] Monster
-- [C] Vinland Saga
-- [C] Cowboy Bebop
-- [C] Code Geass: Lelouch of the Rebellion
-- [C] Made in Abyss
-- [C] Samurai Champloo
-- [C] Trigun
-- [C] Dragon Ball
-- [D] Legend of the Galactic Heroes
-- [D] Clannad: After Story
-- [D] Yu Yu Hakusho: Ghostfiles
-- [D] Puella Magi Madoka Magica
-
 ### Chicche Nascoste  (17)
 - [E] Heavenly Delusion
 - [E] FLCL
@@ -602,15 +498,12 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 
 ## ALTRE LISTE (non in griglia)
 
-### Slice of Life  (30)
+### Slice of Life  (25)
 - [C] Clannad: After Story
 - [C] NANA
-- [C] Mob Psycho 100
 - [C] Your lie in April
 - [C] GTO: Great Teacher Onizuka
-- [C] SPY x FAMILY
 - [C] Kaguya-sama: Love is War
-- [C] Slam Dunk
 - [C] Nichijou - My Ordinary Life
 - [C] The Disastrous Life of Saiki K.
 - [C] Fruits Basket (2019)
@@ -625,14 +518,12 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [D] Laid-Back Camp
 - [D] Daily Lives of High School Boys
 - [D] HINAMATSURI
-- [D] Planetes
 - [D] My Dress-Up Darling
 - [D] Asobi Asobase - workshop of fun -
 - [D] Toradora!
 - [D] Clannad
 - [D] Honey and Clover
 - [D] Komi Can’t Communicate
-- [D] Handyman Saitou in Another World
 
 ### Sport  (7)
 - [C] Grand Blue Dreaming
