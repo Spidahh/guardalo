@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-29T10:32:16.894Z",
+  "generatedAt": "2026-06-29T11:56:48.034Z",
   "attribution": "Dati e immagini da AniList (anilist.co)",
   "count": 190,
   "titles": [
@@ -35752,6 +35752,17 @@
   ],
   "paths": [
     {
+      "id": "da-zero-a-otaku",
+      "title": "Da Zero a Otaku",
+      "icon": "ri-seedling-line",
+      "accent": "#45b4e0",
+      "tagline": "Mai visto un anime? Si parte da qui.",
+      "blurb": "Il percorso per chi inizia: i titoli giusti per innamorarsi del medium.",
+      "about": "Non hai mai guardato un anime, o ne hai visti pochi? Questi sono i punti di partenza perfetti: storie accessibili, coinvolgenti e fatte bene, che ti fanno capire subito perché gli anime piacciono a mezzo mondo. Niente roba di nicchia, niente impegni infiniti per cominciare.",
+      "curiosita": "Quasi tutti gli appassionati sono entrati nel mondo degli anime con uno di questi titoli.",
+      "levels": []
+    },
+    {
       "id": "battle-shonen",
       "title": "Battle Shōnen",
       "tagline": "Combattimenti, poteri che crescono e rivalità: il genere d'azione più popolare e riconoscibile.",
@@ -35851,7 +35862,7 @@
       "title": "Chicche Nascoste",
       "tagline": "Titoli di nicchia, poco conosciuti ma di qualità: gemme che la massa si è persa.",
       "icon": "ri-treasure-map-line",
-      "accent": "#45b4e0",
+      "accent": "#1f93c8",
       "levels": [],
       "blurb": "Roba di nicchia che quasi nessuno conosce: per intenditori."
     },
@@ -35859,7 +35870,7 @@
       "id": "azione",
       "title": "Azione Adrenalinica",
       "icon": "ri-fire-line",
-      "accent": "#5f8298",
+      "accent": "#2c5f86",
       "tagline": "Zero tempi morti.",
       "blurb": "Scontri, inseguimenti e animazione che spacca.",
       "about": "Solo adrenalina: combattimenti spettacolari, ritmo serrato e animazione che lascia a bocca aperta. Quando vuoi qualcosa che parte subito e non ti molla.",
@@ -35870,7 +35881,7 @@
       "id": "antieroi",
       "title": "Antieroi & Vendetta",
       "icon": "ri-knife-blood-line",
-      "accent": "#2c5f86",
+      "accent": "#45b4e0",
       "tagline": "Niente buoni contro cattivi.",
       "blurb": "Protagonisti ambigui e scelte sporche.",
       "about": "Protagonisti che non sono eroi: vendetta, ambiguità morale, mezzi discutibili per fini discutibili. Storie dove il \"giusto\" e lo \"sbagliato\" si confondono.",
@@ -36002,7 +36013,7 @@
       "id": "storie-che-spezzano",
       "title": "Storie che ti spezzano",
       "icon": "ri-emotion-sad-line",
-      "accent": "#45b4e0",
+      "accent": "#1f93c8",
       "tagline": "Tieni i fazzoletti a portata.",
       "blurb": "Anime che colpiscono dritti al cuore: drammi e addii che restano.",
       "about": "Storie che non guardi, vivi. Drammi, perdite e legami che ti restano addosso per giorni. Se cerchi qualcosa che ti faccia sentire qualcosa di forte, parti da qui — ma preparati.",
@@ -36013,7 +36024,7 @@
       "id": "protagonisti-geniali",
       "title": "Protagonisti geniali",
       "icon": "ri-lightbulb-flash-line",
-      "accent": "#1f93c8",
+      "accent": "#1aa6b8",
       "tagline": "Quando la testa conta più dei pugni.",
       "blurb": "Menti brillanti, piani perfetti e duelli di intelligenza.",
       "about": "Niente urla e raggi: qui si vince col cervello. Strateghi, manipolatori e geni che muovono gli altri come pedine. Per chi ama i piani elaborati e i colpi di scena calcolati.",
@@ -36024,7 +36035,7 @@
       "id": "spettacolo-occhi",
       "title": "Spettacolo per gli occhi",
       "icon": "ri-sparkling-2-line",
-      "accent": "#1aa6b8",
+      "accent": "#5f8298",
       "tagline": "Animazione che fa cadere la mascella.",
       "blurb": "I titoli con l’animazione più spettacolare in circolazione.",
       "about": "Quando vuoi solo restare a bocca aperta. Studi come MAPPA, ufotable, Trigger e Wit qui danno il massimo: combattimenti, colori e regia che valgono da soli la visione.",
@@ -36054,6 +36065,7 @@
       "cinema-dautore"
     ],
     "percorsoOrder": [
+      "da-zero-a-otaku",
       "storie-che-spezzano",
       "protagonisti-geniali",
       "spettacolo-occhi",
@@ -36087,7 +36099,8 @@
       "sport": "haikyuu",
       "storie-che-spezzano": "violet-evergarden",
       "protagonisti-geniali": "death-note",
-      "spettacolo-occhi": "cyberpunk-edgerunners"
+      "spettacolo-occhi": "cyberpunk-edgerunners",
+      "da-zero-a-otaku": "fullmetal-alchemist-brotherhood"
     },
     "members": {
       "battle-shonen": [
@@ -36371,7 +36384,8 @@
         "golden-kamuy",
         "91-days",
         "hell-s-paradise-jigokuraku",
-        "drifters"
+        "drifters",
+        "nippon-sangoku"
       ],
       "vendetta": [
         "vinland-saga",
@@ -36619,6 +36633,21 @@
         "slam-dunk",
         "run-with-the-wind",
         "blue-lock"
+      ],
+      "da-zero-a-otaku": [
+        "death-note",
+        "fullmetal-alchemist-brotherhood",
+        "attack-on-titan",
+        "demon-slayer",
+        "hunter-x-hunter",
+        "jujutsu-kaisen",
+        "steins-gate",
+        "cyberpunk-edgerunners",
+        "code-geass",
+        "one-piece",
+        "naruto",
+        "dragon-ball",
+        "cowboy-bebop"
       ]
     },
     "tiers": {
@@ -36903,7 +36932,8 @@
         "golden-kamuy": "c",
         "91-days": "c",
         "hell-s-paradise-jigokuraku": "d",
-        "drifters": "d"
+        "drifters": "d",
+        "nippon-sangoku": "d"
       },
       "vendetta": {
         "vinland-saga": "e",
@@ -37151,6 +37181,21 @@
         "slam-dunk": "d",
         "run-with-the-wind": "d",
         "blue-lock": "d"
+      },
+      "da-zero-a-otaku": {
+        "death-note": "e",
+        "fullmetal-alchemist-brotherhood": "e",
+        "attack-on-titan": "e",
+        "demon-slayer": "e",
+        "hunter-x-hunter": "c",
+        "jujutsu-kaisen": "c",
+        "steins-gate": "c",
+        "cyberpunk-edgerunners": "c",
+        "code-geass": "c",
+        "one-piece": "d",
+        "naruto": "d",
+        "dragon-ball": "d",
+        "cowboy-bebop": "d"
       }
     }
   },
@@ -37164,11 +37209,11 @@
     },
     "tiles": [
       {
-        "icon": "ri-emotion-sad-line",
-        "title": "Voglio emozionarmi",
-        "sub": "Storie che colpiscono dritte al cuore.",
-        "link": "/p/storie-che-spezzano",
-        "heroSlug": "violet-evergarden"
+        "icon": "ri-seedling-line",
+        "title": "Parto da zero",
+        "sub": "Mai visto un anime? Si parte da qui.",
+        "link": "/p/da-zero-a-otaku",
+        "heroSlug": "fullmetal-alchemist-brotherhood"
       },
       {
         "icon": "ri-skull-line",

@@ -276,7 +276,7 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [D] Another
 - [D] Terra Formars
 
-### Storico  (10)
+### Storico  (11)
 - [E] Vinland Saga
 - [E] Samurai Champloo
 - [E] Kingdom
@@ -284,6 +284,7 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [C] 91 Days
 - [D] The Apothecary Diaries
 - [D] Gintama
+- [D] NIPPON SANGOKU: The Three Nations of the Crimson Sun
 - [D] Dororo
 - [D] Hell’s Paradise
 - [D] DRIFTERS
@@ -402,6 +403,21 @@ Un titolo puo stare in piu sezioni. Quando hai finito, rimandami il file (o dimm
 - [D] 5 Centimeters per Second
 
 ## PERCORSI
+
+### Da Zero a Otaku  (13)
+- [E] Fullmetal Alchemist: Brotherhood
+- [E] Attack on Titan
+- [E] Death Note
+- [E] Demon Slayer: Kimetsu no Yaiba
+- [C] Hunter x Hunter (2011)
+- [C] Steins;Gate
+- [C] Cyberpunk: Edgerunners
+- [C] Code Geass: Lelouch of the Rebellion
+- [C] JUJUTSU KAISEN
+- [D] ONE PIECE
+- [D] Cowboy Bebop
+- [D] Naruto
+- [D] Dragon Ball
 
 ### Storie che ti spezzano  (20)
 - [E] Frieren: Beyond Journey’s End

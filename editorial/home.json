@@ -9,11 +9,11 @@
   },
   "tiles": [
     {
-      "icon": "ri-emotion-sad-line",
-      "title": "Voglio emozionarmi",
-      "sub": "Storie che colpiscono dritte al cuore.",
-      "link": "/p/storie-che-spezzano",
-      "heroSlug": "violet-evergarden"
+      "icon": "ri-seedling-line",
+      "title": "Parto da zero",
+      "sub": "Mai visto un anime? Si parte da qui.",
+      "link": "/p/da-zero-a-otaku",
+      "heroSlug": "fullmetal-alchemist-brotherhood"
     },
     {
       "icon": "ri-skull-line",

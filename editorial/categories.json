@@ -21,6 +21,7 @@
     "cinema-dautore"
   ],
   "percorsoOrder": [
+    "da-zero-a-otaku",
     "storie-che-spezzano",
     "protagonisti-geniali",
     "spettacolo-occhi",
@@ -54,7 +55,8 @@
     "sport": "haikyuu",
     "storie-che-spezzano": "violet-evergarden",
     "protagonisti-geniali": "death-note",
-    "spettacolo-occhi": "cyberpunk-edgerunners"
+    "spettacolo-occhi": "cyberpunk-edgerunners",
+    "da-zero-a-otaku": "fullmetal-alchemist-brotherhood"
   },
   "members": {
     "battle-shonen": [
@@ -338,7 +340,8 @@
       "golden-kamuy",
       "91-days",
       "hell-s-paradise-jigokuraku",
-      "drifters"
+      "drifters",
+      "nippon-sangoku"
     ],
     "vendetta": [
       "vinland-saga",
@@ -586,6 +589,21 @@
       "slam-dunk",
       "run-with-the-wind",
       "blue-lock"
+    ],
+    "da-zero-a-otaku": [
+      "death-note",
+      "fullmetal-alchemist-brotherhood",
+      "attack-on-titan",
+      "demon-slayer",
+      "hunter-x-hunter",
+      "jujutsu-kaisen",
+      "steins-gate",
+      "cyberpunk-edgerunners",
+      "code-geass",
+      "one-piece",
+      "naruto",
+      "dragon-ball",
+      "cowboy-bebop"
     ]
   },
   "tiers": {
@@ -870,7 +888,8 @@
       "golden-kamuy": "c",
       "91-days": "c",
       "hell-s-paradise-jigokuraku": "d",
-      "drifters": "d"
+      "drifters": "d",
+      "nippon-sangoku": "d"
     },
     "vendetta": {
       "vinland-saga": "e",
@@ -1118,6 +1137,21 @@
       "slam-dunk": "d",
       "run-with-the-wind": "d",
       "blue-lock": "d"
+    },
+    "da-zero-a-otaku": {
+      "death-note": "e",
+      "fullmetal-alchemist-brotherhood": "e",
+      "attack-on-titan": "e",
+      "demon-slayer": "e",
+      "hunter-x-hunter": "c",
+      "jujutsu-kaisen": "c",
+      "steins-gate": "c",
+      "cyberpunk-edgerunners": "c",
+      "code-geass": "c",
+      "one-piece": "d",
+      "naruto": "d",
+      "dragon-ball": "d",
+      "cowboy-bebop": "d"
     }
   }
 }
