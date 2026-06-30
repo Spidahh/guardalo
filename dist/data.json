@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-29T12:23:00.069Z",
+  "generatedAt": "2026-06-30T10:32:25.676Z",
   "attribution": "Dati e immagini da AniList (anilist.co)",
   "count": 190,
   "titles": [
@@ -36400,19 +36400,26 @@
         "claymore",
         "akame-ga-kill",
         "code-geass",
+        "gachiakuta",
         "hell-s-paradise-jigokuraku",
         "banana-fish",
         "dororo",
         "the-rising-of-the-shield-hero",
         "failure-frame-i-became-the-strongest",
         "kill-la-kill",
-        "future-diary"
+        "future-diary",
+        "terror-in-resonance",
+        "nippon-sangoku"
       ],
       "viaggi-nel-tempo": [
         "steins-gate",
         "erased",
         "summer-time-rendering",
         "re-zero-starting-life-in-another-world",
+        "the-girl-who-leapt-through-time",
+        "madoka-magica",
+        "the-tatami-galaxy",
+        "bunny-girl-senpai",
         "higurashi",
         "tokyo-revengers"
       ],
@@ -36585,14 +36592,22 @@
         "berserk",
         "monster",
         "vinland-saga",
+        "cyberpunk-edgerunners",
         "code-geass",
         "hellsing-ultimate",
+        "hell-s-paradise-jigokuraku",
         "91-days",
         "devilman-crybaby",
         "akudama-drive",
         "akame-ga-kill",
+        "gachiakuta",
         "gangsta",
-        "banana-fish"
+        "banana-fish",
+        "terror-in-resonance",
+        "ajin-demi-human",
+        "the-rising-of-the-shield-hero",
+        "failure-frame-i-became-the-strongest",
+        "nippon-sangoku"
       ],
       "chicche-e-deep-cut": [
         "heavenly-delusion",
@@ -36954,7 +36969,7 @@
         "vinland-saga": "e",
         "dororo": "d",
         "the-apothecary-diaries": "d",
-        "nippon-sangoku": "d"
+        "nippon-sangoku": "c"
       },
       "vendetta": {
         "attack-on-titan": "c",
@@ -36964,19 +36979,26 @@
         "claymore": "c",
         "akame-ga-kill": "c",
         "code-geass": "c",
+        "gachiakuta": "c",
         "hell-s-paradise-jigokuraku": "c",
         "banana-fish": "d",
         "dororo": "d",
         "the-rising-of-the-shield-hero": "d",
         "failure-frame-i-became-the-strongest": "d",
         "kill-la-kill": "d",
-        "future-diary": "c"
+        "future-diary": "c",
+        "terror-in-resonance": "c",
+        "nippon-sangoku": "c"
       },
       "viaggi-nel-tempo": {
         "steins-gate": "e",
         "erased": "c",
         "summer-time-rendering": "e",
         "re-zero-starting-life-in-another-world": "c",
+        "the-girl-who-leapt-through-time": "c",
+        "madoka-magica": "c",
+        "the-tatami-galaxy": "d",
+        "bunny-girl-senpai": "d",
         "higurashi": "d",
         "tokyo-revengers": "c"
       },
@@ -37149,14 +37171,22 @@
         "berserk": "e",
         "monster": "c",
         "vinland-saga": "c",
+        "cyberpunk-edgerunners": "c",
         "code-geass": "c",
         "hellsing-ultimate": "c",
+        "hell-s-paradise-jigokuraku": "c",
         "91-days": "c",
         "devilman-crybaby": "c",
         "akudama-drive": "c",
         "akame-ga-kill": "c",
+        "gachiakuta": "c",
         "gangsta": "c",
-        "banana-fish": "d"
+        "banana-fish": "d",
+        "terror-in-resonance": "c",
+        "ajin-demi-human": "d",
+        "the-rising-of-the-shield-hero": "d",
+        "failure-frame-i-became-the-strongest": "d",
+        "nippon-sangoku": "c"
       },
       "chicche-e-deep-cut": {
         "heavenly-delusion": "e",

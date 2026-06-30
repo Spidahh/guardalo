@@ -32,11 +32,11 @@ const members = id => (CAT_MEMBERS[id] || []).map(s => BY.get(s)).filter(Boolean
 
 const TIER = CAT.tiers || {};
 const tierOf = (id, slug) => (TIER[id] && TIER[id][slug]) || 'd';
-const TL = { e: 'Essenziale', c: 'Consigliato', d: 'Da scoprire' };
+const TL = { e: 'Da vedere prima', c: 'Consigliato', d: 'Extra' };
 const rankSort = (a, b) => (b.userRating || 0) - (a.userRating || 0) || (b.score10 || 0) - (a.score10 || 0);
 const mark = t => t.inList ? '●' : '○';
 const line = (t, tag) => `${tag ? `[${tag}] ` : ''}${mark(t)} **${t.title}**${t.year ? ` (${t.year})` : ''} · ${t.typeLabel}${t.userRating != null ? ` · tuo voto ${t.userRating}` : ''}${t.score10 ? ` · AniList ${t.score10}` : ''} · \`${t.id}\``;
-const tierTally = (id, arr) => { const c = { e: 0, c: 0, d: 0 }; arr.forEach(t => c[tierOf(id, t.id)]++); return `${arr.length} titoli — ${c.e} Essenziali / ${c.c} Consigliati / ${c.d} Da scoprire`; };
+const tierTally = (id, arr) => { const c = { e: 0, c: 0, d: 0 }; arr.forEach(t => c[tierOf(id, t.id)]++); return `${arr.length} titoli — ${c.e} Da vedere prima / ${c.c} Consigliati / ${c.d} Extra`; };
 const tally = arr => `${arr.length} titoli — ${arr.filter(t => t.inList).length} tuoi ● / ${arr.filter(t => !t.inList).length} aggiunti ○`;
 const counts = (arr, f) => arr.reduce((m, t) => (m[f(t)] = (m[f(t)] || 0) + 1, m), {});
 const tbl = obj => Object.entries(obj).sort((a, b) => b[1] - a[1]).map(([k, v]) => `${k}: ${v}`).join(' · ');
@@ -60,7 +60,7 @@ w('');
 w('> Documento **rigenerato** da `tools/inventario.mjs` (`npm run inventario`). NON modificarlo a mano:');
 w('> cambia i dati nei file sorgente (vedi §2) e rilancia il comando. Riflette sempre lo stato reale.');
 w('');
-w('**Legenda:** ● = tuo (in lista) · ○ = aggiunto (extra AniList) · `[Essenziale/Consigliato/Da scoprire]` = fascia in quel genere.');
+w('**Legenda:** ● = tuo (in lista) · ○ = aggiunto (extra AniList) · `[Da vedere prima/Consigliato/Extra]` = fascia in quel genere.');
 w('');
 
 // 1. RIEPILOGO
@@ -68,7 +68,7 @@ w('## 1. Riepilogo');
 w('');
 w(`- **${TITLES.length} titoli** totali: **${mine.length} tuoi** ● + **${extra.length} aggiunti** ○ · ${TITLES.filter(t => t.userRating != null).length} con tuo voto`);
 const tierTot = { e: 0, c: 0, d: 0 }; [...GENRE_IDS, ...PERCORSI_IDS].forEach(id => Object.values(TIER[id] || {}).forEach(v => tierTot[v]++));
-w(`- Fasce (somma su tutti i generi/percorsi): **${tierTot.e} Essenziali** · ${tierTot.c} Consigliati · ${tierTot.d} Da scoprire`);
+w(`- Fasce (somma su tutti i generi/percorsi): **${tierTot.e} Da vedere prima** · ${tierTot.c} Consigliati · ${tierTot.d} Extra`);
 w(`- **${GENRE_IDS.length} generi** (in griglia) · **${PERCORSI_IDS.length} percorsi** · 2 generi fuori griglia (slice-of-life, sport)`);
 w(`- Per formato: ${tbl(counts(TITLES, t => t.typeLabel))}`);
 w(`- Per stato: ${tbl(counts(TITLES, t => t.statusLabel))}`);

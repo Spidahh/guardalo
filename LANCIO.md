@@ -23,12 +23,10 @@ avere visite è **off-site** e richiede i tuoi account: vanno fatti UNA volta, i
 - Poi menu **Controllo URL** → incolla `https://guardalo.vercel.app` → **Richiedi indicizzazione**.
 - ⏳ Google ci mette da qualche giorno a un paio di settimane a indicizzare. È normale.
 
-### 3. Immagine anteprima link (5 min) — così quando condividi il link esce un'immagine
-- Nel progetto c'è **`og-image.svg`** (già disegnata, 1200×630).
-- Convertila in PNG: aprila su **cloudconvert.com/svg-to-png** (o screenshot a schermo intero),
-  salvala come **`og-image.png`** nella cartella principale del sito, e caricala (commit/push).
-- I tag social puntano già a `og-image.png`: appena c'è, le anteprime su WhatsApp/Reddit/Discord
-  mostrano la card di GUARDALO.
+### 3. Immagine anteprima link (già pronta)
+- Nel progetto ci sono **`og-image.svg`** e **`og-image.png`**.
+- Dopo il deploy controlla solo che `https://guardalo.vercel.app/og-image.png` risponda come immagine PNG.
+- Le anteprime su WhatsApp/Reddit/Discord useranno quella card.
 
 ### 4. Primi visitatori VERI (oggi stesso) — la SEO è lenta, questo no
 Posta il sito dove stanno gli appassionati (testi pronti sotto, PARTE B). Bastano 2-3 post fatti bene.
@@ -73,4 +71,4 @@ Ogni post = primi visitatori + un link che aiuta anche Google a scoprire il sito
   dati strutturati (JSON-LD), titoli/descrizioni per pagina.
 - Tag social (Open Graph + Twitter) pronti, puntano a `og-image.png`.
 - Script analytics inserito (manca solo il tuo "Enable" su Vercel, punto 1).
-- Immagine social disegnata (`og-image.svg`, manca solo l'export in PNG, punto 3).
+- Immagine social esportata (`og-image.png`) e icone PWA 192/512 già presenti.

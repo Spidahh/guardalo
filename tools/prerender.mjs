@@ -35,7 +35,11 @@ const rankSort = (a, b) => (b.userRating || 0) - (a.userRating || 0) || (b.score
 const CAT = data.categories || {};
 const GENRE_IDS = CAT.genreOrder || [];
 const CAT_MEMBERS = CAT.members || {};
+const TIERS = CAT.tiers || {};
 if (!GENRE_IDS.length || !Object.keys(CAT_MEMBERS).length) throw new Error('prerender: manca data.categories — esegui `npm run gen`');
+const ESSENTIAL_IDS = new Set();
+for (const pid in TIERS) { const m = TIERS[pid]; for (const id in m) if (m[id] === 'e') ESSENTIAL_IDS.add(id); }
+const essentialTitles = () => [...ESSENTIAL_IDS].map(id => BY_ID.get(id)).filter(Boolean).sort(rankSort);
 // titoli di una sezione (genere o percorso): la lista curata in categories.members. FONTE UNICA.
 const sectionTitles = p => (CAT_MEMBERS[p.id] || []).map(s => BY_ID.get(s)).filter(Boolean);
 const HOME = data.home || {};
@@ -113,7 +117,6 @@ for (const p of PATHS) {
   const content = `<section>
     <h1>${esc(p.title)}</h1>
     <p>${esc(p.about || p.blurb || p.tagline || '')}</p>
-    ${p.curiosita ? `<p><strong>Lo sapevi?</strong> ${esc(p.curiosita)}</p>` : ''}
     <h2>Titoli di ${esc(p.title)}</h2>
     <ul>${items}</ul>
   </section>`;
@@ -122,6 +125,19 @@ for (const p of PATHS) {
   const bc = crumb([{ name: 'Home', url: '/' }, { name: isGenre ? 'Generi' : 'Percorsi', url: isGenre ? '/generi' : '/percorsi' }, { name: p.title, url }]);
   await emit(url, page({ urlPath: url, title: `${p.title} — ${isGenre ? 'i migliori anime del genere' : 'percorso'} · GUARDALO`, desc: clip(p.about || p.blurb), jsonld: bc, content }));
   urls.push(url);
+}
+
+// ── lista globale dei titoli top ─────────────────────────────────────────
+{
+  const list = essentialTitles();
+  const items = list.map(t => `<li><a href="/t/${t.id}">${esc(t.title)}</a>${t.year ? ` (${t.year})` : ''}${t.score10 ? ` — ${t.score10}/10` : ''}</li>`).join('');
+  const content = `<section>
+    <h1>Il meglio</h1>
+    <p>I migliori anime di GUARDALO: titoli messi in cima ad almeno un genere o percorso, senza doppioni e ordinati dal migliore.</p>
+    <ol>${items}</ol>
+  </section>`;
+  await emit('/essenziali', page({ urlPath: '/essenziali', title: 'Il meglio · GUARDALO', desc: 'I migliori anime di GUARDALO: titoli messi in cima a generi e percorsi, senza doppioni.', content }));
+  urls.push('/essenziali');
 }
 
 // ── pagine indice /generi e /percorsi ────────────────────────────────────

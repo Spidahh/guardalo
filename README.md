@@ -88,5 +88,5 @@ chiamano mai le API.
 ## TODO lancio
 - **AdSense**: inserire lo script publisher in `index.html` (cerca `<!-- AdSense -->`) e compilare
   `ads.txt` alla radice (template già presente) con il proprio publisher id. Nessun contenuto di pirateria → policy ok.
-- Sostituire le icone `icon.svg` con un set PWA (192/512 px) se si vuole l'installazione.
+- Immagine social e icone PWA sono già presenti (`og-image.png`, `icon-192.png`, `icon-512.png`).
 - Fase 2: serie/film live via TVmaze (riusare lo schema, aggiungere `tools/build-tv.mjs`).

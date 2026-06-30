@@ -52,12 +52,23 @@
   // Categorizzazione PRECISA della lista (i generi AniList sono troppo larghi e sbagliano:
   // es. Shangri-La ha tag Sci-Fi ma è isekai). Un titolo può stare in più categorie.
   const CAT_MEMBERS = CAT.members || {};
-  // fasce per-genere: tiers[pathId][slug] = 'e' Essenziale | 'c' Consigliato | 'd' Da scoprire (default).
+  // fasce per-genere: tiers[pathId][slug] = 'e' Da vedere prima | 'c' Consigliato | 'd' Extra (default).
   const TIERS = CAT.tiers || {};
   const tierOf = (pid, slug) => (TIERS[pid] && TIERS[pid][slug]) || 'd';
-  // insieme globale degli "Essenziali": titoli marcati 'e' in almeno una sezione → badge sulle card.
+  const TIER_LABEL = { e: 'Da vedere prima', c: 'Consigliati', d: 'Extra' };
+  const PATH_USE = {
+    'da-zero-a-otaku': 'porta d ingresso',
+    'storie-che-spezzano': 'dramma forte',
+    'protagonisti-geniali': 'duelli mentali',
+    'spettacolo-occhi': 'animazione forte',
+    azione: 'azione pura',
+    antieroi: 'morale sporca',
+    'chicche-e-deep-cut': 'recuperi meno ovvi',
+  };
+  // insieme globale dei Top: titoli marcati 'e' in almeno una sezione → badge sulle card.
   const ESSENTIAL_IDS = new Set();
   for (const pid in TIERS) { const m = TIERS[pid]; for (const id in m) { if (m[id] === 'e') ESSENTIAL_IDS.add(id); } }
+  const essentialTitles = () => [...ESSENTIAL_IDS].map(id => BY_ID.get(id)).filter(Boolean).sort(rankSort);
   const ESPLORA_PAGE = 24; // quanti titoli mostra Esplora prima di "Mostra altri"
   // immagine HERO di ogni categoria/percorso (editorial/categories.json → hero): scelta a mano, UNICA.
   const HERO_OF = CAT.hero || {};
@@ -76,11 +87,6 @@
   const lenHint = t => t.format === 'MOVIE' ? 'un film, una sera' : t.lengthHint;
 
 
-  // ── "Lo sapevi?" — curiosità (da editorial/home.json) ──
-  const FACTS = HOME.facts || [];
-  // pesca n elementi diversi a caso (varietà a ogni visita, senza dipendere dalla data)
-  const pickN = (arr, n) => { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1));[a[i], a[j]] = [a[j], a[i]]; } return a.slice(0, n); };
-
   // ── util ───────────────────────────────────────────────────────────────────
   const $  = (s, r = document) => r.querySelector(s);
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c =>
@@ -89,6 +95,23 @@
   // varianti leggere AniList: medium ~24KB (poster card), small ~6KB (mini-strisce)
   const thumb  = u => (u || '').replace('/cover/large/', '/cover/medium/');
   const thumbS = u => (u || '').replace('/cover/large/', '/cover/small/');
+  const loadScript = src => new Promise((resolve, reject) => {
+    const existing = [...document.scripts].find(s => s.getAttribute('src') === src);
+    if (existing) {
+      if (existing.dataset.loaded === '1') resolve();
+      else {
+        existing.addEventListener('load', resolve, { once: true });
+        existing.addEventListener('error', reject, { once: true });
+      }
+      return;
+    }
+    const s = document.createElement('script');
+    s.src = src;
+    s.async = false;
+    s.onload = () => { s.dataset.loaded = '1'; resolve(); };
+    s.onerror = reject;
+    document.head.appendChild(s);
+  });
 
   // ════════════════════════════════════════════════════════════════════════
   class Guardalo {
@@ -103,7 +126,6 @@
     boot() {
       this.loadLocal();
       this.bindChrome();
-      this.initFirebase();
       const attr = $('#footAttr'); if (attr) attr.textContent = DATA.attribution || '';
       window.addEventListener('popstate', () => this.route());
       // intercetta i click sui link interni (URL path-based, niente reload)
@@ -215,9 +237,30 @@
     }
 
     // ── FIREBASE ──────────────────────────────────────────────────────────────
+    ensureFirebase() {
+      if (window.auth && window.db) {
+        this.initFirebase();
+        return Promise.resolve();
+      }
+      if (this._firebasePromise) return this._firebasePromise;
+      this._firebasePromise = Promise.resolve()
+        .then(() => loadScript('https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js'))
+        .then(() => loadScript('https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js'))
+        .then(() => loadScript('https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js'))
+        .then(() => loadScript('js/firebase-config.js'))
+        .then(() => this.initFirebase())
+        .catch(err => {
+          this._firebasePromise = null;
+          this.toast('Accesso non disponibile al momento.', 'muted');
+          throw err;
+        });
+      return this._firebasePromise;
+    }
     initFirebase() {
       try {
+        if (this._authBound) return;
         if (typeof window.auth === 'undefined') return;
+        this._authBound = true;
         window.auth.onAuthStateChanged(user => {
           this.user = user;
           const admin = (window.ADMIN_EMAIL || '').toLowerCase();
@@ -262,6 +305,10 @@
     }
 
     // ── CHROME (nav, tema, ricerca, login) ────────────────────────────────────
+    openLogin() {
+      $('#loginModal')?.classList.add('open');
+      this.ensureFirebase().catch(() => {});
+    }
     bindChrome() {
       $('#themeToggle')?.addEventListener('click', () => this.toggleTheme());
       $('#searchOpen')?.addEventListener('click', () => this.openSearch());
@@ -271,10 +318,12 @@
       $('#searchInput')?.addEventListener('keydown', e => this.searchKey(e));
       $('#randomBtn')?.addEventListener('click', () => this.surprise());
 
-      $('#loginBtn')?.addEventListener('click', () => $('#loginModal')?.classList.add('open'));
+      $('#loginBtn')?.addEventListener('click', () => this.openLogin());
       $('#loginClose')?.addEventListener('click', () => $('#loginModal')?.classList.remove('open'));
       $('#loginModal')?.addEventListener('click', e => { if (e.target.id === 'loginModal') e.currentTarget.classList.remove('open'); });
-      $('#googleLogin')?.addEventListener('click', () => {
+      $('#googleLogin')?.addEventListener('click', async () => {
+        try { await this.ensureFirebase(); }
+        catch (e) { return; }
         if (!window.auth) { this.toast('Accesso non disponibile al momento.', 'muted'); return; }
         window.auth.signInWithPopup(new window.firebase.auth.GoogleAuthProvider())
           .then(res => {
@@ -369,6 +418,7 @@
       if (seg === 'p' && arg) { html = this.viewPath(arg); active = PERCORSI_IDS.includes(arg) ? 'percorsi' : (GENRE_IDS.includes(arg) ? 'generi' : ''); }
       else if (seg === 'cerca' && arg) { html = this.viewFacet(arg, arg2 || ''); active = 'esplora'; }
       else if (seg === 't' && arg) { html = this.viewTitle(arg); active = ''; }
+      else if (seg === 'essenziali') { html = this.viewEssenziali(); active = 'percorsi'; }
       else if (seg === 'generi') { html = this.viewGeneri(); active = 'generi'; }
       else if (seg === 'percorsi') { html = this.viewPercorsi(); active = 'percorsi'; }
       else if (seg === 'esplora') { html = this.viewEsplora(); active = 'esplora'; }
@@ -412,6 +462,9 @@
         const p = PATHS.find(p => p.id === arg);
         title = `${p.title} — i migliori anime del genere · ${BASE}`;
         desc = (p.about || p.blurb || p.tagline || '').slice(0, 158);
+      } else if (seg === 'essenziali') {
+        title = `Il meglio · ${BASE}`;
+        desc = 'I migliori anime di GUARDALO: titoli messi in cima a generi e percorsi, senza doppioni.';
       } else if (seg === 'esplora') {
         title = `Esplora tutti gli anime · ${BASE}`;
         desc = 'Tutti gli anime della guida, dal migliore: filtra per genere e per quanto tempo hai.';
@@ -421,6 +474,21 @@
       } else if (seg === 'percorsi') {
         title = `Percorsi · ${BASE}`;
         desc = 'Viaggi tematici curati: storie che spezzano, protagonisti geniali, spettacolo visivo, antieroi e altro.';
+      } else if (seg === 'tempo' && arg) {
+        const m = TEMPO.find(t => t.key === arg);
+        title = `${m ? m.label : 'Quanto tempo hai?'} · ${BASE}`;
+        desc = m
+          ? `${m.sub}: anime selezionati in base al tempo che hai a disposizione.`
+          : 'Anime selezionati in base al tempo che hai a disposizione.';
+      } else if (seg === 'lista') {
+        title = `La mia lista · ${BASE}`;
+        desc = 'La tua lista personale: salva gli anime da vedere e segna quelli già visti.';
+      } else if (seg === 'profilo') {
+        title = `Profilo · ${BASE}`;
+        desc = 'Statistiche personali, progressi e preferenze salvate su GUARDALO.';
+      } else if (seg === 'admin') {
+        title = `Gestione · ${BASE}`;
+        desc = 'Pannello di gestione riservato per curare titoli, generi e percorsi di GUARDALO.';
       } else if (seg === 'info') {
         title = `Chi sono · ${BASE}`;
         desc = 'GUARDALO è una guida agli anime creata da Francesco Spidah. Selezione, testi e percorsi sono curatela personale.';
@@ -430,6 +498,9 @@
       } else if (seg === 'cookie') {
         title = `Cookie Policy · ${BASE}`;
         desc = 'I cookie usati da GUARDALO e come gestire il consenso.';
+      } else if (seg) {
+        title = `Pagina non trovata · ${BASE}`;
+        desc = 'Questa pagina di GUARDALO non esiste o non è più disponibile.';
       }
       if (!title) {
         title = `${BASE} — La guida agli anime`;
@@ -439,7 +510,9 @@
       this.setMetaTag('description', desc);
       this.setMetaTag('og:title', title, true);
       this.setMetaTag('og:description', desc, true);
-      if (img) this.setMetaTag('og:image', img, true);
+      const metaImg = img || (location.origin + '/og-image.png');
+      this.setMetaTag('og:image', metaImg, true);
+      this.setMetaTag('twitter:image', metaImg);
 
       // dati strutturati (rich snippet) sulla scheda titolo
       const old = document.getElementById('ld-json');
@@ -461,9 +534,10 @@
       }
     }
     afterRender(seg) {
-      if (seg === 'admin') { this.afterRenderAdmin(); return; }
+      if (seg === 'admin') { this.ensureFirebase().catch(() => {}); this.afterRenderAdmin(); return; }
       if (seg === 'profilo') {
-        document.getElementById('profLogin')?.addEventListener('click', () => $('#loginModal').classList.add('open'));
+        this.ensureFirebase().catch(() => {});
+        document.getElementById('profLogin')?.addEventListener('click', () => this.openLogin());
         document.getElementById('profLogout')?.addEventListener('click', () => { if (window.auth) window.auth.signOut().then(() => { this.toast('Sei uscito.', 'muted'); this.go('/'); }).catch(() => {}); });
         return;
       }
@@ -492,6 +566,32 @@
       });
       // Esplora: pannello filtri (genere · durata · tipo · ordina)
       document.getElementById('esploraFilters')?.addEventListener('change', () => this.applyEsploraFilters());
+      document.getElementById('esploraQuick')?.addEventListener('click', e => {
+        const b = e.target.closest('button[data-preset]');
+        if (!b) return;
+        const preset = b.dataset.preset;
+        const genre = document.getElementById('efGenre');
+        const durata = document.getElementById('efDurata');
+        const tipo = document.getElementById('efTipo');
+        const ess = document.getElementById('efEssenziali');
+        const sort = document.getElementById('efSort');
+        const byPreset = {
+          essenziali: { essenziali: true },
+          film: { tipo: 'film' },
+          sera: { durata: 'sera' },
+          adulti: { genre: 'seinen-e-maturo' },
+          azione: { genre: 'azione' },
+          tempo: { genre: 'viaggi-nel-tempo' },
+          antieroi: { genre: 'antieroi' },
+        };
+        const next = byPreset[preset] || {};
+        if (genre) genre.value = next.genre || '';
+        if (durata) durata.value = next.durata || '';
+        if (tipo) tipo.value = next.tipo || '';
+        if (ess) ess.checked = !!next.essenziali;
+        if (sort) sort.value = 'best';
+        this.applyEsploraFilters();
+      });
       document.getElementById('esploraSearch')?.addEventListener('click', () => this.openSearch());
       const heroSearch = document.getElementById('heroSearch');
       if (heroSearch) heroSearch.addEventListener('click', () => this.openSearch());
@@ -539,7 +639,7 @@
       const col = t.coverColor ? `style="--cc:${esc(t.coverColor)}"` : '';
       const rank = opts.rank ? `<span class="card-rank">${opts.rank}</span>` : '';
       const essMark = (!opts.noEss && ESSENTIAL_IDS.has(t.id));
-      const essTag = c => essMark ? `<span class="card-ess ${c}"><i class="ri-vip-crown-fill"></i> Essenziale</span>` : '';
+      const essTag = c => essMark ? `<span class="card-ess ${c}"><i class="ri-vip-crown-fill"></i> Top</span>` : '';
       return `<a class="card ${w ? 'is-watched' : ''} ${l ? 'is-later' : ''} ${essMark ? 'has-ess' : ''}" data-card="${esc(t.id)}" data-band="${esc(t.lengthBand)}" href="/t/${esc(t.id)}" ${col}>
         <div class="card-poster">
           <img src="${esc(thumb(cover(t)))}" alt="${esc(t.title)}" loading="lazy" onload="this.classList.add('ld')" onerror="this.classList.add('ld')">
@@ -575,6 +675,12 @@
     pathCovers(p, n) {
       return catTitles(p).filter(t => t && t.coverImage).slice(0, n);
     }
+    previewTitles(list, pid, n = 3) {
+      return [...list].sort((a, b) => {
+        const wt = t => tierOf(pid, t.id) === 'e' ? 2 : (tierOf(pid, t.id) === 'c' ? 1 : 0);
+        return wt(b) - wt(a) || rankSort(a, b);
+      }).slice(0, n);
+    }
     // tile di un percorso/genere
     pathTile(p, opts = {}) {
       const mem = catTitles(p);
@@ -582,7 +688,10 @@
       if (opts.genre) {
         return `<a class="genre-card" href="/p/${esc(p.id)}" style="--accent:${esc(p.accent)}">
           <span class="genre-card-ic"><i class="${esc(p.icon)}"></i></span>
-          <span class="genre-card-txt"><span class="genre-card-name">${esc(p.title)}</span><span class="genre-card-n">${mem.length} titoli</span></span>
+          <span class="genre-card-txt">
+            <span class="genre-card-name">${esc(p.title)}</span>
+            <span class="genre-card-n">${mem.length} titoli</span>
+          </span>
           <i class="ri-arrow-right-s-line genre-card-arr"></i>
         </a>`;
       }
@@ -595,6 +704,7 @@
         </div>
         <div class="path-card-body">
           <div class="path-head"><span class="path-ic-wrap"><i class="${esc(p.icon)}"></i></span><h3 class="path-name">${esc(p.title)}</h3></div>
+          ${PATH_USE[p.id] ? `<span class="path-use">${esc(PATH_USE[p.id])}</span>` : ''}
           <p class="path-blurb">${esc(p.blurb || p.tagline)}</p>
           <div class="path-foot">
             <span class="path-levels"><i class="ri-film-line"></i> ${mem.length} titoli</span>
@@ -603,31 +713,41 @@
         </div>
       </a>`;
     }
-    viewHome() {
-      const bannerOf = t => t ? (t.bannerImage || cover(t)) : '';
-      const bnr = id => bannerOf(BY_ID.get(id));   // banner di un titolo per id
-      const feat = (href, ic, title, sub, img) => `
-        <a class="path-card" href="${href}" style="--accent:var(--red)">
-          <div class="path-hero-img">${img ? `<img class="path-1img" src="${esc(img)}" alt="" loading="lazy" onload="this.classList.add('ld')" onerror="this.classList.add('ld')">` : ''}</div>
-          <div class="path-card-body">
-            <div class="path-head"><span class="path-ic-wrap"><i class="${ic}"></i></span><h3 class="path-name">${title}</h3></div>
-            <p class="path-blurb">${sub}</p>
-            <div class="path-foot"><span class="path-start">Apri <i class="ri-arrow-right-line"></i></span></div>
+    essentialTile() {
+      const mem = essentialTitles();
+      const hero = mem.find(t => t.bannerImage) || mem.find(t => t.coverImage);
+      const heroImg = hero ? (hero.bannerImage || cover(hero)) : '';
+      return `<a class="path-card path-card-essential" href="/essenziali" style="--accent:var(--gold)">
+        <div class="path-hero-img">
+          ${heroImg ? `<img class="path-1img" src="${esc(heroImg)}" alt="" loading="lazy" onload="this.classList.add('ld')" onerror="this.classList.add('ld')">` : ''}
+        </div>
+        <div class="path-card-body">
+          <div class="path-head"><span class="path-ic-wrap"><i class="ri-vip-crown-fill"></i></span><h3 class="path-name">Il meglio</h3></div>
+          <span class="path-use">vai sul sicuro</span>
+          <p class="path-blurb">I titoli piu forti presi da generi e percorsi, senza doppioni.</p>
+          <div class="path-foot">
+            <span class="path-levels"><i class="ri-film-line"></i> ${mem.length} titoli</span>
+            <span class="path-start">Apri <i class="ri-arrow-right-line"></i></span>
           </div>
-        </a>`;
+        </div>
+      </a>`;
+    }
+    viewHome() {
       const heroImg = [...TITLES].filter(t => t.inList && t.bannerImage).sort(rankSort)[0] || [...TITLES].filter(t => t.bannerImage).sort(rankSort)[0];
-      const genreBrowse = GENRE_PATHS.map(p => this.pathTile(p, { genre: true })).join('');
-      const percorsiBrowse = PERCORSI_PATHS.map(p => this.pathTile(p)).join('');
-      const facts = pickN(FACTS, 3);
+      const entry = [
+        ['Il meglio', 'i migliori', 'ri-vip-crown-fill', '/essenziali', 'gold'],
+        ['Generi', 'scegli atmosfera', 'ri-shapes-line', '/generi', 'blue'],
+        ['Percorsi', 'liste curate', 'ri-route-line', '/percorsi', 'cyan'],
+        ['Esplora', 'filtri completi', 'ri-compass-3-line', '/esplora', 'blue'],
+      ];
+      const entryCard = ([title, sub, ic, href, tone]) => `<a class="hero-choice ${tone === 'gold' ? 'gold' : ''}" href="${href}"><i class="${ic}"></i><span><b>${title}</b><em>${sub}</em></span></a>`;
       const H = HOME.hero || {};
       const tempo = HOME.tempo || [];
-      const tiles = HOME.tiles || [];
+      const timeCard = t => `<a class="home-time-card" href="/tempo/${esc(t.key)}"><i class="${esc(t.icon)}"></i><span><b>${esc(t.label)}</b><em>${esc(t.sub || '')}</em></span></a>`;
       const firstName = this.user ? esc((this.user.displayName || (this.user.email || '').split('@')[0]).split(' ')[0]) : '';
-      // box compatto solo-testo per la home MOBILE (niente immagini)
-      const mBox = p => `<a class="hm-box" href="/p/${esc(p.id)}" style="--accent:${esc(p.accent)}"><i class="${esc(p.icon)} hm-box-ic"></i><span class="hm-box-name">${esc(p.title)}</span><span class="hm-box-n">${catTitles(p).length}</span></a>`;
       return `
       <div class="wrap">
-        <!-- HOME MOBILE: hero di benvenuto + box generi/percorsi -->
+        <!-- HOME MOBILE: launcher asciutto -->
         <div class="home-m">
           <div class="hm-hero">
             ${heroImg ? `<img class="hm-hero-img" src="${esc(heroImg.bannerImage || cover(heroImg))}" alt="" loading="eager" onload="this.classList.add('ld')" onerror="this.classList.add('ld')">` : ''}
@@ -637,16 +757,11 @@
               <h1 class="hm-hero-title">Da dove vuoi partire?</h1>
             </div>
           </div>
-          <div class="hm-quick">
-            <a class="hm-quick-b" href="/esplora"><i class="ri-compass-3-line"></i> Esplora tutto</a>
-            <button class="hm-quick-b ghost js-surprise"><i class="ri-shuffle-line"></i> Sorprendimi</button>
-          </div>
-          <h2 class="hm-h"><i class="ri-shapes-line"></i> Generi</h2>
-          <div class="hm-boxes">${GENRE_PATHS.map(mBox).join('')}</div>
-          <h2 class="hm-h"><i class="ri-route-line"></i> Percorsi</h2>
-          <div class="hm-boxes">${PERCORSI_PATHS.map(mBox).join('')}</div>
+          <div class="hero-decisions mobile">${entry.map(entryCard).join('')}</div>
+          <h2 class="hm-h"><i class="ri-time-line"></i> Quanto tempo hai?</h2>
+          <div class="home-time-row mobile">${tempo.map(timeCard).join('')}</div>
         </div>
-        <!-- HOME DESKTOP: invariata -->
+        <!-- HOME DESKTOP: ingresso unico, niente liste duplicate -->
         <div class="home-d">
         <section class="home-hero home-hero-full">
           ${heroImg ? `<div class="home-hero-art"><img src="${esc(heroImg.bannerImage || cover(heroImg))}" alt="" loading="eager" onload="this.classList.add('ld')" onerror="this.classList.add('ld')"></div>` : ''}
@@ -655,51 +770,75 @@
             ${this.user ? `<span class="hh-kicker">Ciao, ${esc((this.user.displayName || (this.user.email || '').split('@')[0]).split(' ')[0])} 👋</span>` : ''}
             <h1 class="hh-title">${esc(H.title || '')}</h1>
             <p class="hh-sub">${esc(H.sub || '')}</p>
-            <div class="hh-cta">
-              <a class="btn-red" href="${esc(H.ctaLink || '/esplora')}"><i class="ri-compass-3-line"></i> ${esc(H.ctaText || 'Esplora tutto')}</a>
-              <button class="hh-btn ghost js-surprise"><i class="ri-shuffle-line"></i> Sorprendimi</button>
-            </div>
+            <div class="hero-decisions">${entry.map(entryCard).join('')}</div>
           </div>
         </section>
 
         <section class="home-sec home-full">
-          <div class="sec-divider"><span class="sd-label"><i class="ri-compass-3-line"></i> Da dove vuoi partire</span><span class="sd-line"></span></div>
-          <div class="qgrid">
-            ${tiles.map(t => feat(esc(t.link), esc(t.icon), esc(t.title), esc(t.sub), bnr(t.heroSlug))).join('')}
-          </div>
-        </section>
-
-        <section class="home-sec home-full">
-          <div class="sec-divider"><span class="sd-label"><i class="ri-shapes-line"></i> Sfoglia per genere</span><span class="sd-line"></span><a class="sd-count sd-link" href="/generi">Tutti i generi <i class="ri-arrow-right-line"></i></a></div>
-          <div class="genre-grid">${genreBrowse}</div>
-        </section>
-
-        <section class="home-sec home-full">
-          <div class="sec-divider"><span class="sd-label"><i class="ri-route-line"></i> Percorsi guidati</span><span class="sd-line"></span><a class="sd-count sd-link" href="/percorsi">Tutti i percorsi <i class="ri-arrow-right-line"></i></a></div>
-          <div class="paths-grid">${percorsiBrowse}</div>
+          <div class="home-time"><h2>Quanto tempo hai?</h2><div class="home-time-row">${tempo.map(timeCard).join('')}</div></div>
         </section>
         </div>
       </div>`;
     }
-    // box "Lo sapevi?" autonomo per le pagine di navigazione (una curiosità a caso)
-    factBox() {
-      const f = pickN(FACTS, 1)[0];
-      return `<div class="page-fact"><i class="ri-lightbulb-flash-line"></i><span><b>Lo sapevi?</b> ${esc(f)}</span></div>`;
+    viewEssenziali() {
+      const list = essentialTitles();
+      return `<section class="wrap esplora-head essentials-head">
+        <h1>Il meglio</h1>
+        <p>I migliori di tutti: titoli messi in cima ad almeno un genere o percorso, senza doppioni e ordinati dal migliore.</p>
+      </section>
+      <section class="wrap">
+        <div class="sec-head sub"><h2><i class="ri-vip-crown-fill"></i> Il meglio di GUARDALO</h2><span class="sec-count">${list.length} titoli</span></div>
+        ${this.pagedGrid(list)}
+      </section>`;
     }
     // ── VISTA: GENERI (griglia categorie) ────────────────────────────────────────
     viewGeneri() {
+      const lane = (title, icon, ids) => {
+        const paths = ids.map(id => PATHS.find(p => p.id === id)).filter(Boolean);
+        if (!paths.length) return '';
+        return `<section class="genre-lane">
+          <div class="genre-lane-head"><h2><i class="${icon}"></i> ${title}</h2><span>${paths.length}</span></div>
+          <div class="genre-grid">${paths.map(p => this.pathTile(p, { genre: true })).join('')}</div>
+        </section>`;
+      };
+      const used = new Set([
+        'battle-shonen','azione','supereroi','sport',
+        'seinen-e-maturo','horror-e-disagio','sopravvivenza','vendetta','antieroi','crimine',
+        'mindfuck','viaggi-nel-tempo','sci-fi','mecha','super-robot',
+        'romance','commedia','slice-of-life',
+        'fantasy','isekai','storici','cinema-dautore'
+      ]);
+      const other = GENRE_PATHS.map(p => p.id).filter(id => !used.has(id));
       return `<section class="wrap sec-page">
-        <div class="sec-page-head"><h1>Generi</h1><p>${GENRE_PATHS.length} categorie, ognuna una lista ordinata dal migliore.</p></div>
-        ${this.factBox()}
-        <div class="genre-grid">${GENRE_PATHS.map(p => this.pathTile(p, { genre: true })).join('')}</div>
+        <div class="sec-page-head genre-page-head"><h1>Generi</h1><p>Scegli il tipo di storia. Viaggi nel tempo resta qui, nella zona mente e fantascienza.</p></div>
+        <div class="genre-map">
+          ${lane('Azione e adrenalina', 'ri-sword-line', ['battle-shonen','azione','supereroi','sport'])}
+          ${lane('Cupo, adulto, vendetta', 'ri-skull-line', ['seinen-e-maturo','horror-e-disagio','sopravvivenza','vendetta','antieroi','crimine'])}
+          ${lane('Mente, tempo e fantascienza', 'ri-brain-line', ['mindfuck','viaggi-nel-tempo','sci-fi','mecha','super-robot'])}
+          ${lane('Sentimenti e quotidiano', 'ri-heart-3-line', ['romance','commedia','slice-of-life'])}
+          ${lane('Mondi, storia e cinema', 'ri-earth-line', ['fantasy','isekai','storici','cinema-dautore', ...other])}
+        </div>
       </section>`;
     }
     // ── VISTA: PERCORSI (griglia percorsi tematici) ──────────────────────────────
     viewPercorsi() {
+      const row = (p, opts = {}) => {
+        const mem = opts.essential ? essentialTitles() : catTitles(p);
+        const title = opts.essential ? 'Il meglio' : p.title;
+        const href = opts.essential ? '/essenziali' : `/p/${esc(p.id)}`;
+        const icon = opts.essential ? 'ri-vip-crown-fill' : p.icon;
+        const use = opts.essential ? 'vai sul sicuro' : (PATH_USE[p.id] || 'percorso');
+        const blurb = opts.essential ? 'I titoli piu forti presi da generi e percorsi, senza doppioni.' : (p.blurb || p.tagline);
+        const accent = opts.essential ? 'var(--gold)' : p.accent;
+        return `<a class="route-row" href="${href}" style="--accent:${esc(accent)}">
+          <span class="route-ic"><i class="${esc(icon)}"></i></span>
+          <span class="route-main"><b>${esc(title)}</b><em>${esc(blurb)}</em></span>
+          <span class="route-meta"><i>${esc(use)}</i><strong>${mem.length} titoli</strong></span>
+        </a>`;
+      };
       return `<section class="wrap sec-page">
-        <div class="sec-page-head"><h1>Percorsi</h1><p>Viaggi tematici curati: storie che spezzano, protagonisti geniali, spettacolo visivo, antieroi e altro.</p></div>
-        ${this.factBox()}
-        <div class="paths-grid">${PERCORSI_PATHS.map(p => this.pathTile(p)).join('')}</div>
+        <div class="sec-page-head route-page-head"><h1>Percorsi</h1><p>Non generi: scorciatoie editoriali per decidere piu in fretta.</p></div>
+        <div class="route-list">${row(null, { essential: true })}${PERCORSI_PATHS.map(p => row(p)).join('')}</div>
       </section>`;
     }
     // ── PAGINE STATICHE (doc) ────────────────────────────────────────────────────
@@ -772,17 +911,16 @@
       {
         const members = catTitles(p);
         const inTier = code => members.filter(t => tierOf(p.id, t.id) === code).sort(rankSort);
-        const essenziali = inTier('e');
-        const altriInList = inTier('c');
-        const consigliati = inTier('d');
-        const noPersonal = !essenziali.length && !altriInList.length; // solo "Da scoprire" → vetrina "I classici"
+        const top = inTier('e');
+        const consigliati = inTier('c');
+        const extra = inTier('d');
+        const noPersonal = !top.length && !consigliati.length;
         const scheda = `
         <section class="wrap cat-intro-wrap">
           <div class="cat-intro" style="--accent:${esc(p.accent)}">
             <span class="cat-intro-ic"><i class="${esc(p.icon)}"></i></span>
             <div class="cat-intro-txt">
               <p class="cat-about">${esc(p.about || p.blurb || p.tagline || '')}</p>
-              ${p.curiosita ? `<p class="cat-curio"><b><i class="ri-lightbulb-flash-line"></i> Lo sapevi?</b> ${esc(p.curiosita)}</p>` : ''}
             </div>
           </div>
         </section>`;
@@ -800,10 +938,10 @@
             <div class="grid">${list.map(t => this.card(t, { noEss: true })).join('')}</div>
           </section>` : '';
         const body = noPersonal
-          ? sec('I classici', 'ri-medal-line', consigliati, 'sd-e')
-          : sec('Essenziali', 'ri-vip-crown-fill', essenziali, 'sd-e')
-            + sec('Consigliati', 'ri-bookmark-3-line', altriInList, 'sd-c')
-            + sec('Da scoprire', 'ri-compass-3-line', consigliati, 'sd-d');
+          ? sec(TIER_LABEL.d, 'ri-compass-3-line', extra, 'sd-d')
+          : sec(TIER_LABEL.e, 'ri-vip-crown-fill', top, 'sd-e')
+            + sec(TIER_LABEL.c, 'ri-bookmark-3-line', consigliati, 'sd-c')
+            + sec(TIER_LABEL.d, 'ri-compass-3-line', extra, 'sd-d');
         return hero + scheda + filterBar + body;
       }
     }
@@ -951,6 +1089,7 @@
     esploraList() {
       const f = this.esploraFilters || {};
       let list = [...TITLES];
+      if (f.essenziali) list = list.filter(t => ESSENTIAL_IDS.has(t.id));
       if (f.genre) list = list.filter(t => (CAT_MEMBERS[f.genre] || []).includes(t.id));
       if (f.durata) { const bands = tempoBands(f.durata); list = list.filter(t => bands.includes(t.lengthBand)); }
       if (f.tipo) list = list.filter(t => (f.tipo === 'film' ? /film|movie/i.test(t.typeLabel || '') : !/film|movie/i.test(t.typeLabel || '')));
@@ -965,6 +1104,7 @@
         genre: document.getElementById('efGenre')?.value || '',
         durata: document.getElementById('efDurata')?.value || '',
         tipo: document.getElementById('efTipo')?.value || '',
+        essenziali: !!document.getElementById('efEssenziali')?.checked,
         sort: document.getElementById('efSort')?.value || 'best',
       };
       const list = this.esploraList();
@@ -975,19 +1115,30 @@
     }
     // ── VISTA: ESPLORA (con pannello filtri: genere · durata · tipo · ordina) ─────
     viewEsplora() {
-      this.esploraFilters = { genre: '', durata: '', tipo: '', sort: 'best' };
+      this.esploraFilters = { genre: '', durata: '', tipo: '', essenziali: false, sort: 'best' };
       const list = this.esploraList();
-      const genreOpts = GENRE_PATHS.map(p => `<option value="${esc(p.id)}">${esc(p.title)}</option>`).join('');
+      const genreOpts = `<optgroup label="Generi">${GENRE_PATHS.map(p => `<option value="${esc(p.id)}">${esc(p.title)}</option>`).join('')}</optgroup><optgroup label="Percorsi">${PERCORSI_PATHS.map(p => `<option value="${esc(p.id)}">${esc(p.title)}</option>`).join('')}</optgroup>`;
       const durataOpts = TEMPO.map(t => `<option value="${esc(t.key)}">${esc(t.label)}</option>`).join('');
       return `
       <section class="wrap esplora-head">
         <h1>Esplora</h1>
         <p>Tutti i titoli. Filtra per trovare quello giusto. <button class="link-btn" id="esploraSearch">o cerca un titolo →</button></p>
         <div class="esplora-filters" id="esploraFilters">
-          <select id="efGenre" aria-label="Genere"><option value="">Tutti i generi</option>${genreOpts}</select>
+          <select id="efGenre" aria-label="Sezione"><option value="">Tutte le sezioni</option>${genreOpts}</select>
           <select id="efDurata" aria-label="Durata"><option value="">Qualsiasi durata</option>${durataOpts}</select>
           <select id="efTipo" aria-label="Tipo"><option value="">Serie e film</option><option value="serie">Solo serie</option><option value="film">Solo film</option></select>
+          <label class="ef-check"><input id="efEssenziali" type="checkbox"> Solo top</label>
           <select id="efSort" aria-label="Ordina"><option value="best">Dal migliore</option><option value="voto">Voto più alto</option><option value="recenti">Più recenti</option><option value="az">A-Z</option></select>
+        </div>
+        <div class="esplora-quick" id="esploraQuick">
+          <button type="button" data-preset="essenziali"><i class="ri-vip-crown-fill"></i> Top</button>
+          <button type="button" data-preset="adulti"><i class="ri-skull-line"></i> Adulti</button>
+          <button type="button" data-preset="azione"><i class="ri-sword-line"></i> Azione</button>
+          <button type="button" data-preset="tempo"><i class="ri-time-line"></i> Viaggi tempo</button>
+          <button type="button" data-preset="antieroi"><i class="ri-skull-line"></i> Antieroi</button>
+          <button type="button" data-preset="film"><i class="ri-movie-2-line"></i> Film</button>
+          <button type="button" data-preset="sera"><i class="ri-moon-clear-line"></i> Una sera</button>
+          <button type="button" data-preset="reset"><i class="ri-restart-line"></i> Reset</button>
         </div>
       </section>
       <section class="wrap">
@@ -1047,7 +1198,7 @@
       if (!watched.length && !later.length) {
         return `<section class="wrap"><div class="empty big">
           <i class="ri-bookmark-line"></i>
-          <h2>La tua lista è vuota</h2>
+          <h1>La tua lista è vuota</h1>
           <p>Salva i titoli che vuoi vedere (segnalibro 🔖) e segna quelli già visti (✓). Li ritrovi qui, sincronizzati se accedi.</p>
           <a class="btn-red" href="/generi"><i class="ri-shapes-line"></i> Sfoglia i generi</a>
         </div></section>`;
@@ -1231,7 +1382,7 @@
       const nameOf = id => (PATHS.find(p => p.id === id) || {}).title || id;
       const optFor = id => `<option value="${esc(id)}" ${id === sel ? 'selected' : ''}>${esc(nameOf(id))}</option>`;
       const opts = `<optgroup label="Generi">${genres.map(optFor).join('')}</optgroup><optgroup label="Percorsi">${percorsi.map(optFor).join('')}</optgroup>`;
-      const tOrder = { e: 0, c: 1, d: 2 }, tLabel = { e: 'Essenziale', c: 'Consigliato', d: 'Da scoprire' };
+      const tOrder = { e: 0, c: 1, d: 2 }, tLabel = { e: 'Da vedere prima', c: 'Consigliato', d: 'Extra' };
       const mem = (cat.members[sel] || []).map(s => BY_ID.get(s)).filter(Boolean)
         .sort((a, b) => (tOrder[tierOf(sel, a.id)] - tOrder[tierOf(sel, b.id)]) || rankSort(a, b));
       const hero = (cat.hero || {})[sel] || '';
@@ -1260,7 +1411,7 @@
       return `
         <div class="admin-pick">
           <label>Sezione: <select id="adminGenSel">${opts}</select></label>
-          <span class="admin-count">${mem.length} titoli · <b class="t-e">${this._admCnt.e} Essenziali</b> · <b class="t-c">${this._admCnt.c} Consigliati</b> · <b class="t-d">${this._admCnt.d} Da scoprire</b> · hero: <b>${esc(hero ? (BY_ID.get(hero)?.title || hero) : '—')}</b></span>
+          <span class="admin-count">${mem.length} titoli · <b class="t-e">${this._admCnt.e} Da vedere prima</b> · <b class="t-c">${this._admCnt.c} Consigliati</b> · <b class="t-d">${this._admCnt.d} Extra</b> · hero: <b>${esc(hero ? (BY_ID.get(hero)?.title || hero) : '—')}</b></span>
         </div>
         <div class="admin-struct">
           <span class="admin-struct-lbl">Struttura:</span>
@@ -1275,7 +1426,7 @@
           <button class="btn-red" data-aact="seccreate">Crea</button>
         </div>` : ''}
         ${metaBlock}
-        <p class="admin-hint">Clicca <b>E</b>/<b>C</b>/<b>D</b> per mettere ogni titolo in Essenziali, Consigliati o Da scoprire <i>in questa sezione</i>. <i class="ri-image-line"></i> = immagine hero · <i class="ri-close-line"></i> = togli.</p>
+        <p class="admin-hint">Clicca <b>E</b>/<b>C</b>/<b>D</b> per mettere ogni titolo in Da vedere prima, Consigliati o Extra <i>in questa sezione</i>. <i class="ri-image-line"></i> = immagine hero · <i class="ri-close-line"></i> = togli.</p>
         <div class="admin-addrow">
           <input id="adminAddMember" placeholder="Aggiungi un titolo a «${esc(nameOf(sel))}»…" autocomplete="off">
           <div id="adminAddSug" class="admin-sug"></div>
@@ -1344,7 +1495,7 @@
       const sec = document.querySelector('.admin') || document.querySelector('.admin-gate');
       if (!sec) return;
       const lg = document.getElementById('adminLoginBtn');
-      if (lg) lg.addEventListener('click', () => $('#loginModal').classList.add('open'));
+      if (lg) lg.addEventListener('click', () => this.openLogin());
       sec.addEventListener('click', e => this.adminClick(e));
       sec.addEventListener('input', e => this.adminInput(e));
       sec.addEventListener('change', e => this.adminChange(e));
@@ -1435,7 +1586,7 @@
     }
     adminExport() {
       const cat = window.GUARDALO.categories || {};
-      const categories = { _nota: 'Tassonomia editabile. genreOrder/percorsoOrder = ordine in griglia; members = titoli di ogni genere; hero = immagine; tiers[id] = fascia di ogni titolo in quel genere/percorso (e=Essenziale, c=Consigliato, d=Da scoprire). Dopo modifiche: npm run gen.', genreOrder: cat.genreOrder, percorsoOrder: cat.percorsoOrder, hero: cat.hero, members: cat.members, tiers: cat.tiers || {} };
+      const categories = { _nota: 'Tassonomia editabile. genreOrder/percorsoOrder = ordine in griglia; members = titoli di ogni genere; hero = immagine; tiers[id] = fascia di ogni titolo in quel genere/percorso (e=Da vedere prima, c=Consigliato, d=Extra). Dopo modifiche: npm run gen.', genreOrder: cat.genreOrder, percorsoOrder: cat.percorsoOrder, hero: cat.hero, members: cat.members, tiers: cat.tiers || {} };
       const ranking = {};
       TITLES.filter(t => t.inList).sort((a, b) => (b.userRating || 0) - (a.userRating || 0)).forEach(t => { ranking[t.id] = { rating: t.userRating ?? null }; });
       this.adminDownload('categories.json', JSON.stringify(categories, null, 2));
@@ -1460,7 +1611,7 @@
     }
 
     notFound() {
-      return `<section class="wrap empty big"><i class="ri-compass-3-line"></i><h2>Non trovato</h2><p>Questa pagina non esiste.</p><a class="btn-ghost" href="/">Torna alla home</a></section>`;
+      return `<section class="wrap empty big"><i class="ri-compass-3-line"></i><h1>Non trovato</h1><p>Questa pagina non esiste.</p><a class="btn-ghost" href="/">Torna alla home</a></section>`;
     }
 
     // ── RICERCA ──────────────────────────────────────────────────────────────────
