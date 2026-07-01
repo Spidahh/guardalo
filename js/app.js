@@ -566,30 +566,8 @@
       });
       // Esplora: pannello filtri (genere · durata · tipo · ordina)
       document.getElementById('esploraFilters')?.addEventListener('change', () => this.applyEsploraFilters());
-      document.getElementById('esploraQuick')?.addEventListener('click', e => {
-        const b = e.target.closest('button[data-preset]');
-        if (!b) return;
-        const preset = b.dataset.preset;
-        const genre = document.getElementById('efGenre');
-        const durata = document.getElementById('efDurata');
-        const tipo = document.getElementById('efTipo');
-        const ess = document.getElementById('efEssenziali');
-        const sort = document.getElementById('efSort');
-        const byPreset = {
-          essenziali: { essenziali: true },
-          film: { tipo: 'film' },
-          sera: { durata: 'sera' },
-          adulti: { genre: 'seinen-e-maturo' },
-          azione: { genre: 'azione' },
-          tempo: { genre: 'viaggi-nel-tempo' },
-          antieroi: { genre: 'antieroi' },
-        };
-        const next = byPreset[preset] || {};
-        if (genre) genre.value = next.genre || '';
-        if (durata) durata.value = next.durata || '';
-        if (tipo) tipo.value = next.tipo || '';
-        if (ess) ess.checked = !!next.essenziali;
-        if (sort) sort.value = 'best';
+      document.getElementById('efClearGenres')?.addEventListener('click', () => {
+        document.querySelectorAll('input[name="efGenre"]').forEach(input => { input.checked = false; });
         this.applyEsploraFilters();
       });
       document.getElementById('esploraSearch')?.addEventListener('click', () => this.openSearch());
@@ -1134,7 +1112,7 @@
       const f = this.esploraFilters || {};
       let list = [...TITLES];
       if (f.essenziali) list = list.filter(t => ESSENTIAL_IDS.has(t.id));
-      if (f.genre) list = list.filter(t => (CAT_MEMBERS[f.genre] || []).includes(t.id));
+      if (f.genres?.length) list = list.filter(t => f.genres.every(id => (CAT_MEMBERS[id] || []).includes(t.id)));
       if (f.durata) { const bands = tempoBands(f.durata); list = list.filter(t => bands.includes(t.lengthBand)); }
       if (f.tipo) list = list.filter(t => (f.tipo === 'film' ? /film|movie/i.test(t.typeLabel || '') : !/film|movie/i.test(t.typeLabel || '')));
       if (f.sort === 'voto') list.sort((a, b) => (b.score10 || 0) - (a.score10 || 0));
@@ -1145,7 +1123,7 @@
     }
     applyEsploraFilters() {
       this.esploraFilters = {
-        genre: document.getElementById('efGenre')?.value || '',
+        genres: [...document.querySelectorAll('input[name="efGenre"]:checked')].map(input => input.value),
         durata: document.getElementById('efDurata')?.value || '',
         tipo: document.getElementById('efTipo')?.value || '',
         essenziali: !!document.getElementById('efEssenziali')?.checked,
@@ -1159,30 +1137,31 @@
     }
     // ── VISTA: ESPLORA (con pannello filtri: genere · durata · tipo · ordina) ─────
     viewEsplora() {
-      this.esploraFilters = { genre: '', durata: '', tipo: '', essenziali: false, sort: 'best' };
+      this.esploraFilters = { genres: [], durata: '', tipo: '', essenziali: false, sort: 'best' };
       const list = this.esploraList();
-      const genreOpts = `<optgroup label="Generi">${GENRE_PATHS.map(p => `<option value="${esc(p.id)}">${esc(p.title)}</option>`).join('')}</optgroup><optgroup label="Percorsi">${PERCORSI_PATHS.map(p => `<option value="${esc(p.id)}">${esc(p.title)}</option>`).join('')}</optgroup>`;
+      const chip = p => `<label class="ef-chip"><input type="checkbox" name="efGenre" value="${esc(p.id)}"><span>${esc(p.title)}</span></label>`;
       const durataOpts = TEMPO.map(t => `<option value="${esc(t.key)}">${esc(t.label)}</option>`).join('');
       return `
       <section class="wrap esplora-head">
         <h1>Esplora</h1>
         <p>Tutti i titoli. Filtra per trovare quello giusto. <button class="link-btn" id="esploraSearch">o cerca un titolo →</button></p>
         <div class="esplora-filters" id="esploraFilters">
-          <select id="efGenre" aria-label="Sezione"><option value="">Tutte le sezioni</option>${genreOpts}</select>
+          <div class="ef-multi" aria-label="Generi e percorsi">
+            <div class="ef-multi-head">
+              <span>Generi e percorsi</span>
+              <button type="button" id="efClearGenres">Pulisci</button>
+            </div>
+            <div class="ef-group-label">Generi</div>
+            <div class="ef-chip-grid">${GENRE_PATHS.map(chip).join('')}</div>
+            <div class="ef-group-label">Percorsi</div>
+            <div class="ef-chip-grid">${PERCORSI_PATHS.map(chip).join('')}</div>
+          </div>
+          <div class="ef-row">
           <select id="efDurata" aria-label="Durata"><option value="">Qualsiasi durata</option>${durataOpts}</select>
           <select id="efTipo" aria-label="Tipo"><option value="">Serie e film</option><option value="serie">Solo serie</option><option value="film">Solo film</option></select>
           <label class="ef-check"><input id="efEssenziali" type="checkbox"> Solo top</label>
           <select id="efSort" aria-label="Ordina"><option value="best">Dal migliore</option><option value="voto">Voto più alto</option><option value="recenti">Più recenti</option><option value="az">A-Z</option></select>
         </div>
-        <div class="esplora-quick" id="esploraQuick">
-          <button type="button" data-preset="essenziali"><i class="ri-vip-crown-fill"></i> Top</button>
-          <button type="button" data-preset="adulti"><i class="ri-skull-line"></i> Adulti</button>
-          <button type="button" data-preset="azione"><i class="ri-sword-line"></i> Azione</button>
-          <button type="button" data-preset="tempo"><i class="ri-time-line"></i> Viaggi tempo</button>
-          <button type="button" data-preset="antieroi"><i class="ri-skull-line"></i> Antieroi</button>
-          <button type="button" data-preset="film"><i class="ri-movie-2-line"></i> Film</button>
-          <button type="button" data-preset="sera"><i class="ri-moon-clear-line"></i> Una sera</button>
-          <button type="button" data-preset="reset"><i class="ri-restart-line"></i> Reset</button>
         </div>
       </section>
       <section class="wrap">

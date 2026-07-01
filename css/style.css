@@ -1182,15 +1182,31 @@ a.g-chip:hover { border-color: var(--accent); color: var(--accent); }
 @media (min-width: 861px) { .card-poster .lchip { display: none; } }
 
 /* ── ESPLORA: pannello filtri compatto ─────────────────────────────────── */
-.esplora-filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 4px; }
+.esplora-filters { display: grid; gap: 10px; min-width: 0; margin: 16px 0 4px; }
+.ef-multi { min-width: 0; padding: 10px; border: 1px solid var(--line-2); border-radius: 12px; background: var(--surface); }
+.ef-multi-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 8px; color: var(--ink); font-size: 13px; font-weight: 850; }
+.ef-multi-head button { border: 0; background: transparent; color: var(--accent); font: inherit; font-size: 12px; font-weight: 850; cursor: pointer; }
+.ef-group-label { margin: 9px 0 6px; color: var(--ink-faint); font-size: 11px; font-weight: 900; text-transform: uppercase; letter-spacing: .06em; }
+.ef-chip-grid { display: flex; flex-wrap: wrap; gap: 6px; max-width: 100%; min-width: 0; }
+.ef-chip { position: relative; display: inline-flex; }
+.ef-chip input { position: absolute; opacity: 0; pointer-events: none; }
+.ef-chip span { display: inline-flex; align-items: center; min-height: 32px; padding: 6px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface-2); color: var(--ink-soft); font-size: 12.5px; font-weight: 800; line-height: 1.1; cursor: pointer; transition: background .16s ease, border-color .16s ease, color .16s ease; }
+.ef-chip input:checked + span { border-color: var(--accent); background: var(--accent); color: #fff; }
+.ef-chip input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
+.ef-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .esplora-filters select { padding: 10px 13px; border: 1px solid var(--line-2); border-radius: 10px; background: var(--surface); color: var(--ink); font-size: 13.5px; font-weight: 600; font-family: inherit; cursor: pointer; }
 .esplora-filters select:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
 .ef-check { display: inline-flex; align-items: center; gap: 8px; padding: 10px 13px; border: 1px solid var(--line-2); border-radius: 10px; background: var(--surface); color: var(--ink); font-size: 13.5px; font-weight: 700; cursor: pointer; }
 .ef-check input { width: 16px; height: 16px; accent-color: var(--accent); }
-.esplora-quick { display: flex; flex-wrap: wrap; gap: 7px; margin: 9px 0 0; }
-.esplora-quick button { display: inline-flex; align-items: center; gap: 6px; padding: 7px 11px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink-soft); font-family: inherit; font-size: 12.5px; font-weight: 800; cursor: pointer; }
-.esplora-quick button:hover { color: var(--accent); border-color: var(--accent); }
-@media (max-width: 860px) { .esplora-filters { gap: 7px; } .esplora-filters select, .ef-check { flex: 1 1 45%; min-width: 0; font-size: 13px; padding: 10px 11px; } .esplora-quick { gap: 6px; } .esplora-quick button { flex: 1 1 auto; justify-content: center; padding: 8px 10px; } }
+@media (max-width: 860px) {
+  .esplora-filters { gap: 8px; margin-top: 12px; }
+  .ef-multi { overflow: hidden; padding: 9px; }
+  .ef-chip-grid { width: 100%; flex-wrap: nowrap; overflow-x: auto; padding-bottom: 2px; scrollbar-width: none; }
+  .ef-chip-grid::-webkit-scrollbar { display: none; }
+  .ef-chip span { min-height: 30px; white-space: nowrap; padding: 6px 9px; font-size: 12px; }
+  .ef-row { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+  .esplora-filters select, .ef-check { width: 100%; min-width: 0; font-size: 13px; padding: 10px 11px; }
+}
 
 /* ── RIFINITURE UX MOBILE (audit utente nuovo) ─────────────────────────── */
 @media (max-width: 860px) {
