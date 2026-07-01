@@ -349,7 +349,7 @@
       // sidebar mobile
       const sb = document.getElementById('sidebar');
       document.getElementById('sideToggle')?.addEventListener('click', () => sb.classList.toggle('open'));
-      document.querySelectorAll('.side-nav a').forEach(a => a.addEventListener('click', () => sb.classList.remove('open')));
+      document.querySelectorAll('.side-nav a, .side-time-nav a').forEach(a => a.addEventListener('click', () => sb.classList.remove('open')));
 
       // delega azioni "visto / da vedere"
       document.addEventListener('click', e => {
@@ -434,7 +434,7 @@
 
       const app = $('#app');
       app.innerHTML = html;
-      document.querySelectorAll('.side-nav a, .bottom-nav a').forEach(a => { const on = a.dataset.route === active; a.classList.toggle('active', on); on ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current'); });
+      document.querySelectorAll('.side-nav a, .side-time-nav a, .bottom-nav a').forEach(a => { const on = a.dataset.route === active; a.classList.toggle('active', on); on ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current'); });
       // ribadisce la visibilità di Gestione/Profilo a ogni navigazione (robustezza)
       const sa = $('#sideAdmin'); if (sa) sa.hidden = !this.isAdmin;
       const ta = $('#topAdmin'); if (ta) ta.hidden = !this.isAdmin;
@@ -755,7 +755,7 @@
       ];
       const entryCard = ([title, sub, ic, href, tone]) => `<a class="home-entry-card ${tone === 'gold' ? 'gold' : ''}" href="${href}"><i class="${ic}"></i><span><b>${title}</b><em>${sub}</em></span></a>`;
       const moodCard = ([title, sub, ic, href, accent]) => `<a class="home-mood-card" href="${href}" style="--accent:${accent}"><i class="${ic}"></i><span><b>${title}</b><em>${sub}</em></span></a>`;
-      const guideCard = ([title, text, ic]) => `<div class="home-guide-card"><i class="${ic}"></i><span><b>${title}</b><em>${text}</em></span></div>`;
+      const guideCard = ([title, text]) => `<div class="home-guide-card"><b>${title}</b><span>${text}</span></div>`;
       const H = HOME.hero || {};
       const tempo = HOME.tempo || [];
       const timeCard = t => `<a class="home-time-card" href="/tempo/${esc(t.key)}"><i class="${esc(t.icon)}"></i><span><b>${esc(t.label)}</b><em>${esc(t.sub || '')}</em></span></a>`;
