@@ -735,12 +735,27 @@
     viewHome() {
       const heroImg = [...TITLES].filter(t => t.inList && t.bannerImage).sort(rankSort)[0] || [...TITLES].filter(t => t.bannerImage).sort(rankSort)[0];
       const entry = [
-        ['Il meglio', 'i migliori', 'ri-vip-crown-fill', '/essenziali', 'gold'],
-        ['Generi', 'scegli atmosfera', 'ri-shapes-line', '/generi', 'blue'],
-        ['Percorsi', 'liste curate', 'ri-route-line', '/percorsi', 'cyan'],
-        ['Esplora', 'filtri completi', 'ri-compass-3-line', '/esplora', 'blue'],
+        ['Il meglio', 'solo priorita alte', 'ri-vip-crown-fill', '/essenziali', 'gold'],
+        ['Generi', 'per tipo di storia', 'ri-shapes-line', '/generi', 'blue'],
+        ['Percorsi', 'liste editoriali', 'ri-route-line', '/percorsi', 'cyan'],
+        ['Esplora', 'tutti i filtri', 'ri-compass-3-line', '/esplora', 'blue'],
       ];
-      const entryCard = ([title, sub, ic, href, tone]) => `<a class="hero-choice ${tone === 'gold' ? 'gold' : ''}" href="${href}"><i class="${ic}"></i><span><b>${title}</b><em>${sub}</em></span></a>`;
+      const moods = [
+        ['Roba adulta', 'seinen, disagio, crime', 'ri-skull-line', '/p/seinen-e-maturo', '#e05252'],
+        ['Azione', 'ritmo e combattimenti', 'ri-sword-line', '/p/azione', '#ef7c35'],
+        ['Viaggi tempo', 'loop, passato, scelte', 'ri-time-line', '/p/viaggi-nel-tempo', '#45c2ee'],
+        ['Antieroi', 'morale sporca', 'ri-knife-line', '/p/antieroi', '#9b6cf4'],
+        ['Storico', 'epoche e guerre', 'ri-book-open-line', '/p/storici', '#d99e12'],
+        ['Film', 'una serata secca', 'ri-movie-2-line', '/p/cinema-dautore', '#20b486'],
+      ];
+      const guide = [
+        ['Generi', 'Sono il tipo di storia: azione, storico, horror, romance, viaggi nel tempo.', 'ri-shapes-line'],
+        ['Percorsi', 'Sono tagli curati: antieroi, vendetta, mind game, roba adulta, chicche.', 'ri-route-line'],
+        ['Fasce', 'Da vedere prima = priorita. Consigliati = solidi. Extra = recuperi dopo.', 'ri-list-check-3'],
+      ];
+      const entryCard = ([title, sub, ic, href, tone]) => `<a class="home-entry-card ${tone === 'gold' ? 'gold' : ''}" href="${href}"><i class="${ic}"></i><span><b>${title}</b><em>${sub}</em></span></a>`;
+      const moodCard = ([title, sub, ic, href, accent]) => `<a class="home-mood-card" href="${href}" style="--accent:${accent}"><i class="${ic}"></i><span><b>${title}</b><em>${sub}</em></span></a>`;
+      const guideCard = ([title, text, ic]) => `<div class="home-guide-card"><i class="${ic}"></i><span><b>${title}</b><em>${text}</em></span></div>`;
       const H = HOME.hero || {};
       const tempo = HOME.tempo || [];
       const timeCard = t => `<a class="home-time-card" href="/tempo/${esc(t.key)}"><i class="${esc(t.icon)}"></i><span><b>${esc(t.label)}</b><em>${esc(t.sub || '')}</em></span></a>`;
@@ -753,13 +768,22 @@
             ${heroImg ? `<img class="hm-hero-img" src="${esc(heroImg.bannerImage || cover(heroImg))}" alt="" loading="eager" onload="this.classList.add('ld')" onerror="this.classList.add('ld')">` : ''}
             <span class="hm-hero-veil"></span>
             <div class="hm-hero-txt">
-              <p class="hm-hi">${firstName ? `Ciao, ${firstName} 👋` : 'Benvenuto su GUARDALO'}</p>
+              <p class="hm-hi">${firstName ? `Ciao, ${firstName}` : 'Benvenuto su GUARDALO'}</p>
               <h1 class="hm-hero-title">Da dove vuoi partire?</h1>
             </div>
           </div>
-          <div class="hero-decisions mobile">${entry.map(entryCard).join('')}</div>
-          <h2 class="hm-h"><i class="ri-time-line"></i> Quanto tempo hai?</h2>
-          <div class="home-time-row mobile">${tempo.map(timeCard).join('')}</div>
+          <section class="hm-panel">
+            <div class="hm-panel-head">
+              <b>Inizia da qui</b>
+              <span>scegli metodo, tono o tempo</span>
+            </div>
+            <div class="home-entry-grid mobile">${entry.map(entryCard).join('')}</div>
+            <div class="hm-mini-title"><i class="ri-compass-3-line"></i> Scelte rapide</div>
+            <div class="home-mood-grid mobile">${moods.map(moodCard).join('')}</div>
+            <div class="hm-mini-title"><i class="ri-time-line"></i> Quanto tempo hai?</div>
+            <div class="home-time-row mobile">${tempo.map(timeCard).join('')}</div>
+          </section>
+          <div class="home-guide mobile">${guide.map(guideCard).join('')}</div>
         </div>
         <!-- HOME DESKTOP: ingresso unico, niente liste duplicate -->
         <div class="home-d">
@@ -767,15 +791,35 @@
           ${heroImg ? `<div class="home-hero-art"><img src="${esc(heroImg.bannerImage || cover(heroImg))}" alt="" loading="eager" onload="this.classList.add('ld')" onerror="this.classList.add('ld')"></div>` : ''}
           <span class="home-hero-veil"></span>
           <div class="home-hero-in">
-            ${this.user ? `<span class="hh-kicker">Ciao, ${esc((this.user.displayName || (this.user.email || '').split('@')[0]).split(' ')[0])} 👋</span>` : ''}
+            ${this.user ? `<span class="hh-kicker">Ciao, ${esc((this.user.displayName || (this.user.email || '').split('@')[0]).split(' ')[0])}</span>` : ''}
             <h1 class="hh-title">${esc(H.title || '')}</h1>
             <p class="hh-sub">${esc(H.sub || '')}</p>
-            <div class="hero-decisions">${entry.map(entryCard).join('')}</div>
+            <div class="hh-cta">
+              <a class="btn-red" href="/esplora"><i class="ri-compass-3-line"></i> Esplora tutto</a>
+              <a class="hh-btn ghost" href="/generi"><i class="ri-shapes-line"></i> Vedi generi</a>
+            </div>
           </div>
         </section>
 
-        <section class="home-sec home-full">
-          <div class="home-time"><h2>Quanto tempo hai?</h2><div class="home-time-row">${tempo.map(timeCard).join('')}</div></div>
+        <section class="home-start home-full">
+          <div class="home-start-head">
+            <div><b>Scegli un punto di partenza</b><span>prima metodo, poi tono o durata</span></div>
+            <i class="ri-cursor-line"></i>
+          </div>
+          <div class="home-entry-grid">${entry.map(entryCard).join('')}</div>
+          <div class="home-start-body">
+            <div class="home-cluster">
+              <div class="home-cluster-head"><i class="ri-compass-3-line"></i><span>Scelte rapide</span></div>
+              <div class="home-mood-grid">${moods.map(moodCard).join('')}</div>
+            </div>
+            <div class="home-cluster home-cluster-time">
+              <div class="home-cluster-head"><i class="ri-time-line"></i><span>Quanto tempo hai?</span></div>
+              <div class="home-time-row">${tempo.map(timeCard).join('')}</div>
+            </div>
+          </div>
+        </section>
+        <section class="home-guide-band home-full">
+          <div class="home-guide">${guide.map(guideCard).join('')}</div>
         </section>
         </div>
       </div>`;
