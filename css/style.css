@@ -490,9 +490,9 @@ a.se-chip:hover { border-color: var(--accent); color: var(--accent); }
 .side-nav a.active { background: var(--accent-soft); color: var(--accent); }
 .side-group { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); }
 .side-group-h { display: block; padding: 0 4px 8px; font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); }
-.side-time-nav { display: flex; flex-wrap: wrap; gap: 6px; }
-.side-time-nav a { display: inline-flex; align-items: center; gap: 5px; padding: 6px 8px; border: 1px solid var(--line); border-radius: 999px; color: var(--ink-faint); background: transparent; font-size: 11.5px; line-height: 1; font-weight: 750; }
-.side-time-nav a i { font-size: 13px; }
+.side-time-nav { display: grid; grid-template-columns: 1fr; gap: 4px; }
+.side-time-nav a { display: grid; grid-template-columns: 16px 1fr; align-items: center; gap: 7px; width: 100%; min-height: 28px; padding: 5px 8px; border: 1px solid transparent; border-radius: 8px; color: var(--ink-faint); background: transparent; font-size: 11.5px; line-height: 1.1; font-weight: 750; }
+.side-time-nav a i { font-size: 14px; text-align: center; }
 .side-time-nav a:hover { border-color: var(--line-2); color: var(--ink-soft); background: color-mix(in srgb, var(--surface) 55%, transparent); }
 .side-time-nav a.active { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); background: var(--accent-soft); color: var(--accent); }
 .side-foot { margin-top: auto; display: flex; flex-direction: column; gap: 10px; padding-top: 16px; border-top: 1px solid var(--line); }
