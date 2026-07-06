@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01T07:03:48.184Z",
+  "generatedAt": "2026-07-06T08:59:21.454Z",
   "attribution": "Dati e immagini da AniList (anilist.co)",
   "count": 190,
   "titles": [
@@ -41,7 +41,7 @@
       "creator": "Hajime Isayama",
       "sourceLabel": "Manga",
       "score10": 8.5,
-      "popularity": 1019063,
+      "popularity": 1021784,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16498-buvcRTBx4NSm.jpg",
       "coverColor": "#f1a143",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/16498-8jpFCOcDmneX.jpg",
@@ -302,7 +302,7 @@
       "creator": "Kentarou Miura",
       "sourceLabel": "Manga",
       "score10": 8.4,
-      "popularity": 176853,
+      "popularity": 177482,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx33-PSwfE5B0gejI.jpg",
       "coverColor": "#e49350",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/33-g7HwYRVm0ZkN.jpg",
@@ -493,7 +493,7 @@
       "creator": "Tite Kubo",
       "sourceLabel": "Manga",
       "score10": 7.9,
-      "popularity": 494330,
+      "popularity": 496490,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx269-d2GmRkJbMopq.png",
       "coverColor": "#f1a150",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/269-08ar2HJOUAuL.jpg",
@@ -749,7 +749,7 @@
       "creator": "Mike Pondsmith",
       "sourceLabel": "Videogioco",
       "score10": 8.5,
-      "popularity": 360468,
+      "popularity": 364030,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx120377-ayZPoxiWt4Li.jpg",
       "coverColor": "#78f150",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/120377-c15oLS8CA31s.jpg",
@@ -932,7 +932,7 @@
       "creator": "Tsugumi Ooba",
       "sourceLabel": "Manga",
       "score10": 8.4,
-      "popularity": 928878,
+      "popularity": 931415,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1535-kUgkcrfOrkUM.jpg",
       "coverColor": null,
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1535.jpg",
@@ -1170,7 +1170,7 @@
       "creator": "Hiromu Arakawa",
       "sourceLabel": "Manga",
       "score10": 9,
-      "popularity": 705708,
+      "popularity": 707453,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx5114-nSWCgQlmOMtj.jpg",
       "coverColor": "#e4c993",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/5114-q0V5URebphSG.jpg",
@@ -1376,7 +1376,7 @@
       "creator": null,
       "sourceLabel": "Originale",
       "score10": 8.5,
-      "popularity": 366992,
+      "popularity": 367949,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2001-XwRnjzGeFWRQ.png",
       "coverColor": "#f15d35",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/2001-3eWhvkau8NV3.jpg",
@@ -1575,7 +1575,7 @@
       "creator": "Yoshihiro Togashi",
       "sourceLabel": "Manga",
       "score10": 8.9,
-      "popularity": 814646,
+      "popularity": 816719,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11061-y5gsT1hoHuHw.png",
       "coverColor": "#f1d65d",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/11061-8WkkTZ6duKpq.jpg",
@@ -1854,7 +1854,7 @@
       "creator": "Hirohiko Araki",
       "sourceLabel": "Manga",
       "score10": 7.7,
-      "popularity": 463838,
+      "popularity": 464992,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx14719-VT5dRzTBSZ0w.jpg",
       "coverColor": "#e49343",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/14719-m7Hv2AxcNNjM.jpg",
@@ -2080,7 +2080,7 @@
       "creator": "Masashi Kishimoto",
       "sourceLabel": "Manga",
       "score10": 8,
-      "popularity": 701918,
+      "popularity": 703759,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20-dE6UHbFFg1A5.jpg",
       "coverColor": "#e47850",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20-HHxhPj5JD13a.jpg",
@@ -2365,7 +2365,7 @@
       "creator": "Hideaki Anno",
       "sourceLabel": "Originale",
       "score10": 8.3,
-      "popularity": 477441,
+      "popularity": 478686,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx30-AI1zr74Dh4ye.jpg",
       "coverColor": "#f17843",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/30-gEMoHHIqxDgN.jpg",
@@ -2543,7 +2543,7 @@
       "creator": "Eiichirou Oda",
       "sourceLabel": "Manga",
       "score10": 8.7,
-      "popularity": 721229,
+      "popularity": 723727,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21-ELSYx3yMPcKM.jpg",
       "coverColor": "#e49335",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
@@ -3011,7 +3011,7 @@
       "creator": "Nitro Plus",
       "sourceLabel": "Visual novel",
       "score10": 8.9,
-      "popularity": 576924,
+      "popularity": 578276,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx9253-tIUXF2gfU8Sg.jpg",
       "coverColor": "#ffd6ae",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n9253-JIhmKgBKsWUN.jpg",
@@ -3190,7 +3190,7 @@
       "creator": "Yasuki Tanaka",
       "sourceLabel": "Manga",
       "score10": 8.3,
-      "popularity": 216732,
+      "popularity": 217825,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx129201-HJBauga2be8I.png",
       "coverColor": "#2886e4",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/129201-eeCsKFrCSQPS.jpg",
@@ -3372,7 +3372,7 @@
       "creator": null,
       "sourceLabel": "Originale",
       "score10": 7.6,
-      "popularity": 194273,
+      "popularity": 194689,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21711-EQN4sCIXRhKf.png",
       "coverColor": null,
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21711-iJuWzyf6U50p.jpg",
@@ -3530,7 +3530,7 @@
       "creator": null,
       "sourceLabel": "Originale",
       "score10": 6.9,
-      "popularity": 22521,
+      "popularity": 22557,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/306-o0cw2vphUh6b.jpg",
       "coverColor": "#f1a143",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/306-dYWfq480sxlK.jpg",
@@ -3664,15 +3664,15 @@
             "why": "Atmosfera e temi affini"
           },
           {
-            "id": "saiki-k",
-            "why": "Atmosfera e temi affini"
-          },
-          {
             "id": "my-dress-up-darling",
             "why": "Atmosfera e temi affini"
           },
           {
             "id": "komi-cant-communicate",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "one-piece",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -3716,7 +3716,7 @@
       "creator": "Gamon Sakurai",
       "sourceLabel": "Manga",
       "score10": 7.1,
-      "popularity": 120101,
+      "popularity": 120273,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21341-Pyc7SkMEuGsl.jpg",
       "coverColor": "#a17835",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21341-v415m6GrpeZY.jpg",
@@ -3808,6 +3808,10 @@
         "autore": [],
         "affin": [
           {
+            "id": "to-be-hero-x",
+            "why": "Atmosfera e temi affini"
+          },
+          {
             "id": "summer-time-rendering",
             "why": "Atmosfera e temi affini"
           },
@@ -3817,10 +3821,6 @@
           },
           {
             "id": "hellsing-ultimate",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "to-be-hero-x",
             "why": "Atmosfera e temi affini"
           },
           {
@@ -3899,7 +3899,7 @@
       "creator": "Takahiro",
       "sourceLabel": "Manga",
       "score10": 7.3,
-      "popularity": 524204,
+      "popularity": 525456,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20613-HXHpec4bemk5.jpg",
       "coverColor": "#e45d43",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20613-CoEQF4qKiWDX.jpg",
@@ -4080,7 +4080,7 @@
       "creator": "Katsuhiro Ootomo",
       "sourceLabel": "Manga",
       "score10": 7.9,
-      "popularity": 224276,
+      "popularity": 224749,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx47-4CR68arv452h.jpg",
       "coverColor": "#e45d50",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/47-fof8HqtNDtvx.jpg",
@@ -4265,7 +4265,7 @@
       "creator": "Kazutaka Kodaka",
       "sourceLabel": "Originale",
       "score10": 7.5,
-      "popularity": 160024,
+      "popularity": 160545,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx116566-PPIVQt359vQY.jpg",
       "coverColor": "#d6501a",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/116566-XwsHAwTxbXmC.jpg",
@@ -4456,7 +4456,7 @@
       "creator": "Yuuki Tabata",
       "sourceLabel": "Manga",
       "score10": 7.9,
-      "popularity": 561073,
+      "popularity": 563579,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx97940-fyh8o7gNbha0.png",
       "coverColor": "#d6c96b",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/97940-1URQdQ4U1a0b.jpg",
@@ -4664,7 +4664,7 @@
       "creator": "Kazuki Nakashima",
       "sourceLabel": "Originale",
       "score10": 7.2,
-      "popularity": 127441,
+      "popularity": 127731,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx110354-JJKR42frJABe.jpg",
       "coverColor": "#35aee4",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/110354-F4KigAURY8zf.jpg",
@@ -4814,7 +4814,7 @@
       "creator": "Tite Kubo",
       "sourceLabel": "Manga",
       "score10": 7,
-      "popularity": 99767,
+      "popularity": 100104,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx116673-cy4sgiliurpR.jpg",
       "coverColor": "#e45050",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/116673-AY85zkgTYWKu.jpg",
@@ -4952,7 +4952,7 @@
       "creator": "Tatsuki Fujimoto",
       "sourceLabel": "Manga",
       "score10": 8.3,
-      "popularity": 602927,
+      "popularity": 606290,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx127230-DdP4vAdssLoz.png",
       "coverColor": "#6b1a1a",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/127230-o8IRwCGVr9KW.jpg",
@@ -5134,14 +5134,14 @@
         "Horror"
       ],
       "tags": [
+        "Medieval",
         "Swordplay",
         "Female Protagonist",
         "Primarily Female Cast",
         "Gore",
         "Demons",
         "Kuudere",
-        "Primarily Adult Cast",
-        "Super Power"
+        "Primarily Adult Cast"
       ],
       "studios": [
         "MADHOUSE"
@@ -5150,7 +5150,7 @@
       "creator": "Norihiro Yagi",
       "sourceLabel": "Manga",
       "score10": 7.4,
-      "popularity": 117336,
+      "popularity": 117629,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1818-KieLJv0qo3mO.jpg",
       "coverColor": "#bbe4ae",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1818-7Nt2HYxVIxtA.jpg",
@@ -5269,11 +5269,7 @@
         "autore": [],
         "affin": [
           {
-            "id": "bleach",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "black-clover",
+            "id": "reincarnated-as-a-sword",
             "why": "Atmosfera e temi affini"
           },
           {
@@ -5285,27 +5281,23 @@
             "why": "Atmosfera e temi affini"
           },
           {
-            "id": "reincarnated-as-a-sword",
+            "id": "ranking-of-kings",
             "why": "Atmosfera e temi affini"
           },
           {
-            "id": "solo-leveling",
+            "id": "re-zero-starting-life-in-another-world",
             "why": "Atmosfera e temi affini"
           },
           {
-            "id": "jojo-s-bizarre-adventure",
+            "id": "sentence-to-be-hero",
             "why": "Atmosfera e temi affini"
           },
           {
-            "id": "naruto",
+            "id": "bleach",
             "why": "Atmosfera e temi affini"
           },
           {
-            "id": "one-piece",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "akira",
+            "id": "black-clover",
             "why": "Atmosfera e temi affini"
           },
           {
@@ -5314,6 +5306,14 @@
           },
           {
             "id": "devilman-crybaby",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "hell-s-paradise-jigokuraku",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "principessa-mononoke",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -5358,7 +5358,7 @@
       "creator": "Gorou Taniguchi",
       "sourceLabel": "Originale",
       "score10": 8.5,
-      "popularity": 482426,
+      "popularity": 483829,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1575-hsmWM2ydNm1m.jpg",
       "coverColor": "#c9d678",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1575.jpg",
@@ -5520,6 +5520,10 @@
             "why": "Atmosfera e temi affini"
           },
           {
+            "id": "to-be-hero-x",
+            "why": "Atmosfera e temi affini"
+          },
+          {
             "id": "eureka-seven",
             "why": "Atmosfera e temi affini"
           },
@@ -5529,10 +5533,6 @@
           },
           {
             "id": "cyberpunk-edgerunners",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "neon-genesis-evangelion",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -5576,7 +5576,7 @@
       "creator": "Hajime Yatate",
       "sourceLabel": "Originale",
       "score10": 8.6,
-      "popularity": 454468,
+      "popularity": 455523,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1-GCsPm7waJ4kS.png",
       "coverColor": "#f16b50",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1-OquNCNB6srGe.jpg",
@@ -5799,7 +5799,7 @@
       "creator": "Yukinobu Tatsu",
       "sourceLabel": "Manga",
       "score10": 8.3,
-      "popularity": 363118,
+      "popularity": 365605,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx171018-60q1B6GK2Ghb.jpg",
       "coverColor": "#e47850",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/171018-SpwPNAduszXl.jpg",
@@ -5993,7 +5993,7 @@
       "creator": "FLIPFLOPs",
       "sourceLabel": "Manga",
       "score10": 7,
-      "popularity": 169502,
+      "popularity": 170074,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx105190-lSoQNlnMF6UP.jpg",
       "coverColor": "#e45d78",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/105190-HhqT6N5MJCpE.jpg",
@@ -6136,7 +6136,7 @@
       "creator": "Jinsei Kataoka",
       "sourceLabel": "Manga",
       "score10": 6.7,
-      "popularity": 244304,
+      "popularity": 244793,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx6880-qZ1jIqIYpST2.png",
       "coverColor": null,
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/6880-eq4JajOW0HOd.jpg",
@@ -6311,7 +6311,7 @@
       "creator": "Yuzuru Tachikawa",
       "sourceLabel": "Originale",
       "score10": 8,
-      "popularity": 456408,
+      "popularity": 457281,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx20931-bktYqOcxPERi.jpg",
       "coverColor": "#35a1f1",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20931-xDhiTPZmtS3u.jpg",
@@ -6520,7 +6520,7 @@
       "creator": null,
       "sourceLabel": "Originale",
       "score10": 7.1,
-      "popularity": 98578,
+      "popularity": 98844,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx110353-XGYSsii7qJeK.png",
       "coverColor": "#50aee4",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/110353-ZKkmemQSFP7L.jpg",
@@ -6680,7 +6680,7 @@
       "creator": "Koyoharu Gotouge",
       "sourceLabel": "Manga",
       "score10": 8.3,
-      "popularity": 963009,
+      "popularity": 966440,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101922-WBsBl0ClmgYL.jpg",
       "coverColor": "#f1c9ae",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/101922-33MtJGsUSxga.jpg",
@@ -6864,7 +6864,6 @@
       ],
       "tags": [
         "Demons",
-        "Incest",
         "Male Protagonist",
         "Body Horror",
         "Video Games",
@@ -6878,7 +6877,7 @@
       "creator": "Capcom",
       "sourceLabel": "Videogioco",
       "score10": 6.6,
-      "popularity": 61721,
+      "popularity": 61931,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1726-IrpH32PVADiO.jpg",
       "coverColor": null,
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1726-HAUfEfHx4a0c.jpg",
@@ -7090,7 +7089,7 @@
       "creator": "Gou Nagai",
       "sourceLabel": "Manga",
       "score10": 7.6,
-      "popularity": 343179,
+      "popularity": 344224,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx98460-bLtH2c3jd6sV.png",
       "coverColor": "#f1e4c9",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/98460-PwSHquwVu89n.jpg",
@@ -7284,7 +7283,7 @@
       "creator": "Akira Toriyama",
       "sourceLabel": "Manga",
       "score10": 7.8,
-      "popularity": 227126,
+      "popularity": 227681,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx223-scE5uJfXqqj8.png",
       "coverColor": "#e48635",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/223-vyRuUBBYfcUb.jpg",
@@ -7534,7 +7533,7 @@
       "creator": "Kouta Hirano",
       "sourceLabel": "Manga",
       "score10": 7.5,
-      "popularity": 130267,
+      "popularity": 130564,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21123-bCuqm8wLDqOw.png",
       "coverColor": null,
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21123-AB6drAXL5FhN.jpg",
@@ -7701,7 +7700,7 @@
       "creator": "Asato Asato",
       "sourceLabel": "Light novel",
       "score10": 8.3,
-      "popularity": 308490,
+      "popularity": 310157,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx116589-KawXHB6sApFt.jpg",
       "coverColor": "#bbd6f1",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/116589-SqwYWzaZCdD5.jpg",
@@ -7891,7 +7890,7 @@
       "creator": "Kei Sanbe",
       "sourceLabel": "Manga",
       "score10": 8.1,
-      "popularity": 589062,
+      "popularity": 590395,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21234-XmqW39aQ9o7O.jpg",
       "coverColor": "#f1a150",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21234-7lfSSPoMmwr2.jpg",
@@ -8081,7 +8080,7 @@
       "creator": "Kaoru Shinozaki",
       "sourceLabel": "Light novel",
       "score10": 6.4,
-      "popularity": 89282,
+      "popularity": 89983,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx173694-XcwGOMBxboOO.png",
       "coverColor": "#bb35e4",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/173694-zkZHpXUKouoC.jpg",
@@ -8224,7 +8223,7 @@
       "creator": null,
       "sourceLabel": "Originale",
       "score10": 7.9,
-      "popularity": 201550,
+      "popularity": 201935,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx227-qOB9ZhVvNnqO.jpg",
       "coverColor": "#e4865d",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/227.jpg",
@@ -8406,7 +8405,7 @@
       "creator": "Kanehito Yamada",
       "sourceLabel": "Manga",
       "score10": 9.1,
-      "popularity": 449827,
+      "popularity": 453315,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx154587-qQTzQnEJJ3oB.jpg",
       "coverColor": "#bbf1a1",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/154587-ivXNJ23SM1xB.jpg",
@@ -8637,7 +8636,7 @@
       "creator": "Sakae Esuno",
       "sourceLabel": "Manga",
       "score10": 6.9,
-      "popularity": 420297,
+      "popularity": 421087,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx10620-dUZeNej0W4QN.png",
       "coverColor": null,
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/10620-CsZ2FFSbGpqV.jpg",
@@ -8786,7 +8785,7 @@
       "creator": "Kei Urana",
       "sourceLabel": "Manga",
       "score10": 8.2,
-      "popularity": 234570,
+      "popularity": 237014,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx178025-cWJKEsZynkil.jpg",
       "coverColor": "#e4a150",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/178025-WvcXi1J2SGRa.jpg",
@@ -8857,20 +8856,16 @@
             "why": "Chi ha amato questo ha amato anche"
           },
           {
-            "id": "cyberpunk-edgerunners",
+            "id": "daemons-of-the-shadow-realm",
             "why": "Chi ha amato questo ha amato anche"
           },
           {
-            "id": "fullmetal-alchemist-brotherhood",
+            "id": "cyberpunk-edgerunners",
             "why": "Chi ha amato questo ha amato anche"
           }
         ],
         "saga": [],
         "studio": [
-          {
-            "id": "daemons-of-the-shadow-realm",
-            "why": "Stesso studio (bones film)"
-          },
           {
             "id": "my-hero-academia-vigilantes",
             "why": "Stesso studio (bones film)"
@@ -8923,7 +8918,7 @@
             "why": "Atmosfera e temi affini"
           },
           {
-            "id": "hunter-x-hunter",
+            "id": "fullmetal-alchemist-brotherhood",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -8965,7 +8960,7 @@
       "creator": "Kohske",
       "sourceLabel": "Manga",
       "score10": 7.1,
-      "popularity": 133707,
+      "popularity": 133983,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20773-yfJQMyHqZyJr.jpg",
       "coverColor": "#785d1a",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20773-CQXjhFEa4zou.jpg",
@@ -9123,7 +9118,7 @@
       "creator": "Hiroya Oku",
       "sourceLabel": "Manga",
       "score10": 6.4,
-      "popularity": 61120,
+      "popularity": 61269,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx384-5vHimZPju1Wr.jpg",
       "coverColor": "#a13528",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/384-cPVc0l550dsW.jpg",
@@ -9186,10 +9181,6 @@
           {
             "id": "parasyte-the-maxim",
             "why": "Chi ha amato questo ha amato anche"
-          },
-          {
-            "id": "future-diary",
-            "why": "Chi ha amato questo ha amato anche"
           }
         ],
         "saga": [],
@@ -9207,6 +9198,10 @@
           },
           {
             "id": "devilman-crybaby",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "future-diary",
             "why": "Atmosfera e temi affini"
           },
           {
@@ -9243,10 +9238,6 @@
           },
           {
             "id": "from-the-new-world",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "neon-genesis-evangelion",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -9289,7 +9280,7 @@
       "creator": "Takumi Yanai",
       "sourceLabel": "Light novel",
       "score10": 7.4,
-      "popularity": 191520,
+      "popularity": 191986,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20994-pSDk4I58jAK5.jpg",
       "coverColor": "#e4ae50",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20994-9Vy4mDOFYT7O.jpg",
@@ -9475,7 +9466,7 @@
       "creator": "Masamune Shirow",
       "sourceLabel": "Manga",
       "score10": 8,
-      "popularity": 169329,
+      "popularity": 169825,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx43-Y6EjeEMM14dj.png",
       "coverColor": null,
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/43-uDbk1jrG9yod.jpg",
@@ -9680,7 +9671,7 @@
       "creator": "Satoru Noda",
       "sourceLabel": "Manga",
       "score10": 7.7,
-      "popularity": 134544,
+      "popularity": 135137,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx99699-mBCjpoWpAVGX.jpg",
       "coverColor": "#78281a",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/99699-95D2XWA6eWAH.jpg",
@@ -9876,7 +9867,7 @@
       "creator": "Ao Juumonji",
       "sourceLabel": "Light novel",
       "score10": 7.4,
-      "popularity": 177461,
+      "popularity": 177954,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21428-dFVIHeZ8McBe.jpg",
       "coverColor": "#e4e493",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21428-WXeLTDwfmKI5.jpg",
@@ -10069,7 +10060,7 @@
       "creator": "Kazutomo Ichitomo",
       "sourceLabel": "Manga",
       "score10": 7.2,
-      "popularity": 72366,
+      "popularity": 72720,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx144092-8EKzzZQofFlW.jpg",
       "coverColor": "#d6bb78",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/144092-EMQdMWbZ94Sl.jpg",
@@ -10224,7 +10215,7 @@
       "creator": "Masakazu Ishiguro",
       "sourceLabel": "Manga",
       "score10": 8.1,
-      "popularity": 204768,
+      "popularity": 205751,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx155783-YosKbsmZzuDE.jpg",
       "coverColor": "#286bbb",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/155783-MXHfdquIBoHA.jpg",
@@ -10407,7 +10398,7 @@
       "creator": "Yuuji Kaku",
       "sourceLabel": "Manga",
       "score10": 8,
-      "popularity": 344160,
+      "popularity": 346200,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx128893-Gc2t8b8M0mVu.jpg",
       "coverColor": "#e4bb35",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/128893-pAA7PjY8l7dy.jpg",
@@ -10589,7 +10580,7 @@
       "creator": "Kouta Hirano",
       "sourceLabel": "Manga",
       "score10": 8.1,
-      "popularity": 180095,
+      "popularity": 180579,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx777-F6547pSAR2Zd.jpg",
       "coverColor": "#e4431a",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/777-XzPjBZdSRtDT.jpg",
@@ -10747,15 +10738,15 @@
             "why": "Atmosfera e temi affini"
           },
           {
+            "id": "to-be-hero-x",
+            "why": "Atmosfera e temi affini"
+          },
+          {
             "id": "fate-franchise-completo",
             "why": "Atmosfera e temi affini"
           },
           {
             "id": "another",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "shiki",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -10798,7 +10789,7 @@
       "creator": "Gege Akutami",
       "sourceLabel": "Manga",
       "score10": 8.4,
-      "popularity": 935482,
+      "popularity": 939646,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx113415-LHBAeoZDIsnF.jpg",
       "coverColor": "#e45d5d",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/113415-jQBSkxWAAk83.jpg",
@@ -11014,7 +11005,7 @@
       "creator": "Naoya Matsumoto",
       "sourceLabel": "Manga",
       "score10": 8.1,
-      "popularity": 267858,
+      "popularity": 269534,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx153288-25FBfFJzEQ5O.jpg",
       "coverColor": "#f1e4ae",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/153288-JNsWuMPMAuJL.jpg",
@@ -11226,7 +11217,7 @@
       "creator": "Kazuki Nakashima",
       "sourceLabel": "Originale",
       "score10": 7.9,
-      "popularity": 405302,
+      "popularity": 406030,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b18679-lbkq7iYESoFW.png",
       "coverColor": "#e40d0d",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/18679-rpC99hxBxaMn.jpg",
@@ -11387,7 +11378,7 @@
       "creator": "Yasuhisa Hara",
       "sourceLabel": "Manga",
       "score10": 7.4,
-      "popularity": 57509,
+      "popularity": 57695,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx12031-1nVQa5nXPt48.png",
       "coverColor": "#936b28",
       "bannerImage": null,
@@ -11605,7 +11596,7 @@
       "creator": null,
       "sourceLabel": "Originale",
       "score10": 7,
-      "popularity": 109046,
+      "popularity": 109654,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx167336-KpGIIBie71OX.png",
       "coverColor": "#e4ae5d",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/167336-tDasHGggSBcH.jpg",
@@ -11794,7 +11785,7 @@
       "creator": "Akihito Tsukushi",
       "sourceLabel": "Manga",
       "score10": 8.4,
-      "popularity": 394007,
+      "popularity": 395278,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx97986-TQ7dCgbS3y5s.jpg",
       "coverColor": "#e4c9ae",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/97986-C55UnbJKB7ZF.jpg",
@@ -11999,7 +11990,7 @@
       "creator": "ONE",
       "sourceLabel": "Manga",
       "score10": 8.4,
-      "popularity": 606623,
+      "popularity": 608144,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21507-6YUSbh2m0N1p.jpg",
       "coverColor": "#d65d1a",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21507-Qx8bGsLXUgLo.jpg",
@@ -12174,11 +12165,11 @@
             "why": "Atmosfera e temi affini"
           },
           {
-            "id": "to-be-hero-x",
+            "id": "fruits-basket-2019",
             "why": "Atmosfera e temi affini"
           },
           {
-            "id": "fruits-basket-2019",
+            "id": "ping-pong-the-animation",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -12213,8 +12204,8 @@
         "Philosophy",
         "Ensemble Cast",
         "Primarily Adult Cast",
-        "Twins",
-        "Noir"
+        "Noir",
+        "Twins"
       ],
       "studios": [
         "MADHOUSE"
@@ -12223,7 +12214,7 @@
       "creator": "Naoki Urasawa",
       "sourceLabel": "Manga",
       "score10": 8.8,
-      "popularity": 328282,
+      "popularity": 329288,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx19-gtMC64182sm4.jpg",
       "coverColor": null,
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/19-kJhwsB0Z97tL.jpg",
@@ -12445,7 +12436,7 @@
       "creator": "Kouhei Horikoshi",
       "sourceLabel": "Manga",
       "score10": 7.7,
-      "popularity": 848859,
+      "popularity": 850868,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21459-nYh85uj2Fuwr.jpg",
       "coverColor": "#f1d643",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21459-yeVkolGKdGUV.jpg",
@@ -12675,7 +12666,7 @@
       "creator": "Kouhei Horikoshi",
       "sourceLabel": "Manga",
       "score10": 7.6,
-      "popularity": 69850,
+      "popularity": 70333,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx185736-Ci6AiGwjKKtp.jpg",
       "coverColor": "#50d6e4",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/185736-Ick7OABzBWoi.jpg",
@@ -12850,7 +12841,7 @@
       "creator": "ONE",
       "sourceLabel": "Manga",
       "score10": 8.3,
-      "popularity": 747534,
+      "popularity": 749081,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21087-B5DHjqZ3kW4b.jpg",
       "coverColor": "#e4ae5d",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21087-sHb9zUZFsHe1.jpg",
@@ -13080,13 +13071,13 @@
       ],
       "tags": [
         "Isekai",
+        "Ensemble Cast",
         "Anti-Hero",
         "Skeleton",
         "Virtual World",
         "Male Protagonist",
         "Magic",
-        "Kingdom Management",
-        "Ensemble Cast"
+        "Kingdom Management"
       ],
       "studios": [
         "MADHOUSE"
@@ -13095,7 +13086,7 @@
       "creator": "Kugane Maruyama",
       "sourceLabel": "Light novel",
       "score10": 7.7,
-      "popularity": 391402,
+      "popularity": 392436,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20832-vUNm5zrYWifc.jpg",
       "coverColor": "#505de4",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20832-NswCiSYMoI2k.jpg",
@@ -13341,7 +13332,7 @@
       "creator": "Hitoshi Iwaaki",
       "sourceLabel": "Manga",
       "score10": 8.1,
-      "popularity": 487591,
+      "popularity": 488628,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20623-dUARfggnNDOe.jpg",
       "coverColor": "#285086",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20623-xb9PPf8rGOsG.jpg",
@@ -13573,7 +13564,7 @@
       "creator": "Naoki Urasawa",
       "sourceLabel": "Manga",
       "score10": 8.4,
-      "popularity": 99812,
+      "popularity": 100395,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx99088-LTJskMD1wbbQ.png",
       "coverColor": "#e43535",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/99088-KFYEoH7jCF0b.jpg",
@@ -13723,7 +13714,7 @@
       "creator": "Hayao Miyazaki",
       "sourceLabel": "Originale",
       "score10": 8.5,
-      "popularity": 293494,
+      "popularity": 294119,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx164-ySuGzCWVw2cL.jpg",
       "coverColor": null,
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/164-Aj6MINy7VTfs.jpg",
@@ -13915,7 +13906,7 @@
       "creator": "Kazuki Nakashima",
       "sourceLabel": "Originale",
       "score10": 7.7,
-      "popularity": 107683,
+      "popularity": 107898,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx99425-CQ500X23zp4i.png",
       "coverColor": "#d6bb1a",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n99425-GgPoElhysW3D.jpg",
@@ -14076,7 +14067,7 @@
       "creator": "Sousuke Touka",
       "sourceLabel": "Manga",
       "score10": 8.3,
-      "popularity": 217409,
+      "popularity": 218169,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx113717-9sNnN8WRgK15.jpg",
       "coverColor": "#e4935d",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/113717-XFiGSPtNJQWv.jpg",
@@ -14225,7 +14216,7 @@
             "why": "Atmosfera e temi affini"
           },
           {
-            "id": "drifters",
+            "id": "claymore",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -14260,8 +14251,8 @@
         "Isekai",
         "Male Protagonist",
         "Curses",
-        "Medieval",
         "Witch",
+        "Medieval",
         "Magic",
         "Gore"
       ],
@@ -14272,7 +14263,7 @@
       "creator": "Tappei Nagatsuki",
       "sourceLabel": "Light novel",
       "score10": 8.1,
-      "popularity": 597850,
+      "popularity": 599828,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21355-wRVUrGxpvIQQ.jpg",
       "coverColor": "#f150ae",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21355-f9SjOfEJMk5P.jpg",
@@ -14479,7 +14470,7 @@
       "creator": "Yuu Tanaka",
       "sourceLabel": "Light novel",
       "score10": 7.4,
-      "popularity": 109060,
+      "popularity": 109732,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx139587-rbZVcigCRtHY.jpg",
       "coverColor": "#e4a135",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/139587-XFbotQOPcLC4.jpg",
@@ -14560,6 +14551,10 @@
             "why": "Atmosfera e temi affini"
           },
           {
+            "id": "claymore",
+            "why": "Atmosfera e temi affini"
+          },
+          {
             "id": "frieren",
             "why": "Atmosfera e temi affini"
           },
@@ -14581,10 +14576,6 @@
           },
           {
             "id": "naruto",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "claymore",
             "why": "Atmosfera e temi affini"
           },
           {
@@ -14644,7 +14635,7 @@
       "creator": "Masami Kurumada",
       "sourceLabel": "Manga",
       "score10": 7.3,
-      "popularity": 37905,
+      "popularity": 37966,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/1254.jpg",
       "coverColor": "#e4d643",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1254-8sEdD7gwYipm.jpg",
@@ -14834,7 +14825,7 @@
       "creator": null,
       "sourceLabel": "Originale",
       "score10": 8.4,
-      "popularity": 272484,
+      "popularity": 273105,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx205-7tHVFu6dPBm9.png",
       "coverColor": null,
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/205-L7WpOOWUmVjh.jpg",
@@ -15005,10 +14996,10 @@
         "Video Games",
         "Virtual World",
         "Male Protagonist",
-        "Swordplay",
         "Anthropomorphism",
-        "Travel",
+        "Swordplay",
         "Shounen",
+        "Travel",
         "Slapstick"
       ],
       "studios": [
@@ -15018,7 +15009,7 @@
       "creator": "Ryousuke Fuji",
       "sourceLabel": "Manga",
       "score10": 8,
-      "popularity": 175608,
+      "popularity": 176986,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx151970-xtIx3VqEk02X.jpg",
       "coverColor": "#5da1e4",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/151970-Tnnfp0f7NOzj.jpg",
@@ -15204,7 +15195,7 @@
       "creator": "Chu-Gong",
       "sourceLabel": "Altro",
       "score10": 8.1,
-      "popularity": 420662,
+      "popularity": 423601,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx151807-it355ZgzquUd.png",
       "coverColor": "#35bbf1",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/151807-37yfQA3ym8PA.jpg",
@@ -15404,7 +15395,7 @@
       "creator": "Tatsuya Endou",
       "sourceLabel": "Manga",
       "score10": 8.3,
-      "popularity": 549646,
+      "popularity": 552005,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx140960-Kb6R5nYQfjmP.jpg",
       "coverColor": "#c9f1f1",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/140960-Z7xSvkRxHKfj.jpg",
@@ -15618,7 +15609,7 @@
       "creator": "Reki Kawahara",
       "sourceLabel": "Light novel",
       "score10": 7,
-      "popularity": 697962,
+      "popularity": 699636,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11757-SxYDUzdr9rh2.jpg",
       "coverColor": "#e4bb5d",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/11757-TlEEV9weG4Ag.jpg",
@@ -15826,7 +15817,7 @@
       "creator": "Yuu Sasuga",
       "sourceLabel": "Manga",
       "score10": 6.5,
-      "popularity": 43897,
+      "popularity": 43950,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx20629-xO8wxKYeXncc.png",
       "coverColor": "#c9501a",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20629-T2N9xD1YV4Fn.jpg",
@@ -15842,6 +15833,10 @@
         {
           "name": "Tubi TV",
           "url": "https://tubitv.com/series/1795/terraformars"
+        },
+        {
+          "name": "Amazon Prime Video",
+          "url": "https://www.amazon.com/gp/video/detail/B0FK5ZFSGQ/ref=atv_hm_hom_c_OB2a1744_brws_1_76?jic=172|CgtmcmVld2l0aGFkcwoMbHVuYXN0YW5kYXJkEgxzdWJzY3JpcHRpb24SBHN2b2RSUAoxYW16bjEuZHYuZ3RpLmQwYWVlMWQ0LTAwYWQtZjE3Mi1kYmZkLTdjZWM3Nzc2M2M1ORIbChkKDFNVQlNDUklQVElPThIJG"
         }
       ],
       "startFrom": "Terra Formars",
@@ -15982,7 +15977,7 @@
       "creator": "Daisuke Aizawa",
       "sourceLabel": "Light novel",
       "score10": 8.1,
-      "popularity": 297095,
+      "popularity": 299110,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx130298-YMdcKHytpWNH.jpg",
       "coverColor": "#d61a1a",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/130298-9yxFlFvKMwRk.jpg",
@@ -16160,7 +16155,7 @@
       "creator": "Kaiu Shirai",
       "sourceLabel": "Manga",
       "score10": 8.4,
-      "popularity": 617996,
+      "popularity": 619721,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101759-8UR7r9MNVpz2.jpg",
       "coverColor": "#e4ae50",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/101759-MhlCoeqnODso.jpg",
@@ -16351,7 +16346,7 @@
       "creator": "Aneko Yusagi",
       "sourceLabel": "Light novel",
       "score10": 7.7,
-      "popularity": 446723,
+      "popularity": 448357,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx99263-LcazQwdlWzMy.jpg",
       "coverColor": "#5dc9e4",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/99263-IwkmdCTsDY1t.jpg",
@@ -16398,7 +16393,7 @@
         {
           "name": "Tate no Yuusha no Nariagari Season 5",
           "episodes": "? ep",
-          "year": null,
+          "year": 2027,
           "main": true
         }
       ],
@@ -16540,7 +16535,7 @@
       "creator": "Rui Tsukiyo",
       "sourceLabel": "Light novel",
       "score10": 7.2,
-      "popularity": 194107,
+      "popularity": 195180,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx129898-FRUzDtPhRigt.jpg",
       "coverColor": "#f1a15d",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/129898-Qp41lxD3wU9e.jpg",
@@ -16688,10 +16683,10 @@
         "Conspiracy",
         "Urban Fantasy",
         "Achronological Order",
-        "Philosophy",
         "Super Power",
         "Ensemble Cast",
-        "Mixed Media"
+        "Mixed Media",
+        "Anti-Hero"
       ],
       "studios": [
         "Paper Plane Animation Studio",
@@ -16702,7 +16697,7 @@
       "creator": "Haoling Li",
       "sourceLabel": "Originale",
       "score10": 8.5,
-      "popularity": 119078,
+      "popularity": 119975,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx156092-yHqgQZOF2mbg.jpg",
       "coverColor": "#d61a1a",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/156092-XJ6CHMZpJ7YX.jpg",
@@ -16753,10 +16748,6 @@
           {
             "id": "my-hero-academia",
             "why": "Chi ha amato questo ha amato anche"
-          },
-          {
-            "id": "kill-la-kill",
-            "why": "Chi ha amato questo ha amato anche"
           }
         ],
         "saga": [],
@@ -16768,7 +16759,7 @@
             "why": "Atmosfera e temi affini"
           },
           {
-            "id": "mob-psycho-100",
+            "id": "ajin-demi-human",
             "why": "Atmosfera e temi affini"
           },
           {
@@ -16776,7 +16767,11 @@
             "why": "Atmosfera e temi affini"
           },
           {
-            "id": "paranoia-agent",
+            "id": "fate-franchise-completo",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "tokyo-ghoul",
             "why": "Atmosfera e temi affini"
           },
           {
@@ -16784,7 +16779,11 @@
             "why": "Atmosfera e temi affini"
           },
           {
-            "id": "ajin-demi-human",
+            "id": "code-geass",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "deadman-wonderland",
             "why": "Atmosfera e temi affini"
           },
           {
@@ -16796,19 +16795,11 @@
             "why": "Atmosfera e temi affini"
           },
           {
-            "id": "pluto",
+            "id": "mob-psycho-100",
             "why": "Atmosfera e temi affini"
           },
           {
-            "id": "fate-franchise-completo",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "serial-experiments-lain",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "yu-yu-hakusho",
+            "id": "higurashi",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -16852,7 +16843,7 @@
       "creator": "Ken Wakui",
       "sourceLabel": "Manga",
       "score10": 7.7,
-      "popularity": 433660,
+      "popularity": 435068,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx120120-cWDmnmeEntSe.jpg",
       "coverColor": "#f1865d",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/120120-UDYgoHA69peT.jpg",
@@ -17053,7 +17044,7 @@
       "creator": "SIU",
       "sourceLabel": "Manga",
       "score10": 7.4,
-      "popularity": 327163,
+      "popularity": 328159,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx115230-QHOdSN7yt8ab.jpg",
       "coverColor": "#f19328",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/115230-wjDIxW77TLv3.jpg",
@@ -17214,7 +17205,7 @@
       "creator": "Yasuhiro Nightow",
       "sourceLabel": "Manga",
       "score10": 8,
-      "popularity": 165661,
+      "popularity": 165986,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx6-wd4saT1JzStH.jpg",
       "coverColor": "#5086c9",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/6-4pIR2RY8AHZ0.jpg",
@@ -17406,7 +17397,7 @@
       "creator": "Makoto Yukimura",
       "sourceLabel": "Manga",
       "score10": 8.7,
-      "popularity": 523793,
+      "popularity": 526242,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101348-2fhDFPCuMNiz.jpg",
       "coverColor": "#f16b5d",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/101348-pivKKffCAwAY.jpg",
@@ -17596,7 +17587,7 @@
       "creator": "Fujino Oomori",
       "sourceLabel": "Manga",
       "score10": 7.9,
-      "popularity": 159539,
+      "popularity": 162684,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx174576-tpKcHG0eO6CS.jpg",
       "coverColor": "#e4865d",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/174576-6stJnscy5rCi.jpg",
@@ -17764,7 +17755,7 @@
       "creator": "Keiko Nobumoto",
       "sourceLabel": "Originale",
       "score10": 7.4,
-      "popularity": 59826,
+      "popularity": 59924,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx202-w2OLL3j8WmDm.jpg",
       "coverColor": "#f16b00",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/202-3Ud0fKK0ithq.jpg",
@@ -17924,7 +17915,7 @@
       "creator": "Hiromu Arakawa",
       "sourceLabel": "Manga",
       "score10": 7.8,
-      "popularity": 109974,
+      "popularity": 112742,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx195600-moI0UFArtOme.jpg",
       "coverColor": "#e49335",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/195600-UxHvDXwzJxlP.jpg",
@@ -18079,7 +18070,7 @@
       "creator": "Er Mu",
       "sourceLabel": "Altro",
       "score10": 8,
-      "popularity": 15015,
+      "popularity": 15370,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx137662-iZigHTc71wi7.png",
       "coverColor": "#e4a128",
       "bannerImage": null,
@@ -18213,7 +18204,7 @@
       "creator": "Gen Urobuchi",
       "sourceLabel": "Light novel",
       "score10": 8.1,
-      "popularity": 340369,
+      "popularity": 340927,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx10087-M4Hd9qrHGrXk.png",
       "coverColor": "#e4d65d",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/10087-32MFY9VnJQ7I.jpg",
@@ -18322,6 +18313,10 @@
         ],
         "affin": [
           {
+            "id": "to-be-hero-x",
+            "why": "Atmosfera e temi affini"
+          },
+          {
             "id": "tower-of-god",
             "why": "Atmosfera e temi affini"
           },
@@ -18355,10 +18350,6 @@
           },
           {
             "id": "the-world-s-finest-assassin-gets-reincarnated-in-another-world-as-an-aristocrat",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "to-be-hero-x",
             "why": "Atmosfera e temi affini"
           },
           {
@@ -18410,7 +18401,7 @@
       "creator": "Hayao Miyazaki",
       "sourceLabel": "Originale",
       "score10": 8.6,
-      "popularity": 466990,
+      "popularity": 467981,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx199-sWefXJvXkDOb.jpg",
       "coverColor": "#e45d5d",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/199-Sm2RU5PSqw7T.jpg",
@@ -18598,7 +18589,7 @@
       "creator": "Rocket  Shoukai",
       "sourceLabel": "Light novel",
       "score10": 8.1,
-      "popularity": 148009,
+      "popularity": 149642,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx167152-O1pm6DWwifBD.jpg",
       "coverColor": "#f1a15d",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/167152-6QxZG8Dmf1EL.jpg",
@@ -18681,11 +18672,11 @@
             "why": "Chi ha amato questo ha amato anche"
           },
           {
-            "id": "fullmetal-alchemist-brotherhood",
+            "id": "claymore",
             "why": "Chi ha amato questo ha amato anche"
           },
           {
-            "id": "claymore",
+            "id": "fullmetal-alchemist-brotherhood",
             "why": "Chi ha amato questo ha amato anche"
           }
         ],
@@ -18781,7 +18772,7 @@
       "creator": "Kana Akatsuki",
       "sourceLabel": "Light novel",
       "score10": 8.5,
-      "popularity": 531400,
+      "popularity": 532674,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21827-ubzq619ZA2E9.png",
       "coverColor": "#3586e4",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21827-ROucgYiiiSpR.jpg",
@@ -18949,7 +18940,7 @@
       "creator": "Yoshitoki Ooima",
       "sourceLabel": "Manga",
       "score10": 8.8,
-      "popularity": 690433,
+      "popularity": 692488,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20954-sYRfE5jQRtSB.jpg",
       "coverColor": "#5dbbe4",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20954-f30bHMXa5Qoe.jpg",
@@ -19106,7 +19097,7 @@
       "creator": "Chica Umino",
       "sourceLabel": "Manga",
       "score10": 8.3,
-      "popularity": 209302,
+      "popularity": 209690,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21366-0wrYK0kjKeFn.jpg",
       "coverColor": "#e4865d",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21366-oIjFSx0sm2eG.jpg",
@@ -19268,7 +19259,7 @@
       "creator": "Satsuki Yoshino",
       "sourceLabel": "Manga",
       "score10": 8.2,
-      "popularity": 150053,
+      "popularity": 150309,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20722-2KAeq72E95dr.png",
       "coverColor": "#4386e4",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20722-vjD7BMct1l1n.jpg",
@@ -19365,10 +19356,6 @@
             "why": "Atmosfera e temi affini"
           },
           {
-            "id": "saiki-k",
-            "why": "Atmosfera e temi affini"
-          },
-          {
             "id": "daily-lives-of-high-school-boys",
             "why": "Atmosfera e temi affini"
           },
@@ -19378,6 +19365,10 @@
           },
           {
             "id": "weathering-with-you",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "asobi-asobase",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -19423,7 +19414,7 @@
       "creator": "Yuki Urushibara",
       "sourceLabel": "Manga",
       "score10": 8.5,
-      "popularity": 189060,
+      "popularity": 189477,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx457-l6cTtNgI9Bi6.png",
       "coverColor": "#d6bb78",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n457-sWOJfqYC7s2I.jpg",
@@ -19545,8 +19536,8 @@
         "Cute Girls Doing Cute Things",
         "Primarily Female Cast",
         "Female Protagonist",
-        "Rural",
-        "Food"
+        "Yuri",
+        "Rural"
       ],
       "studios": [
         "C-Station"
@@ -19555,7 +19546,7 @@
       "creator": "Afro",
       "sourceLabel": "Manga",
       "score10": 8.1,
-      "popularity": 163027,
+      "popularity": 163396,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx98444-Vzysp1EsrzgD.jpg",
       "coverColor": "#f1ae5d",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/98444-FpH9lzLiafe9.jpg",
@@ -19658,6 +19649,10 @@
             "why": "Atmosfera e temi affini"
           },
           {
+            "id": "madoka-magica",
+            "why": "Atmosfera e temi affini"
+          },
+          {
             "id": "wolf-children",
             "why": "Atmosfera e temi affini"
           },
@@ -19667,10 +19662,6 @@
           },
           {
             "id": "summer-wars",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "kikis-delivery-service",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -19713,7 +19704,7 @@
       "creator": "Makoto Shinkai",
       "sourceLabel": "Originale",
       "score10": 8.6,
-      "popularity": 691404,
+      "popularity": 693146,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21519-SUo3ZQuCbYhJ.png",
       "coverColor": "#0da1e4",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21519-1ayMXgNlmByb.jpg",
@@ -19883,7 +19874,7 @@
       "creator": "Key",
       "sourceLabel": "Visual novel",
       "score10": 8.8,
-      "popularity": 217880,
+      "popularity": 218304,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx4181-zUKE7BZC62OF.png",
       "coverColor": "#f1e450",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/4181.jpg",
@@ -20057,7 +20048,7 @@
       "creator": "Naoshi Arakawa",
       "sourceLabel": "Manga",
       "score10": 8.4,
-      "popularity": 595413,
+      "popularity": 596881,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20665-TLgkL8T8IRFd.png",
       "coverColor": "#e4bb50",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20665-j4kSsfhfkM24.jpg",
@@ -20251,7 +20242,7 @@
       "creator": "Natsuki Takaya",
       "sourceLabel": "Manga",
       "score10": 8.2,
-      "popularity": 302446,
+      "popularity": 303442,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx105334-AZwEdMu4KFtV.jpg",
       "coverColor": "#e4d6a1",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/105334-dPfrCyZ8GkOI.jpg",
@@ -20420,7 +20411,7 @@
       "creator": "Aka Akasaka",
       "sourceLabel": "Manga",
       "score10": 8.3,
-      "popularity": 541347,
+      "popularity": 543366,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101921-ufrjLzhSz7L1.jpg",
       "coverColor": "#e45086",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/101921-GgvvFhlNhzlF.jpg",
@@ -20620,7 +20611,7 @@
       "creator": "HERO",
       "sourceLabel": "Manga",
       "score10": 8.1,
-      "popularity": 517798,
+      "popularity": 520517,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx124080-3i22mRVPBS0T.jpg",
       "coverColor": "#5dc9f1",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/124080-ARyLAHHgikRq.jpg",
@@ -20804,7 +20795,7 @@
       "creator": "Hajime Kamoshida",
       "sourceLabel": "Light novel",
       "score10": 8.1,
-      "popularity": 560239,
+      "popularity": 562420,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101291-wfEdgPqtfU0l.jpg",
       "coverColor": "#0d43f1",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n101291-fqIUvQ6apEtD.jpg",
@@ -20963,7 +20954,7 @@
       "creator": "Ai Yazawa",
       "sourceLabel": "Manga",
       "score10": 8.5,
-      "popularity": 200011,
+      "popularity": 200637,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx877-6BUYEWp8By8j.png",
       "coverColor": "#f14386",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/877-5yVMHXHApFzf.jpg",
@@ -21146,8 +21137,8 @@
         "Parenthood",
         "Family Life",
         "Coming of Age",
-        "Adoption",
         "Female Protagonist",
+        "Adoption",
         "Orphan",
         "Medieval",
         "Work"
@@ -21159,7 +21150,7 @@
       "creator": null,
       "sourceLabel": "Originale",
       "score10": 8.2,
-      "popularity": 142388,
+      "popularity": 142804,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx99457-OD0xtM8NlHNQ.png",
       "coverColor": null,
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/99457-OvX44AF17mEL.jpg",
@@ -21333,7 +21324,7 @@
       "creator": "Haruichi Furudate",
       "sourceLabel": "Manga",
       "score10": 8.4,
-      "popularity": 567887,
+      "popularity": 569088,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20464-ooZUyBe4ptp9.png",
       "coverColor": "#e48635",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20464-PpYjO9cPN1gs.jpg",
@@ -21543,7 +21534,7 @@
       "creator": "George Morikawa",
       "sourceLabel": "Manga",
       "score10": 8.7,
-      "popularity": 138728,
+      "popularity": 139154,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx263-ivVyn9xAgwSZ.png",
       "coverColor": "#f1935d",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/263-8Zejtdb3r2bI.jpg",
@@ -21746,7 +21737,7 @@
       "creator": "Takehiko Inoue",
       "sourceLabel": "Manga",
       "score10": 8.3,
-      "popularity": 71421,
+      "popularity": 71582,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx170-cmD8A0vZsp6g.jpg",
       "coverColor": "#ae4328",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/170-hCgzytQLmZdX.jpg",
@@ -21964,7 +21955,7 @@
       "creator": "Taiyou Matsumoto",
       "sourceLabel": "Manga",
       "score10": 8.6,
-      "popularity": 122058,
+      "popularity": 122246,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20607-fIOxVISIl0HY.jpg",
       "coverColor": "#e47843",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20607-AYghLMjh7reA.jpg",
@@ -22119,7 +22110,7 @@
       "creator": "Muneyuki Kaneshiro",
       "sourceLabel": "Manga",
       "score10": 8,
-      "popularity": 310149,
+      "popularity": 312057,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx137822-U8naszP96vzC.png",
       "coverColor": "#286be4",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/137822-oevspckMGLuY.jpg",
@@ -22190,11 +22181,11 @@
             "why": "Chi ha amato questo ha amato anche"
           },
           {
-            "id": "death-note",
+            "id": "slam-dunk",
             "why": "Chi ha amato questo ha amato anche"
           },
           {
-            "id": "slam-dunk",
+            "id": "death-note",
             "why": "Chi ha amato questo ha amato anche"
           }
         ],
@@ -22294,7 +22285,7 @@
       "creator": "Shion Miura",
       "sourceLabel": "Altro",
       "score10": 8.3,
-      "popularity": 95884,
+      "popularity": 96120,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101903-ncgPJbbA5Nou.jpg",
       "coverColor": "#5078e4",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n101903-Jnoc7x0WFusx.jpg",
@@ -22453,7 +22444,7 @@
       "creator": "Hideaki Sorachi",
       "sourceLabel": "Manga",
       "score10": 8.5,
-      "popularity": 287488,
+      "popularity": 288131,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx918-iOaeBVUn4uK7.jpg",
       "coverColor": "#f1865d",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/918-bljqHE1PFArH.jpg",
@@ -22721,7 +22712,7 @@
       "creator": "Kenji Inoue",
       "sourceLabel": "Manga",
       "score10": 8.2,
-      "popularity": 225471,
+      "popularity": 226472,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx100922-uxEhaCsqMMp3.png",
       "coverColor": "#5daee4",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/100922-ef1bBJCUCfxk.jpg",
@@ -22758,7 +22749,7 @@
           "main": true
         },
         {
-          "name": "Grand Blue Season 3",
+          "name": "Grand Blue Dreaming Season 3",
           "episodes": "0+ ep",
           "year": 2026,
           "main": true
@@ -22897,7 +22888,7 @@
       "creator": "Keiichi Arawi",
       "sourceLabel": "Manga",
       "score10": 8.3,
-      "popularity": 235130,
+      "popularity": 235560,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx10165-tw8Cz7K9tfVJ.png",
       "coverColor": "#e4bb93",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/10165-1O0xQsic1qpB.jpg",
@@ -23052,7 +23043,7 @@
         "Parody",
         "Meta",
         "School",
-        "Male Protagonist"
+        "Urban"
       ],
       "studios": [
         "J.C.STAFF",
@@ -23062,7 +23053,7 @@
       "creator": "Shuuichi Asou",
       "sourceLabel": "Manga",
       "score10": 8.3,
-      "popularity": 346338,
+      "popularity": 347260,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21804-As6tDLAvEvNY.jpg",
       "coverColor": "#f1bb1a",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21804-K0xl0PE1PfHt.jpg",
@@ -23153,6 +23144,10 @@
             "why": "Atmosfera e temi affini"
           },
           {
+            "id": "asobi-asobase",
+            "why": "Atmosfera e temi affini"
+          },
+          {
             "id": "great-teacher-onizuka",
             "why": "Atmosfera e temi affini"
           },
@@ -23161,11 +23156,11 @@
             "why": "Atmosfera e temi affini"
           },
           {
-            "id": "komi-cant-communicate",
+            "id": "skip-and-loafer",
             "why": "Atmosfera e temi affini"
           },
           {
-            "id": "asobi-asobase",
+            "id": "komi-cant-communicate",
             "why": "Atmosfera e temi affini"
           },
           {
@@ -23177,23 +23172,19 @@
             "why": "Atmosfera e temi affini"
           },
           {
+            "id": "akira",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "dan-da-dan",
+            "why": "Atmosfera e temi affini"
+          },
+          {
             "id": "dragon-ball",
             "why": "Atmosfera e temi affini"
           },
           {
             "id": "flcl",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "my-hero-academia",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "horimiya",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "bunny-girl-senpai",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -23235,7 +23226,7 @@
       "creator": "Yasunobu Yamauchi",
       "sourceLabel": "Manga",
       "score10": 8,
-      "popularity": 189093,
+      "popularity": 189448,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11843-ui2jBcuQUqnl.jpg",
       "coverColor": "#aee4ae",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/11843-2GxMdvjHLn6v.jpg",
@@ -23416,7 +23407,7 @@
       "creator": "Masao Ootake",
       "sourceLabel": "Manga",
       "score10": 8,
-      "popularity": 146669,
+      "popularity": 146984,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx100077-FgGYIt8gGyrn.jpg",
       "coverColor": "#e47850",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/100077-XKMTrxaMGhBj.jpg",
@@ -23581,7 +23572,7 @@
       "creator": "Tooru Fujisawa",
       "sourceLabel": "Manga",
       "score10": 8.4,
-      "popularity": 170626,
+      "popularity": 171056,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx245-NcQAyTipUMeO.jpg",
       "coverColor": "#e4930d",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/245-sIPMF9vNDnaJ.jpg",
@@ -23764,7 +23755,7 @@
       "creator": "Gen Urobuchi",
       "sourceLabel": "Originale",
       "score10": 8.1,
-      "popularity": 347951,
+      "popularity": 348596,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx13601-i42VFuHpqEOJ.jpg",
       "coverColor": "#288686",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/13601-YrCmS1oY4uBZ.jpg",
@@ -23980,7 +23971,7 @@
       "creator": "Makoto Yukimura",
       "sourceLabel": "Manga",
       "score10": 8,
-      "popularity": 63282,
+      "popularity": 63413,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx329-4xwXdazRA7Ph.png",
       "coverColor": "#5086c9",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/329-BwJy0rauT2k4.jpg",
@@ -24144,7 +24135,7 @@
       "creator": "Yoshiki Tanaka",
       "sourceLabel": "Altro",
       "score10": 8.8,
-      "popularity": 82766,
+      "popularity": 82904,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx820-x5dNLNFeKb8B.png",
       "coverColor": "#bb8628",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/820-FcKc3kvg60z8.jpg",
@@ -24277,7 +24268,7 @@
         "Artificial Intelligence",
         "Cyberpunk",
         "Conspiracy",
-        "Meta"
+        "Religion"
       ],
       "studios": [
         "Triangle Staff"
@@ -24286,7 +24277,7 @@
       "creator": null,
       "sourceLabel": "Originale",
       "score10": 8,
-      "popularity": 243934,
+      "popularity": 244603,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx339-xF2wp1NQuQ4r.png",
       "coverColor": "#e4a1d6",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/339-Lh0tuuwRLRgI.jpg",
@@ -24370,10 +24361,6 @@
             "why": "Atmosfera e temi affini"
           },
           {
-            "id": "to-be-hero-x",
-            "why": "Atmosfera e temi affini"
-          },
-          {
             "id": "psycho-pass",
             "why": "Atmosfera e temi affini"
           },
@@ -24395,6 +24382,10 @@
           },
           {
             "id": "death-note",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "summer-time-rendering",
             "why": "Atmosfera e temi affini"
           },
           {
@@ -24444,7 +24435,7 @@
       "creator": "Magica Quartet",
       "sourceLabel": "Originale",
       "score10": 8.3,
-      "popularity": 316572,
+      "popularity": 317318,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx9756-QnUGwlwwnsuN.jpg",
       "coverColor": "#f1c95d",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/9756-d5M8NffgJJHB.jpg",
@@ -24622,7 +24613,7 @@
       "creator": "Yoshikazu Takeuchi ",
       "sourceLabel": "Altro",
       "score10": 8.5,
-      "popularity": 237007,
+      "popularity": 237586,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx437-69NMlXKFeuse.jpg",
       "coverColor": "#1a356b",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/437-3yMVTyN7gl2A.jpg",
@@ -24832,7 +24823,7 @@
       "creator": "Tatsuhiko Takimoto",
       "sourceLabel": "Light novel",
       "score10": 8.2,
-      "popularity": 195114,
+      "popularity": 195711,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1210-2XotjcgqdcaX.jpg",
       "coverColor": "#5dd6e4",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1210-3HzGH3tahHmC.jpg",
@@ -24983,7 +24974,7 @@
       "creator": "Yoshihiro Togashi",
       "sourceLabel": "Manga",
       "score10": 8.3,
-      "popularity": 154992,
+      "popularity": 155255,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx392-z90299zIvYmx.png",
       "coverColor": "#e49343",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/392-nbB6cBnhHOFb.jpg",
@@ -25152,15 +25143,15 @@
             "why": "Atmosfera e temi affini"
           },
           {
-            "id": "to-be-hero-x",
-            "why": "Atmosfera e temi affini"
-          },
-          {
             "id": "dr-stone",
             "why": "Atmosfera e temi affini"
           },
           {
             "id": "fullmetal-alchemist-brotherhood",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "gurren-lagann",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -25204,7 +25195,7 @@
       "creator": "Riichirou Inagaki",
       "sourceLabel": "Manga",
       "score10": 8.1,
-      "popularity": 537674,
+      "popularity": 539761,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx105333-GybuoSoOZfpH.jpg",
       "coverColor": "#c9d678",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/105333-KWKGvBM8Hyga.jpg",
@@ -25368,7 +25359,7 @@
       "creator": "Osamu Tezuka",
       "sourceLabel": "Manga",
       "score10": 8.1,
-      "popularity": 363938,
+      "popularity": 365279,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101347-TGaDwEYqLfm1.jpg",
       "coverColor": "#d6bb6b",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n101347-tHurKfTlhtFl.jpg",
@@ -25528,8 +25519,8 @@
       "typeLabel": "Serie",
       "statusLabel": "Concluso",
       "episodes": 11,
-      "sagaEpisodes": 49,
-      "coreMinutes": 1176,
+      "sagaEpisodes": 62,
+      "coreMinutes": 1488,
       "lengthBand": "medio",
       "lengthLabel": "Medio",
       "lengthHint": "qualche settimana",
@@ -25556,7 +25547,7 @@
       "creator": "Rifujin na Magonote",
       "sourceLabel": "Light novel",
       "score10": 8.2,
-      "popularity": 432896,
+      "popularity": 435611,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx108465-1ANspF1EWyFx.jpg",
       "coverColor": "#43a1e4",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/108465-RgsRpTMhP9Sv.jpg",
@@ -25614,7 +25605,7 @@
         },
         {
           "name": "Mushoku Tensei: Jobless Reincarnation Season 3",
-          "episodes": "0+ ep",
+          "episodes": "14 ep",
           "year": 2026,
           "main": true
         }
@@ -25757,7 +25748,7 @@
       "creator": "Fuse",
       "sourceLabel": "Light novel",
       "score10": 8,
-      "popularity": 443066,
+      "popularity": 445213,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101280-tDxCVJm714nt.jpg",
       "coverColor": "#5daef1",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/101280-9t7J3774n955.jpg",
@@ -25939,7 +25930,7 @@
       "creator": "Natsu Hyuuga",
       "sourceLabel": "Light novel",
       "score10": 8.8,
-      "popularity": 301929,
+      "popularity": 304469,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx161645-QLbzHXiYRgV2.jpg",
       "coverColor": "#f1865d",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/161645-oqzTZYIvviWI.jpg",
@@ -26111,7 +26102,7 @@
       "creator": "Ryouko Kui",
       "sourceLabel": "Manga",
       "score10": 8.5,
-      "popularity": 214119,
+      "popularity": 215412,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx153518-IVXPDY5ph3kO.jpg",
       "coverColor": "#e48650",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/153518-7uRvV7SLqmHV.jpg",
@@ -26130,9 +26121,9 @@
           "main": true
         },
         {
-          "name": "Dungeon Meshi 2nd Season",
+          "name": "Delicious in Dungeon Season 2",
           "episodes": "? ep",
-          "year": null,
+          "year": 2027,
           "main": true
         }
       ],
@@ -26204,6 +26195,10 @@
             "why": "Atmosfera e temi affini"
           },
           {
+            "id": "claymore",
+            "why": "Atmosfera e temi affini"
+          },
+          {
             "id": "grimgar-of-fantasy-and-ash",
             "why": "Atmosfera e temi affini"
           },
@@ -26229,10 +26224,6 @@
           },
           {
             "id": "the-rising-of-the-shield-hero",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "tower-of-god",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -26276,7 +26267,7 @@
       "creator": "Makoto Shinkai",
       "sourceLabel": "Originale",
       "score10": 8.1,
-      "popularity": 344523,
+      "popularity": 345794,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx106286-5COcpd0J9VbL.png",
       "coverColor": "#5dbbe4",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/106286-3oKwiwjd7Wkm.jpg",
@@ -26411,8 +26402,8 @@
         "Biographical",
         "Historical",
         "Primarily Adult Cast",
-        "Meta",
         "Female Protagonist",
+        "Meta",
         "Work",
         "Filmmaking"
       ],
@@ -26423,7 +26414,7 @@
       "creator": null,
       "sourceLabel": "Originale",
       "score10": 8.1,
-      "popularity": 63351,
+      "popularity": 63458,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1033-d5p1pbd5qa4L.png",
       "coverColor": "#e4d61a",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1033-npnaGITec3EV.jpg",
@@ -26633,7 +26624,7 @@
       "creator": "Satoshi Kon",
       "sourceLabel": "Originale",
       "score10": 8.1,
-      "popularity": 88151,
+      "popularity": 88298,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx759-XSKBju6xutdR.jpg",
       "coverColor": "#e49350",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/759-WE1Y5uCZ3Vv7.jpg",
@@ -26829,7 +26820,7 @@
       "creator": "Mamoru Hosoda",
       "sourceLabel": "Originale",
       "score10": 8.3,
-      "popularity": 190033,
+      "popularity": 190318,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx12355-wNsvhEsXEgrH.png",
       "coverColor": "#e45d6b",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/12355.jpg",
@@ -27025,7 +27016,7 @@
       "creator": "Akiyuki Nosaka",
       "sourceLabel": "Altro",
       "score10": 8.3,
-      "popularity": 196213,
+      "popularity": 196672,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx578-vU6XcOlb1XFU.jpg",
       "coverColor": "#e4bb5d",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/578.jpg",
@@ -27208,7 +27199,7 @@
       "creator": "Diana Wynne Jones",
       "sourceLabel": "Altro",
       "score10": 8.5,
-      "popularity": 352370,
+      "popularity": 353222,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx431-o8Lj3XkjHm2k.jpg",
       "coverColor": "#0daee4",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/431-fLBlvTgdqLCz.jpg",
@@ -27395,7 +27386,7 @@
       "creator": "Hayao Miyazaki",
       "sourceLabel": "Originale",
       "score10": 8.1,
-      "popularity": 272900,
+      "popularity": 273450,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx523-fErBvxOHP7IX.jpg",
       "coverColor": "#f19335",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/523-rl12Q0av1fCr.jpg",
@@ -27587,7 +27578,7 @@
       "creator": "Hayao Miyazaki",
       "sourceLabel": "Manga",
       "score10": 8.1,
-      "popularity": 105387,
+      "popularity": 105578,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx572-ZE3kHBA6U0X1.jpg",
       "coverColor": "#e4785d",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/572-8Lz6Wwy3ySHE.jpg",
@@ -27770,7 +27761,7 @@
       "creator": "Katsuhito Ishii",
       "sourceLabel": "Originale",
       "score10": 8.1,
-      "popularity": 110058,
+      "popularity": 110276,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx6675-NF4tFzAxSjkj.png",
       "coverColor": "#f1d628",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/6675-E49elTPWWrcl.jpg",
@@ -27995,7 +27986,7 @@
       "creator": "Akimi Yoshida",
       "sourceLabel": "Manga",
       "score10": 8.4,
-      "popularity": 301846,
+      "popularity": 302641,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx100388-hjkg1AnlJR5z.jpg",
       "coverColor": "#ffd643",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/100388-CR4PUEz1Nzsl.jpg",
@@ -28163,7 +28154,7 @@
       "creator": "Yasutaka Tsutsui",
       "sourceLabel": "Altro",
       "score10": 7.9,
-      "popularity": 151088,
+      "popularity": 151464,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b1943-jMCEYL1Ixmgc.png",
       "coverColor": "#e49328",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1943.jpg",
@@ -28379,7 +28370,7 @@
       "creator": "Mamoru Hosoda",
       "sourceLabel": "Originale",
       "score10": 7.7,
-      "popularity": 112715,
+      "popularity": 112863,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx5681-3DmxUVn3grD0.jpg",
       "coverColor": "#1a86d6",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/5681-M15hrscD9QHN.jpg",
@@ -28554,7 +28545,7 @@
       "creator": "Yasutaka Tsutsui",
       "sourceLabel": "Altro",
       "score10": 7.8,
-      "popularity": 171021,
+      "popularity": 171306,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2236-tH5fWFkHyVGg.png",
       "coverColor": "#93bbe4",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/2236-rY0fvv53JIOB.jpg",
@@ -28755,7 +28746,7 @@
       "creator": null,
       "sourceLabel": "Originale",
       "score10": 7.2,
-      "popularity": 243808,
+      "popularity": 244312,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1689-rJKhjLEjQHSy.jpg",
       "coverColor": "#d6a178",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1689.jpg",
@@ -28896,7 +28887,7 @@
       "creator": "Hayao Miyazaki",
       "sourceLabel": "Originale",
       "score10": 8,
-      "popularity": 129737,
+      "popularity": 129960,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx513-yM7Dlt65N4Rl.jpg",
       "coverColor": "#e4c95d",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/513-3zMLMyA0qH5n.jpg",
@@ -29082,7 +29073,7 @@
       "creator": "Eiko Kadono",
       "sourceLabel": "Altro",
       "score10": 8.1,
-      "popularity": 181251,
+      "popularity": 181640,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx512-UwP8X4BR8YoM.png",
       "coverColor": "#50a1c9",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/512-Ssp3EE2NdeoA.jpg",
@@ -29270,7 +29261,7 @@
       "creator": "Hayao Miyazaki",
       "sourceLabel": "Manga",
       "score10": 7.8,
-      "popularity": 74904,
+      "popularity": 75058,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx416-oO8Tts2dQtuv.jpg",
       "coverColor": "#f1ae5d",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/416-EGpl89C7nYoP.jpg",
@@ -29454,7 +29445,7 @@
       "creator": "Hayao Miyazaki",
       "sourceLabel": "Originale",
       "score10": 7.9,
-      "popularity": 182355,
+      "popularity": 182752,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2890-wcNtFr6aUYOR.jpg",
       "coverColor": "#50bbe4",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/2890-9ABkcfl2a7xS.jpg",
@@ -29639,7 +29630,7 @@
       "creator": "Tatsuo Hori",
       "sourceLabel": "Manga",
       "score10": 8,
-      "popularity": 109369,
+      "popularity": 109612,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16662-HUI8irtoTdOJ.jpg",
       "coverColor": "#1aaed6",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/16662-XLmadbKVsRW2.jpg",
@@ -29830,7 +29821,7 @@
       "creator": null,
       "sourceLabel": "Originale",
       "score10": 7.7,
-      "popularity": 63939,
+      "popularity": 64229,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx109979-BRHXpBkCw4oc.jpg",
       "coverColor": "#e4c95d",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/109979-eeUPfBXMEflG.jpg",
@@ -30015,7 +30006,7 @@
       "creator": null,
       "sourceLabel": "Altro",
       "score10": 8.1,
-      "popularity": 71223,
+      "popularity": 71359,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/16664-Wakrc8rbBkor.jpg",
       "coverColor": "#f1d6bb",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/16664-mVEK3raMgD9Z.jpg",
@@ -30155,6 +30146,10 @@
             "why": "Atmosfera e temi affini"
           },
           {
+            "id": "serial-experiments-lain",
+            "why": "Atmosfera e temi affini"
+          },
+          {
             "id": "madoka-magica",
             "why": "Atmosfera e temi affini"
           },
@@ -30172,10 +30167,6 @@
           },
           {
             "id": "fullmetal-alchemist-brotherhood",
-            "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "gurren-lagann",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -30219,7 +30210,7 @@
       "creator": "Aoi Hiiragi",
       "sourceLabel": "Manga",
       "score10": 8.1,
-      "popularity": 106843,
+      "popularity": 107023,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx585-5uq7j2xNNVmN.jpg",
       "coverColor": "#f15d35",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/585-GowCYxa1c8WR.jpg",
@@ -30397,7 +30388,7 @@
       "creator": "Hajime Yatate",
       "sourceLabel": "Originale",
       "score10": 7.8,
-      "popularity": 66853,
+      "popularity": 67001,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx21268-6dKrz26PPUvk.jpg",
       "coverColor": "#f1d6bb",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21268-mCEvAuBxsu7N.jpg",
@@ -30588,7 +30579,7 @@
       "creator": null,
       "sourceLabel": "Originale",
       "score10": 7.8,
-      "popularity": 86413,
+      "popularity": 86539,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx237-P1YEQQFqZ1An.jpg",
       "coverColor": null,
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/237-2w9hQ1THtj3C.jpg",
@@ -30781,7 +30772,7 @@
       "creator": null,
       "sourceLabel": "Originale",
       "score10": 7.6,
-      "popularity": 152711,
+      "popularity": 153060,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx790-YTUCvBKX8ZWK.jpg",
       "coverColor": null,
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/790.jpg",
@@ -30935,10 +30926,10 @@
       "tags": [
         "Artificial Intelligence",
         "Robots",
+        "War",
         "Female Protagonist",
         "Philosophy",
         "Primarily Adult Cast",
-        "War",
         "Guns",
         "Dystopian"
       ],
@@ -30949,7 +30940,7 @@
       "creator": null,
       "sourceLabel": "Originale",
       "score10": 8.2,
-      "popularity": 175830,
+      "popularity": 176367,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx128546-UIwyhuhjxmL0.jpg",
       "coverColor": "#35a1bb",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/128546-V5KVgbzQwFYm.jpg",
@@ -31135,7 +31126,7 @@
       "creator": "Yuusuke Kishi",
       "sourceLabel": "Altro",
       "score10": 8,
-      "popularity": 174540,
+      "popularity": 174796,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx13125-2EDZb8ahshQc.png",
       "coverColor": "#e4c9ae",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/13125.jpg",
@@ -31330,7 +31321,7 @@
       "creator": "Hajime Yatate",
       "sourceLabel": "Originale",
       "score10": 7.8,
-      "popularity": 71493,
+      "popularity": 71728,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx139274-0NJTOKWHdDew.png",
       "coverColor": "#c9a11a",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/139274-UPB510uuZxnL.jpg",
@@ -31503,7 +31494,7 @@
       "creator": "Yuyuko Takemiya",
       "sourceLabel": "Light novel",
       "score10": 7.8,
-      "popularity": 526965,
+      "popularity": 528194,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx4224-PXVMBLNwy2aF.jpg",
       "coverColor": "#e45d78",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/4224-iPUOHdMde27j.jpg",
@@ -31686,7 +31677,7 @@
       "creator": "Key",
       "sourceLabel": "Visual novel",
       "score10": 7.7,
-      "popularity": 290972,
+      "popularity": 291640,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2167-pSDBcyc0vjej.jpg",
       "coverColor": "#bbbbff",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/2167.jpg",
@@ -31876,7 +31867,7 @@
       "creator": "Chica Umino",
       "sourceLabel": "Manga",
       "score10": 7.6,
-      "popularity": 57692,
+      "popularity": 57780,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16-S9k8qahNXoYP.jpg",
       "coverColor": "#aee486",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/16-jmEaCBBN5WRS.jpg",
@@ -32034,7 +32025,7 @@
       "creator": "Natsume Akatsuki",
       "sourceLabel": "Light novel",
       "score10": 7.9,
-      "popularity": 502162,
+      "popularity": 503390,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21202-mPOr80AEjUcZ.png",
       "coverColor": "#5daee4",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21202-UWijdV7RMnXo.jpg",
@@ -32188,7 +32179,7 @@
       "creator": "Sui Ishida",
       "sourceLabel": "Manga",
       "score10": 7.6,
-      "popularity": 718076,
+      "popularity": 719835,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b20605-k665mVkSug8D.jpg",
       "coverColor": "#ff6b35",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20605-RCJ7M71zLmrh.jpg",
@@ -32408,7 +32399,7 @@
       "creator": "Yukito Ayatsuji",
       "sourceLabel": "Light novel",
       "score10": 7.1,
-      "popularity": 375232,
+      "popularity": 376061,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11111-gvvE5bBYsyFo.png",
       "coverColor": "#e47850",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/11111.jpg",
@@ -32573,7 +32564,7 @@
       "creator": "Fuyumi Ono",
       "sourceLabel": "Altro",
       "score10": 7.5,
-      "popularity": 127325,
+      "popularity": 127550,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx7724-NwNnRsI34eDa.jpg",
       "coverColor": "#a18635",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/7724.jpg",
@@ -32669,10 +32660,6 @@
             "why": "Atmosfera e temi affini"
           },
           {
-            "id": "to-be-hero-x",
-            "why": "Atmosfera e temi affini"
-          },
-          {
             "id": "death-note",
             "why": "Atmosfera e temi affini"
           },
@@ -32694,6 +32681,10 @@
           },
           {
             "id": "hell-s-paradise-jigokuraku",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "hellsing-ultimate",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -32738,7 +32729,7 @@
       "creator": "Ryukishi07",
       "sourceLabel": "Visual novel",
       "score10": 7.6,
-      "popularity": 173622,
+      "popularity": 173889,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx934-wjMlVEl4CWwg.jpg",
       "coverColor": "#e4a11a",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n934-p227WvkFZ7XX.jpg",
@@ -32933,7 +32924,7 @@
       "creator": "Shinichi Fukuda",
       "sourceLabel": "Manga",
       "score10": 8,
-      "popularity": 407182,
+      "popularity": 409822,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx132405-qP7FQYGmNI3d.jpg",
       "coverColor": "#e46b5d",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/132405-LnPQaqaksEpN.jpg",
@@ -33092,7 +33083,7 @@
       "creator": "Misaki Takamatsu",
       "sourceLabel": "Manga",
       "score10": 8.1,
-      "popularity": 127388,
+      "popularity": 128015,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx141911-o6Jwav7hRPPM.jpg",
       "coverColor": "#e4d6a1",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/141911-XqAZO540hFXw.jpg",
@@ -33239,7 +33230,7 @@
       "creator": "Tomohito Oda",
       "sourceLabel": "Manga",
       "score10": 7.6,
-      "popularity": 309947,
+      "popularity": 311199,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx133965-9TZBS4m4yvED.png",
       "coverColor": null,
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/133965-spTi0WE7jR0r.jpg",
@@ -33347,15 +33338,15 @@
             "why": "Atmosfera e temi affini"
           },
           {
-            "id": "saiki-k",
-            "why": "Atmosfera e temi affini"
-          },
-          {
             "id": "daily-lives-of-high-school-boys",
             "why": "Atmosfera e temi affini"
           },
           {
             "id": "abenobashi-magical-shopping-street",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "flcl",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -33397,7 +33388,7 @@
       "creator": "Rin Suzukawa",
       "sourceLabel": "Manga",
       "score10": 7.9,
-      "popularity": 144701,
+      "popularity": 145124,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101001-UERCW0UGi0P7.jpg",
       "coverColor": "#bbe450",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/101001-q22QfHFzEavh.jpg",
@@ -33565,7 +33556,7 @@
       "creator": "Kenichi Kondou",
       "sourceLabel": "Manga",
       "score10": 7.5,
-      "popularity": 66092,
+      "popularity": 66404,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx152802-ENRcnqD5axhQ.jpg",
       "coverColor": "#e46b5d",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/152802-7iZxNsDwWjVs.jpg",
@@ -33746,7 +33737,7 @@
       "creator": "Satoshi Kon",
       "sourceLabel": "Originale",
       "score10": 7.6,
-      "popularity": 127347,
+      "popularity": 127648,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx323-ZGkUcJOn4ngy.png",
       "coverColor": "#f1bb28",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/323-tQCOVrhiRgeU.jpg",
@@ -33905,15 +33896,15 @@
             "why": "Atmosfera e temi affini"
           },
           {
-            "id": "to-be-hero-x",
-            "why": "Atmosfera e temi affini"
-          },
-          {
             "id": "ajin-demi-human",
             "why": "Atmosfera e temi affini"
           },
           {
             "id": "akudama-drive",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "future-diary",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -33957,7 +33948,7 @@
       "creator": null,
       "sourceLabel": "Originale",
       "score10": 7.8,
-      "popularity": 282060,
+      "popularity": 282781,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20661-aCR7QgzDfOSI.png",
       "coverColor": "#aee4e4",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20661-JwMKrCzeSTZ7.png",
@@ -34152,7 +34143,7 @@
       "creator": "Tomihiko Morimi",
       "sourceLabel": "Altro",
       "score10": 8.5,
-      "popularity": 145357,
+      "popularity": 145567,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx7785-aTjIhsYva8cJ.jpg",
       "coverColor": "#2886a1",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/7785.jpg",
@@ -34359,7 +34350,7 @@
       "creator": null,
       "sourceLabel": "Originale",
       "score10": 7.7,
-      "popularity": 123733,
+      "popularity": 124110,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx110350-uchN78wglmhN.png",
       "coverColor": null,
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/110350-kJfEuQ4Cx4j1.jpg",
@@ -34504,7 +34495,7 @@
       "creator": "Gou Nagai",
       "sourceLabel": "Manga",
       "score10": 6.8,
-      "popularity": 6562,
+      "popularity": 6577,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2253-nS4Os86CPB5a.png",
       "coverColor": "#e4c935",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n2253-5uGlpuUBKee3.jpg",
@@ -34690,7 +34681,7 @@
       "creator": "Gou Nagai",
       "sourceLabel": "Manga",
       "score10": 7.1,
-      "popularity": 4240,
+      "popularity": 4253,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1985-BB32YokamiRs.jpg",
       "coverColor": "#f1ae28",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1985-kyrtocnMQsvE.jpg",
@@ -34877,7 +34868,7 @@
       "creator": "Gou Nagai",
       "sourceLabel": "Manga",
       "score10": 6.4,
-      "popularity": 4000,
+      "popularity": 4008,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b3579-b4eywFaEGBD5.jpg",
       "coverColor": "#e4a15d",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n3579-9kypGOgFsKxk.jpg",
@@ -35060,7 +35051,7 @@
       "creator": "Yoshiyuki Tomino",
       "sourceLabel": "Originale",
       "score10": 7.7,
-      "popularity": 46677,
+      "popularity": 46798,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx80-pdYJ12vSTmad.jpg",
       "coverColor": "#e48650",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/80-LcQhJ600WeDn.jpg",
@@ -35344,7 +35335,7 @@
       "creator": "Saburou Yatsude",
       "sourceLabel": "Originale",
       "score10": 6.5,
-      "popularity": 895,
+      "popularity": 898,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/4411.jpg",
       "coverColor": "#e4861a",
       "bannerImage": null,
@@ -35408,10 +35399,6 @@
             "why": "Atmosfera e temi affini"
           },
           {
-            "id": "saiki-k",
-            "why": "Atmosfera e temi affini"
-          },
-          {
             "id": "redline",
             "why": "Atmosfera e temi affini"
           },
@@ -35429,6 +35416,10 @@
           },
           {
             "id": "attack-on-titan",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "berserk",
             "why": "Atmosfera e temi affini"
           }
         ]
@@ -35458,8 +35449,8 @@
         "Politics",
         "War",
         "Military",
-        "Dystopian",
         "Seinen",
+        "Dystopian",
         "Revenge",
         "Philosophy",
         "Post-Apocalyptic"
@@ -35471,7 +35462,7 @@
       "creator": "Ikka Matsuki",
       "sourceLabel": "Manga",
       "score10": 8.4,
-      "popularity": 47829,
+      "popularity": 49549,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx206914-SHKX08LarRzB.jpg",
       "coverColor": "#35c9e4",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/206914-owssGq2CGhRZ.jpg",
@@ -35534,10 +35525,6 @@
           {
             "id": "code-geass",
             "why": "Chi ha amato questo ha amato anche"
-          },
-          {
-            "id": "attack-on-titan",
-            "why": "Chi ha amato questo ha amato anche"
           }
         ],
         "saga": [],
@@ -35546,6 +35533,10 @@
         "affin": [
           {
             "id": "gundam-iron-blooded-orphans",
+            "why": "Atmosfera e temi affini"
+          },
+          {
+            "id": "attack-on-titan",
             "why": "Atmosfera e temi affini"
           },
           {
@@ -35587,10 +35578,6 @@
           {
             "id": "pluto",
             "why": "Atmosfera e temi affini"
-          },
-          {
-            "id": "principessa-mononoke",
-            "why": "Atmosfera e temi affini"
           }
         ]
       }
@@ -35631,7 +35618,7 @@
       "creator": "Kurokata",
       "sourceLabel": "Light novel",
       "score10": 7.5,
-      "popularity": 119657,
+      "popularity": 120667,
       "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx137908-50af3lKVbst2.jpg",
       "coverColor": "#78e435",
       "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/137908-ZJ0tMykH623Z.jpg",
