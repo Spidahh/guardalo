@@ -15,6 +15,30 @@
     <link rel="manifest" href="manifest.webmanifest">
     <meta name="theme-color" content="#16130e">
 
+    <!-- Google Analytics 4 (GA4) — Consent Mode v2.
+         analytics_storage resta "denied" finché l'utente non accetta i cookie
+         (vedi banner GDPR in app.js). In locale non traccia nulla. -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('consent', 'default', {
+            analytics_storage: 'denied',
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied'
+        });
+        // se l'utente aveva già accettato tutti i cookie in una visita precedente, concedi subito
+        try { if (localStorage.getItem('guardalo_cookie') === 'all') gtag('consent', 'update', { analytics_storage: 'granted' }); } catch (e) {}
+        gtag('js', new Date());
+        if (!/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) {
+            gtag('config', 'G-Y9X3Q6TV3M', { anonymize_ip: true });
+            var gaScript = document.createElement('script');
+            gaScript.async = true;
+            gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-Y9X3Q6TV3M';
+            document.head.appendChild(gaScript);
+        }
+    </script>
+
     <!-- AdSense — al lancio: incolla qui lo script con il tuo publisher id e crea /ads.txt
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXX" crossorigin="anonymous"></script>
     -->
@@ -33,7 +57,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=815274bf-multi-1">
+    <link rel="stylesheet" href="css/style.css?v=79ce2633-multi-1">
 
     <script>
         try { document.documentElement.dataset.theme = localStorage.getItem('guardalo_theme') || 'light'; }
@@ -59,7 +83,8 @@
 
 
 
-<link rel="canonical" href="https://guardalo.vercel.app/"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"GUARDALO","url":"https://guardalo.vercel.app/","description":"I migliori anime di ogni genere, scelti e spiegati: perché guardarli, da dove iniziare e dove vederli."}</script>
+
+<link rel="canonical" href="https://guardalo.example/"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"GUARDALO","url":"https://guardalo.example/","description":"I migliori anime di ogni genere, scelti e spiegati: perché guardarli, da dove iniziare e dove vederli."}</script>
 </head>
 <body>
 
@@ -187,7 +212,7 @@
     </div>
 
     <script src="js/data.js?v=89b3808c"></script>
-    <script src="js/app.js?v=dbe81219-multi-1"></script>
+    <script src="js/app.js?v=8259779f-multi-1"></script>
 
     <script>
         // Nessun service worker di caching: serviva versioni vecchie in cache (disastro stale).

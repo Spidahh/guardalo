@@ -127,7 +127,7 @@
       this.loadLocal();
       this.bindChrome();
       const attr = $('#footAttr'); if (attr) attr.textContent = DATA.attribution || '';
-      window.addEventListener('popstate', () => this.route());
+      window.addEventListener('popstate', () => { this.route(); this.trackPage(); });
       // intercetta i click sui link interni (URL path-based, niente reload)
       document.addEventListener('click', e => {
         if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
@@ -148,7 +148,7 @@
       const bar = $('#cookieBar');
       if (!bar) return;
       const decide = v => { try { localStorage.setItem('guardalo_cookie', v); } catch (e) {} bar.classList.remove('show'); setTimeout(() => bar.hidden = true, 250);
-        if (v === 'all') this.loadAds(); };
+        if (v === 'all') { this.loadAds(); if (typeof window.gtag === 'function') gtag('consent', 'update', { analytics_storage: 'granted' }); } };
       if (!choice) { bar.hidden = false; requestAnimationFrame(() => bar.classList.add('show')); }
       else if (choice === 'all') this.loadAds();
       $('#cookieAccept')?.addEventListener('click', () => decide('all'));
@@ -160,8 +160,17 @@
     }
     // navigazione interna via History API
     go(path) {
-      if (path !== location.pathname) { history.pushState(null, '', path); this.route(); }
+      if (path !== location.pathname) { history.pushState(null, '', path); this.route(); this.trackPage(); }
       else window.scrollTo(0, 0);
+    }
+    // invia una visualizzazione di pagina "virtuale" a GA4 a ogni navigazione interna (SPA)
+    trackPage() {
+      if (typeof window.gtag !== 'function') return;
+      gtag('event', 'page_view', {
+        page_path: location.pathname + location.search,
+        page_location: location.href,
+        page_title: document.title
+      });
     }
 
     // ── persistenza ──────────────────────────────────────────────────────────
