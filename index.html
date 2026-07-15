@@ -43,7 +43,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXX" crossorigin="anonymous"></script>
     -->
 
-    <meta property="og:type" content="website"><meta property="og:locale" content="it_IT"><meta property="og:locale:alternate" content="en_US">
+    <meta property="og:type" content="website"><meta property="og:locale" content="it_IT"><meta property="og:locale:alternate" content="en_US"><meta property="og:locale" content="it_IT"><meta property="og:locale:alternate" content="en_US">
     <meta property="og:title" content="GUARDALO — La guida agli anime">
     <meta property="og:description" content="I migliori anime di ogni genere, scelti e spiegati senza fronzoli: perché guardarli, da dove iniziare, quanto ti impegnano e dove vederli. Niente liste a caso.">
     <meta property="og:url" content="https://guardalo.vercel.app/">
@@ -63,6 +63,7 @@
         try { document.documentElement.dataset.theme = localStorage.getItem('guardalo_theme') || 'light'; }
         catch (e) { document.documentElement.dataset.theme = 'light'; }
     </script>
+
 
 
 
@@ -110,7 +111,6 @@
                 <a href="/percorsi" data-route="percorsi"><i class="ri-route-line"></i><span>Percorsi</span></a>
                 <a href="/esplora" data-route="esplora"><i class="ri-compass-3-line"></i><span>Esplora</span></a>
                 <a href="/lista" data-route="lista"><i class="ri-bookmark-line"></i><span>La mia lista</span></a>
-                <a href="/en/" class="side-lang"><i class="ri-global-line"></i><span>English</span></a>
                 <a href="/profilo" data-route="profilo" id="sideProfile" hidden><i class="ri-user-3-line"></i><span>Profilo</span></a>
                 <a href="/admin" data-route="admin" id="sideAdmin" hidden><i class="ri-tools-fill"></i><span>Gestione</span></a>
             </nav>
@@ -142,6 +142,7 @@
                 <button id="searchOpen" class="topbar-search"><i class="ri-search-line"></i><span>Cerca anime, studio, regista…</span></button>
                 <button id="randomBtn" class="icon-btn" title="Sorprendimi — un titolo a caso" aria-label="Titolo a caso"><i class="ri-dice-line"></i></button>
                 <a href="/admin" id="topAdmin" class="topbar-admin" title="Pannello di gestione (admin)" hidden><i class="ri-tools-fill"></i><span>Gestione</span></a>
+                <a href="/en/" class="topbar-admin lang-switch" data-lang="en" title="Switch to English"><i class="ri-global-line"></i><span>EN</span></a>
             </div>
 
             <main id="app" class="app" tabindex="-1"><section>
@@ -218,7 +219,7 @@
     </div>
 
     <script src="js/data.js?v=68f0bb04"></script>
-    <script src="js/app.js?v=8943caa0-multi-1"></script>
+    <script src="js/app.js?v=98dd0b1d-multi-1"></script>
 
     <script>
         // Nessun service worker di caching: serviva versioni vecchie in cache (disastro stale).

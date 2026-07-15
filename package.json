@@ -10,7 +10,7 @@
     "gen": "node tools/build.mjs gen",
     "build": "node tools/build.mjs all",
     "prerender": "node tools/prerender.mjs",
-    "build:site": "node tools/build.mjs gen && node tools/prerender.mjs",
+    "build:site": "node tools/build.mjs gen && node tools/build-en-data.mjs && node tools/prerender.mjs",
     "report": "node tools/build.mjs report",
     "inventario": "node tools/inventario.mjs",
     "serve": "node tools/serve.mjs"

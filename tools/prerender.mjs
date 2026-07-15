@@ -55,7 +55,7 @@ function localize(lang) {
 
 // ── cache-busting automatico (hash del contenuto) ────────────────────────
 const hashOf = async f => createHash('sha1').update(await readFile(join(ROOT, f))).digest('hex').slice(0, 8);
-const ASSET_V = { 'css/style.css': await hashOf('css/style.css'), 'js/app.js': await hashOf('js/app.js'), 'js/data.js': await hashOf('js/data.js') };
+const ASSET_V = { 'css/style.css': await hashOf('css/style.css'), 'js/app.js': await hashOf('js/app.js'), 'js/data.js': await hashOf('js/data.js'), 'js/data.en.js': await hashOf('js/data.en.js') };
 let baseTmpl = await readFile(join(ROOT, 'index.html'), 'utf8');
 for (const [file, v] of Object.entries(ASSET_V)) {
   const escp = file.replace(/[.]/g, '\\$&');
@@ -69,28 +69,45 @@ const EN_SIDEBAR = `<aside class="sidebar" id="sidebar">
                 <span class="brand-tag">The anime guide</span>
             </a>
             <nav class="side-nav">
-                <a href="/en/"><i class="ri-home-5-line"></i><span>Home</span></a>
-                <a href="/en/generi"><i class="ri-shapes-line"></i><span>Genres</span></a>
-                <a href="/en/percorsi"><i class="ri-route-line"></i><span>Paths</span></a>
-                <a href="/en/essenziali"><i class="ri-star-line"></i><span>The Best</span></a>
+                <a href="/en/" data-route="home"><i class="ri-home-5-line"></i><span>Home</span></a>
+                <a href="/en/generi" data-route="generi"><i class="ri-shapes-line"></i><span>Genres</span></a>
+                <a href="/en/percorsi" data-route="percorsi"><i class="ri-route-line"></i><span>Paths</span></a>
+                <a href="/en/esplora" data-route="esplora"><i class="ri-compass-3-line"></i><span>Explore</span></a>
+                <a href="/en/lista" data-route="lista"><i class="ri-bookmark-line"></i><span>My list</span></a>
+                <a href="/en/profilo" data-route="profilo" id="sideProfile" hidden><i class="ri-user-3-line"></i><span>Profile</span></a>
+                <a href="/en/admin" data-route="admin" id="sideAdmin" hidden><i class="ri-tools-fill"></i><span>Manage</span></a>
             </nav>
             <div class="side-group">
-                <span class="side-group-h">Language</span>
-                <nav class="side-time-nav" aria-label="Language">
-                    <a href="/"><i class="ri-global-line"></i><span>Italiano</span></a>
+                <span class="side-group-h">Time</span>
+                <nav class="side-time-nav" aria-label="Filter by time">
+                    <a href="/en/tempo/sera" data-route="tempo-sera"><i class="ri-moon-clear-line"></i><span>One evening</span></a>
+                    <a href="/en/tempo/weekend" data-route="tempo-weekend"><i class="ri-calendar-2-line"></i><span>A weekend</span></a>
+                    <a href="/en/tempo/maratona" data-route="tempo-maratona"><i class="ri-fire-line"></i><span>A marathon</span></a>
                 </nav>
+            </div>
+            <div class="side-foot">
+                <span id="adminBadge" class="admin-badge" hidden><i class="ri-shield-star-fill"></i> Admin</span>
+                <span id="userChip" class="user-chip" hidden></span>
+                <div class="side-actions">
+                    <button id="loginBtn" class="btn-ghost"><i class="ri-user-line"></i><span>Sign in</span></button>
+                    <button id="themeToggle" class="icon-btn" title="Light/dark theme" aria-label="Toggle theme"><i class="ri-contrast-2-line"></i></button>
+                    <button id="logoutBtn" class="icon-btn" title="Sign out" aria-label="Sign out" hidden><i class="ri-logout-box-r-line"></i></button>
+                </div>
             </div>
         </aside>`;
 const EN_TOPBAR = `<div class="topbar">
-                <a class="side-brand" href="/en/"><span class="brand-word">GUARDALO</span></a>
-                <a href="/" class="topbar-admin" title="Italiano"><i class="ri-global-line"></i><span>Italiano</span></a>
+                <button class="brand-mobile" id="sideToggle" aria-label="Menu"><i class="ri-menu-line"></i></button>
+                <button id="searchOpen" class="topbar-search"><i class="ri-search-line"></i><span>Search anime, studio, director…</span></button>
+                <button id="randomBtn" class="icon-btn" title="Surprise me — a random title" aria-label="Random title"><i class="ri-dice-line"></i></button>
+                <a href="/en/admin" id="topAdmin" class="topbar-admin" title="Admin panel" hidden><i class="ri-tools-fill"></i><span>Manage</span></a>
+                <a href="/" class="topbar-admin lang-switch" data-lang="it" title="Passa all'italiano"><i class="ri-global-line"></i><span>IT</span></a>
             </div>`;
-
 const EN_BOTTOMNAV = `<nav class="bottom-nav" aria-label="Main navigation">
-        <a href="/en/"><i class="ri-home-5-line"></i><span>Home</span></a>
-        <a href="/en/generi"><i class="ri-shapes-line"></i><span>Genres</span></a>
-        <a href="/en/percorsi"><i class="ri-route-line"></i><span>Paths</span></a>
-        <a href="/en/essenziali"><i class="ri-star-line"></i><span>Best</span></a>
+        <a href="/en/" data-route="home"><i class="ri-home-5-line"></i><span>Home</span></a>
+        <a href="/en/generi" data-route="generi"><i class="ri-shapes-line"></i><span>Genres</span></a>
+        <a href="/en/percorsi" data-route="percorsi"><i class="ri-route-line"></i><span>Paths</span></a>
+        <a href="/en/esplora" data-route="esplora"><i class="ri-compass-3-line"></i><span>Explore</span></a>
+        <a href="/en/lista" data-route="lista"><i class="ri-bookmark-line"></i><span>List</span></a>
     </nav>`;
 const EN_FOOTER = `<footer class="foot">
                 <div class="foot-in">
@@ -117,6 +134,7 @@ function template(lang) {
     t = t.replace('<a class="skip-link" href="#app">Vai al contenuto</a>', '<a class="skip-link" href="#app">Skip to content</a>');
     t = t.replace(/<footer class="foot">[\s\S]*?<\/footer>/, EN_FOOTER);
     t = t.replace(/<nav class="bottom-nav"[\s\S]*?<\/nav>/, EN_BOTTOMNAV);
+    t = t.replace(/js\/data\.js\?v=[\w.]+/, `js/data.en.js?v=${ASSET_V['js/data.en.js']}`);
   }
   return t;
 }

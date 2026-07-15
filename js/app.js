@@ -26,7 +26,9 @@
     Romance: 'Romantico', 'Sci-Fi': 'Fantascienza', 'Slice of Life': 'Slice of Life',
     Sports: 'Sport', Supernatural: 'Soprannaturale', Thriller: 'Thriller',
   };
-  const itGenre = g => GENRE_IT[g] || g;
+  const LANG = DATA.lang === 'en' ? 'en' : 'it';
+  const PFX = LANG === 'en' ? '/en' : '';
+  const itGenre = LANG === 'en' ? (g => g) : (g => GENRE_IT[g] || g);
   // spiegazione semplice dei generi (niente roba da Wikipedia)
   const GENRE_GLOSS = {
     Action: 'Botte, inseguimenti, adrenalina.', Adventure: 'Viaggi ed esplorazione, un mondo da scoprire.',
@@ -124,8 +126,12 @@
     }
 
     boot() {
-      // Pagine /en/ … sono statiche, pre-renderizzate in inglese: la SPA italiana non le gestisce.
-      if (/^\/en(\/|$)/.test(location.pathname)) return;
+      // Rilevamento lingua: primo ingresso senza scelta salvata + browser inglese → versione /en.
+      try {
+        const saved = localStorage.getItem('guardalo_lang');
+        const isBot = /bot|crawl|spider|slurp|googlebot|bingbot/i.test(navigator.userAgent || '');
+        if (!saved && LANG === 'it' && location.pathname === '/' && !isBot && /^en\b/i.test(navigator.language || '')) { location.replace('/en/'); return; }
+      } catch (e) {}
       this.loadLocal();
       this.bindChrome();
       const attr = $('#footAttr'); if (attr) attr.textContent = DATA.attribution || '';
@@ -135,8 +141,9 @@
         if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
         const a = e.target.closest('a');
         if (!a) return;
+        if (a.classList.contains('lang-switch')) { try { localStorage.setItem('guardalo_lang', a.dataset.lang || 'it'); } catch (e) {} return; }
         const href = a.getAttribute('href');
-        if (!href || !href.startsWith('/') || href.startsWith('//') || href.startsWith('/en') || a.target === '_blank' || a.hasAttribute('download')) return;
+        if (!href || !href.startsWith('/') || href.startsWith('//') || a.target === '_blank' || a.hasAttribute('download')) return;
         e.preventDefault();
         this.go(href);
       });
@@ -162,6 +169,7 @@
     }
     // navigazione interna via History API
     go(path) {
+      if (PFX && path.charAt(0) === '/' && path !== PFX && !path.startsWith(PFX + '/')) path = PFX + (path === '/' ? '/' : path);
       if (path !== location.pathname) { history.pushState(null, '', path); this.route(); this.trackPage(); }
       else window.scrollTo(0, 0);
     }
@@ -423,7 +431,7 @@
 
     // ── ROUTER ─────────────────────────────────────────────────────────────────
     route() {
-      const path = decodeURIComponent(location.pathname || '/');
+      const path = decodeURIComponent(location.pathname || '/').replace(/^\/en(?=\/|$)/, '') || '/';
       const [_, seg, arg, arg2] = path.split('/');
       let html, active = 'home';
       if (seg === 'p' && arg) { html = this.viewPath(arg); active = PERCORSI_IDS.includes(arg) ? 'percorsi' : (GENRE_IDS.includes(arg) ? 'generi' : ''); }
