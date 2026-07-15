@@ -40,7 +40,7 @@
       titles:'titoli', bestTitle:'Il meglio', bestOf:'Il meglio di GUARDALO', bestLead:'I migliori di tutti: titoli messi in cima ad almeno un genere o percorso, senza doppioni e ordinati dal migliore.', bestBlurb:'I titoli più forti presi da generi e percorsi, senza doppioni.', safeBet:'vai sul sicuro', pathWord:'percorso',
       generiTitle:'Generi', generiLead:'Scegli il tipo di storia. Viaggi nel tempo resta qui, nella zona mente e fantascienza.', percorsiTitle:'Percorsi', percorsiLead:'Non generi: scorciatoie editoriali per decidere più in fretta.',
       laneAction:'Azione e adrenalina', laneDark:'Cupo, adulto, vendetta', laneMind:'Mente, tempo e fantascienza', laneFeel:'Sentimenti e quotidiano', laneWorlds:'Mondi, storia e cinema',
-      back:'Indietro', markWatched:'Segna visto', saved:'Salvato', share:'Condividi', techSheet:'Scheda tecnica', about:'Di cosa parla', comingSoon:'Scheda in arrivo.', forWhoLbl:'Per chi è:', howToWatch:'Come guardarlo', whereToWatch:'Dove vederlo', youMightLike:'Ti potrebbe piacere', startFromLbl:'Da dove iniziare:', goodToKnow:'Buono a sapersi', filmsOvas:'Film, OVA e speciali', legalOnly:'solo legale', noStream:'Nessuna piattaforma in streaming segnalata al momento.', lblRegia:'Regia', lblOrig:'Opera originale', lblBasedOn:'Tratto da', filterAll:'Tutti', showMore:'Mostra altri', likedThis:'Se ti è piaciuto questo', sameSaga:'Stessa saga', sameAuthor:'Stesso autore o regista', sameStudio:'Dallo stesso studio',
+      back:'Indietro', markWatched:'Segna visto', saved:'Salvato', share:'Condividi', techSheet:'Scheda tecnica', about:'Di cosa parla', comingSoon:'Scheda in arrivo.', forWhoLbl:'Per chi è:', howToWatch:'Come guardarlo', whereToWatch:'Dove vederlo', youMightLike:'Ti potrebbe piacere', startFromLbl:'Da dove iniziare:', goodToKnow:'Buono a sapersi', filmsOvas:'Film, OVA e speciali', legalOnly:'solo legale', noStream:'Nessuna piattaforma in streaming segnalata al momento.', lblRegia:'Regia', lblOrig:'Opera originale', lblBasedOn:'Tratto da', filterAll:'Tutti', showMore:'Mostra altri', likedThis:'Se ti è piaciuto questo', sameSaga:'Stessa saga', sameAuthor:'Stesso autore o regista', sameStudio:'Dallo stesso studio', mTit:'dove vederlo e da dove iniziare', mDescTfb:t=>`${t}: scheda spoiler-free, dove vederlo, quanto dura.`, mPathSuf:'i migliori anime del genere', mBest:'Il meglio', mBestD:'I migliori anime di GUARDALO: titoli in cima a generi e percorsi, senza doppioni.', mExpl:'Esplora tutti gli anime', mExplD:'Tutti gli anime della guida, dal migliore: filtra per genere e per quanto tempo hai.', mGen:'Generi', mGenD:'Tutti i generi: azione, mindfuck, horror, sci-fi, isekai e altro.', mPer:'Percorsi', mPerD:'Viaggi tematici curati: storie che spezzano, protagonisti geniali, antieroi e altro.', mList:'La mia lista', mListD:'La tua lista personale: salva gli anime da vedere e segna quelli visti.', mTempoFb:'Quanto tempo hai?', mTempoD:x=>`${x}: anime selezionati in base al tempo che hai.`,
       entry:[['Il meglio','solo priorità alte'],['Generi','per tipo di storia'],['Percorsi','liste editoriali'],['Esplora','tutti i filtri']],
       moods:[['Roba adulta','seinen, disagio, crime'],['Azione','ritmo e combattimenti'],['Viaggi tempo','loop, passato, scelte'],['Antieroi','morale sporca'],['Storico','epoche e guerre'],['Film','una serata secca']],
       guide:[['Generi','Sono il tipo di storia: azione, storico, horror, romance, viaggi nel tempo.'],['Percorsi','Sono tagli curati: antieroi, vendetta, mind game, roba adulta, chicche.'],['Fasce','Da vedere prima = priorità. Consigliati = solidi. Extra = recuperi dopo.']],
@@ -54,7 +54,7 @@
       titles:'titles', bestTitle:'The Best', bestOf:'The best of GUARDALO', bestLead:'The best of all: titles placed at the top of at least one genre or path, no duplicates, ordered best first.', bestBlurb:'The strongest titles from genres and paths, no duplicates.', safeBet:'a safe bet', pathWord:'path',
       generiTitle:'Genres', generiLead:'Choose the type of story. Time travel lives here, in the mind & sci-fi area.', percorsiTitle:'Paths', percorsiLead:'Not genres: editorial shortcuts to decide faster.',
       laneAction:'Action & adrenaline', laneDark:'Dark, adult, revenge', laneMind:'Mind, time & sci-fi', laneFeel:'Feelings & everyday', laneWorlds:'Worlds, history & cinema',
-      back:'Back', markWatched:'Mark watched', saved:'Saved', share:'Share', techSheet:'Details', about:"What it's about", comingSoon:'Details coming soon.', forWhoLbl:"Who it's for:", howToWatch:'How to watch it', whereToWatch:'Where to watch', youMightLike:'You might like', startFromLbl:'Where to start:', goodToKnow:'Good to know', filmsOvas:'Films, OVA & specials', legalOnly:'legal only', noStream:'No streaming platform listed at the moment.', lblRegia:'Director', lblOrig:'Original work', lblBasedOn:'Based on', filterAll:'All', showMore:'Show', likedThis:'If you liked this', sameSaga:'Same saga', sameAuthor:'Same author or director', sameStudio:'From the same studio',
+      back:'Back', markWatched:'Mark watched', saved:'Saved', share:'Share', techSheet:'Details', about:"What it's about", comingSoon:'Details coming soon.', forWhoLbl:"Who it's for:", howToWatch:'How to watch it', whereToWatch:'Where to watch', youMightLike:'You might like', startFromLbl:'Where to start:', goodToKnow:'Good to know', filmsOvas:'Films, OVA & specials', legalOnly:'legal only', noStream:'No streaming platform listed at the moment.', lblRegia:'Director', lblOrig:'Original work', lblBasedOn:'Based on', filterAll:'All', showMore:'Show', likedThis:'If you liked this', sameSaga:'Same saga', sameAuthor:'Same author or director', sameStudio:'From the same studio', mTit:'where to watch and where to start', mDescTfb:t=>`${t}: spoiler-free guide, where to watch, how long it is.`, mPathSuf:'the best anime of the genre', mBest:'The Best', mBestD:"GUARDALO's best anime: titles at the top of genres and paths, no duplicates.", mExpl:'Explore all anime', mExplD:'Every anime in the guide, best first: filter by genre and by how much time you have.', mGen:'Genres', mGenD:'Every genre: action, mindfuck, horror, sci-fi, isekai and more.', mPer:'Paths', mPerD:'Curated themed journeys: stories that break you, brilliant minds, antiheroes and more.', mList:'My list', mListD:'Your personal list: save anime to watch and mark the ones you have seen.', mTempoFb:'How much time do you have?', mTempoD:x=>`${x}: anime selected based on the time you have.`,
       entry:[['The Best','top priority only'],['Genres','by type of story'],['Paths','editorial lists'],['Explore','all filters']],
       moods:[['Adult stuff','seinen, dread, crime'],['Action','pace and fights'],['Time travel','loops, past, choices'],['Antiheroes','dirty morals'],['Historical','eras and wars'],['Films','one evening']],
       guide:[['Genres','The type of story: action, historical, horror, romance, time travel.'],['Paths','Curated cuts: antiheroes, revenge, mind games, adult stuff, gems.'],['Bands','Watch first = priority. Recommended = solid. Extra = catch up later.']],
@@ -506,33 +506,33 @@
       let title, desc, img;
       if (seg === 't' && arg && BY_ID.get(arg)) {
         const t = BY_ID.get(arg);
-        title = `${t.title}${t.year ? ` (${t.year})` : ''} — dove vederlo e da dove iniziare · ${BASE}`;
-        desc = (t.hook || `${t.title}: scheda spoiler-free, dove vederlo, quanto dura.`).slice(0, 158);
+        title = `${t.title}${t.year ? ` (${t.year})` : ''} — ${T.mTit} · ${BASE}`;
+        desc = (t.hook || T.mDescTfb(t.title)).slice(0, 158);
         img = cover(t);
       } else if (seg === 'p' && arg && PATHS.find(p => p.id === arg)) {
         const p = PATHS.find(p => p.id === arg);
-        title = `${p.title} — i migliori anime del genere · ${BASE}`;
+        title = `${p.title} — ${T.mPathSuf} · ${BASE}`;
         desc = (p.about || p.blurb || p.tagline || '').slice(0, 158);
       } else if (seg === 'essenziali') {
-        title = `Il meglio · ${BASE}`;
-        desc = 'I migliori anime di GUARDALO: titoli messi in cima a generi e percorsi, senza doppioni.';
+        title = `${T.mBest} · ${BASE}`;
+        desc = T.mBestD;
       } else if (seg === 'esplora') {
-        title = `Esplora tutti gli anime · ${BASE}`;
-        desc = 'Tutti gli anime della guida, dal migliore: filtra per genere e per quanto tempo hai.';
+        title = `${T.mExpl} · ${BASE}`;
+        desc = T.mExplD;
       } else if (seg === 'generi') {
-        title = `Generi · ${BASE}`;
-        desc = 'Tutti i generi: azione, mindfuck, horror, sci-fi, isekai e altro. I migliori anime di ogni categoria.';
+        title = `${T.mGen} · ${BASE}`;
+        desc = T.mGenD;
       } else if (seg === 'percorsi') {
-        title = `Percorsi · ${BASE}`;
-        desc = 'Viaggi tematici curati: storie che spezzano, protagonisti geniali, spettacolo visivo, antieroi e altro.';
+        title = `${T.mPer} · ${BASE}`;
+        desc = T.mPerD;
       } else if (seg === 'tempo' && arg) {
         const m = TEMPO.find(t => t.key === arg);
-        title = `${m ? m.label : 'Quanto tempo hai?'} · ${BASE}`;
+        title = `${m ? m.label : T.mTempoFb} · ${BASE}`;
         desc = m
           ? `${m.sub}: anime selezionati in base al tempo che hai a disposizione.`
           : 'Anime selezionati in base al tempo che hai a disposizione.';
       } else if (seg === 'lista') {
-        title = `La mia lista · ${BASE}`;
+        title = `${T.mList} · ${BASE}`;
         desc = 'La tua lista personale: salva gli anime da vedere e segna quelli già visti.';
       } else if (seg === 'profilo') {
         title = `Profilo · ${BASE}`;

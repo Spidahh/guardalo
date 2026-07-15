@@ -24,6 +24,8 @@ const m = (map, v) => (v == null ? v : (map[v] || v));
 const titles = data.titles.map(t => ({
   ...t,
   hook: enHook(t.id) || t.hook,
+  forWho: '',
+  tips: [],
   typeLabel: m(TYPE, t.typeLabel),
   statusLabel: m(STATUS, t.statusLabel),
   lengthLabel: m(LEN, t.lengthLabel),
