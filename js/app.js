@@ -124,6 +124,8 @@
     }
 
     boot() {
+      // Pagine /en/ … sono statiche, pre-renderizzate in inglese: la SPA italiana non le gestisce.
+      if (/^\/en(\/|$)/.test(location.pathname)) return;
       this.loadLocal();
       this.bindChrome();
       const attr = $('#footAttr'); if (attr) attr.textContent = DATA.attribution || '';
@@ -134,7 +136,7 @@
         const a = e.target.closest('a');
         if (!a) return;
         const href = a.getAttribute('href');
-        if (!href || !href.startsWith('/') || href.startsWith('//') || a.target === '_blank' || a.hasAttribute('download')) return;
+        if (!href || !href.startsWith('/') || href.startsWith('//') || href.startsWith('/en') || a.target === '_blank' || a.hasAttribute('download')) return;
         e.preventDefault();
         this.go(href);
       });

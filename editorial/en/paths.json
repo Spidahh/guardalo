@@ -1,0 +1,161 @@
+{
+  "da-zero-a-otaku": {
+    "title": "From Zero to Otaku",
+    "tagline": "Never watched anime? Start right here.",
+    "blurb": "The path for beginners: the right titles to fall in love with the medium.",
+    "about": "Never watched an anime, or only seen a few? These are the perfect starting points: accessible, gripping, well-made stories that instantly show you why half the world loves anime. No niche stuff, no endless commitment to get going."
+  },
+  "battle-shonen": {
+    "title": "Battle Shōnen",
+    "tagline": "Fights, powers that keep growing and rivalries: the most popular, recognizable action genre.",
+    "blurb": "Fights, growing powers, tournaments: action shōnen.",
+    "about": "Spectacular fights, powers that keep growing and heroes who never give up. Action shōnen is the gateway genre of anime: the one that raised half the world."
+  },
+  "seinen-e-maturo": {
+    "title": "Seinen & Grown-Up Stuff",
+    "tagline": "No squealing and friendship: crime, war, revenge, moral ambiguity. Anime written for people who've grown up.",
+    "blurb": "Anime for adults: heavy themes, violence, no sugar-coating.",
+    "about": "Adult stories: crime, war, revenge, moral ambiguity. No sugar-coating, characters who actually change, and real stakes."
+  },
+  "mindfuck": {
+    "title": "Mindfuck",
+    "tagline": "Psychological thrillers, mysteries and twists: stories built to blindside you.",
+    "blurb": "Psychological thrillers that mess with your head.",
+    "about": "Psychological thrillers, deception and plot twists. Stories that turn simple premises into perfect machines, built to catch you off guard."
+  },
+  "horror-e-disagio": {
+    "title": "Horror & Dread",
+    "tagline": "Horror, gore and unsettling atmospheres: anime that stick with you, with no happy ending guaranteed.",
+    "blurb": "Monsters, blood and nightmares: stuff that unsettles you.",
+    "about": "Monsters, gore and atmospheres that linger. No happy ending guaranteed: this is the best of animated horror, if you can stomach it."
+  },
+  "romance": {
+    "title": "Romance",
+    "tagline": "Love stories: from the sentimental drama that hits hard to the light romantic comedy.",
+    "blurb": "Love stories, from drama to romantic comedy.",
+    "about": "Love stories that actually work: from the sentimental drama that hits hard to the light romantic comedy."
+  },
+  "slice-of-life": {
+    "title": "Slice of Life",
+    "tagline": "No big events: everyday life, slow rhythms, little things. The comfort anime, the one you put on to feel good.",
+    "blurb": "Everyday life and slow rhythms: the comfort anime, zero stress."
+  },
+  "commedia": {
+    "title": "Comedy",
+    "tagline": "Anime made to crack you up. Goofy, absurd, surreal: when you just want to have fun without thinking about anything.",
+    "blurb": "Anime made purely to make you laugh.",
+    "about": "Anime made purely to make you laugh: goofy, absurd, surreal. When you just want to have fun without thinking about anything."
+  },
+  "sport": {
+    "title": "Sports",
+    "tagline": "Sweat, rivalry and that thrill when the decisive point is up in the air. You don't need to know a thing about the sport: the adrenaline hits all the same.",
+    "blurb": "Teams, rivalries and matches down to the wire."
+  },
+  "cinema-dautore": {
+    "title": "Animated Films",
+    "tagline": "The films that introduced Japanese animation to the world. Best seen big, on a screen that does them justice.",
+    "blurb": "The films by the great directors: Ghibli, Shinkai, Miyazaki and co.",
+    "about": "The films that introduced Japanese animation to the world: Ghibli, Miyazaki, Satoshi Kon, Shinkai. Best seen big, on a screen that does them justice."
+  },
+  "chicche-e-deep-cut": {
+    "title": "Hidden Gems",
+    "tagline": "Niche, little-known but high-quality titles: gems the crowd missed.",
+    "blurb": "Niche stuff almost nobody knows: for connoisseurs."
+  },
+  "azione": {
+    "title": "Adrenaline Action",
+    "tagline": "Zero dead time.",
+    "blurb": "Clashes, chases and animation that slaps.",
+    "about": "Pure adrenaline: spectacular fights, relentless pace and jaw-dropping animation. When you want something that starts right away and never lets go."
+  },
+  "antieroi": {
+    "title": "Antiheroes & Revenge",
+    "tagline": "No good guys versus bad guys.",
+    "blurb": "Ambiguous protagonists and dirty choices.",
+    "about": "Protagonists who aren't heroes: revenge, moral ambiguity, questionable means for questionable ends. Stories where 'right' and 'wrong' blur together."
+  },
+  "isekai": {
+    "title": "Isekai",
+    "tagline": "Transported or reborn in another world: you start from scratch, among levels, guilds and powers.",
+    "blurb": "Transported to another world: you start from scratch.",
+    "about": "The 'other world' genre: a protagonist ends up in a fantasy universe and has to get by, among skills, guilds and monsters. From pure entertainment to the more polished stories."
+  },
+  "fantasy": {
+    "title": "Fantasy",
+    "tagline": "Magical worlds born that way: epic adventures, creatures and magic, without arriving from another world.",
+    "blurb": "Magical worlds, epic adventure and creatures.",
+    "about": "Fantasy worlds built with care: magic, creatures, epic journeys. Unlike isekai, here the world is the characters' own from the start."
+  },
+  "sci-fi": {
+    "title": "Science Fiction",
+    "tagline": "Future, space, cyberpunk and big questions: from spectacle to reflection.",
+    "blurb": "Future, space and cyberpunk: animated sci-fi.",
+    "about": "Future and technology: grimy cyberpunk, space, artificial intelligence and dystopias. Sci-fi that makes you think as much as it dazzles."
+  },
+  "mecha": {
+    "title": "Mecha",
+    "tagline": "Giant piloted robots. The best ones aren't about robots, but about the people inside them.",
+    "blurb": "Giant piloted robots: war, pilots, drama.",
+    "about": "Giant piloted robots: from space wars to the intimate dramas of their pilots. A historic subgenre of animated science fiction."
+  },
+  "sopravvivenza": {
+    "title": "Survival",
+    "tagline": "Death games, battle royales and deadly rules: whoever stays alive wins.",
+    "blurb": "Death games and deadly rules: whoever stays alive wins.",
+    "about": "Deadly games, battle royales and nightmare premises: a group forced to survive ruthless rules. Sky-high tension."
+  },
+  "storici": {
+    "title": "Historical",
+    "tagline": "Real historical settings: wars, samurai, distant eras told seriously.",
+    "blurb": "Real eras: wars, samurai, history told for real.",
+    "about": "Stories set in real times and places: ancient wars, samurai, 1930s mafia. When animation tells History with weight and rigor."
+  },
+  "viaggi-nel-tempo": {
+    "title": "Time Travel",
+    "tagline": "Loops, time jumps and second chances: changing the past is never free.",
+    "blurb": "Loops and time jumps: changing the past isn't free.",
+    "about": "Stories built on time: repeating loops, jumps into the past, paradoxes. Often razor-tense thrillers, where every choice counts twice."
+  },
+  "supereroi": {
+    "title": "Superheroes",
+    "tagline": "Powers, secret identities and people in spandex: the anime version of the superhero comic.",
+    "blurb": "Powers and secret identities: superheroes, anime-style.",
+    "about": "Worlds where having a power is the norm: hero schools, rankings, vigilantes. Japan's answer to Western superheroes, often with a touch of parody."
+  },
+  "crimine": {
+    "title": "Crime & Gangsters",
+    "tagline": "Mafia, bounty hunters and the underworld: no heroes, just people living on the margins.",
+    "blurb": "Mafia, bounties and the underworld: people on the margins.",
+    "about": "Organized crime, bounty hunters, clan vendettas. Noir atmospheres and ambiguous characters, often written for an adult audience."
+  },
+  "vendetta": {
+    "title": "Revenge",
+    "tagline": "Driven by a wrong to repay: protagonists who burn for payback, at any cost.",
+    "blurb": "Driven by a wrong to repay, at any cost.",
+    "about": "Stories driven by a wrong suffered: revenge as the engine. Often dark and mature, they show what it costs — and what's left — after getting it."
+  },
+  "super-robot": {
+    "title": "Classic Super Robots",
+    "tagline": "The giant robots that founded the genre: Mazinger, Grendizer, Gundam. Where it all began.",
+    "blurb": "The historic giant robots: Mazinger, Grendizer, Gundam.",
+    "about": "The super robots that founded the genre in the '70s: Mazinger Z, Grendizer, Getter Robo, the first Gundam. The roots of all modern mecha."
+  },
+  "storie-che-spezzano": {
+    "title": "Stories That Break You",
+    "tagline": "Keep the tissues close.",
+    "blurb": "Anime that hit straight to the heart: dramas and goodbyes that stay.",
+    "about": "Stories you don't watch, you live. Dramas, losses and bonds that stick with you for days. If you're after something that makes you feel something strong, start here — but brace yourself."
+  },
+  "protagonisti-geniali": {
+    "title": "Brilliant Minds",
+    "tagline": "When the head matters more than the fists.",
+    "blurb": "Brilliant minds, perfect plans and battles of wits.",
+    "about": "No shouting and energy beams: here you win with your brain. Strategists, manipulators and geniuses who move others like pawns. For anyone who loves elaborate plans and calculated twists."
+  },
+  "spettacolo-occhi": {
+    "title": "A Feast for the Eyes",
+    "tagline": "Animation that drops your jaw.",
+    "blurb": "The titles with the most spectacular animation around.",
+    "about": "When you just want to sit there stunned. Studios like MAPPA, ufotable, Trigger and Wit go all out here: fights, colors and direction worth the watch on their own."
+  }
+}
