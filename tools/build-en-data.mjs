@@ -35,6 +35,12 @@ const paths = data.paths.map(p => {
 });
 const home = { ...(data.home || {}) };
 if (home.hero) home.hero = { ...home.hero, title: HOME_EN.title, sub: HOME_EN.sub };
+const TEMPO_EN = {
+  sera:    { label: 'One evening', sub: 'Start and finish tonight' },
+  weekend: { label: 'A weekend',   sub: 'A handful of episodes to enjoy at your pace' },
+  maratona:{ label: 'A marathon',  sub: 'Something to lose yourself in for a while' },
+};
+if (Array.isArray(home.tempo)) home.tempo = home.tempo.map(t => (TEMPO_EN[t.key] ? { ...t, ...TEMPO_EN[t.key] } : t));
 
 const out = { ...data, lang: 'en', titles, paths, home };
 const banner = '// ⚠️  FILE GENERATO da tools/build-en-data.mjs — NON modificare a mano.\n// Versione inglese di window.GUARDALO. Testi EN: editorial/en/* + sinossi AniList.\n';

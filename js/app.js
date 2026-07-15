@@ -29,6 +29,38 @@
   const LANG = DATA.lang === 'en' ? 'en' : 'it';
   const PFX = LANG === 'en' ? '/en' : '';
   const itGenre = LANG === 'en' ? (g => g) : (g => GENRE_IT[g] || g);
+  // ── dizionario testi UI (IT default, EN per la versione inglese) ──────────
+  const TT = {
+    it: {
+      hi:'Ciao,', welcome:'Benvenuto su GUARDALO', whereStart:'Da dove vuoi partire?',
+      startHere:'Inizia da qui', pickMethod:'scegli metodo, tono o tempo', quickPicks:'Scelte rapide',
+      howMuchTime:'Quanto tempo hai?', exploreAll:'Esplora tutto', seeGenres:'Vedi generi',
+      chooseStart:'Scegli un punto di partenza', methodFirst:'prima metodo, poi tono o durata',
+      watched:'Visto', toWatch:'Da vedere', seen:'Visto', notFoundH:'Pagina non trovata', notFoundP:'La pagina che cerchi non esiste o è stata spostata.', backHome:'Torna alla home',
+      titles:'titoli', bestTitle:'Il meglio', bestOf:'Il meglio di GUARDALO', bestLead:'I migliori di tutti: titoli messi in cima ad almeno un genere o percorso, senza doppioni e ordinati dal migliore.', bestBlurb:'I titoli più forti presi da generi e percorsi, senza doppioni.', safeBet:'vai sul sicuro', pathWord:'percorso',
+      generiTitle:'Generi', generiLead:'Scegli il tipo di storia. Viaggi nel tempo resta qui, nella zona mente e fantascienza.', percorsiTitle:'Percorsi', percorsiLead:'Non generi: scorciatoie editoriali per decidere più in fretta.',
+      laneAction:'Azione e adrenalina', laneDark:'Cupo, adulto, vendetta', laneMind:'Mente, tempo e fantascienza', laneFeel:'Sentimenti e quotidiano', laneWorlds:'Mondi, storia e cinema',
+      back:'Indietro', markWatched:'Segna visto', saved:'Salvato', share:'Condividi', techSheet:'Scheda tecnica', about:'Di cosa parla', comingSoon:'Scheda in arrivo.', forWhoLbl:'Per chi è:', howToWatch:'Come guardarlo', whereToWatch:'Dove vederlo', youMightLike:'Ti potrebbe piacere', startFromLbl:'Da dove iniziare:', goodToKnow:'Buono a sapersi', filmsOvas:'Film, OVA e speciali', legalOnly:'solo legale', noStream:'Nessuna piattaforma in streaming segnalata al momento.', lblRegia:'Regia', lblOrig:'Opera originale', lblBasedOn:'Tratto da', filterAll:'Tutti', showMore:'Mostra altri', likedThis:'Se ti è piaciuto questo', sameSaga:'Stessa saga', sameAuthor:'Stesso autore o regista', sameStudio:'Dallo stesso studio',
+      entry:[['Il meglio','solo priorità alte'],['Generi','per tipo di storia'],['Percorsi','liste editoriali'],['Esplora','tutti i filtri']],
+      moods:[['Roba adulta','seinen, disagio, crime'],['Azione','ritmo e combattimenti'],['Viaggi tempo','loop, passato, scelte'],['Antieroi','morale sporca'],['Storico','epoche e guerre'],['Film','una serata secca']],
+      guide:[['Generi','Sono il tipo di storia: azione, storico, horror, romance, viaggi nel tempo.'],['Percorsi','Sono tagli curati: antieroi, vendetta, mind game, roba adulta, chicche.'],['Fasce','Da vedere prima = priorità. Consigliati = solidi. Extra = recuperi dopo.']],
+    },
+    en: {
+      hi:'Hi,', welcome:'Welcome to GUARDALO', whereStart:'Where do you want to start?',
+      startHere:'Start here', pickMethod:'pick a method, mood or time', quickPicks:'Quick picks',
+      howMuchTime:'How much time do you have?', exploreAll:'Explore all', seeGenres:'See genres',
+      chooseStart:'Choose a starting point', methodFirst:'method first, then mood or length',
+      watched:'Watched', toWatch:'To watch', seen:'Watched', notFoundH:'Page not found', notFoundP:'The page you are looking for does not exist or has moved.', backHome:'Back to home',
+      titles:'titles', bestTitle:'The Best', bestOf:'The best of GUARDALO', bestLead:'The best of all: titles placed at the top of at least one genre or path, no duplicates, ordered best first.', bestBlurb:'The strongest titles from genres and paths, no duplicates.', safeBet:'a safe bet', pathWord:'path',
+      generiTitle:'Genres', generiLead:'Choose the type of story. Time travel lives here, in the mind & sci-fi area.', percorsiTitle:'Paths', percorsiLead:'Not genres: editorial shortcuts to decide faster.',
+      laneAction:'Action & adrenaline', laneDark:'Dark, adult, revenge', laneMind:'Mind, time & sci-fi', laneFeel:'Feelings & everyday', laneWorlds:'Worlds, history & cinema',
+      back:'Back', markWatched:'Mark watched', saved:'Saved', share:'Share', techSheet:'Details', about:"What it's about", comingSoon:'Details coming soon.', forWhoLbl:"Who it's for:", howToWatch:'How to watch it', whereToWatch:'Where to watch', youMightLike:'You might like', startFromLbl:'Where to start:', goodToKnow:'Good to know', filmsOvas:'Films, OVA & specials', legalOnly:'legal only', noStream:'No streaming platform listed at the moment.', lblRegia:'Director', lblOrig:'Original work', lblBasedOn:'Based on', filterAll:'All', showMore:'Show', likedThis:'If you liked this', sameSaga:'Same saga', sameAuthor:'Same author or director', sameStudio:'From the same studio',
+      entry:[['The Best','top priority only'],['Genres','by type of story'],['Paths','editorial lists'],['Explore','all filters']],
+      moods:[['Adult stuff','seinen, dread, crime'],['Action','pace and fights'],['Time travel','loops, past, choices'],['Antiheroes','dirty morals'],['Historical','eras and wars'],['Films','one evening']],
+      guide:[['Genres','The type of story: action, historical, horror, romance, time travel.'],['Paths','Curated cuts: antiheroes, revenge, mind games, adult stuff, gems.'],['Bands','Watch first = priority. Recommended = solid. Extra = catch up later.']],
+    },
+  };
+  const T = TT[LANG];
   // spiegazione semplice dei generi (niente roba da Wikipedia)
   const GENRE_GLOSS = {
     Action: 'Botte, inseguimenti, adrenalina.', Adventure: 'Viaggi ed esplorazione, un mondo da scoprire.',
@@ -57,7 +89,7 @@
   // fasce per-genere: tiers[pathId][slug] = 'e' Da vedere prima | 'c' Consigliato | 'd' Extra (default).
   const TIERS = CAT.tiers || {};
   const tierOf = (pid, slug) => (TIERS[pid] && TIERS[pid][slug]) || 'd';
-  const TIER_LABEL = { e: 'Da vedere prima', c: 'Consigliati', d: 'Extra' };
+  const TIER_LABEL = LANG === 'en' ? { e: 'Watch first', c: 'Recommended', d: 'Extra' } : { e: 'Da vedere prima', c: 'Consigliati', d: 'Extra' };
   const PATH_USE = {
     'da-zero-a-otaku': 'porta d ingresso',
     'storie-che-spezzano': 'dramma forte',
@@ -625,8 +657,8 @@
       </div>`;
     }
     statusBadge(t) {
-      const map = { 'Concluso': 'done', 'In corso': 'airing', 'Annunciato': 'soon', 'In pausa': 'soon', 'Cancellato': 'soon' };
-      const ic = { 'Concluso': 'ri-check-line', 'In corso': 'ri-loader-2-line', 'Annunciato': 'ri-time-line' };
+      const map = { 'Concluso': 'done', 'In corso': 'airing', 'Annunciato': 'soon', 'In pausa': 'soon', 'Cancellato': 'soon', 'Completed': 'done', 'Ongoing': 'airing', 'Upcoming': 'soon' };
+      const ic = { 'Concluso': 'ri-check-line', 'In corso': 'ri-loader-2-line', 'Annunciato': 'ri-time-line', 'Completed': 'ri-check-line', 'Ongoing': 'ri-loader-2-line', 'Upcoming': 'ri-time-line' };
       return `<span class="status status-${map[t.statusLabel] || 'soon'}"><i class="${ic[t.statusLabel] || 'ri-time-line'}"></i>${esc(t.statusLabel)}</span>`;
     }
     card(t, opts = {}) {
@@ -637,15 +669,16 @@
       const rank = opts.rank ? `<span class="card-rank">${opts.rank}</span>` : '';
       const essMark = (!opts.noEss && ESSENTIAL_IDS.has(t.id));
       const essTag = c => essMark ? `<span class="card-ess ${c}"><i class="ri-vip-crown-fill"></i> Top</span>` : '';
+      const TCARD = T;
       return `<a class="card ${w ? 'is-watched' : ''} ${l ? 'is-later' : ''} ${essMark ? 'has-ess' : ''}" data-card="${esc(t.id)}" data-band="${esc(t.lengthBand)}" href="/t/${esc(t.id)}" ${col}>
         <div class="card-poster">
           <img src="${esc(thumb(cover(t)))}" alt="${esc(t.title)}" loading="lazy" onload="this.classList.add('ld')" onerror="this.classList.add('ld')">
           ${rank}
           <div class="card-marks">
-            <button class="cm js-watch ${w ? 'on' : ''}" data-id="${esc(t.id)}" title="Visto" aria-label="Segna come visto"><i class="ri-check-line"></i></button>
-            <button class="cm js-later ${l ? 'on' : ''}" data-id="${esc(t.id)}" title="Da vedere" aria-label="Aggiungi a Da vedere"><i class="ri-bookmark-line"></i></button>
+            <button class="cm js-watch ${w ? 'on' : ''}" data-id="${esc(t.id)}" title="${TCARD.watched}" aria-label="${TCARD.watched}"><i class="ri-check-line"></i></button>
+            <button class="cm js-later ${l ? 'on' : ''}" data-id="${esc(t.id)}" title="${TCARD.toWatch}" aria-label="${TCARD.toWatch}"><i class="ri-bookmark-line"></i></button>
           </div>
-          ${w ? '<span class="card-seen"><i class="ri-check-double-line"></i> Visto</span>' : ''}
+          ${w ? `<span class="card-seen"><i class="ri-check-double-line"></i> ${TCARD.seen}</span>` : ''}
           ${essTag('card-ess-poster')}
           <span class="lchip ls-${t.lengthBand}" title="${esc(lenLabel(t))} · ${esc(lenHint(t))}"><i class="ri-time-line"></i>${esc(lenLabel(t))}</span>
         </div>
@@ -731,25 +764,15 @@
     }
     viewHome() {
       const heroImg = [...TITLES].filter(t => t.inList && t.bannerImage).sort(rankSort)[0] || [...TITLES].filter(t => t.bannerImage).sort(rankSort)[0];
-      const entry = [
-        ['Il meglio', 'solo priorita alte', 'ri-vip-crown-fill', '/essenziali', 'gold'],
-        ['Generi', 'per tipo di storia', 'ri-shapes-line', '/generi', 'blue'],
-        ['Percorsi', 'liste editoriali', 'ri-route-line', '/percorsi', 'cyan'],
-        ['Esplora', 'tutti i filtri', 'ri-compass-3-line', '/esplora', 'blue'],
-      ];
-      const moods = [
-        ['Roba adulta', 'seinen, disagio, crime', 'ri-skull-line', '/p/seinen-e-maturo', '#e05252'],
-        ['Azione', 'ritmo e combattimenti', 'ri-sword-line', '/p/azione', '#ef7c35'],
-        ['Viaggi tempo', 'loop, passato, scelte', 'ri-time-line', '/p/viaggi-nel-tempo', '#45c2ee'],
-        ['Antieroi', 'morale sporca', 'ri-knife-line', '/p/antieroi', '#9b6cf4'],
-        ['Storico', 'epoche e guerre', 'ri-book-open-line', '/p/storici', '#d99e12'],
-        ['Film', 'una serata secca', 'ri-movie-2-line', '/p/cinema-dautore', '#20b486'],
-      ];
-      const guide = [
-        ['Generi', 'Sono il tipo di storia: azione, storico, horror, romance, viaggi nel tempo.', 'ri-shapes-line'],
-        ['Percorsi', 'Sono tagli curati: antieroi, vendetta, mind game, roba adulta, chicche.', 'ri-route-line'],
-        ['Fasce', 'Da vedere prima = priorita. Consigliati = solidi. Extra = recuperi dopo.', 'ri-list-check-3'],
-      ];
+      const EIC = ['ri-vip-crown-fill','ri-shapes-line','ri-route-line','ri-compass-3-line'];
+      const EHR = ['/essenziali','/generi','/percorsi','/esplora']; const ETO = ['gold','blue','cyan','blue'];
+      const entry = T.entry.map((e,i) => [e[0], e[1], EIC[i], EHR[i], ETO[i]]);
+      const MIC = ['ri-skull-line','ri-sword-line','ri-time-line','ri-knife-line','ri-book-open-line','ri-movie-2-line'];
+      const MHR = ['/p/seinen-e-maturo','/p/azione','/p/viaggi-nel-tempo','/p/antieroi','/p/storici','/p/cinema-dautore'];
+      const MAC = ['#e05252','#ef7c35','#45c2ee','#9b6cf4','#d99e12','#20b486'];
+      const moods = T.moods.map((m,i) => [m[0], m[1], MIC[i], MHR[i], MAC[i]]);
+      const GIC = ['ri-shapes-line','ri-route-line','ri-list-check-3'];
+      const guide = T.guide.map((g,i) => [g[0], g[1], GIC[i]]);
       const entryCard = ([title, sub, ic, href, tone]) => `<a class="home-entry-card ${tone === 'gold' ? 'gold' : ''}" href="${href}"><i class="${ic}"></i><span><b>${title}</b><em>${sub}</em></span></a>`;
       const moodCard = ([title, sub, ic, href, accent]) => `<a class="home-mood-card" href="${href}" style="--accent:${accent}"><i class="${ic}"></i><span><b>${title}</b><em>${sub}</em></span></a>`;
       const guideCard = ([title, text]) => `<div class="home-guide-card"><b>${title}</b><span>${text}</span></div>`;
@@ -765,19 +788,19 @@
             ${heroImg ? `<img class="hm-hero-img" src="${esc(heroImg.bannerImage || cover(heroImg))}" alt="" loading="eager" onload="this.classList.add('ld')" onerror="this.classList.add('ld')">` : ''}
             <span class="hm-hero-veil"></span>
             <div class="hm-hero-txt">
-              <p class="hm-hi">${firstName ? `Ciao, ${firstName}` : 'Benvenuto su GUARDALO'}</p>
-              <h1 class="hm-hero-title">Da dove vuoi partire?</h1>
+              <p class="hm-hi">${firstName ? `${T.hi} ${firstName}` : T.welcome}</p>
+              <h1 class="hm-hero-title">${T.whereStart}</h1>
             </div>
           </div>
           <section class="hm-panel">
             <div class="hm-panel-head">
-              <b>Inizia da qui</b>
-              <span>scegli metodo, tono o tempo</span>
+              <b>${T.startHere}</b>
+              <span>${T.pickMethod}</span>
             </div>
             <div class="home-entry-grid mobile">${entry.map(entryCard).join('')}</div>
-            <div class="hm-mini-title"><i class="ri-compass-3-line"></i> Scelte rapide</div>
+            <div class="hm-mini-title"><i class="ri-compass-3-line"></i> ${T.quickPicks}</div>
             <div class="home-mood-grid mobile">${moods.map(moodCard).join('')}</div>
-            <div class="hm-mini-title"><i class="ri-time-line"></i> Quanto tempo hai?</div>
+            <div class="hm-mini-title"><i class="ri-time-line"></i> ${T.howMuchTime}</div>
             <div class="home-time-row mobile">${tempo.map(timeCard).join('')}</div>
           </section>
           <div class="home-guide mobile">${guide.map(guideCard).join('')}</div>
@@ -788,29 +811,29 @@
           ${heroImg ? `<div class="home-hero-art"><img src="${esc(heroImg.bannerImage || cover(heroImg))}" alt="" loading="eager" onload="this.classList.add('ld')" onerror="this.classList.add('ld')"></div>` : ''}
           <span class="home-hero-veil"></span>
           <div class="home-hero-in">
-            ${this.user ? `<span class="hh-kicker">Ciao, ${esc((this.user.displayName || (this.user.email || '').split('@')[0]).split(' ')[0])}</span>` : ''}
+            ${this.user ? `<span class="hh-kicker">${T.hi} ${esc((this.user.displayName || (this.user.email || '').split('@')[0]).split(' ')[0])}</span>` : ''}
             <h1 class="hh-title">${esc(H.title || '')}</h1>
             <p class="hh-sub">${esc(H.sub || '')}</p>
             <div class="hh-cta">
-              <a class="btn-red" href="/esplora"><i class="ri-compass-3-line"></i> Esplora tutto</a>
-              <a class="hh-btn ghost" href="/generi"><i class="ri-shapes-line"></i> Vedi generi</a>
+              <a class="btn-red" href="/esplora"><i class="ri-compass-3-line"></i> ${T.exploreAll}</a>
+              <a class="hh-btn ghost" href="/generi"><i class="ri-shapes-line"></i> ${T.seeGenres}</a>
             </div>
           </div>
         </section>
 
         <section class="home-start home-full">
           <div class="home-start-head">
-            <div><b>Scegli un punto di partenza</b><span>prima metodo, poi tono o durata</span></div>
+            <div><b>${T.chooseStart}</b><span>${T.methodFirst}</span></div>
             <i class="ri-cursor-line"></i>
           </div>
           <div class="home-entry-grid">${entry.map(entryCard).join('')}</div>
           <div class="home-start-body">
             <div class="home-cluster">
-              <div class="home-cluster-head"><i class="ri-compass-3-line"></i><span>Scelte rapide</span></div>
+              <div class="home-cluster-head"><i class="ri-compass-3-line"></i><span>${T.quickPicks}</span></div>
               <div class="home-mood-grid">${moods.map(moodCard).join('')}</div>
             </div>
             <div class="home-cluster home-cluster-time">
-              <div class="home-cluster-head"><i class="ri-time-line"></i><span>Quanto tempo hai?</span></div>
+              <div class="home-cluster-head"><i class="ri-time-line"></i><span>${T.howMuchTime}</span></div>
               <div class="home-time-row">${tempo.map(timeCard).join('')}</div>
             </div>
           </div>
@@ -824,11 +847,11 @@
     viewEssenziali() {
       const list = essentialTitles();
       return `<section class="wrap esplora-head essentials-head">
-        <h1>Il meglio</h1>
-        <p>I migliori di tutti: titoli messi in cima ad almeno un genere o percorso, senza doppioni e ordinati dal migliore.</p>
+        <h1>${T.bestTitle}</h1>
+        <p>${T.bestLead}</p>
       </section>
       <section class="wrap">
-        <div class="sec-head sub"><h2><i class="ri-vip-crown-fill"></i> Il meglio di GUARDALO</h2><span class="sec-count">${list.length} titoli</span></div>
+        <div class="sec-head sub"><h2><i class="ri-vip-crown-fill"></i> ${T.bestOf}</h2><span class="sec-count">${list.length} ${T.titles}</span></div>
         ${this.pagedGrid(list)}
       </section>`;
     }
@@ -851,13 +874,13 @@
       ]);
       const other = GENRE_PATHS.map(p => p.id).filter(id => !used.has(id));
       return `<section class="wrap sec-page">
-        <div class="sec-page-head genre-page-head"><h1>Generi</h1><p>Scegli il tipo di storia. Viaggi nel tempo resta qui, nella zona mente e fantascienza.</p></div>
+        <div class="sec-page-head genre-page-head"><h1>${T.generiTitle}</h1><p>${T.generiLead}</p></div>
         <div class="genre-map">
-          ${lane('Azione e adrenalina', 'ri-sword-line', ['battle-shonen','azione','supereroi','sport'])}
-          ${lane('Cupo, adulto, vendetta', 'ri-skull-line', ['seinen-e-maturo','horror-e-disagio','sopravvivenza','vendetta','antieroi','crimine'])}
-          ${lane('Mente, tempo e fantascienza', 'ri-brain-line', ['mindfuck','viaggi-nel-tempo','sci-fi','mecha','super-robot'])}
-          ${lane('Sentimenti e quotidiano', 'ri-heart-3-line', ['romance','commedia','slice-of-life'])}
-          ${lane('Mondi, storia e cinema', 'ri-earth-line', ['fantasy','isekai','storici','cinema-dautore', ...other])}
+          ${lane(T.laneAction, 'ri-sword-line', ['battle-shonen','azione','supereroi','sport'])}
+          ${lane(T.laneDark, 'ri-skull-line', ['seinen-e-maturo','horror-e-disagio','sopravvivenza','vendetta','antieroi','crimine'])}
+          ${lane(T.laneMind, 'ri-brain-line', ['mindfuck','viaggi-nel-tempo','sci-fi','mecha','super-robot'])}
+          ${lane(T.laneFeel, 'ri-heart-3-line', ['romance','commedia','slice-of-life'])}
+          ${lane(T.laneWorlds, 'ri-earth-line', ['fantasy','isekai','storici','cinema-dautore', ...other])}
         </div>
       </section>`;
     }
@@ -865,20 +888,20 @@
     viewPercorsi() {
       const row = (p, opts = {}) => {
         const mem = opts.essential ? essentialTitles() : catTitles(p);
-        const title = opts.essential ? 'Il meglio' : p.title;
+        const title = opts.essential ? T.bestTitle : p.title;
         const href = opts.essential ? '/essenziali' : `/p/${esc(p.id)}`;
         const icon = opts.essential ? 'ri-vip-crown-fill' : p.icon;
-        const use = opts.essential ? 'vai sul sicuro' : (PATH_USE[p.id] || 'percorso');
-        const blurb = opts.essential ? 'I titoli piu forti presi da generi e percorsi, senza doppioni.' : (p.blurb || p.tagline);
+        const use = opts.essential ? T.safeBet : (LANG === 'en' ? T.pathWord : (PATH_USE[p.id] || T.pathWord));
+        const blurb = opts.essential ? T.bestBlurb : (p.blurb || p.tagline);
         const accent = opts.essential ? 'var(--gold)' : p.accent;
         return `<a class="route-row" href="${href}" style="--accent:${esc(accent)}">
           <span class="route-ic"><i class="${esc(icon)}"></i></span>
           <span class="route-main"><b>${esc(title)}</b><em>${esc(blurb)}</em></span>
-          <span class="route-meta"><i>${esc(use)}</i><strong>${mem.length} titoli</strong></span>
+          <span class="route-meta"><i>${esc(use)}</i><strong>${mem.length} ${T.titles}</strong></span>
         </a>`;
       };
       return `<section class="wrap sec-page">
-        <div class="sec-page-head route-page-head"><h1>Percorsi</h1><p>Non generi: scorciatoie editoriali per decidere piu in fretta.</p></div>
+        <div class="sec-page-head route-page-head"><h1>${T.percorsiTitle}</h1><p>${T.percorsiLead}</p></div>
         <div class="route-list">${row(null, { essential: true })}${PERCORSI_PATHS.map(p => row(p)).join('')}</div>
       </section>`;
     }
@@ -969,13 +992,13 @@
         <section class="wrap">
           <div class="cat-filter" id="catFilter">
             <span class="cf-lbl">Quanto tempo hai?</span>
-            <button class="cf-chip on" data-band="all">Tutti</button>
+            <button class="cf-chip on" data-band="all">${T.filterAll}</button>
             ${TEMPO.map(t => `<button class="cf-chip" data-band="${esc(t.key)}">${esc(t.label)}</button>`).join('')}
           </div>
         </section>`;
         const sec = (label, ic, list, cls) => list.length ? `
           <section class="wrap">
-            <div class="sec-divider ${cls || ''}"><span class="sd-label"><i class="${ic}"></i> ${label}</span><span class="sd-line"></span><span class="sd-count">${list.length} titoli</span></div>
+            <div class="sec-divider ${cls || ''}"><span class="sd-label"><i class="${ic}"></i> ${label}</span><span class="sd-line"></span><span class="sd-count">${list.length} ${T.titles}</span></div>
             <div class="grid">${list.map(t => this.card(t, { noEss: true })).join('')}</div>
           </section>` : '';
         const body = noPersonal
@@ -1014,8 +1037,8 @@
       // film/OVA/speciali: se pochi mostrali, se tanti (One Piece = 42) collassali in un menù a scomparsa
       const extraPills = extras.map(s => relAnchor(s.name, esc(s.name), 'se-chip')).join('');
       const extrasHtml = !extras.length ? '' : (extras.length > 6
-        ? `<details class="extra-fold"><summary><span class="se-h"><i class="ri-film-line"></i> Film, OVA e speciali <b>(${extras.length})</b></span></summary><div class="se-list">${extraPills}</div></details>`
-        : `<div class="struct-extra"><span class="se-h"><i class="ri-film-line"></i> Film, OVA e speciali (${extras.length})</span><div class="se-list">${extraPills}</div></div>`);
+        ? `<details class="extra-fold"><summary><span class="se-h"><i class="ri-film-line"></i> ${T.filmsOvas} <b>(${extras.length})</b></span></summary><div class="se-list">${extraPills}</div></details>`
+        : `<div class="struct-extra"><span class="se-h"><i class="ri-film-line"></i> ${T.filmsOvas} (${extras.length})</span><div class="se-list">${extraPills}</div></div>`);
       // "Come guardarlo": da dove iniziare + struttura + film/OVA (raggruppati)
       const structInner = struct.length ? `
           ${mainSteps.length ? `<ol class="struct">${mainSteps.map(s => `<li>${relAnchor(s.name, `<span class="st-name">${esc(s.name)}</span><span class="st-ep">${esc(s.episodes)}${s.year ? ` · ${s.year}` : ''}</span>`, 'st-row')}</li>`).join('')}</ol>` : ''}
@@ -1023,19 +1046,19 @@
       // "Buono a sapersi" (note pratiche) va DENTRO il box "Di cosa parla", non come box a sé
       const tipsInner = (t.tips && t.tips.length) ? `
           <div class="t-tips">
-            <span class="t-tips-h"><i class="ri-lightbulb-flash-line"></i> Buono a sapersi</span>
+            <span class="t-tips-h"><i class="ri-lightbulb-flash-line"></i> ${T.goodToKnow}</span>
             <ul>${t.tips.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
           </div>` : '';
       const watchBody = (struct.length || t.startFrom) ? `
-          ${t.startFrom ? `<p class="t-startfrom"><b>Da dove iniziare:</b> <em>${esc(t.startFrom)}</em></p>` : ''}
+          ${t.startFrom ? `<p class="t-startfrom"><b>${T.startFromLbl}</b> <em>${esc(t.startFrom)}</em></p>` : ''}
           ${structInner}` : '';
 
       const streaming = (t.streaming || []);
       const streamBody = `
-          <p class="t-legal"><span class="legal-pill">solo legale</span></p>
+          <p class="t-legal"><span class="legal-pill">${T.legalOnly}</span></p>
           ${streaming.length
             ? `<div class="streams">${streaming.map(s => `<a class="stream" href="${esc(s.url)}" target="_blank" rel="noopener nofollow"><i class="ri-external-link-line"></i> ${esc(s.name)}</a>`).join('')}</div>`
-            : `<p class="muted-line">Nessuna piattaforma in streaming segnalata al momento.</p>`}`;
+            : `<p class="muted-line">${T.noStream}</p>`}`;
 
       const recs = this.recsSections(t);
 
@@ -1043,9 +1066,9 @@
       const fLink = (field, val) => `<a class="cr-link" href="/cerca/${field}/${encodeURIComponent(val)}" title="Vedi altri titoli">${esc(val)}</a>`;
       const credits = [
         t.studios?.length ? ['Studio', t.studios.map(s => fLink('studio', s)).join(', ')] : null,
-        t.director ? ['Regia', fLink('regista', t.director)] : null,
-        t.creator ? ['Opera originale', fLink('autore', t.creator)] : null,
-        t.sourceLabel ? ['Tratto da', esc(t.sourceLabel)] : null,
+        t.director ? [T.lblRegia, fLink('regista', t.director)] : null,
+        t.creator ? [T.lblOrig, fLink('autore', t.creator)] : null,
+        t.sourceLabel ? [T.lblBasedOn, esc(t.sourceLabel)] : null,
       ].filter(Boolean).map(([k, v]) => `<div class="cr"><span>${k}</span><b>${v}</b></div>`).join('');
 
       const banner = t.bannerImage
@@ -1059,15 +1082,15 @@
           <aside class="t-aside">
             <img class="t-cover" src="${esc(cover(t))}" alt="${esc(t.title)}">
             <div class="t-actions">
-              <button class="t-btn js-watch ${w ? 'on' : ''}" data-id="${esc(t.id)}"><i class="ri-check-double-line"></i> ${w ? 'Visto' : 'Segna visto'}</button>
-              <button class="t-btn ghost js-later ${l ? 'on' : ''}" data-id="${esc(t.id)}"><i class="ri-bookmark-line"></i> ${l ? 'Salvato' : 'Da vedere'}</button>
-              <button class="t-btn ghost js-share" data-id="${esc(t.id)}" data-title="${esc(t.title)}"><i class="ri-share-forward-line"></i> Condividi</button>
+              <button class="t-btn js-watch ${w ? 'on' : ''}" data-id="${esc(t.id)}"><i class="ri-check-double-line"></i> ${w ? T.watched : T.markWatched}</button>
+              <button class="t-btn ghost js-later ${l ? 'on' : ''}" data-id="${esc(t.id)}"><i class="ri-bookmark-line"></i> ${l ? T.saved : T.toWatch}</button>
+              <button class="t-btn ghost js-share" data-id="${esc(t.id)}" data-title="${esc(t.title)}"><i class="ri-share-forward-line"></i> ${T.share}</button>
             </div>
-            ${credits ? this.tFold('credits', 'ri-information-line', 'Scheda tecnica', `<div class="t-credits">${credits}</div>`, false) : ''}
+            ${credits ? this.tFold('credits', 'ri-information-line', T.techSheet, `<div class="t-credits">${credits}</div>`, false) : ''}
           </aside>
 
           <div class="t-main">
-            <a class="back" href="javascript:history.back()"><i class="ri-arrow-left-line"></i> Indietro</a>
+            <a class="back" href="javascript:history.back()"><i class="ri-arrow-left-line"></i> ${T.back}</a>
             <h1 class="t-title">${esc(t.title)}</h1>
             ${(t.titleNative && t.titleNative.toLowerCase().replace(/\s+/g, '') !== t.title.toLowerCase().replace(/\s+/g, '')) ? `<p class="t-native">${esc(t.titleNative)}</p>` : ''}
 
@@ -1080,13 +1103,13 @@
 
             ${genres ? `<div class="t-tags">${genres}</div>` : ''}
 
-            ${this.tFold('about', 'ri-file-text-line', 'Di cosa parla', `
-              <p>${esc(t.hook || 'Scheda in arrivo.')}</p>
-              ${t.forWho ? `<p class="t-forwho"><b>Per chi è:</b> ${esc(t.forWho)}</p>` : ''}
+            ${this.tFold('about', 'ri-file-text-line', T.about, `
+              <p>${esc(t.hook || T.comingSoon)}</p>
+              ${t.forWho ? `<p class="t-forwho"><b>${T.forWhoLbl}</b> ${esc(t.forWho)}</p>` : ''}
               ${tipsInner}`, true)}
-            ${watchBody ? this.tFold('watch', 'ri-list-ordered', 'Come guardarlo', watchBody, false) : ''}
-            ${this.tFold('stream', 'ri-play-circle-line', 'Dove vederlo', streamBody, false)}
-            ${recs ? this.tFold('recs', 'ri-heart-3-line', 'Ti potrebbe piacere', recs, false) : ''}
+            ${watchBody ? this.tFold('watch', 'ri-list-ordered', T.howToWatch, watchBody, false) : ''}
+            ${this.tFold('stream', 'ri-play-circle-line', T.whereToWatch, streamBody, false)}
+            ${recs ? this.tFold('recs', 'ri-heart-3-line', T.youMightLike, recs, false) : ''}
           </div>
         </div>
       </article>`;
@@ -1109,10 +1132,10 @@
       const autore = take(r.autore).slice(0, 12);
       const studio = take(r.studio).slice(0, 12);
       const blocks = [
-        ['Se ti è piaciuto questo', 'ri-heart-3-line', simili, true],
-        ['Stessa saga', 'ri-links-line', saga, false],
-        ['Stesso autore o regista', 'ri-user-star-line', autore, true],
-        ['Dallo stesso studio', 'ri-building-line', studio, true],
+        [T.likedThis, 'ri-heart-3-line', simili, true],
+        [T.sameSaga, 'ri-links-line', saga, false],
+        [T.sameAuthor, 'ri-user-star-line', autore, true],
+        [T.sameStudio, 'ri-building-line', studio, true],
       ];
       return blocks.map(([label, ic, list, why]) => list.length ? `<div class="t-sec">
           <h3 class="t-sec-h"><i class="${ic}"></i> ${label}</h3>
@@ -1124,7 +1147,7 @@
     pagedGrid(list) {
       this.esploraAll = list;
       return `<div class="grid" id="esploraGrid">${list.slice(0, ESPLORA_PAGE).map(t => this.card(t)).join('')}</div>
-        ${list.length > ESPLORA_PAGE ? `<div class="more-wrap"><button class="btn-ghost js-more" id="esploraMore"><i class="ri-add-line"></i> Mostra altri ${list.length - ESPLORA_PAGE} titoli</button></div>` : ''}`;
+        ${list.length > ESPLORA_PAGE ? `<div class="more-wrap"><button class="btn-ghost js-more" id="esploraMore"><i class="ri-add-line"></i> ${T.showMore} ${list.length - ESPLORA_PAGE} ${T.titles}</button></div>` : ''}`;
     }
     // filtra+ordina la lista Esplora secondo i menù
     esploraList() {
@@ -1203,7 +1226,7 @@
       if (!f || !value) return this.notFound();
       const list = TITLES.filter(f.match).sort(rankSort);
       const head = `<section class="wrap esplora-head">
-        <a class="back" href="javascript:history.back()"><i class="ri-arrow-left-line"></i> Indietro</a>
+        <a class="back" href="javascript:history.back()"><i class="ri-arrow-left-line"></i> ${T.back}</a>
         <h1><span class="facet-kind">${esc(f.label)}</span> ${esc(f.show(value))}</h1>
         <p>${list.length ? `${list.length} ${list.length === 1 ? 'titolo' : 'titoli'}, dal migliore.` : 'Nessun titolo trovato per questo.'}</p>
       </section>`;
@@ -1653,7 +1676,7 @@
     }
 
     notFound() {
-      return `<section class="wrap empty big"><i class="ri-compass-3-line"></i><h1>Non trovato</h1><p>Questa pagina non esiste.</p><a class="btn-ghost" href="/">Torna alla home</a></section>`;
+      return `<section class="wrap empty big"><i class="ri-compass-3-line"></i><h1>${T.notFoundH}</h1><p>${T.notFoundP}</p><a class="btn-ghost" href="/">${T.backHome}</a></section>`;
     }
 
     // ── RICERCA ──────────────────────────────────────────────────────────────────
