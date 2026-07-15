@@ -3,6 +3,8 @@
   "buildCommand": "npm run build:site",
   "outputDirectory": ".",
   "rewrites": [
+    { "source": "/en", "destination": "/en/index.html" },
+    { "source": "/en/(.*)", "destination": "/en/index.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ],
   "headers": [
