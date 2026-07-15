@@ -141,6 +141,7 @@ function template(lang) {
 
 function page(lang, { fullPath, title, desc, ogImage, jsonld, content, alternates }) {
   let h = template(lang);
+  h = h.replace(/<meta property="og:locale(:alternate)?" content="[^"]*">/g, '');
   const ogLoc = lang === 'en' ? 'en_US' : 'it_IT';
   const ogAlt = lang === 'en' ? 'it_IT' : 'en_US';
   h = h.replace('<meta property="og:type" content="website">', `<meta property="og:type" content="website"><meta property="og:locale" content="${ogLoc}"><meta property="og:locale:alternate" content="${ogAlt}">`);

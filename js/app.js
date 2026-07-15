@@ -60,7 +60,41 @@
       guide:[['Genres','The type of story: action, historical, horror, romance, time travel.'],['Paths','Curated cuts: antiheroes, revenge, mind games, adult stuff, gems.'],['Bands','Watch first = priority. Recommended = solid. Extra = catch up later.']],
     },
   };
-  const T = TT[LANG];
+  const T = TT[LANG];
+  Object.assign(TT.it, {
+    explore:'Esplora', exploreLead:'Tutti i titoli. Filtra per trovare quello giusto.', orSearch:'o cerca un titolo →',
+    genresAndPaths:'Generi e percorsi', clear:'Pulisci', genresLbl:'Generi', pathsLbl:'Percorsi',
+    anyLength:'Qualsiasi durata', seriesAndFilms:'Serie e film', onlySeries:'Solo serie', onlyFilms:'Solo film', onlyTop:'Solo top',
+    sortBest:'Dal migliore', sortScore:'Voto più alto', sortRecent:'Più recenti', results:'Risultati',
+    titleSing:'titolo', titlePlural:'titoli', noResults:'Nessun titolo trovato per questo.', fromBest:'dal migliore.',
+    fStudio:'Studio', fDirector:'Regia di', fWork:'Opera di', fTheme:'Tema', fMood:'Atmosfera', fGenre:'Genere',
+    listEmptyH:'La tua lista è vuota', listEmptyP:'Salva i titoli che vuoi vedere (segnalibro 🔖) e segna quelli già visti (✓). Li ritrovi qui, sincronizzati se accedi.',
+    browseGenres:'Sfoglia i generi', goToPaths:'Vai ai percorsi', noToWatchFilter:'Nessun titolo «da vedere» con questo filtro.',
+    allGenres:'Tutti i generi', shortest:'Più corti', score:'Voto', myList:'La mia lista', pickForMe:'Scegli per me',
+    statWatched:'visti', statToWatch:'da vedere', statHours:'guardate', toWatchH:'Da vedere', watchedH:'Visti',
+    nothingYet:'Niente ancora in lista. Sfoglia i percorsi e salva cosa ti incuriosisce.', markSeen:'Segna i titoli che hai già visto.',
+    yourProfile:'Il tuo profilo', profileGate:'Accedi per ritrovare la tua lista su ogni dispositivo e vedere le tue statistiche.',
+    signInGoogle:'Accedi con Google', signOut:'Esci', browsePaths:'Sfoglia i percorsi e salva cosa ti incuriosisce.',
+    searchHint:'Cerca per titolo, studio, regista, genere o atmosfera.', noSearch:'Nessun titolo per', tWatched:'✓ Segnato come visto', tUnwatched:'Rimosso dai visti', tLater:'🔖 Aggiunto a Da vedere', tUnlater:'Rimosso da Da vedere', orderedBest:'ordinati dal migliore',
+    syncFail:'Sincronizzazione non riuscita — riprova più tardi.',
+  });
+  Object.assign(TT.en, {
+    explore:'Explore', exploreLead:'All titles. Filter to find the right one.', orSearch:'or search a title →',
+    genresAndPaths:'Genres and paths', clear:'Clear', genresLbl:'Genres', pathsLbl:'Paths',
+    anyLength:'Any length', seriesAndFilms:'Series & films', onlySeries:'Series only', onlyFilms:'Films only', onlyTop:'Top only',
+    sortBest:'Best first', sortScore:'Highest rated', sortRecent:'Most recent', results:'Results',
+    titleSing:'title', titlePlural:'titles', noResults:'No titles found for this.', fromBest:'best first.',
+    fStudio:'Studio', fDirector:'Directed by', fWork:'Work by', fTheme:'Theme', fMood:'Mood', fGenre:'Genre',
+    listEmptyH:'Your list is empty', listEmptyP:'Save the titles you want to watch (bookmark 🔖) and mark the ones you have seen (✓). You will find them here, synced if you sign in.',
+    browseGenres:'Browse genres', goToPaths:'Go to paths', noToWatchFilter:'No "to watch" titles with this filter.',
+    allGenres:'All genres', shortest:'Shortest', score:'Score', myList:'My list', pickForMe:'Pick for me',
+    statWatched:'watched', statToWatch:'to watch', statHours:'watched', toWatchH:'To watch', watchedH:'Watched',
+    nothingYet:'Nothing here yet. Browse the paths and save what catches your eye.', markSeen:'Mark the titles you have already seen.',
+    yourProfile:'Your profile', profileGate:'Sign in to find your list on every device and see your stats.',
+    signInGoogle:'Sign in with Google', signOut:'Sign out', browsePaths:'Browse the paths and save what catches your eye.',
+    searchHint:'Search by title, studio, director, genre or mood.', noSearch:'No titles for', tWatched:'✓ Marked as watched', tUnwatched:'Removed from watched', tLater:'🔖 Added to To watch', tUnlater:'Removed from To watch', orderedBest:'best first',
+    syncFail:'Sync failed — try again later.',
+  });
   // spiegazione semplice dei generi (niente roba da Wikipedia)
   const GENRE_GLOSS = {
     Action: 'Botte, inseguimenti, adrenalina.', Adventure: 'Viaggi ed esplorazione, un mondo da scoprire.',
@@ -236,7 +270,7 @@
         if (!this.user || !window.db) return;
         window.db.collection('users').doc(this.user.uid)
           .set({ guardalo: { watched: this.watched, toWatch: this.toWatch, updatedAt: this.dataTs } }, { merge: true })
-          .catch(() => { this.toast('Sincronizzazione non riuscita — riprova più tardi.', 'muted'); });
+          .catch(() => { this.toast(T.syncFail, 'muted'); });
       }, 1200);
     }
     isWatched(id) { return !!this.watched[id]; }
@@ -255,8 +289,8 @@
       this.refreshMarks(id);
       const on = field === 'watched' ? this.isWatched(id) : this.isLater(id);
       const msg = field === 'watched'
-        ? (on ? '✓ Segnato come visto' : 'Rimosso dai visti')
-        : (on ? '🔖 Aggiunto a “Da vedere”' : 'Rimosso da “Da vedere”');
+        ? (on ? T.tWatched : T.tUnwatched)
+        : (on ? T.tLater : T.tUnlater);
       this.toast(msg, on ? (field === 'watched' ? 'ok' : 'later') : 'muted');
     }
 
@@ -270,9 +304,9 @@
       });
       // scheda titolo: i bottoni grandi non hanno data-card → aggiorno stato + etichetta a mano
       const wb = document.querySelector(`.t-btn.js-watch[data-id="${CSS.escape(id)}"]`);
-      if (wb) { wb.classList.toggle('on', this.isWatched(id)); wb.innerHTML = `<i class="ri-check-double-line"></i> ${this.isWatched(id) ? 'Visto' : 'Segna visto'}`; }
+      if (wb) { wb.classList.toggle('on', this.isWatched(id)); wb.innerHTML = `<i class="ri-check-double-line"></i> ${this.isWatched(id) ? T.watched : T.markWatched}`; }
       const lb = document.querySelector(`.t-btn.js-later[data-id="${CSS.escape(id)}"]`);
-      if (lb) { lb.classList.toggle('on', this.isLater(id)); lb.innerHTML = `<i class="ri-bookmark-line"></i> ${this.isLater(id) ? 'Salvato' : 'Da vedere'}`; }
+      if (lb) { lb.classList.toggle('on', this.isLater(id)); lb.innerHTML = `<i class="ri-bookmark-line"></i> ${this.isLater(id) ? T.saved : T.toWatch}`; }
       // su home e pagine genere bastano le spunte: NON ri-renderizzare (niente salto in cima)
       // su /lista la composizione delle liste cambia: ri-renderizza ma conserva ordine/filtro e scroll
       if ((location.pathname || '/') === '/lista') {
@@ -454,7 +488,7 @@
       grid.insertAdjacentHTML('beforeend', next.map(t => this.card(t)).join(''));
       const remaining = this.esploraAll.length - (shown + next.length);
       if (btn) {
-        if (remaining > 0) btn.innerHTML = `<i class="ri-add-line"></i> Mostra altri ${remaining} titoli`;
+        if (remaining > 0) btn.innerHTML = `<i class="ri-add-line"></i> ${T.showMore} ${remaining} ${T.titlePlural}`;
         else btn.closest('.more-wrap')?.remove();
       }
     }
@@ -486,6 +520,7 @@
       const app = $('#app');
       app.innerHTML = html;
       document.querySelectorAll('.side-nav a, .side-time-nav a, .bottom-nav a').forEach(a => { const on = a.dataset.route === active; a.classList.toggle('active', on); on ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current'); });
+      const ls = document.querySelector('.lang-switch'); if (ls) ls.setAttribute('href', LANG === 'en' ? (location.pathname.replace(/^\/en/, '') || '/') : ('/en' + (location.pathname === '/' ? '/' : location.pathname)));
       // ribadisce la visibilità di Gestione/Profilo a ogni navigazione (robustezza)
       const sa = $('#sideAdmin'); if (sa) sa.hidden = !this.isAdmin;
       const ta = $('#topAdmin'); if (ta) ta.hidden = !this.isAdmin;
@@ -533,7 +568,7 @@
           : 'Anime selezionati in base al tempo che hai a disposizione.';
       } else if (seg === 'lista') {
         title = `${T.mList} · ${BASE}`;
-        desc = 'La tua lista personale: salva gli anime da vedere e segna quelli già visti.';
+        desc = T.mListD;
       } else if (seg === 'profilo') {
         title = `Profilo · ${BASE}`;
         desc = 'Statistiche personali, progressi e preferenze salvate su GUARDALO.';
@@ -720,7 +755,7 @@
           <span class="genre-card-ic"><i class="${esc(p.icon)}"></i></span>
           <span class="genre-card-txt">
             <span class="genre-card-name">${esc(p.title)}</span>
-            <span class="genre-card-n">${mem.length} titoli</span>
+            <span class="genre-card-n">${mem.length} ${T.titlePlural}</span>
           </span>
           <i class="ri-arrow-right-s-line genre-card-arr"></i>
         </a>`;
@@ -737,7 +772,7 @@
           ${PATH_USE[p.id] ? `<span class="path-use">${esc(PATH_USE[p.id])}</span>` : ''}
           <p class="path-blurb">${esc(p.blurb || p.tagline)}</p>
           <div class="path-foot">
-            <span class="path-levels"><i class="ri-film-line"></i> ${mem.length} titoli</span>
+            <span class="path-levels"><i class="ri-film-line"></i> ${mem.length} ${T.titlePlural}</span>
             <span class="path-start">Apri <i class="ri-arrow-right-line"></i></span>
           </div>
         </div>
@@ -754,9 +789,9 @@
         <div class="path-card-body">
           <div class="path-head"><span class="path-ic-wrap"><i class="ri-vip-crown-fill"></i></span><h3 class="path-name">Il meglio</h3></div>
           <span class="path-use">vai sul sicuro</span>
-          <p class="path-blurb">I titoli piu forti presi da generi e percorsi, senza doppioni.</p>
+          <p class="path-blurb">${T.bestBlurb}</p>
           <div class="path-foot">
-            <span class="path-levels"><i class="ri-film-line"></i> ${mem.length} titoli</span>
+            <span class="path-levels"><i class="ri-film-line"></i> ${mem.length} ${T.titlePlural}</span>
             <span class="path-start">Apri <i class="ri-arrow-right-line"></i></span>
           </div>
         </div>
@@ -915,6 +950,14 @@
       </section>`;
     }
     viewInfo() {
+      if (LANG === 'en') return this.docPage('About', 'The person behind GUARDALO.', `
+        <p>GUARDALO is an <b>anime guide</b>, not a catalog: every title is picked and explained to tell you <i>why</i> to watch it, where to start, how much it asks of you and where to see it. No random lists, no spoilers.</p>
+        <p>I built it myself, <b>Francesco Spidah</b>: the selection, texts and paths are personal curation. The goal is to help anyone find the right anime without wasting hours among a thousand identical entries.</p>
+        <h2>The data</h2>
+        <p>Information and cover art come from <a href="https://anilist.co" target="_blank" rel="noopener">AniList</a> (used under their terms). Ratings combine the AniList data with my editorial selection. Titles and trademarks belong to their respective owners.</p>
+        <h2>Contact</h2>
+        <p>For reports, errors or collaborations: <a href="mailto:magistaf@gmail.com">magistaf@gmail.com</a>.</p>
+        <p class="doc-sign">— Francesco Spidah</p>`);
       return this.docPage('Chi sono', 'La persona dietro GUARDALO.', `
         <p>GUARDALO è una <b>guida agli anime</b>, non un catalogo: ogni titolo è scelto e spiegato per dirti <i>perché</i> guardarlo, da dove iniziare, quanto ti impegna e dove vederlo. Niente liste a caso, niente spoiler.</p>
         <p>L'ho creata io, <b>Francesco Spidah</b>: selezione, testi e percorsi sono curatela personale. L'obiettivo è far trovare a chiunque l'anime giusto senza perdere ore tra mille schede uguali.</p>
@@ -925,6 +968,17 @@
         <p class="doc-sign">— Francesco Spidah</p>`);
     }
     viewPrivacy() {
+      if (LANG === 'en') return this.docPage('Privacy Policy', 'Last updated: June 2026.', `
+        <h2>Data controller</h2>
+        <p>The data controller is <b>Francesco Spidah</b> (contact: <a href="mailto:magistaf@gmail.com">magistaf@gmail.com</a>).</p>
+        <h2>Data collected</h2>
+        <p><b>Anonymous browsing:</b> no account required. Your preferences (watched/to-watch titles, theme) are stored <b>only in your browser</b> (localStorage) and are not sent to us.</p>
+        <p><b>Optional account (Google):</b> if you sign in to sync your progress, we use Firebase Authentication and Firestore (Google) to save your list. User id and email are processed.</p>
+        <p><b>Advertising and analytics:</b> if enabled, third parties (e.g. Google AdSense) may use cookies to show relevant ads. See the <a href="/cookie">Cookie Policy</a>.</p>
+        <h2>Your rights (GDPR)</h2>
+        <p>You can request access, rectification or deletion of your data by writing to the contact above. You can delete local data by clearing this site's data in your browser.</p>
+        <h2>Third parties</h2>
+        <p>AniList (anime data), Google Firebase (optional login/sync), Google AdSense (advertising, if enabled). Each processes data under its own policy.</p>`);
       return this.docPage('Privacy Policy', 'Ultimo aggiornamento: giugno 2026.', `
         <h2>Titolare</h2>
         <p>Il titolare del trattamento è <b>Francesco Spidah</b> (contatto: <a href="mailto:magistaf@gmail.com">magistaf@gmail.com</a>).</p>
@@ -938,6 +992,13 @@
         <p>AniList (dati anime), Google Firebase (login/sync opzionale), Google AdSense (pubblicità, se attiva). Ognuno tratta i dati secondo la propria informativa.</p>`);
     }
     viewCookie() {
+      if (LANG === 'en') return this.docPage('Cookie Policy', 'Last updated: June 2026.', `
+        <h2>What we use</h2>
+        <p><b>Strictly necessary:</b> the site stores your preferences locally (localStorage): watched/to-watch titles, light/dark theme, cookie consent. They are not used to profile you and cannot be disabled.</p>
+        <p><b>Functional (optional):</b> if you sign in with Google, Firebase uses cookies/tokens to keep you authenticated.</p>
+        <p><b>Advertising (optional):</b> if Google AdSense is enabled, third-party cookies are used for ads and measurement. They are subject to your consent via the banner.</p>
+        <h2>Manage consent</h2>
+        <p>You can accept or reject non-essential cookies from the banner on your first visit. You can change your mind by clearing this site's data in your browser (the banner will reappear).</p>`);
       return this.docPage('Cookie Policy', 'Ultimo aggiornamento: giugno 2026.', `
         <h2>Cosa usiamo</h2>
         <p><b>Tecnici / necessari:</b> il sito salva localmente (localStorage) le tue preferenze: titoli visti/da vedere, tema chiaro/scuro, consenso ai cookie. Non servono per profilarti e non si possono disattivare.</p>
@@ -964,7 +1025,7 @@
               <h1 class="path-hero-name">${esc(p.title)}</h1>
               <p class="path-hero-blurb">${esc(p.blurb || p.tagline)}</p>
               <div class="path-hero-meta">
-                <span>${catTitles(p).length} titoli · ordinati dal migliore</span>
+                <span>${catTitles(p).length} ${T.titlePlural} · ${T.orderedBest}</span>
               </div>
             </div>
           </div>
@@ -1175,7 +1236,7 @@
       const box = document.getElementById('esploraResults');
       if (box) box.innerHTML = this.pagedGrid(list);
       const cnt = document.getElementById('esploraCount');
-      if (cnt) cnt.textContent = `${list.length} ${list.length === 1 ? 'titolo' : 'titoli'}`;
+      if (cnt) cnt.textContent = `${list.length} ${list.length === 1 ? T.titleSing : T.titlePlural}`;
     }
     // ── VISTA: ESPLORA (con pannello filtri: genere · durata · tipo · ordina) ─────
     viewEsplora() {
@@ -1185,29 +1246,29 @@
       const durataOpts = TEMPO.map(t => `<option value="${esc(t.key)}">${esc(t.label)}</option>`).join('');
       return `
       <section class="wrap esplora-head">
-        <h1>Esplora</h1>
-        <p>Tutti i titoli. Filtra per trovare quello giusto. <button class="link-btn" id="esploraSearch">o cerca un titolo →</button></p>
+        <h1>${T.explore}</h1>
+        <p>${T.exploreLead} <button class="link-btn" id="esploraSearch">${T.orSearch}</button></p>
         <div class="esplora-filters" id="esploraFilters">
-          <div class="ef-multi" aria-label="Generi e percorsi">
+          <div class="ef-multi" aria-label="${T.genresAndPaths}">
             <div class="ef-multi-head">
-              <span>Generi e percorsi</span>
-              <button type="button" id="efClearGenres">Pulisci</button>
+              <span>${T.genresAndPaths}</span>
+              <button type="button" id="efClearGenres">${T.clear}</button>
             </div>
-            <div class="ef-group-label">Generi</div>
+            <div class="ef-group-label">${T.genresLbl}</div>
             <div class="ef-chip-grid">${GENRE_PATHS.map(chip).join('')}</div>
-            <div class="ef-group-label">Percorsi</div>
+            <div class="ef-group-label">${T.pathsLbl}</div>
             <div class="ef-chip-grid">${PERCORSI_PATHS.map(chip).join('')}</div>
           </div>
           <div class="ef-row">
-          <select id="efDurata" aria-label="Durata"><option value="">Qualsiasi durata</option>${durataOpts}</select>
-          <select id="efTipo" aria-label="Tipo"><option value="">Serie e film</option><option value="serie">Solo serie</option><option value="film">Solo film</option></select>
-          <label class="ef-check"><input id="efEssenziali" type="checkbox"> Solo top</label>
-          <select id="efSort" aria-label="Ordina"><option value="best">Dal migliore</option><option value="voto">Voto più alto</option><option value="recenti">Più recenti</option><option value="az">A-Z</option></select>
+          <select id="efDurata" aria-label="Durata"><option value="">${T.anyLength}</option>${durataOpts}</select>
+          <select id="efTipo" aria-label="Tipo"><option value="">${T.seriesAndFilms}</option><option value="serie">${T.onlySeries}</option><option value="film">${T.onlyFilms}</option></select>
+          <label class="ef-check"><input id="efEssenziali" type="checkbox"> ${T.onlyTop}</label>
+          <select id="efSort" aria-label="Ordina"><option value="best">${T.sortBest}</option><option value="voto">${T.sortScore}</option><option value="recenti">${T.sortRecent}</option><option value="az">A-Z</option></select>
         </div>
         </div>
       </section>
       <section class="wrap">
-        <div class="sec-head sub"><h2><i class="ri-trophy-line"></i> Risultati</h2><span class="sec-count" id="esploraCount">${list.length} titoli</span></div>
+        <div class="sec-head sub"><h2><i class="ri-trophy-line"></i> ${T.results}</h2><span class="sec-count" id="esploraCount">${list.length} ${T.titlePlural}</span></div>
         <div id="esploraResults">${this.pagedGrid(list)}</div>
       </section>`;
     }
@@ -1215,12 +1276,12 @@
     // ── VISTA: RICERCA CORRELATA (studio/regista/autore/genere/tema cliccabili) ──
     viewFacet(field, value) {
       const FIELDS = {
-        studio:  { label: 'Studio',     show: v => v, match: t => (t.studios || []).includes(value) },
-        regista: { label: 'Regia di',   show: v => v, match: t => t.director === value },
-        autore:  { label: 'Opera di',   show: v => v, match: t => t.creator === value },
-        tag:     { label: 'Tema',       show: v => v, match: t => (t.tags || []).includes(value) },
-        tono:    { label: 'Atmosfera',  show: v => v, match: t => (t.tone || []).includes(value) },
-        genere:  { label: 'Genere',     show: v => itGenre(v), match: t => (t.genres || []).includes(value) },
+        studio:  { label: T.fStudio,   show: v => v, match: t => (t.studios || []).includes(value) },
+        regista: { label: T.fDirector, show: v => v, match: t => t.director === value },
+        autore:  { label: T.fWork,     show: v => v, match: t => t.creator === value },
+        tag:     { label: T.fTheme,    show: v => v, match: t => (t.tags || []).includes(value) },
+        tono:    { label: T.fMood,     show: v => v, match: t => (t.tone || []).includes(value) },
+        genere:  { label: T.fGenre,    show: v => itGenre(v), match: t => (t.genres || []).includes(value) },
       };
       const f = FIELDS[field];
       if (!f || !value) return this.notFound();
@@ -1228,7 +1289,7 @@
       const head = `<section class="wrap esplora-head">
         <a class="back" href="javascript:history.back()"><i class="ri-arrow-left-line"></i> ${T.back}</a>
         <h1><span class="facet-kind">${esc(f.label)}</span> ${esc(f.show(value))}</h1>
-        <p>${list.length ? `${list.length} ${list.length === 1 ? 'titolo' : 'titoli'}, dal migliore.` : 'Nessun titolo trovato per questo.'}</p>
+        <p>${list.length ? `${list.length} ${list.length === 1 ? T.titleSing : T.titlePlural}, ${T.fromBest}` : T.noResults}</p>
       </section>`;
       return head + (list.length ? `<section class="wrap">${this.pagedGrid(list)}</section>` : '');
     }
@@ -1248,10 +1309,10 @@
       if (this.listGenre) list = list.filter(t => (t.genres || []).includes(this.listGenre));
       list = this.laterSort(list, this.listSort || 'durata');
       const cnt = document.getElementById('laterCount');
-      if (cnt) cnt.textContent = `${list.length} ${list.length === 1 ? 'titolo' : 'titoli'}`;
+      if (cnt) cnt.textContent = `${list.length} ${list.length === 1 ? T.titleSing : T.titlePlural}`;
       wrap.innerHTML = list.length
         ? `<div class="grid">${list.map(t => this.card(t)).join('')}</div>`
-        : `<div class="empty mini"><i class="ri-filter-off-line"></i><p>Nessun titolo «da vedere» con questo filtro.</p></div>`;
+        : `<div class="empty mini"><i class="ri-filter-off-line"></i><p>${T.noToWatchFilter}</p></div>`;
     }
     viewLista() {
       this.listSort = 'durata'; this.listGenre = '';
@@ -1263,40 +1324,40 @@
       if (!watched.length && !later.length) {
         return `<section class="wrap"><div class="empty big">
           <i class="ri-bookmark-line"></i>
-          <h1>La tua lista è vuota</h1>
-          <p>Salva i titoli che vuoi vedere (segnalibro 🔖) e segna quelli già visti (✓). Li ritrovi qui, sincronizzati se accedi.</p>
-          <a class="btn-red" href="/generi"><i class="ri-shapes-line"></i> Sfoglia i generi</a>
+          <h1>${T.listEmptyH}</h1>
+          <p>${T.listEmptyP}</p>
+          <a class="btn-red" href="/generi"><i class="ri-shapes-line"></i> ${T.browseGenres}</a>
         </div></section>`;
       }
 
       const grid = list => `<div class="grid">${list.map(t => this.card(t)).join('')}</div>`;
-      const empty = (ic, msg) => `<div class="empty"><i class="${ic}"></i><p>${msg}</p><a class="btn-ghost" href="/percorsi">Vai ai percorsi</a></div>`;
+      const empty = (ic, msg) => `<div class="empty"><i class="${ic}"></i><p>${msg}</p><a class="btn-ghost" href="/percorsi">${T.goToPaths}</a></div>`;
 
       const genreSet = [...new Set(later.flatMap(t => t.genres || []))].sort((a, b) => itGenre(a).localeCompare(itGenre(b)));
       const controls = later.length > 1 ? `
         <div class="list-controls" id="listControls">
           <div class="lc-sort" role="group" aria-label="Ordina i titoli da vedere">
-            <button class="lc-btn on" data-sort="durata"><i class="ri-time-line"></i> Più corti</button>
-            <button class="lc-btn" data-sort="voto"><i class="ri-star-line"></i> Voto</button>
+            <button class="lc-btn on" data-sort="durata"><i class="ri-time-line"></i> ${T.shortest}</button>
+            <button class="lc-btn" data-sort="voto"><i class="ri-star-line"></i> ${T.score}</button>
             <button class="lc-btn" data-sort="az"><i class="ri-sort-asc"></i> A-Z</button>
           </div>
-          ${genreSet.length > 1 ? `<select class="lc-genre" id="listGenre" aria-label="Filtra per genere"><option value="">Tutti i generi</option>${genreSet.map(g => `<option value="${esc(g)}">${esc(itGenre(g))}</option>`).join('')}</select>` : ''}
+          ${genreSet.length > 1 ? `<select class="lc-genre" id="listGenre" aria-label="Filtra per genere"><option value="">${T.allGenres}</option>${genreSet.map(g => `<option value="${esc(g)}">${esc(itGenre(g))}</option>`).join('')}</select>` : ''}
         </div>` : '';
 
       return `
       <section class="wrap">
-        <div class="sec-head"><h1>La mia lista</h1>
-          ${later.length ? `<button class="btn-ghost" id="pickFromList"><i class="ri-dice-line"></i> Scegli per me</button>` : ''}</div>
+        <div class="sec-head"><h1>${T.myList}</h1>
+          ${later.length ? `<button class="btn-ghost" id="pickFromList"><i class="ri-dice-line"></i> ${T.pickForMe}</button>` : ''}</div>
         <div class="list-stats">
-          <div class="ls-stat"><b>${watched.length}</b><span>visti</span></div>
-          <div class="ls-stat"><b>${later.length}</b><span>da vedere</span></div>
-          <div class="ls-stat"><b>${Math.round(hours)}h</b><span>guardate</span></div>
+          <div class="ls-stat"><b>${watched.length}</b><span>${T.statWatched}</span></div>
+          <div class="ls-stat"><b>${later.length}</b><span>${T.statToWatch}</span></div>
+          <div class="ls-stat"><b>${Math.round(hours)}h</b><span>${T.statHours}</span></div>
         </div>
-        <div class="sec-head sub"><h2><i class="ri-bookmark-line"></i> Da vedere</h2>${later.length ? `<span class="sec-count" id="laterCount">${later.length} titoli</span>` : ''}</div>
+        <div class="sec-head sub"><h2><i class="ri-bookmark-line"></i> ${T.toWatchH}</h2>${later.length ? `<span class="sec-count" id="laterCount">${later.length} ${T.titlePlural}</span>` : ''}</div>
         ${controls}
-        ${later.length ? `<div id="laterGrid">${grid(later)}</div>` : empty('ri-bookmark-line', 'Niente ancora in lista. Sfoglia i percorsi e salva cosa ti incuriosisce.')}
-        <div class="sec-head sub"><h2><i class="ri-check-double-line"></i> Visti</h2></div>
-        ${watched.length ? grid(watched) : empty('ri-check-double-line', 'Segna i titoli che hai già visto.')}
+        ${later.length ? `<div id="laterGrid">${grid(later)}</div>` : empty('ri-bookmark-line', T.nothingYet)}
+        <div class="sec-head sub"><h2><i class="ri-check-double-line"></i> ${T.watchedH}</h2></div>
+        ${watched.length ? grid(watched) : empty('ri-check-double-line', T.markSeen)}
       </section>`;
     }
 
@@ -1305,9 +1366,9 @@
       if (!this.user) {
         return `<section class="wrap prof-gate">
           <span class="prof-gate-ic"><i class="ri-user-3-line"></i></span>
-          <h1>Il tuo profilo</h1>
-          <p>Accedi per ritrovare la tua lista su ogni dispositivo e vedere le tue statistiche.</p>
-          <button class="btn-red" id="profLogin"><i class="ri-google-fill"></i> Accedi con Google</button>
+          <h1>${T.yourProfile}</h1>
+          <p>${T.profileGate}</p>
+          <button class="btn-red" id="profLogin"><i class="ri-google-fill"></i> ${T.signInGoogle}</button>
         </section>`;
       }
       const watched = Object.keys(this.watched).map(id => BY_ID.get(id)).filter(Boolean);
@@ -1325,8 +1386,8 @@
       <section class="wrap profilo">
         <div class="prof-head">
           ${avatar}
-          <div class="prof-id"><h1>Ciao, ${esc(name)}</h1><span>${esc(this.user.email || '')}</span></div>
-          <button class="btn-ghost prof-logout" id="profLogout"><i class="ri-logout-box-r-line"></i> Esci</button>
+          <div class="prof-id"><h1>${T.hi} ${esc(name)}</h1><span>${esc(this.user.email || '')}</span></div>
+          <button class="btn-ghost prof-logout" id="profLogout"><i class="ri-logout-box-r-line"></i> ${T.signOut}</button>
         </div>
         <div class="prof-stats">
           <div class="pstat"><b>${watched.length}</b><span>visti</span></div>
@@ -1699,7 +1760,7 @@
       this.searchSel = -1;
       q = (q || '').toLowerCase().trim();
       if (!q) {
-        box.innerHTML = `<p class="sr-hint">Cerca per titolo, studio, regista, genere o atmosfera.<span class="sr-kbd"> Premi <kbd>/</kbd> per riaprire.</span></p>`;
+        box.innerHTML = `<p class="sr-hint">${T.searchHint}<span class="sr-kbd"> ${LANG==='en'?'Press':'Premi'} <kbd>/</kbd> ${LANG==='en'?'to reopen.':'per riaprire.'}</span></p>`;
         return;
       }
       const hits = TITLES.filter(t =>
@@ -1715,7 +1776,7 @@
             <img src="${esc(thumbS(cover(t)))}" alt="" loading="lazy">
             <div><b>${esc(t.title)}</b><span>${esc(t.year || '')} · ${esc(t.typeLabel)} · <span class="sr-len ls-${t.lengthBand}">${esc(lenLabel(t))}</span></span></div>
           </a>`).join('')
-        : `<p class="sr-hint">Nessun titolo per “${esc(q)}”.</p>`;
+        : `<p class="sr-hint">${T.noSearch} “${esc(q)}”.</p>`;
       box.querySelectorAll('[data-srclose]').forEach(a => a.addEventListener('click', () => this.closeSearch()));
     }
 
