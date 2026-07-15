@@ -123,6 +123,9 @@ function template(lang) {
 
 function page(lang, { fullPath, title, desc, ogImage, jsonld, content, alternates }) {
   let h = template(lang);
+  const ogLoc = lang === 'en' ? 'en_US' : 'it_IT';
+  const ogAlt = lang === 'en' ? 'it_IT' : 'en_US';
+  h = h.replace('<meta property="og:type" content="website">', `<meta property="og:type" content="website"><meta property="og:locale" content="${ogLoc}"><meta property="og:locale:alternate" content="${ogAlt}">`);
   h = h.replace('<title>GUARDALO — La guida agli anime</title>', `<title>${esc(title)}</title>`);
   h = h.replace(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${esc(desc)}">`);
   h = h.replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${esc(title)}">`);
@@ -166,7 +169,7 @@ async function buildLang(lang) {
   const essentialTitles = () => [...ESSENTIAL_IDS].map(id => BY_ID.get(id)).filter(Boolean).sort(rankSort);
   const sectionOf = id => GENRE_IDS.find(g => (CAT_MEMBERS[g] || []).includes(id)) || null;
   const crumb = items => ({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items.map((it, i) => ({ '@type': 'ListItem', position: i + 1, name: it.name, item: SITE + P + it.url })) });
-  const WEBSITE = { '@context': 'https://schema.org', '@type': 'WebSite', name: 'GUARDALO', url: SITE + fullOf(lang, '/'), description: L.homeDesc };
+  const WEBSITE = { '@context': 'https://schema.org', '@type': 'WebSite', name: 'GUARDALO', url: SITE + fullOf(lang, '/'), inLanguage: L.htmlLang, description: L.homeDesc };
   const urls = [];
   const push = base => urls.push(base);
 
@@ -186,6 +189,7 @@ async function buildLang(lang) {
   </article>`;
     const titleLD = {
       '@context': 'https://schema.org', '@type': t.typeLabel === 'Film' ? 'Movie' : 'TVSeries',
+      inLanguage: L.htmlLang,
       name: t.title, image: t.coverImage || undefined, description: t.hook || undefined,
       ...(t.year ? { datePublished: String(t.year) } : {}), genre: (t.genres || []).map(L.genre),
       ...(t.studios && t.studios.length ? { productionCompany: t.studios.map(s => ({ '@type': 'Organization', name: s })) } : {}),
