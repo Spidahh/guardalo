@@ -26,6 +26,7 @@ const clip = (s, n = 158) => { s = (s || '').replace(/\s+/g, ' ').trim(); return
 const data = JSON.parse(await readFile(join(ROOT, 'dist', 'data.json'), 'utf8'));
 const EN_PATHS = JSON.parse(await readFile(join(ROOT, 'editorial', 'en', 'paths.json'), 'utf8'));
 const EN_TITLES = JSON.parse(await readFile(join(ROOT, 'editorial', 'en', 'titles.json'), 'utf8'));
+const EN_DESC = JSON.parse(await readFile(join(ROOT, 'editorial', 'en', 'anilist-desc.json'), 'utf8'));
 
 const rankSort = (a, b) => (b.userRating || 0) - (a.userRating || 0) || (b.score10 || 0) - (a.score10 || 0);
 const CAT = data.categories || {};
@@ -36,13 +37,14 @@ if (!GENRE_IDS.length || !Object.keys(CAT_MEMBERS).length) throw new Error('prer
 const ESSENTIAL_IDS = new Set();
 for (const pid in TIERS) { const m = TIERS[pid]; for (const id in m) if (m[id] === 'e') ESSENTIAL_IDS.add(id); }
 
-// Un titolo ha una versione EN solo se ne abbiamo tradotto lo hook (niente pagine "vuote").
-const hasEN = id => Object.prototype.hasOwnProperty.call(EN_TITLES, id);
+// Testo EN del titolo: traduzione curata a mano se c'è, altrimenti sinossi AniList. Niente → niente pagina.
+const enHook = id => (EN_TITLES[id] && EN_TITLES[id].hook) || EN_DESC[id] || null;
+const hasEN = id => !!enHook(id);
 
 // Dataset localizzato: EN sovrascrive i SOLI testi editoriali; i dati AniList restano.
 function localize(lang) {
   if (lang === 'it') return { titles: data.titles, paths: data.paths, home: data.home || {} };
-  const titles = data.titles.map(t => (hasEN(t.id) ? { ...t, hook: EN_TITLES[t.id].hook } : { ...t }));
+  const titles = data.titles.map(t => (hasEN(t.id) ? { ...t, hook: enHook(t.id) } : { ...t }));
   const paths = data.paths.map(p => {
     const e = EN_PATHS[p.id];
     return e ? { ...p, title: e.title, tagline: e.tagline ?? p.tagline, blurb: e.blurb ?? p.blurb, about: e.about ?? p.about } : { ...p };
