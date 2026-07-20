@@ -29,10 +29,10 @@
       "Revenge",
       "Military",
       "Primarily Teen Cast",
-      "Post-Apocalyptic",
       "Male Protagonist",
-      "Gore",
-      "Dystopian"
+      "Post-Apocalyptic",
+      "Survival",
+      "Steampunk"
     ],
     "studios": [
       "WIT STUDIO"
@@ -42,7 +42,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.5,
-    "popularity": 1026908,
+    "popularity": 1030730,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16498-buvcRTBx4NSm.jpg",
     "coverColor": "#f1a143",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/16498-8jpFCOcDmneX.jpg",
@@ -136,31 +136,31 @@
     "_recAnilistIds": [
       {
         "id": 101348,
-        "rating": 2809
+        "rating": 2821
       },
       {
         "id": 101759,
-        "rating": 682
+        "rating": 684
       },
       {
         "id": 21196,
-        "rating": 352
+        "rating": 354
       },
       {
         "id": 116589,
-        "rating": 349
+        "rating": 351
       },
       {
         "id": 20829,
-        "rating": 208
+        "rating": 209
       },
       {
         "id": 131586,
-        "rating": 187
+        "rating": 189
       },
       {
         "id": 153288,
-        "rating": 167
+        "rating": 168
       },
       {
         "id": 5114,
@@ -168,19 +168,19 @@
       },
       {
         "id": 110353,
-        "rating": 106
+        "rating": 107
       },
       {
         "id": 20623,
-        "rating": 97
+        "rating": 99
       },
       {
         "id": 127230,
-        "rating": 85
+        "rating": 86
       },
       {
         "id": 20993,
-        "rating": 68
+        "rating": 69
       },
       {
         "id": 1818,
@@ -188,7 +188,7 @@
       },
       {
         "id": 1575,
-        "rating": 56
+        "rating": 57
       }
     ],
     "_relAnilistIds": [
@@ -298,7 +298,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.4,
-    "popularity": 178582,
+    "popularity": 179523,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx33-PSwfE5B0gejI.jpg",
     "coverColor": "#e49350",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/33-g7HwYRVm0ZkN.jpg",
@@ -338,11 +338,11 @@
     "_recAnilistIds": [
       {
         "id": 101348,
-        "rating": 1055
+        "rating": 1056
       },
       {
         "id": 98460,
-        "rating": 297
+        "rating": 296
       },
       {
         "id": 1818,
@@ -382,7 +382,7 @@
       },
       {
         "id": 101347,
-        "rating": 47
+        "rating": 48
       },
       {
         "id": 617,
@@ -473,7 +473,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 7.9,
-    "popularity": 499788,
+    "popularity": 502701,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx269-d2GmRkJbMopq.png",
     "coverColor": "#f1a150",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/269-08ar2HJOUAuL.jpg",
@@ -589,11 +589,11 @@
     "_recAnilistIds": [
       {
         "id": 113415,
-        "rating": 1285
+        "rating": 1287
       },
       {
         "id": 1735,
-        "rating": 411
+        "rating": 412
       },
       {
         "id": 101922,
@@ -601,11 +601,11 @@
       },
       {
         "id": 20,
-        "rating": 330
+        "rating": 331
       },
       {
         "id": 392,
-        "rating": 261
+        "rating": 262
       },
       {
         "id": 21,
@@ -617,7 +617,7 @@
       },
       {
         "id": 97940,
-        "rating": 138
+        "rating": 139
       },
       {
         "id": 145064,
@@ -749,7 +749,7 @@
     "source": "VIDEO_GAME",
     "sourceLabel": "Videogioco",
     "score10": 8.5,
-    "popularity": 367307,
+    "popularity": 370112,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx120377-ayZPoxiWt4Li.jpg",
     "coverColor": "#78f150",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/120377-c15oLS8CA31s.jpg",
@@ -795,7 +795,7 @@
       },
       {
         "id": 2001,
-        "rating": 142
+        "rating": 144
       },
       {
         "id": 167336,
@@ -803,7 +803,7 @@
       },
       {
         "id": 47,
-        "rating": 125
+        "rating": 124
       },
       {
         "id": 20613,
@@ -811,7 +811,7 @@
       },
       {
         "id": 98460,
-        "rating": 102
+        "rating": 103
       },
       {
         "id": 1,
@@ -899,7 +899,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.4,
-    "popularity": 935682,
+    "popularity": 939585,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1535-kUgkcrfOrkUM.jpg",
     "coverColor": null,
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1535.jpg",
@@ -931,6 +931,10 @@
       {
         "name": "Hoopla",
         "url": "https://www.hoopladigital.com/television/death-note-dubbed-season-1-mamoru-miyano/14733986"
+      },
+      {
+        "name": "Crunchyroll",
+        "url": "https://www.crunchyroll.com/series/G6QWD3EE6"
       }
     ],
     "startFrom": null,
@@ -951,19 +955,19 @@
     "_recAnilistIds": [
       {
         "id": 1575,
-        "rating": 3473
+        "rating": 3491
       },
       {
         "id": 19,
-        "rating": 1151
+        "rating": 1154
       },
       {
         "id": 2904,
-        "rating": 640
+        "rating": 641
       },
       {
         "id": 101759,
-        "rating": 467
+        "rating": 469
       },
       {
         "id": 20623,
@@ -987,7 +991,7 @@
       },
       {
         "id": 127401,
-        "rating": 179
+        "rating": 178
       },
       {
         "id": 13601,
@@ -1079,7 +1083,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 9,
-    "popularity": 710505,
+    "popularity": 713299,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx5114-nSWCgQlmOMtj.jpg",
     "coverColor": "#e4c993",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/5114-q0V5URebphSG.jpg",
@@ -1135,7 +1139,7 @@
     "_recAnilistIds": [
       {
         "id": 11061,
-        "rating": 3544
+        "rating": 3558
       },
       {
         "id": 104578,
@@ -1151,11 +1155,11 @@
       },
       {
         "id": 195600,
-        "rating": 129
+        "rating": 132
       },
       {
         "id": 21,
-        "rating": 116
+        "rating": 115
       },
       {
         "id": 16498,
@@ -1163,19 +1167,19 @@
       },
       {
         "id": 147105,
-        "rating": 107
+        "rating": 106
       },
       {
         "id": 101922,
-        "rating": 102
-      },
-      {
-        "id": 151514,
-        "rating": 63
+        "rating": 101
       },
       {
         "id": 1735,
         "rating": 63
+      },
+      {
+        "id": 151514,
+        "rating": 62
       },
       {
         "id": 11741,
@@ -1206,6 +1210,10 @@
       {
         "id": 7902,
         "rel": "SPIN_OFF"
+      },
+      {
+        "id": 195600,
+        "rel": "CHARACTER"
       }
     ],
     "provenance": {
@@ -1273,7 +1281,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 8.5,
-    "popularity": 369526,
+    "popularity": 371029,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2001-XwRnjzGeFWRQ.png",
     "coverColor": "#f15d35",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/2001-3eWhvkau8NV3.jpg",
@@ -1329,7 +1337,7 @@
     "_recAnilistIds": [
       {
         "id": 18679,
-        "rating": 1515
+        "rating": 1516
       },
       {
         "id": 99425,
@@ -1337,23 +1345,23 @@
       },
       {
         "id": 30,
-        "rating": 443
+        "rating": 447
       },
       {
         "id": 227,
-        "rating": 377
+        "rating": 380
       },
       {
         "id": 949,
         "rating": 190
       },
       {
-        "id": 1002,
-        "rating": 143
+        "id": 120377,
+        "rating": 144
       },
       {
-        "id": 120377,
-        "rating": 142
+        "id": 1002,
+        "rating": 143
       },
       {
         "id": 110353,
@@ -1476,7 +1484,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.9,
-    "popularity": 820181,
+    "popularity": 823308,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11061-y5gsT1hoHuHw.png",
     "coverColor": "#f1d65d",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/11061-8WkkTZ6duKpq.jpg",
@@ -1560,19 +1568,19 @@
     "_recAnilistIds": [
       {
         "id": 5114,
-        "rating": 3544
+        "rating": 3558
       },
       {
         "id": 21,
-        "rating": 2149
+        "rating": 2156
       },
       {
         "id": 392,
-        "rating": 1273
+        "rating": 1275
       },
       {
         "id": 113415,
-        "rating": 997
+        "rating": 996
       },
       {
         "id": 115230,
@@ -1588,7 +1596,7 @@
       },
       {
         "id": 21507,
-        "rating": 281
+        "rating": 283
       },
       {
         "id": 20,
@@ -1596,7 +1604,7 @@
       },
       {
         "id": 21459,
-        "rating": 187
+        "rating": 185
       },
       {
         "id": 145064,
@@ -1711,7 +1719,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 7.7,
-    "popularity": 466796,
+    "popularity": 468559,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx14719-VT5dRzTBSZ0w.jpg",
     "coverColor": "#e49343",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/14719-m7Hv2AxcNNjM.jpg",
@@ -1847,11 +1855,11 @@
       },
       {
         "id": 169228,
-        "rating": 22
+        "rating": 23
       },
       {
         "id": 270,
-        "rating": 16
+        "rating": 17
       },
       {
         "id": 1358,
@@ -1937,7 +1945,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8,
-    "popularity": 706831,
+    "popularity": 709640,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20-dE6UHbFFg1A5.jpg",
     "coverColor": "#e47850",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20-HHxhPj5JD13a.jpg",
@@ -2063,11 +2071,11 @@
     "_recAnilistIds": [
       {
         "id": 21,
-        "rating": 991
+        "rating": 992
       },
       {
         "id": 97940,
-        "rating": 814
+        "rating": 816
       },
       {
         "id": 21459,
@@ -2075,7 +2083,7 @@
       },
       {
         "id": 269,
-        "rating": 330
+        "rating": 331
       },
       {
         "id": 113415,
@@ -2103,7 +2111,7 @@
       },
       {
         "id": 116674,
-        "rating": 59
+        "rating": 60
       },
       {
         "id": 145064,
@@ -2218,8 +2226,8 @@
       "Dystopian",
       "Post-Apocalyptic",
       "Angels",
-      "Psychosexual",
-      "Kaiju"
+      "Kaiju",
+      "Primarily Teen Cast"
     ],
     "studios": [
       "Gainax",
@@ -2230,7 +2238,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 8.3,
-    "popularity": 480863,
+    "popularity": 482980,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx30-AI1zr74Dh4ye.jpg",
     "coverColor": "#f17843",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/30-gEMoHHIqxDgN.jpg",
@@ -2258,19 +2266,19 @@
     "_recAnilistIds": [
       {
         "id": 339,
-        "rating": 963
+        "rating": 966
       },
       {
         "id": 9756,
-        "rating": 559
+        "rating": 562
       },
       {
         "id": 2001,
-        "rating": 443
+        "rating": 447
       },
       {
         "id": 47,
-        "rating": 422
+        "rating": 423
       },
       {
         "id": 98460,
@@ -2278,11 +2286,11 @@
       },
       {
         "id": 227,
-        "rating": 329
+        "rating": 332
       },
       {
         "id": 949,
-        "rating": 258
+        "rating": 260
       },
       {
         "id": 132126,
@@ -2298,7 +2306,7 @@
       },
       {
         "id": 80,
-        "rating": 107
+        "rating": 108
       },
       {
         "id": 165,
@@ -2393,8 +2401,8 @@
     "statusLabel": "In corso",
     "episodes": null,
     "durationAvg": 24,
-    "sagaEpisodes": 1170,
-    "coreMinutes": 28081,
+    "sagaEpisodes": 1171,
+    "coreMinutes": 28105,
     "lengthBand": "lunghissimo",
     "lengthLabel": "Lunghissimo",
     "lengthHint": "mesi",
@@ -2423,7 +2431,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.7,
-    "popularity": 727528,
+    "popularity": 731184,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21-ELSYx3yMPcKM.jpg",
     "coverColor": "#e49335",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21-wf37VakJmZqs.jpg",
@@ -2469,7 +2477,7 @@
     "structure": [
       {
         "name": "ONE PIECE",
-        "episodes": "1169+ ep",
+        "episodes": "1170+ ep",
         "year": 1999,
         "main": true
       },
@@ -2735,19 +2743,19 @@
     "_recAnilistIds": [
       {
         "id": 11061,
-        "rating": 2149
+        "rating": 2156
       },
       {
         "id": 20,
-        "rating": 991
+        "rating": 992
       },
       {
         "id": 1735,
-        "rating": 659
+        "rating": 660
       },
       {
         "id": 97940,
-        "rating": 442
+        "rating": 443
       },
       {
         "id": 223,
@@ -2763,15 +2771,15 @@
       },
       {
         "id": 6702,
-        "rating": 187
+        "rating": 188
       },
       {
         "id": 5114,
-        "rating": 116
+        "rating": 115
       },
       {
         "id": 116674,
-        "rating": 92
+        "rating": 93
       },
       {
         "id": 136,
@@ -3091,7 +3099,7 @@
     "source": "VISUAL_NOVEL",
     "sourceLabel": "Visual novel",
     "score10": 8.9,
-    "popularity": 580552,
+    "popularity": 582672,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx9253-tIUXF2gfU8Sg.jpg",
     "coverColor": "#ffd6ae",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n9253-JIhmKgBKsWUN.jpg",
@@ -3129,11 +3137,11 @@
     "_recAnilistIds": [
       {
         "id": 21234,
-        "rating": 1886
+        "rating": 1890
       },
       {
         "id": 21355,
-        "rating": 1604
+        "rating": 1611
       },
       {
         "id": 129201,
@@ -3141,7 +3149,7 @@
       },
       {
         "id": 9756,
-        "rating": 536
+        "rating": 537
       },
       {
         "id": 108632,
@@ -3149,7 +3157,7 @@
       },
       {
         "id": 128546,
-        "rating": 370
+        "rating": 371
       },
       {
         "id": 126403,
@@ -3161,7 +3169,7 @@
       },
       {
         "id": 21127,
-        "rating": 286
+        "rating": 287
       },
       {
         "id": 119661,
@@ -3173,15 +3181,15 @@
       },
       {
         "id": 1210,
-        "rating": 208
+        "rating": 209
       },
       {
         "id": 163134,
         "rating": 150
       },
       {
-        "id": 7311,
-        "rating": 111
+        "id": 189046,
+        "rating": 115
       }
     ],
     "_relAnilistIds": [
@@ -3263,12 +3271,12 @@
     "tags": [
       "Urban Fantasy",
       "Primarily Teen Cast",
-      "Coastal",
       "Super Power",
       "Rural",
+      "Coastal",
       "Ensemble Cast",
       "Shounen",
-      "Male Protagonist"
+      "Orphan"
     ],
     "studios": [
       "OLM"
@@ -3278,7 +3286,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.3,
-    "popularity": 218890,
+    "popularity": 219781,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx129201-HJBauga2be8I.png",
     "coverColor": "#2886e4",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/129201-eeCsKFrCSQPS.jpg",
@@ -3316,7 +3324,7 @@
     "_recAnilistIds": [
       {
         "id": 21355,
-        "rating": 863
+        "rating": 866
       },
       {
         "id": 9253,
@@ -3324,23 +3332,23 @@
       },
       {
         "id": 21234,
-        "rating": 512
+        "rating": 516
       },
       {
         "id": 934,
-        "rating": 438
+        "rating": 439
       },
       {
         "id": 177689,
-        "rating": 224
+        "rating": 229
       },
       {
         "id": 126403,
-        "rating": 167
+        "rating": 168
       },
       {
         "id": 108632,
-        "rating": 159
+        "rating": 160
       },
       {
         "id": 119661,
@@ -3356,19 +3364,19 @@
       },
       {
         "id": 20623,
-        "rating": 107
+        "rating": 108
       },
       {
         "id": 155783,
-        "rating": 87
+        "rating": 89
       },
       {
         "id": 189046,
-        "rating": 74
+        "rating": 76
       },
       {
         "id": 120120,
-        "rating": 55
+        "rating": 56
       }
     ],
     "_relAnilistIds": [],
@@ -3434,7 +3442,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 7.6,
-    "popularity": 195399,
+    "popularity": 195845,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21711-EQN4sCIXRhKf.png",
     "coverColor": null,
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21711-iJuWzyf6U50p.jpg",
@@ -3512,7 +3520,7 @@
       },
       {
         "id": 21311,
-        "rating": 27
+        "rating": 28
       },
       {
         "id": 127050,
@@ -3596,7 +3604,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 6.9,
-    "popularity": 22622,
+    "popularity": 22696,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/306-o0cw2vphUh6b.jpg",
     "coverColor": "#f1a143",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/306-dYWfq480sxlK.jpg",
@@ -3732,7 +3740,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 7.1,
-    "popularity": 120606,
+    "popularity": 120818,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21341-Pyc7SkMEuGsl.jpg",
     "coverColor": "#a17835",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21341-v415m6GrpeZY.jpg",
@@ -3907,7 +3915,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 7.3,
-    "popularity": 527742,
+    "popularity": 529361,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20613-HXHpec4bemk5.jpg",
     "coverColor": "#e45d43",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20613-CoEQF4qKiWDX.jpg",
@@ -3989,7 +3997,7 @@
       },
       {
         "id": 128893,
-        "rating": 31
+        "rating": 32
       },
       {
         "id": 116589,
@@ -4071,7 +4079,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 7.9,
-    "popularity": 225653,
+    "popularity": 226507,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx47-4CR68arv452h.jpg",
     "coverColor": "#e45d50",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/47-fof8HqtNDtvx.jpg",
@@ -4109,23 +4117,23 @@
     "_recAnilistIds": [
       {
         "id": 30,
-        "rating": 422
+        "rating": 423
       },
       {
         "id": 43,
-        "rating": 402
+        "rating": 404
       },
       {
         "id": 32,
-        "rating": 221
+        "rating": 222
       },
       {
         "id": 98460,
-        "rating": 139
+        "rating": 141
       },
       {
         "id": 120377,
-        "rating": 125
+        "rating": 124
       },
       {
         "id": 116566,
@@ -4233,7 +4241,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 7.5,
-    "popularity": 161110,
+    "popularity": 161549,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx116566-PPIVQt359vQY.jpg",
     "coverColor": "#d6501a",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/116566-XwsHAwTxbXmC.jpg",
@@ -4386,7 +4394,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 7.9,
-    "popularity": 566273,
+    "popularity": 568710,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx97940-fyh8o7gNbha0.png",
     "coverColor": "#d6c96b",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/97940-1URQdQ4U1a0b.jpg",
@@ -4442,15 +4450,15 @@
     "_recAnilistIds": [
       {
         "id": 20,
-        "rating": 814
+        "rating": 816
       },
       {
         "id": 6702,
-        "rating": 490
+        "rating": 491
       },
       {
         "id": 21,
-        "rating": 442
+        "rating": 443
       },
       {
         "id": 21459,
@@ -4462,7 +4470,7 @@
       },
       {
         "id": 174576,
-        "rating": 216
+        "rating": 217
       },
       {
         "id": 101922,
@@ -4474,7 +4482,7 @@
       },
       {
         "id": 269,
-        "rating": 138
+        "rating": 139
       },
       {
         "id": 117193,
@@ -4585,7 +4593,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 7.2,
-    "popularity": 128013,
+    "popularity": 128231,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx110354-JJKR42frJABe.jpg",
     "coverColor": "#35aee4",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/110354-F4KigAURY8zf.jpg",
@@ -4725,7 +4733,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 7,
-    "popularity": 100509,
+    "popularity": 100791,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx116673-cy4sgiliurpR.jpg",
     "coverColor": "#e45050",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/116673-AY85zkgTYWKu.jpg",
@@ -4775,7 +4783,7 @@
       },
       {
         "id": 131646,
-        "rating": 15
+        "rating": 16
       },
       {
         "id": 14349,
@@ -4798,11 +4806,11 @@
         "rating": 3
       },
       {
-        "id": 185692,
+        "id": 108450,
         "rating": 3
       },
       {
-        "id": 108450,
+        "id": 20503,
         "rating": 3
       }
     ],
@@ -4869,7 +4877,7 @@
       "Gore",
       "Shapeshifting",
       "Body Horror",
-      "Urban"
+      "Psychosexual"
     ],
     "studios": [
       "MAPPA"
@@ -4879,7 +4887,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.3,
-    "popularity": 609816,
+    "popularity": 613013,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx127230-DdP4vAdssLoz.png",
     "coverColor": "#6b1a1a",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/127230-o8IRwCGVr9KW.jpg",
@@ -4921,15 +4929,15 @@
     "_recAnilistIds": [
       {
         "id": 113415,
-        "rating": 1076
+        "rating": 1080
       },
       {
         "id": 105228,
-        "rating": 590
+        "rating": 591
       },
       {
         "id": 145064,
-        "rating": 449
+        "rating": 451
       },
       {
         "id": 98460,
@@ -4937,7 +4945,7 @@
       },
       {
         "id": 171018,
-        "rating": 373
+        "rating": 375
       },
       {
         "id": 20623,
@@ -4945,7 +4953,7 @@
       },
       {
         "id": 128893,
-        "rating": 252
+        "rating": 253
       },
       {
         "id": 153288,
@@ -4956,16 +4964,16 @@
         "rating": 160
       },
       {
+        "id": 159831,
+        "rating": 90
+      },
+      {
         "id": 154116,
         "rating": 90
       },
       {
-        "id": 159831,
-        "rating": 89
-      },
-      {
         "id": 16498,
-        "rating": 85
+        "rating": 86
       },
       {
         "id": 131573,
@@ -4973,7 +4981,7 @@
       },
       {
         "id": 198188,
-        "rating": 79
+        "rating": 81
       }
     ],
     "_relAnilistIds": [
@@ -5069,7 +5077,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 7.4,
-    "popularity": 118128,
+    "popularity": 118566,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1818-KieLJv0qo3mO.jpg",
     "coverColor": "#bbe4ae",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1818-7Nt2HYxVIxtA.jpg",
@@ -5131,7 +5139,7 @@
       },
       {
         "id": 101347,
-        "rating": 27
+        "rating": 28
       },
       {
         "id": 155011,
@@ -5215,7 +5223,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 8.5,
-    "popularity": 486185,
+    "popularity": 488302,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1575-hsmWM2ydNm1m.jpg",
     "coverColor": "#c9d678",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1575.jpg",
@@ -5273,15 +5281,15 @@
     "_recAnilistIds": [
       {
         "id": 1535,
-        "rating": 3473
+        "rating": 3491
       },
       {
         "id": 116589,
-        "rating": 416
+        "rating": 417
       },
       {
         "id": 131586,
-        "rating": 228
+        "rating": 229
       },
       {
         "id": 10793,
@@ -5309,7 +5317,7 @@
       },
       {
         "id": 16498,
-        "rating": 56
+        "rating": 57
       },
       {
         "id": 21410,
@@ -5433,7 +5441,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 8.6,
-    "popularity": 457201,
+    "popularity": 458783,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1-GCsPm7waJ4kS.png",
     "coverColor": "#f16b50",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1-OquNCNB6srGe.jpg",
@@ -5493,11 +5501,11 @@
     "_recAnilistIds": [
       {
         "id": 205,
-        "rating": 1630
+        "rating": 1634
       },
       {
         "id": 6,
-        "rating": 650
+        "rating": 651
       },
       {
         "id": 110349,
@@ -5521,11 +5529,11 @@
       },
       {
         "id": 4087,
-        "rating": 113
+        "rating": 114
       },
       {
         "id": 467,
-        "rating": 84
+        "rating": 85
       },
       {
         "id": 400,
@@ -5627,7 +5635,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.3,
-    "popularity": 368188,
+    "popularity": 370598,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx171018-60q1B6GK2Ghb.jpg",
     "coverColor": "#e47850",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/171018-SpwPNAduszXl.jpg",
@@ -5681,43 +5689,43 @@
     "_recAnilistIds": [
       {
         "id": 21507,
-        "rating": 532
+        "rating": 534
       },
       {
         "id": 127230,
-        "rating": 373
+        "rating": 375
       },
       {
         "id": 227,
-        "rating": 208
+        "rating": 209
       },
       {
         "id": 18679,
-        "rating": 170
+        "rating": 171
       },
       {
         "id": 178025,
-        "rating": 103
+        "rating": 104
       },
       {
         "id": 98460,
-        "rating": 74
+        "rating": 75
       },
       {
         "id": 155783,
-        "rating": 69
+        "rating": 70
       },
       {
         "id": 105228,
-        "rating": 62
+        "rating": 63
       },
       {
         "id": 179302,
-        "rating": 57
+        "rating": 58
       },
       {
         "id": 113415,
-        "rating": 55
+        "rating": 54
       },
       {
         "id": 154116,
@@ -5809,7 +5817,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 7,
-    "popularity": 170589,
+    "popularity": 171066,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx105190-lSoQNlnMF6UP.jpg",
     "coverColor": "#e45d78",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/105190-HhqT6N5MJCpE.jpg",
@@ -5851,11 +5859,11 @@
       },
       {
         "id": 125428,
-        "rating": 106
+        "rating": 107
       },
       {
         "id": 99698,
-        "rating": 96
+        "rating": 97
       },
       {
         "id": 141014,
@@ -5954,7 +5962,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 6.7,
-    "popularity": 245525,
+    "popularity": 246219,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx6880-qZ1jIqIYpST2.png",
     "coverColor": null,
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/6880-eq4JajOW0HOd.jpg",
@@ -5990,7 +5998,7 @@
       },
       {
         "id": 226,
-        "rating": 91
+        "rating": 92
       },
       {
         "id": 108241,
@@ -6107,7 +6115,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 8,
-    "popularity": 458868,
+    "popularity": 459922,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx20931-bktYqOcxPERi.jpg",
     "coverColor": "#35a1f1",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20931-xDhiTPZmtS3u.jpg",
@@ -6270,7 +6278,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 7.1,
-    "popularity": 99149,
+    "popularity": 99385,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx110353-XGYSsii7qJeK.png",
     "coverColor": "#50aee4",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/110353-ZKkmemQSFP7L.jpg",
@@ -6304,7 +6312,7 @@
       },
       {
         "id": 16498,
-        "rating": 106
+        "rating": 107
       },
       {
         "id": 97986,
@@ -6420,7 +6428,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.3,
-    "popularity": 970055,
+    "popularity": 973406,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101922-WBsBl0ClmgYL.jpg",
     "coverColor": "#f1c9ae",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/101922-33MtJGsUSxga.jpg",
@@ -6474,11 +6482,11 @@
     "_recAnilistIds": [
       {
         "id": 113415,
-        "rating": 3284
+        "rating": 3298
       },
       {
         "id": 101347,
-        "rating": 1925
+        "rating": 1928
       },
       {
         "id": 269,
@@ -6502,7 +6510,7 @@
       },
       {
         "id": 5114,
-        "rating": 102
+        "rating": 101
       },
       {
         "id": 11061,
@@ -6610,7 +6618,7 @@
     "source": "VIDEO_GAME",
     "sourceLabel": "Videogioco",
     "score10": 6.6,
-    "popularity": 62305,
+    "popularity": 62653,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1726-IrpH32PVADiO.jpg",
     "coverColor": null,
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1726-HAUfEfHx4a0c.jpg",
@@ -6756,7 +6764,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 7.6,
-    "popularity": 345344,
+    "popularity": 346272,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx98460-bLtH2c3jd6sV.png",
     "coverColor": "#f1e4c9",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/98460-PwSHquwVu89n.jpg",
@@ -6788,7 +6796,7 @@
       },
       {
         "id": 20623,
-        "rating": 401
+        "rating": 402
       },
       {
         "id": 30,
@@ -6796,7 +6804,7 @@
       },
       {
         "id": 33,
-        "rating": 297
+        "rating": 296
       },
       {
         "id": 32,
@@ -6804,15 +6812,15 @@
       },
       {
         "id": 47,
-        "rating": 139
+        "rating": 141
       },
       {
         "id": 777,
-        "rating": 109
+        "rating": 110
       },
       {
         "id": 120377,
-        "rating": 102
+        "rating": 103
       },
       {
         "id": 105228,
@@ -6820,7 +6828,7 @@
       },
       {
         "id": 171627,
-        "rating": 87
+        "rating": 88
       },
       {
         "id": 1454,
@@ -6828,7 +6836,7 @@
       },
       {
         "id": 171018,
-        "rating": 74
+        "rating": 75
       },
       {
         "id": 21400,
@@ -6914,7 +6922,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 7.8,
-    "popularity": 228628,
+    "popularity": 229474,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx223-scE5uJfXqqj8.png",
     "coverColor": "#e48635",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/223-vyRuUBBYfcUb.jpg",
@@ -7176,7 +7184,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 7.5,
-    "popularity": 131126,
+    "popularity": 131494,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21123-bCuqm8wLDqOw.png",
     "coverColor": null,
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21123-AB6drAXL5FhN.jpg",
@@ -7210,7 +7218,7 @@
     "_recAnilistIds": [
       {
         "id": 777,
-        "rating": 188
+        "rating": 189
       },
       {
         "id": 20613,
@@ -7329,8 +7337,8 @@
       "Sci-Fi"
     ],
     "tags": [
-      "Class Struggle",
       "War",
+      "Class Struggle",
       "Military",
       "Dystopian",
       "Survival",
@@ -7346,7 +7354,7 @@
     "source": "LIGHT_NOVEL",
     "sourceLabel": "Light novel",
     "score10": 8.3,
-    "popularity": 311890,
+    "popularity": 313403,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx116589-KawXHB6sApFt.jpg",
     "coverColor": "#bbd6f1",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/116589-SqwYWzaZCdD5.jpg",
@@ -7378,15 +7386,15 @@
     "_recAnilistIds": [
       {
         "id": 1575,
-        "rating": 416
+        "rating": 417
       },
       {
         "id": 16498,
-        "rating": 349
+        "rating": 351
       },
       {
         "id": 21613,
-        "rating": 204
+        "rating": 206
       },
       {
         "id": 21268,
@@ -7402,7 +7410,7 @@
       },
       {
         "id": 167152,
-        "rating": 111
+        "rating": 115
       },
       {
         "id": 20829,
@@ -7410,7 +7418,7 @@
       },
       {
         "id": 20632,
-        "rating": 84
+        "rating": 85
       },
       {
         "id": 21827,
@@ -7426,7 +7434,7 @@
       },
       {
         "id": 2904,
-        "rating": 60
+        "rating": 61
       },
       {
         "id": 146984,
@@ -7503,7 +7511,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.1,
-    "popularity": 592833,
+    "popularity": 594495,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21234-XmqW39aQ9o7O.jpg",
     "coverColor": "#f1a150",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21234-7lfSSPoMmwr2.jpg",
@@ -7533,27 +7541,27 @@
     "_recAnilistIds": [
       {
         "id": 9253,
-        "rating": 1886
+        "rating": 1890
       },
       {
         "id": 120120,
-        "rating": 765
+        "rating": 764
       },
       {
         "id": 21355,
-        "rating": 529
+        "rating": 532
       },
       {
         "id": 129201,
-        "rating": 512
+        "rating": 516
       },
       {
         "id": 101759,
-        "rating": 370
+        "rating": 371
       },
       {
         "id": 150672,
-        "rating": 279
+        "rating": 280
       },
       {
         "id": 126403,
@@ -7565,7 +7573,7 @@
       },
       {
         "id": 21647,
-        "rating": 172
+        "rating": 173
       },
       {
         "id": 108632,
@@ -7573,7 +7581,7 @@
       },
       {
         "id": 185407,
-        "rating": 142
+        "rating": 144
       },
       {
         "id": 20997,
@@ -7652,7 +7660,7 @@
     "source": "LIGHT_NOVEL",
     "sourceLabel": "Light novel",
     "score10": 6.4,
-    "popularity": 90698,
+    "popularity": 91312,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx173694-XcwGOMBxboOO.png",
     "coverColor": "#bb35e4",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/173694-zkZHpXUKouoC.jpg",
@@ -7706,7 +7714,7 @@
       },
       {
         "id": 158028,
-        "rating": 36
+        "rating": 37
       },
       {
         "id": 103632,
@@ -7806,7 +7814,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 7.9,
-    "popularity": 202557,
+    "popularity": 203147,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx227-qOB9ZhVvNnqO.jpg",
     "coverColor": "#e4865d",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/227.jpg",
@@ -7832,27 +7840,27 @@
     "_recAnilistIds": [
       {
         "id": 2001,
-        "rating": 377
+        "rating": 380
       },
       {
         "id": 30,
-        "rating": 329
+        "rating": 332
       },
       {
         "id": 18679,
-        "rating": 323
+        "rating": 324
       },
       {
         "id": 132126,
-        "rating": 295
+        "rating": 296
       },
       {
         "id": 171018,
-        "rating": 208
+        "rating": 209
       },
       {
         "id": 8795,
-        "rating": 151
+        "rating": 152
       },
       {
         "id": 19703,
@@ -7868,7 +7876,7 @@
       },
       {
         "id": 7785,
-        "rating": 105
+        "rating": 106
       },
       {
         "id": 1002,
@@ -7955,7 +7963,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 9.1,
-    "popularity": 456965,
+    "popularity": 460227,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx154587-qQTzQnEJJ3oB.jpg",
     "coverColor": "#bbf1a1",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/154587-ivXNJ23SM1xB.jpg",
@@ -8009,7 +8017,7 @@
     "_recAnilistIds": [
       {
         "id": 21827,
-        "rating": 1146
+        "rating": 1150
       },
       {
         "id": 153518,
@@ -8021,19 +8029,19 @@
       },
       {
         "id": 114535,
-        "rating": 413
+        "rating": 415
       },
       {
         "id": 147105,
-        "rating": 346
+        "rating": 350
       },
       {
         "id": 457,
-        "rating": 291
+        "rating": 290
       },
       {
         "id": 161645,
-        "rating": 259
+        "rating": 258
       },
       {
         "id": 486,
@@ -8045,22 +8053,22 @@
       },
       {
         "id": 99457,
-        "rating": 230
+        "rating": 231
       },
       {
         "id": 145728,
-        "rating": 188
+        "rating": 189
       },
       {
         "id": 179966,
-        "rating": 173
-      },
-      {
-        "id": 2966,
-        "rating": 119
+        "rating": 174
       },
       {
         "id": 166873,
+        "rating": 120
+      },
+      {
+        "id": 2966,
         "rating": 119
       }
     ],
@@ -8151,7 +8159,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 6.9,
-    "popularity": 422562,
+    "popularity": 424005,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx10620-dUZeNej0W4QN.png",
     "coverColor": null,
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/10620-CsZ2FFSbGpqV.jpg",
@@ -8201,7 +8209,7 @@
       },
       {
         "id": 226,
-        "rating": 123
+        "rating": 124
       },
       {
         "id": 6880,
@@ -8316,7 +8324,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.2,
-    "popularity": 239524,
+    "popularity": 241868,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx178025-cWJKEsZynkil.jpg",
     "coverColor": "#e4a150",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/178025-WvcXi1J2SGRa.jpg",
@@ -8360,11 +8368,11 @@
     "_recAnilistIds": [
       {
         "id": 3588,
-        "rating": 204
+        "rating": 205
       },
       {
         "id": 105310,
-        "rating": 155
+        "rating": 156
       },
       {
         "id": 105228,
@@ -8372,7 +8380,7 @@
       },
       {
         "id": 171018,
-        "rating": 103
+        "rating": 104
       },
       {
         "id": 130591,
@@ -8380,7 +8388,7 @@
       },
       {
         "id": 128893,
-        "rating": 57
+        "rating": 56
       },
       {
         "id": 113415,
@@ -8490,7 +8498,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 7.2,
-    "popularity": 134467,
+    "popularity": 134772,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20773-yfJQMyHqZyJr.jpg",
     "coverColor": "#785d1a",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20773-CQXjhFEa4zou.jpg",
@@ -8638,7 +8646,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 6.4,
-    "popularity": 61520,
+    "popularity": 61739,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx384-5vHimZPju1Wr.jpg",
     "coverColor": "#a13528",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/384-cPVc0l550dsW.jpg",
@@ -8792,8 +8800,8 @@
       "Politics",
       "Male Protagonist",
       "Primarily Adult Cast",
-      "Primarily Female Cast",
-      "Reverse Isekai"
+      "Reverse Isekai",
+      "Primarily Female Cast"
     ],
     "studios": [
       "A-1 Pictures"
@@ -8803,7 +8811,7 @@
     "source": "LIGHT_NOVEL",
     "sourceLabel": "Light novel",
     "score10": 7.4,
-    "popularity": 192840,
+    "popularity": 193465,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20994-pSDk4I58jAK5.jpg",
     "coverColor": "#e4ae50",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20994-9Vy4mDOFYT7O.jpg",
@@ -8972,7 +8980,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8,
-    "popularity": 170900,
+    "popularity": 171895,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx43-Y6EjeEMM14dj.png",
     "coverColor": null,
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/43-uDbk1jrG9yod.jpg",
@@ -9018,7 +9026,7 @@
     "_recAnilistIds": [
       {
         "id": 47,
-        "rating": 402
+        "rating": 404
       },
       {
         "id": 120377,
@@ -9026,7 +9034,7 @@
       },
       {
         "id": 790,
-        "rating": 210
+        "rating": 212
       },
       {
         "id": 128546,
@@ -9034,11 +9042,11 @@
       },
       {
         "id": 570,
-        "rating": 143
+        "rating": 144
       },
       {
         "id": 339,
-        "rating": 130
+        "rating": 131
       },
       {
         "id": 13601,
@@ -9046,7 +9054,7 @@
       },
       {
         "id": 1096,
-        "rating": 77
+        "rating": 79
       },
       {
         "id": 30,
@@ -9058,7 +9066,7 @@
       },
       {
         "id": 801,
-        "rating": 52
+        "rating": 53
       },
       {
         "id": 145665,
@@ -9070,7 +9078,7 @@
       },
       {
         "id": 99088,
-        "rating": 37
+        "rating": 38
       }
     ],
     "_relAnilistIds": [
@@ -9157,7 +9165,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 7.7,
-    "popularity": 135704,
+    "popularity": 136218,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx99699-mBCjpoWpAVGX.jpg",
     "coverColor": "#78281a",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/99699-95D2XWA6eWAH.jpg",
@@ -9236,11 +9244,11 @@
         "rating": 117
       },
       {
-        "id": 142877,
-        "rating": 109
+        "id": 206914,
+        "rating": 112
       },
       {
-        "id": 206914,
+        "id": 142877,
         "rating": 109
       },
       {
@@ -9353,7 +9361,7 @@
     "source": "LIGHT_NOVEL",
     "sourceLabel": "Light novel",
     "score10": 7.4,
-    "popularity": 178813,
+    "popularity": 179484,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21428-dFVIHeZ8McBe.jpg",
     "coverColor": "#e4e493",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21428-WXeLTDwfmKI5.jpg",
@@ -9389,15 +9397,15 @@
     "_recAnilistIds": [
       {
         "id": 101165,
-        "rating": 166
+        "rating": 167
       },
       {
         "id": 17265,
-        "rating": 124
+        "rating": 126
       },
       {
         "id": 108465,
-        "rating": 103
+        "rating": 104
       },
       {
         "id": 146065,
@@ -9513,7 +9521,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 7.2,
-    "popularity": 73101,
+    "popularity": 73479,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx144092-8EKzzZQofFlW.jpg",
     "coverColor": "#d6bb78",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/144092-EMQdMWbZ94Sl.jpg",
@@ -9658,7 +9666,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.1,
-    "popularity": 206684,
+    "popularity": 207491,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx155783-YosKbsmZzuDE.jpg",
     "coverColor": "#286bbb",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/155783-MXHfdquIBoHA.jpg",
@@ -9692,7 +9700,7 @@
     "_recAnilistIds": [
       {
         "id": 101759,
-        "rating": 468
+        "rating": 469
       },
       {
         "id": 97986,
@@ -9700,11 +9708,11 @@
       },
       {
         "id": 13125,
-        "rating": 298
+        "rating": 299
       },
       {
         "id": 99420,
-        "rating": 154
+        "rating": 155
       },
       {
         "id": 177697,
@@ -9712,11 +9720,11 @@
       },
       {
         "id": 177689,
-        "rating": 120
+        "rating": 124
       },
       {
         "id": 129201,
-        "rating": 87
+        "rating": 89
       },
       {
         "id": 155657,
@@ -9724,11 +9732,11 @@
       },
       {
         "id": 171018,
-        "rating": 69
+        "rating": 70
       },
       {
         "id": 206914,
-        "rating": 43
+        "rating": 45
       },
       {
         "id": 486,
@@ -9816,7 +9824,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8,
-    "popularity": 348354,
+    "popularity": 350287,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx128893-Gc2t8b8M0mVu.jpg",
     "coverColor": "#e4bb35",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/128893-pAA7PjY8l7dy.jpg",
@@ -9852,15 +9860,15 @@
     "_recAnilistIds": [
       {
         "id": 127230,
-        "rating": 252
+        "rating": 253
       },
       {
         "id": 101347,
-        "rating": 221
+        "rating": 222
       },
       {
         "id": 113415,
-        "rating": 200
+        "rating": 201
       },
       {
         "id": 101922,
@@ -9872,7 +9880,7 @@
       },
       {
         "id": 167152,
-        "rating": 93
+        "rating": 94
       },
       {
         "id": 145064,
@@ -9884,19 +9892,19 @@
       },
       {
         "id": 178025,
-        "rating": 57
+        "rating": 56
       },
       {
         "id": 101348,
-        "rating": 46
-      },
-      {
-        "id": 178788,
-        "rating": 37
+        "rating": 45
       },
       {
         "id": 6594,
-        "rating": 37
+        "rating": 38
+      },
+      {
+        "id": 178788,
+        "rating": 36
       },
       {
         "id": 168194,
@@ -9977,7 +9985,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.1,
-    "popularity": 181305,
+    "popularity": 181992,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx777-F6547pSAR2Zd.jpg",
     "coverColor": "#e4431a",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/777-XzPjBZdSRtDT.jpg",
@@ -10007,11 +10015,11 @@
     "_recAnilistIds": [
       {
         "id": 889,
-        "rating": 239
+        "rating": 240
       },
       {
         "id": 21123,
-        "rating": 188
+        "rating": 189
       },
       {
         "id": 105228,
@@ -10019,19 +10027,19 @@
       },
       {
         "id": 98460,
-        "rating": 109
+        "rating": 110
       },
       {
         "id": 21613,
-        "rating": 71
+        "rating": 72
       },
       {
         "id": 543,
-        "rating": 70
+        "rating": 71
       },
       {
         "id": 127230,
-        "rating": 63
+        "rating": 64
       },
       {
         "id": 6,
@@ -10134,7 +10142,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.4,
-    "popularity": 943914,
+    "popularity": 947846,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx113415-LHBAeoZDIsnF.jpg",
     "coverColor": "#e45d5d",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/113415-jQBSkxWAAk83.jpg",
@@ -10188,19 +10196,19 @@
     "_recAnilistIds": [
       {
         "id": 101922,
-        "rating": 3284
+        "rating": 3298
       },
       {
         "id": 269,
-        "rating": 1285
+        "rating": 1287
       },
       {
         "id": 127230,
-        "rating": 1076
+        "rating": 1080
       },
       {
         "id": 11061,
-        "rating": 997
+        "rating": 996
       },
       {
         "id": 20623,
@@ -10208,11 +10216,11 @@
       },
       {
         "id": 20447,
-        "rating": 428
+        "rating": 429
       },
       {
         "id": 9919,
-        "rating": 387
+        "rating": 388
       },
       {
         "id": 112151,
@@ -10232,11 +10240,11 @@
       },
       {
         "id": 21507,
-        "rating": 209
+        "rating": 210
       },
       {
         "id": 128893,
-        "rating": 200
+        "rating": 201
       },
       {
         "id": 20605,
@@ -10318,7 +10326,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.1,
-    "popularity": 271335,
+    "popularity": 272937,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx153288-25FBfFJzEQ5O.jpg",
     "coverColor": "#f1e4ae",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/153288-JNsWuMPMAuJL.jpg",
@@ -10370,7 +10378,7 @@
       },
       {
         "id": 16498,
-        "rating": 167
+        "rating": 168
       },
       {
         "id": 20623,
@@ -10501,7 +10509,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 7.9,
-    "popularity": 407436,
+    "popularity": 408461,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b18679-lbkq7iYESoFW.png",
     "coverColor": "#e40d0d",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/18679-rpC99hxBxaMn.jpg",
@@ -10531,7 +10539,7 @@
     "_recAnilistIds": [
       {
         "id": 2001,
-        "rating": 1515
+        "rating": 1516
       },
       {
         "id": 99425,
@@ -10539,11 +10547,11 @@
       },
       {
         "id": 227,
-        "rating": 323
+        "rating": 324
       },
       {
         "id": 8795,
-        "rating": 306
+        "rating": 307
       },
       {
         "id": 110354,
@@ -10555,7 +10563,7 @@
       },
       {
         "id": 171018,
-        "rating": 170
+        "rating": 171
       },
       {
         "id": 151,
@@ -10579,7 +10587,7 @@
       },
       {
         "id": 20057,
-        "rating": 59
+        "rating": 60
       },
       {
         "id": 120377,
@@ -10657,7 +10665,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 7.4,
-    "popularity": 58066,
+    "popularity": 58346,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx12031-1nVQa5nXPt48.png",
     "coverColor": "#936b28",
     "bannerImage": null,
@@ -10735,7 +10743,7 @@
       },
       {
         "id": 20935,
-        "rating": 39
+        "rating": 40
       },
       {
         "id": 142877,
@@ -10743,7 +10751,7 @@
       },
       {
         "id": 206914,
-        "rating": 34
+        "rating": 35
       },
       {
         "id": 162896,
@@ -10846,7 +10854,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 7,
-    "popularity": 110347,
+    "popularity": 110873,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx167336-KpGIIBie71OX.png",
     "coverColor": "#e4ae5d",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/167336-tDasHGggSBcH.jpg",
@@ -10985,9 +10993,9 @@
       "Primarily Child Cast",
       "Environmental",
       "Travel",
-      "Chibi",
       "Cosmic Horror",
-      "Curses"
+      "Curses",
+      "Chibi"
     ],
     "studios": [
       "Kinema Citrus"
@@ -10997,7 +11005,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.4,
-    "popularity": 396619,
+    "popularity": 397743,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx97986-TQ7dCgbS3y5s.jpg",
     "coverColor": "#e4c9ae",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/97986-C55UnbJKB7ZF.jpg",
@@ -11051,19 +11059,19 @@
     "_recAnilistIds": [
       {
         "id": 101759,
-        "rating": 2256
+        "rating": 2260
       },
       {
         "id": 99420,
-        "rating": 639
+        "rating": 641
       },
       {
         "id": 9756,
-        "rating": 476
+        "rating": 478
       },
       {
         "id": 98707,
-        "rating": 395
+        "rating": 396
       },
       {
         "id": 155783,
@@ -11071,11 +11079,11 @@
       },
       {
         "id": 13125,
-        "rating": 301
+        "rating": 302
       },
       {
         "id": 113717,
-        "rating": 206
+        "rating": 205
       },
       {
         "id": 108617,
@@ -11185,7 +11193,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.4,
-    "popularity": 611027,
+    "popularity": 613125,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21507-6YUSbh2m0N1p.jpg",
     "coverColor": "#d65d1a",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21507-Qx8bGsLXUgLo.jpg",
@@ -11251,23 +11259,23 @@
     "_recAnilistIds": [
       {
         "id": 21087,
-        "rating": 5054
+        "rating": 5072
       },
       {
         "id": 21804,
-        "rating": 877
+        "rating": 878
       },
       {
         "id": 171018,
-        "rating": 532
+        "rating": 534
       },
       {
         "id": 11061,
-        "rating": 281
+        "rating": 283
       },
       {
         "id": 113717,
-        "rating": 270
+        "rating": 271
       },
       {
         "id": 151801,
@@ -11275,7 +11283,7 @@
       },
       {
         "id": 113415,
-        "rating": 209
+        "rating": 210
       },
       {
         "id": 100077,
@@ -11374,8 +11382,8 @@
       "Crime",
       "Seinen",
       "Detective",
-      "Philosophy",
       "Ensemble Cast",
+      "Philosophy",
       "Primarily Adult Cast",
       "Noir",
       "Twins"
@@ -11388,7 +11396,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.8,
-    "popularity": 331111,
+    "popularity": 332648,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx19-gtMC64182sm4.jpg",
     "coverColor": null,
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/19-kJhwsB0Z97tL.jpg",
@@ -11418,11 +11426,11 @@
     "_recAnilistIds": [
       {
         "id": 1535,
-        "rating": 1151
+        "rating": 1154
       },
       {
         "id": 99088,
-        "rating": 357
+        "rating": 359
       },
       {
         "id": 13601,
@@ -11536,7 +11544,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 7.7,
-    "popularity": 854614,
+    "popularity": 857297,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21459-nYh85uj2Fuwr.jpg",
     "coverColor": "#f1d643",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21459-yeVkolGKdGUV.jpg",
@@ -11624,7 +11632,7 @@
       },
       {
         "id": 11061,
-        "rating": 187
+        "rating": 185
       },
       {
         "id": 20755,
@@ -11744,7 +11752,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 7.6,
-    "popularity": 70778,
+    "popularity": 71209,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx185736-Ci6AiGwjKKtp.jpg",
     "coverColor": "#50d6e4",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/185736-Ick7OABzBWoi.jpg",
@@ -11916,7 +11924,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.3,
-    "popularity": 752029,
+    "popularity": 754088,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21087-B5DHjqZ3kW4b.jpg",
     "coverColor": "#e4ae5d",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21087-sHb9zUZFsHe1.jpg",
@@ -11990,11 +11998,11 @@
     "_recAnilistIds": [
       {
         "id": 21507,
-        "rating": 5054
+        "rating": 5072
       },
       {
         "id": 151801,
-        "rating": 378
+        "rating": 379
       },
       {
         "id": 101338,
@@ -12002,7 +12010,7 @@
       },
       {
         "id": 21804,
-        "rating": 316
+        "rating": 315
       },
       {
         "id": 21459,
@@ -12014,7 +12022,7 @@
       },
       {
         "id": 166610,
-        "rating": 102
+        "rating": 103
       },
       {
         "id": 122434,
@@ -12105,13 +12113,13 @@
     ],
     "tags": [
       "Isekai",
-      "Ensemble Cast",
       "Anti-Hero",
       "Skeleton",
+      "Ensemble Cast",
       "Virtual World",
       "Male Protagonist",
-      "Magic",
-      "Kingdom Management"
+      "Medieval",
+      "Magic"
     ],
     "studios": [
       "MADHOUSE"
@@ -12121,7 +12129,7 @@
     "source": "LIGHT_NOVEL",
     "sourceLabel": "Light novel",
     "score10": 7.7,
-    "popularity": 394497,
+    "popularity": 395921,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20832-vUNm5zrYWifc.jpg",
     "coverColor": "#505de4",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20832-NswCiSYMoI2k.jpg",
@@ -12205,19 +12213,19 @@
     "_recAnilistIds": [
       {
         "id": 101280,
-        "rating": 913
+        "rating": 915
       },
       {
         "id": 130298,
-        "rating": 532
+        "rating": 534
       },
       {
         "id": 21613,
-        "rating": 403
+        "rating": 405
       },
       {
         "id": 108511,
-        "rating": 286
+        "rating": 287
       },
       {
         "id": 17265,
@@ -12233,11 +12241,11 @@
       },
       {
         "id": 101004,
-        "rating": 162
+        "rating": 164
       },
       {
         "id": 19815,
-        "rating": 151
+        "rating": 152
       },
       {
         "id": 116742,
@@ -12257,7 +12265,7 @@
       },
       {
         "id": 133844,
-        "rating": 106
+        "rating": 107
       }
     ],
     "_relAnilistIds": [
@@ -12366,7 +12374,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.1,
-    "popularity": 490659,
+    "popularity": 492005,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20623-dUARfggnNDOe.jpg",
     "coverColor": "#285086",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20623-xb9PPf8rGOsG.jpg",
@@ -12400,7 +12408,7 @@
       },
       {
         "id": 98460,
-        "rating": 401
+        "rating": 402
       },
       {
         "id": 1535,
@@ -12424,11 +12432,11 @@
       },
       {
         "id": 129201,
-        "rating": 107
+        "rating": 108
       },
       {
         "id": 16498,
-        "rating": 97
+        "rating": 99
       },
       {
         "id": 7724,
@@ -12514,7 +12522,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.4,
-    "popularity": 100957,
+    "popularity": 101462,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx99088-LTJskMD1wbbQ.png",
     "coverColor": "#e43535",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/99088-KFYEoH7jCF0b.jpg",
@@ -12536,7 +12544,7 @@
     "_recAnilistIds": [
       {
         "id": 19,
-        "rating": 357
+        "rating": 359
       },
       {
         "id": 47,
@@ -12548,7 +12556,7 @@
       },
       {
         "id": 128546,
-        "rating": 56
+        "rating": 57
       },
       {
         "id": 971,
@@ -12564,7 +12572,7 @@
       },
       {
         "id": 43,
-        "rating": 37
+        "rating": 38
       },
       {
         "id": 1483,
@@ -12664,7 +12672,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 8.5,
-    "popularity": 295243,
+    "popularity": 296293,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx164-ySuGzCWVw2cL.jpg",
     "coverColor": null,
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/164-Aj6MINy7VTfs.jpg",
@@ -12694,7 +12702,7 @@
     "_recAnilistIds": [
       {
         "id": 572,
-        "rating": 264
+        "rating": 265
       },
       {
         "id": 199,
@@ -12706,7 +12714,7 @@
       },
       {
         "id": 7711,
-        "rating": 103
+        "rating": 104
       },
       {
         "id": 513,
@@ -12812,7 +12820,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 7.7,
-    "popularity": 108155,
+    "popularity": 108355,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx99425-CQ500X23zp4i.png",
     "coverColor": "#d6bb1a",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n99425-GgPoElhysW3D.jpg",
@@ -12970,7 +12978,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.3,
-    "popularity": 218955,
+    "popularity": 219677,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx113717-9sNnN8WRgK15.jpg",
     "coverColor": "#e4935d",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/113717-XFiGSPtNJQWv.jpg",
@@ -13006,11 +13014,11 @@
     "_recAnilistIds": [
       {
         "id": 21507,
-        "rating": 270
+        "rating": 271
       },
       {
         "id": 97986,
-        "rating": 206
+        "rating": 205
       },
       {
         "id": 101347,
@@ -13022,7 +13030,7 @@
       },
       {
         "id": 20954,
-        "rating": 117
+        "rating": 116
       },
       {
         "id": 101348,
@@ -13031,6 +13039,10 @@
       {
         "id": 154587,
         "rating": 42
+      },
+      {
+        "id": 190569,
+        "rating": 37
       },
       {
         "id": 5420,
@@ -13043,10 +13055,6 @@
       {
         "id": 153518,
         "rating": 32
-      },
-      {
-        "id": 190569,
-        "rating": 31
       },
       {
         "id": 11061,
@@ -13141,7 +13149,7 @@
     "source": "LIGHT_NOVEL",
     "sourceLabel": "Light novel",
     "score10": 8.1,
-    "popularity": 603399,
+    "popularity": 605917,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21355-wRVUrGxpvIQQ.jpg",
     "coverColor": "#f150ae",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21355-f9SjOfEJMk5P.jpg",
@@ -13209,31 +13217,31 @@
     "_recAnilistIds": [
       {
         "id": 9253,
-        "rating": 1604
+        "rating": 1611
       },
       {
         "id": 129201,
-        "rating": 863
+        "rating": 866
       },
       {
         "id": 21234,
-        "rating": 529
+        "rating": 532
       },
       {
         "id": 127720,
-        "rating": 287
+        "rating": 288
       },
       {
         "id": 108465,
-        "rating": 275
+        "rating": 276
       },
       {
         "id": 120120,
-        "rating": 241
+        "rating": 242
       },
       {
         "id": 104454,
-        "rating": 170
+        "rating": 172
       },
       {
         "id": 21613,
@@ -13241,15 +13249,15 @@
       },
       {
         "id": 146065,
-        "rating": 115
+        "rating": 114
       },
       {
         "id": 99263,
-        "rating": 107
+        "rating": 108
       },
       {
         "id": 21127,
-        "rating": 104
+        "rating": 105
       },
       {
         "id": 9756,
@@ -13364,7 +13372,7 @@
     "source": "LIGHT_NOVEL",
     "sourceLabel": "Light novel",
     "score10": 7.4,
-    "popularity": 110385,
+    "popularity": 110960,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx139587-rbZVcigCRtHY.jpg",
     "coverColor": "#e4a135",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/139587-XFbotQOPcLC4.jpg",
@@ -13420,19 +13428,19 @@
       },
       {
         "id": 153360,
-        "rating": 89
+        "rating": 90
       },
       {
         "id": 132474,
         "rating": 82
       },
       {
-        "id": 156891,
+        "id": 125206,
         "rating": 57
       },
       {
-        "id": 125206,
-        "rating": 56
+        "id": 156891,
+        "rating": 57
       },
       {
         "id": 116742,
@@ -13536,7 +13544,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 7.3,
-    "popularity": 38077,
+    "popularity": 38166,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/1254.jpg",
     "coverColor": "#e4d643",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1254-8sEdD7gwYipm.jpg",
@@ -13757,7 +13765,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 8.4,
-    "popularity": 274177,
+    "popularity": 275085,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx205-7tHVFu6dPBm9.png",
     "coverColor": null,
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/205-L7WpOOWUmVjh.jpg",
@@ -13791,15 +13799,15 @@
     "_recAnilistIds": [
       {
         "id": 1,
-        "rating": 1630
+        "rating": 1634
       },
       {
         "id": 101347,
-        "rating": 345
+        "rating": 347
       },
       {
         "id": 1292,
-        "rating": 184
+        "rating": 185
       },
       {
         "id": 6594,
@@ -13815,7 +13823,7 @@
       },
       {
         "id": 4087,
-        "rating": 69
+        "rating": 70
       },
       {
         "id": 109616,
@@ -13911,7 +13919,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8,
-    "popularity": 178565,
+    "popularity": 179981,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx151970-xtIx3VqEk02X.jpg",
     "coverColor": "#5da1e4",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/151970-Tnnfp0f7NOzj.jpg",
@@ -13989,7 +13997,7 @@
       },
       {
         "id": 106479,
-        "rating": 124
+        "rating": 125
       },
       {
         "id": 17265,
@@ -13997,11 +14005,11 @@
       },
       {
         "id": 126791,
-        "rating": 50
+        "rating": 51
       },
       {
         "id": 20832,
-        "rating": 44
+        "rating": 45
       },
       {
         "id": 180523,
@@ -14112,7 +14120,7 @@
     "source": "OTHER",
     "sourceLabel": "Altro",
     "score10": 8.1,
-    "popularity": 426732,
+    "popularity": 429505,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx151807-it355ZgzquUd.png",
     "coverColor": "#35bbf1",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/151807-37yfQA3ym8PA.jpg",
@@ -14162,7 +14170,7 @@
     "_recAnilistIds": [
       {
         "id": 11757,
-        "rating": 164
+        "rating": 163
       },
       {
         "id": 115230,
@@ -14170,7 +14178,7 @@
       },
       {
         "id": 130298,
-        "rating": 57
+        "rating": 58
       },
       {
         "id": 116006,
@@ -14182,7 +14190,7 @@
       },
       {
         "id": 166442,
-        "rating": 37
+        "rating": 38
       },
       {
         "id": 98861,
@@ -14194,7 +14202,7 @@
       },
       {
         "id": 184356,
-        "rating": 18
+        "rating": 24
       },
       {
         "id": 122511,
@@ -14291,7 +14299,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.3,
-    "popularity": 554420,
+    "popularity": 556657,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx140960-Kb6R5nYQfjmP.jpg",
     "coverColor": "#c9f1f1",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/140960-Z7xSvkRxHKfj.jpg",
@@ -14407,11 +14415,11 @@
       },
       {
         "id": 158928,
-        "rating": 55
+        "rating": 56
       },
       {
-        "id": 2251,
-        "rating": 51
+        "id": 199547,
+        "rating": 53
       }
     ],
     "_relAnilistIds": [
@@ -14470,8 +14478,8 @@
       "Video Games",
       "Male Protagonist",
       "Swordplay",
-      "Primarily Teen Cast",
       "Heterosexual",
+      "Primarily Teen Cast",
       "Isekai",
       "Urban Fantasy"
     ],
@@ -14483,7 +14491,7 @@
     "source": "LIGHT_NOVEL",
     "sourceLabel": "Light novel",
     "score10": 7,
-    "popularity": 702581,
+    "popularity": 705168,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11757-SxYDUzdr9rh2.jpg",
     "coverColor": "#e4bb5d",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/11757-TlEEV9weG4Ag.jpg",
@@ -14539,19 +14547,19 @@
     "_recAnilistIds": [
       {
         "id": 99263,
-        "rating": 395
+        "rating": 397
       },
       {
         "id": 17265,
-        "rating": 288
+        "rating": 289
       },
       {
         "id": 20920,
-        "rating": 233
+        "rating": 234
       },
       {
         "id": 151807,
-        "rating": 164
+        "rating": 163
       },
       {
         "id": 151970,
@@ -14559,7 +14567,7 @@
       },
       {
         "id": 101280,
-        "rating": 143
+        "rating": 145
       },
       {
         "id": 106479,
@@ -14579,7 +14587,7 @@
       },
       {
         "id": 176496,
-        "rating": 54
+        "rating": 55
       },
       {
         "id": 170890,
@@ -14670,8 +14678,8 @@
     ],
     "tags": [
       "Aliens",
-      "Gore",
       "Henshin",
+      "Gore",
       "Survival",
       "Animals",
       "War",
@@ -14686,7 +14694,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 6.5,
-    "popularity": 44086,
+    "popularity": 44160,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx20629-xO8wxKYeXncc.png",
     "coverColor": "#c9501a",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20629-T2N9xD1YV4Fn.jpg",
@@ -14853,7 +14861,7 @@
     "source": "LIGHT_NOVEL",
     "sourceLabel": "Light novel",
     "score10": 8.1,
-    "popularity": 301234,
+    "popularity": 303089,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx130298-YMdcKHytpWNH.jpg",
     "coverColor": "#d61a1a",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/130298-9yxFlFvKMwRk.jpg",
@@ -14897,7 +14905,7 @@
     "_recAnilistIds": [
       {
         "id": 20832,
-        "rating": 532
+        "rating": 534
       },
       {
         "id": 129898,
@@ -14909,31 +14917,31 @@
       },
       {
         "id": 108465,
-        "rating": 181
+        "rating": 180
       },
       {
         "id": 142074,
-        "rating": 178
+        "rating": 177
       },
       {
         "id": 101280,
-        "rating": 167
+        "rating": 168
       },
       {
         "id": 175019,
-        "rating": 142
+        "rating": 144
       },
       {
         "id": 176496,
-        "rating": 105
+        "rating": 106
       },
       {
         "id": 144553,
-        "rating": 103
+        "rating": 102
       },
       {
         "id": 98659,
-        "rating": 94
+        "rating": 95
       },
       {
         "id": 136804,
@@ -14945,7 +14953,7 @@
       },
       {
         "id": 151807,
-        "rating": 57
+        "rating": 58
       },
       {
         "id": 154391,
@@ -15030,7 +15038,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.3,
-    "popularity": 621525,
+    "popularity": 623111,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101759-8UR7r9MNVpz2.jpg",
     "coverColor": "#e4ae50",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/101759-MhlCoeqnODso.jpg",
@@ -15070,23 +15078,23 @@
     "_recAnilistIds": [
       {
         "id": 97986,
-        "rating": 2256
+        "rating": 2260
       },
       {
         "id": 16498,
-        "rating": 682
-      },
-      {
-        "id": 155783,
-        "rating": 468
+        "rating": 684
       },
       {
         "id": 1535,
-        "rating": 467
+        "rating": 469
+      },
+      {
+        "id": 155783,
+        "rating": 469
       },
       {
         "id": 21234,
-        "rating": 370
+        "rating": 371
       },
       {
         "id": 125038,
@@ -15094,7 +15102,7 @@
       },
       {
         "id": 13125,
-        "rating": 220
+        "rating": 221
       },
       {
         "id": 117343,
@@ -15192,8 +15200,8 @@
     "creator": "Aneko Yusagi",
     "source": "LIGHT_NOVEL",
     "sourceLabel": "Light novel",
-    "score10": 7.7,
-    "popularity": 450137,
+    "score10": 7.6,
+    "popularity": 451696,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx99263-LcazQwdlWzMy.jpg",
     "coverColor": "#5dc9e4",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/99263-IwkmdCTsDY1t.jpg",
@@ -15251,23 +15259,23 @@
       },
       {
         "id": 100668,
-        "rating": 418
+        "rating": 419
       },
       {
         "id": 11757,
-        "rating": 395
+        "rating": 397
       },
       {
         "id": 108465,
-        "rating": 302
+        "rating": 303
       },
       {
         "id": 113425,
-        "rating": 298
+        "rating": 297
       },
       {
         "id": 105156,
-        "rating": 178
+        "rating": 179
       },
       {
         "id": 106479,
@@ -15275,7 +15283,7 @@
       },
       {
         "id": 129898,
-        "rating": 146
+        "rating": 147
       },
       {
         "id": 126546,
@@ -15294,11 +15302,11 @@
         "rating": 114
       },
       {
-        "id": 108632,
-        "rating": 107
+        "id": 21355,
+        "rating": 108
       },
       {
-        "id": 21355,
+        "id": 108632,
         "rating": 107
       }
     ],
@@ -15374,7 +15382,8 @@
       "Anti-Hero",
       "Male Protagonist",
       "Female Harem",
-      "Guns"
+      "Guns",
+      "Incest"
     ],
     "studios": [
       "SILVER LINK.",
@@ -15385,7 +15394,7 @@
     "source": "LIGHT_NOVEL",
     "sourceLabel": "Light novel",
     "score10": 7.2,
-    "popularity": 196284,
+    "popularity": 197258,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx129898-FRUzDtPhRigt.jpg",
     "coverColor": "#f1a15d",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/129898-Qp41lxD3wU9e.jpg",
@@ -15429,15 +15438,15 @@
       },
       {
         "id": 108465,
-        "rating": 291
+        "rating": 292
       },
       {
         "id": 126546,
-        "rating": 217
+        "rating": 218
       },
       {
         "id": 99263,
-        "rating": 146
+        "rating": 147
       },
       {
         "id": 112301,
@@ -15551,7 +15560,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 8.5,
-    "popularity": 120949,
+    "popularity": 121738,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx156092-yHqgQZOF2mbg.jpg",
     "coverColor": "#d61a1a",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/156092-XJ6CHMZpJ7YX.jpg",
@@ -15585,11 +15594,11 @@
     "_recAnilistIds": [
       {
         "id": 126403,
-        "rating": 177
+        "rating": 178
       },
       {
         "id": 137667,
-        "rating": 96
+        "rating": 97
       },
       {
         "id": 21087,
@@ -15713,7 +15722,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 7.7,
-    "popularity": 436466,
+    "popularity": 437778,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx120120-cWDmnmeEntSe.jpg",
     "coverColor": "#f1865d",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/120120-UDYgoHA69peT.jpg",
@@ -15785,7 +15794,7 @@
     "_recAnilistIds": [
       {
         "id": 21234,
-        "rating": 765
+        "rating": 764
       },
       {
         "id": 9253,
@@ -15793,7 +15802,7 @@
       },
       {
         "id": 21355,
-        "rating": 241
+        "rating": 242
       },
       {
         "id": 163270,
@@ -15821,7 +15830,7 @@
       },
       {
         "id": 129201,
-        "rating": 55
+        "rating": 56
       },
       {
         "id": 21127,
@@ -15914,7 +15923,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 7.4,
-    "popularity": 329277,
+    "popularity": 330180,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx115230-QHOdSN7yt8ab.jpg",
     "coverColor": "#f19328",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/115230-wjDIxW77TLv3.jpg",
@@ -16075,7 +16084,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8,
-    "popularity": 166623,
+    "popularity": 167200,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx6-wd4saT1JzStH.jpg",
     "coverColor": "#5086c9",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/6-4pIR2RY8AHZ0.jpg",
@@ -16103,7 +16112,7 @@
     "_recAnilistIds": [
       {
         "id": 1,
-        "rating": 650
+        "rating": 651
       },
       {
         "id": 121,
@@ -16115,7 +16124,7 @@
       },
       {
         "id": 267,
-        "rating": 76
+        "rating": 77
       },
       {
         "id": 45,
@@ -16230,7 +16239,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.7,
-    "popularity": 528857,
+    "popularity": 531271,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101348-2fhDFPCuMNiz.jpg",
     "coverColor": "#f16b5d",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/101348-pivKKffCAwAY.jpg",
@@ -16266,19 +16275,19 @@
     "_recAnilistIds": [
       {
         "id": 16498,
-        "rating": 2809
+        "rating": 2821
       },
       {
         "id": 33,
-        "rating": 1055
+        "rating": 1056
       },
       {
         "id": 101347,
-        "rating": 545
+        "rating": 546
       },
       {
         "id": 151514,
-        "rating": 398
+        "rating": 399
       },
       {
         "id": 104578,
@@ -16395,7 +16404,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 7.9,
-    "popularity": 165028,
+    "popularity": 166948,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx174576-tpKcHG0eO6CS.jpg",
     "coverColor": "#e4865d",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/174576-6stJnscy5rCi.jpg",
@@ -16445,7 +16454,7 @@
     "_recAnilistIds": [
       {
         "id": 97940,
-        "rating": 216
+        "rating": 217
       },
       {
         "id": 151801,
@@ -16461,7 +16470,7 @@
       },
       {
         "id": 21092,
-        "rating": 60
+        "rating": 62
       },
       {
         "id": 170732,
@@ -16571,7 +16580,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 7.4,
-    "popularity": 60115,
+    "popularity": 60273,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx202-w2OLL3j8WmDm.jpg",
     "coverColor": "#f16b00",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/202-3Ud0fKK0ithq.jpg",
@@ -16718,7 +16727,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 7.8,
-    "popularity": 116949,
+    "popularity": 119765,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx195600-moI0UFArtOme.jpg",
     "coverColor": "#e49335",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/195600-UxHvDXwzJxlP.jpg",
@@ -16748,15 +16757,15 @@
     "_recAnilistIds": [
       {
         "id": 5114,
-        "rating": 129
+        "rating": 132
       },
       {
         "id": 121,
-        "rating": 65
+        "rating": 66
       },
       {
         "id": 11061,
-        "rating": 28
+        "rating": 29
       },
       {
         "id": 154,
@@ -16772,7 +16781,11 @@
       },
       {
         "id": 20447,
-        "rating": 13
+        "rating": 14
+      },
+      {
+        "id": 196012,
+        "rating": 12
       },
       {
         "id": 7592,
@@ -16784,10 +16797,6 @@
       },
       {
         "id": 1482,
-        "rating": 11
-      },
-      {
-        "id": 196012,
         "rating": 11
       },
       {
@@ -16803,7 +16812,12 @@
         "rating": 7
       }
     ],
-    "_relAnilistIds": [],
+    "_relAnilistIds": [
+      {
+        "id": 5114,
+        "rel": "CHARACTER"
+      }
+    ],
     "provenance": {
       "source": "AniList",
       "anilistUrl": "https://anilist.co/anime/195600",
@@ -16867,7 +16881,7 @@
     "source": "OTHER",
     "sourceLabel": "Altro",
     "score10": 8,
-    "popularity": 15711,
+    "popularity": 15977,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx137662-iZigHTc71wi7.png",
     "coverColor": "#e4a128",
     "bannerImage": null,
@@ -17012,7 +17026,7 @@
     "source": "LIGHT_NOVEL",
     "sourceLabel": "Light novel",
     "score10": 8.1,
-    "popularity": 342003,
+    "popularity": 342939,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx10087-M4Hd9qrHGrXk.png",
     "coverColor": "#e4d65d",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/10087-32MFY9VnJQ7I.jpg",
@@ -17206,7 +17220,7 @@
       "Magic",
       "Mythology",
       "Work",
-      "Urban Fantasy"
+      "Isekai"
     ],
     "studios": [
       "Studio Ghibli"
@@ -17216,7 +17230,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 8.6,
-    "popularity": 469752,
+    "popularity": 471406,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx199-sWefXJvXkDOb.jpg",
     "coverColor": "#e45d5d",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/199-Sm2RU5PSqw7T.jpg",
@@ -17246,11 +17260,11 @@
     "_recAnilistIds": [
       {
         "id": 431,
-        "rating": 797
+        "rating": 800
       },
       {
         "id": 523,
-        "rating": 391
+        "rating": 392
       },
       {
         "id": 512,
@@ -17258,7 +17272,7 @@
       },
       {
         "id": 2890,
-        "rating": 207
+        "rating": 208
       },
       {
         "id": 164,
@@ -17278,7 +17292,7 @@
       },
       {
         "id": 572,
-        "rating": 81
+        "rating": 80
       },
       {
         "id": 20981,
@@ -17369,7 +17383,7 @@
     "source": "LIGHT_NOVEL",
     "sourceLabel": "Light novel",
     "score10": 8.1,
-    "popularity": 151305,
+    "popularity": 152826,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx167152-O1pm6DWwifBD.jpg",
     "coverColor": "#f1a15d",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/167152-6QxZG8Dmf1EL.jpg",
@@ -17409,23 +17423,23 @@
     "_recAnilistIds": [
       {
         "id": 178869,
-        "rating": 147
+        "rating": 148
       },
       {
         "id": 116589,
-        "rating": 111
+        "rating": 115
       },
       {
         "id": 128893,
-        "rating": 93
+        "rating": 94
       },
       {
         "id": 108465,
-        "rating": 59
+        "rating": 61
       },
       {
         "id": 99263,
-        "rating": 57
+        "rating": 59
       },
       {
         "id": 33,
@@ -17532,7 +17546,7 @@
     "source": "LIGHT_NOVEL",
     "sourceLabel": "Light novel",
     "score10": 8.5,
-    "popularity": 535070,
+    "popularity": 536734,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21827-ubzq619ZA2E9.png",
     "coverColor": "#3586e4",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21827-ROucgYiiiSpR.jpg",
@@ -17560,11 +17574,11 @@
     "_recAnilistIds": [
       {
         "id": 20954,
-        "rating": 1280
+        "rating": 1283
       },
       {
         "id": 154587,
-        "rating": 1146
+        "rating": 1150
       },
       {
         "id": 128546,
@@ -17572,15 +17586,15 @@
       },
       {
         "id": 99750,
-        "rating": 419
+        "rating": 421
       },
       {
         "id": 20665,
-        "rating": 406
+        "rating": 407
       },
       {
         "id": 99457,
-        "rating": 330
+        "rating": 331
       },
       {
         "id": 112609,
@@ -17600,7 +17614,7 @@
       },
       {
         "id": 190143,
-        "rating": 103
+        "rating": 105
       },
       {
         "id": 147103,
@@ -17608,7 +17622,7 @@
       },
       {
         "id": 182255,
-        "rating": 92
+        "rating": 94
       },
       {
         "id": 4181,
@@ -17691,7 +17705,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.8,
-    "popularity": 696338,
+    "popularity": 699186,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20954-sYRfE5jQRtSB.jpg",
     "coverColor": "#5dbbe4",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20954-f30bHMXa5Qoe.jpg",
@@ -17713,31 +17727,31 @@
     "_recAnilistIds": [
       {
         "id": 21519,
-        "rating": 5965
+        "rating": 5979
       },
       {
         "id": 99750,
-        "rating": 2579
+        "rating": 2590
       },
       {
         "id": 21827,
-        "rating": 1280
+        "rating": 1283
       },
       {
         "id": 20665,
-        "rating": 724
+        "rating": 726
       },
       {
         "id": 113596,
-        "rating": 668
-      },
-      {
-        "id": 21366,
-        "rating": 282
+        "rating": 671
       },
       {
         "id": 166794,
-        "rating": 282
+        "rating": 284
+      },
+      {
+        "id": 21366,
+        "rating": 283
       },
       {
         "id": 20968,
@@ -17757,15 +17771,15 @@
       },
       {
         "id": 181444,
-        "rating": 173
+        "rating": 176
       },
       {
         "id": 21647,
-        "rating": 168
+        "rating": 169
       },
       {
         "id": 133965,
-        "rating": 165
+        "rating": 164
       }
     ],
     "_relAnilistIds": [
@@ -17835,7 +17849,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.3,
-    "popularity": 210381,
+    "popularity": 210827,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21366-0wrYK0kjKeFn.jpg",
     "coverColor": "#e4865d",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21366-oIjFSx0sm2eG.jpg",
@@ -17871,23 +17885,23 @@
     "_recAnilistIds": [
       {
         "id": 10800,
-        "rating": 317
+        "rating": 318
       },
       {
         "id": 20954,
-        "rating": 282
+        "rating": 283
       },
       {
         "id": 20607,
-        "rating": 277
+        "rating": 278
+      },
+      {
+        "id": 177385,
+        "rating": 183
       },
       {
         "id": 20665,
         "rating": 182
-      },
-      {
-        "id": 177385,
-        "rating": 181
       },
       {
         "id": 20972,
@@ -17915,7 +17929,7 @@
       },
       {
         "id": 104052,
-        "rating": 71
+        "rating": 72
       },
       {
         "id": 145,
@@ -18004,7 +18018,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.2,
-    "popularity": 150809,
+    "popularity": 151101,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20722-2KAeq72E95dr.png",
     "coverColor": "#4386e4",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20722-vjD7BMct1l1n.jpg",
@@ -18059,11 +18073,11 @@
         "rating": 88
       },
       {
-        "id": 100077,
-        "rating": 84
+        "id": 139589,
+        "rating": 85
       },
       {
-        "id": 139589,
+        "id": 100077,
         "rating": 84
       },
       {
@@ -18162,7 +18176,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.5,
-    "popularity": 190132,
+    "popularity": 190705,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx457-l6cTtNgI9Bi6.png",
     "coverColor": "#d6bb78",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n457-sWOJfqYC7s2I.jpg",
@@ -18188,11 +18202,11 @@
     "_recAnilistIds": [
       {
         "id": 4081,
-        "rating": 357
+        "rating": 356
       },
       {
         "id": 154587,
-        "rating": 291
+        "rating": 290
       },
       {
         "id": 486,
@@ -18200,7 +18214,7 @@
       },
       {
         "id": 2246,
-        "rating": 258
+        "rating": 259
       },
       {
         "id": 114535,
@@ -18212,11 +18226,11 @@
       },
       {
         "id": 477,
-        "rating": 74
+        "rating": 73
       },
       {
         "id": 387,
-        "rating": 65
+        "rating": 66
       },
       {
         "id": 10408,
@@ -18228,19 +18242,19 @@
       },
       {
         "id": 130550,
-        "rating": 44
+        "rating": 45
       },
       {
         "id": 572,
         "rating": 34
       },
       {
-        "id": 11665,
+        "id": 177689,
         "rating": 33
       },
       {
-        "id": 177689,
-        "rating": 32
+        "id": 11665,
+        "rating": 33
       }
     ],
     "_relAnilistIds": [
@@ -18310,7 +18324,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.1,
-    "popularity": 163786,
+    "popularity": 164126,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx98444-Vzysp1EsrzgD.jpg",
     "coverColor": "#f1ae5d",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/98444-FpH9lzLiafe9.jpg",
@@ -18366,11 +18380,11 @@
     "_recAnilistIds": [
       {
         "id": 99426,
-        "rating": 589
+        "rating": 588
       },
       {
         "id": 17549,
-        "rating": 444
+        "rating": 446
       },
       {
         "id": 5680,
@@ -18386,7 +18400,7 @@
       },
       {
         "id": 14355,
-        "rating": 200
+        "rating": 201
       },
       {
         "id": 109019,
@@ -18501,7 +18515,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 8.6,
-    "popularity": 696450,
+    "popularity": 698874,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21519-SUo3ZQuCbYhJ.png",
     "coverColor": "#0da1e4",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21519-1ayMXgNlmByb.jpg",
@@ -18535,31 +18549,31 @@
     "_recAnilistIds": [
       {
         "id": 20954,
-        "rating": 5965
+        "rating": 5979
       },
       {
         "id": 106286,
-        "rating": 4585
+        "rating": 4597
       },
       {
         "id": 99750,
-        "rating": 1021
+        "rating": 1023
       },
       {
         "id": 1689,
-        "rating": 534
+        "rating": 536
       },
       {
         "id": 16782,
-        "rating": 472
+        "rating": 474
       },
       {
         "id": 142770,
-        "rating": 392
+        "rating": 395
       },
       {
         "id": 104157,
-        "rating": 263
+        "rating": 262
       },
       {
         "id": 114963,
@@ -18667,7 +18681,7 @@
     "source": "VISUAL_NOVEL",
     "sourceLabel": "Visual novel",
     "score10": 8.8,
-    "popularity": 219022,
+    "popularity": 219668,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx4181-zUKE7BZC62OF.png",
     "coverColor": "#f1e450",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/4181.jpg",
@@ -18705,11 +18719,11 @@
     "_recAnilistIds": [
       {
         "id": 20665,
-        "rating": 279
+        "rating": 280
       },
       {
         "id": 9989,
-        "rating": 174
+        "rating": 175
       },
       {
         "id": 6547,
@@ -18717,7 +18731,7 @@
       },
       {
         "id": 99457,
-        "rating": 153
+        "rating": 155
       },
       {
         "id": 1530,
@@ -18737,7 +18751,7 @@
       },
       {
         "id": 101,
-        "rating": 59
+        "rating": 60
       },
       {
         "id": 20954,
@@ -18841,7 +18855,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.4,
-    "popularity": 599567,
+    "popularity": 601482,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20665-TLgkL8T8IRFd.png",
     "coverColor": "#e4bb50",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20665-j4kSsfhfkM24.jpg",
@@ -18875,23 +18889,23 @@
     "_recAnilistIds": [
       {
         "id": 99750,
-        "rating": 1815
+        "rating": 1818
       },
       {
         "id": 20954,
-        "rating": 724
+        "rating": 726
       },
       {
         "id": 21827,
-        "rating": 406
+        "rating": 407
       },
       {
         "id": 4181,
-        "rating": 279
+        "rating": 280
       },
       {
         "id": 9989,
-        "rating": 245
+        "rating": 246
       },
       {
         "id": 21366,
@@ -19000,7 +19014,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.2,
-    "popularity": 304472,
+    "popularity": 305390,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx105334-AZwEdMu4KFtV.jpg",
     "coverColor": "#e4d6a1",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/105334-dPfrCyZ8GkOI.jpg",
@@ -19050,7 +19064,7 @@
     "_recAnilistIds": [
       {
         "id": 14713,
-        "rating": 338
+        "rating": 339
       },
       {
         "id": 853,
@@ -19178,7 +19192,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.3,
-    "popularity": 545316,
+    "popularity": 547180,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101921-ufrjLzhSz7L1.jpg",
     "coverColor": "#e45086",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/101921-GgvvFhlNhzlF.jpg",
@@ -19226,7 +19240,7 @@
     "_recAnilistIds": [
       {
         "id": 124080,
-        "rating": 1413
+        "rating": 1414
       },
       {
         "id": 140960,
@@ -19234,11 +19248,11 @@
       },
       {
         "id": 4224,
-        "rating": 484
+        "rating": 486
       },
       {
         "id": 107067,
-        "rating": 428
+        "rating": 427
       },
       {
         "id": 20668,
@@ -19349,7 +19363,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.1,
-    "popularity": 523361,
+    "popularity": 525989,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx124080-3i22mRVPBS0T.jpg",
     "coverColor": "#5dc9f1",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/124080-ARyLAHHgikRq.jpg",
@@ -19397,7 +19411,7 @@
     "_recAnilistIds": [
       {
         "id": 101921,
-        "rating": 1413
+        "rating": 1414
       },
       {
         "id": 99578,
@@ -19405,19 +19419,19 @@
       },
       {
         "id": 101291,
-        "rating": 815
+        "rating": 816
       },
       {
         "id": 132405,
-        "rating": 810
+        "rating": 811
       },
       {
         "id": 98291,
-        "rating": 469
+        "rating": 470
       },
       {
         "id": 116267,
-        "rating": 367
+        "rating": 368
       },
       {
         "id": 112641,
@@ -19429,7 +19443,7 @@
       },
       {
         "id": 143338,
-        "rating": 277
+        "rating": 278
       },
       {
         "id": 14227,
@@ -19441,7 +19455,7 @@
       },
       {
         "id": 4224,
-        "rating": 222
+        "rating": 223
       },
       {
         "id": 125367,
@@ -19527,7 +19541,7 @@
     "source": "LIGHT_NOVEL",
     "sourceLabel": "Light novel",
     "score10": 8.1,
-    "popularity": 564575,
+    "popularity": 566698,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101291-wfEdgPqtfU0l.jpg",
     "coverColor": "#0d43f1",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n101291-fqIUvQ6apEtD.jpg",
@@ -19561,27 +19575,27 @@
     "_recAnilistIds": [
       {
         "id": 14813,
-        "rating": 2113
+        "rating": 2119
       },
       {
         "id": 5081,
-        "rating": 1742
+        "rating": 1744
       },
       {
         "id": 124080,
-        "rating": 815
+        "rating": 816
       },
       {
         "id": 13759,
-        "rating": 467
+        "rating": 468
       },
       {
         "id": 108489,
-        "rating": 434
+        "rating": 435
       },
       {
         "id": 132405,
-        "rating": 412
+        "rating": 415
       },
       {
         "id": 11887,
@@ -19589,7 +19603,7 @@
       },
       {
         "id": 849,
-        "rating": 271
+        "rating": 272
       },
       {
         "id": 20997,
@@ -19609,11 +19623,11 @@
       },
       {
         "id": 4224,
-        "rating": 114
+        "rating": 115
       },
       {
         "id": 113813,
-        "rating": 114
+        "rating": 113
       }
     ],
     "_relAnilistIds": [
@@ -19685,7 +19699,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.5,
-    "popularity": 201603,
+    "popularity": 202487,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx877-6BUYEWp8By8j.png",
     "coverColor": "#f14386",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/877-5yVMHXHApFzf.jpg",
@@ -19837,7 +19851,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 8.2,
-    "popularity": 143315,
+    "popularity": 143716,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx99457-OD0xtM8NlHNQ.png",
     "coverColor": null,
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/99457-OvX44AF17mEL.jpg",
@@ -19871,23 +19885,23 @@
     "_recAnilistIds": [
       {
         "id": 12355,
-        "rating": 339
+        "rating": 340
       },
       {
         "id": 21827,
-        "rating": 330
+        "rating": 331
       },
       {
         "id": 154587,
-        "rating": 230
+        "rating": 231
       },
       {
         "id": 4181,
-        "rating": 153
+        "rating": 155
       },
       {
         "id": 20954,
-        "rating": 130
+        "rating": 131
       },
       {
         "id": 21519,
@@ -19895,19 +19909,19 @@
       },
       {
         "id": 9989,
-        "rating": 56
+        "rating": 57
       },
       {
         "id": 20968,
-        "rating": 55
+        "rating": 56
       },
       {
         "id": 99750,
-        "rating": 38
+        "rating": 39
       },
       {
         "id": 114535,
-        "rating": 30
+        "rating": 31
       },
       {
         "id": 138565,
@@ -19922,7 +19936,7 @@
         "rating": 23
       },
       {
-        "id": 113717,
+        "id": 113596,
         "rating": 23
       }
     ],
@@ -19994,7 +20008,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.4,
-    "popularity": 571409,
+    "popularity": 573034,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20464-ooZUyBe4ptp9.png",
     "coverColor": "#e48635",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20464-PpYjO9cPN1gs.jpg",
@@ -20074,7 +20088,7 @@
       },
       {
         "id": 134732,
-        "rating": 278
+        "rating": 279
       },
       {
         "id": 11771,
@@ -20082,7 +20096,7 @@
       },
       {
         "id": 137822,
-        "rating": 135
+        "rating": 137
       },
       {
         "id": 101239,
@@ -20094,7 +20108,7 @@
       },
       {
         "id": 18507,
-        "rating": 83
+        "rating": 84
       },
       {
         "id": 113231,
@@ -20213,7 +20227,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.7,
-    "popularity": 139895,
+    "popularity": 140585,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx263-ivVyn9xAgwSZ.png",
     "coverColor": "#f1935d",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/263-8Zejtdb3r2bI.jpg",
@@ -20257,7 +20271,7 @@
       },
       {
         "id": 170,
-        "rating": 120
+        "rating": 121
       },
       {
         "id": 2921,
@@ -20289,7 +20303,7 @@
       },
       {
         "id": 5258,
-        "rating": 21
+        "rating": 20
       },
       {
         "id": 20464,
@@ -20377,7 +20391,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.3,
-    "popularity": 71869,
+    "popularity": 72091,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx170-cmD8A0vZsp6g.jpg",
     "coverColor": "#ae4328",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/170-hCgzytQLmZdX.jpg",
@@ -20453,19 +20467,19 @@
       },
       {
         "id": 263,
-        "rating": 120
+        "rating": 121
       },
       {
         "id": 245,
-        "rating": 88
+        "rating": 90
       },
       {
         "id": 11771,
-        "rating": 49
+        "rating": 50
       },
       {
         "id": 134732,
-        "rating": 46
+        "rating": 47
       },
       {
         "id": 2402,
@@ -20480,11 +20494,11 @@
         "rating": 15
       },
       {
-        "id": 292,
-        "rating": 9
+        "id": 137822,
+        "rating": 10
       },
       {
-        "id": 137822,
+        "id": 292,
         "rating": 9
       },
       {
@@ -20588,7 +20602,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.6,
-    "popularity": 122662,
+    "popularity": 122958,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20607-fIOxVISIl0HY.jpg",
     "coverColor": "#e47843",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20607-AYghLMjh7reA.jpg",
@@ -20618,11 +20632,11 @@
       },
       {
         "id": 21366,
-        "rating": 277
+        "rating": 278
       },
       {
         "id": 177687,
-        "rating": 172
+        "rating": 173
       },
       {
         "id": 109298,
@@ -20638,7 +20652,7 @@
       },
       {
         "id": 111944,
-        "rating": 80
+        "rating": 81
       },
       {
         "id": 98478,
@@ -20732,7 +20746,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8,
-    "popularity": 313926,
+    "popularity": 315649,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx137822-U8naszP96vzC.png",
     "coverColor": "#286be4",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/137822-oevspckMGLuY.jpg",
@@ -20788,15 +20802,15 @@
     "_recAnilistIds": [
       {
         "id": 134732,
-        "rating": 345
+        "rating": 346
       },
       {
         "id": 11771,
-        "rating": 167
+        "rating": 168
       },
       {
         "id": 20464,
-        "rating": 135
+        "rating": 137
       },
       {
         "id": 141014,
@@ -20819,20 +20833,20 @@
         "rating": 16
       },
       {
+        "id": 100745,
+        "rating": 11
+      },
+      {
+        "id": 15,
+        "rating": 11
+      },
+      {
         "id": 5040,
         "rating": 11
       },
       {
-        "id": 100745,
-        "rating": 10
-      },
-      {
-        "id": 15,
-        "rating": 10
-      },
-      {
         "id": 170,
-        "rating": 9
+        "rating": 10
       },
       {
         "id": 18689,
@@ -20914,7 +20928,7 @@
     "source": "OTHER",
     "sourceLabel": "Altro",
     "score10": 8.3,
-    "popularity": 96359,
+    "popularity": 96579,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101903-ncgPJbbA5Nou.jpg",
     "coverColor": "#5078e4",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n101903-Jnoc7x0WFusx.jpg",
@@ -20952,19 +20966,19 @@
       },
       {
         "id": 134732,
-        "rating": 125
+        "rating": 124
       },
       {
         "id": 100402,
-        "rating": 98
+        "rating": 99
       },
       {
         "id": 177687,
-        "rating": 84
+        "rating": 85
       },
       {
         "id": 113538,
-        "rating": 84
+        "rating": 85
       },
       {
         "id": 106625,
@@ -21050,8 +21064,8 @@
       "Ensemble Cast",
       "Samurai",
       "Found Family",
-      "Meta",
       "Slapstick",
+      "Meta",
       "Male Protagonist",
       "Surreal Comedy"
     ],
@@ -21063,7 +21077,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.5,
-    "popularity": 289232,
+    "popularity": 290260,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx918-iOaeBVUn4uK7.jpg",
     "coverColor": "#f1865d",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/918-bljqHE1PFArH.jpg",
@@ -21169,19 +21183,19 @@
     "_recAnilistIds": [
       {
         "id": 21804,
-        "rating": 596
+        "rating": 598
       },
       {
         "id": 11843,
-        "rating": 241
+        "rating": 243
       },
       {
         "id": 100922,
-        "rating": 232
+        "rating": 233
       },
       {
         "id": 245,
-        "rating": 204
+        "rating": 205
       },
       {
         "id": 142877,
@@ -21324,9 +21338,9 @@
       "Slapstick",
       "College",
       "Primarily Adult Cast",
+      "Nudity",
       "Seinen",
-      "Surreal Comedy",
-      "Male Protagonist"
+      "Surreal Comedy"
     ],
     "studios": [
       "Zero-G"
@@ -21336,7 +21350,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.2,
-    "popularity": 227861,
+    "popularity": 229068,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx100922-uxEhaCsqMMp3.png",
     "coverColor": "#5daee4",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/100922-ef1bBJCUCfxk.jpg",
@@ -21390,11 +21404,11 @@
       },
       {
         "id": 11843,
-        "rating": 281
+        "rating": 282
       },
       {
         "id": 918,
-        "rating": 232
+        "rating": 233
       },
       {
         "id": 101001,
@@ -21421,11 +21435,11 @@
         "rating": 60
       },
       {
-        "id": 160447,
-        "rating": 51
+        "id": 245,
+        "rating": 52
       },
       {
-        "id": 245,
+        "id": 160447,
         "rating": 51
       },
       {
@@ -21438,7 +21452,7 @@
       },
       {
         "id": 114129,
-        "rating": 42
+        "rating": 41
       }
     ],
     "_relAnilistIds": [
@@ -21508,7 +21522,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.3,
-    "popularity": 236305,
+    "popularity": 237012,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx10165-tw8Cz7K9tfVJ.png",
     "coverColor": "#e4bb93",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/10165-1O0xQsic1qpB.jpg",
@@ -21536,7 +21550,7 @@
     "_recAnilistIds": [
       {
         "id": 66,
-        "rating": 544
+        "rating": 546
       },
       {
         "id": 101001,
@@ -21548,19 +21562,19 @@
       },
       {
         "id": 1887,
-        "rating": 337
+        "rating": 338
       },
       {
         "id": 181841,
-        "rating": 328
+        "rating": 329
       },
       {
         "id": 21804,
-        "rating": 210
+        "rating": 211
       },
       {
         "id": 175977,
-        "rating": 203
+        "rating": 205
       },
       {
         "id": 105081,
@@ -21668,7 +21682,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.3,
-    "popularity": 349087,
+    "popularity": 350413,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21804-As6tDLAvEvNY.jpg",
     "coverColor": "#f1bb1a",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21804-K0xl0PE1PfHt.jpg",
@@ -21706,11 +21720,11 @@
     "_recAnilistIds": [
       {
         "id": 21507,
-        "rating": 877
+        "rating": 878
       },
       {
         "id": 918,
-        "rating": 596
+        "rating": 598
       },
       {
         "id": 21595,
@@ -21718,11 +21732,11 @@
       },
       {
         "id": 21087,
-        "rating": 316
+        "rating": 315
       },
       {
         "id": 10165,
-        "rating": 210
+        "rating": 211
       },
       {
         "id": 100077,
@@ -21836,7 +21850,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8,
-    "popularity": 190056,
+    "popularity": 190608,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11843-ui2jBcuQUqnl.jpg",
     "coverColor": "#aee4ae",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/11843-2GxMdvjHLn6v.jpg",
@@ -21876,11 +21890,11 @@
       },
       {
         "id": 100922,
-        "rating": 281
+        "rating": 282
       },
       {
         "id": 918,
-        "rating": 241
+        "rating": 243
       },
       {
         "id": 105081,
@@ -21892,11 +21906,11 @@
       },
       {
         "id": 21595,
-        "rating": 79
+        "rating": 80
       },
       {
         "id": 114,
-        "rating": 79
+        "rating": 80
       },
       {
         "id": 112802,
@@ -21916,7 +21930,7 @@
       },
       {
         "id": 66,
-        "rating": 43
+        "rating": 42
       },
       {
         "id": 21261,
@@ -21992,7 +22006,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8,
-    "popularity": 147325,
+    "popularity": 147609,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx100077-FgGYIt8gGyrn.jpg",
     "coverColor": "#e47850",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/100077-XKMTrxaMGhBj.jpg",
@@ -22136,7 +22150,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.4,
-    "popularity": 171720,
+    "popularity": 172342,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx245-NcQAyTipUMeO.jpg",
     "coverColor": "#e4930d",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/245-sIPMF9vNDnaJ.jpg",
@@ -22170,38 +22184,38 @@
     "_recAnilistIds": [
       {
         "id": 268,
-        "rating": 367
+        "rating": 369
       },
       {
         "id": 918,
-        "rating": 204
+        "rating": 205
       },
       {
         "id": 20755,
-        "rating": 104
+        "rating": 106
       },
       {
         "id": 170,
-        "rating": 88
+        "rating": 90
       },
       {
         "id": 851,
-        "rating": 61
+        "rating": 62
       },
       {
         "id": 100922,
-        "rating": 51
+        "rating": 52
       },
       {
         "id": 242,
-        "rating": 41
-      },
-      {
-        "id": 163270,
-        "rating": 29
+        "rating": 40
       },
       {
         "id": 20807,
+        "rating": 29
+      },
+      {
+        "id": 163270,
         "rating": 28
       },
       {
@@ -22214,7 +22228,7 @@
       },
       {
         "id": 166910,
-        "rating": 21
+        "rating": 22
       },
       {
         "id": 3545,
@@ -22294,7 +22308,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 8.1,
-    "popularity": 349651,
+    "popularity": 350696,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx13601-i42VFuHpqEOJ.jpg",
     "coverColor": "#288686",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/13601-YrCmS1oY4uBZ.jpg",
@@ -22350,7 +22364,7 @@
       },
       {
         "id": 467,
-        "rating": 198
+        "rating": 200
       },
       {
         "id": 1535,
@@ -22462,7 +22476,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8,
-    "popularity": 63659,
+    "popularity": 63833,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx329-4xwXdazRA7Ph.png",
     "coverColor": "#5086c9",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/329-BwJy0rauT2k4.jpg",
@@ -22608,7 +22622,7 @@
     "source": "OTHER",
     "sourceLabel": "Altro",
     "score10": 8.8,
-    "popularity": 83170,
+    "popularity": 83443,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx820-x5dNLNFeKb8B.png",
     "coverColor": "#bb8628",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/820-FcKc3kvg60z8.jpg",
@@ -22631,11 +22645,11 @@
     "_recAnilistIds": [
       {
         "id": 80,
-        "rating": 146
+        "rating": 147
       },
       {
         "id": 10937,
-        "rating": 96
+        "rating": 97
       },
       {
         "id": 338,
@@ -22776,7 +22790,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 8,
-    "popularity": 245708,
+    "popularity": 246742,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx339-xF2wp1NQuQ4r.png",
     "coverColor": "#e4a1d6",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/339-Lh0tuuwRLRgI.jpg",
@@ -22798,15 +22812,15 @@
     "_recAnilistIds": [
       {
         "id": 30,
-        "rating": 963
+        "rating": 966
       },
       {
         "id": 387,
-        "rating": 544
+        "rating": 547
       },
       {
         "id": 26,
-        "rating": 487
+        "rating": 488
       },
       {
         "id": 437,
@@ -22818,11 +22832,11 @@
       },
       {
         "id": 790,
-        "rating": 327
+        "rating": 328
       },
       {
         "id": 132126,
-        "rating": 214
+        "rating": 215
       },
       {
         "id": 885,
@@ -22830,27 +22844,27 @@
       },
       {
         "id": 369,
-        "rating": 161
-      },
-      {
-        "id": 124845,
-        "rating": 130
+        "rating": 160
       },
       {
         "id": 43,
-        "rating": 130
+        "rating": 131
       },
       {
-        "id": 9756,
-        "rating": 113
+        "id": 124845,
+        "rating": 129
       },
       {
         "id": 202102,
-        "rating": 110
+        "rating": 112
+      },
+      {
+        "id": 9756,
+        "rating": 112
       },
       {
         "id": 1943,
-        "rating": 104
+        "rating": 103
       }
     ],
     "_relAnilistIds": [],
@@ -22919,7 +22933,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 8.3,
-    "popularity": 318553,
+    "popularity": 319691,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx9756-QnUGwlwwnsuN.jpg",
     "coverColor": "#f1c95d",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/9756-d5M8NffgJJHB.jpg",
@@ -22969,19 +22983,19 @@
     "_recAnilistIds": [
       {
         "id": 124845,
-        "rating": 778
+        "rating": 780
       },
       {
         "id": 30,
-        "rating": 559
+        "rating": 562
       },
       {
         "id": 9253,
-        "rating": 536
+        "rating": 537
       },
       {
         "id": 97986,
-        "rating": 476
+        "rating": 478
       },
       {
         "id": 20754,
@@ -22989,15 +23003,15 @@
       },
       {
         "id": 98658,
-        "rating": 225
+        "rating": 226
       },
       {
         "id": 20800,
-        "rating": 195
+        "rating": 196
       },
       {
         "id": 21714,
-        "rating": 180
+        "rating": 181
       },
       {
         "id": 5081,
@@ -23009,15 +23023,15 @@
       },
       {
         "id": 440,
-        "rating": 115
-      },
-      {
-        "id": 339,
-        "rating": 113
+        "rating": 116
       },
       {
         "id": 185407,
-        "rating": 110
+        "rating": 113
+      },
+      {
+        "id": 339,
+        "rating": 112
       },
       {
         "id": 114745,
@@ -23113,7 +23127,7 @@
     "source": "OTHER",
     "sourceLabel": "Altro",
     "score10": 8.5,
-    "popularity": 238639,
+    "popularity": 239604,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx437-69NMlXKFeuse.jpg",
     "coverColor": "#1a356b",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/437-3yMVTyN7gl2A.jpg",
@@ -23139,11 +23153,11 @@
     "_recAnilistIds": [
       {
         "id": 1943,
-        "rating": 609
+        "rating": 610
       },
       {
         "id": 150672,
-        "rating": 435
+        "rating": 437
       },
       {
         "id": 339,
@@ -23151,7 +23165,7 @@
       },
       {
         "id": 323,
-        "rating": 396
+        "rating": 397
       },
       {
         "id": 1033,
@@ -23167,14 +23181,14 @@
       },
       {
         "id": 202102,
-        "rating": 117
-      },
-      {
-        "id": 1462,
-        "rating": 91
+        "rating": 118
       },
       {
         "id": 132126,
+        "rating": 92
+      },
+      {
+        "id": 1462,
         "rating": 91
       },
       {
@@ -23259,7 +23273,7 @@
     "source": "LIGHT_NOVEL",
     "sourceLabel": "Light novel",
     "score10": 8.2,
-    "popularity": 196740,
+    "popularity": 197661,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1210-2XotjcgqdcaX.jpg",
     "coverColor": "#5dd6e4",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1210-3HzGH3tahHmC.jpg",
@@ -23281,11 +23295,11 @@
     "_recAnilistIds": [
       {
         "id": 7785,
-        "rating": 371
+        "rating": 372
       },
       {
         "id": 9253,
-        "rating": 208
+        "rating": 209
       },
       {
         "id": 16742,
@@ -23293,7 +23307,7 @@
       },
       {
         "id": 109020,
-        "rating": 127
+        "rating": 128
       },
       {
         "id": 2605,
@@ -23301,11 +23315,11 @@
       },
       {
         "id": 30,
-        "rating": 79
+        "rating": 80
       },
       {
         "id": 240,
-        "rating": 77
+        "rating": 76
       },
       {
         "id": 339,
@@ -23324,16 +23338,16 @@
         "rating": 32
       },
       {
+        "id": 130003,
+        "rating": 30
+      },
+      {
+        "id": 207141,
+        "rating": 30
+      },
+      {
         "id": 21049,
         "rating": 29
-      },
-      {
-        "id": 130003,
-        "rating": 29
-      },
-      {
-        "id": 785,
-        "rating": 27
       }
     ],
     "_relAnilistIds": [],
@@ -23400,7 +23414,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.3,
-    "popularity": 155740,
+    "popularity": 156184,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx392-z90299zIvYmx.png",
     "coverColor": "#e49343",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/392-nbB6cBnhHOFb.jpg",
@@ -23470,15 +23484,15 @@
     "_recAnilistIds": [
       {
         "id": 11061,
-        "rating": 1273
+        "rating": 1275
       },
       {
         "id": 269,
-        "rating": 261
+        "rating": 262
       },
       {
         "id": 136,
-        "rating": 229
+        "rating": 230
       },
       {
         "id": 113415,
@@ -23506,7 +23520,7 @@
       },
       {
         "id": 142877,
-        "rating": 40
+        "rating": 41
       },
       {
         "id": 249,
@@ -23618,7 +23632,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.1,
-    "popularity": 541926,
+    "popularity": 543782,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx105333-GybuoSoOZfpH.jpg",
     "coverColor": "#c9d678",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/105333-KWKGvBM8Hyga.jpg",
@@ -23666,11 +23680,11 @@
     "_recAnilistIds": [
       {
         "id": 108268,
-        "rating": 273
+        "rating": 274
       },
       {
         "id": 101280,
-        "rating": 196
+        "rating": 197
       },
       {
         "id": 112444,
@@ -23772,10 +23786,10 @@
       "Demons",
       "Revenge",
       "Disability",
+      "Curses",
       "Swordplay",
       "Samurai",
       "Estranged Family",
-      "Curses",
       "Youkai"
     ],
     "studios": [
@@ -23787,7 +23801,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.1,
-    "popularity": 366547,
+    "popularity": 367650,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101347-TGaDwEYqLfm1.jpg",
     "coverColor": "#d6bb6b",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n101347-tHurKfTlhtFl.jpg",
@@ -23821,23 +23835,23 @@
     "_recAnilistIds": [
       {
         "id": 101922,
-        "rating": 1925
+        "rating": 1928
       },
       {
         "id": 101348,
-        "rating": 545
+        "rating": 546
       },
       {
         "id": 114535,
-        "rating": 523
+        "rating": 525
       },
       {
         "id": 205,
-        "rating": 345
+        "rating": 347
       },
       {
         "id": 128893,
-        "rating": 221
+        "rating": 222
       },
       {
         "id": 113717,
@@ -23849,7 +23863,7 @@
       },
       {
         "id": 6594,
-        "rating": 119
+        "rating": 120
       },
       {
         "id": 112151,
@@ -23861,7 +23875,7 @@
       },
       {
         "id": 136430,
-        "rating": 94
+        "rating": 95
       },
       {
         "id": 109616,
@@ -23961,7 +23975,7 @@
     "source": "LIGHT_NOVEL",
     "sourceLabel": "Light novel",
     "score10": 8.2,
-    "popularity": 439476,
+    "popularity": 442421,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx108465-1ANspF1EWyFx.jpg",
     "coverColor": "#43a1e4",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/108465-RgsRpTMhP9Sv.jpg",
@@ -24027,7 +24041,7 @@
     "_recAnilistIds": [
       {
         "id": 108511,
-        "rating": 453
+        "rating": 454
       },
       {
         "id": 101280,
@@ -24035,23 +24049,23 @@
       },
       {
         "id": 99263,
-        "rating": 302
+        "rating": 303
       },
       {
         "id": 129898,
-        "rating": 291
+        "rating": 292
       },
       {
         "id": 21355,
-        "rating": 275
+        "rating": 276
       },
       {
         "id": 130298,
-        "rating": 181
+        "rating": 180
       },
       {
         "id": 183161,
-        "rating": 165
+        "rating": 164
       },
       {
         "id": 108268,
@@ -24067,19 +24081,19 @@
       },
       {
         "id": 154587,
-        "rating": 114
+        "rating": 115
       },
       {
         "id": 21428,
-        "rating": 103
+        "rating": 104
       },
       {
         "id": 119661,
-        "rating": 98
+        "rating": 97
       },
       {
         "id": 163134,
-        "rating": 94
+        "rating": 92
       }
     ],
     "_relAnilistIds": [
@@ -24151,7 +24165,7 @@
     "source": "LIGHT_NOVEL",
     "sourceLabel": "Light novel",
     "score10": 8,
-    "popularity": 447615,
+    "popularity": 449674,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101280-tDxCVJm714nt.jpg",
     "coverColor": "#5daef1",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/101280-9t7J3774n955.jpg",
@@ -24199,7 +24213,7 @@
     "_recAnilistIds": [
       {
         "id": 20832,
-        "rating": 913
+        "rating": 915
       },
       {
         "id": 99263,
@@ -24207,7 +24221,7 @@
       },
       {
         "id": 103632,
-        "rating": 472
+        "rating": 473
       },
       {
         "id": 106479,
@@ -24219,27 +24233,27 @@
       },
       {
         "id": 125206,
-        "rating": 348
+        "rating": 350
       },
       {
         "id": 105156,
-        "rating": 238
+        "rating": 239
       },
       {
         "id": 17265,
-        "rating": 211
+        "rating": 212
       },
       {
         "id": 105333,
-        "rating": 196
+        "rating": 197
       },
       {
         "id": 130298,
-        "rating": 167
+        "rating": 168
       },
       {
         "id": 11757,
-        "rating": 143
+        "rating": 145
       },
       {
         "id": 101474,
@@ -24346,7 +24360,7 @@
     "source": "LIGHT_NOVEL",
     "sourceLabel": "Light novel",
     "score10": 8.8,
-    "popularity": 307205,
+    "popularity": 309700,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx161645-QLbzHXiYRgV2.jpg",
     "coverColor": "#f1865d",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/161645-oqzTZYIvviWI.jpg",
@@ -24394,15 +24408,15 @@
     "_recAnilistIds": [
       {
         "id": 142701,
-        "rating": 409
-      },
-      {
-        "id": 154587,
-        "rating": 259
+        "rating": 411
       },
       {
         "id": 21058,
-        "rating": 257
+        "rating": 258
+      },
+      {
+        "id": 154587,
+        "rating": 258
       },
       {
         "id": 20770,
@@ -24418,27 +24432,27 @@
       },
       {
         "id": 179966,
-        "rating": 127
+        "rating": 128
       },
       {
         "id": 170503,
-        "rating": 99
+        "rating": 100
       },
       {
         "id": 151514,
-        "rating": 97
+        "rating": 98
       },
       {
         "id": 176642,
         "rating": 86
       },
       {
-        "id": 182255,
-        "rating": 70
+        "id": 190569,
+        "rating": 78
       },
       {
-        "id": 190569,
-        "rating": 61
+        "id": 182255,
+        "rating": 71
       },
       {
         "id": 957,
@@ -24521,7 +24535,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.5,
-    "popularity": 216837,
+    "popularity": 218066,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx153518-IVXPDY5ph3kO.jpg",
     "coverColor": "#e48650",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/153518-7uRvV7SLqmHV.jpg",
@@ -24553,11 +24567,11 @@
       },
       {
         "id": 156067,
-        "rating": 267
+        "rating": 268
       },
       {
         "id": 147105,
-        "rating": 254
+        "rating": 256
       },
       {
         "id": 105228,
@@ -24681,7 +24695,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 8.1,
-    "popularity": 347104,
+    "popularity": 348346,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx106286-5COcpd0J9VbL.png",
     "coverColor": "#5dbbe4",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/106286-3oKwiwjd7Wkm.jpg",
@@ -24715,11 +24729,11 @@
     "_recAnilistIds": [
       {
         "id": 21519,
-        "rating": 4585
+        "rating": 4597
       },
       {
         "id": 16782,
-        "rating": 446
+        "rating": 447
       },
       {
         "id": 1689,
@@ -24727,7 +24741,7 @@
       },
       {
         "id": 142770,
-        "rating": 294
+        "rating": 295
       },
       {
         "id": 114963,
@@ -24751,23 +24765,23 @@
       },
       {
         "id": 101249,
-        "rating": 48
+        "rating": 49
       },
       {
         "id": 12477,
         "rating": 47
       },
       {
-        "id": 103047,
-        "rating": 42
-      },
-      {
         "id": 9760,
         "rating": 41
       },
       {
+        "id": 103047,
+        "rating": 41
+      },
+      {
         "id": 433,
-        "rating": 38
+        "rating": 39
       }
     ],
     "_relAnilistIds": [
@@ -24838,7 +24852,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 8.1,
-    "popularity": 63671,
+    "popularity": 63863,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1033-d5p1pbd5qa4L.png",
     "coverColor": "#e4d61a",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1033-npnaGITec3EV.jpg",
@@ -24994,7 +25008,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 8.1,
-    "popularity": 88564,
+    "popularity": 88789,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx759-XSKBju6xutdR.jpg",
     "coverColor": "#e49350",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/759-WE1Y5uCZ3Vv7.jpg",
@@ -25145,7 +25159,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 8.3,
-    "popularity": 190867,
+    "popularity": 191343,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx12355-wNsvhEsXEgrH.png",
     "coverColor": "#e45d6b",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/12355.jpg",
@@ -25167,7 +25181,7 @@
     "_recAnilistIds": [
       {
         "id": 99457,
-        "rating": 339
+        "rating": 340
       },
       {
         "id": 20981,
@@ -25187,7 +25201,7 @@
       },
       {
         "id": 127271,
-        "rating": 66
+        "rating": 67
       },
       {
         "id": 100749,
@@ -25283,7 +25297,7 @@
     "source": "OTHER",
     "sourceLabel": "Altro",
     "score10": 8.3,
-    "popularity": 197503,
+    "popularity": 198222,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx578-vU6XcOlb1XFU.jpg",
     "coverColor": "#e4bb5d",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/578.jpg",
@@ -25305,7 +25319,7 @@
     "_recAnilistIds": [
       {
         "id": 15227,
-        "rating": 157
+        "rating": 156
       },
       {
         "id": 1824,
@@ -25424,7 +25438,7 @@
     "source": "OTHER",
     "sourceLabel": "Altro",
     "score10": 8.5,
-    "popularity": 354634,
+    "popularity": 355928,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx431-o8Lj3XkjHm2k.jpg",
     "coverColor": "#0daee4",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/431-fLBlvTgdqLCz.jpg",
@@ -25454,7 +25468,7 @@
     "_recAnilistIds": [
       {
         "id": 199,
-        "rating": 797
+        "rating": 800
       },
       {
         "id": 512,
@@ -25470,7 +25484,7 @@
       },
       {
         "id": 572,
-        "rating": 100
+        "rating": 99
       },
       {
         "id": 20555,
@@ -25478,11 +25492,11 @@
       },
       {
         "id": 109979,
-        "rating": 76
+        "rating": 77
       },
       {
         "id": 16662,
-        "rating": 56
+        "rating": 57
       },
       {
         "id": 8129,
@@ -25582,7 +25596,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 8.1,
-    "popularity": 274481,
+    "popularity": 275430,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx523-fErBvxOHP7IX.jpg",
     "coverColor": "#f19335",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/523-rl12Q0av1fCr.jpg",
@@ -25612,7 +25626,7 @@
     "_recAnilistIds": [
       {
         "id": 199,
-        "rating": 391
+        "rating": 392
       },
       {
         "id": 2890,
@@ -25620,7 +25634,7 @@
       },
       {
         "id": 512,
-        "rating": 103
+        "rating": 104
       },
       {
         "id": 12355,
@@ -25628,11 +25642,11 @@
       },
       {
         "id": 7711,
-        "rating": 65
+        "rating": 66
       },
       {
         "id": 597,
-        "rating": 33
+        "rating": 34
       },
       {
         "id": 100749,
@@ -25656,7 +25670,7 @@
       },
       {
         "id": 513,
-        "rating": 17
+        "rating": 18
       },
       {
         "id": 10389,
@@ -25741,7 +25755,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.1,
-    "popularity": 105939,
+    "popularity": 106301,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx572-ZE3kHBA6U0X1.jpg",
     "coverColor": "#e4785d",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/572-8Lz6Wwy3ySHE.jpg",
@@ -25771,7 +25785,7 @@
     "_recAnilistIds": [
       {
         "id": 164,
-        "rating": 264
+        "rating": 265
       },
       {
         "id": 513,
@@ -25779,11 +25793,11 @@
       },
       {
         "id": 431,
-        "rating": 100
+        "rating": 99
       },
       {
         "id": 199,
-        "rating": 81
+        "rating": 80
       },
       {
         "id": 97986,
@@ -25890,7 +25904,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 8.1,
-    "popularity": 110642,
+    "popularity": 110977,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx6675-NF4tFzAxSjkj.png",
     "coverColor": "#f1d628",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/6675-E49elTPWWrcl.jpg",
@@ -25938,7 +25952,7 @@
     "_recAnilistIds": [
       {
         "id": 20057,
-        "rating": 201
+        "rating": 202
       },
       {
         "id": 120377,
@@ -25970,7 +25984,7 @@
       },
       {
         "id": 18679,
-        "rating": 37
+        "rating": 38
       },
       {
         "id": 20666,
@@ -26070,7 +26084,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.4,
-    "popularity": 303424,
+    "popularity": 304145,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx100388-hjkg1AnlJR5z.jpg",
     "coverColor": "#ffd643",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/100388-CR4PUEz1Nzsl.jpg",
@@ -26217,7 +26231,7 @@
     "source": "OTHER",
     "sourceLabel": "Altro",
     "score10": 7.9,
-    "popularity": 152089,
+    "popularity": 152687,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b1943-jMCEYL1Ixmgc.png",
     "coverColor": "#e49328",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1943.jpg",
@@ -26247,7 +26261,7 @@
     "_recAnilistIds": [
       {
         "id": 437,
-        "rating": 609
+        "rating": 610
       },
       {
         "id": 323,
@@ -26255,7 +26269,7 @@
       },
       {
         "id": 124845,
-        "rating": 205
+        "rating": 204
       },
       {
         "id": 1033,
@@ -26267,15 +26281,15 @@
       },
       {
         "id": 339,
-        "rating": 104
+        "rating": 103
       },
       {
         "id": 110350,
-        "rating": 65
+        "rating": 66
       },
       {
         "id": 97917,
-        "rating": 51
+        "rating": 52
       },
       {
         "id": 126287,
@@ -26295,7 +26309,7 @@
       },
       {
         "id": 127271,
-        "rating": 19
+        "rating": 18
       },
       {
         "id": 32,
@@ -26367,7 +26381,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 7.7,
-    "popularity": 113243,
+    "popularity": 113492,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx5681-3DmxUVn3grD0.jpg",
     "coverColor": "#1a86d6",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/5681-M15hrscD9QHN.jpg",
@@ -26384,11 +26398,11 @@
     "_recAnilistIds": [
       {
         "id": 127271,
-        "rating": 122
+        "rating": 125
       },
       {
         "id": 2397,
-        "rating": 63
+        "rating": 64
       },
       {
         "id": 20981,
@@ -26396,7 +26410,7 @@
       },
       {
         "id": 2236,
-        "rating": 41
+        "rating": 42
       },
       {
         "id": 100749,
@@ -26404,7 +26418,7 @@
       },
       {
         "id": 201903,
-        "rating": 18
+        "rating": 20
       },
       {
         "id": 106240,
@@ -26427,11 +26441,11 @@
         "rating": 10
       },
       {
-        "id": 101249,
-        "rating": 7
+        "id": 2961,
+        "rating": 8
       },
       {
-        "id": 2961,
+        "id": 101249,
         "rating": 7
       },
       {
@@ -26500,7 +26514,7 @@
     "source": "OTHER",
     "sourceLabel": "Altro",
     "score10": 7.8,
-    "popularity": 171755,
+    "popularity": 172202,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2236-tH5fWFkHyVGg.png",
     "coverColor": "#93bbe4",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/2236-rY0fvv53JIOB.jpg",
@@ -26542,7 +26556,7 @@
       },
       {
         "id": 5681,
-        "rating": 41
+        "rating": 42
       },
       {
         "id": 21234,
@@ -26639,7 +26653,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 7.2,
-    "popularity": 245165,
+    "popularity": 245925,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1689-rJKhjLEjQHSy.jpg",
     "coverColor": "#d6a178",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1689.jpg",
@@ -26661,7 +26675,7 @@
     "_recAnilistIds": [
       {
         "id": 21519,
-        "rating": 534
+        "rating": 536
       },
       {
         "id": 106286,
@@ -26685,7 +26699,7 @@
       },
       {
         "id": 433,
-        "rating": 45
+        "rating": 46
       },
       {
         "id": 256,
@@ -26697,7 +26711,7 @@
       },
       {
         "id": 142770,
-        "rating": 27
+        "rating": 29
       },
       {
         "id": 20665,
@@ -26788,7 +26802,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 8,
-    "popularity": 130412,
+    "popularity": 130814,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx513-yM7Dlt65N4Rl.jpg",
     "coverColor": "#e4c95d",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/513-3zMLMyA0qH5n.jpg",
@@ -26834,7 +26848,7 @@
       },
       {
         "id": 1251,
-        "rating": 55
+        "rating": 56
       },
       {
         "id": 416,
@@ -26862,7 +26876,7 @@
       },
       {
         "id": 523,
-        "rating": 17
+        "rating": 18
       },
       {
         "id": 1430,
@@ -26937,7 +26951,7 @@
     "source": "OTHER",
     "sourceLabel": "Altro",
     "score10": 8.1,
-    "popularity": 182356,
+    "popularity": 183005,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx512-UwP8X4BR8YoM.png",
     "coverColor": "#50a1c9",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/512-Ssp3EE2NdeoA.jpg",
@@ -26983,11 +26997,11 @@
       },
       {
         "id": 147105,
-        "rating": 122
+        "rating": 123
       },
       {
         "id": 523,
-        "rating": 103
+        "rating": 104
       },
       {
         "id": 21284,
@@ -26999,7 +27013,7 @@
       },
       {
         "id": 97981,
-        "rating": 55
+        "rating": 56
       },
       {
         "id": 14349,
@@ -27092,7 +27106,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 7.8,
-    "popularity": 75389,
+    "popularity": 75662,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx416-oO8Tts2dQtuv.jpg",
     "coverColor": "#f1ae5d",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/416-EGpl89C7nYoP.jpg",
@@ -27239,7 +27253,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 7.9,
-    "popularity": 183530,
+    "popularity": 184156,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2890-wcNtFr6aUYOR.jpg",
     "coverColor": "#50bbe4",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/2890-9ABkcfl2a7xS.jpg",
@@ -27269,7 +27283,7 @@
     "_recAnilistIds": [
       {
         "id": 199,
-        "rating": 207
+        "rating": 208
       },
       {
         "id": 523,
@@ -27292,16 +27306,16 @@
         "rating": 40
       },
       {
+        "id": 177637,
+        "rating": 33
+      },
+      {
         "id": 431,
         "rating": 32
       },
       {
         "id": 106286,
         "rating": 27
-      },
-      {
-        "id": 177637,
-        "rating": 25
       },
       {
         "id": 139643,
@@ -27386,7 +27400,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8,
-    "popularity": 110124,
+    "popularity": 110464,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16662-HUI8irtoTdOJ.jpg",
     "coverColor": "#1aaed6",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/16662-XLmadbKVsRW2.jpg",
@@ -27428,7 +27442,7 @@
       },
       {
         "id": 431,
-        "rating": 56
+        "rating": 57
       },
       {
         "id": 578,
@@ -27535,7 +27549,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 7.7,
-    "popularity": 64538,
+    "popularity": 64847,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx109979-BRHXpBkCw4oc.jpg",
     "coverColor": "#e4c95d",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/109979-eeUPfBXMEflG.jpg",
@@ -27565,7 +27579,7 @@
       },
       {
         "id": 431,
-        "rating": 76
+        "rating": 77
       },
       {
         "id": 16662,
@@ -27679,7 +27693,7 @@
     "source": "OTHER",
     "sourceLabel": "Altro",
     "score10": 8.1,
-    "popularity": 71645,
+    "popularity": 71846,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/16664-Wakrc8rbBkor.jpg",
     "coverColor": "#f1d6bb",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/16664-mVEK3raMgD9Z.jpg",
@@ -27859,7 +27873,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.1,
-    "popularity": 107418,
+    "popularity": 107753,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx585-5uq7j2xNNVmN.jpg",
     "coverColor": "#f15d35",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/585-GowCYxa1c8WR.jpg",
@@ -27921,7 +27935,7 @@
       },
       {
         "id": 158166,
-        "rating": 20
+        "rating": 21
       },
       {
         "id": 113596,
@@ -28013,7 +28027,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 7.8,
-    "popularity": 67265,
+    "popularity": 67470,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx21268-6dKrz26PPUvk.jpg",
     "coverColor": "#f1d6bb",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21268-mCEvAuBxsu7N.jpg",
@@ -28191,7 +28205,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 7.8,
-    "popularity": 86781,
+    "popularity": 86988,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx237-P1YEQQFqZ1An.jpg",
     "coverColor": null,
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/237-2w9hQ1THtj3C.jpg",
@@ -28387,7 +28401,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 7.6,
-    "popularity": 153659,
+    "popularity": 154188,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx790-YTUCvBKX8ZWK.jpg",
     "coverColor": null,
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/790.jpg",
@@ -28409,15 +28423,15 @@
     "_recAnilistIds": [
       {
         "id": 339,
-        "rating": 327
+        "rating": 328
       },
       {
         "id": 26,
-        "rating": 247
+        "rating": 248
       },
       {
         "id": 43,
-        "rating": 210
+        "rating": 212
       },
       {
         "id": 13601,
@@ -28529,7 +28543,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 8.2,
-    "popularity": 176929,
+    "popularity": 177397,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx128546-UIwyhuhjxmL0.jpg",
     "coverColor": "#35a1bb",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/128546-V5KVgbzQwFYm.jpg",
@@ -28565,11 +28579,11 @@
       },
       {
         "id": 9253,
-        "rating": 370
+        "rating": 371
       },
       {
         "id": 131565,
-        "rating": 286
+        "rating": 287
       },
       {
         "id": 145665,
@@ -28585,7 +28599,7 @@
       },
       {
         "id": 21732,
-        "rating": 77
+        "rating": 78
       },
       {
         "id": 21355,
@@ -28597,7 +28611,7 @@
       },
       {
         "id": 99088,
-        "rating": 56
+        "rating": 57
       },
       {
         "id": 162985,
@@ -28687,7 +28701,7 @@
     "source": "OTHER",
     "sourceLabel": "Altro",
     "score10": 8,
-    "popularity": 175298,
+    "popularity": 175713,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx13125-2EDZb8ahshQc.png",
     "coverColor": "#e4c9ae",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/13125.jpg",
@@ -28709,19 +28723,19 @@
     "_recAnilistIds": [
       {
         "id": 97986,
-        "rating": 301
+        "rating": 302
       },
       {
         "id": 155783,
-        "rating": 298
+        "rating": 299
       },
       {
         "id": 98707,
-        "rating": 253
+        "rating": 254
       },
       {
         "id": 101759,
-        "rating": 220
+        "rating": 221
       },
       {
         "id": 13601,
@@ -28733,11 +28747,11 @@
       },
       {
         "id": 100643,
-        "rating": 99
+        "rating": 101
       },
       {
         "id": 934,
-        "rating": 85
+        "rating": 87
       },
       {
         "id": 7724,
@@ -28749,7 +28763,7 @@
       },
       {
         "id": 125869,
-        "rating": 67
+        "rating": 66
       },
       {
         "id": 114745,
@@ -28760,8 +28774,8 @@
         "rating": 62
       },
       {
-        "id": 160,
-        "rating": 52
+        "id": 16067,
+        "rating": 53
       }
     ],
     "_relAnilistIds": [],
@@ -28828,7 +28842,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 7.8,
-    "popularity": 71968,
+    "popularity": 72162,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx139274-0NJTOKWHdDew.png",
     "coverColor": "#c9a11a",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/139274-UPB510uuZxnL.jpg",
@@ -28872,11 +28886,11 @@
     "_recAnilistIds": [
       {
         "id": 440,
-        "rating": 244
+        "rating": 245
       },
       {
         "id": 153629,
-        "rating": 77
+        "rating": 76
       },
       {
         "id": 98658,
@@ -28884,15 +28898,15 @@
       },
       {
         "id": 158704,
-        "rating": 49
+        "rating": 50
       },
       {
         "id": 143270,
-        "rating": 48
+        "rating": 47
       },
       {
         "id": 949,
-        "rating": 42
+        "rating": 44
       },
       {
         "id": 185213,
@@ -29002,7 +29016,7 @@
       "Heterosexual",
       "Male Protagonist",
       "Unrequited Love",
-      "Flat Chest"
+      "Female Protagonist"
     ],
     "studios": [
       "J.C.STAFF"
@@ -29012,7 +29026,7 @@
     "source": "LIGHT_NOVEL",
     "sourceLabel": "Light novel",
     "score10": 7.8,
-    "popularity": 530292,
+    "popularity": 532190,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx4224-PXVMBLNwy2aF.jpg",
     "coverColor": "#e45d78",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/4224-iPUOHdMde27j.jpg",
@@ -29064,43 +29078,43 @@
     "_recAnilistIds": [
       {
         "id": 13759,
-        "rating": 593
+        "rating": 595
       },
       {
         "id": 101921,
-        "rating": 484
+        "rating": 486
       },
       {
         "id": 17895,
-        "rating": 380
+        "rating": 382
       },
       {
         "id": 14813,
-        "rating": 296
+        "rating": 298
       },
       {
         "id": 124080,
-        "rating": 222
+        "rating": 223
       },
       {
         "id": 7054,
-        "rating": 212
+        "rating": 214
       },
       {
         "id": 141949,
-        "rating": 120
+        "rating": 121
       },
       {
         "id": 101291,
-        "rating": 114
+        "rating": 115
       },
       {
         "id": 14227,
-        "rating": 106
+        "rating": 107
       },
       {
         "id": 14741,
-        "rating": 101
+        "rating": 102
       },
       {
         "id": 1195,
@@ -29116,7 +29130,7 @@
       },
       {
         "id": 21857,
-        "rating": 64
+        "rating": 65
       }
     ],
     "_relAnilistIds": [
@@ -29201,7 +29215,7 @@
     "source": "VISUAL_NOVEL",
     "sourceLabel": "Visual novel",
     "score10": 7.7,
-    "popularity": 292754,
+    "popularity": 293753,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2167-pSDBcyc0vjej.jpg",
     "coverColor": "#bbbbff",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/2167.jpg",
@@ -29251,7 +29265,7 @@
     "_recAnilistIds": [
       {
         "id": 6547,
-        "rating": 361
+        "rating": 362
       },
       {
         "id": 1530,
@@ -29259,11 +29273,11 @@
       },
       {
         "id": 9989,
-        "rating": 123
+        "rating": 124
       },
       {
         "id": 20997,
-        "rating": 118
+        "rating": 116
       },
       {
         "id": 101,
@@ -29278,11 +29292,11 @@
         "rating": 61
       },
       {
-        "id": 118419,
-        "rating": 54
+        "id": 101291,
+        "rating": 55
       },
       {
-        "id": 101291,
+        "id": 118419,
         "rating": 54
       },
       {
@@ -29395,7 +29409,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 7.6,
-    "popularity": 57938,
+    "popularity": 58047,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16-S9k8qahNXoYP.jpg",
     "coverColor": "#aee486",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/16-jmEaCBBN5WRS.jpg",
@@ -29552,7 +29566,7 @@
     "source": "LIGHT_NOVEL",
     "sourceLabel": "Light novel",
     "score10": 7.9,
-    "popularity": 505903,
+    "popularity": 507624,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21202-mPOr80AEjUcZ.png",
     "coverColor": "#5daee4",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21202-UWijdV7RMnXo.jpg",
@@ -29594,27 +29608,27 @@
     "_recAnilistIds": [
       {
         "id": 105156,
-        "rating": 1101
+        "rating": 1102
       },
       {
         "id": 116588,
-        "rating": 365
+        "rating": 366
       },
       {
         "id": 107871,
-        "rating": 295
+        "rating": 296
       },
       {
         "id": 15809,
-        "rating": 254
+        "rating": 256
       },
       {
         "id": 135806,
-        "rating": 217
+        "rating": 219
       },
       {
         "id": 104454,
-        "rating": 198
+        "rating": 199
       },
       {
         "id": 125206,
@@ -29744,7 +29758,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 7.6,
-    "popularity": 723115,
+    "popularity": 725442,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b20605-k665mVkSug8D.jpg",
     "coverColor": "#ff6b35",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20605-RCJ7M71zLmrh.jpg",
@@ -29933,7 +29947,7 @@
     "source": "LIGHT_NOVEL",
     "sourceLabel": "Light novel",
     "score10": 7.1,
-    "popularity": 377358,
+    "popularity": 378485,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11111-gvvE5bBYsyFo.png",
     "coverColor": "#e47850",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/11111.jpg",
@@ -29959,7 +29973,7 @@
     "_recAnilistIds": [
       {
         "id": 934,
-        "rating": 214
+        "rating": 213
       },
       {
         "id": 226,
@@ -29987,7 +30001,7 @@
       },
       {
         "id": 99698,
-        "rating": 45
+        "rating": 44
       },
       {
         "id": 152802,
@@ -30010,7 +30024,7 @@
         "rating": 28
       },
       {
-        "id": 1571,
+        "id": 5177,
         "rating": 24
       }
     ],
@@ -30091,7 +30105,7 @@
     "source": "OTHER",
     "sourceLabel": "Altro",
     "score10": 7.5,
-    "popularity": 127966,
+    "popularity": 128338,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx7724-NwNnRsI34eDa.jpg",
     "coverColor": "#a18635",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/7724.jpg",
@@ -30119,7 +30133,7 @@
     "_recAnilistIds": [
       {
         "id": 934,
-        "rating": 201
+        "rating": 200
       },
       {
         "id": 129201,
@@ -30127,7 +30141,7 @@
       },
       {
         "id": 177689,
-        "rating": 86
+        "rating": 87
       },
       {
         "id": 13125,
@@ -30244,7 +30258,7 @@
     "source": "VISUAL_NOVEL",
     "sourceLabel": "Visual novel",
     "score10": 7.6,
-    "popularity": 174437,
+    "popularity": 174991,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx934-wjMlVEl4CWwg.jpg",
     "coverColor": "#e4a11a",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n934-p227WvkFZ7XX.jpg",
@@ -30288,15 +30302,15 @@
     "_recAnilistIds": [
       {
         "id": 129201,
-        "rating": 438
+        "rating": 439
       },
       {
         "id": 11111,
-        "rating": 214
+        "rating": 213
       },
       {
         "id": 7724,
-        "rating": 201
+        "rating": 200
       },
       {
         "id": 114446,
@@ -30304,7 +30318,7 @@
       },
       {
         "id": 177689,
-        "rating": 122
+        "rating": 124
       },
       {
         "id": 20754,
@@ -30312,7 +30326,7 @@
       },
       {
         "id": 13125,
-        "rating": 85
+        "rating": 87
       },
       {
         "id": 21355,
@@ -30320,7 +30334,7 @@
       },
       {
         "id": 119661,
-        "rating": 58
+        "rating": 59
       },
       {
         "id": 9253,
@@ -30432,7 +30446,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8,
-    "popularity": 412528,
+    "popularity": 414943,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx132405-qP7FQYGmNI3d.jpg",
     "coverColor": "#e46b5d",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/132405-LnPQaqaksEpN.jpg",
@@ -30468,19 +30482,19 @@
     "_recAnilistIds": [
       {
         "id": 124080,
-        "rating": 810
+        "rating": 811
       },
       {
         "id": 101291,
-        "rating": 412
+        "rating": 415
       },
       {
         "id": 141949,
-        "rating": 312
+        "rating": 313
       },
       {
         "id": 133965,
-        "rating": 216
+        "rating": 214
       },
       {
         "id": 120697,
@@ -30488,11 +30502,11 @@
       },
       {
         "id": 127911,
-        "rating": 172
+        "rating": 171
       },
       {
         "id": 158559,
-        "rating": 160
+        "rating": 161
       },
       {
         "id": 111501,
@@ -30504,7 +30518,7 @@
       },
       {
         "id": 184951,
-        "rating": 125
+        "rating": 126
       },
       {
         "id": 153152,
@@ -30516,11 +30530,11 @@
       },
       {
         "id": 162804,
-        "rating": 111
+        "rating": 112
       },
       {
-        "id": 154459,
-        "rating": 94
+        "id": 166216,
+        "rating": 95
       }
     ],
     "_relAnilistIds": [
@@ -30591,7 +30605,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.1,
-    "popularity": 128675,
+    "popularity": 129288,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx141911-o6Jwav7hRPPM.jpg",
     "coverColor": "#e4d6a1",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/141911-XqAZO540hFXw.jpg",
@@ -30639,19 +30653,19 @@
       },
       {
         "id": 177385,
-        "rating": 118
+        "rating": 121
       },
       {
         "id": 154965,
         "rating": 101
       },
       {
-        "id": 147885,
-        "rating": 77
+        "id": 186497,
+        "rating": 78
       },
       {
-        "id": 186497,
-        "rating": 75
+        "id": 147885,
+        "rating": 77
       },
       {
         "id": 175443,
@@ -30663,7 +30677,7 @@
       },
       {
         "id": 181444,
-        "rating": 69
+        "rating": 68
       },
       {
         "id": 183965,
@@ -30754,7 +30768,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 7.6,
-    "popularity": 312532,
+    "popularity": 313681,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx133965-9TZBS4m4yvED.png",
     "coverColor": null,
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/133965-spTi0WE7jR0r.jpg",
@@ -30782,7 +30796,7 @@
     "_recAnilistIds": [
       {
         "id": 112641,
-        "rating": 273
+        "rating": 272
       },
       {
         "id": 137281,
@@ -30790,15 +30804,15 @@
       },
       {
         "id": 132405,
-        "rating": 216
+        "rating": 214
       },
       {
         "id": 20954,
-        "rating": 165
+        "rating": 164
       },
       {
         "id": 101386,
-        "rating": 148
+        "rating": 149
       },
       {
         "id": 101921,
@@ -30806,7 +30820,7 @@
       },
       {
         "id": 127911,
-        "rating": 111
+        "rating": 110
       },
       {
         "id": 106051,
@@ -30908,7 +30922,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 7.9,
-    "popularity": 145561,
+    "popularity": 145961,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101001-UERCW0UGi0P7.jpg",
     "coverColor": "#bbe450",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/101001-q22QfHFzEavh.jpg",
@@ -31081,7 +31095,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 7.5,
-    "popularity": 66731,
+    "popularity": 66998,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx152802-ENRcnqD5axhQ.jpg",
     "coverColor": "#e46b5d",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/152802-7iZxNsDwWjVs.jpg",
@@ -31129,11 +31143,11 @@
     "_recAnilistIds": [
       {
         "id": 131083,
-        "rating": 115
+        "rating": 116
       },
       {
         "id": 183660,
-        "rating": 76
+        "rating": 78
       },
       {
         "id": 160090,
@@ -31145,7 +31159,7 @@
       },
       {
         "id": 107201,
-        "rating": 40
+        "rating": 39
       },
       {
         "id": 12445,
@@ -31254,7 +31268,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 7.6,
-    "popularity": 128168,
+    "popularity": 128683,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx323-ZGkUcJOn4ngy.png",
     "coverColor": "#f1bb28",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/323-tQCOVrhiRgeU.jpg",
@@ -31280,7 +31294,7 @@
     "_recAnilistIds": [
       {
         "id": 437,
-        "rating": 396
+        "rating": 397
       },
       {
         "id": 339,
@@ -31404,7 +31418,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 7.8,
-    "popularity": 284181,
+    "popularity": 285086,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20661-aCR7QgzDfOSI.png",
     "coverColor": "#aee4e4",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/20661-JwMKrCzeSTZ7.png",
@@ -31446,7 +31460,7 @@
       },
       {
         "id": 21665,
-        "rating": 97
+        "rating": 98
       },
       {
         "id": 101349,
@@ -31553,7 +31567,7 @@
     "source": "OTHER",
     "sourceLabel": "Altro",
     "score10": 8.5,
-    "popularity": 146005,
+    "popularity": 146385,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx7785-aTjIhsYva8cJ.jpg",
     "coverColor": "#2886a1",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/7785.jpg",
@@ -31591,7 +31605,7 @@
     "_recAnilistIds": [
       {
         "id": 5081,
-        "rating": 492
+        "rating": 493
       },
       {
         "id": 20607,
@@ -31599,30 +31613,30 @@
       },
       {
         "id": 132126,
-        "rating": 449
+        "rating": 451
       },
       {
         "id": 1210,
-        "rating": 371
+        "rating": 372
       },
       {
         "id": 109298,
-        "rating": 154
+        "rating": 155
       },
       {
         "id": 227,
-        "rating": 105
+        "rating": 106
       },
       {
         "id": 2246,
-        "rating": 97
-      },
-      {
-        "id": 875,
-        "rating": 87
+        "rating": 98
       },
       {
         "id": 17909,
+        "rating": 87
+      },
+      {
+        "id": 875,
         "rating": 86
       },
       {
@@ -31724,7 +31738,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 7.7,
-    "popularity": 124490,
+    "popularity": 124784,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx110350-uchN78wglmhN.png",
     "coverColor": null,
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/110350-kJfEuQ4Cx4j1.jpg",
@@ -31770,7 +31784,7 @@
       },
       {
         "id": 1943,
-        "rating": 65
+        "rating": 66
       },
       {
         "id": 114888,
@@ -31870,8 +31884,8 @@
       "Shounen",
       "Motorcycles",
       "Male Protagonist",
-      "Primarily Male Cast",
-      "Tsundere"
+      "Tsundere",
+      "Primarily Male Cast"
     ],
     "studios": [
       "Toei Animation"
@@ -31881,7 +31895,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 6.8,
-    "popularity": 6598,
+    "popularity": 6625,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2253-nS4Os86CPB5a.png",
     "coverColor": "#e4c935",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n2253-5uGlpuUBKee3.jpg",
@@ -32075,8 +32089,8 @@
       "Aliens",
       "War",
       "Kaiju",
-      "Episodic",
-      "Shounen"
+      "Shounen",
+      "Episodic"
     ],
     "studios": [
       "Toei Animation"
@@ -32086,7 +32100,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 7.1,
-    "popularity": 4269,
+    "popularity": 4280,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1985-BB32YokamiRs.jpg",
     "coverColor": "#f1ae28",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/1985-kyrtocnMQsvE.jpg",
@@ -32272,7 +32286,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 6.4,
-    "popularity": 4013,
+    "popularity": 4025,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b3579-b4eywFaEGBD5.jpg",
     "coverColor": "#e4a15d",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/n3579-9kypGOgFsKxk.jpg",
@@ -32466,7 +32480,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 7.7,
-    "popularity": 46942,
+    "popularity": 47106,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx80-pdYJ12vSTmad.jpg",
     "coverColor": "#e48650",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/80-LcQhJ600WeDn.jpg",
@@ -32606,7 +32620,7 @@
     "_recAnilistIds": [
       {
         "id": 820,
-        "rating": 146
+        "rating": 147
       },
       {
         "id": 930,
@@ -32614,7 +32628,7 @@
       },
       {
         "id": 30,
-        "rating": 107
+        "rating": 108
       },
       {
         "id": 1088,
@@ -32654,7 +32668,7 @@
       },
       {
         "id": 2200,
-        "rating": 19
+        "rating": 20
       },
       {
         "id": 865,
@@ -32925,7 +32939,7 @@
     "source": "ORIGINAL",
     "sourceLabel": "Originale",
     "score10": 6.5,
-    "popularity": 898,
+    "popularity": 900,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/4411.jpg",
     "coverColor": "#e4861a",
     "bannerImage": null,
@@ -33045,12 +33059,12 @@
     "tags": [
       "Politics",
       "War",
-      "Seinen",
       "Military",
+      "Seinen",
       "Ensemble Cast",
       "Dystopian",
-      "Revenge",
-      "Philosophy"
+      "Philosophy",
+      "Revenge"
     ],
     "studios": [
       "Studio Kafka"
@@ -33060,7 +33074,7 @@
     "source": "MANGA",
     "sourceLabel": "Manga",
     "score10": 8.4,
-    "popularity": 51092,
+    "popularity": 52274,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx206914-SHKX08LarRzB.jpg",
     "coverColor": "#35c9e4",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/206914-owssGq2CGhRZ.jpg",
@@ -33086,39 +33100,39 @@
     "_recAnilistIds": [
       {
         "id": 99699,
-        "rating": 109
+        "rating": 112
       },
       {
         "id": 151514,
-        "rating": 93
+        "rating": 97
       },
       {
         "id": 162896,
-        "rating": 58
+        "rating": 60
       },
       {
         "id": 155783,
-        "rating": 43
+        "rating": 45
       },
       {
         "id": 138714,
-        "rating": 41
+        "rating": 42
       },
       {
         "id": 101348,
-        "rating": 35
+        "rating": 38
       },
       {
         "id": 12031,
-        "rating": 34
+        "rating": 35
       },
       {
         "id": 820,
-        "rating": 17
+        "rating": 19
       },
       {
         "id": 21823,
-        "rating": 15
+        "rating": 16
       },
       {
         "id": 142877,
@@ -33126,15 +33140,15 @@
       },
       {
         "id": 116589,
-        "rating": 11
+        "rating": 10
       },
       {
         "id": 1575,
-        "rating": 7
+        "rating": 8
       },
       {
         "id": 114124,
-        "rating": 6
+        "rating": 7
       },
       {
         "id": 21613,
@@ -33203,7 +33217,7 @@
     "source": "LIGHT_NOVEL",
     "sourceLabel": "Light novel",
     "score10": 7.5,
-    "popularity": 121686,
+    "popularity": 122551,
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx137908-50af3lKVbst2.jpg",
     "coverColor": "#78e435",
     "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/137908-ZJ0tMykH623Z.jpg",
@@ -33243,15 +33257,15 @@
     "_recAnilistIds": [
       {
         "id": 125206,
-        "rating": 65
+        "rating": 66
       },
       {
         "id": 139518,
-        "rating": 62
+        "rating": 63
       },
       {
         "id": 175872,
-        "rating": 57
+        "rating": 58
       },
       {
         "id": 186052,
